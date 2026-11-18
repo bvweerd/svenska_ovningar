@@ -21,6 +21,12 @@ Elke push naar `main` wordt via GitHub Actions getest, gebouwd en op GitHub Page
 (`.github/workflows/pages.yml`). Zet in de repository-instellingen onder
 **Settings → Pages → Build and deployment** de bron op **GitHub Actions**.
 
+## Oefenvormen
+
+Naast de oefeningen per hoofdstuk zijn er onder **Oefenen**: dagelijkse herhaling met
+intervallen (Leitner-dozen), een werkwoordtrainer (`content/verbs.yaml`), toetsen per
+hoofdstuk, flitskaarten en snelle rondes van 60 seconden. Alle voortgang staat in de browser.
+
 ## Oefeningen toevoegen
 
 De oefenstof staat in `content/chapters/NN-onderwerp.yaml`, één bestand per hoofdstuk.
@@ -41,6 +47,7 @@ voor voorbeelden van alle vraagtypen.
 | `clock` | klok aflezen (`time: "07:30"`), antwoorden worden gegenereerd |
 | `dialogue` | dialoog ordenen (regels in de goede volgorde opgeven) |
 | `free` | schrijfopdracht met lichte controles en voorbeeldantwoord |
+| `findError` | zoek de fout: `sentence`, `wrong` (woordnummers, vanaf 0) en `answers` |
 | `steps` | samengestelde vraag: meerdere van bovenstaande na elkaar |
 
 Antwoordpatronen: `[optioneel]` en `{keuze|andere keuze}`, bijvoorbeeld

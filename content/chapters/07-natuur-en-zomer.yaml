@@ -240,6 +240,18 @@ sections:
               - { any: ["sommaren", "vintern", "hösten", "våren", "i sommar", "i vinter"], label: "Je noemt een seizoen" }
             model: "Jag tycker mest om sommaren, för då är det varmt och ljust länge. Solen skiner ofta och det är ungefär tjugo grader. På sommaren badar jag i sjön och jag läser böcker i trädgården. Vintern är också fin, men det är kallt och mörkt, så jag stannar mest inne."
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: konjunktioner
+        shuffle: true
+        items:
+          - { type: findError, topic: konjunktioner, sentence: "Det regnar. Därför jag stannar hemma.", wrong: [3, 4], answers: ["Det regnar. Därför stannar jag hemma."], tip: "Därför is een bijwoord: wat komt er dan op plaats 2?" }
+          - { type: findError, topic: konjunktioner, sentence: "Vi åker inte till Spanien men till Grekland.", wrong: [5], answers: ["Vi åker inte till Spanien utan till Grekland."], tip: "Niet A maar B …" }
+          - { type: findError, topic: ocksa-heller, sentence: "– Jag gillar glass. – Det är jag också.", wrong: [6], answers: ["– Jag gillar glass. – Det gör jag också."], tip: "Welk werkwoord gebruik je in het korte antwoord?" }
+          - { type: findError, topic: ocksa-heller, sentence: "– Jag dricker inte kaffe. – Inte jag också.", wrong: [8], answers: ["– Jag dricker inte kaffe. – Inte jag heller."], tip: "Ook niet …" }
+          - { type: findError, topic: konjunktioner, sentence: "Nils är sjuk, för han stannar hemma.", wrong: [3], answers: ["Nils är sjuk, så han stannar hemma."], tip: "Is het een reden of een gevolg?" }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 7.

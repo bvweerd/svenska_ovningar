@@ -4,6 +4,10 @@ import { markdown, inline } from './md.js';
 import { course } from './content.js';
 import { itemCard } from './render/item-card.js';
 import { createMenu } from './menu.js';
+import {
+  viewPracticeHub, viewDaily, viewVerbTrainer, viewFlashcards, viewTest, viewGames, viewGame, GAMES, dueCount, streakText,
+} from './views/practice.js';
+import { chapterByNo, findTopic, crumbs, progressBar, exerciseRunner, practiceView } from './ui.js';
 import { shuffle } from './build.js';
 import {
   getResult, chapterProgress, resetProgress, recordItem, runState, startRun, completeRun,
@@ -11,30 +15,6 @@ import {
 } from './progress.js';
 
 const app = document.getElementById('app');
-const chapterByNo = (n) => course.find((c) => c.chapter === Number(n));
-
-function findTopic(topic, preferChapter) {
-  const order = [preferChapter, ...course.filter((c) => c !== preferChapter)].filter(Boolean);
-  for (const ch of order) {
-    const card = ch.grammar?.find((g) => g.id === topic);
-    if (card) return { card, href: `#/k/${ch.chapter}/g/${card.id}`, chapter: ch };
-  }
-  return null;
-}
-
-function crumbs(...parts) {
-  return h('nav', { class: 'crumbs', 'aria-label': 'Kruimelpad' },
-    parts.map((p, i) => [i ? h('span', { class: 'sep', 'aria-hidden': 'true' }, '›') : null, p.href ? h('a', { href: p.href }, p.label) : h('span', {}, p.label)]),
-  );
-}
-
-function progressBar(done, total, label) {
-  const pct = total ? Math.round((done / total) * 100) : 0;
-  return h('span', { class: 'progress', title: label },
-    h('span', { class: 'bar', role: 'progressbar', 'aria-valuenow': pct, 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-label': label },
-      h('span', { style: `width:${pct}%` })),
-    h('span', { class: 'pct' }, `${pct}%`));
-}
 
 // ---------- Startpagina ----------
 function viewHome() {
@@ -45,11 +25,20 @@ function viewHome() {
       h('h1', {}, 'Svenska övningar'),
       h('p', { class: 'lead' }, 'Oefen Zweedse grammatica en woordenschat, hoofdstuk voor hoofdstuk. Elke oefening wordt meteen nagekeken, en bij een fout krijg je een tip.'),
     ),
-    last
-      ? h('a', { class: 'continue', href: last.href },
-          h('span', { class: 'eyebrow' }, 'Verder waar je gebleven was'),
-          h('strong', {}, last.title), h('span', { class: 'arrow', 'aria-hidden': 'true' }, '→'))
-      : null,
+    h('div', { class: 'today' },
+      last
+        ? h('a', { class: 'continue', href: last.href },
+            h('span', { class: 'eyebrow' }, 'Verder waar je gebleven was'),
+            h('strong', {}, last.title), h('span', { class: 'arrow', 'aria-hidden': 'true' }, '→'))
+        : null,
+      (() => {
+        const due = dueCount();
+        return h('a', { class: 'continue alt', href: due ? '#/oefenen/herhaling' : '#/oefenen' },
+          h('span', { class: 'eyebrow' }, due ? 'Dagelijkse herhaling' : 'Oefenen'),
+          h('strong', {}, due ? `${due} ${due === 1 ? 'vraag staat' : 'vragen staan'} voor je klaar` : 'Werkwoordtrainer, flitskaarten en snelle rondes'),
+          h('span', { class: 'streak-line' }, streakText()));
+      })(),
+    ),
     h('ol', { class: 'chapters' },
       course.map((ch) => {
         const p = ch.available ? chapterProgress(ch) : null;
@@ -120,6 +109,8 @@ function viewChapter(ch) {
           ? h('a', { class: 'btn primary', href: `#/k/${ch.chapter}/fouten` }, `Oefen je fouten (${weak.length})`)
           : null,
         h('a', { class: weak.length ? 'btn ghost' : 'btn primary', href: `#/k/${ch.chapter}/mix` }, 'Mix: 10 willekeurige vragen'),
+        h('a', { class: 'btn ghost', href: `#/k/${ch.chapter}/toets` }, 'Toets (20 vragen)'),
+        ch.vocab?.length ? h('a', { class: 'btn ghost', href: `#/k/${ch.chapter}/kaarten` }, 'Flitskaarten') : null,
       ),
       h('p', { class: 'muted' }, weak.length
         ? 'Vragen die je fout had of waarvan je het antwoord hebt bekeken, blijven in de foutenlijst tot je ze in één keer goed hebt.'
@@ -130,60 +121,11 @@ function viewChapter(ch) {
 
 const TYPE_NAMES = {
   mc: 'meerkeuze', multi: 'meerdere antwoorden', gap: 'invullen', translate: 'vertalen', order: 'zinsbouw',
-  match: 'koppelen', table: 'tabel', truefalse: 'rätt/fel', clock: 'klok', dialogue: 'dialoog', free: 'schrijven',
+  match: 'koppelen', table: 'tabel', truefalse: 'rätt/fel', clock: 'klok', dialogue: 'dialoog', free: 'schrijven', findError: 'zoek de fout',
 };
 const typeName = (t) => TYPE_NAMES[t] ?? t;
 
-const statusOf = (r) => (r.neutral ? 'free' : r.revealed ? 'revealed' : r.firstTry ? 'good' : 'wrong');
-
 // ---------- Oefening ----------
-/**
- * @param items  [{ item, ctx, label?, ref?: { ch, ex, idx } }]
- * @param opts   { onFinish(good, total), offset?: { done, good, total } }
- */
-function exerciseRunner(items, { onFinish, offset = { done: 0, good: 0, total: 0 } }) {
-  let done = offset.done;
-  let good = offset.good;
-  const all = offset.total || items.length;
-  const score = h('div', { class: 'score', 'aria-live': 'polite' });
-  const summary = h('div', { class: 'summary', hidden: true });
-  const updateScore = () => {
-    score.replaceChildren(h('span', {}, `${done} van ${all} beantwoord · ${good} in één keer goed`));
-  };
-  updateScore();
-  const cards = [];
-  let finished = 0;
-  const list = h('div', { class: 'items' },
-    items.map(({ item, ctx, label, ref }, i) => {
-      const card = itemCard(item, ctx, offset.done + i + 1, (r) => {
-        if (ref) recordItem(ref.ch, ref.ex, ref.idx, statusOf(r));
-        done++;
-        finished++;
-        if (r.firstTry && !r.neutral) good++;
-        updateScore();
-        if (finished === items.length) {
-          summary.hidden = false;
-          summary.replaceChildren(...onFinish(good, done));
-          setTimeout(() => {
-            summary.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            summary.querySelector('.btn.primary')?.focus({ preventScroll: true });
-          }, r.revealed ? 1200 : 700);
-          return;
-        }
-        // Na een goed antwoord automatisch door naar de volgende open vraag.
-        if (r.revealed) return;
-        const next = cards.slice(i + 1).find((c) => !c.isFinished()) ?? cards.find((c) => !c.isFinished());
-        if (next) setTimeout(() => next.focusFirst(), 700);
-      }, label);
-      cards.push(card);
-      return card;
-    }),
-  );
-  // Bij openen: cursor in de eerste vraag zonder te scrollen (niet op touchscreens, i.v.m. het toetsenbord).
-  if (matchMedia('(pointer: fine)').matches) setTimeout(() => cards[0]?.focusFirst({ scroll: false }), 50);
-  return [list, score, summary];
-}
-
 function viewExercise(ch, ex, query) {
   document.title = `${ex.title} · ${ch.title}`;
   const href = `#/k/${ch.chapter}/o/${ex.id}`;
@@ -237,43 +179,6 @@ function viewExercise(ch, ex, query) {
           h('a', { href: `${href}?opnieuw` }, 'Opnieuw beginnen'))
       : null,
     ex.text ? h('section', { class: 'passage', lang: 'sv' }, ex.textTitle ? h('h2', {}, ex.textTitle) : null, h('div', { html: markdown(ex.text) })) : null,
-    score, list, summary,
-  );
-}
-
-/**
- * Oefenronde met losse vragen uit één of meer hoofdstukken (mix, fouten).
- * entries: [{ item, ex, idx, chapter }]
- */
-function practiceView(ch, { title, instruction, entries, again, empty }) {
-  const trail = ch
-    ? [{ label: 'Start', href: '#/' }, { label: ch.title, href: `#/k/${ch.chapter}` }, { label: title }]
-    : [{ label: 'Start', href: '#/' }, { label: title }];
-  const back = ch ? h('a', { class: 'btn ghost', href: `#/k/${ch.chapter}` }, 'Terug naar het hoofdstuk') : h('a', { class: 'btn ghost', href: '#/' }, 'Naar de start');
-  if (!entries.length) {
-    return h('div', {},
-      crumbs(...trail),
-      h('header', { class: 'page-head' }, h('h1', {}, title), h('p', { class: 'instruction' }, empty)),
-      back);
-  }
-  const items = entries.map(({ item, ex, idx, chapter }) => {
-    const owner = chapter ?? ch;
-    return {
-      item,
-      ref: { ch: owner.chapter, ex, idx },
-      label: `${ch ? '' : `${owner.title} · `}${ex.instruction.replace(/\*\*|\*/g, '')}`,
-      ctx: { topic: ex.topic, findTopic: (t) => findTopic(t, owner) },
-    };
-  });
-  const [list, score, summary] = exerciseRunner(items, {
-    onFinish: (good, total) => [
-      h('h2', {}, `Klaar! ${good} van ${total} in één keer goed.`),
-      h('div', { class: 'actions' }, h('a', { class: 'btn primary', href: again }, 'Nog een ronde'), back),
-    ],
-  });
-  return h('div', {},
-    crumbs(...trail),
-    h('header', { class: 'page-head' }, h('h1', {}, ch ? `${title}: ${ch.title}` : title), h('p', { class: 'instruction' }, instruction)),
     score, list, summary,
   );
 }
@@ -375,6 +280,15 @@ function viewAbout() {
       h('li', {}, 'Typ je antwoord en druk op Enter. Bij meerkeuze kun je de cijfertoetsen 1–9 gebruiken.'),
       h('li', {}, 'Na een goed antwoord ga je vanzelf door naar de volgende vraag; aan het eind brengt Enter je naar de volgende oefening.'),
     ),
+    h('h2', {}, 'Oefenvormen'),
+    h('ul', {},
+      h('li', {}, 'Dagelijkse herhaling: wat je in één keer goed hebt, komt steeds later terug (na 1, 2, 4, 7, 14 … dagen). Wat je fout had, komt de volgende dag terug.'),
+      h('li', {}, 'Werkwoordtrainer: eindeloos werkwoordsvormen oefenen, met de tijden en soorten werkwoorden die jij kiest.'),
+      h('li', {}, 'Zoek de fout: klik op het foute woord en verbeter de zin.'),
+      h('li', {}, 'Toets: twintig vragen per hoofdstuk zonder tips, met een rapport per onderwerp.'),
+      h('li', {}, 'Flitskaarten: woorden omdraaien en zelf aangeven of je ze wist.'),
+      h('li', {}, 'Snelle rondes: zoveel mogelijk goede antwoorden in 60 seconden.'),
+    ),
     h('h2', {}, 'Voortgang'),
     h('p', {}, 'Je voortgang wordt per vraag opgeslagen in deze browser. Ga je halverwege een oefening weg, dan ga je later verder waar je gebleven was. Wil je op een ander apparaat verder, exporteer dan je voortgang naar een bestand en importeer dat daar.'),
     progressTools(),
@@ -428,6 +342,14 @@ function route() {
   else if (parts[0] === 'over') view = viewAbout();
   else if (parts[0] === 'grammatica') view = viewGrammarIndex();
   else if (parts[0] === 'herhalen') view = viewWeakAll();
+  else if (parts[0] === 'oefenen') {
+    if (!parts[1]) view = viewPracticeHub();
+    else if (parts[1] === 'herhaling') view = viewDaily();
+    else if (parts[1] === 'werkwoorden') view = viewVerbTrainer();
+    else if (parts[1] === 'spel' && !parts[2]) view = viewGames();
+    else if (parts[1] === 'spel' && GAMES[parts[2]]) view = viewGame(parts[2]);
+    else view = notFound();
+  }
   else if (parts[0] === 'k') {
     const ch = chapterByNo(parts[1]);
     if (!ch?.available) view = notFound();
@@ -440,6 +362,8 @@ function route() {
       view = card ? viewGrammar(ch, card) : notFound();
     } else if (parts[2] === 'mix') view = viewMix(ch);
     else if (parts[2] === 'fouten') view = viewWeak(ch);
+    else if (parts[2] === 'toets') view = viewTest(ch);
+    else if (parts[2] === 'kaarten') view = viewFlashcards(ch);
     else view = notFound();
   } else view = notFound();
   app.replaceChildren(view);

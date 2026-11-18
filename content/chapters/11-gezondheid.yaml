@@ -267,6 +267,18 @@ sections:
               - { any: ["kan inte", "kommer inte"], label: "Je zegt dat je niet kunt komen" }
             model: "Hej Karin! Tyvärr kan jag inte komma till jobbet idag. Jag har feber och ont i halsen, och jag känner mig väldigt trött. Jag ska vila mig och dricka mycket te. Jag hoppas att jag mår bättre på torsdag. Hälsningar, Sanne"
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: positionsverb
+        shuffle: true
+        items:
+          - { type: findError, topic: positionsverb, sentence: "Jag sitter och läsa.", wrong: [3], answers: ["Jag sitter och läser."], tip: "Beide werkwoorden in dezelfde vorm." }
+          - { type: findError, topic: positionsverb, sentence: "Boken står på bordet.", wrong: [1], answers: ["Boken ligger på bordet."], tip: "Het boek ligt plat." }
+          - { type: findError, topic: kroppen, sentence: "Jag har ont i huvud.", wrong: [4], answers: ["Jag har ont i huvudet."], tip: "Welke vorm komt er na ont i?" }
+          - { type: findError, topic: reflexiv, sentence: "Bram lägger honom tidigt.", wrong: [2], answers: ["Bram lägger sig tidigt."], tip: "Bram gaat zelf naar bed." }
+          - { type: findError, topic: placera, sentence: "Sitt dig, är du snäll!", wrong: [0], answers: ["Sätt dig, är du snäll!"], tip: "Gaan zitten is een beweging." }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 11.

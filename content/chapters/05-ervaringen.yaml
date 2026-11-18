@@ -238,6 +238,18 @@ sections:
               - { any: ["förra", "sedan", "i somras", "när jag"], label: "Je noemt een moment in het verleden (för … sedan, förra året …)" }
             model: "Jag har varit i många länder i Europa, till exempel Frankrike, Italien och Norge. Jag har aldrig varit i Asien. För två år sedan reste jag till Lofoten med min syster. Vi hyrde en liten stuga vid havet. Vi vandrade varje dag och åt mycket fisk. Det var en fantastisk resa."
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: perfekt-preteritum
+        shuffle: true
+        items:
+          - { type: findError, topic: perfekt-preteritum, sentence: "Igår har jag sett en älg.", wrong: [1, 3], answers: ["Igår såg jag en älg."], tip: "Kijk naar de tijd: er staat een bepaald moment." }
+          - { type: findError, topic: supinum, sentence: "Har du någonsin ätat surströmming?", wrong: [3], answers: ["Har du någonsin ätit surströmming?"], tip: "Kijk naar de supinum." }
+          - { type: findError, topic: hem-hemma, sentence: "Jag är hem nu.", wrong: [2], answers: ["Jag är hemma nu."], tip: "Plaats of richting?" }
+          - { type: findError, topic: hem-hemma, sentence: "Var ska du? Till affären.", wrong: [0], answers: ["Vart ska du? Till affären."], tip: "Plaats of richting?" }
+          - { type: findError, topic: perfekt-preteritum, sentence: "Vi har bott här sedan tre år.", wrong: [4], answers: ["Vi har bott här i tre år."], tip: "Kijk naar de tijdsbepaling." }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 5.

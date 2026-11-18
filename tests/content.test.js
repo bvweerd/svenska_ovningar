@@ -22,6 +22,7 @@ function textSpecs(item) {
     case 'table': return item.rows.flat().filter((c) => c && typeof c === 'object');
     case 'clock': return [clockSpec(item)];
     case 'truefalse': return item.correction ? [item.correction] : [];
+    case 'findError': return [item];
     case 'steps': return item.steps.flatMap(textSpecs);
     default: return [];
   }
@@ -65,6 +66,12 @@ for (const ch of course) {
         const tiles = words([item.start, ...item.tokens].filter(Boolean).join(' '));
         for (const a of item.answers) expect(words(expand(a)[0]), `${ex.id}: ${a}`).toBe(tiles);
         expect(gradeOrder(item.tokens, item).correct !== undefined).toBe(true);
+      }
+    });
+
+    it('zoek de fout: de zin zelf wordt niet goed gerekend', () => {
+      for (const ex of ch.exercises) for (const item of allItems(ex).filter((i) => i.type === 'findError')) {
+        expect(gradeText(item.sentence, item).correct, `${ex.id}: ${item.sentence}`).toBe(false);
       }
     });
 

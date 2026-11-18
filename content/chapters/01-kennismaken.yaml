@@ -494,6 +494,19 @@ sections:
               - { any: ["talar", "pratar"], label: "Je vertelt welke talen je spreekt (talar/pratar)" }
             model: "Hej! Jag heter Sanne och jag kommer från Nederländerna. Jag bor i Zwolle med min man och två barn. Jag talar nederländska, engelska och lite svenska. Jag jobbar på en bank. På fritiden läser jag och spelar tennis."
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: v2
+        shuffle: true
+        items:
+          - { type: findError, topic: v2, sentence: "Idag jag jobbar hemma.", wrong: [1, 2], answers: ["Idag jobbar jag hemma."], tip: "Kijk naar de woordvolgorde: wat staat er op plaats 2?" }
+          - { type: findError, topic: presens, sentence: "Bram läsar en tidning.", wrong: [1], answers: ["Bram läser en tidning."], tip: "Kijk naar de werkwoorden." }
+          - { type: findError, topic: inte, sentence: "Jag talar finska inte.", wrong: [2, 3], answers: ["Jag talar inte finska."], tip: "Kijk waar inte staat." }
+          - { type: findError, topic: substantiv, sentence: "Vi har ett hund.", wrong: [2], answers: ["Vi har en hund."], tip: "Is hund een en- of een ett-woord?" }
+          - { type: findError, topic: vragen, sentence: "Var heter du?", wrong: [0], answers: ["Vad heter du?"], tip: "Kijk naar het vraagwoord." }
+          - { type: findError, topic: pronomen, sentence: "Vi har ett hus. Den ligger i Västerås.", wrong: [4], answers: ["Vi har ett hus. Det ligger i Västerås."], tip: "Welk voornaamwoord hoort bij een ett-woord?" }
+
 vocab:
   - { sv: "en bil", nl: "auto", def: "bilen" }
   - { sv: "ett hus", nl: "huis", def: "huset" }

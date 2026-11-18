@@ -1,7 +1,8 @@
 // Menubalk bovenaan: hoofdstukken (uitklapmenu), grammatica, herhalen, over.
 // Op smalle schermen klapt alles in achter één menuknop.
 import { h } from './dom.js';
-import { weakItems } from './progress.js';
+import { dueItems } from './progress.js';
+import { practiceEntries } from './content.js';
 
 export function createMenu(course) {
   const nav = document.getElementById('menu');
@@ -20,12 +21,12 @@ export function createMenu(course) {
   const weakCount = h('span', { class: 'count', hidden: true });
   const links = {
     grammatica: h('a', { class: 'menu-link', href: '#/grammatica' }, 'Grammatica'),
-    herhalen: h('a', { class: 'menu-link', href: '#/herhalen' }, 'Herhalen', weakCount),
+    oefenen: h('a', { class: 'menu-link', href: '#/oefenen' }, 'Oefenen', weakCount),
     over: h('a', { class: 'menu-link', href: '#/over' }, 'Over'),
   };
   const panel = h('div', { class: 'menu-panel', id: 'menu-panel' },
     h('div', { class: 'menu-item' }, chaptersBtn, sub),
-    links.grammatica, links.herhalen, links.over,
+    links.oefenen, links.grammatica, links.over,
   );
   const theme = document.getElementById('theme');
   nav.replaceChildren(panel, theme, toggle);
@@ -76,14 +77,14 @@ export function createMenu(course) {
       else a.removeAttribute('aria-current');
     });
     for (const [key, a] of Object.entries(links)) {
-      const cur = parts[0] === key;
+      const cur = parts[0] === key || (key === 'oefenen' && parts[0] === 'herhalen');
       a.classList.toggle('active', cur);
       if (cur) a.setAttribute('aria-current', 'page');
       else a.removeAttribute('aria-current');
     }
-    const n = course.filter((c) => c.available).reduce((sum, c) => sum + weakItems(c).filter(({ ex }) => !ex.text).length, 0);
+    const n = dueItems(practiceEntries(course)).length;
     weakCount.hidden = n === 0;
     weakCount.textContent = String(n);
-    weakCount.setAttribute('aria-label', `${n} fouten om te herhalen`);
+    weakCount.setAttribute('aria-label', `${n} vragen om vandaag te herhalen`);
   };
 }

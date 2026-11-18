@@ -234,4 +234,4 @@ items:
 - [x] Hoofdstuk 2 (dagritme), met de eerste herhalingsset
 - [x] Fase 5–6: hoofdstuk 3–12, elk met herhaling; hoofdstuk 12 met eindherhaling
 - [x] Voortgang per vraag, verdergaan, foutenlijst, export/import
-- [ ] Fase 7: toetsmodus
+- [x] Fase 7: dagelijkse herhaling, werkwoordtrainer, zoek de fout, toetsmodus, flitskaarten, snelle rondes

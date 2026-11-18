@@ -437,6 +437,72 @@ function free(item) {
   };
 }
 
+// ---------- Zoek de fout ----------
+function findError(item, ctx) {
+  const words = item.sentence.split(' ');
+  let phase = 'find';
+  let chosen = null;
+  let input = null;
+  const buttons = words.map((w, i) =>
+    h('button', {
+      type: 'button',
+      class: 'chip',
+      'aria-pressed': 'false',
+      onclick: () => {
+        if (phase !== 'find') return;
+        chosen = i;
+        buttons.forEach((b, k) => {
+          b.classList.toggle('selected', k === i);
+          b.classList.remove('bad');
+          b.setAttribute('aria-pressed', String(k === i));
+        });
+        ctx.auto?.();
+      },
+    }, w),
+  );
+  const fix = h('div', { class: 'correction', hidden: true });
+  const el = h('div', {},
+    prompt(item.prompt ?? 'Klik op het woord dat niet klopt.'),
+    h('div', { class: 'chips find-error', lang: 'sv', role: 'group', 'aria-label': 'Woorden van de zin' }, buttons),
+    fix,
+  );
+  const showFix = (label) => {
+    input = textInput(item, { wide: true, label: 'Verbeterde zin' });
+    input.value = item.sentence;
+    fix.replaceChildren(h('p', { class: 'prompt' }, label), input);
+    fix.hidden = false;
+  };
+  return {
+    el,
+    check() {
+      if (phase === 'find') {
+        if (chosen === null) return { correct: false, empty: true, tip: 'Klik eerst op het woord dat niet klopt.' };
+        if (item.wrong.includes(chosen)) {
+          buttons[chosen].classList.add('ok');
+          phase = 'fix';
+          buttons.forEach((b) => (b.disabled = true));
+          showFix('Goed gevonden! Verbeter nu de zin:');
+          input.focus();
+          input.setSelectionRange(input.value.length, input.value.length);
+          return { correct: true, advance: true };
+        }
+        buttons[chosen].classList.add('bad');
+        return { correct: false, kind: 'find', tip: `„${words[chosen]}” is goed. ${item.tip ?? 'Zoek nog eens.'}` };
+      }
+      const res = gradeText(input.value, item, ctx);
+      markFields([input], [res.empty ? undefined : res.correct]);
+      return res;
+    },
+    reveal() {
+      item.wrong.forEach((i) => buttons[i].classList.add('ok'));
+      if (!input) showFix('Goede zin:');
+      input.value = displayAnswer(item.answers);
+      input.classList.add('revealed');
+    },
+    lock: () => lockInputs(el),
+  };
+}
+
 // ---------- Samengestelde vraag ----------
 function steps(item, ctx) {
   const box = h('div', { class: 'steps' });
@@ -479,4 +545,4 @@ function steps(item, ctx) {
   };
 }
 
-export const RENDERERS = { mc, multi, gap, translate, clock, order, dialogue, match, table, truefalse, free, steps };
+export const RENDERERS = { mc, multi, gap, translate, clock, order, dialogue, match, table, truefalse, free, steps, findError };

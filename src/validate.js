@@ -1,6 +1,6 @@
 // Controleert de structuur van een (gebouwd) hoofdstuk. Geeft een lijst foutmeldingen.
 
-const TYPES = new Set(['mc', 'multi', 'gap', 'translate', 'order', 'match', 'table', 'truefalse', 'clock', 'dialogue', 'free', 'steps']);
+const TYPES = new Set(['mc', 'multi', 'gap', 'translate', 'order', 'match', 'table', 'truefalse', 'clock', 'dialogue', 'free', 'steps', 'findError']);
 
 function checkItem(item, where, errors, topics) {
   const err = (msg) => errors.push(`${where}: ${msg}`);
@@ -55,6 +55,12 @@ function checkItem(item, where, errors, topics) {
     case 'free':
       if (!item.prompt) err('free heeft een prompt nodig');
       break;
+    case 'findError': {
+      const n = (item.sentence ?? '').split(' ').length;
+      if (!item.sentence || !item.answers?.length) err('findError heeft sentence en answers nodig');
+      if (!Array.isArray(item.wrong) || !item.wrong.length || item.wrong.some((i) => !Number.isInteger(i) || i < 0 || i >= n)) err('findError: wrong moet geldige woordnummers bevatten');
+      break;
+    }
     case 'steps':
       if (!item.steps?.length || item.steps.length < 2) err('steps heeft minstens 2 stappen nodig');
       item.steps?.forEach((s, i) => checkItem(s, `${where} stap ${i + 1}`, errors, topics));

@@ -223,6 +223,18 @@ sections:
               - { any: ["inte om", "gillar inte"], label: "Je vertelt wat je niet leuk vindt" }
             model: "På fritiden tycker jag om att läsa och att laga mat. Jag läser nästan varje kväll. På lördagar brukar jag cykla i skogen med min man. Ibland går vi på konsert. Jag spelar aldrig fotboll, för jag tycker inte om sport. Men jag gillar att simma på sommaren."
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: frekvens
+        shuffle: true
+        items:
+          - { type: findError, topic: frekvens, sentence: "Bram aldrig dricker te.", wrong: [1, 2], answers: ["Bram dricker aldrig te."], tip: "Kijk waar aldrig staat." }
+          - { type: findError, topic: tycka-om, sentence: "Jag tycker om läsa.", wrong: [2, 3], answers: ["Jag tycker om att läsa."], tip: "Er ontbreekt iets bij een activiteit." }
+          - { type: findError, topic: objekt, sentence: "Ser du Nils? Ja, jag ser han.", wrong: [6], answers: ["Ser du Nils? Ja, jag ser honom."], tip: "Kijk naar de voornaamwoorden." }
+          - { type: findError, topic: tycka-om, sentence: "Wilma tycker om inte fisk.", wrong: [2, 3], answers: ["Wilma tycker inte om fisk."], tip: "Kijk waar inte staat." }
+          - { type: findError, topic: objekt, sentence: "Kan du hjälpa vi?", wrong: [3], answers: ["Kan du hjälpa oss?"], tip: "Kijk naar de voornaamwoorden." }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 3.

@@ -265,6 +265,18 @@ sections:
               - { any: ["var", "hade", "gick", "åt", "kom", "träffade", "besökte", "firade", "gjorde"], label: "Je gebruikt de verleden tijd" }
             model: "Min familj är inte så stor. Mina föräldrar bor i Arnhem och min syster bor i Gent med sin man. Min bror bor i Kanada. Förra helgen besökte jag mina föräldrar. Vi åt middag tillsammans och på söndagen gick vi en lång promenad. Min mamma fyllde 65 år, så vi firade med tårta. Det var mysigt."
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: preteritum
+        shuffle: true
+        items:
+          - { type: findError, topic: preteritum, sentence: "Igår köpade jag en jacka.", wrong: [1], answers: ["Igår köpte jag en jacka."], tip: "Kijk naar de verleden tijd." }
+          - { type: findError, topic: starka-verb, sentence: "Vi äte pizza i fredags.", wrong: [1], answers: ["Vi åt pizza i fredags."], tip: "Kijk naar de verleden tijd." }
+          - { type: findError, topic: possessiv, sentence: "Min bilen är röd.", wrong: [0, 1], answers: ["Min bil är röd."], tip: "Wat komt er na een bezittelijk voornaamwoord?" }
+          - { type: findError, topic: possessiv, sentence: "Det är mitt katt.", wrong: [2], answers: ["Det är min katt."], tip: "Is katt een en- of een ett-woord?" }
+          - { type: findError, topic: preteritum, sentence: "Förra året vi bodde i Utrecht.", wrong: [2, 3], answers: ["Förra året bodde vi i Utrecht."], tip: "Het werkwoord moet op plaats 2." }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 4.

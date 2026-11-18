@@ -90,6 +90,13 @@ export function itemCard(item, ctx, number, onDone, label) {
 
     attempts++;
     hadError = true;
+    if (ctx.testMode) {
+      // Toets: één poging, geen tips. Het goede antwoord wordt meteen getoond.
+      r.reveal();
+      show('bad', h('p', {}, 'Niet goed. Het goede antwoord staat nu ingevuld.'));
+      finish(true);
+      return;
+    }
     const tip = h('p', {}, res.tip ?? GENERIC_WRONG);
     if (attempts === 1) show('bad', tip);
     else show('bad', tip, rule());

@@ -213,6 +213,17 @@ sections:
               - { any: ["vill du", "kan du", "skulle du"], label: "Je stelt een vraag (Vill du / Kan du …)" }
             model: "Hej Anna, det är Sanne. Jag ringer för att jag har två biljetter till teatern på lördag. Vill du följa med? Föreställningen börjar klockan sju. Kan du ringa mig ikväll eller imorgon? Mitt nummer är 070-123 45 67. Hej då!"
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: indirekt-tal
+        shuffle: true
+        items:
+          - { type: findError, topic: indirekt-tal, sentence: "Bram frågar när börjar filmen.", wrong: [3, 4], answers: ["Bram frågar när filmen börjar."], tip: "Kijk naar de woordvolgorde in de bijzin." }
+          - { type: findError, topic: indirekt-tal, sentence: "Hon frågar att du vill ha kaffe.", wrong: [2], answers: ["Hon frågar om du vill ha kaffe."], tip: "Is het een vraag of een bewering?" }
+          - { type: findError, topic: tempus, sentence: "När vi kom hade tåget redan gick.", wrong: [6], answers: ["När vi kom hade tåget redan gått."], tip: "Na hade komt de supinum." }
+          - { type: findError, topic: indirekt-tal, sentence: "Kan du säga var ligger stationen?", wrong: [4, 5], answers: ["Kan du säga var stationen ligger?"], tip: "Kijk naar de woordvolgorde in de bijzin." }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 9.

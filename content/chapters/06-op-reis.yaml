@@ -243,6 +243,17 @@ sections:
               - { any: ["om", "i sommar", "i vinter", "i höst", "i vår", "den"], label: "Je zegt wanneer (om …, i sommar, den …)" }
             model: "I sommar ska jag åka till Norge med min familj. Vi tar tåget från Stockholm till Oslo den femte juli. Resan tar ungefär sex timmar. Sedan hyr vi en bil och kör till fjällen. Vi ska bo i en stuga i en vecka. Jag ser verkligen fram emot resan!"
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: tidsprep
+        shuffle: true
+        items:
+          - { type: findError, topic: tidsprep, sentence: "Tåget går i tio minuter.", wrong: [2], answers: ["Tåget går om tio minuter."], tip: "Het gaat over de toekomst: over tien minuten." }
+          - { type: findError, topic: tidsprep, sentence: "Jag har inte sett honom i länge.", wrong: [5], answers: ["Jag har inte sett honom på länge."], tip: "Kijk naar het voorzetsel na een ontkenning." }
+          - { type: findError, topic: transport, sentence: "Bram går buss till jobbet.", wrong: [1], answers: ["Bram åker buss till jobbet."], tip: "Lopen of met een voertuig?" }
+          - { type: findError, topic: ordningstal, sentence: "Vi åker hem den 5 Juli.", wrong: [5], answers: ["Vi åker hem den 5 juli."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 6.

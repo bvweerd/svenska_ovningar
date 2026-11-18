@@ -83,4 +83,36 @@ describe('voortgang', () => {
     expect(P.getResult(1, 'oef').best).toBe(1);
     expect(store.has('svensk-ovningar:progress:v1')).toBe(false);
   });
+
+  it('herhaling: goed in één keer → doos hoger, fout → morgen terug', () => {
+    expect(P.nextSrs(null, 'good')).toEqual({ box: 1, due: P.today(1) });
+    expect(P.nextSrs({ box: 3 }, 'good')).toEqual({ box: 4, due: P.today(7) });
+    expect(P.nextSrs({ box: 5 }, 'wrong')).toEqual({ box: 1, due: P.today(1) });
+    expect(P.nextSrs({ box: 7 }, 'good').box).toBe(7);
+    expect(P.nextSrs({ box: 2, due: 'x' }, 'free')).toEqual({ box: 2, due: 'x' });
+  });
+
+  it('herhaling: alleen vragen waarvan de datum verstreken is', () => {
+    P.recordItem(1, ex, 0, 'good');
+    P.recordItem(1, ex, 1, 'wrong');
+    const entries = [0, 1].map((idx) => ({ chapter, ex, idx, item: ex.items[idx] }));
+    expect(P.dueItems(entries)).toEqual([]);
+    expect(P.dueItems(entries, P.today(1)).map((e) => e.idx)).toEqual([0, 1]);
+    expect(P.srsStats(entries)[1]).toBe(2);
+  });
+
+  it('telt dagen op rij', () => {
+    expect(P.streak()).toEqual({ days: 0, today: false });
+    P.recordItem(1, ex, 0, 'good');
+    expect(P.streak()).toEqual({ days: 1, today: true });
+  });
+
+  it('spelrecords en toetsscores', () => {
+    expect(P.saveGame('x', 5)).toBe(true);
+    expect(P.saveGame('x', 3)).toBe(false);
+    expect(P.getGame('x').best).toBe(5);
+    P.saveTest(1, 15, 20, {});
+    P.saveTest(1, 10, 20, {});
+    expect(P.getTest(1)).toMatchObject({ best: 0.75, last: 0.5 });
+  });
 });

@@ -12,7 +12,7 @@
 
 const KEY = 'svensk-ovningar:progress:v2';
 const OLD_KEY = 'svensk-ovningar:progress:v1';
-const empty = () => ({ v: 2, items: {}, ex: {}, last: null });
+const empty = () => ({ v: 2, items: {}, ex: {}, last: null, srs: {}, days: [], tests: {}, games: {}, prefs: {} });
 let memory = empty();
 
 function migrate() {
@@ -74,9 +74,114 @@ function itemRecord(state, ch, ex, idx) {
   return r && r.h === hashItem(ex.items[idx]) ? r : null;
 }
 
+// ---------- Herhaling met intervallen (Leitner-dozen) ----------
+/** Aantal dagen tot de volgende herhaling, per doos. */
+export const INTERVALS = [0, 1, 2, 4, 7, 14, 30, 60];
+const MAX_BOX = INTERVALS.length - 1;
+
+/** Lokale datum als 'JJJJ-MM-DD'. */
+export function today(offsetDays = 0) {
+  const d = new Date();
+  d.setDate(d.getDate() + offsetDays);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+/** Volgende stand van een vraag: in één keer goed → doos hoger; anders terug naar doos 1 (morgen). */
+export function nextSrs(prev, status) {
+  if (status === 'free') return prev ?? null;
+  const box = status === 'good' ? Math.min((prev?.box ?? 0) + 1, MAX_BOX) : 1;
+  return { box, due: today(INTERVALS[box]) };
+}
+
+function markDay(state) {
+  const t = today();
+  state.days = state.days ?? [];
+  if (state.days[state.days.length - 1] !== t) state.days = [...state.days.filter((d) => d !== t), t].slice(-400);
+}
+
 export function recordItem(ch, ex, idx, status) {
   const state = load();
-  state.items[itemKey(ch, ex.id, idx)] = { s: status, at: Date.now(), h: hashItem(ex.items[idx]) };
+  const key = itemKey(ch, ex.id, idx);
+  const h = hashItem(ex.items[idx]);
+  state.items[key] = { s: status, at: Date.now(), h };
+  state.srs = state.srs ?? {};
+  const prev = state.srs[key]?.h === h ? state.srs[key] : null;
+  const next = nextSrs(prev, status);
+  if (next) state.srs[key] = { ...next, h };
+  markDay(state);
+  save(state);
+}
+
+/**
+ * Vragen die vandaag (of eerder) herhaald moeten worden.
+ * @param entries [{ chapter, ex, idx, item }]
+ */
+export function dueItems(entries, date = today()) {
+  const srs = load().srs ?? {};
+  return entries
+    .map((e) => ({ ...e, rec: srs[itemKey(e.chapter.chapter, e.ex.id, e.idx)] }))
+    .filter((e) => e.rec && e.rec.h === hashItem(e.item) && e.rec.due <= date)
+    .sort((a, b) => (a.rec.due < b.rec.due ? -1 : a.rec.due > b.rec.due ? 1 : a.rec.box - b.rec.box));
+}
+
+/** Hoeveel vragen zitten in welke doos (alleen bekende, actuele vragen). */
+export function srsStats(entries) {
+  const srs = load().srs ?? {};
+  const boxes = Array(INTERVALS.length).fill(0);
+  for (const e of entries) {
+    const r = srs[itemKey(e.chapter.chapter, e.ex.id, e.idx)];
+    if (r && r.h === hashItem(e.item)) boxes[r.box]++;
+  }
+  return boxes;
+}
+
+/** Aantal dagen op rij geoefend (tot en met vandaag of gisteren). */
+export function streak() {
+  const days = new Set(load().days ?? []);
+  let n = 0;
+  let offset = days.has(today()) ? 0 : -1;
+  while (days.has(today(offset))) {
+    n++;
+    offset--;
+  }
+  return { days: n, today: days.has(today()) };
+}
+
+// ---------- Toetsen, spelletjes en instellingen ----------
+export function saveTest(ch, score, total, perTopic) {
+  const state = load();
+  const prev = state.tests?.[ch];
+  const ratio = total ? score / total : 0;
+  state.tests = { ...(state.tests ?? {}), [ch]: { best: Math.max(prev?.best ?? 0, ratio), last: ratio, perTopic, at: Date.now() } };
+  markDay(state);
+  save(state);
+}
+
+export function getTest(ch) {
+  return load().tests?.[ch] ?? null;
+}
+
+/** Slaat een spelscore op; geeft terug of het een nieuw record is. */
+export function saveGame(id, score) {
+  const state = load();
+  const prev = state.games?.[id]?.best ?? 0;
+  state.games = { ...(state.games ?? {}), [id]: { best: Math.max(prev, score), last: score, at: Date.now() } };
+  markDay(state);
+  save(state);
+  return score > prev;
+}
+
+export function getGame(id) {
+  return load().games?.[id] ?? null;
+}
+
+export function getPref(key, fallback) {
+  return load().prefs?.[key] ?? fallback;
+}
+
+export function setPref(key, value) {
+  const state = load();
+  state.prefs = { ...(state.prefs ?? {}), [key]: value };
   save(state);
 }
 

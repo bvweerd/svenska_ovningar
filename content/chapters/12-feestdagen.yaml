@@ -279,6 +279,18 @@ sections:
               - { any: ["jul", "julen", "nyår", "midsommar", "påsk", "födelsedag", "sinterklaas", "koningsdag"], label: "Je noemt een feestdag" }
             model: "Min favoritfest är julen. Vi firar alltid hemma hos mina föräldrar i deras gamla hus. Vi har en stor gran med röda kulor och många små ljus. På julafton äter vi en god middag och sedan öppnar vi julklapparna. Jag tycker att julen är mysigare än nyår, eftersom det är lugnare och vi är tillsammans med familjen."
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: adjektiv-obestamd
+        shuffle: true
+        items:
+          - { type: findError, topic: adjektiv-obestamd, sentence: "Vi har ett stor hus.", wrong: [3], answers: ["Vi har ett stort hus."], tip: "Kijk naar het bijvoeglijk naamwoord bij een ett-woord." }
+          - { type: findError, topic: adjektiv-bestamd, sentence: "Jag gillar den nya bil.", wrong: [4], answers: ["Jag gillar den nya bilen."], tip: "Na den + adjectief: bepaalde vorm." }
+          - { type: findError, topic: adjektiv-bestamd, sentence: "De liten barnen leker.", wrong: [1], answers: ["De små barnen leker."], tip: "liten is onregelmatig in het meervoud." }
+          - { type: findError, topic: komparation, sentence: "Stockholm är mer stor än Västerås.", wrong: [2, 3], answers: ["Stockholm är större än Västerås."], tip: "stor is onregelmatig." }
+          - { type: findError, topic: adjektiv-bestamd, sentence: "Min nya bilen är elektrisk.", wrong: [2], answers: ["Min nya bil är elektrisk."], tip: "Na min + adjectief: onbepaalde vorm." }
+
   - id: herhaling
     title: Eindherhaling
     intro: Een grote gemengde herhaling met stof uit alle hoofdstukken.

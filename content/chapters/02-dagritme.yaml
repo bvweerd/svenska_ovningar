@@ -357,6 +357,19 @@ sections:
               - { any: ["måste", "ska", "vill", "kan"], label: "Je gebruikt een modaal werkwoord (måste, ska, vill, kan)" }
             model: "Jag vaknar klockan sju. På morgonen duschar jag och äter frukost. Sedan cyklar jag till jobbet. Jag jobbar på ett kontor. Klockan tolv äter jag lunch. Efter jobbet måste jag handla mat. På kvällen lagar jag middag och sedan läser jag en bok. Imorgon ska jag träffa en vän."
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: tidsuttryck
+        shuffle: true
+        items:
+          - { type: findError, topic: tidsuttryck, sentence: "På morgonen Bram dricker kaffe.", wrong: [2, 3], answers: ["På morgonen dricker Bram kaffe."], tip: "Het werkwoord moet op plaats 2." }
+          - { type: findError, topic: modala, sentence: "Jag vill att äta pizza.", wrong: [2], answers: ["Jag vill äta pizza."], tip: "Kijk naar wat er na vill komt." }
+          - { type: findError, topic: plural, sentence: "Vi har tre bilor.", wrong: [3], answers: ["Vi har tre bilar."], tip: "Kijk naar het meervoud." }
+          - { type: findError, topic: imperativ, sentence: "Läsa texten, tack!", wrong: [0], answers: ["Läs texten, tack!"], tip: "Het is een opdracht." }
+          - { type: findError, topic: dagar, sentence: "Vi ses på Måndag.", wrong: [3], answers: ["Vi ses på måndag."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
+          - { type: findError, topic: modala, sentence: "Imorgon jag kan inte komma.", wrong: [1, 2], answers: ["Imorgon kan jag inte komma."], tip: "Het werkwoord moet op plaats 2." }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 en 2.
