@@ -76,3 +76,9 @@ Antwoordpatronen: `[optioneel]` en `{keuze|andere keuze}`, bijvoorbeeld
 Met `vocab:` in een hoofdstuk worden drie woordenschatoefeningen automatisch gemaakt.
 `npm test` controleert dat elk goed antwoord ook echt goed gerekend wordt en elke
 vastgelegde fout als fout.
+
+## Licentie
+
+- **Code**: [MIT](LICENSE).
+- **Oefenstof** (`content/`): [CC BY-NC-SA 4.0](content/LICENSE.md): vrij te gebruiken en te bewerken
+  met naamsvermelding, niet commercieel, en bewerkingen onder dezelfde licentie.
