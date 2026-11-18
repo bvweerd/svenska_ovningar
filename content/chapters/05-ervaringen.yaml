@@ -1,0 +1,283 @@
+chapter: 5
+
+grammar:
+  - id: supinum
+    title: De voltooide tijd (perfekt)
+    summary: "**har + supinum**: *jobba → har jobbat*, *köpa → har köpt*, *bo → har bott*, *skriva → har skrivit*."
+    body: |
+      De perfekt maak je met **har** + de **supinum** (het voltooid deelwoord). *Har* is voor iedereen hetzelfde, ook waar het Nederlands *ben* gebruikt: *Jag **har** varit i Kiruna* (Ik **ben** in Kiruna geweest).
+
+      | Infinitief | Preteritum | Supinum | Regel |
+      |---|---|---|---|
+      | jobba | jobbade | jobb**at** | -ar-werkwoorden: **-at** |
+      | köpa, ringa | köpte, ringde | köp**t**, ring**t** | -er-werkwoorden: stam + **-t** |
+      | bo, tro | bodde, trodde | bo**tt**, tro**tt** | korte werkwoorden: **-tt** |
+      | skriva, dricka | skrev, drack | skriv**it**, druck**it** | sterke werkwoorden: **-it** |
+
+      ### Onregelmatig
+      | Infinitief | Supinum |
+      |---|---|
+      | vara | varit |
+      | ha | haft |
+      | gå | gått |
+      | se | sett |
+      | få | fått |
+      | göra | gjort |
+      | säga | sagt |
+      | äta | ätit |
+      | komma | kommit |
+      | ta | tagit |
+
+  - id: perfekt-preteritum
+    title: Perfekt of preteritum?
+    summary: "**Preteritum** bij een **bepaald moment** in het verleden (*igår, i fredags, för två år sedan*). **Perfekt** bij ervaringen zonder tijdstip en bij iets wat **tot nu** doorloopt."
+    body: |
+      Het Zweeds is strenger dan het Nederlands. In het Nederlands zeg je *Gisteren heb ik een boek gekocht*, maar in het Zweeds moet dat in de **preteritum**:
+
+      - **Igår köpte jag en bok.** (niet: *~~Igår har jag köpt en bok~~*)
+
+      | Preteritum | Perfekt |
+      |---|---|
+      | Er is een **tijdstip** in het verleden: *igår, i måndags, förra året, för en vecka sedan, när jag var liten* | **Geen tijdstip**, het gaat om de ervaring: *Har du varit i Kiruna?* |
+      | Het is **afgelopen**: *Jag bodde i Utrecht i tre år.* (nu niet meer) | Het loopt **tot nu** door: *Jag har bott i Sverige i tre år.* (en woon er nog) |
+      | Je **vertelt** een verhaal over toen | Het **resultaat** is nu belangrijk: *Jag har tappat nyckeln!* |
+
+      Handige woorden bij de perfekt: *någonsin* / *någon gång* (ooit), *aldrig* (nooit), *redan* (al), *inte än* (nog niet).
+
+  - id: hem-hemma
+    title: Waar of waarheen? hemma – hem
+    summary: "Ben je ergens (**plaats**): *hemma, där, här, ute, inne*. Ga je ergens heen (**richting**): *hem, dit, hit, ut, in*. Vraag: **var?** (waar) of **vart?** (waarheen)."
+    body: |
+      Het Zweeds heeft aparte woorden voor **waar je bent** en **waar je naartoe gaat**:
+
+      | Plaats (var?) | Richting (vart?) | Nederlands |
+      |---|---|---|
+      | hemma | hem | thuis – naar huis |
+      | där | dit | daar – daarheen |
+      | här | hit | hier – hierheen |
+      | ute | ut | buiten – naar buiten |
+      | inne | in | binnen – naar binnen |
+      | uppe | upp | boven – naar boven |
+      | nere | ner | beneden – naar beneden |
+
+      - Jag är **hemma**. – Jag går **hem**.
+      - Barnen leker **ute**. – Gå **ut** och lek!
+      - **Var** bor du? – **Vart** ska du?
+
+  - id: an
+    title: Vergelijken met än
+    summary: "Na **än** (dan) en **som** (als) gebruik je de **onderwerpsvorm**: *Nils är yngre än **jag**.*"
+    body: |
+      Bij een vergelijking staat na *än* (dan) of *lika … som* (even … als) de **onderwerpsvorm**: *jag, du, han, hon, vi, ni, de*.
+
+      - Nils är yngre **än jag**. (… dan ik ben)
+      - Wilma är längre **än han**.
+      - Hon är lika gammal **som vi**.
+
+      In spreektaal hoor je vaak *än mig* of *än honom*. Taalkundigen zijn het daar niet over eens. Met de onderwerpsvorm zit je altijd goed.
+
+      Een paar vergelijkende vormen die je hier tegenkomt: *äldre* (ouder), *yngre* (jonger), *längre* (langer), *större* (groter), *snabbare* (sneller). In hoofdstuk 12 leer je ze maken.
+
+sections:
+  - id: oefeningen
+    title: Oefeningen
+    exercises:
+      - id: perfekt-regelmatig
+        title: Perfekt – regelmatig
+        instruction: Vul de supinum in van het werkwoord tussen haakjes.
+        topic: supinum
+        items:
+          - { type: gap, text: "Jag har ___ (arbeta) länge idag.", gaps: [{ answers: ["arbetat"] }] }
+          - { type: gap, text: "Har du ___ (köpa) mjölk?", gaps: [{ answers: ["köpt"], feedback: [{ match: ["köpat", "köpte"], tip: "köpa is een -er-werkwoord: stam + -t (köpt)." }] }] }
+          - { type: gap, text: "Fleur har ___ (besöka) Uppsala.", gaps: [{ answers: ["besökt"] }] }
+          - { type: gap, text: "Vi har ___ (bo) här i två år.", gaps: [{ answers: ["bott"], feedback: [{ match: ["boat", "bot", "bodd"], tip: "bo is een kort werkwoord: -tt (bott)." }] }] }
+          - { type: gap, text: "Grannarna har ___ (måla) huset.", gaps: [{ answers: ["målat"] }] }
+          - { type: gap, text: "Bram har ___ (ringa) till jobbet.", gaps: [{ answers: ["ringt"], feedback: [{ match: "ringat", tip: "ringa is een -er-werkwoord (ringer): ringt." }] }] }
+          - { type: gap, text: "Har ni ___ (höra) nyheterna?", gaps: [{ answers: ["hört"] }] }
+
+      - id: supinum-tabel
+        title: Sterke en onregelmatige werkwoorden
+        instruction: Vul de supinum in.
+        topic: supinum
+        items:
+          - type: table
+            columns: ["Infinitief", "Preteritum", "Supinum"]
+            rows:
+              - ["vara", "var", { answers: ["varit"] }]
+              - ["ha", "hade", { answers: ["haft"], feedback: [{ match: ["hadit", "hat"], tip: "ha is onregelmatig: haft." }] }]
+              - ["gå", "gick", { answers: ["gått"], feedback: [{ match: ["gickit", "gåit"], tip: "gå is onregelmatig: gått." }] }]
+              - ["komma", "kom", { answers: ["kommit"] }]
+              - ["äta", "åt", { answers: ["ätit"], feedback: [{ match: ["åtit", "ätt"], tip: "De supinum van äta heeft weer een ä: ätit." }] }]
+              - ["dricka", "drack", { answers: ["druckit"], feedback: [{ match: ["drickit", "drackit"], tip: "dricka – drack – druckit: de klinker wordt u." }] }]
+              - ["se", "såg", { answers: ["sett"] }]
+              - ["skriva", "skrev", { answers: ["skrivit"] }]
+              - ["göra", "gjorde", { answers: ["gjort"] }]
+              - ["ta", "tog", { answers: ["tagit"] }]
+
+      - id: perfekt-sterk
+        title: Perfekt in een zin
+        instruction: Vul de supinum in.
+        topic: supinum
+        shuffle: true
+        items:
+          - { type: gap, text: "Har du ___ (se) domkyrkan i Uppsala?", gaps: [{ answers: ["sett"] }] }
+          - { type: gap, text: "Vi har aldrig ___ (vara) i Norrland.", gaps: [{ answers: ["varit"] }] }
+          - { type: gap, text: "Har du ___ (äta) surströmming?", gaps: [{ answers: ["ätit"] }] }
+          - { type: gap, text: "Nils har ___ (få) en ny cykel.", gaps: [{ answers: ["fått"] }] }
+          - { type: gap, text: "Jag har ___ (sova) dåligt i natt.", gaps: [{ answers: ["sovit"] }] }
+          - { type: gap, text: "Wilma har ___ (skriva) en sång.", gaps: [{ answers: ["skrivit"] }] }
+          - { type: gap, text: "Vad har du ___ (göra) idag?", gaps: [{ answers: ["gjort"] }] }
+
+      - id: perfekt-of-preteritum
+        title: Perfekt of preteritum?
+        instruction: Kies de vorm die past.
+        topic: perfekt-preteritum
+        shuffle: true
+        items:
+          - { type: gap, text: "Igår ___ jag en bra film. (se)", gaps: [{ answers: ["såg"], options: ["såg", "har sett"], shuffle: false, feedback: [{ match: "har sett", tip: "igår is een bepaald moment: preteritum." }] }] }
+          - { type: gap, text: "Jag ___ i Sverige i tre år nu. (bo)", gaps: [{ answers: ["har bott"], options: ["bodde", "har bott"], shuffle: false, feedback: [{ match: "bodde", tip: "Je woont er nu nog: perfekt." }] }] }
+          - { type: gap, text: "För en vecka sedan ___ vi till Göteborg. (åka)", gaps: [{ answers: ["åkte"], options: ["åkte", "har åkt"], shuffle: false, feedback: [{ match: "har åkt", tip: "för en vecka sedan is een bepaald moment: preteritum." }] }] }
+          - { type: gap, text: "___ du sett min nyckel? Jag hittar den inte.", gaps: [{ answers: ["Har"], options: ["Har", "Såg"], shuffle: false, feedback: [{ match: "Såg", tip: "Geen tijdstip, en het resultaat is nu belangrijk: perfekt." }] }] }
+          - { type: gap, text: "Olle ___ aldrig ___ i Japan.", gaps: [{ answers: ["har"], options: ["har", "var"], shuffle: false }, { answers: ["varit"], options: ["varit", "var"], shuffle: false }] }
+          - { type: gap, text: "I måndags ___ Fleur sjuk. (vara)", gaps: [{ answers: ["var"], options: ["var", "har varit"], shuffle: false, feedback: [{ match: "har varit", tip: "i måndags (afgelopen maandag) is een bepaald moment: preteritum." }] }] }
+
+      - id: perfekt-vertalen
+        title: Vertaal
+        instruction: Vertaal naar het Zweeds. Let op de tijd!
+        topic: perfekt-preteritum
+        items:
+          - { type: translate, prompt: "Gisteren heb ik een boek gekocht.", answers: ["{Igår|I går} köpte jag en bok.", "Jag köpte en bok {igår|i går}."], feedback: [{ contains: "har köpt", tip: "In het Nederlands zeg je „heb gekocht”, maar met igår gebruik je in het Zweeds de preteritum." }, { contains: "igår jag", tip: "Na Igår komt eerst het werkwoord." }] }
+          - { type: translate, prompt: "Ik woon al drie jaar in Zweden.", answers: ["Jag har bott i Sverige i tre år."], feedback: [{ match: "Jag bor i Sverige i tre år", tip: "Iets wat tot nu doorloopt met een duur: perfekt (har bott) + i tre år." }] }
+          - { type: translate, prompt: "Ben je ooit in Stockholm geweest?", answers: ["Har du {någonsin|någon gång} varit i Stockholm?"], feedback: [{ contains: "är du", tip: "Bij de perfekt gebruik je altijd har, ook waar het Nederlands „ben” zegt." }] }
+          - { type: translate, prompt: "We hebben nog nooit surströmming gegeten.", answers: ["Vi har aldrig ätit surströmming."], feedback: [{ contains: "aldrig har", tip: "aldrig staat na har." }] }
+          - { type: translate, prompt: "Wat heb je vandaag gedaan?", answers: ["Vad har du gjort {idag|i dag}?"] }
+          - { type: translate, prompt: "Twee jaar geleden woonden we in Utrecht.", answers: ["För två år sedan bodde vi i Utrecht.", "Vi bodde i Utrecht för två år sedan."], feedback: [{ contains: "har bott", tip: "Twee jaar geleden is een bepaald moment, en het is voorbij: preteritum." }] }
+
+      - id: hemma-hem
+        title: Waar of waarheen?
+        instruction: Kies het woord dat past.
+        topic: hem-hemma
+        shuffle: true
+        items:
+          - { type: gap, text: "Jag är ___ nu.", gaps: [{ answers: ["hemma"], options: ["hemma", "hem"], shuffle: false, feedback: [{ match: "hem", tip: "Je bent ergens (plaats): hemma." }] }] }
+          - { type: gap, text: "Klockan fem går jag ___.", gaps: [{ answers: ["hem"], options: ["hemma", "hem"], shuffle: false, feedback: [{ match: "hemma", tip: "Je gaat ergens heen (richting): hem." }] }] }
+          - { type: gap, text: "Kom ___!", gaps: [{ answers: ["hit"], options: ["här", "hit"], shuffle: false }] }
+          - { type: gap, text: "Barnen leker ___.", gaps: [{ answers: ["ute"], options: ["ute", "ut"], shuffle: false }] }
+          - { type: gap, text: "Gå ___ och lek!", gaps: [{ answers: ["ut"], options: ["ute", "ut"], shuffle: false }] }
+          - { type: gap, text: "Kiruna? Vi åker ___ i vinter.", gaps: [{ answers: ["dit"], options: ["där", "dit"], shuffle: false }] }
+          - { type: gap, text: "Katten är ___ i huset.", gaps: [{ answers: ["inne"], options: ["inne", "in"], shuffle: false }] }
+          - { type: gap, text: "Nils springer ___ för trappan.", gaps: [{ answers: ["upp"], options: ["uppe", "upp"], shuffle: false }] }
+
+      - id: var-vart
+        title: Var of vart?
+        instruction: Kies het juiste vraagwoord.
+        topic: hem-hemma
+        shuffle: true
+        items:
+          - { type: mc, prompt: "___ ska du? – Till affären.", options: ["Vart", "Var"], answer: 0, shuffle: false, tip: "Het antwoord is een richting (naar de winkel): vart." }
+          - { type: mc, prompt: "___ bor du? – I Västerås.", options: ["Vart", "Var"], answer: 1, shuffle: false, tip: "Het antwoord is een plaats: var." }
+          - { type: mc, prompt: "___ åker ni i sommar? – Till Gotland.", options: ["Vart", "Var"], answer: 0, shuffle: false, tip: "Het antwoord is een richting: vart." }
+          - { type: mc, prompt: "___ är mina nycklar? – På bordet.", options: ["Vart", "Var"], answer: 1, shuffle: false, tip: "Het antwoord is een plaats: var." }
+
+      - id: an-subjekt
+        title: Vergelijken met än
+        instruction: Kies de juiste vorm.
+        topic: an
+        shuffle: true
+        items:
+          - { type: gap, text: "Nils är yngre än ___. (ik)", gaps: [{ answers: ["jag"], options: ["jag", "mig"], shuffle: false, feedback: [{ match: "mig", tip: "In spreektaal hoor je dit vaak, maar de norm na än is de onderwerpsvorm: jag." }] }] }
+          - { type: gap, text: "Wilma är längre än ___. (hij)", gaps: [{ answers: ["han"], options: ["han", "honom"], shuffle: false, feedback: [{ match: "honom", tip: "Na än: onderwerpsvorm (han)." }] }] }
+          - { type: gap, text: "Ni är äldre än ___. (wij)", gaps: [{ answers: ["vi"], options: ["vi", "oss"], shuffle: false }] }
+          - { type: gap, text: "Olle springer snabbare än ___. (zij, meervoud)", gaps: [{ answers: ["de"], options: ["de", "dem"], shuffle: false }] }
+          - { type: gap, text: "Fleur är lika gammal som ___. (ik)", gaps: [{ answers: ["jag"], options: ["jag", "mig"], shuffle: false }] }
+
+      - id: lezen-mail
+        title: "Lezen: een mail van Fleur"
+        instruction: Fleur schrijft een vriendin. Is de bewering **rätt** of **fel**? Is hij fout, schrijf dan de juiste zin op.
+        topic: perfekt-preteritum
+        textTitle: Hej Lotte!
+        text: |
+          Nu har vi bott i Västerås i nästan ett år. Tiden går fort! Vi har lärt oss mycket svenska och vi har träffat många trevliga människor.
+
+          Förra månaden åkte vi till Stockholm och såg Vasamuseet. I somras var vi en vecka i Dalarna. Bram har aldrig sett norrsken, men jag såg det en gång i Kiruna för fem år sedan. Vi har inte varit i Göteborg än. Kanske åker vi dit i höst!
+
+          Kram, Fleur
+        items:
+          - { type: truefalse, statement: "Fleur och Bram har bott i Västerås i fem år.", answer: false, tip: "Lees de eerste zin.", correction: { answers: ["{Fleur och Bram|De} har bott i Västerås i nästan ett år."] } }
+          - { type: truefalse, statement: "De har träffat många trevliga människor.", answer: true }
+          - { type: truefalse, statement: "Förra månaden åkte de till Stockholm.", answer: true }
+          - { type: truefalse, statement: "Bram har sett norrsken.", answer: false, tip: "Wie heeft het noorderlicht gezien?", correction: { answers: ["{Bram|Han} har aldrig sett norrsken.", "{Bram|Han} har inte sett norrsken."] } }
+          - { type: truefalse, statement: "De har varit i Göteborg.", answer: false, tip: "Lees het eind van de tweede alinea.", correction: { answers: ["De har inte varit i Göteborg[ än]."] } }
+          - { type: truefalse, statement: "Fleur såg norrsken i Kiruna.", answer: true }
+
+      - id: dialoog-kiruna
+        title: Ben je er ooit geweest?
+        instruction: Zet het gesprek tussen Olle en Bram in de goede volgorde.
+        topic: perfekt-preteritum
+        items:
+          - type: dialogue
+            lines:
+              - "Olle: Har du någon gång varit i Kiruna, Bram?"
+              - "Bram: Nej, aldrig. Har du?"
+              - "Olle: Ja, jag var där för tre år sedan. Det var jättefint."
+              - "Bram: Såg du norrsken?"
+              - "Olle: Ja, flera gånger! Du måste åka dit i vinter."
+              - "Bram: Det låter fantastiskt. Jag ska prata med Fleur."
+
+      - id: schrijven-ervaringen
+        title: "Schrijven: waar ben je geweest?"
+        instruction: Schrijf over plaatsen waar je geweest bent, en over één reis in het bijzonder.
+        topic: perfekt-preteritum
+        items:
+          - type: free
+            prompt: "Vertel in welke landen of steden je al bent geweest en waar je nog nooit bent geweest. Vertel daarna over één reis: wanneer was het en wat deed je?"
+            minWords: 35
+            require:
+              - { any: ["har varit", "har sett", "har bott", "har besökt"], label: "Je gebruikt de perfekt (har varit …)" }
+              - { any: ["aldrig", "inte än", "någon gång"], label: "Je zegt waar je nog nooit bent geweest (aldrig …)" }
+              - { any: ["förra", "sedan", "i somras", "när jag"], label: "Je noemt een moment in het verleden (för … sedan, förra året …)" }
+            model: "Jag har varit i många länder i Europa, till exempel Frankrike, Italien och Norge. Jag har aldrig varit i Asien. För två år sedan reste jag till Lofoten med min syster. Vi hyrde en liten stuga vid havet. Vi vandrade varje dag och åt mycket fisk. Det var en fantastisk resa."
+
+  - id: herhaling
+    title: Herhaling
+    intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 5.
+    exercises:
+      - id: herhaling-gemengd
+        title: Gemengde herhaling
+        instruction: Beantwoord de vragen. Ze gaan over hoofdstuk 1 tot en met 5 door elkaar.
+        shuffle: true
+        items:
+          - { type: gap, topic: preteritum, text: "I fredags ___ (ringa) Fleur sin mamma.", gaps: [{ answers: ["ringde"] }] }
+          - { type: gap, topic: supinum, text: "Har du ___ (dricka) kaffe idag?", gaps: [{ answers: ["druckit"] }] }
+          - { type: gap, topic: possessiv, text: "Är det här ___ jacka? (jouw)", gaps: [{ answers: ["din"], options: ["din", "ditt", "dina"] }] }
+          - { type: gap, topic: hem-hemma, text: "Efter skolan går Nils direkt ___.", gaps: [{ answers: ["hem"], options: ["hem", "hemma"], shuffle: false }] }
+          - { type: translate, topic: frekvens, prompt: "Olle drinkt nooit koffie 's avonds.", answers: ["Olle dricker aldrig kaffe på kvällen.", "På kvällen dricker Olle aldrig kaffe."] }
+          - { type: gap, topic: plural, text: "Hur många ___ (land) har du besökt?", gaps: [{ answers: ["länder"], feedback: [{ match: ["land", "landar"], tip: "land is een uitzondering: länder." }] }] }
+          - { type: order, topic: modala, start: "I vinter", tokens: ["vill", "vi", "åka", "till Kiruna"], answers: ["I vinter vill vi åka till Kiruna."] }
+          - { type: gap, topic: objekt, text: "Jag har inte sett ___ på länge. (hen, meervoud)", gaps: [{ answers: ["dem"], options: ["de", "dem", "deras"] }] }
+          - { type: mc, topic: perfekt-preteritum, prompt: "Welke zin is goed?", options: ["Förra året reste vi till Italien.", "Förra året har vi rest till Italien.", "Förra året vi reste till Italien."], answer: 0, tip: "Bepaald moment in het verleden: preteritum. En de V2-regel!" }
+          - { type: clock, time: "12:35" }
+
+vocab:
+  - { sv: "en resa", nl: "reis", def: "resan" }
+  - { sv: "ett land", nl: "land", def: "landet" }
+  - { sv: "en stad", nl: "stad", def: "staden" }
+  - { sv: "en semester", nl: "vakantie", def: "semestern" }
+  - { sv: "ett tåg", nl: "trein", def: "tåget" }
+  - { sv: "en nyckel", nl: "sleutel", def: "nyckeln" }
+  - { sv: "en månad", nl: "maand", def: "månaden" }
+  - { sv: "ett år", nl: "jaar", def: "året" }
+  - { sv: "ett norrsken", nl: "noorderlicht", def: "norrskenet" }
+  - { sv: "en människa", nl: "mens", def: "människan" }
+  - { sv: "att resa", nl: "reizen" }
+  - { sv: "att hitta", nl: "vinden" }
+  - { sv: "att tappa", nl: "verliezen, laten vallen" }
+  - { sv: "att måla", nl: "schilderen, verven" }
+  - { sv: "att hyra", nl: "huren" }
+  - { sv: "någonsin", nl: "ooit", alt: ["någon gång"] }
+  - { sv: "redan", nl: "al" }
+  - { sv: "inte än", nl: "nog niet", alt: ["inte ännu"] }
+  - { sv: "hemma", nl: "thuis" }
+  - { sv: "hem", nl: "naar huis" }
+  - { sv: "ute", nl: "buiten" }
+  - { sv: "ut", nl: "naar buiten" }
