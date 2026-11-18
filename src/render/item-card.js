@@ -12,7 +12,13 @@ const GENERIC_WRONG = 'Nog niet goed. Probeer het nog eens.';
  */
 export function itemCard(item, ctx, number, onDone, label) {
   const topic = item.topic ?? ctx.topic;
-  const r = RENDERERS[item.type](item, { ...ctx, topic });
+  let check = () => {};
+  let arrowNav = false; // keuze via pijltjestoetsen: niet meteen nakijken, wacht op Enter
+  // Renderers roepen auto() aan zodra een antwoord compleet is (keuze gemaakt, laatste tegel gelegd).
+  const r = RENDERERS[item.type](item, { ...ctx, topic, auto: () => {
+    if (arrowNav) arrowNav = false;
+    else check();
+  } });
   const feedback = h('div', { class: 'feedback', 'aria-live': 'polite' });
   const checkBtn = h('button', { type: 'button', class: 'btn primary' }, 'Controleer');
   const revealBtn = h('button', { type: 'button', class: 'btn ghost', hidden: true }, 'Toon antwoord');
@@ -49,7 +55,7 @@ export function itemCard(item, ctx, number, onDone, label) {
     feedback.replaceChildren(...content.filter(Boolean));
   };
 
-  const check = () => {
+  check = () => {
     if (finished) return;
     const res = r.check();
 
@@ -92,11 +98,36 @@ export function itemCard(item, ctx, number, onDone, label) {
 
   checkBtn.addEventListener('click', check);
   card.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && e.target.matches('input[type="text"]')) {
+    if (e.key.startsWith('Arrow') && e.target.matches('input[type="radio"]')) {
+      arrowNav = true;
+      return;
+    }
+    if (e.key === 'Enter' && e.target.matches('input[type="text"], input[type="radio"], input[type="checkbox"]')) {
       e.preventDefault();
       check();
+      return;
+    }
+    // Cijfertoetsen kiezen een meerkeuzeoptie (niet tijdens het typen).
+    if (/^[1-9]$/.test(e.key) && !e.target.matches('input[type="text"], textarea, select')) {
+      const radios = [...card.querySelectorAll('input[type="radio"]:not(:disabled), input[type="checkbox"]:not(:disabled)')];
+      const target = radios[Number(e.key) - 1];
+      if (target) {
+        e.preventDefault();
+        target.focus();
+        target.click();
+      }
     }
   });
+
+  /** Zet de focus op het eerste invulbare element van deze vraag. */
+  card.focusFirst = ({ scroll = true } = {}) => {
+    const el = card.querySelector(
+      'input[type="text"]:not(:disabled), textarea:not(:disabled), select:not(:disabled), input[type="radio"]:not(:disabled), input[type="checkbox"]:not(:disabled), button.chip:not(:disabled), button.move:not(:disabled)',
+    );
+    if (scroll) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el?.focus({ preventScroll: true });
+  };
+  card.isFinished = () => finished;
   revealBtn.addEventListener('click', () => {
     if (r.neutral) {
       r.reveal();

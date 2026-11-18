@@ -110,20 +110,33 @@ function exerciseRunner(items, { onFinish }) {
     score.replaceChildren(...[h('span', {}, `${done} van ${items.length} beantwoord`), total ? h('span', {}, ` · ${good} in één keer goed`) : ''].filter(Boolean));
   };
   updateScore();
+  const cards = [];
   const list = h('div', { class: 'items' },
-    items.map(({ item, ctx, label }, i) =>
-      itemCard(item, ctx, i + 1, (r) => {
+    items.map(({ item, ctx, label }, i) => {
+      const card = itemCard(item, ctx, i + 1, (r) => {
         done++;
         if (r.firstTry && !r.neutral) good++;
         updateScore();
         if (done === items.length) {
           summary.hidden = false;
           summary.replaceChildren(...onFinish(good, total));
-          summary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setTimeout(() => {
+            summary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            summary.querySelector('.btn.primary')?.focus({ preventScroll: true });
+          }, r.revealed ? 1200 : 700);
+          return;
         }
-      }, label),
-    ),
+        // Na een goed antwoord automatisch door naar de volgende open vraag.
+        if (r.revealed) return;
+        const next = cards.slice(i + 1).find((c) => !c.isFinished()) ?? cards.find((c) => !c.isFinished());
+        if (next) setTimeout(() => next.focusFirst(), 700);
+      }, label);
+      cards.push(card);
+      return card;
+    }),
   );
+  // Bij openen: cursor in de eerste vraag zonder te scrollen (niet op touchscreens, i.v.m. het toetsenbord).
+  if (matchMedia('(pointer: fine)').matches) setTimeout(() => cards[0]?.focusFirst({ scroll: false }), 50);
   return [list, score, summary];
 }
 
@@ -220,6 +233,12 @@ function viewAbout() {
       h('li', {}, 'Bij een fout krijg je eerst een tip, bijvoorbeeld over de woordvolgorde, een uitgang of de puntjes op de å, ä en ö.'),
       h('li', {}, 'Na een tweede fout zie je de regel met een link naar de uitleg. Na drie pogingen kun je het antwoord laten zien.'),
       h('li', {}, 'Bij een schrijfopdracht controleert de site alleen een paar dingen en krijg je een voorbeeldantwoord om mee te vergelijken.'),
+    ),
+    h('h2', {}, 'Snel werken'),
+    h('ul', {},
+      h('li', {}, 'Meerkeuze, keuzelijsten, koppelen en zinsbouw worden meteen nagekeken zodra je antwoord compleet is.'),
+      h('li', {}, 'Typ je antwoord en druk op Enter. Bij meerkeuze kun je de cijfertoetsen 1–9 gebruiken.'),
+      h('li', {}, 'Na een goed antwoord ga je vanzelf door naar de volgende vraag; aan het eind brengt Enter je naar de volgende oefening.'),
     ),
     h('h2', {}, 'Voortgang'),
     h('p', {}, 'Je voortgang wordt alleen in deze browser bewaard.'),

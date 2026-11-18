@@ -47,7 +47,7 @@ function mc(item, ctx) {
   const radios = [];
   const list = h('div', { class: 'options', role: 'radiogroup' },
     order.map((orig) => {
-      const r = h('input', { type: 'radio', name, value: String(orig) });
+      const r = h('input', { type: 'radio', name, value: String(orig), onchange: () => ctx.auto?.() });
       radios.push(r);
       return h('label', { class: 'option' }, r, h('span', { html: inline(String(item.options[orig])) }));
     }),
@@ -111,7 +111,13 @@ function gap(item, ctx) {
       const g = item.gaps[i];
       let f;
       if (g.options) {
-        f = h('select', { class: 'answer-input', 'aria-label': `Gat ${i + 1}` },
+        f = h('select', {
+          class: 'answer-input',
+          'aria-label': `Gat ${i + 1}`,
+          onchange: () => {
+            if (item.gaps.every((x) => x.options) && fields.every((x) => x.value)) ctx.auto?.();
+          },
+        },
           h('option', { value: '' }, '…'),
           (g.shuffle === false ? g.options : shuffle(g.options)).map((o) => h('option', { value: o }, o)),
         );
@@ -220,7 +226,12 @@ function order(item, ctx) {
       chosen.length || item.start ? null : h('span', { class: 'placeholder' }, 'Klik op de woorden in de goede volgorde.'),
     );
     fill(bank,
-      tiles.filter((x) => !chosen.includes(x)).map((c) => h('button', { type: 'button', class: 'chip', onclick: () => { chosen.push(c); draw(); } }, c.t)),
+      tiles.filter((x) => !chosen.includes(x)).map((c) => h('button', { type: 'button', class: 'chip', onclick: () => {
+        chosen.push(c);
+        draw();
+        if (chosen.length === item.tokens.length) ctx.auto?.();
+        else bank.querySelector('button')?.focus();
+      } }, c.t)),
     );
   };
   draw();
@@ -279,10 +290,16 @@ function dialogue(item) {
   };
 }
 
-function match(item) {
+function match(item, ctx) {
   const rightOrder = shuffle(item.pairs.map((_, i) => i));
   const selects = item.pairs.map(([left], i) =>
-    h('select', { class: 'answer-input', 'aria-label': `Koppeling voor ${left}` },
+    h('select', {
+      class: 'answer-input',
+      'aria-label': `Koppeling voor ${left}`,
+      onchange: () => {
+        if (selects.every((s) => s.value !== '')) ctx.auto?.();
+      },
+    },
       h('option', { value: '' }, '…'),
       rightOrder.map((r) => h('option', { value: String(r) }, item.pairs[r][1])),
     ),
@@ -346,7 +363,7 @@ function truefalse(item, ctx) {
   const name = nextId('tf');
   let phase = 'choose';
   const mk = (label, value) => {
-    const r = h('input', { type: 'radio', name, value: String(value) });
+    const r = h('input', { type: 'radio', name, value: String(value), onchange: () => phase === 'choose' && ctx.auto?.() });
     return { r, label: h('label', { class: 'option inline' }, r, h('span', {}, label)) };
   };
   const yes = mk('Rätt', true);
