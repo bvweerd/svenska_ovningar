@@ -5,7 +5,7 @@ grammar:
     title: De voltooide tijd (perfekt)
     summary: "**har + supinum**: *jobba → har jobbat*, *köpa → har köpt*, *bo → har bott*, *skriva → har skrivit*."
     body: |
-      De perfekt maak je met **har** + de **supinum** (het voltooid deelwoord). *Har* is voor iedereen hetzelfde, ook waar het Nederlands *ben* gebruikt: *Jag **har** varit i Kiruna* (Ik **ben** in Kiruna geweest).
+      De perfekt maak je met **har** + de **supinum**. De supinum lijkt op het Nederlandse voltooid deelwoord, maar is een aparte vorm die je alleen na *har* (of *hade*) gebruikt. Het Zweedse voltooid deelwoord als bijvoeglijk naamwoord ziet er soms anders uit: *Jag **har skrivit** en text*, maar *en **skriven** text*. *Har* is voor iedereen hetzelfde, ook waar het Nederlands *ben* gebruikt: *Jag **har** varit i Kiruna* (Ik **ben** in Kiruna geweest).
 
       | Infinitief | Preteritum | Supinum | Regel |
       |---|---|---|---|
@@ -66,15 +66,17 @@ grammar:
 
   - id: an
     title: Vergelijken met än
-    summary: "Na **än** (dan) en **som** (als) gebruik je de **onderwerpsvorm**: *Nils är yngre än **jag**.*"
+    summary: "Na **än** (dan) en **som** (als) mag de onderwerpsvorm én de objectvorm: *Nils är yngre än **jag*** of *än **mig***. *än jag* is formeler, *än mig* gewoner in spreektaal."
     body: |
-      Bij een vergelijking staat na *än* (dan) of *lika … som* (even … als) de **onderwerpsvorm**: *jag, du, han, hon, vi, ni, de*.
+      Bij een vergelijking met *än* (dan) of *lika … som* (even … als) zijn **twee vormen goed**:
 
-      - Nils är yngre **än jag**. (… dan ik ben)
-      - Wilma är längre **än han**.
-      - Hon är lika gammal **som vi**.
+      | Formeler (onderwerpsvorm) | Gewoner in spreektaal (objectvorm) |
+      |---|---|
+      | Nils är yngre **än jag**. | Nils är yngre **än mig**. |
+      | Wilma är längre **än han**. | Wilma är längre **än honom**. |
+      | Hon är lika gammal **som vi**. | Hon är lika gammal **som oss**. |
 
-      In spreektaal hoor je vaak *än mig* of *än honom*. Taalkundigen zijn het daar niet over eens. Met de onderwerpsvorm zit je altijd goed.
+      Volgens Språkrådet zijn beide vormen correct. *Än jag* klinkt wat formeler (… dan ik ben), *än mig* hoor je meer in gewone spreektaal. Let op: een bezittelijk voornaamwoord (*min, hans, våra*) betekent iets anders: *Nils är yngre än jag* (dan ik), maar *Min bil är större än din* (dan de jouwe).
 
       Een paar vergelijkende vormen die je hier tegenkomt: *äldre* (ouder), *yngre* (jonger), *längre* (langer), *större* (groter), *snabbare* (sneller). In hoofdstuk 12 leer je ze maken.
 
@@ -147,11 +149,11 @@ sections:
         topic: perfekt-preteritum
         items:
           - { type: translate, prompt: "Gisteren heb ik een boek gekocht.", answers: ["{Igår|I går} köpte jag en bok.", "Jag köpte en bok {igår|i går}."], feedback: [{ contains: "har köpt", tip: "In het Nederlands zeg je „heb gekocht”, maar met igår gebruik je in het Zweeds de preteritum." }, { contains: "igår jag", tip: "Na Igår komt eerst het werkwoord." }] }
-          - { type: translate, prompt: "Ik woon al drie jaar in Zweden.", answers: ["Jag har bott i Sverige i tre år."], feedback: [{ match: "Jag bor i Sverige i tre år", tip: "Iets wat tot nu doorloopt met een duur: perfekt (har bott) + i tre år." }] }
+          - { type: translate, prompt: "Ik woon al drie jaar in Zweden.", answers: ["Jag har bott i Sverige i tre år[ nu].", "Nu har jag bott i Sverige i tre år."], feedback: [{ match: "Jag bor i Sverige i tre år", tip: "Iets wat tot nu doorloopt met een duur: perfekt (har bott) + i tre år." }] }
           - { type: translate, prompt: "Ben je ooit in Stockholm geweest?", answers: ["Har du {någonsin|någon gång} varit i Stockholm?"], feedback: [{ contains: "är du", tip: "Bij de perfekt gebruik je altijd har, ook waar het Nederlands „ben” zegt." }] }
           - { type: translate, prompt: "We hebben nog nooit surströmming gegeten.", answers: ["Vi har aldrig ätit surströmming."], feedback: [{ contains: "aldrig har", tip: "aldrig staat na har." }] }
           - { type: translate, prompt: "Wat heb je vandaag gedaan?", answers: ["Vad har du gjort {idag|i dag}?"] }
-          - { type: translate, prompt: "Twee jaar geleden woonden we in Utrecht.", answers: ["För två år sedan bodde vi i Utrecht.", "Vi bodde i Utrecht för två år sedan."], feedback: [{ contains: "har bott", tip: "Twee jaar geleden is een bepaald moment, en het is voorbij: preteritum." }] }
+          - { type: translate, prompt: "Twee jaar geleden woonden we in Utrecht.", answers: ["För två år {sedan|sen} bodde vi i Utrecht.", "Vi bodde i Utrecht för två år {sedan|sen}."], feedback: [{ contains: "har bott", tip: "Twee jaar geleden is een bepaald moment, en het is voorbij: preteritum." }] }
 
       - id: hemma-hem
         title: Waar of waarheen?
@@ -166,7 +168,7 @@ sections:
           - { type: gap, text: "Gå ___ och lek!", gaps: [{ answers: ["ut"], options: ["ute", "ut"], shuffle: false }] }
           - { type: gap, text: "Kiruna? Vi åker ___ i vinter.", gaps: [{ answers: ["dit"], options: ["där", "dit"], shuffle: false }] }
           - { type: gap, text: "Katten är ___ i huset.", gaps: [{ answers: ["inne"], options: ["inne", "in"], shuffle: false }] }
-          - { type: gap, text: "Nils springer ___ för trappan.", gaps: [{ answers: ["upp"], options: ["uppe", "upp"], shuffle: false }] }
+          - { type: gap, text: "Nils springer ___ till övervåningen.", gaps: [{ answers: ["upp"], options: ["uppe", "upp"], shuffle: false }] }
 
       - id: var-vart
         title: Var of vart?
@@ -181,15 +183,16 @@ sections:
 
       - id: an-subjekt
         title: Vergelijken met än
-        instruction: Kies de juiste vorm.
+        instruction: Vul in. Bij een voornaamwoord zijn vaak twee vormen goed.
         topic: an
         shuffle: true
         items:
-          - { type: gap, text: "Nils är yngre än ___. (ik)", gaps: [{ answers: ["jag"], options: ["jag", "mig"], shuffle: false, feedback: [{ match: "mig", tip: "In spreektaal hoor je dit vaak, maar de norm na än is de onderwerpsvorm: jag." }] }] }
-          - { type: gap, text: "Wilma är längre än ___. (hij)", gaps: [{ answers: ["han"], options: ["han", "honom"], shuffle: false, feedback: [{ match: "honom", tip: "Na än: onderwerpsvorm (han)." }] }] }
-          - { type: gap, text: "Ni är äldre än ___. (wij)", gaps: [{ answers: ["vi"], options: ["vi", "oss"], shuffle: false }] }
-          - { type: gap, text: "Olle springer snabbare än ___. (zij, meervoud)", gaps: [{ answers: ["de"], options: ["de", "dem"], shuffle: false }] }
-          - { type: gap, text: "Fleur är lika gammal som ___. (ik)", gaps: [{ answers: ["jag"], options: ["jag", "mig"], shuffle: false }] }
+          - { type: gap, text: "Nils är yngre ___ jag.", gaps: [{ answers: ["än"], options: ["än", "som"], shuffle: false, feedback: [{ match: "som", tip: "Na een vergelijkende vorm (yngre, äldre …) komt än. som hoort bij lika … som." }] }] }
+          - { type: gap, text: "Wilma är längre än ___. (hij)", gaps: [{ answers: ["han", "honom"], feedback: [{ match: "hans", tip: "hans is bezittelijk (zijn). Na än: han of honom." }] }] }
+          - { type: gap, text: "Ni är äldre än ___. (wij)", gaps: [{ answers: ["vi", "oss"], feedback: [{ match: ["vår", "våra"], tip: "vår is bezittelijk (ons). Na än: vi of oss." }] }] }
+          - { type: gap, text: "Olle springer snabbare än ___. (zij, meervoud)", gaps: [{ answers: ["de", "dem"], feedback: [{ match: "deras", tip: "deras is bezittelijk (hun). Na än: de of dem." }] }] }
+          - { type: gap, text: "Fleur är lika gammal ___ jag.", gaps: [{ answers: ["som"], options: ["som", "än"], shuffle: false, feedback: [{ match: "än", tip: "Even … als is lika … som." }] }] }
+          - { type: gap, text: "Bram är äldre än ___. (ik)", gaps: [{ answers: ["jag", "mig"], feedback: [{ match: ["min", "mitt"], tip: "min is bezittelijk (mijn). Na än: jag of mig." }] }] }
 
       - id: lezen-mail
         title: "Lezen: een mail van Fleur"
@@ -199,7 +202,7 @@ sections:
         text: |
           Nu har vi bott i Västerås i nästan ett år. Tiden går fort! Vi har lärt oss mycket svenska och vi har träffat många trevliga människor.
 
-          Förra månaden åkte vi till Stockholm och såg Vasamuseet. I somras var vi en vecka i Dalarna. Bram har aldrig sett norrsken, men jag såg det en gång i Kiruna för fem år sedan. Vi har inte varit i Göteborg än. Kanske åker vi dit i höst!
+          Förra månaden åkte vi till Stockholm och besökte Vasamuseet. I somras var vi en vecka i Dalarna. Bram har aldrig sett norrsken, men jag såg det en gång i Kiruna för fem år sedan. Vi har inte varit i Göteborg än. Kanske åker vi dit i höst!
 
           Kram, Fleur
         items:
@@ -207,7 +210,7 @@ sections:
           - { type: truefalse, statement: "De har träffat många trevliga människor.", answer: true }
           - { type: truefalse, statement: "Förra månaden åkte de till Stockholm.", answer: true }
           - { type: truefalse, statement: "Bram har sett norrsken.", answer: false, tip: "Wie heeft het noorderlicht gezien?", correction: { answers: ["{Bram|Han} har aldrig sett norrsken.", "{Bram|Han} har inte sett norrsken."] } }
-          - { type: truefalse, statement: "De har varit i Göteborg.", answer: false, tip: "Lees het eind van de tweede alinea.", correction: { answers: ["De har inte varit i Göteborg[ än]."] } }
+          - { type: truefalse, statement: "De har varit i Göteborg.", answer: false, tip: "Lees het eind van de tweede alinea.", correction: { answers: ["{De|Fleur och Bram|Bram och Fleur} har inte varit i Göteborg[ än].", "{De|Fleur och Bram|Bram och Fleur} har aldrig varit i Göteborg."] } }
           - { type: truefalse, statement: "Fleur såg norrsken i Kiruna.", answer: true }
 
       - id: dialoog-kiruna
@@ -263,7 +266,7 @@ sections:
           - { type: gap, topic: supinum, text: "Har du ___ (dricka) kaffe idag?", gaps: [{ answers: ["druckit"] }] }
           - { type: gap, topic: possessiv, text: "Är det här ___ jacka? (jouw)", gaps: [{ answers: ["din"], options: ["din", "ditt", "dina"] }] }
           - { type: gap, topic: hem-hemma, text: "Efter skolan går Nils direkt ___.", gaps: [{ answers: ["hem"], options: ["hem", "hemma"], shuffle: false }] }
-          - { type: translate, topic: frekvens, prompt: "Olle drinkt nooit koffie 's avonds.", answers: ["Olle dricker aldrig kaffe på kvällen.", "På kvällen dricker Olle aldrig kaffe."] }
+          - { type: translate, topic: frekvens, prompt: "Olle drinkt nooit koffie 's avonds.", answers: ["Olle dricker aldrig kaffe på {kvällen|kvällarna}.", "På {kvällen|kvällarna} dricker Olle aldrig kaffe."] }
           - { type: gap, topic: plural, text: "Hur många ___ (land) har du besökt?", gaps: [{ answers: ["länder"], feedback: [{ match: ["land", "landar"], tip: "land is een uitzondering: länder." }] }] }
           - { type: order, topic: modala, start: "I vinter", tokens: ["vill", "vi", "åka", "till Kiruna"], answers: ["I vinter vill vi åka till Kiruna."] }
           - { type: gap, topic: objekt, text: "Jag har inte sett ___ på länge. (hen, meervoud)", gaps: [{ answers: ["dem"], options: ["de", "dem", "deras"] }] }

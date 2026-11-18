@@ -31,7 +31,7 @@ grammar:
 
   - id: indirekt-tal
     title: Indirecte rede – Han säger att …
-    summary: "**säger att** + bewering, **frågar om** + ja/nee-vraag, **frågar var/när/vad** + vraagwoordvraag. Daarna: **onderwerp vóór het werkwoord**."
+    summary: "**säger att** + bewering, **frågar om** + ja/nee-vraag, **frågar var/när/vad** + vraagwoordvraag. Daarna: **onderwerp vóór het werkwoord**. Is *vem/vad* zelf het onderwerp, dan komt er **som** bij: *Hon frågar vem som ringde*."
     body: |
       Vertel je na wat iemand zegt of vraagt, dan maak je er een **bijzin** van:
 
@@ -45,6 +45,8 @@ grammar:
       ### Twee dingen om op te letten
       1. Een ja/nee-vraag wordt een zin met **om** (of). Een vraag met een vraagwoord houdt dat vraagwoord.
       2. In de bijzin staat het **onderwerp vóór het werkwoord**, ook na een vraagwoord: *Bram frågar när **filmen börjar*** (niet *~~när börjar filmen~~*).
+
+      3. Is het vraagwoord (*vem, vad, vilken*) zelf het **onderwerp**, dan zet je er **som** achter: *Vem ringde?* → *Hon frågar vem **som** ringde.* *Vad hände?* → *Jag vet inte vad **som** hände.* Is het vraagwoord niet het onderwerp, dan komt er géén *som*: *Hon frågar vem **du** ringde.*
 
       Ook na *Vet du …?*, *Jag vet inte …* en *Kan du säga …?* krijg je zo'n bijzin: *Vet du **när tåget går**?*
 
@@ -140,6 +142,7 @@ sections:
           - { type: translate, prompt: "Fleur frågar Bram: ”Kommer du ikväll?”", answers: ["Fleur frågar [Bram ]om {han|Bram} kommer {ikväll|i kväll}."], feedback: [{ contains: "om kommer", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om han kommer." }, { contains: "att han kommer", tip: "Een ja/nee-vraag wordt een bijzin met om." }] }
           - { type: translate, prompt: "Nils undrar: ”Var är mobilen?”", answers: ["Nils undrar var mobilen är."], feedback: [{ match: "Nils undrar var är mobilen", tip: "In de bijzin: eerst het onderwerp (mobilen), dan het werkwoord (är)." }] }
           - { type: translate, prompt: "Ingrid säger: ”Vi ska åka till Göteborg.”", answers: ["Ingrid säger att de ska åka till Göteborg."], feedback: [{ match: "Ingrid säger att vi ska åka till Göteborg", tip: "Ingrid bedoelt zichzelf en haar gezin: in de indirecte rede wordt vi dan de." }] }
+          - { type: translate, prompt: "Ingrid frågar: ”Vem ringde?”", answers: ["Ingrid frågar vem som ringde."], feedback: [{ match: "Ingrid frågar vem ringde", tip: "vem is hier het onderwerp: in de bijzin komt er som bij (vem som ringde)." }] }
           - { type: translate, prompt: "Bram frågar: ”När börjar filmen?”", answers: ["Bram frågar när filmen börjar."], feedback: [{ match: "Bram frågar när börjar filmen", tip: "In de bijzin: eerst het onderwerp (filmen), dan het werkwoord (börjar)." }] }
 
       - id: indirect-zinsbouw
@@ -178,7 +181,7 @@ sections:
               - "Fleur: Hej, det är Fleur van Dijk. Jag skulle vilja boka en tid."
               - "Receptionisten: Javisst. Passar det på torsdag klockan nio?"
               - "Fleur: Tyvärr inte, då jobbar jag. Har ni något på eftermiddagen?"
-              - "Receptionisten: Ja, klockan fyra går bra."
+              - "Receptionisten: Ja, vi har en tid klockan fyra."
               - "Fleur: Perfekt, då tar jag den. Tack så mycket!"
               - "Receptionisten: Välkommen. Hej då!"
 
@@ -188,15 +191,15 @@ sections:
         topic: indirekt-tal
         textTitle: Ett missat samtal
         text: |
-          I tisdags ringde Ingrid till Fleur, men Fleur svarade inte. Hon hade glömt mobilen hemma. Ingrid lämnade ett meddelande. Hon sa att hon hade två biljetter till en konsert på fredag och frågade om Fleur ville följa med.
+          I tisdags ringde Ingrid till Fleur, men Fleur svarade inte. Hon hade glömt mobilen hemma. Ingrid lämnade ett meddelande. Hon sa att hon hade två biljetter till en konsert på fredagen och frågade om Fleur ville följa med.
 
           När Fleur kom hem lyssnade hon på meddelandet och ringde tillbaka direkt. Hon sa att hon gärna ville följa med. Konserten var fantastisk!
         items:
           - { type: truefalse, statement: "Ingrid ringde i tisdags.", answer: true }
-          - { type: truefalse, statement: "Fleur svarade i telefon.", answer: false, tip: "Waarom niet?", correction: { answers: ["{Fleur|Hon} svarade inte.", "{Fleur|Hon} hade glömt mobilen hemma."] } }
+          - { type: truefalse, statement: "Fleur svarade i telefon.", answer: false, tip: "Waarom niet?", correction: { answers: ["{Fleur|Hon} svarade inte[ i telefon].", "{Fleur|Hon} hade glömt mobilen hemma."] } }
           - { type: truefalse, statement: "Ingrid lämnade ett meddelande.", answer: true }
           - { type: truefalse, statement: "Ingrid hade tre biljetter.", answer: false, tip: "Hoeveel kaartjes had ze?", correction: { answers: ["{Ingrid|Hon} hade två biljetter."] } }
-          - { type: truefalse, statement: "Konserten var på lördag.", answer: false, tip: "Op welke dag was het concert?", correction: { answers: ["Konserten var på fredag."] } }
+          - { type: truefalse, statement: "Konserten var på lördag.", answer: false, tip: "Op welke dag was het concert?", correction: { answers: ["Konserten var på fredagen.", "Konserten var {på fredag|i fredags}."] } }
           - { type: truefalse, statement: "Fleur ville inte följa med.", answer: false, tip: "Wat zei Fleur toen ze terugbelde?", correction: { answers: ["{Fleur|Hon} ville [gärna ]följa med."] } }
 
       - id: schrijven-bericht
@@ -236,8 +239,8 @@ sections:
           - { type: gap, topic: indirekt-tal, text: "Kan du säga hur mycket klockan ___?", gaps: [{ answers: ["är"] }] }
           - { type: gap, topic: perfekt-preteritum, text: "Jag ___ (ringa) dig tre gånger igår!", gaps: [{ answers: ["ringde"], feedback: [{ match: "har ringt", tip: "igår is een bepaald moment: preteritum." }] }] }
           - { type: gap, topic: tempus, text: "Bram hade redan ___ (äta) när Fleur kom hem.", gaps: [{ answers: ["ätit"] }] }
-          - { type: gap, topic: det-finns, text: "Det finns ___ meddelanden på telefonsvararen. (geen)", gaps: [{ answers: ["inga"], options: ["ingen", "inget", "inga"], shuffle: false }] }
-          - { type: translate, topic: tycka-tro-tanka, prompt: "Ik denk dat ze niet thuis is.", answers: ["Jag tror {inte att hon är hemma|att hon inte är hemma}."], feedback: [{ contains: "tycker att", tip: "Een vermoeden: tror." }, { contains: "hon är inte hemma", tip: "In een bijzin staat inte vóór het werkwoord: att hon inte är hemma." }] }
+          - { type: gap, topic: det-finns, text: "Det finns ___ meddelanden i röstbrevlådan. (geen)", gaps: [{ answers: ["inga"], options: ["ingen", "inget", "inga"], shuffle: false }] }
+          - { type: translate, topic: tycka-tro-tanka, prompt: "Ik denk dat ze niet thuis is.", answers: ["Jag tror {inte att hon är hemma|att hon inte är hemma|inte hon är hemma|hon inte är hemma}."], feedback: [{ contains: "tycker att", tip: "Een vermoeden: tror." }, { contains: "hon är inte hemma", tip: "In een bijzin staat inte vóór het werkwoord: att hon inte är hemma." }] }
           - { type: gap, topic: possessiv, text: "Har du sett ___ mobil? (mijn)", gaps: [{ answers: ["min"], options: ["min", "mitt", "mina"] }] }
           - { type: gap, topic: hem-hemma, text: "Ring mig när du kommer ___!", gaps: [{ answers: ["hem"], options: ["hem", "hemma"], shuffle: false }] }
           - { type: order, topic: konjunktioner, start: "Jag ringde, men", tokens: ["ingen", "svarade"], answers: ["Jag ringde, men ingen svarade."] }

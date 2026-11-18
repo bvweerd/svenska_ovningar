@@ -74,6 +74,11 @@ grammar:
       - Idag jobbar Fleur **inte**.
       - Nu bor vi **inte** i Nederländerna.
 
+      Let op: is het lijdend voorwerp een kort voornaamwoord (*mig, dig, honom, henne, det* …), dan staat dat meestal **vóór** *inte*:
+
+      - Jag ser honom **inte**. (Ik zie hem niet.)
+      - Jag tror det **inte**. (Ik geloof het niet.)
+
       Op een ja/nee-vraag antwoord je met *ja* of *nej*: *Talar du finska? – Nej, jag talar inte finska.*
 
   - id: pronomen
@@ -92,6 +97,8 @@ grammar:
 
       - Vi har **en** hund. **Den** heter Sigge.
       - Vi har **ett** hus. **Det** ligger i Västerås.
+
+      *Den* is bij dieren altijd goed. Gaat het om een eigen huisdier met een naam, dan zeggen Zweden ook vaak *han* of *hon*: *Vi har en katt. **Hon** heter Pluto.*
 
       Spreek je meer mensen aan, dan gebruik je **ni**: *Fleur och Bram, var bor ni?*
 
@@ -199,7 +206,7 @@ sections:
           - type: steps
             steps:
               - { type: mc, prompt: "**tro** (geloven, denken): Jag ___ det.", options: ["tror", "troar", "troer"], answer: 0, tip: "tro is een kort werkwoord: alleen -r erachter." }
-              - { type: translate, prompt: "Vertaal: Ik geloof het niet.", answers: ["Jag tror inte det.", "Det tror jag inte."], topic: inte }
+              - { type: translate, prompt: "Vertaal: Ik geloof het niet.", answers: ["Jag tror inte det.", "Jag tror det inte.", "Det tror jag inte."], topic: inte }
           - type: steps
             steps:
               - { type: mc, prompt: "**göra** (doen): Vad ___ du?", options: ["gör", "görar", "göra"], answer: 0, tip: "göra is onregelmatig: de presens is gör." }
@@ -305,11 +312,11 @@ sections:
         instruction: Geef een ontkennend antwoord op de vraag. Begin met *Nej*.
         topic: inte
         items:
-          - { type: translate, prompt: "Kommer Bram från Belgien?", answers: ["[Nej, ]han kommer inte från Belgien."], feedback: [{ contains: "bram kommer inte", tip: "Goed bedoeld, maar gebruik in het antwoord een voornaamwoord: Bram → han." }] }
-          - { type: translate, prompt: "Bor Ingrid i Stockholm?", answers: ["[Nej, ]hon bor inte i Stockholm."] }
-          - { type: translate, prompt: "Talar ni finska?", answers: ["[Nej, ]vi {talar|pratar} inte finska."], feedback: [{ contains: "ni talar inte", tip: "De vraag is aan jullie gesteld (ni). In het antwoord spreek je over jezelf: vi." }] }
-          - { type: translate, prompt: "Är Nils trött?", answers: ["[Nej, ]han är inte trött."] }
-          - { type: translate, prompt: "Jobbar du i en butik?", answers: ["[Nej, ]jag {jobbar|arbetar} inte i en butik."], feedback: [{ contains: "du jobbar inte", tip: "Je antwoordt over jezelf: du wordt jag." }] }
+          - { type: translate, prompt: "Kommer Bram från Belgien?", answers: ["[Nej, ]{han|Bram} kommer inte från Belgien.", "[Nej, ]det gör {han|Bram} inte."] }
+          - { type: translate, prompt: "Bor Ingrid i Stockholm?", answers: ["[Nej, ]{hon|Ingrid} bor inte i Stockholm.", "[Nej, ]det gör {hon|Ingrid} inte."] }
+          - { type: translate, prompt: "Talar ni finska?", answers: ["[Nej, ]vi {talar|pratar} inte finska.", "[Nej, ]det gör vi inte."], feedback: [{ contains: "ni talar inte", tip: "De vraag is aan jullie gesteld (ni). In het antwoord spreek je over jezelf: vi." }] }
+          - { type: translate, prompt: "Är Nils trött?", answers: ["[Nej, ]{han|Nils} är inte trött.", "[Nej, ]det är {han|Nils} inte."] }
+          - { type: translate, prompt: "Jobbar du i en butik?", answers: ["[Nej, ]jag {jobbar|arbetar} inte i en butik.", "[Nej, ]det gör jag inte."], feedback: [{ contains: "du jobbar inte", tip: "Je antwoordt over jezelf: du wordt jag." }] }
           - type: steps
             steps:
               - type: mc
@@ -375,7 +382,7 @@ sections:
           - { type: gap, text: "Fleur köper en tidning. Hon läser ___ (tidning) på bussen.", gaps: [{ answers: ["tidningen"] }] }
           - { type: gap, text: "Där står en stol. ___ (stol) är gammal.", gaps: [{ answers: ["Stolen"] }] }
           - { type: gap, text: "Nils äter ett äpple. ___ (äpple) är grönt.", gaps: [{ answers: ["Äpplet"] }] }
-          - { type: gap, text: "Var ligger ___ (lampa)? – På bordet.", gaps: [{ answers: ["lampan"] }] }
+          - { type: gap, text: "Var står ___ (lampa)? – På bordet.", gaps: [{ answers: ["lampan"] }] }
 
       - id: getallen
         title: Getallen
@@ -446,7 +453,7 @@ sections:
               - "Olle: Varifrån kommer du, Bram?"
               - "Bram: Jag kommer från Nederländerna."
               - "Olle: Talar du svenska?"
-              - "Bram: Ja, lite. Jag läser svenska på en kurs."
+              - "Bram: Ja, lite. Jag går en kurs i svenska."
               - "Olle: Vad bra! Välkommen till Västerås!"
 
       - id: lezen-fleur
@@ -473,11 +480,11 @@ sections:
         items:
           - { type: translate, prompt: "Ik heet Bram.", answers: ["Jag heter Bram."] }
           - { type: translate, prompt: "Wij wonen in Zweden.", answers: ["Vi bor i Sverige."] }
-          - { type: translate, prompt: "Spreek jij Zweeds?", answers: ["{Talar|Pratar} du svenska?"], topic: vragen }
-          - { type: translate, prompt: "Vandaag werkt Fleur thuis.", answers: ["{Idag|I dag} {jobbar|arbetar} Fleur hemma."] }
+          - { type: translate, prompt: "Spreek jij Zweeds?", answers: ["{Talar|Pratar|Kan} du svenska?"], topic: vragen }
+          - { type: translate, prompt: "Vandaag werkt Fleur thuis.", answers: ["{Idag|I dag} {jobbar|arbetar} Fleur hemma.", "Fleur {jobbar|arbetar} hemma {idag|i dag}."] }
           - { type: translate, prompt: "Het huis ligt in Västerås.", answers: ["Huset ligger i Västerås."], topic: substantiv }
           - { type: translate, prompt: "Hoe gaat het met je?", answers: ["Hur mår du?", "Hur är det[ med dig]?"], topic: vragen }
-          - { type: translate, prompt: "Nils spreekt geen Fins.", answers: ["Nils {talar|pratar} inte finska."], topic: inte }
+          - { type: translate, prompt: "Nils spreekt geen Fins.", answers: ["Nils {talar|pratar|kan} inte finska."], topic: inte }
 
       - id: schrijven-voorstellen
         title: "Schrijven: stel jezelf voor"

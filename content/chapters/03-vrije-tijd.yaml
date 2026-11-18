@@ -3,7 +3,7 @@ chapter: 3
 grammar:
   - id: frekvens
     title: Hoe vaak? alltid, ofta, ibland, sällan, aldrig
-    summary: "Een woord als *ofta* of *aldrig* staat in een hoofdzin **direct na het werkwoord**, op dezelfde plek als *inte*. Bij inversie: **na het onderwerp**."
+    summary: "Een woord als *ofta* of *aldrig* staat in een hoofdzin **direct na het werkwoord**, op dezelfde plek als *inte*. Bij inversie: **na het onderwerp**. Een kort voornaamwoord als lijdend voorwerp gaat ervóór: *Jag ser **honom** inte.*"
     body: |
       | Zweeds | Betekenis |
       |---|---|
@@ -20,6 +20,17 @@ grammar:
       - På kvällen tittar jag **sällan** på tv. (inversie: na het onderwerp)
 
       *Ibland* mag ook vooraan staan: **Ibland** fiskar Olle i sjön. Dan geldt gewoon de V2-regel.
+
+      Is het onderwerp bij inversie een naam of zelfstandig naamwoord, dan mag *inte* (of *ofta* …) er ook vóór staan: *På söndagar spelar Nils **inte** fotboll* of *På söndagar spelar **inte** Nils fotboll*.
+
+      ### Kort voornaamwoord vóór inte en ofta
+      Is het lijdend voorwerp een kort voornaamwoord (*mig, dig, honom, henne, den, det, oss, er, dem*), dan schuift dat naar voren: het staat **vóór** *inte*, *ofta*, *aldrig* enzovoort.
+
+      - Jag ser **honom** inte. (Ik zie hem niet.)
+      - Olle hjälper **oss** ofta.
+      - Jag tror **det** inte.
+
+      Een gewoon zelfstandig naamwoord blijft achter *inte*: *Jag ser **inte** Nils.* Ook als er een tweede werkwoord is, blijft het voornaamwoord achteraan: *Jag har **inte** sett honom.* *Jag ser inte honom* zeg je alleen als je *honom* extra nadruk geeft (hem niet, maar wel iemand anders).
 
       ### brukar + infinitief
       Met *brukar* zeg je dat je iets **gewoonlijk** doet. Erna komt een infinitief, zonder *att*:
@@ -98,17 +109,17 @@ sections:
           - { type: order, start: "På kvällen", tokens: ["jag", "tittar", "sällan", "på tv"], answers: ["På kvällen tittar jag sällan på tv."] }
           - { type: order, start: "Fleur", tokens: ["alltid", "cyklar", "till jobbet"], answers: ["Fleur cyklar alltid till jobbet."] }
           - { type: order, start: "Ibland", tokens: ["Olle", "fiskar", "i sjön"], answers: ["Ibland fiskar Olle i sjön."] }
-          - { type: order, start: "På söndagar", tokens: ["inte", "Nils", "spelar", "fotboll"], answers: ["På söndagar spelar Nils inte fotboll."] }
+          - { type: order, start: "På söndagar", tokens: ["inte", "Nils", "spelar", "fotboll"], answers: ["På söndagar spelar Nils inte fotboll.", "På söndagar spelar inte Nils fotboll."] }
 
       - id: frekvens-vertalen
         title: Vertaal
         instruction: Vertaal naar het Zweeds.
         topic: frekvens
         items:
-          - { type: translate, prompt: "Ik fiets meestal naar mijn werk.", answers: ["Jag brukar cykla till {jobbet|arbetet}."], feedback: [{ contains: "brukar att", tip: "Na brukar komt de infinitief zonder att." }, { contains: "brukar cyklar", tip: "Na brukar komt de infinitief: cykla." }] }
+          - { type: translate, prompt: "Ik fiets meestal naar mijn werk.", answers: ["Jag brukar cykla till {jobbet|arbetet}.", "Jag cyklar {oftast|för det mesta} till {jobbet|arbetet}."], feedback: [{ contains: "brukar att", tip: "Na brukar komt de infinitief zonder att." }, { contains: "brukar cyklar", tip: "Na brukar komt de infinitief: cykla." }] }
           - { type: translate, prompt: "Bram drinkt nooit thee.", answers: ["Bram dricker aldrig te."], feedback: [{ contains: "aldrig dricker", tip: "aldrig staat ná het werkwoord, net als inte." }] }
-          - { type: translate, prompt: "Fleur leest vaak 's avonds.", answers: ["Fleur läser ofta på {kvällen|kvällarna}.", "På {kvällen|kvällarna} läser Fleur ofta."], feedback: [{ contains: "fleur ofta läser", tip: "ofta staat ná het werkwoord, net als inte." }] }
-          - { type: translate, prompt: "Op zondag slapen we meestal lang.", answers: ["På {söndagar|söndag|söndagarna} brukar vi sova länge."], feedback: [{ contains: "vi brukar", tip: "Na „På söndagar” komt eerst het werkwoord (brukar), dan vi." }] }
+          - { type: translate, prompt: "Fleur leest vaak 's avonds.", answers: ["Fleur läser ofta på {kvällen|kvällarna}.", "På {kvällen|kvällarna} läser Fleur ofta.", "Ofta läser Fleur på {kvällen|kvällarna}."], feedback: [{ contains: "fleur ofta läser", tip: "ofta staat ná het werkwoord, net als inte." }] }
+          - { type: translate, prompt: "Op zondag slapen we meestal lang.", answers: ["På {söndagar|söndagarna} brukar vi sova länge.", "Vi brukar sova länge på {söndagar|söndagarna}."], feedback: [{ contains: ["på söndag brukar", "länge på söndag"], tip: "På söndag betekent „aanstaande zondag”. Voor een gewoonte zeg je på söndagar." }, { contains: ["söndagar vi brukar", "söndagarna vi brukar"], tip: "Na „På söndagar” komt eerst het werkwoord (brukar), dan vi." }] }
           - { type: translate, prompt: "Soms gaan we naar de bioscoop.", answers: ["Ibland går vi på bio.", "Vi går på bio ibland.", "Vi går ibland på bio."], feedback: [{ contains: "ibland vi går", tip: "Begin je met Ibland, dan komt eerst het werkwoord: Ibland går vi …" }, { contains: "till bio", tip: "Naar de bioscoop gaan is „gå på bio”." }] }
 
       - id: tycka-om-att
@@ -171,9 +182,9 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: objekt
         items:
-          - { type: translate, prompt: "Ik bel haar morgen.", answers: ["Jag ringer henne {imorgon|i morgon}.", "{Imorgon|I morgon} ringer jag henne."], feedback: [{ contains: "ringer hon", tip: "Haar (lijdend voorwerp) = henne." }] }
+          - { type: translate, prompt: "Ik bel haar morgen.", answers: ["Jag ringer[ till] henne {imorgon|i morgon}.", "{Imorgon|I morgon} ringer jag[ till] henne."], feedback: [{ contains: ["ringer hon", "till hon"], tip: "Haar (lijdend voorwerp) = henne." }] }
           - { type: translate, prompt: "Zie je hem?", answers: ["Ser du honom?"], feedback: [{ match: "Ser du han", tip: "Hem (lijdend voorwerp) = honom." }] }
-          - { type: translate, prompt: "Olle helpt ons vaak.", answers: ["Olle hjälper oss ofta."], feedback: [{ contains: "ofta hjälper", tip: "ofta staat ná het werkwoord." }] }
+          - { type: translate, prompt: "Olle helpt ons vaak.", answers: ["Olle hjälper oss ofta."], feedback: [{ contains: "ofta hjälper", tip: "ofta staat ná het werkwoord." }, { contains: "hjälper ofta oss", tip: "Een kort voornaamwoord (oss) staat vóór ofta: hjälper oss ofta." }] }
           - { type: translate, prompt: "Wij houden van jullie!", answers: ["Vi älskar er!"] }
           - { type: translate, prompt: "Wil je met mij dansen?", answers: ["Vill du dansa med mig?"], feedback: [{ contains: "med jag", tip: "Na een voorzetsel komt de objectvorm: med mig." }] }
 
@@ -203,7 +214,7 @@ sections:
             lines:
               - "Elin: Hej Wilma! Vad ska du göra på lördag?"
               - "Wilma: Ingenting speciellt. Varför då?"
-              - "Elin: Vill du gå på bio med mig? Det går en ny film."
+              - "Elin: Vill du gå på bio med mig? Det går en ny film på bion."
               - "Wilma: Vad är det för film?"
               - "Elin: En skräckfilm. Tycker du om skräckfilmer?"
               - "Wilma: Nej, inte alls! Men jag följer gärna med om vi ser en komedi."

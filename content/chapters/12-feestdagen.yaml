@@ -40,9 +40,11 @@ grammar:
 
       Dus dubbel bepaald: *den nya bilen*, niet *~~den nya bil~~* en niet *~~nya bilen~~*.
 
+      Uitzondering: in vaste namen valt het losse lidwoord weg: *Gamla stan* (de oude stad in Stockholm), *Vita huset* (het Witte Huis).
+
       ### Bijzonder
       - *liten* wordt **lilla** in het enkelvoud en **små** in het meervoud: *den lilla katten, det lilla huset, de små barnen*.
-      - *gammal* wordt **gamla**: *den gamla mannen*.
+      - *gammal* wordt **gamla**: *den gamla mannen*. Bij een mannelijke persoon kan ook **-e**: *den gamle mannen*. Allebei goed; *-a* kan altijd.
 
       ### Na een bezittelijk voornaamwoord
       Na *min, din, sin, vår, Olles* … krijgt het bijvoeglijk naamwoord ook **-a**, maar het zelfstandig naamwoord blijft **onbepaald**:
@@ -51,7 +53,7 @@ grammar:
 
   - id: komparation
     title: Vergelijken – större, störst
-    summary: "Regelmatig: **-are, -ast** (*varm, varmare, varmast*). Onregelmatig: *bra – bättre – bäst*, *stor – större – störst*, *gammal – äldre – äldst*. Lange woorden: **mer, mest**."
+    summary: "Regelmatig: **-are, -ast** (*varm, varmare, varmast*). Onregelmatig: *bra – bättre – bäst*, *stor – större – störst*, *gammal – äldre – äldst*. Woorden op *-isk* en *-ande*: **mer, mest**."
     body: |
       | Basis | Vergrotende trap | Overtreffende trap |
       |---|---|---|
@@ -72,11 +74,18 @@ grammar:
       | många | fler | flest |
       | mycket | mer | mest |
 
-      ### Lange woorden
-      Bij lange woorden en woorden op *-isk* of *-ande* gebruik je **mer** en **mest**: *mer spännande, mest praktisk*.
+      ### Mer en mest
+      Of je **mer/mest** gebruikt, hangt niet af van de lengte van het woord, maar van het type woord:
+
+      - woorden op **-isk**: *praktisk – mer praktisk – mest praktisk*
+      - woorden op **-ande/-ende** en voltooide deelwoorden: *mer spännande, mer intresserad*
+      - veel leenwoorden: *mer modern* (ook *modernare*)
+
+      Lange gewone woorden krijgen gewoon *-are, -ast*: *ovanlig – ovanligare – ovanligast*.
 
       ### In een zin
-      - Stockholm är **större än** Västerås. (Na *än*: onderwerpsvorm, zie hoofdstuk 5.)
+      - Stockholm är **större än** Västerås.
+      - Min bror är äldre **än jag** / **än mig**. Allebei goed: *än jag* is formeler, *än mig* gewoner in spreektaal.
       - Vem är **äldst**?
       - Det är **den bästa** restaurangen i stan. (bepaald: *den/det/de* + overtreffende trap op *-a/-e*)
 
@@ -102,7 +111,7 @@ grammar:
       | tomten | de kerstman |
       | ett julbord | een kerstbuffet (met *skinka, sill, köttbullar* …) |
       | glögg | warme kruidenwijn |
-      | pepparkakor | peperkoekjes |
+      | pepparkakor | gemberkoekjes (dunne kruidkoekjes) |
       | lussekatter | saffraanbroodjes |
 
 sections:
@@ -167,7 +176,7 @@ sections:
           - { type: gap, text: "Det ___ huset där borta är vårt. (röd)", gaps: [{ answers: ["röda"], feedback: [{ match: "rött", tip: "Na det (bepaald) altijd -a: det röda huset." }] }] }
           - { type: gap, text: "De ___ barnen leker i parken. (liten)", gaps: [{ answers: ["små"] }] }
           - { type: gap, text: "Min ___ bil är elektrisk. (ny)", gaps: [{ answers: ["nya"], feedback: [{ match: "ny", tip: "Na min, din, sin … krijgt het adjectief ook -a: min nya bil." }] }] }
-          - { type: gap, text: "Den ___ mannen heter Gustav. (gammal)", gaps: [{ answers: ["gamla"] }] }
+          - { type: gap, text: "Den ___ mannen heter Gustav. (gammal)", gaps: [{ answers: ["gamla", "gamle"] }] }
           - { type: gap, text: "Vi bor i det ___ huset vid sjön. (liten)", gaps: [{ answers: ["lilla"], feedback: [{ match: ["litet", "små"], tip: "Bepaald enkelvoud van liten: lilla." }] }] }
 
       - id: trappen-tabel
@@ -193,8 +202,8 @@ sections:
         topic: komparation
         items:
           - { type: translate, prompt: "Stockholm is groter dan Västerås.", answers: ["Stockholm är större än Västerås."], feedback: [{ contains: "mer stor", tip: "stor is onregelmatig: större." }] }
-          - { type: translate, prompt: "Mijn broer is ouder dan ik.", answers: ["Min bror är äldre än jag."], feedback: [{ contains: "än mig", tip: "Na än: de onderwerpsvorm (jag)." }] }
-          - { type: translate, prompt: "Dit is het beste restaurant van de stad.", answers: ["Det här är den bästa restaurangen i {staden|stan}."], feedback: [{ contains: "den bäst restaurangen", tip: "Bepaald: den bästa restaurangen." }] }
+          - { type: translate, prompt: "Mijn broer is ouder dan ik.", answers: ["Min bror är äldre än {jag|mig}."] }
+          - { type: translate, prompt: "Dit is het beste restaurant van de stad.", answers: ["{Det här|Detta} är den bästa restaurangen i {staden|stan}."], feedback: [{ contains: "den bäst restaurangen", tip: "Bepaald: den bästa restaurangen." }] }
           - { type: translate, prompt: "Koffie is duurder dan thee.", answers: ["Kaffe är dyrare än te."] }
           - { type: translate, prompt: "Wie is het oudst?", answers: ["Vem är äldst?"] }
 
@@ -206,7 +215,7 @@ sections:
         items:
           - { type: mc, prompt: "Filmen var ___ än boken. (spännande)", options: ["mer spännande", "spännandare"], answer: 0, shuffle: false, tip: "Woorden op -ande krijgen mer." }
           - { type: mc, prompt: "Det var den ___ dagen i mitt liv. (goed)", options: ["bästa", "godaste", "bättre"], answer: 0, shuffle: false, tip: "bra – bättre – bäst; bepaald: den bästa." }
-          - { type: mc, prompt: "Idag är det ___ än igår. (koud)", options: ["kallare", "mer kall", "kallast"], answer: 0, shuffle: false, tip: "Een kort woord: -are." }
+          - { type: mc, prompt: "Idag är det ___ än igår. (koud)", options: ["kallare", "mer kall", "kallast"], answer: 0, shuffle: false, tip: "kall is een gewoon bijvoeglijk naamwoord: -are." }
           - { type: mc, prompt: "Vilken bil är ___? (praktisk)", options: ["mest praktisk", "praktiskast", "mer praktiskast"], answer: 0, shuffle: false, tip: "Woorden op -isk krijgen mer/mest." }
 
       - id: feestdagen-quiz
@@ -231,7 +240,7 @@ sections:
               - ["tomten", "de kerstman"]
               - ["ett julbord", "kerstbuffet"]
               - ["glögg", "warme kruidenwijn"]
-              - ["pepparkakor", "peperkoekjes"]
+              - ["pepparkakor", "gemberkoekjes"]
               - ["lussekatter", "saffraanbroodjes"]
 
       - id: lezen-lucia
@@ -248,7 +257,7 @@ sections:
           - { type: truefalse, statement: "Wilma var Lucia.", answer: true }
           - { type: truefalse, statement: "Nils var tomte i luciatåget.", answer: false, tip: "Wat was Nils?", correction: { answers: ["{Nils|Han} var stjärngosse."] } }
           - { type: truefalse, statement: "Efter luciatåget drack de glögg.", answer: true }
-          - { type: truefalse, statement: "På julafton tittade de på Kalle Anka klockan fem.", answer: false, tip: "Hoe laat?", correction: { answers: ["De tittade på Kalle Anka klockan tre.", "Klockan tre tittade {de|alla} på Kalle Anka."] } }
+          - { type: truefalse, statement: "På julafton tittade de på Kalle Anka klockan fem.", answer: false, tip: "Hoe laat?", correction: { answers: ["På julafton tittade {de|alla} på Kalle Anka klockan tre.", "{De|Alla} tittade på Kalle Anka klockan tre[ på julafton].", "Klockan tre tittade {de|alla} på Kalle Anka[ på julafton]."] } }
           - { type: truefalse, statement: "Nils fick en ny cykel.", answer: true }
 
       - id: dialoog-cadeau
@@ -277,7 +286,7 @@ sections:
               - { any: ["fin", "fint", "fina", "stor", "stort", "stora", "god", "gott", "goda", "mysig", "mysigt", "mysiga", "vacker", "vackert", "vackra", "rolig", "roligt", "roliga"], label: "Je gebruikt bijvoeglijke naamwoorden" }
               - { any: ["bättre", "bäst", "större", "störst", "mer", "mest", "än"], label: "Je maakt een vergelijking (bättre, bäst, mer, än …)" }
               - { any: ["jul", "julen", "nyår", "midsommar", "påsk", "födelsedag", "sinterklaas", "koningsdag"], label: "Je noemt een feestdag" }
-            model: "Min favoritfest är julen. Vi firar alltid hemma hos mina föräldrar i deras gamla hus. Vi har en stor gran med röda kulor och många små ljus. På julafton äter vi en god middag och sedan öppnar vi julklapparna. Jag tycker att julen är mysigare än nyår, eftersom det är lugnare och vi är tillsammans med familjen."
+            model: "Min favorithögtid är julen. Vi firar alltid hemma hos mina föräldrar i deras gamla hus. Vi har en stor gran med röda kulor och många små ljus. På julafton äter vi en god middag och sedan öppnar vi julklapparna. Jag tycker att julen är mysigare än nyår, eftersom det är lugnare och vi är tillsammans med familjen."
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -304,25 +313,25 @@ sections:
           - { type: gap, topic: komparation, text: "Wilma är ___ än Nils. (gammal)", gaps: [{ answers: ["äldre"] }] }
           - { type: translate, topic: bisats-ordfoljd, prompt: "Ik weet dat hij nooit te laat komt.", answers: ["Jag vet att han aldrig kommer för sent."], feedback: [{ contains: "kommer aldrig", tip: "In de bijzin staat aldrig vóór het werkwoord." }] }
           - { type: gap, topic: sin-sitt-sina, text: "Nils öppnar ___ julklappar.", gaps: [{ answers: ["sina"], options: ["sin", "sitt", "sina", "hans"], shuffle: false }] }
-          - { type: gap, topic: perfekt-preteritum, text: "Förra julen ___ (vara) vi i Holland.", gaps: [{ answers: ["var"] }] }
+          - { type: gap, topic: perfekt-preteritum, text: "Förra julen ___ (vara) vi i Nederländerna.", gaps: [{ answers: ["var"] }] }
           - { type: gap, topic: positionsverb, text: "Granen ___ i vardagsrummet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "sitter"], shuffle: false }] }
           - { type: gap, topic: reflexiv, text: "Vi måste skynda ___, annars missar vi tåget.", gaps: [{ answers: ["oss"], options: ["oss", "er", "sig"], shuffle: false }] }
           - { type: gap, topic: tycka-tro-tanka, text: "Vad ___ du om julmaten?", gaps: [{ answers: ["tycker"], options: ["tycker", "tror", "tänker"], shuffle: false }] }
           - { type: clock, time: "15:00" }
           - { type: gap, topic: ordningstal, text: "Lucia firas den ___ december. (13)", gaps: [{ answers: ["trettonde"] }] }
-          - { type: translate, topic: det-finns, prompt: "Er zijn geen peperkoekjes meer.", answers: ["Det finns inga pepparkakor kvar."], feedback: [{ contains: "inte pepparkakor", tip: "Geen + meervoud: inga." }] }
+          - { type: translate, topic: det-finns, prompt: "Er zijn geen peperkoekjes meer.", answers: ["Det finns {inga|inte några} pepparkakor kvar."], feedback: [{ contains: "inte pepparkakor", tip: "Geen + meervoud: inga." }] }
           - { type: order, topic: tidsuttryck, start: "På julafton", tokens: ["tittar", "många svenskar", "på Kalle Anka"], answers: ["På julafton tittar många svenskar på Kalle Anka."] }
 
       - id: eindherhaling-2
         title: Eindherhaling (2)
         instruction: Vertaal naar het Zweeds. Hierin komt van alles terug.
         items:
-          - { type: translate, topic: v2, prompt: "Morgen gaan we naar oma.", answers: ["{Imorgon|I morgon} {ska vi åka|åker vi|ska vi} till {mormor|farmor}."], feedback: [{ contains: "imorgon vi", tip: "Na een tijdsbepaling vooraan komt eerst het werkwoord." }] }
-          - { type: translate, topic: perfekt-preteritum, prompt: "Ik heb nog nooit een eland gezien.", answers: ["Jag har aldrig sett en älg."], feedback: [{ contains: "aldrig har", tip: "aldrig staat na har." }] }
+          - { type: translate, topic: v2, prompt: "Morgen gaan we naar oma.", answers: ["Imorgon {ska vi åka|åker vi|ska vi|går vi} till {mormor|farmor}.", "Vi {ska åka|åker|ska|går} till {mormor|farmor} imorgon."], feedback: [{ contains: "imorgon vi", tip: "Na een tijdsbepaling vooraan komt eerst het werkwoord." }] }
+          - { type: translate, topic: perfekt-preteritum, prompt: "Ik heb nog nooit een eland gezien.", answers: ["Jag har aldrig sett {någon|en} älg."], feedback: [{ contains: "aldrig har", tip: "aldrig staat na har." }] }
           - { type: translate, topic: adjektiv-obestamd, prompt: "Ze hebben een groot rood huis.", answers: ["De har ett stort rött hus."], feedback: [{ contains: "stor röd hus", tip: "hus is een ett-woord: stort rött." }] }
           - { type: translate, topic: indirekt-tal, prompt: "Ze vraagt of je komt.", answers: ["Hon frågar om du kommer."], feedback: [{ contains: "om kommer du", tip: "In de bijzin: eerst het onderwerp, dan het werkwoord." }] }
-          - { type: translate, topic: modala, prompt: "Je mag het cadeau nog niet openen.", answers: ["Du får inte öppna julklappen än.", "Du får inte öppna {julklappen|presenten} {än|ännu}."], feedback: [{ contains: "får öppna inte", tip: "inte staat direct na het modale werkwoord." }] }
-          - { type: translate, topic: komparation, prompt: "Dit is de mooiste dag van het jaar.", answers: ["Det här är den {vackraste|finaste|bästa} dagen på året."], feedback: [{ contains: "i året", tip: "Van het jaar: på året." }] }
+          - { type: translate, topic: modala, prompt: "Je mag het cadeau nog niet openen.", answers: ["Du får inte öppna {julklappen|presenten|paketet} {än|ännu}."], feedback: [{ contains: "får öppna inte", tip: "inte staat direct na het modale werkwoord." }] }
+          - { type: translate, topic: komparation, prompt: "Dit is de mooiste dag van het jaar.", answers: ["{Det här|Detta} är den {vackraste|finaste|bästa} dagen på året."], feedback: [{ contains: "i året", tip: "Van het jaar: på året." }] }
 
 vocab:
   - { sv: "en jul", nl: "kerst", def: "julen" }
@@ -331,7 +340,7 @@ vocab:
   - { sv: "en gran", nl: "spar, kerstboom", def: "granen" }
   - { sv: "en stjärna", nl: "ster", def: "stjärnan" }
   - { sv: "en tomte", nl: "kabouter, kerstman", def: "tomten" }
-  - { sv: "en pepparkaka", nl: "peperkoek(je)", def: "pepparkakan" }
+  - { sv: "en pepparkaka", nl: "gemberkoekje", def: "pepparkakan" }
   - { sv: "en skinka", nl: "ham", def: "skinkan" }
   - { sv: "ett nyår", nl: "nieuwjaar", def: "nyåret" }
   - { sv: "att önska", nl: "wensen" }

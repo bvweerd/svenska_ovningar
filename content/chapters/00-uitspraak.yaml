@@ -46,7 +46,7 @@ grammar:
       | g | [g]: *gata, god* | [j]: *göra, gilla* |
       | sk | [sk]: *skola, skål* | sje-ljud: *skön, sked* |
 
-      Let op: dit geldt aan het begin van een woord (of lettergreep met klemtoon). Er zijn uitzonderingen, zoals *kille* en *kex*, met een gewone [k].
+      Let op: dit geldt aan het begin van een woord (of lettergreep met klemtoon). In een lettergreep zonder klemtoon blijft *sk* meestal gewoon [sk]: *fiskar*, *fisken*. Een bekende uitzondering is *människa*: dat zeg je wél met een sje-klank. Ook *kille* en *kex* zijn uitzonderingen: daar hoor je een gewone [k].
 
   - id: klinkerlengte
     title: Lange en korte klinkers
@@ -63,6 +63,8 @@ grammar:
 
       Vuistregel: staat er één medeklinker na de klinker, dan is de klinker meestal lang. Staan er twee (of meer), dan is hij kort.
 
+      Let op: een aantal korte, veelgebruikte woorden heeft een **korte** klinker, ook al staat er maar één medeklinker achter: *han, man, kan, hon, vad, med, den, rum, hem*.
+
   - id: klemtoon
     title: Klemtoon
     summary: "Meestal ligt de klemtoon op de **eerste** lettergreep; leenwoorden hebben hem vaak achteraan, werkwoorden op **-era** op de *e*."
@@ -70,13 +72,13 @@ grammar:
       - Bij de meeste Zweedse woorden ligt de klemtoon op de **eerste lettergreep**: *flicka*, *morgon*, *kvinna*.
       - Veel **leenwoorden** hebben de klemtoon op de **laatste lettergreep**: *station*, *banan*, *telefon*, *choklad*.
       - Werkwoorden op **-era** hebben de klemtoon op de *e* van *-era*: *promenera*, *studera*, *reparera*.
-      - De voorvoegsels **be-** en **för-** krijgen geen klemtoon: *betala*, *förstå*, *berätta*.
+      - De voorvoegsels **be-** en **för-** krijgen in werkwoorden geen klemtoon: *betala*, *förstå*, *berätta*. In zelfstandige naamwoorden krijgt *för-* vaak wél klemtoon: *FÖRmiddag*, *FÖRnamn*.
 
   - id: spreektaal
     title: Spreektaal
     summary: "Een aantal veelgebruikte woorden spreek je anders uit dan je ze schrijft: *jag* → *ja*, *och* → *å*, *de* → *dom*."
     body: |
-      Sommige korte woorden worden in gewone spreektaal anders uitgesproken dan ze geschreven worden. Je schrijft ze wel altijd zoals in de linkerkolom.
+      Sommige korte woorden worden in gewone spreektaal anders uitgesproken dan ze geschreven worden. In gewone schrijftaal schrijf je ze zoals in de linkerkolom. Alleen *sen* wordt ook in nette teksten vaak geschreven; *mej, dej, nåt* en *dom* zie je alleen in informele berichtjes.
 
       | Geschreven | Gesproken |
       |---|---|
@@ -117,9 +119,9 @@ sections:
         topic: sje-tje
         items:
           - type: multi
-            options: ["station", "information", "tidning", "människa", "kaka", "kök"]
+            options: ["station", "information", "tidning", "skina", "kaka", "kök"]
             answers: [0, 1, 3]
-            tip: "Denk aan -tion en aan sk vóór een zachte klinker (i)."
+            tip: "Denk aan -tion en aan sk vóór een zachte klinker (i) aan het begin van een woord."
 
       - id: hard-of-zacht
         title: Harde of zachte klank?
@@ -171,7 +173,7 @@ sections:
           - { type: mc, prompt: "**banan** (banaan)", options: ["BA-nan", "ba-NAN"], answer: 1, shuffle: false, tip: "Een leenwoord, net als in het Nederlands." }
           - { type: mc, prompt: "**betala** (betalen)", options: ["BE-ta-la", "be-TA-la", "be-ta-LA"], answer: 1, shuffle: false, tip: "Het voorvoegsel be- krijgt geen klemtoon." }
           - { type: mc, prompt: "**promenera** (wandelen)", options: ["PRO-me-ne-ra", "pro-ME-ne-ra", "pro-me-NE-ra"], answer: 2, shuffle: false, tip: "Werkwoorden op -era: klemtoon op de e van -era." }
-          - { type: mc, prompt: "**förstå** (begrijpen)", options: ["FÖR-stå", "för-STÅ"], answer: 1, shuffle: false, tip: "Het voorvoegsel för- krijgt geen klemtoon." }
+          - { type: mc, prompt: "**förstå** (begrijpen)", options: ["FÖR-stå", "för-STÅ"], answer: 1, shuffle: false, tip: "In een werkwoord krijgt het voorvoegsel för- geen klemtoon." }
           - { type: mc, prompt: "**morgon** (ochtend)", options: ["MOR-gon", "mor-GON"], answer: 0, shuffle: false, tip: "Een gewoon Zweeds woord: klemtoon vooraan." }
           - { type: mc, prompt: "**telefon** (telefoon)", options: ["TE-le-fon", "te-le-FON"], answer: 1, shuffle: false, tip: "Een leenwoord: klemtoon achteraan." }
 
@@ -196,6 +198,6 @@ sections:
         items:
           - { type: gap, text: "Je hoort *ja* → je schrijft ___", gaps: [{ answers: ["jag"] }] }
           - { type: gap, text: "Je hoort *dom* (zij) → je schrijft ___", gaps: [{ answers: ["de"] }] }
-          - { type: gap, text: "Je hoort *mej* → je schrijft ___", gaps: [{ answers: ["mig"], feedback: [{ match: "mej", tip: "Zo spreek je het uit, maar je schrijft het met een g aan het eind." }] }] }
+          - { type: gap, text: "Je hoort *mej* → je schrijft ___", gaps: [{ answers: ["mig"], feedback: [{ match: "mej", tip: "Zo spreek je het uit. In informele berichtjes zie je ook mej, maar de gewone schrijfwijze is met een g aan het eind." }] }] }
           - { type: gap, text: "Je hoort *nåt* → je schrijft ___", gaps: [{ answers: ["något"] }] }
-          - { type: gap, text: "Je hoort *sen* (daarna) → je schrijft ___", gaps: [{ answers: ["sedan"] }] }
+          - { type: gap, text: "Je hoort *sen* (daarna) → je schrijft ___", gaps: [{ answers: ["sedan"], feedback: [{ match: "sen", tip: "sen mag je ook schrijven, maar hier zoeken we de volledige vorm." }] }] }

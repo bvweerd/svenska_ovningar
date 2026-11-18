@@ -44,7 +44,7 @@ grammar:
       | på natten | 's nachts |
 
       ### Handige woorden
-      *idag* (vandaag), *imorgon* (morgen), *ikväll* (vanavond), *varje dag* (elke dag), *först* (eerst), *sedan* (daarna), *efter jobbet* (na het werk). *Idag, imorgon* en *ikväll* mag je ook los schrijven: *i dag, i morgon, i kväll*.
+      *idag* (vandaag), *imorgon* (morgen), *ikväll* (vanavond), *varje dag* (elke dag), *först* (eerst), *sedan* of *sen* (daarna), *efter jobbet* (na het werk). *Idag, imorgon* en *ikväll* mag je ook los schrijven: *i dag, i morgon, i kväll*.
 
   - id: plural
     title: Meervoud
@@ -87,7 +87,7 @@ grammar:
 
       Ontkennen doe je met *inte* erachter: **Gå inte!** **Var inte rädd!**
 
-      Wil je het vriendelijker maken, voeg dan *tack* toe of gebruik een vraag: *Stäng dörren, tack!* of *Kan du stänga dörren?*
+      Een imperativ klinkt in het Zweeds al snel kortaf, ook met *tack* erachter. Wil je het echt vriendelijk vragen, gebruik dan een vraag: *Kan du stänga dörren?* Of zet er *är du snäll* achter: *Stäng dörren, är du snäll.*
 
   - id: modala
     title: Modale werkwoorden
@@ -97,13 +97,15 @@ grammar:
       |---|---|---|---|
       | kunna | kan | kunnen | Jag kan simma. |
       | vilja | vill | willen | Nils vill ha en hund. |
-      | skola | ska | gaan, zullen (plan) | Ikväll ska vi äta pizza. |
+      | – | ska | gaan, zullen (plan) | Ikväll ska vi äta pizza. |
       | – | måste | moeten | Vi måste jobba imorgon. |
       | få | får | mogen | Får jag öppna fönstret? |
 
       ### Twee regels
       - Na een modaal werkwoord komt de **infinitief zonder att**: *Jag vill äta*, niet *~~Jag vill att äta~~* en niet *~~Jag vill äter~~*.
       - Het modale werkwoord is de persoonsvorm en staat dus op **plaats 2**. *Inte* komt direct erna, de infinitief achteraan: *Jag kan **inte** komma.* Bij inversie: *Idag kan jag **inte** komma.*
+
+      *Ska* en *måste* hebben geen gangbare infinitief. De verleden tijd is *skulle* en *måste*. *Få* betekent behalve **mogen** ook **krijgen**: *Jag får ett brev.* (Ik krijg een brief.)
 
       Let op: *får inte* betekent **mag niet**. Voor **hoeft niet** gebruik je *behöver inte*: *Du behöver inte komma.*
 
@@ -129,10 +131,10 @@ sections:
         topic: tidsuttryck
         items:
           - { type: translate, prompt: "Maandag werk ik thuis.", answers: ["På måndag {jobbar|arbetar} jag hemma."], feedback: [{ contains: "måndag jag", tip: "Na de tijdsbepaling komt eerst het werkwoord, dan pas jag." }, { match: ["Måndag jobbar jag hemma", "Måndag arbetar jag hemma"], tip: "Bijna! Voor een dag zet je „på”: på måndag." }] }
-          - { type: translate, prompt: "'s Avonds kijkt Bram tv.", answers: ["På kvällen tittar Bram på {tv|teve}."], feedback: [{ match: "På kvällen tittar Bram tv", tip: "Kijken naar iets is „titta på”: tittar på tv." }] }
+          - { type: translate, prompt: "'s Avonds kijkt Bram tv.", answers: ["{På kvällen|På kvällarna} tittar Bram på {tv|teve}."], feedback: [{ match: ["På kvällen tittar Bram tv", "På kvällarna tittar Bram tv"], tip: "Kijken naar iets is „titta på”: tittar på tv." }] }
           - { type: translate, prompt: "Om zeven uur eet ik ontbijt.", answers: ["Klockan sju äter jag frukost."] }
-          - { type: translate, prompt: "Vandaag neemt Fleur de bus.", answers: ["{Idag|I dag} tar Fleur bussen."], feedback: [{ match: ["Idag tar Fleur en buss", "I dag tar Fleur en buss"], tip: "De bus is bepaald: bussen." }] }
-          - { type: translate, prompt: "Op zaterdag slapen we lang.", answers: ["På lördag sover vi länge."], feedback: [{ match: "På lördag sover vi lång", tip: "Lang (in tijd) is „länge”; „lång” gebruik je voor lengte." }] }
+          - { type: translate, prompt: "Vandaag neemt Fleur de bus.", answers: ["{Idag|I dag} tar Fleur bussen.", "{Idag|I dag} åker Fleur [med ]bussen.", "{Idag|I dag} åker Fleur buss."], feedback: [{ match: ["Idag tar Fleur en buss", "I dag tar Fleur en buss"], tip: "De bus is bepaald: bussen." }] }
+          - { type: translate, prompt: "Op zaterdag slapen we lang.", answers: ["{På lördagar|På lördagarna} sover vi länge."], feedback: [{ match: ["På lördag sover vi länge", "På lördag sover vi lång"], tip: "Het gaat om een gewoonte (elke zaterdag): på lördagar. På lördag betekent aanstaande zaterdag." }, { match: ["På lördagar sover vi lång", "På lördagarna sover vi lång"], tip: "Lang (in tijd) is „länge”; „lång” gebruik je voor lengte." }] }
 
       - id: weekdagen
         title: De dagen van de week
@@ -157,7 +159,7 @@ sections:
         items:
           - { type: gap, text: "Jag sover på ___.", gaps: [{ answers: ["natten"], options: ["morgonen", "eftermiddagen", "kvällen", "natten"] }] }
           - { type: gap, text: "Bram äter frukost på ___.", gaps: [{ answers: ["morgonen"], options: ["morgonen", "eftermiddagen", "kvällen", "natten"] }] }
-          - { type: gap, text: "Efter middagen, på ___, tittar vi på tv.", gaps: [{ answers: ["kvällen"], options: ["morgonen", "eftermiddagen", "kvällen", "natten"] }] }
+          - { type: gap, text: "På ___, efter middagen, tittar vi på tv.", gaps: [{ answers: ["kvällen"], options: ["morgonen", "eftermiddagen", "kvällen", "natten"] }] }
           - { type: gap, text: "Nils kommer hem från skolan klockan tre på ___.", gaps: [{ answers: ["eftermiddagen"], options: ["morgonen", "eftermiddagen", "kvällen", "natten"] }] }
           - type: mc
             prompt: "Nils speelt **elke dinsdag** voetbal. Hoe zeg je dat?"
@@ -238,7 +240,7 @@ sections:
           - { type: gap, text: "Ingrid och Olle har två ___ (barn).", gaps: [{ answers: ["barn"] }] }
           - { type: gap, text: "Olle köper tre ___ (tidning).", gaps: [{ answers: ["tidningar"] }] }
           - { type: gap, text: "Det finns många ___ (bil) på gatan.", gaps: [{ answers: ["bilar"] }] }
-          - { type: gap, text: "Fleur och Bram har två ___ (katt).", gaps: [{ answers: ["katter"], feedback: [{ match: "kattar", tip: "katt is een uitzondering: katter." }] }] }
+          - { type: gap, text: "Det finns två ___ (katt) i trädgården.", gaps: [{ answers: ["katter"], feedback: [{ match: "kattar", tip: "katt is een uitzondering: katter." }] }] }
           - { type: gap, text: "En vecka har sju ___ (dag).", gaps: [{ answers: ["dagar"] }] }
           - { type: gap, text: "Wilma har fem ___ (lektion) idag.", gaps: [{ answers: ["lektioner"], feedback: [{ match: "lektionar", tip: "Woorden op -tion krijgen -er: lektioner." }] }] }
 
@@ -249,7 +251,7 @@ sections:
         items:
           - { type: gap, text: "___ (vänta)! Jag kommer.", gaps: [{ answers: ["Vänta"], feedback: [{ match: "Väntar", tip: "Dat is de presens. De imperativ van een -ar-werkwoord is gelijk aan de infinitief." }] }] }
           - { type: gap, text: "___ (läsa) texten!", gaps: [{ answers: ["Läs"], feedback: [{ match: "Läsa", tip: "läsa heeft de presens läser: haal de -a van de infinitief weg." }, { match: "Läser", tip: "Dat is de presens. Haal de -a van de infinitief weg: Läs!" }] }] }
-          - { type: gap, text: "___ (stänga) dörren, tack!", gaps: [{ answers: ["Stäng"], feedback: [{ match: ["Stänga", "Stänger"], tip: "stänga – stänger: haal de -a van de infinitief weg." }] }] }
+          - { type: gap, text: "___ (stänga) dörren!", gaps: [{ answers: ["Stäng"], feedback: [{ match: ["Stänga", "Stänger"], tip: "stänga – stänger: haal de -a van de infinitief weg." }] }] }
           - { type: gap, text: "___ (komma) hit!", gaps: [{ answers: ["Kom"], feedback: [{ match: ["Komm", "Komma", "Kommer"], tip: "komma heeft een korte imperativ met één m: Kom!" }] }] }
           - { type: gap, text: "___ (skriva) ditt namn här.", gaps: [{ answers: ["Skriv"] }] }
           - { type: gap, text: "___ (köra) försiktigt!", gaps: [{ answers: ["Kör"], feedback: [{ match: "Köra", tip: "De stam eindigt al op -r: Kör!" }] }] }
@@ -265,7 +267,7 @@ sections:
           - { type: mc, prompt: "Je wilt dat Nils zijn ontbijt eet.", options: ["Ät frukost, Nils!", "Äter frukost, Nils!", "Äta frukost, Nils!"], answer: 0, tip: "äta – äter: de imperativ is de infinitief zonder -a." }
           - { type: mc, prompt: "Je wilt dat Wilma luistert.", options: ["Lyssna!", "Lyssnar!", "Lyssn!"], answer: 0, tip: "lyssna – lyssnar: een -ar-werkwoord, dus gelijk aan de infinitief." }
           - { type: mc, prompt: "Je wilt niet dat Olle weggaat.", options: ["Gå inte!", "Inte gå!", "Går inte!"], answer: 0, tip: "Inte komt ná de imperativ." }
-          - { type: mc, prompt: "Je wilt dat iemand het raam opendoet.", options: ["Öppna fönstret, tack!", "Öppn fönstret, tack!", "Öppnar fönstret, tack!"], answer: 0, tip: "öppna – öppnar: een -ar-werkwoord, dus gelijk aan de infinitief." }
+          - { type: mc, prompt: "Je wilt dat iemand het raam opendoet.", options: ["Öppna fönstret!", "Öppn fönstret!", "Öppnar fönstret!"], answer: 0, tip: "öppna – öppnar: een -ar-werkwoord, dus gelijk aan de infinitief." }
 
       - id: modaal-kiezen
         title: Welk modaal werkwoord?
@@ -366,7 +368,7 @@ sections:
           - { type: findError, topic: tidsuttryck, sentence: "På morgonen Bram dricker kaffe.", wrong: [2, 3], answers: ["På morgonen dricker Bram kaffe."], tip: "Het werkwoord moet op plaats 2." }
           - { type: findError, topic: modala, sentence: "Jag vill att äta pizza.", wrong: [2], answers: ["Jag vill äta pizza."], tip: "Kijk naar wat er na vill komt." }
           - { type: findError, topic: plural, sentence: "Vi har tre bilor.", wrong: [3], answers: ["Vi har tre bilar."], tip: "Kijk naar het meervoud." }
-          - { type: findError, topic: imperativ, sentence: "Läsa texten, tack!", wrong: [0], answers: ["Läs texten, tack!"], tip: "Het is een opdracht." }
+          - { type: findError, topic: imperativ, sentence: "Läsa texten högt!", wrong: [0], answers: ["Läs texten högt!"], tip: "Het is een opdracht." }
           - { type: findError, topic: dagar, sentence: "Vi ses på Måndag.", wrong: [3], answers: ["Vi ses på måndag."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
           - { type: findError, topic: modala, sentence: "Imorgon jag kan inte komma.", wrong: [1, 2], answers: ["Imorgon kan jag inte komma."], tip: "Het werkwoord moet op plaats 2." }
 
@@ -382,11 +384,11 @@ sections:
           - { type: gap, topic: presens, text: "Wilma ___ (läsa) svenska och engelska.", gaps: [{ answers: ["läser"] }] }
           - { type: translate, topic: vragen, prompt: "Maak er een ja/nee-vraag van: Fleur kan simma.", answers: ["Kan Fleur simma?"] }
           - { type: order, topic: tidsuttryck, start: "På fredag", tokens: ["ska", "Olle och Ingrid", "äta ute"], answers: ["På fredag ska Olle och Ingrid äta ute."] }
-          - { type: gap, topic: substantiv, text: "Vi har en hund och två katter. ___ (hund) heter Sigge.", gaps: [{ answers: ["Hunden"] }] }
-          - { type: gap, topic: plural, text: "___ (katter, bepaald) heter Pluto och Smilla.", gaps: [{ answers: ["Katterna"] }] }
+          - { type: gap, topic: substantiv, text: "Fleur och Bram har en katt. ___ (katt) heter Pluto.", gaps: [{ answers: ["Katten"] }] }
+          - { type: gap, topic: plural, text: "Olle köper tre tidningar. ___ (tidningar, bepaald) ligger på bordet.", gaps: [{ answers: ["Tidningarna"] }] }
           - { type: clock, time: "05:45" }
           - { type: mc, topic: modala, prompt: "Welke zin is goed?", options: ["Idag måste jag jobba.", "Idag jag måste jobba.", "Idag måste jobba jag."], answer: 0, tip: "Werkwoord op plaats 2, dan het onderwerp, de infinitief achteraan." }
-          - { type: translate, topic: inte, prompt: "Ik spreek niet zo goed Zweeds.", answers: ["Jag {talar|pratar} inte så bra svenska."] }
+          - { type: translate, topic: inte, prompt: "Ik spreek niet zo goed Zweeds.", answers: ["Jag {talar|pratar|kan} inte så bra svenska.", "Jag {talar|pratar|kan} inte svenska så bra."] }
           - { type: gap, topic: pronomen, text: "Fleur och Bram har ett hus. ___ ligger i Västerås.", gaps: [{ answers: ["Det"], options: ["Det", "Den", "De"] }] }
           - { type: gap, topic: imperativ, text: "Nils, ___ (sova) nu!", gaps: [{ answers: ["sov"], feedback: [{ match: ["sova", "sover"], tip: "sova – sover: haal de -a weg." }] }] }
 
@@ -395,8 +397,8 @@ sections:
         instruction: Vertaal naar het Zweeds.
         items:
           - { type: translate, topic: plural, prompt: "De kinderen spelen buiten.", answers: ["Barnen leker ute."], feedback: [{ match: "Barnen spelar ute", tip: "Kinderen die spelen: „leka” (leker). „Spela” gebruik je voor een spel, sport of instrument." }] }
-          - { type: translate, topic: modala, prompt: "Morgen moet Bram vroeg opstaan.", answers: ["{Imorgon|I morgon} måste Bram stiga upp tidigt."] }
-          - { type: translate, topic: imperativ, prompt: "Doe de deur dicht!", answers: ["Stäng dörren[, tack]!"] }
+          - { type: translate, topic: modala, prompt: "Morgen moet Bram vroeg opstaan.", answers: ["{Imorgon|I morgon} måste Bram {stiga|gå} upp tidigt.", "Bram måste {stiga|gå} upp tidigt {imorgon|i morgon}."] }
+          - { type: translate, topic: imperativ, prompt: "Doe de deur dicht!", answers: ["Stäng dörren!", "Stäng dörren, tack!", "Stäng dörren, är du snäll!"] }
           - { type: translate, topic: vragen, prompt: "Hoe laat begint de film?", answers: ["{När|Hur dags|Vilken tid} börjar filmen?"], feedback: [{ match: "Vad är klockan börjar filmen", tip: "Hoe laat (wanneer) = När? of Hur dags?" }] }
           - { type: translate, topic: plural, prompt: "Wij hebben twee auto's.", answers: ["Vi har två bilar."] }
 
