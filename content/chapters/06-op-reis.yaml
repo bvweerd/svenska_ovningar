@@ -1,0 +1,289 @@
+chapter: 6
+
+grammar:
+  - id: tidsprep
+    title: Tijdsuitdrukkingen – om, för … sedan, i, på, under
+    summary: "**om** een week = over een week, **för** een week **sedan** = een week geleden, **i** tre år = drie jaar lang, **inte på** länge = lang niet, **under** = tijdens."
+    body: |
+      | Zweeds | Betekenis | Voorbeeld |
+      |---|---|---|
+      | **om** + periode | over (toekomst) | Tåget går **om** tio minuter. |
+      | **för** + periode + **sedan** | geleden | Hon kom hem **för** tre dagar **sedan**. |
+      | **i** + periode | (al) … lang | Jag har bott här **i** två år. |
+      | **på** + periode | binnen, in (hoe lang iets duurt) | Vi körde till Göteborg **på** fyra timmar. |
+      | **inte på** + periode | al … niet | Jag har **inte** sett honom **på** länge. |
+      | **under** | tijdens | **Under** semestern läste jag fem böcker. |
+
+      ### Seizoenen
+      | | Nu of binnenkort | Afgelopen | In het algemeen |
+      |---|---|---|---|
+      | zomer | i sommar | i somras | på sommaren |
+      | winter | i vinter | i vintras | på vintern |
+      | herfst | i höst | i höstas | på hösten |
+      | lente | i vår | i våras | på våren |
+
+      *I sommar ska vi åka till Gotland.* – *I somras var vi i Dalarna.* – *På sommaren är det ljust hela natten.*
+
+  - id: transport
+    title: Op weg – åka, gå, köra, ta
+    summary: "**åka** = gaan met een voertuig, **gå** = lopen (of: vertrekken, van bus of trein), **köra** = zelf rijden, **ta** bussen = de bus nemen."
+    body: |
+      | Zweeds | Betekenis | Voorbeeld |
+      |---|---|---|
+      | åka (+ buss, tåg, bil) | gaan, reizen met een voertuig | Jag **åker** buss till jobbet. |
+      | ta + bussen/tåget | de bus/trein nemen | Jag **tar** tåget till Stockholm. |
+      | gå | lopen, te voet gaan | Wilma **går** till skolan. |
+      | gå (van een voertuig) | vertrekken, rijden | Tåget **går** klockan tio. |
+      | köra | (zelf) rijden, besturen | Olle **kör** bil. |
+      | flyga | vliegen | Vi **flyger** till London. |
+      | cykla | fietsen | Nils **cyklar** till träningen. |
+
+      Let op: na *åka* staat het voertuig meestal **zonder lidwoord**: *åka buss, åka tåg, åka bil*. Na *ta* gebruik je de **bepaalde vorm**: *ta bussen, ta tåget*.
+
+      Handige vragen: *När går nästa tåg?* (Wanneer gaat de volgende trein?) *Var ska jag byta?* (Waar moet ik overstappen?) *Var ska jag stiga av?* (Waar moet ik uitstappen?)
+
+  - id: pengar
+    title: Geld en betalen
+    summary: "*Vad kostar det?* – *Det kostar 95 kronor.* Biljetten: *en tia* (10), *en tjuga* (20), *en femtiolapp*, *en hundralapp*."
+    body: |
+      In Zweden betaal je met **kronor** (een *krona*, meervoud *kronor*). Bijna overal betaal je met kaart of met de app *Swish*; contant geld wordt steeds minder gebruikt.
+
+      | Zweeds | Betekenis |
+      |---|---|
+      | en tia | een tientje (10 kronor) |
+      | en tjuga | een briefje van 20 |
+      | en femtiolapp | een briefje van 50 |
+      | en hundralapp | een briefje van 100 |
+      | Vad kostar det? | Wat kost het? |
+      | Det blir 95 kronor. | Dat wordt 95 kronen. |
+      | Kan jag betala med kort? | Kan ik met de kaart betalen? |
+      | Kan jag få kvittot? | Mag ik het bonnetje? |
+
+  - id: ordningstal
+    title: Rangtelwoorden en datums
+    summary: "*första, andra, tredje, fjärde, femte* … Een datum zeg je met **den** + rangtelwoord: *den tredje maj*."
+    body: |
+      | | | | |
+      |---|---|---|---|
+      | 1 första | 6 sjätte | 11 elfte | 20 tjugonde |
+      | 2 andra | 7 sjunde | 12 tolfte | 21 tjugoförsta |
+      | 3 tredje | 8 åttonde | 13 trettonde | 30 trettionde |
+      | 4 fjärde | 9 nionde | 14 fjortonde | 31 trettioförsta |
+      | 5 femte | 10 tionde | 15 femtonde | |
+
+      ### Datum
+      - *Vilket datum är det idag?* – *Det är **den tredje maj**.* (geschreven: den 3 maj)
+      - Maanden schrijf je met een kleine letter: *januari, februari, mars, april, maj, juni, juli, augusti, september, oktober, november, december*.
+      - In een maand: **i** maj. Op een datum: **den** 3 maj.
+
+sections:
+  - id: oefeningen
+    title: Oefeningen
+    exercises:
+      - id: tidsprep-kiezen
+        title: Om, i, på, för of under?
+        instruction: Kies het juiste voorzetsel.
+        topic: tidsprep
+        shuffle: true
+        items:
+          - { type: gap, text: "Vi reser till Sverige ___ några veckor.", hint: "(over een paar weken)", gaps: [{ answers: ["om"], options: ["om", "i", "på", "för", "under"], shuffle: false, feedback: [{ match: "i", tip: "Over een tijd (in de toekomst) = om." }] }] }
+          - { type: gap, text: "Fleur var hos doktorn ___ en vecka sedan.", gaps: [{ answers: ["för"], options: ["om", "i", "på", "för", "under"], shuffle: false }] }
+          - { type: gap, text: "Det har regnat ___ en vecka nu.", gaps: [{ answers: ["i"], options: ["om", "i", "på", "för", "under"], shuffle: false, feedback: [{ match: "på", tip: "Hoe lang iets al duurt (en nog doorgaat) = i." }] }] }
+          - { type: gap, text: "Bram har inte träffat sin bror ___ länge.", gaps: [{ answers: ["på"], options: ["om", "i", "på", "för", "under"], shuffle: false, feedback: [{ match: "i", tip: "Na een ontkenning (inte … länge) gebruik je på." }] }] }
+          - { type: gap, text: "___ semestern läste jag fem böcker.", gaps: [{ answers: ["Under"], options: ["Om", "I", "På", "För", "Under"], shuffle: false }] }
+          - { type: gap, text: "Vi körde till Göteborg ___ fyra timmar.", gaps: [{ answers: ["på"], options: ["om", "i", "på", "för", "under"], shuffle: false, feedback: [{ match: "i", tip: "Hoe lang je erover deed (binnen vier uur) = på." }] }] }
+          - { type: gap, text: "Filmen börjar ___ en halvtimme.", gaps: [{ answers: ["om"], options: ["om", "i", "på", "för", "under"], shuffle: false }] }
+          - { type: gap, text: "Jag har bott i Sverige ___ två år.", gaps: [{ answers: ["i"], options: ["om", "i", "på", "för", "under"], shuffle: false }] }
+
+      - id: tidsprep-vertalen
+        title: Vertaal de tijdsuitdrukking
+        instruction: Vertaal naar het Zweeds.
+        topic: tidsprep
+        items:
+          - { type: translate, prompt: "Over een uur vertrekt de trein.", answers: ["Om en timme går tåget.", "Tåget går om en timme."], feedback: [{ contains: "i en timme", tip: "Over een tijd (toekomst) = om." }] }
+          - { type: translate, prompt: "Drie dagen geleden kwam ze thuis.", answers: ["För tre dagar sedan kom hon hem.", "Hon kom hem för tre dagar sedan."], feedback: [{ contains: "hemma", tip: "Thuiskomen is een richting: hem." }] }
+          - { type: translate, prompt: "Ik heb hem lang niet gezien.", answers: ["Jag har inte sett honom på länge."], feedback: [{ contains: "i länge", tip: "Na een ontkenning: inte … på länge." }] }
+          - { type: translate, prompt: "Tijdens de vakantie zwommen we elke dag.", answers: ["Under semestern {badade|simmade} vi varje dag."] }
+          - { type: translate, prompt: "Deze zomer gaan we naar Gotland.", answers: ["I sommar ska vi [åka ]till Gotland.", "I sommar åker vi till Gotland.", "Vi {ska åka|åker} till Gotland i sommar."], feedback: [{ contains: "i somras", tip: "i somras is afgelopen zomer. Voor deze (komende) zomer: i sommar." }] }
+
+      - id: seizoenen
+        title: Welke zomer?
+        instruction: Kies de juiste uitdrukking.
+        topic: tidsprep
+        shuffle: true
+        items:
+          - { type: mc, prompt: "**vorige** zomer", options: ["i somras", "i sommar", "på sommaren"], answer: 0, shuffle: false, tip: "Afgelopen seizoen: i + -as/-ras (i somras, i vintras)." }
+          - { type: mc, prompt: "**deze** zomer (die nog komt)", options: ["i somras", "i sommar", "på sommaren"], answer: 1, shuffle: false, tip: "Dit seizoen: i + seizoen (i sommar)." }
+          - { type: mc, prompt: "in de zomer (**altijd**, in het algemeen)", options: ["i somras", "i sommar", "på sommaren"], answer: 2, shuffle: false, tip: "In het algemeen: på + bepaalde vorm (på sommaren)." }
+          - { type: mc, prompt: "**vorige** winter", options: ["i vintras", "i vinter", "på vintern"], answer: 0, shuffle: false, tip: "Afgelopen seizoen: i vintras." }
+          - { type: mc, prompt: "**deze** herfst", options: ["i höstas", "i höst", "på hösten"], answer: 1, shuffle: false, tip: "Dit seizoen: i höst." }
+
+      - id: transport-kiezen
+        title: Åka, gå, köra of ta?
+        instruction: Kies het werkwoord dat past.
+        topic: transport
+        shuffle: true
+        items:
+          - { type: gap, text: "Bram ___ buss till jobbet.", gaps: [{ answers: ["åker"], options: ["åker", "går", "kör", "tar"], shuffle: false, feedback: [{ match: "går", tip: "gå = lopen. Met een voertuig: åka." }, { match: "tar", tip: "ta + bepaalde vorm: tar bussen. Bij „buss” zonder lidwoord: åker." }] }] }
+          - { type: gap, text: "Wilma ___ till skolan. Det är bara 500 meter.", gaps: [{ answers: ["går"], options: ["åker", "går", "kör", "tar"], shuffle: false }] }
+          - { type: gap, text: "Olle ___ bil, men Ingrid har inget körkort.", gaps: [{ answers: ["kör"], options: ["åker", "går", "kör", "tar"], shuffle: false }] }
+          - { type: gap, text: "Tåget ___ klockan 10.15.", gaps: [{ answers: ["går"], options: ["åker", "går", "kör", "tar"], shuffle: false, feedback: [{ match: "åker", tip: "Van een bus of trein die vertrekt zeg je: går." }] }] }
+          - { type: gap, text: "Fleur ___ tåget till Uppsala.", gaps: [{ answers: ["tar"], options: ["åker", "går", "kör", "tar"], shuffle: false }] }
+          - { type: gap, text: "Vi ___ till London i morgon.", hint: "(vliegen)", gaps: [{ answers: ["flyger"], feedback: [{ match: "flygar", tip: "flyga – flyger." }] }] }
+
+      - id: transport-vertalen
+        title: Onderweg
+        instruction: Vertaal naar het Zweeds.
+        topic: transport
+        items:
+          - { type: translate, prompt: "Ik neem de trein naar Stockholm.", answers: ["Jag tar tåget till Stockholm.", "Jag åker tåg till Stockholm."], feedback: [{ match: "Jag tar tåg till Stockholm", tip: "Na ta: bepaalde vorm (tåget)." }] }
+          - { type: translate, prompt: "Fleur gaat met de bus naar haar werk.", answers: ["Fleur {åker buss|tar bussen|åker med bussen} till {jobbet|arbetet}."], feedback: [{ contains: "går med bussen", tip: "Met een voertuig: åka (of ta bussen). gå = lopen." }] }
+          - { type: translate, prompt: "Hoe laat vertrekt de bus?", answers: ["{När|Hur dags|Vilken tid} går bussen?"], topic: vragen }
+          - { type: translate, prompt: "Waar moet ik overstappen?", answers: ["Var ska jag byta?", "Var måste jag byta?"] }
+
+      - id: geld
+        title: Geld
+        instruction: Koppel het Zweedse woord aan de betekenis.
+        topic: pengar
+        items:
+          - type: match
+            pairs:
+              - ["en tia", "tien kronen"]
+              - ["en tjuga", "briefje van twintig"]
+              - ["en hundralapp", "briefje van honderd"]
+              - ["ett kvitto", "bonnetje"]
+              - ["Vad kostar det?", "Wat kost het?"]
+              - ["Kan jag betala med kort?", "Kan ik pinnen?"]
+
+      - id: prijzen
+        title: Wat kost het?
+        instruction: Schrijf het bedrag in woorden.
+        topic: pengar
+        shuffle: true
+        items:
+          - { type: gap, topic: raknord, text: "Kaffet kostar ___ kronor. (35)", gaps: [{ answers: ["trettiofem"], feedback: [{ match: "femtrettio", tip: "Het tiental eerst: trettio + fem." }] }] }
+          - { type: gap, topic: raknord, text: "Biljetten kostar ___ kronor. (95)", gaps: [{ answers: ["nittiofem"] }] }
+          - { type: gap, topic: raknord, text: "Det blir ___ kronor. (120)", gaps: [{ answers: ["[ett]hundratjugo"] }] }
+          - { type: gap, topic: raknord, text: "Boken kostar ___ kronor. (249)", gaps: [{ answers: ["tvåhundrafyrtionio", "två hundra fyrtionio"] }] }
+
+      - id: rangtelwoorden
+        title: Rangtelwoorden
+        instruction: Schrijf het rangtelwoord.
+        topic: ordningstal
+        items:
+          - type: table
+            columns: ["Getal", "Rangtelwoord"]
+            rows:
+              - ["1", { answers: ["första"], feedback: [{ match: "ettde", tip: "1 is onregelmatig: första." }] }]
+              - ["2", { answers: ["andra"], feedback: [{ match: "tvåde", tip: "2 is onregelmatig: andra." }] }]
+              - ["3", { answers: ["tredje"] }]
+              - ["4", { answers: ["fjärde"] }]
+              - ["5", { answers: ["femte"] }]
+              - ["6", { answers: ["sjätte"] }]
+              - ["10", { answers: ["tionde"] }]
+              - ["12", { answers: ["tolfte"] }]
+              - ["20", { answers: ["tjugonde"] }]
+
+      - id: datums
+        title: Welke datum?
+        instruction: Vul het rangtelwoord in.
+        topic: ordningstal
+        shuffle: true
+        items:
+          - { type: gap, text: "Idag är det den ___ maj. (3)", gaps: [{ answers: ["tredje"] }] }
+          - { type: gap, text: "Sveriges nationaldag är den ___ juni. (6)", gaps: [{ answers: ["sjätte"] }] }
+          - { type: gap, text: "Julafton är den ___ december. (24)", gaps: [{ answers: ["tjugofjärde"] }] }
+          - { type: gap, text: "Min födelsedag är den ___ mars. (1)", gaps: [{ answers: ["första"] }] }
+          - { type: gap, text: "Vi åker hem den ___ augusti. (31)", gaps: [{ answers: ["trettioförsta"] }] }
+          - { type: mc, prompt: "Welke zin is goed geschreven?", options: ["Vi åker den 5 juli.", "Vi åker den 5 Juli.", "Vi åker på 5 juli."], answer: 0, shuffle: false, tip: "Maanden zonder hoofdletter, en een datum met den." }
+
+      - id: dialoog-station
+        title: Een kaartje kopen
+        instruction: Zet het gesprek aan het loket in de goede volgorde.
+        topic: pengar
+        items:
+          - type: dialogue
+            lines:
+              - "Bram: Hej! En biljett till Stockholm, tack."
+              - "Kassören: Enkel eller tur och retur?"
+              - "Bram: Tur och retur, tack. Jag åker tillbaka på söndag."
+              - "Kassören: Det blir 420 kronor."
+              - "Bram: Kan jag betala med kort?"
+              - "Kassören: Javisst. Tåget går från spår 3 om tio minuter."
+              - "Bram: Tack så mycket!"
+
+      - id: lezen-gotland
+        title: "Lezen: naar Gotland"
+        instruction: Lees de tekst. Is de bewering **rätt** of **fel**? Is hij fout, schrijf dan de juiste zin op.
+        topic: transport
+        textTitle: Sommarresa
+        text: |
+          I sommar ska Fleur och Bram åka till Gotland. De tar tåget från Västerås till Nynäshamn och sedan färjan till Visby. Färjan går klockan elva och resan tar ungefär tre timmar.
+
+          De ska bo på ett vandrarhem i en vecka. I somras var de i Dalarna, men på Gotland har de aldrig varit. Biljetterna kostade 1 200 kronor. Fleur köpte dem för en månad sedan.
+        items:
+          - { type: truefalse, statement: "Fleur och Bram ska åka till Gotland i sommar.", answer: true }
+          - { type: truefalse, statement: "De åker bil till Nynäshamn.", answer: false, tip: "Hoe reizen ze naar Nynäshamn?", correction: { answers: ["De {tar tåget|åker tåg} till Nynäshamn."] } }
+          - { type: truefalse, statement: "Färjan går klockan elva.", answer: true }
+          - { type: truefalse, statement: "Resan med färjan tar en timme.", answer: false, tip: "Hoe lang duurt de overtocht?", correction: { answers: ["Resan tar [ungefär ]tre timmar."] } }
+          - { type: truefalse, statement: "De har varit på Gotland förut.", answer: false, tip: "Lees de tweede alinea.", correction: { answers: ["De har aldrig varit på Gotland.", "De har inte varit på Gotland."] } }
+          - { type: truefalse, statement: "Fleur köpte biljetterna för en vecka sedan.", answer: false, tip: "Wanneer kocht ze de kaartjes?", correction: { answers: ["{Fleur|Hon} köpte {biljetterna|dem} för en månad sedan."] } }
+
+      - id: schrijven-reis
+        title: "Schrijven: een reisplan"
+        instruction: Schrijf over een reis die je binnenkort gaat maken (of zou willen maken).
+        topic: transport
+        items:
+          - type: free
+            prompt: "Vertel waar je naartoe gaat, wanneer, hoe je reist en hoe lang je blijft."
+            minWords: 30
+            require:
+              - { any: ["ska", "vill", "tänker"], label: "Je gebruikt ska, vill of tänker voor de toekomst" }
+              - { any: ["åker", "tar", "flyger", "kör", "cyklar"], label: "Je vertelt hoe je reist (åker, tar, flyger …)" }
+              - { any: ["om", "i sommar", "i vinter", "i höst", "i vår", "den"], label: "Je zegt wanneer (om …, i sommar, den …)" }
+            model: "I sommar ska jag åka till Norge med min familj. Vi tar tåget från Stockholm till Oslo den femte juli. Resan tar ungefär sex timmar. Sedan hyr vi en bil och kör till fjällen. Vi ska bo i en stuga i en vecka. Jag ser verkligen fram emot resan!"
+
+  - id: herhaling
+    title: Herhaling
+    intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 6.
+    exercises:
+      - id: herhaling-gemengd
+        title: Gemengde herhaling
+        instruction: Beantwoord de vragen. Ze gaan over hoofdstuk 1 tot en met 6 door elkaar.
+        shuffle: true
+        items:
+          - { type: gap, topic: perfekt-preteritum, text: "För två veckor sedan ___ (flyga) vi till Rom.", gaps: [{ answers: ["flög"], feedback: [{ match: ["flygde", "har flugit"], tip: "Bepaald moment: preteritum. flyga is sterk: flög." }] }] }
+          - { type: gap, topic: supinum, text: "Har du någonsin ___ (åka) tåg i Sverige?", gaps: [{ answers: ["åkt"] }] }
+          - { type: gap, topic: hem-hemma, text: "Vi kommer ___ på söndag.", gaps: [{ answers: ["hem"], options: ["hem", "hemma"], shuffle: false }] }
+          - { type: translate, topic: possessiv, prompt: "Waar is jullie hotel?", answers: ["Var ligger ert hotell?", "Var är ert hotell?"], feedback: [{ contains: "er hotell", tip: "hotell is een ett-woord: ert." }] }
+          - { type: gap, topic: plural, text: "Jag köpte två ___ (biljett).", gaps: [{ answers: ["biljetter"] }] }
+          - { type: order, topic: tidsuttryck, start: "Om en vecka", tokens: ["Bram", "börjar", "på ett nytt jobb"], answers: ["Om en vecka börjar Bram på ett nytt jobb."] }
+          - { type: mc, topic: frekvens, prompt: "Welke zin is goed?", options: ["Vi åker ofta tåg.", "Vi ofta åker tåg.", "Ofta vi åker tåg."], answer: 0, tip: "ofta staat ná het werkwoord." }
+          - { type: clock, time: "08:25" }
+          - { type: gap, topic: imperativ, text: "___ (stiga) av vid nästa hållplats!", gaps: [{ answers: ["Stig"], feedback: [{ match: ["Stiga", "Stiger"], tip: "stiga – stiger: haal de -a weg." }] }] }
+          - { type: gap, topic: objekt, text: "Kan du hämta ___ på stationen? (ons)", gaps: [{ answers: ["oss"], options: ["vi", "oss", "vår"] }] }
+
+vocab:
+  - { sv: "en biljett", nl: "kaartje", def: "biljetten" }
+  - { sv: "en station", nl: "station", def: "stationen" }
+  - { sv: "en hållplats", nl: "halte", def: "hållplatsen" }
+  - { sv: "ett spår", nl: "spoor, perron", def: "spåret" }
+  - { sv: "en färja", nl: "veerboot", def: "färjan" }
+  - { sv: "ett flygplan", nl: "vliegtuig", def: "flygplanet" }
+  - { sv: "en krona", nl: "kroon (munt)", def: "kronan" }
+  - { sv: "ett kort", nl: "(bank)pas, kaart", def: "kortet" }
+  - { sv: "ett kvitto", nl: "bonnetje", def: "kvittot" }
+  - { sv: "en karta", nl: "(land)kaart", def: "kartan" }
+  - { sv: "ett vandrarhem", nl: "jeugdherberg, hostel", def: "vandrarhemmet" }
+  - { sv: "en resväska", nl: "koffer", def: "resväskan" }
+  - { sv: "ett hotell", nl: "hotel", def: "hotellet" }
+  - { sv: "att åka", nl: "gaan, reizen (met een voertuig)" }
+  - { sv: "att köra", nl: "(zelf) rijden" }
+  - { sv: "att flyga", nl: "vliegen" }
+  - { sv: "att betala", nl: "betalen" }
+  - { sv: "att kosta", nl: "kosten" }
+  - { sv: "att boka", nl: "boeken, reserveren" }
+  - { sv: "att byta", nl: "overstappen, ruilen" }
+  - { sv: "att stiga av", nl: "uitstappen" }
+  - { sv: "försenad", nl: "vertraagd" }
+  - { sv: "tur och retur", nl: "retour" }
