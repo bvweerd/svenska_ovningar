@@ -195,13 +195,13 @@ sections:
         items:
           - type: match
             pairs:
-              - ["ett kök", "keuken"]
-              - ["ett vardagsrum", "woonkamer"]
-              - ["ett sovrum", "slaapkamer"]
-              - ["ett badrum", "badkamer"]
-              - ["en hall", "hal"]
-              - ["en balkong", "balkon"]
-              - ["en källare", "kelder"]
+              - ["ett kök", "een keuken"]
+              - ["ett vardagsrum", "een woonkamer"]
+              - ["ett sovrum", "een slaapkamer"]
+              - ["ett badrum", "een badkamer"]
+              - ["en hall", "een hal"]
+              - ["en balkong", "een balkon"]
+              - ["en källare", "een kelder"]
 
       - id: lezen-appartement
         title: "Lezen: een nieuw appartement"
@@ -282,20 +282,20 @@ sections:
           - { type: mc, topic: perfekt-preteritum, prompt: "Welke zin is goed?", options: ["Vi flyttade hit för två år sedan.", "Vi har flyttat hit för två år sedan.", "Vi flyttar hit för två år sedan."], answer: 0, tip: "för två år sedan is een bepaald moment: preteritum." }
 
 vocab:
-  - { sv: "en lägenhet", nl: "appartement", def: "lägenheten" }
-  - { sv: "ett rum", nl: "kamer", def: "rummet" }
-  - { sv: "ett vardagsrum", nl: "woonkamer", def: "vardagsrummet" }
-  - { sv: "ett sovrum", nl: "slaapkamer", def: "sovrummet" }
-  - { sv: "ett badrum", nl: "badkamer", def: "badrummet" }
-  - { sv: "en balkong", nl: "balkon", def: "balkongen" }
-  - { sv: "en soffa", nl: "bank", def: "soffan" }
-  - { sv: "en säng", nl: "bed", def: "sängen" }
-  - { sv: "en bokhylla", nl: "boekenkast", def: "bokhyllan" }
-  - { sv: "en matta", nl: "tapijt, kleed", def: "mattan" }
-  - { sv: "en vägg", nl: "muur", def: "väggen" }
-  - { sv: "en tavla", nl: "schilderij", def: "tavlan" }
-  - { sv: "en våning", nl: "verdieping", def: "våningen" }
-  - { sv: "en hyra", nl: "huur", def: "hyran" }
+  - { sv: "en lägenhet", nl: "een appartement", def: "lägenheten" }
+  - { sv: "ett rum", nl: "een kamer", def: "rummet" }
+  - { sv: "ett vardagsrum", nl: "een woonkamer", def: "vardagsrummet" }
+  - { sv: "ett sovrum", nl: "een slaapkamer", def: "sovrummet" }
+  - { sv: "ett badrum", nl: "een badkamer", def: "badrummet" }
+  - { sv: "en balkong", nl: "een balkon", def: "balkongen" }
+  - { sv: "en soffa", nl: "een bank", def: "soffan" }
+  - { sv: "en säng", nl: "een bed", def: "sängen" }
+  - { sv: "en bokhylla", nl: "een boekenkast", def: "bokhyllan" }
+  - { sv: "en matta", nl: "een tapijt, een kleed", def: "mattan" }
+  - { sv: "en vägg", nl: "een muur", def: "väggen" }
+  - { sv: "en tavla", nl: "een schilderij", def: "tavlan" }
+  - { sv: "en våning", nl: "een verdieping", def: "våningen" }
+  - { sv: "en hyra", nl: "de huur", def: "hyran" }
   - { sv: "att flytta", nl: "verhuizen" }
   - { sv: "att städa", nl: "schoonmaken, opruimen" }
   - { sv: "att diska", nl: "afwassen" }

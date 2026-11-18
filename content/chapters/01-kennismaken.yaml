@@ -515,21 +515,21 @@ sections:
           - { type: findError, topic: pronomen, sentence: "Vi har ett hus. Den ligger i Västerås.", wrong: [4], answers: ["Vi har ett hus. Det ligger i Västerås."], tip: "Welk voornaamwoord hoort bij een ett-woord?" }
 
 vocab:
-  - { sv: "en bil", nl: "auto", def: "bilen" }
-  - { sv: "ett hus", nl: "huis", def: "huset" }
-  - { sv: "ett barn", nl: "kind", def: "barnet" }
-  - { sv: "en hund", nl: "hond", def: "hunden" }
-  - { sv: "en katt", nl: "kat", def: "katten" }
-  - { sv: "ett äpple", nl: "appel", def: "äpplet" }
-  - { sv: "en tidning", nl: "krant", def: "tidningen" }
-  - { sv: "ett bord", nl: "tafel", def: "bordet" }
-  - { sv: "en stol", nl: "stoel", def: "stolen" }
-  - { sv: "en lampa", nl: "lamp", def: "lampan" }
-  - { sv: "ett kök", nl: "keuken", def: "köket" }
-  - { sv: "en skola", nl: "school", def: "skolan" }
-  - { sv: "ett språk", nl: "taal", def: "språket" }
-  - { sv: "en granne", nl: "buurman, buurvrouw", def: "grannen" }
-  - { sv: "ett sjukhus", nl: "ziekenhuis", def: "sjukhuset" }
+  - { sv: "en bil", nl: "een auto", def: "bilen" }
+  - { sv: "ett hus", nl: "een huis", def: "huset" }
+  - { sv: "ett barn", nl: "een kind", def: "barnet" }
+  - { sv: "en hund", nl: "een hond", def: "hunden" }
+  - { sv: "en katt", nl: "een kat", def: "katten" }
+  - { sv: "ett äpple", nl: "een appel", def: "äpplet" }
+  - { sv: "en tidning", nl: "een krant", def: "tidningen" }
+  - { sv: "ett bord", nl: "een tafel", def: "bordet" }
+  - { sv: "en stol", nl: "een stoel", def: "stolen" }
+  - { sv: "en lampa", nl: "een lamp", def: "lampan" }
+  - { sv: "ett kök", nl: "een keuken", def: "köket" }
+  - { sv: "en skola", nl: "een school", def: "skolan" }
+  - { sv: "ett språk", nl: "een taal", def: "språket" }
+  - { sv: "en granne", nl: "een buurman, een buurvrouw", def: "grannen" }
+  - { sv: "ett sjukhus", nl: "een ziekenhuis", def: "sjukhuset" }
   - { sv: "att heta", nl: "heten" }
   - { sv: "att bo", nl: "wonen" }
   - { sv: "att jobba", nl: "werken", alt: ["att arbeta"] }

@@ -262,18 +262,18 @@ sections:
           - { type: gap, topic: possessiv, text: "Tack för maten! ___ köttbullar är de bästa! (jouw)", gaps: [{ answers: ["Dina"], options: ["Din", "Ditt", "Dina"] }] }
 
 vocab:
-  - { sv: "en kräfta", nl: "rivierkreeft", def: "kräftan" }
-  - { sv: "en kanelbulle", nl: "kaneelbroodje", def: "kanelbullen" }
-  - { sv: "en tårta", nl: "taart", def: "tårtan" }
-  - { sv: "ett bröd", nl: "brood", def: "brödet" }
-  - { sv: "en ost", nl: "kaas", def: "osten" }
-  - { sv: "ett ägg", nl: "ei", def: "ägget" }
-  - { sv: "en restaurang", nl: "restaurant", def: "restaurangen" }
-  - { sv: "en meny", nl: "menukaart", def: "menyn" }
-  - { sv: "en nota", nl: "rekening", def: "notan" }
-  - { sv: "en gäst", nl: "gast", def: "gästen" }
-  - { sv: "ett kylskåp", nl: "koelkast", def: "kylskåpet", alt: ["en kyl"] }
-  - { sv: "en efterrätt", nl: "toetje, dessert", def: "efterrätten" }
+  - { sv: "en kräfta", nl: "een rivierkreeft", def: "kräftan" }
+  - { sv: "en kanelbulle", nl: "een kaneelbroodje", def: "kanelbullen" }
+  - { sv: "en tårta", nl: "een taart", def: "tårtan" }
+  - { sv: "ett bröd", nl: "een brood", def: "brödet" }
+  - { sv: "en ost", nl: "een kaas", def: "osten" }
+  - { sv: "ett ägg", nl: "een ei", def: "ägget" }
+  - { sv: "en restaurang", nl: "een restaurant", def: "restaurangen" }
+  - { sv: "en meny", nl: "een menukaart", def: "menyn" }
+  - { sv: "en nota", nl: "een rekening", def: "notan" }
+  - { sv: "en gäst", nl: "een gast", def: "gästen" }
+  - { sv: "ett kylskåp", nl: "een koelkast", def: "kylskåpet", alt: ["en kyl"] }
+  - { sv: "en efterrätt", nl: "een toetje, een dessert", def: "efterrätten" }
   - { sv: "att tycka", nl: "vinden (mening)" }
   - { sv: "att tro", nl: "denken, geloven (vermoeden)" }
   - { sv: "att tänka", nl: "(na)denken, van plan zijn" }

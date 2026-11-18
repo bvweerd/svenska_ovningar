@@ -170,14 +170,14 @@ sections:
         items:
           - type: match
             pairs:
-              - ["ett huvud", "hoofd"]
-              - ["ett öga", "oog"]
-              - ["ett öra", "oor"]
-              - ["en mun", "mond"]
-              - ["en hals", "keel, hals"]
-              - ["en rygg", "rug"]
-              - ["en mage", "buik"]
-              - ["en fot", "voet"]
+              - ["ett huvud", "een hoofd"]
+              - ["ett öga", "een oog"]
+              - ["ett öra", "een oor"]
+              - ["en mun", "een mond"]
+              - ["en hals", "een keel, een hals"]
+              - ["en rygg", "een rug"]
+              - ["en mage", "een buik"]
+              - ["en fot", "een voet"]
 
       - id: lichaam-meervoud
         title: Meervoud van lichaamsdelen
@@ -300,17 +300,17 @@ sections:
           - { type: mc, topic: det-finns, prompt: "Welke zin is goed?", options: ["Finns det ett apotek här i närheten?", "Är det ett apotek här i närheten?", "Har det ett apotek här i närheten?"], answer: 0, tip: "Is er …? = Finns det …?" }
 
 vocab:
-  - { sv: "en kropp", nl: "lichaam", def: "kroppen" }
-  - { sv: "ett huvud", nl: "hoofd", def: "huvudet" }
-  - { sv: "en mage", nl: "buik, maag", def: "magen" }
-  - { sv: "en rygg", nl: "rug", def: "ryggen" }
-  - { sv: "en hals", nl: "hals, keel", def: "halsen" }
-  - { sv: "en läkare", nl: "arts, dokter", def: "läkaren" }
-  - { sv: "en vårdcentral", nl: "huisartsenpraktijk, gezondheidscentrum", def: "vårdcentralen" }
-  - { sv: "ett apotek", nl: "apotheek", def: "apoteket" }
-  - { sv: "en tablett", nl: "tablet, pil", def: "tabletten" }
-  - { sv: "en feber", nl: "koorts", def: "febern" }
-  - { sv: "en förkylning", nl: "verkoudheid", def: "förkylningen" }
+  - { sv: "en kropp", nl: "een lichaam", def: "kroppen" }
+  - { sv: "ett huvud", nl: "een hoofd", def: "huvudet" }
+  - { sv: "en mage", nl: "een buik, een maag", def: "magen" }
+  - { sv: "en rygg", nl: "een rug", def: "ryggen" }
+  - { sv: "en hals", nl: "een hals, een keel", def: "halsen" }
+  - { sv: "en läkare", nl: "een arts, een dokter", def: "läkaren" }
+  - { sv: "en vårdcentral", nl: "een huisartsenpraktijk, een gezondheidscentrum", def: "vårdcentralen" }
+  - { sv: "ett apotek", nl: "een apotheek", def: "apoteket" }
+  - { sv: "en tablett", nl: "een tablet, een pil", def: "tabletten" }
+  - { sv: "en feber", nl: "de koorts", def: "febern" }
+  - { sv: "en förkylning", nl: "een verkoudheid", def: "förkylningen" }
   - { sv: "att ligga", nl: "liggen" }
   - { sv: "att lägga", nl: "leggen" }
   - { sv: "att stå", nl: "staan" }

@@ -236,9 +236,9 @@ sections:
         items:
           - type: match
             pairs:
-              - ["en julklapp", "kerstcadeau"]
+              - ["en julklapp", "een kerstcadeau"]
               - ["tomten", "de kerstman"]
-              - ["ett julbord", "kerstbuffet"]
+              - ["ett julbord", "een kerstbuffet"]
               - ["glögg", "warme kruidenwijn"]
               - ["pepparkakor", "gemberkoekjes"]
               - ["lussekatter", "saffraanbroodjes"]
@@ -334,15 +334,15 @@ sections:
           - { type: translate, topic: komparation, prompt: "Dit is de mooiste dag van het jaar.", answers: ["{Det här|Detta} är den {vackraste|finaste|bästa} dagen på året."], feedback: [{ contains: "i året", tip: "Van het jaar: på året." }] }
 
 vocab:
-  - { sv: "en jul", nl: "kerst", def: "julen" }
-  - { sv: "ett ljus", nl: "kaars, licht", def: "ljuset" }
-  - { sv: "en julklapp", nl: "kerstcadeau", def: "julklappen" }
-  - { sv: "en gran", nl: "spar, kerstboom", def: "granen" }
-  - { sv: "en stjärna", nl: "ster", def: "stjärnan" }
-  - { sv: "en tomte", nl: "kabouter, kerstman", def: "tomten" }
-  - { sv: "en pepparkaka", nl: "gemberkoekje", def: "pepparkakan" }
-  - { sv: "en skinka", nl: "ham", def: "skinkan" }
-  - { sv: "ett nyår", nl: "nieuwjaar", def: "nyåret" }
+  - { sv: "en jul", nl: "de kerst", def: "julen" }
+  - { sv: "ett ljus", nl: "een kaars, een licht", def: "ljuset" }
+  - { sv: "en julklapp", nl: "een kerstcadeau", def: "julklappen" }
+  - { sv: "en gran", nl: "een spar, een kerstboom", def: "granen" }
+  - { sv: "en stjärna", nl: "een ster", def: "stjärnan" }
+  - { sv: "en tomte", nl: "een kabouter, een kerstman", def: "tomten" }
+  - { sv: "en pepparkaka", nl: "een gemberkoekje", def: "pepparkakan" }
+  - { sv: "en skinka", nl: "een ham", def: "skinkan" }
+  - { sv: "ett nyår", nl: "het nieuwjaar", def: "nyåret" }
   - { sv: "att önska", nl: "wensen" }
   - { sv: "att sticka", nl: "breien" }
   - { sv: "att pynta", nl: "versieren" }

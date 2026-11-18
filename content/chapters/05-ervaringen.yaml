@@ -274,16 +274,16 @@ sections:
           - { type: clock, time: "12:35" }
 
 vocab:
-  - { sv: "en resa", nl: "reis", def: "resan" }
-  - { sv: "ett land", nl: "land", def: "landet" }
-  - { sv: "en stad", nl: "stad", def: "staden" }
-  - { sv: "en semester", nl: "vakantie", def: "semestern" }
-  - { sv: "ett tåg", nl: "trein", def: "tåget" }
-  - { sv: "en nyckel", nl: "sleutel", def: "nyckeln" }
-  - { sv: "en månad", nl: "maand", def: "månaden" }
-  - { sv: "ett år", nl: "jaar", def: "året" }
-  - { sv: "ett norrsken", nl: "noorderlicht", def: "norrskenet" }
-  - { sv: "en människa", nl: "mens", def: "människan" }
+  - { sv: "en resa", nl: "een reis", def: "resan" }
+  - { sv: "ett land", nl: "een land", def: "landet" }
+  - { sv: "en stad", nl: "een stad", def: "staden" }
+  - { sv: "en semester", nl: "een vakantie", def: "semestern" }
+  - { sv: "ett tåg", nl: "een trein", def: "tåget" }
+  - { sv: "en nyckel", nl: "een sleutel", def: "nyckeln" }
+  - { sv: "en månad", nl: "een maand", def: "månaden" }
+  - { sv: "ett år", nl: "een jaar", def: "året" }
+  - { sv: "ett norrsken", nl: "een noorderlicht", def: "norrskenet" }
+  - { sv: "en människa", nl: "een mens", def: "människan" }
   - { sv: "att resa", nl: "reizen" }
   - { sv: "att hitta", nl: "vinden" }
   - { sv: "att tappa", nl: "verliezen, laten vallen" }

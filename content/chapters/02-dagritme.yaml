@@ -403,19 +403,19 @@ sections:
           - { type: translate, topic: plural, prompt: "Wij hebben twee auto's.", answers: ["Vi har två bilar."] }
 
 vocab:
-  - { sv: "en morgon", nl: "ochtend", def: "morgonen" }
-  - { sv: "en kväll", nl: "avond", def: "kvällen" }
-  - { sv: "en natt", nl: "nacht", def: "natten" }
-  - { sv: "en vecka", nl: "week", def: "veckan" }
-  - { sv: "en dag", nl: "dag", def: "dagen" }
-  - { sv: "en frukost", nl: "ontbijt", def: "frukosten" }
-  - { sv: "en middag", nl: "avondeten", def: "middagen" }
-  - { sv: "ett jobb", nl: "werk, baan", def: "jobbet", alt: ["ett arbete"] }
-  - { sv: "en buss", nl: "bus", def: "bussen" }
-  - { sv: "en dörr", nl: "deur", def: "dörren" }
-  - { sv: "ett fönster", nl: "raam", def: "fönstret" }
-  - { sv: "en kopp", nl: "kopje", def: "koppen" }
-  - { sv: "en bok", nl: "boek", def: "boken" }
+  - { sv: "en morgon", nl: "een ochtend", def: "morgonen" }
+  - { sv: "en kväll", nl: "een avond", def: "kvällen" }
+  - { sv: "en natt", nl: "een nacht", def: "natten" }
+  - { sv: "en vecka", nl: "een week", def: "veckan" }
+  - { sv: "en dag", nl: "een dag", def: "dagen" }
+  - { sv: "en frukost", nl: "een ontbijt", def: "frukosten" }
+  - { sv: "en middag", nl: "een avondmaaltijd, een diner", def: "middagen" }
+  - { sv: "ett jobb", nl: "een baan", def: "jobbet", alt: ["ett arbete"] }
+  - { sv: "en buss", nl: "een bus", def: "bussen" }
+  - { sv: "en dörr", nl: "een deur", def: "dörren" }
+  - { sv: "ett fönster", nl: "een raam", def: "fönstret" }
+  - { sv: "en kopp", nl: "een kopje", def: "koppen" }
+  - { sv: "en bok", nl: "een boek", def: "boken" }
   - { sv: "att vakna", nl: "wakker worden" }
   - { sv: "att stiga upp", nl: "opstaan" }
   - { sv: "att duscha", nl: "douchen" }

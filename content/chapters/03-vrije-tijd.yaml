@@ -267,16 +267,16 @@ sections:
           - { type: gap, topic: tidsuttryck, text: "På lördag ___ (åka) vi till Stockholm.", gaps: [{ answers: ["åker"] }] }
 
 vocab:
-  - { sv: "en hobby", nl: "hobby", def: "hobbyn" }
-  - { sv: "en bio", nl: "bioscoop", def: "bion" }
-  - { sv: "en kompis", nl: "vriend(in), maat", def: "kompisen" }
-  - { sv: "en sjö", nl: "meer", def: "sjön" }
-  - { sv: "en skog", nl: "bos", def: "skogen" }
-  - { sv: "en cykel", nl: "fiets", def: "cykeln" }
-  - { sv: "en konsert", nl: "concert", def: "konserten" }
-  - { sv: "en kör", nl: "koor", def: "kören" }
-  - { sv: "ett museum", nl: "museum", def: "museet" }
-  - { sv: "ett kafé", nl: "café", def: "kaféet" }
+  - { sv: "en hobby", nl: "een hobby", def: "hobbyn" }
+  - { sv: "en bio", nl: "een bioscoop", def: "bion" }
+  - { sv: "en kompis", nl: "een vriend(in), een maat", def: "kompisen" }
+  - { sv: "en sjö", nl: "een meer", def: "sjön" }
+  - { sv: "en skog", nl: "een bos", def: "skogen" }
+  - { sv: "en cykel", nl: "een fiets", def: "cykeln" }
+  - { sv: "en konsert", nl: "een concert", def: "konserten" }
+  - { sv: "en kör", nl: "een koor", def: "kören" }
+  - { sv: "ett museum", nl: "een museum", def: "museet" }
+  - { sv: "ett kafé", nl: "een café", def: "kaféet" }
   - { sv: "att simma", nl: "zwemmen" }
   - { sv: "att cykla", nl: "fietsen" }
   - { sv: "att springa", nl: "hardlopen, rennen" }

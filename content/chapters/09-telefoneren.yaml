@@ -248,15 +248,15 @@ sections:
           - { type: mc, topic: ocksa-heller, prompt: "– Jag har ingen mobil. – (Jij ook niet.)", options: ["Inte jag heller.", "Det har jag också.", "Men det har jag."], answer: 0, tip: "Ook niet: Inte jag heller." }
 
 vocab:
-  - { sv: "en mobil", nl: "mobiele telefoon", def: "mobilen" }
-  - { sv: "ett samtal", nl: "(telefoon)gesprek", def: "samtalet" }
-  - { sv: "ett meddelande", nl: "bericht", def: "meddelandet" }
-  - { sv: "ett nummer", nl: "nummer", def: "numret" }
-  - { sv: "en dator", nl: "computer", def: "datorn" }
-  - { sv: "ett lösenord", nl: "wachtwoord", def: "lösenordet" }
-  - { sv: "en app", nl: "app", def: "appen" }
-  - { sv: "ett mejl", nl: "e-mail", def: "mejlet" }
-  - { sv: "en tid", nl: "afspraak (bij dokter e.d.), tijd", def: "tiden" }
+  - { sv: "en mobil", nl: "een mobiele telefoon", def: "mobilen" }
+  - { sv: "ett samtal", nl: "een (telefoon)gesprek", def: "samtalet" }
+  - { sv: "ett meddelande", nl: "een bericht", def: "meddelandet" }
+  - { sv: "ett nummer", nl: "een nummer", def: "numret" }
+  - { sv: "en dator", nl: "een computer", def: "datorn" }
+  - { sv: "ett lösenord", nl: "een wachtwoord", def: "lösenordet" }
+  - { sv: "en app", nl: "een app", def: "appen" }
+  - { sv: "ett mejl", nl: "een e-mail", def: "mejlet" }
+  - { sv: "en tid", nl: "een afspraak (bij dokter e.d.), een tijd", def: "tiden" }
   - { sv: "att ringa", nl: "bellen" }
   - { sv: "att svara", nl: "antwoorden, opnemen" }
   - { sv: "att skicka", nl: "sturen" }
