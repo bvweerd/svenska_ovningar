@@ -3,6 +3,7 @@ import { h } from './dom.js';
 import { markdown, inline } from './md.js';
 import { course } from './content.js';
 import { itemCard } from './render/item-card.js';
+import { createMenu } from './menu.js';
 import { shuffle } from './build.js';
 import {
   getResult, chapterProgress, resetProgress, recordItem, runState, startRun, completeRun,
@@ -240,31 +241,39 @@ function viewExercise(ch, ex, query) {
   );
 }
 
+/**
+ * Oefenronde met losse vragen uit één of meer hoofdstukken (mix, fouten).
+ * entries: [{ item, ex, idx, chapter }]
+ */
 function practiceView(ch, { title, instruction, entries, again, empty }) {
+  const trail = ch
+    ? [{ label: 'Start', href: '#/' }, { label: ch.title, href: `#/k/${ch.chapter}` }, { label: title }]
+    : [{ label: 'Start', href: '#/' }, { label: title }];
+  const back = ch ? h('a', { class: 'btn ghost', href: `#/k/${ch.chapter}` }, 'Terug naar het hoofdstuk') : h('a', { class: 'btn ghost', href: '#/' }, 'Naar de start');
   if (!entries.length) {
     return h('div', {},
-      crumbs({ label: 'Start', href: '#/' }, { label: ch.title, href: `#/k/${ch.chapter}` }, { label: title }),
+      crumbs(...trail),
       h('header', { class: 'page-head' }, h('h1', {}, title), h('p', { class: 'instruction' }, empty)),
-      h('a', { class: 'btn primary', href: `#/k/${ch.chapter}` }, 'Terug naar het hoofdstuk'));
+      back);
   }
-  const items = entries.map(({ item, ex, idx }) => ({
-    item,
-    ref: { ch: ch.chapter, ex, idx },
-    label: ex.instruction.replace(/\*\*|\*/g, ''),
-    ctx: { topic: ex.topic, findTopic: (t) => findTopic(t, ch) },
-  }));
+  const items = entries.map(({ item, ex, idx, chapter }) => {
+    const owner = chapter ?? ch;
+    return {
+      item,
+      ref: { ch: owner.chapter, ex, idx },
+      label: `${ch ? '' : `${owner.title} · `}${ex.instruction.replace(/\*\*|\*/g, '')}`,
+      ctx: { topic: ex.topic, findTopic: (t) => findTopic(t, owner) },
+    };
+  });
   const [list, score, summary] = exerciseRunner(items, {
     onFinish: (good, total) => [
       h('h2', {}, `Klaar! ${good} van ${total} in één keer goed.`),
-      h('div', { class: 'actions' },
-        h('a', { class: 'btn primary', href: again }, 'Nog een ronde'),
-        h('a', { class: 'btn ghost', href: `#/k/${ch.chapter}` }, 'Terug naar het hoofdstuk'),
-      ),
+      h('div', { class: 'actions' }, h('a', { class: 'btn primary', href: again }, 'Nog een ronde'), back),
     ],
   });
   return h('div', {},
-    crumbs({ label: 'Start', href: '#/' }, { label: ch.title, href: `#/k/${ch.chapter}` }, { label: title }),
-    h('header', { class: 'page-head' }, h('h1', {}, `${title}: ${ch.title}`), h('p', { class: 'instruction' }, instruction)),
+    crumbs(...trail),
+    h('header', { class: 'page-head' }, h('h1', {}, ch ? `${title}: ${ch.title}` : title), h('p', { class: 'instruction' }, instruction)),
     score, list, summary,
   );
 }
@@ -294,6 +303,37 @@ function viewWeak(ch) {
     again: `#/k/${ch.chapter}/fouten?${Date.now()}`,
     empty: 'Er staan geen fouten meer open in dit hoofdstuk. Goed bezig!',
   });
+}
+
+function viewWeakAll() {
+  document.title = 'Herhalen · Svenska övningar';
+  const entries = course.filter((c) => c.available).flatMap((c) =>
+    weakItems(c).filter(({ ex }) => !ex.text).map((w) => ({ ...w, chapter: c })));
+  return practiceView(null, {
+    title: 'Herhalen',
+    instruction: 'Je openstaande fouten uit alle hoofdstukken. Heb je een vraag in één keer goed, dan verdwijnt hij uit de lijst.',
+    entries: shuffle(entries).slice(0, 15),
+    again: `#/herhalen?${Date.now()}`,
+    empty: 'Er staan geen fouten open. Vragen die je fout hebt of waarvan je het antwoord bekijkt, komen hier vanzelf terug.',
+  });
+}
+
+function viewGrammarIndex() {
+  document.title = 'Grammatica · Svenska övningar';
+  const chapters = course.filter((c) => c.available && c.grammar.length);
+  return h('div', {},
+    crumbs({ label: 'Start', href: '#/' }, { label: 'Grammatica' }),
+    h('header', { class: 'page-head' },
+      h('h1', {}, 'Grammatica'),
+      h('p', { class: 'lead' }, 'Alle uitleg op een rij, per hoofdstuk.')),
+    chapters.map((ch) =>
+      h('section', { class: 'block' },
+        h('h2', {}, h('a', { href: `#/k/${ch.chapter}`, class: 'plain' }, ch.title), h('span', { class: 'h2-sub' }, ch.theme)),
+        h('ul', { class: 'cards' }, ch.grammar.map((g) =>
+          h('li', {}, h('a', { class: 'card', href: `#/k/${ch.chapter}/g/${g.id}` }, h('strong', {}, g.title), h('span', { html: inline(g.summary) }))))),
+      ),
+    ),
+  );
 }
 
 // ---------- Grammatica ----------
@@ -386,6 +426,8 @@ function route() {
   let view;
   if (!parts.length) view = viewHome();
   else if (parts[0] === 'over') view = viewAbout();
+  else if (parts[0] === 'grammatica') view = viewGrammarIndex();
+  else if (parts[0] === 'herhalen') view = viewWeakAll();
   else if (parts[0] === 'k') {
     const ch = chapterByNo(parts[1]);
     if (!ch?.available) view = notFound();
@@ -401,6 +443,7 @@ function route() {
     else view = notFound();
   } else view = notFound();
   app.replaceChildren(view);
+  updateMenu(path);
   window.scrollTo(0, 0);
   app.focus({ preventScroll: true });
 }
@@ -458,6 +501,7 @@ function themeToggle() {
   });
 }
 
+const updateMenu = createMenu(course);
 window.addEventListener('hashchange', route);
 charBar();
 themeToggle();
