@@ -6,7 +6,7 @@ describe('reportPayload', () => {
   it('stuurt de repo en de plaats van de vraag mee', () => {
     const item = { type: 'gap', text: 'a ___' };
     const p = reportPayload({ item, ref: { ch: 5, ex: { id: 'x', title: 'X' }, idx: 0 }, number: 2, message: ' fout ', answer: 'b', token: 't', page: 'p' });
-    expect(p).toMatchObject({ repo: 'bvweerd/svensk_ovningar', message: 'fout', shownNumber: 2, chapter: 5, exercise: 'x', itemIndex: 0, itemType: 'gap', token: 't' });
+    expect(p).toMatchObject({ repo: 'bvweerd/svenska_ovningar', message: 'fout', shownNumber: 2, chapter: 5, exercise: 'x', itemIndex: 0, itemType: 'gap', token: 't' });
     expect(JSON.parse(p.item)).toEqual(item);
   });
   it('werkt ook zonder plaats (snelle rondes)', () => {

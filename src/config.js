@@ -10,4 +10,4 @@ export const GOATCOUNTER_CODE = import.meta.env?.VITE_GOATCOUNTER || 'bvweerd';
 export const REPORT_URL = import.meta.env?.VITE_REPORT_URL || '';
 export const TURNSTILE_SITEKEY = import.meta.env?.VITE_TURNSTILE_SITEKEY || '';
 // In deze repo komen de issues. De Worker accepteert alleen repo's uit zijn eigen lijst.
-export const REPORT_REPO = 'bvweerd/svensk_ovningar';
+export const REPORT_REPO = 'bvweerd/svenska_ovningar';
