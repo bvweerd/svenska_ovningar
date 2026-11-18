@@ -26,6 +26,7 @@ function textSpecs(item) {
     default: return [];
   }
 }
+const allTopics = course.flatMap((c) => c.grammar.map((g) => g.id));
 const allItems = (ex) => ex.items.flatMap((i) => (i.type === 'steps' ? [i, ...i.steps] : [i]));
 
 it('elk bestand hoort bij een hoofdstuk uit index.yaml', () => {
@@ -35,7 +36,11 @@ it('elk bestand hoort bij een hoofdstuk uit index.yaml', () => {
 
 for (const ch of course) {
   describe(`hoofdstuk ${ch.chapter}`, () => {
-    it('heeft een geldige structuur', () => expect(validateChapter(ch)).toEqual([]));
+    it('grammatica-id’s zijn uniek over de hele cursus', () => {
+      for (const g of ch.grammar) expect(allTopics.filter((t) => t === g.id).length, g.id).toBe(1);
+    });
+
+    it('heeft een geldige structuur', () => expect(validateChapter(ch, allTopics)).toEqual([]));
 
     it('accepteert alle eigen antwoorden', () => {
       for (const ex of ch.exercises) for (const item of allItems(ex)) for (const spec of textSpecs(item)) {

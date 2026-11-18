@@ -62,9 +62,10 @@ function checkItem(item, where, errors, topics) {
   }
 }
 
-export function validateChapter(ch) {
+/** @param extraTopics  grammatica-onderwerpen uit andere hoofdstukken (voor herhaling) */
+export function validateChapter(ch, extraTopics = []) {
   const errors = [];
-  const topics = new Set([...(ch.grammar ?? []).map((g) => g.id), 'woordenschat']);
+  const topics = new Set([...(ch.grammar ?? []).map((g) => g.id), 'woordenschat', ...extraTopics]);
   const ids = new Set();
   if (!Number.isInteger(ch.chapter)) errors.push('hoofdstuknummer ontbreekt');
   for (const g of ch.grammar ?? []) {

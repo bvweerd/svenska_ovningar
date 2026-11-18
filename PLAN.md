@@ -231,6 +231,7 @@ items:
 - [x] Fase 2: nakijkmotor met foutanalyse, oplopende hulp, samengestelde vragen, tests
 - [x] Fase 3: hoofdstuk 0 (uitspraak) en hoofdstuk 1 (kennismaken), alle vraagtypen
 - [ ] Fase 4: evaluatie met gebruiker
-- [ ] Fase 5–6: hoofdstuk 2–12, met herhalingssets vanaf hoofdstuk 2
+- [x] Hoofdstuk 2 (dagritme), met de eerste herhalingsset
+- [ ] Fase 5–6: hoofdstuk 3–12
 - [x] Voortgang per vraag, verdergaan, foutenlijst, export/import
 - [ ] Fase 7: toetsmodus
