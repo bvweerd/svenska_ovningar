@@ -27,6 +27,25 @@ Naast de oefeningen per hoofdstuk zijn er onder **Oefenen**: dagelijkse herhalin
 intervallen (Leitner-dozen), een werkwoordtrainer (`content/verbs.yaml`), toetsen per
 hoofdstuk, flitskaarten en snelle rondes van 60 seconden. Alle voortgang staat in de browser.
 
+## Statistieken (GoatCounter)
+
+De site kan anoniem meten via [GoatCounter](https://www.goatcounter.com): zonder cookies en
+zonder persoonsgegevens. Zet de code in `src/config.js` (`GOATCOUNTER_CODE`); leeg = niets meten.
+Bezoekers kunnen het uitzetten op de pagina "Over".
+
+Wat er geteld wordt:
+
+| Pad | Betekenis |
+|---|---|
+| `/k/1/o/presens-invullen` enz. | paginabezoek |
+| `vraag/<hoofdstuk>/<oefening>/<nr>/goed\|fout\|bekeken` | per vraag: in één keer goed, goed na fouten, of antwoord bekeken |
+| `oefening/<hoofdstuk>/<oefening>/klaar/<score>` | oefening afgerond, score in groepen (0-39, 40-59, 60-79, 80-100) |
+| `werkwoord/<tijd>/<werkwoord>/goed\|fout\|bekeken` | werkwoordtrainer |
+| `toets/<hoofdstuk>/klaar/<score>` en `spel/<naam>/klaar` | toetsen en snelle rondes |
+
+Moeilijke vragen vind je in het dashboard door te zoeken op `/fout` of `/bekeken` en dat te
+vergelijken met hetzelfde pad op `/goed`.
+
 ## Oefeningen toevoegen
 
 De oefenstof staat in `content/chapters/NN-onderwerp.yaml`, één bestand per hoofdstuk.

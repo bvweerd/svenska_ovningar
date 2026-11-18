@@ -9,6 +9,7 @@ import {
   getPref, setPref, INTERVALS,
 } from '../progress.js';
 import { TENSES, KINDS, pickVerbItem, pretOptions } from '../verbs.js';
+import { trackEvent, scoreBucket } from '../analytics.js';
 
 const available = () => course.filter((c) => c.available);
 const plural = (n, one, more) => `${n} ${n === 1 ? one : more}`;
@@ -134,6 +135,7 @@ export function viewVerbTrainer() {
     last = q.verb.inf;
     const card = itemCard(q.item, { topic: q.item.topic, findTopic: (t) => findTopic(t) }, done + 1, (r) => {
       done++;
+      trackEvent(`werkwoord/${q.tense}/${q.verb.inf}/${r.firstTry ? 'goed' : r.revealed ? 'bekeken' : 'fout'}`, `${q.verb.inf} (${q.verb.nl}) · ${TENSES[q.tense].label}`);
       if (r.firstTry) {
         good++;
         run++;
@@ -314,6 +316,7 @@ export function viewTest(ch) {
         if (r.ok) perTopic[r.topic].good++;
       }
       saveTest(ch.chapter, good, results.length, perTopic);
+      trackEvent(`toets/${ch.chapter}/klaar/${scoreBucket(good / Math.max(results.length, 1))}`, `Toets ${ch.title}`);
       const rows = Object.entries(perTopic)
         .map(([topic, s]) => ({ topic, ...s, ratio: s.good / s.total, found: findTopic(topic, ch) }))
         .sort((a, b) => a.ratio - b.ratio);
@@ -470,6 +473,7 @@ export function viewGame(id) {
     clearInterval(timer);
     q = null;
     const record = saveGame(id, score);
+    trackEvent(`spel/${id}/klaar`, `${game.title} · score ${score}`);
     stage.replaceChildren(
       h('h2', {}, `Tijd! Je score: ${score}`),
       h('p', {}, record && score > 0 ? 'Nieuw record!' : `Je record: ${getGame(id)?.best ?? score}`),

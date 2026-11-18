@@ -3,6 +3,7 @@ import { h } from './dom.js';
 import { course } from './content.js';
 import { itemCard } from './render/item-card.js';
 import { recordItem } from './progress.js';
+import { trackEvent, itemSummary, STATUS_LABEL } from './analytics.js';
 
 export const chapterByNo = (n) => course.find((c) => c.chapter === Number(n));
 
@@ -51,7 +52,11 @@ export function exerciseRunner(items, { onFinish, offset = { done: 0, good: 0, t
   const list = h('div', { class: 'items' },
     items.map(({ item, ctx, label, ref }, i) => {
       const card = itemCard(item, ctx, offset.done + i + 1, (r) => {
-        if (ref) recordItem(ref.ch, ref.ex, ref.idx, statusOf(r));
+        if (ref) {
+          const status = statusOf(r);
+          recordItem(ref.ch, ref.ex, ref.idx, status);
+          trackEvent(`vraag/${ref.ch}/${ref.ex.id}/${ref.idx + 1}/${STATUS_LABEL[status]}`, `H${ref.ch} · ${ref.ex.title} · ${itemSummary(item)}`);
+        }
         onItem?.(items[i], r);
         done++;
         finished++;

@@ -4,6 +4,7 @@ import { markdown, inline } from './md.js';
 import { course } from './content.js';
 import { itemCard } from './render/item-card.js';
 import { createMenu } from './menu.js';
+import { initAnalytics, trackPage, trackEvent, scoreBucket, analyticsConfigured, optedOut, setOptOut } from './analytics.js';
 import {
   viewPracticeHub, viewDaily, viewVerbTrainer, viewFlashcards, viewTest, viewGames, viewGame, GAMES, dueCount, streakText,
 } from './views/practice.js';
@@ -156,6 +157,7 @@ function viewExercise(ch, ex, query) {
     offset: { done: run.done.size, good: goodBefore, total: ex.items.length },
     onFinish: () => {
       const { score: good, total } = completeRun(ch.chapter, ex);
+      trackEvent(`oefening/${ch.chapter}/${ex.id}/klaar/${total ? scoreBucket(good / total) : 'schrijven'}`, `H${ch.chapter} · ${ex.title}`);
       return [
         h('h2', {}, total ? `Klaar! ${good} van ${total} in één keer goed.` : 'Klaar!'),
         h('p', {}, !total || good / total >= 0.8 ? 'Knap gedaan.' : 'Wat je fout had, kun je straks herhalen via „Oefen je fouten” bij het hoofdstuk.'),
@@ -289,6 +291,15 @@ function viewAbout() {
       h('li', {}, 'Flitskaarten: woorden omdraaien en zelf aangeven of je ze wist.'),
       h('li', {}, 'Snelle rondes: zoveel mogelijk goede antwoorden in 60 seconden.'),
     ),
+    h('h2', {}, 'Privacy en statistieken'),
+    analyticsConfigured()
+      ? h('div', {},
+          h('p', {}, 'Om de site te verbeteren tellen we anoniem mee welke pagina\'s bezocht worden en welke vragen vaak goed of fout gaan. Daarvoor gebruiken we GoatCounter: zonder cookies, zonder persoonsgegevens en zonder je antwoorden zelf.'),
+          (() => {
+            const box = h('input', { type: 'checkbox', checked: !optedOut(), onchange: () => setOptOut(!box.checked) });
+            return h('label', { class: 'option inline' }, box, h('span', {}, 'Anoniem meetellen'));
+          })())
+      : h('p', {}, 'Deze site verzamelt geen statistieken.'),
     h('h2', {}, 'Voortgang'),
     h('p', {}, 'Je voortgang wordt per vraag opgeslagen in deze browser. Ga je halverwege een oefening weg, dan ga je later verder waar je gebleven was. Wil je op een ander apparaat verder, exporteer dan je voortgang naar een bestand en importeer dat daar.'),
     progressTools(),
@@ -368,6 +379,7 @@ function route() {
   } else view = notFound();
   app.replaceChildren(view);
   updateMenu(path);
+  trackPage(path, document.title);
   window.scrollTo(0, 0);
   app.focus({ preventScroll: true });
 }
@@ -426,6 +438,7 @@ function themeToggle() {
 }
 
 const updateMenu = createMenu(course);
+initAnalytics();
 window.addEventListener('hashchange', route);
 charBar();
 themeToggle();
