@@ -2,12 +2,13 @@
 import { h } from '../dom.js';
 import { inline } from '../md.js';
 import { RENDERERS } from './items.js';
+import { reportButton } from '../report.js';
 
 const GENERIC_WRONG = 'Nog niet goed. Probeer het nog eens.';
 
 /**
  * @param item    de vraag
- * @param ctx     { topic, findTopic(topic) → {card, href} }
+ * @param ctx     { topic, findTopic(topic) → {card, href}, ref?: { ch, ex, idx } (voor foutmeldingen) }
  * @param onDone  callback({ firstTry: boolean, revealed: boolean, neutral: boolean })
  */
 export function itemCard(item, ctx, number, onDone, label) {
@@ -24,7 +25,10 @@ export function itemCard(item, ctx, number, onDone, label) {
   const revealBtn = h('button', { type: 'button', class: 'btn ghost', hidden: true }, 'Toon antwoord');
   const actions = h('div', { class: 'actions' }, checkBtn, revealBtn);
   const card = h('article', { class: `item type-${item.type}` },
-    h('div', { class: 'item-head' }, h('span', { class: 'item-no' }, String(number)), label ? h('span', { class: 'item-label' }, label) : null),
+    h('div', { class: 'item-head' },
+      h('span', { class: 'item-no' }, String(number)),
+      label ? h('span', { class: 'item-label' }, label) : null,
+      reportButton(item, ctx.ref, number, () => card)),
     r.el, actions, feedback,
   );
 
