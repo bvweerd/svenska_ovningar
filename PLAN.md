@@ -232,6 +232,6 @@ items:
 - [x] Fase 3: hoofdstuk 0 (uitspraak) en hoofdstuk 1 (kennismaken), alle vraagtypen
 - [ ] Fase 4: evaluatie met gebruiker
 - [x] Hoofdstuk 2 (dagritme), met de eerste herhalingsset
-- [ ] Fase 5–6: hoofdstuk 3–12
+- [x] Fase 5–6: hoofdstuk 3–12, elk met herhaling; hoofdstuk 12 met eindherhaling
 - [x] Voortgang per vraag, verdergaan, foutenlijst, export/import
 - [ ] Fase 7: toetsmodus
