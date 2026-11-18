@@ -44,13 +44,13 @@ grammar:
 
   - id: pengar
     title: Geld en betalen
-    summary: "*Vad kostar det?* – *Det kostar 95 kronor.* Biljetten: *en tia* (10), *en tjuga* (20), *en femtiolapp*, *en hundralapp*."
+    summary: "*Vad kostar det?* – *Det kostar 95 kronor.* Munten en briefjes: *en tia* (munt van 10), *en tjuga* (briefje van 20), *en femtiolapp*, *en hundralapp*."
     body: |
       In Zweden betaal je met **kronor** (een *krona*, meervoud *kronor*). Bijna overal betaal je met kaart of met de app *Swish*; contant geld wordt steeds minder gebruikt.
 
       | Zweeds | Betekenis |
       |---|---|
-      | en tia | een tientje (10 kronor) |
+      | en tia | een tientje (munt van 10 kronor) |
       | en tjuga | een briefje van 20 |
       | en femtiolapp | een briefje van 50 |
       | en hundralapp | een briefje van 100 |
@@ -58,6 +58,8 @@ grammar:
       | Det blir 95 kronor. | Dat wordt 95 kronen. |
       | Kan jag betala med kort? | Kan ik met de kaart betalen? |
       | Kan jag få kvittot? | Mag ik het bonnetje? |
+
+      Let op: een *tia* is een **munt**; *tjuga*, *femtiolapp* en *hundralapp* zijn papiergeld (*en lapp* = een briefje). Verwar het Nederlandse *biljet* niet met het Zweedse *en biljett*: dat is een (trein)kaartje.
 
   - id: ordningstal
     title: Rangtelwoorden en datums
@@ -100,11 +102,11 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: tidsprep
         items:
-          - { type: translate, prompt: "Over een uur vertrekt de trein.", answers: ["Om en timme går tåget.", "Tåget går om en timme."], feedback: [{ contains: "i en timme", tip: "Over een tijd (toekomst) = om." }] }
-          - { type: translate, prompt: "Drie dagen geleden kwam ze thuis.", answers: ["För tre dagar sedan kom hon hem.", "Hon kom hem för tre dagar sedan."], feedback: [{ contains: "hemma", tip: "Thuiskomen is een richting: hem." }] }
-          - { type: translate, prompt: "Ik heb hem lang niet gezien.", answers: ["Jag har inte sett honom på länge."], feedback: [{ contains: "i länge", tip: "Na een ontkenning: inte … på länge." }] }
-          - { type: translate, prompt: "Tijdens de vakantie zwommen we elke dag.", answers: ["Under semestern {badade|simmade} vi varje dag."] }
-          - { type: translate, prompt: "Deze zomer gaan we naar Gotland.", answers: ["I sommar ska vi [åka ]till Gotland.", "I sommar åker vi till Gotland.", "Vi {ska åka|åker} till Gotland i sommar."], feedback: [{ contains: "i somras", tip: "i somras is afgelopen zomer. Voor deze (komende) zomer: i sommar." }] }
+          - { type: translate, prompt: "Over een uur vertrekt de trein.", answers: ["Om en timme {går|avgår} tåget.", "Tåget {går|avgår} om en timme."], feedback: [{ contains: "i en timme", tip: "Over een tijd (toekomst) = om." }] }
+          - { type: translate, prompt: "Drie dagen geleden kwam ze thuis.", answers: ["För tre dagar {sedan|sen} kom hon hem.", "Hon kom hem för tre dagar {sedan|sen}."], feedback: [{ contains: "hemma", tip: "Thuiskomen is een richting: hem." }] }
+          - { type: translate, prompt: "Ik heb hem lang niet gezien.", answers: ["Jag har inte {sett|träffat} honom på länge."], feedback: [{ contains: "i länge", tip: "Na een ontkenning: inte … på länge." }] }
+          - { type: translate, prompt: "Tijdens de vakantie zwommen we elke dag.", answers: ["Under semestern {badade|simmade} vi varje dag.", "Vi {badade|simmade} varje dag under semestern."] }
+          - { type: translate, prompt: "Deze zomer gaan we naar Gotland.", answers: ["I sommar ska vi [åka ]till Gotland.", "I sommar åker vi till Gotland.", "Vi {ska åka|ska|åker} till Gotland i sommar."], feedback: [{ contains: "i somras", tip: "i somras is afgelopen zomer. Voor deze (komende) zomer: i sommar." }] }
 
       - id: seizoenen
         title: Welke zomer?
@@ -136,9 +138,9 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: transport
         items:
-          - { type: translate, prompt: "Ik neem de trein naar Stockholm.", answers: ["Jag tar tåget till Stockholm.", "Jag åker tåg till Stockholm."], feedback: [{ match: "Jag tar tåg till Stockholm", tip: "Na ta: bepaalde vorm (tåget)." }] }
+          - { type: translate, prompt: "Ik neem de trein naar Stockholm.", answers: ["Jag tar tåget till Stockholm.", "Jag åker {tåg|med tåget} till Stockholm."], feedback: [{ match: "Jag tar tåg till Stockholm", tip: "Na ta: bepaalde vorm (tåget)." }] }
           - { type: translate, prompt: "Fleur gaat met de bus naar haar werk.", answers: ["Fleur {åker buss|tar bussen|åker med bussen} till {jobbet|arbetet}."], feedback: [{ contains: "går med bussen", tip: "Met een voertuig: åka (of ta bussen). gå = lopen." }] }
-          - { type: translate, prompt: "Hoe laat vertrekt de bus?", answers: ["{När|Hur dags|Vilken tid} går bussen?"], topic: vragen }
+          - { type: translate, prompt: "Hoe laat vertrekt de bus?", answers: ["{När|Hur dags|Vilken tid} {går|avgår} bussen?"], topic: vragen }
           - { type: translate, prompt: "Waar moet ik overstappen?", answers: ["Var ska jag byta?", "Var måste jag byta?"] }
 
       - id: geld
@@ -148,7 +150,7 @@ sections:
         items:
           - type: match
             pairs:
-              - ["en tia", "tien kronen"]
+              - ["en tia", "muntstuk van tien kronen"]
               - ["en tjuga", "briefje van twintig"]
               - ["en hundralapp", "briefje van honderd"]
               - ["ett kvitto", "bonnetje"]
@@ -163,8 +165,8 @@ sections:
         items:
           - { type: gap, topic: raknord, text: "Kaffet kostar ___ kronor. (35)", gaps: [{ answers: ["trettiofem"], feedback: [{ match: "femtrettio", tip: "Het tiental eerst: trettio + fem." }] }] }
           - { type: gap, topic: raknord, text: "Biljetten kostar ___ kronor. (95)", gaps: [{ answers: ["nittiofem"] }] }
-          - { type: gap, topic: raknord, text: "Det blir ___ kronor. (120)", gaps: [{ answers: ["[ett]hundratjugo"] }] }
-          - { type: gap, topic: raknord, text: "Boken kostar ___ kronor. (249)", gaps: [{ answers: ["tvåhundrafyrtionio", "två hundra fyrtionio"] }] }
+          - { type: gap, topic: raknord, text: "Det blir ___ kronor. (120)", gaps: [{ answers: ["[ett]hundratjugo"], feedback: [{ contains: "hundra ", tip: "Getallen schrijf je in het Zweeds aan elkaar: hundratjugo." }] }] }
+          - { type: gap, topic: raknord, text: "Boken kostar ___ kronor. (249)", gaps: [{ answers: ["tvåhundrafyrtionio"], feedback: [{ contains: "hundra ", tip: "Getallen schrijf je in het Zweeds aan elkaar: tvåhundrafyrtionio." }] }] }
 
       - id: rangtelwoorden
         title: Rangtelwoorden
@@ -225,9 +227,9 @@ sections:
           - { type: truefalse, statement: "Fleur och Bram ska åka till Gotland i sommar.", answer: true }
           - { type: truefalse, statement: "De åker bil till Nynäshamn.", answer: false, tip: "Hoe reizen ze naar Nynäshamn?", correction: { answers: ["De {tar tåget|åker tåg} till Nynäshamn."] } }
           - { type: truefalse, statement: "Färjan går klockan elva.", answer: true }
-          - { type: truefalse, statement: "Resan med färjan tar en timme.", answer: false, tip: "Hoe lang duurt de overtocht?", correction: { answers: ["Resan tar [ungefär ]tre timmar."] } }
-          - { type: truefalse, statement: "De har varit på Gotland förut.", answer: false, tip: "Lees de tweede alinea.", correction: { answers: ["De har aldrig varit på Gotland.", "De har inte varit på Gotland."] } }
-          - { type: truefalse, statement: "Fleur köpte biljetterna för en vecka sedan.", answer: false, tip: "Wanneer kocht ze de kaartjes?", correction: { answers: ["{Fleur|Hon} köpte {biljetterna|dem} för en månad sedan."] } }
+          - { type: truefalse, statement: "Resan med färjan tar en timme.", answer: false, tip: "Hoe lang duurt de overtocht?", correction: { answers: ["Resan [med färjan ]tar [ungefär ]tre timmar."] } }
+          - { type: truefalse, statement: "De har varit på Gotland förut.", answer: false, tip: "Lees de tweede alinea.", correction: { answers: ["De har aldrig varit på Gotland[ förut].", "De har inte varit på Gotland[ förut]."] } }
+          - { type: truefalse, statement: "Fleur köpte biljetterna för en vecka sedan.", answer: false, tip: "Wanneer kocht ze de kaartjes?", correction: { answers: ["{Fleur|Hon} köpte {biljetterna|dem} för en månad {sedan|sen}."] } }
 
       - id: schrijven-reis
         title: "Schrijven: een reisplan"
@@ -249,7 +251,7 @@ sections:
         topic: tidsprep
         shuffle: true
         items:
-          - { type: findError, topic: tidsprep, sentence: "Tåget går i tio minuter.", wrong: [2], answers: ["Tåget går om tio minuter."], tip: "Het gaat over de toekomst: over tien minuten." }
+          - { type: findError, topic: tidsprep, sentence: "Konserten börjar i en halvtimme.", wrong: [2], answers: ["Konserten börjar om en halvtimme."], tip: "Het gaat over de toekomst: over een halfuur." }
           - { type: findError, topic: tidsprep, sentence: "Jag har inte sett honom i länge.", wrong: [5], answers: ["Jag har inte sett honom på länge."], tip: "Kijk naar het voorzetsel na een ontkenning." }
           - { type: findError, topic: transport, sentence: "Bram går buss till jobbet.", wrong: [1], answers: ["Bram åker buss till jobbet."], tip: "Lopen of met een voertuig?" }
           - { type: findError, topic: ordningstal, sentence: "Vi åker hem den 5 Juli.", wrong: [5], answers: ["Vi åker hem den 5 juli."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
@@ -278,7 +280,7 @@ vocab:
   - { sv: "en biljett", nl: "kaartje", def: "biljetten" }
   - { sv: "en station", nl: "station", def: "stationen" }
   - { sv: "en hållplats", nl: "halte", def: "hållplatsen" }
-  - { sv: "ett spår", nl: "spoor, perron", def: "spåret" }
+  - { sv: "ett spår", nl: "spoor", def: "spåret" }
   - { sv: "en färja", nl: "veerboot", def: "färjan" }
   - { sv: "ett flygplan", nl: "vliegtuig", def: "flygplanet" }
   - { sv: "en krona", nl: "kroon (munt)", def: "kronan" }

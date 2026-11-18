@@ -11,6 +11,14 @@ describe('normalize', () => {
     expect(normalize('Nej, jag talar inte finska.')).toBe('nej jag talar inte finska');
   });
   it('houdt å, ä en ö', () => expect(normalize('ÄPPLET')).toBe('äpplet'));
+  it('stelt i dag/idag, sade/sa en lade/la gelijk', () => {
+    expect(normalize('I dag jobbar jag')).toBe(normalize('Idag jobbar jag'));
+    expect(normalize('Vi ses i morgon!')).toBe(normalize('Vi ses imorgon'));
+    expect(normalize('Hon sade nej')).toBe(normalize('Hon sa nej'));
+    expect(normalize('Han lade boken där')).toBe(normalize('Han la boken där'));
+    expect(normalize('i dagens tidning')).toBe('i dagens tidning');
+    expect(gradeText('I går var jag sjuk.', { answers: ['Igår var jag sjuk.'] }).correct).toBe(true);
+  });
 });
 
 describe('expand', () => {

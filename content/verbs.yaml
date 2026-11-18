@@ -16,7 +16,7 @@ verbs:
   - { inf: fråga, nl: vragen, kind: ar, pres: frågar, pret: frågade, sup: frågat, imp: fråga }
   - { inf: svara, nl: antwoorden, kind: ar, pres: svarar, pret: svarade, sup: svarat, imp: svara }
   - { inf: börja, nl: beginnen, kind: ar, pres: börjar, pret: började, sup: börjat, imp: börja }
-  - { inf: sluta, nl: stoppen, kind: ar, pres: slutar, pret: slutade, sup: slutat, imp: sluta }
+  - { inf: sluta, nl: "ophouden, stoppen", kind: ar, pres: slutar, pret: slutade, sup: slutat, imp: sluta }
   - { inf: flytta, nl: verhuizen, kind: ar, pres: flyttar, pret: flyttade, sup: flyttat, imp: flytta }
   - { inf: handla, nl: boodschappen doen, kind: ar, pres: handlar, pret: handlade, sup: handlat, imp: handla }
   - { inf: spela, nl: spelen, kind: ar, pres: spelar, pret: spelade, sup: spelat, imp: spela }
@@ -26,7 +26,7 @@ verbs:
   - { inf: ringa, nl: bellen, kind: er, pres: ringer, pret: ringde, sup: ringt, imp: ring }
   - { inf: stänga, nl: sluiten, kind: er, pres: stänger, pret: stängde, sup: stängt, imp: stäng }
   - { inf: höra, nl: horen, kind: er, pres: hör, pret: hörde, sup: hört, imp: hör }
-  - { inf: köra, nl: rijden, kind: er, pres: kör, pret: körde, sup: kört, imp: kör }
+  - { inf: köra, nl: "(auto)rijden, besturen", kind: er, pres: kör, pret: körde, sup: kört, imp: kör }
   - { inf: glömma, nl: vergeten, kind: er, pres: glömmer, pret: glömde, sup: glömt, imp: glöm }
   - { inf: leva, nl: leven, kind: er, pres: lever, pret: levde, sup: levt, imp: lev }
   - { inf: bygga, nl: bouwen, kind: er, pres: bygger, pret: byggde, sup: byggt, imp: bygg }
@@ -41,8 +41,8 @@ verbs:
   - { inf: tänka, nl: denken, kind: er, pres: tänker, pret: tänkte, sup: tänkt, imp: tänk }
   # kort
   - { inf: bo, nl: wonen, kind: kort, pres: bor, pret: bodde, sup: bott, imp: bo }
-  - { inf: tro, nl: geloven, kind: kort, pres: tror, pret: trodde, sup: trott, imp: tro }
-  - { inf: må, nl: zich voelen, kind: kort, pres: mår, pret: mådde, sup: mått, imp: må }
+  - { inf: tro, nl: "geloven, denken", kind: kort, pres: tror, pret: trodde, sup: trott, imp: tro }
+  - { inf: må, nl: zich voelen, kind: kort, pres: mår, pret: mådde, sup: mått, imp: null }
   # sterk en onregelmatig
   - { inf: vara, nl: zijn, kind: sterk, pres: är, pret: var, sup: varit, imp: var }
   - { inf: ha, nl: hebben, kind: sterk, pres: har, pret: hade, sup: haft, imp: ha }
@@ -55,7 +55,7 @@ verbs:
   - { inf: sova, nl: slapen, kind: sterk, pres: sover, pret: sov, sup: sovit, imp: sov }
   - { inf: skriva, nl: schrijven, kind: sterk, pres: skriver, pret: skrev, sup: skrivit, imp: skriv }
   - { inf: se, nl: zien, kind: sterk, pres: ser, pret: såg, sup: sett, imp: se }
-  - { inf: få, nl: krijgen, kind: sterk, pres: får, pret: fick, sup: fått, imp: null }
+  - { inf: få, nl: "krijgen, mogen", kind: sterk, pres: får, pret: fick, sup: fått, imp: null }
   - { inf: ta, nl: nemen, kind: sterk, pres: tar, pret: tog, sup: tagit, imp: ta }
   - { inf: ge, nl: geven, kind: sterk, pres: ger, pret: gav, sup: [gett, givit], imp: ge }
   - { inf: bli, nl: worden, kind: sterk, pres: blir, pret: blev, sup: blivit, imp: bli }

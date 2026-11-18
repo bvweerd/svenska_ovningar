@@ -18,8 +18,10 @@ grammar:
 
   - id: starka-verb
     title: Sterke en onregelmatige werkwoorden
-    summary: "Veel gewone werkwoorden veranderen van klinker en krijgen **geen uitgang**: *gå → gick, äta → åt, vara → var*. Uit je hoofd leren."
+    summary: "Veel gewone werkwoorden veranderen van klinker en krijgen **geen uitgang**: *gå → gick, äta → åt, vara → var*. Andere zijn op hun eigen manier onregelmatig: *ha → hade, göra → gjorde, säga → sa*. Uit je hoofd leren."
     body: |
+      **Sterke** werkwoorden veranderen van klinker en krijgen in de preteritum geen uitgang (*gick, åt, drack, skrev*). Een paar andere werkwoorden zijn **onregelmatig**: ze krijgen wél een uitgang, maar de stam verandert (*hade, gjorde, sa/sade*).
+
       | Infinitief | Presens | Preteritum | Nederlands |
       |---|---|---|---|
       | vara | är | var | zijn |
@@ -93,7 +95,7 @@ sections:
           - { type: gap, text: "I måndags ___ (köpa) Bram en ny jacka.", gaps: [{ answers: ["köpte"], feedback: [{ match: ["köpade", "köpde"], tip: "De stam köp- eindigt op een p: dan wordt het -te." }] }] }
           - { type: gap, text: "Förra året ___ (bo) vi i Utrecht.", gaps: [{ answers: ["bodde"], feedback: [{ match: ["boade", "bode", "bote"], tip: "bo is een kort werkwoord: -dde." }] }] }
           - { type: gap, text: "Igår kväll ___ (ringa) mormor.", gaps: [{ answers: ["ringde"], feedback: [{ match: ["ringte", "ringade"], tip: "De stam ring- eindigt op een g: dan wordt het -de." }] }] }
-          - { type: gap, text: "Vi ___ (läsa) tidningen till frukost.", gaps: [{ answers: ["läste"], feedback: [{ match: "läsde", tip: "De stam läs- eindigt op een s: dan wordt het -te." }] }] }
+          - { type: gap, text: "Vi ___ (läsa) tidningen vid frukosten.", gaps: [{ answers: ["läste"], feedback: [{ match: "läsde", tip: "De stam läs- eindigt op een s: dan wordt het -te." }] }] }
           - { type: gap, text: "Nils ___ (leka) med hunden hela dagen.", gaps: [{ answers: ["lekte"] }] }
           - { type: gap, text: "Wilma ___ (spela) gitarr igår kväll.", gaps: [{ answers: ["spelade"] }] }
           - { type: gap, text: "Olle ___ (tro) att det var söndag.", gaps: [{ answers: ["trodde"] }] }
@@ -160,15 +162,15 @@ sections:
           - type: steps
             steps:
               - { type: mc, prompt: "Nu ___ Bram i Sverige. (bo)", options: ["bor", "bodde"], answer: 0, shuffle: false, tip: "nu vraagt om de tegenwoordige tijd." }
-              - { type: translate, prompt: "Vroeger woonde hij in Utrecht.", answers: ["{Förut|Tidigare} bodde han i Utrecht.", "Han bodde i Utrecht {förut|tidigare}."] }
+              - { type: translate, prompt: "Vroeger woonde hij in Utrecht.", answers: ["{Förut|Tidigare|Förr} bodde han i Utrecht.", "Han bodde i Utrecht {förut|tidigare|förr}."] }
           - type: steps
             steps:
               - { type: mc, prompt: "För två år sedan ___ Olle 40 år. (fylla)", options: ["fyllde", "fyller"], answer: 0, shuffle: false, tip: "för två år sedan (twee jaar geleden) vraagt om de verleden tijd." }
-              - { type: translate, prompt: "Vorig jaar werd Wilma veertien.", answers: ["Förra året fyllde Wilma fjorton[ år]."], feedback: [{ contains: "blev", tip: "Jarig worden (een leeftijd bereiken) is „fylla … år”: Wilma fyllde fjorton." }] }
+              - { type: translate, prompt: "Vorig jaar werd Wilma veertien.", answers: ["Förra året fyllde Wilma fjorton[ år].", "Wilma fyllde fjorton[ år] förra året."], feedback: [{ contains: "blev", tip: "Jarig worden (een leeftijd bereiken) is „fylla … år”: Wilma fyllde fjorton." }] }
           - type: steps
             steps:
               - { type: mc, prompt: "Varje dag ___ Nils till skolan. (gå)", options: ["går", "gick"], answer: 0, shuffle: false, tip: "varje dag (elke dag) gaat over een gewoonte nu: tegenwoordige tijd." }
-              - { type: translate, prompt: "Vorige week liep Nils naar school.", answers: ["Förra veckan gick Nils till skolan."] }
+              - { type: translate, prompt: "Vorige week liep Nils naar school.", answers: ["Förra veckan gick Nils till skolan.", "Nils gick till skolan förra veckan."] }
 
       - id: possessiv-kiezen
         title: Van wie is het?
@@ -180,7 +182,7 @@ sections:
           - { type: gap, text: "___ äpple är grönt. (mijn)", gaps: [{ answers: ["Mitt"], options: ["Min", "Mitt", "Mina"], feedback: [{ match: "Min", tip: "äpple is een ett-woord: mitt." }] }] }
           - { type: gap, text: "Var är ___ barn? (jouw, meervoud)", gaps: [{ answers: ["dina"], options: ["din", "ditt", "dina"] }] }
           - { type: gap, text: "___ hus är stort. (ons)", gaps: [{ answers: ["Vårt"], options: ["Vår", "Vårt", "Våra"], feedback: [{ match: "Vår", tip: "hus is een ett-woord: vårt." }] }] }
-          - { type: gap, text: "Ingrid är ___ fru. (zijn, van Olle)", gaps: [{ answers: ["hans"], options: ["hans", "hennes", "sin"] }] }
+          - { type: gap, text: "Ingrid är ___ fru. (zijn, van Olle)", gaps: [{ answers: ["hans"], options: ["hans", "hennes", "honom"], feedback: [{ match: "hennes", tip: "Ingrid is de vrouw van Olle, een man: hans." }, { match: "honom", tip: "honom is het lijdend voorwerp (hem zien). Bezit: hans." }] }] }
           - { type: gap, text: "Det är ___ katt. (haar)", gaps: [{ answers: ["hennes"], options: ["hans", "hennes", "henne"], feedback: [{ match: "henne", tip: "henne is het lijdend voorwerp (haar zien). Bezit: hennes." }] }] }
           - { type: gap, text: "___ föräldrar bor i Spanien. (hun)", gaps: [{ answers: ["Deras"], options: ["De", "Dem", "Deras"] }] }
           - { type: gap, text: "Är det här ___ väskor? (jullie)", gaps: [{ answers: ["era"], options: ["er", "ert", "era"] }] }
@@ -229,7 +231,7 @@ sections:
         topic: preteritum
         textTitle: Mormor fyllde nittio
         text: |
-          Förra sommaren hade vi en stor familjefest. Min mormor fyllde nittio år! Hela familjen kom: mina föräldrar, min bror Per med sin fru och deras tre barn, och min moster Karin från Göteborg.
+          Förra sommaren hade vi en stor familjefest. Min mormor fyllde nittio år! Hela familjen kom: mina föräldrar, min bror Per med sin fru och deras tre barn, och min moster Karin, som bor i Göteborg.
 
           Vi firade i mormors trädgård. Olle grillade och barnen lekte. Mormor fick många presenter, men hon tyckte bäst om ett gammalt foto från Wilma. På kvällen sjöng vi och dansade. Det var en fantastisk dag!
         items:
@@ -291,8 +293,8 @@ sections:
           - { type: translate, topic: modala, prompt: "Mijn zoon kan al zwemmen.", answers: ["Min son kan redan simma."] }
           - { type: gap, topic: frekvens, text: "Vi ___ (äta) sällan ute.", gaps: [{ answers: ["äter"] }] }
           - { type: clock, time: "03:50" }
-          - { type: translate, topic: imperativ, prompt: "Bel me morgen!", answers: ["Ring mig {imorgon|i morgon}!"] }
-          - { type: gap, topic: substantiv, text: "Ingrid har en bror. ___ (bror) heter Per.", gaps: [{ answers: ["Brodern"], feedback: [{ match: "Broren", tip: "bror is onregelmatig: brodern." }] }] }
+          - { type: translate, topic: imperativ, prompt: "Bel me morgen!", answers: ["Ring[ till] mig {imorgon|i morgon}!"] }
+          - { type: gap, topic: substantiv, text: "Nils har en hund. ___ (hund) heter Sigge.", gaps: [{ answers: ["Hunden"], feedback: [{ match: "Hundet", tip: "hund is een en-woord: hunden." }] }] }
           - { type: translate, topic: possessiv, prompt: "Hoe heet je zus?", answers: ["Vad heter din syster?"] }
           - { type: gap, topic: preteritum, text: "Förra året ___ (resa) vi till Norge.", gaps: [{ answers: ["reste"] }] }
           - { type: mc, topic: tycka-om, prompt: "Welke zin is goed?", options: ["Mormor tycker om att baka.", "Mormor tycker om baka.", "Mormor tycker att om baka."], answer: 0, tip: "Bij een activiteit: tycker om att + infinitief." }

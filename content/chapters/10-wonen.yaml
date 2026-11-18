@@ -3,7 +3,7 @@ chapter: 10
 grammar:
   - id: subjunktioner
     title: Bijzinnen – eftersom, när, om, innan …
-    summary: "Een bijzin begint met een voegwoord zoals **att, om, när, eftersom, innan, medan, fast, tills**. **För att + infinitief** = om te; **eftersom + bijzin** = omdat."
+    summary: "Een bijzin begint met een voegwoord zoals **att, om, när, eftersom, innan, medan, fastän, tills**. **För att + infinitief** = om te; **eftersom + bijzin** = omdat (ná de hoofdzin kan ook *för att* + bijzin = omdat)."
     body: |
       | Voegwoord | Betekenis | Voorbeeld |
       |---|---|---|
@@ -13,12 +13,16 @@ grammar:
       | eftersom | omdat | Jag stannar hemma **eftersom** jag är sjuk. |
       | innan | voordat | Vi måste handla **innan** affären stänger. |
       | medan | terwijl | Fleur läser **medan** Bram diskar. |
-      | fast | hoewel | Wilma går ut **fast** det regnar. |
+      | fastän | hoewel | Wilma går ut **fastän** det regnar. |
       | tills | totdat | Vänta här **tills** jag kommer tillbaka. |
+
+      In spreektaal hoor je ook *fast*. Dat werkt vaak meer als "maar", en dan volgt er gewone hoofdzinvolgorde: *Jag kommer, **fast** jag har inte så mycket tid.* Leer daarom **fastän** als het voegwoord voor "hoewel".
 
       ### för att of eftersom?
       - **för att + infinitief** = om te (doel): *Fleur går till affären **för att köpa** mjölk.*
       - **eftersom + onderwerp + werkwoord** = omdat (reden): *Fleur går till affären **eftersom hon behöver** mjölk.*
+
+      Let op: **för att + onderwerp + werkwoord** betekent ook *omdat*. *Fleur går till affären **för att hon behöver** mjölk* is gewoon goed Zweeds. Zo'n *för att* (omdat) staat wel altijd **ná** de hoofdzin. Begin je de zin met de reden, dan gebruik je *eftersom*: ***Eftersom** hon behöver mjölk går Fleur till affären.*
 
   - id: bisats-ordfoljd
     title: Woordvolgorde in de bijzin
@@ -96,12 +100,12 @@ sections:
         topic: subjunktioner
         shuffle: true
         items:
-          - { type: gap, text: "Jag stannar hemma ___ jag är sjuk.", gaps: [{ answers: ["eftersom"], options: ["eftersom", "när", "innan", "medan", "fast", "tills"], shuffle: false }] }
-          - { type: gap, text: "Ring mig ___ du kommer fram.", gaps: [{ answers: ["när"], options: ["eftersom", "när", "innan", "medan", "fast", "tills"], shuffle: false }] }
-          - { type: gap, text: "Vi måste handla ___ affären stänger.", gaps: [{ answers: ["innan"], options: ["eftersom", "när", "innan", "medan", "fast", "tills"], shuffle: false }] }
-          - { type: gap, text: "Fleur läser ___ Bram diskar.", gaps: [{ answers: ["medan"], options: ["eftersom", "när", "innan", "medan", "fast", "tills"], shuffle: false }] }
-          - { type: gap, text: "Wilma går ut ___ det regnar.", gaps: [{ answers: ["fast"], options: ["eftersom", "när", "innan", "medan", "fast", "tills"], shuffle: false, feedback: [{ match: "eftersom", tip: "Ze gaat naar buiten ondanks de regen, niet omdat het regent: fast (hoewel)." }] }] }
-          - { type: gap, text: "Vänta här ___ jag kommer tillbaka.", gaps: [{ answers: ["tills"], options: ["eftersom", "när", "innan", "medan", "fast", "tills"], shuffle: false }] }
+          - { type: gap, text: "Jag stannar hemma i dag ___ jag är sjuk.", gaps: [{ answers: ["eftersom"], options: ["eftersom", "innan", "medan", "fastän", "tills"], shuffle: false }] }
+          - { type: gap, text: "Ring mig ___ du har kommit fram.", gaps: [{ answers: ["när"], options: ["eftersom", "när", "innan", "medan", "fastän", "tills"], shuffle: false }] }
+          - { type: gap, text: "Vi måste handla ___ affären stänger.", gaps: [{ answers: ["innan"], options: ["eftersom", "när", "innan", "medan", "fastän", "tills"], shuffle: false }] }
+          - { type: gap, text: "Fleur läser tidningen ___ Bram diskar.", gaps: [{ answers: ["medan"], options: ["eftersom", "innan", "medan", "fastän", "tills"], shuffle: false }] }
+          - { type: gap, text: "Wilma har shorts på sig i dag ___ det bara är fem grader ute.", gaps: [{ answers: ["fastän"], options: ["eftersom", "innan", "medan", "fastän", "tills"], shuffle: false, feedback: [{ match: "eftersom", tip: "Ze draagt een korte broek ondanks de kou, niet omdat het koud is: fastän (hoewel)." }] }] }
+          - { type: gap, text: "Vänta här ___ jag kommer tillbaka.", gaps: [{ answers: ["tills"], options: ["eftersom", "när", "innan", "medan", "fastän", "tills"], shuffle: false }] }
 
       - id: biff-zinsbouw
         title: Inte in de bijzin
@@ -136,13 +140,13 @@ sections:
 
       - id: for-att-eftersom
         title: För att of eftersom?
-        instruction: Kies *för att* (om te) of *eftersom* (omdat).
+        instruction: Kies *för att* (om te) of *eftersom* (omdat). Let op of er een infinitief of een onderwerp + werkwoord volgt.
         topic: subjunktioner
         shuffle: true
         items:
           - { type: gap, text: "Fleur går till affären ___ köpa mjölk.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false, feedback: [{ match: "eftersom", tip: "Na het gat volgt een infinitief (köpa): för att = om te." }] }] }
-          - { type: gap, text: "Fleur går till affären ___ hon behöver mjölk.", gaps: [{ answers: ["eftersom"], options: ["för att", "eftersom"], shuffle: false, feedback: [{ match: "för att", tip: "Na het gat volgt een onderwerp met werkwoord (hon behöver): eftersom = omdat." }] }] }
-          - { type: gap, text: "Vi sparar pengar ___ vi vill köpa ett hus.", gaps: [{ answers: ["eftersom"], options: ["för att", "eftersom"], shuffle: false }] }
+          - { type: gap, text: "___ Fleur behöver mjölk går hon till affären.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (Fleur behöver): dan altijd eftersom. För att (omdat) kan alleen ná de hoofdzin." }] }] }
+          - { type: gap, text: "___ vi vill köpa ett hus sparar vi pengar.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (vi vill): dan altijd eftersom." }] }] }
           - { type: gap, text: "Vi sparar pengar ___ köpa ett hus.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false }] }
 
       - id: sin-of-hans
@@ -157,7 +161,7 @@ sections:
           - { type: gap, text: "Nils letar efter ___ skor.", gaps: [{ answers: ["sina"], options: ["sin", "sitt", "sina"], shuffle: false }] }
           - { type: gap, text: "Fleur och Bram säljer ___ bil.", gaps: [{ answers: ["sin"], options: ["sin", "deras"], shuffle: false, feedback: [{ match: "deras", tip: "Het is hun eigen auto en zij zijn het onderwerp: sin." }] }] }
           - { type: gap, text: "Nils är ledsen. Wilma har tagit ___ cykel.", gaps: [{ answers: ["hans"], options: ["sin", "hans"], shuffle: false, feedback: [{ match: "sin", tip: "Het is de fiets van Nils; Wilma is het onderwerp: hans." }] }] }
-          - { type: gap, text: "Var är Ingrid? Hon är i ___ trädgård.", gaps: [{ answers: ["sin"], options: ["sin", "hennes"], shuffle: false }] }
+          - { type: gap, text: "Ingrid vattnar ___ blommor i trädgården.", gaps: [{ answers: ["sina"], options: ["sin", "sina", "hennes"], shuffle: false, feedback: [{ match: "hennes", tip: "Het zijn Ingrids eigen bloemen en Ingrid is het onderwerp: sina." }, { match: "sin", tip: "blommor is meervoud: sina." }] }] }
 
       - id: sin-vertalen
         title: Vertaal met sin, sitt of sina
@@ -165,7 +169,7 @@ sections:
         topic: sin-sitt-sina
         items:
           - { type: translate, prompt: "Olle zoekt zijn (eigen) sleutels.", answers: ["Olle letar efter sina nycklar."], feedback: [{ contains: "hans nycklar", tip: "Olles eigen sleutels, en Olle is het onderwerp: sina." }, { contains: "sin nycklar", tip: "nycklar is meervoud: sina." }] }
-          - { type: translate, prompt: "Wilma belt haar (eigen) vriendin.", answers: ["Wilma ringer {sin kompis|sin vän|sin väninna}."], feedback: [{ contains: "hennes", tip: "Haar eigen vriendin, en Wilma is het onderwerp: sin." }] }
+          - { type: translate, prompt: "Wilma belt haar (eigen) vriendin.", answers: ["Wilma ringer [till ]{sin kompis|sin vän|sin väninna}."], feedback: [{ contains: "hennes", tip: "Haar eigen vriendin, en Wilma is het onderwerp: sin." }] }
           - { type: translate, prompt: "Ze verkopen hun (eigen) huis.", answers: ["De säljer sitt hus."], feedback: [{ contains: "deras hus", tip: "Hun eigen huis, en zij zijn het onderwerp: sitt." }, { contains: "sin hus", tip: "hus is een ett-woord: sitt." }] }
           - { type: translate, prompt: "Olle en zijn vrouw wonen in Västerås.", answers: ["Olle och hans fru bor i Västerås."], feedback: [{ contains: "sin fru", tip: "Hier hoort de vrouw bij het onderwerp zelf. Dan geen sin: Olle och hans fru." }] }
 
@@ -213,8 +217,8 @@ sections:
           - { type: truefalse, statement: "Lägenheten har tre rum och kök.", answer: true }
           - { type: truefalse, statement: "Vardagsrummet är mörkt.", answer: false, tip: "Waarom is de woonkamer licht?", correction: { answers: ["Vardagsrummet är [stort och ]ljust."] } }
           - { type: truefalse, statement: "Sovrummet ligger bredvid badrummet.", answer: true }
-          - { type: truefalse, statement: "Bram tycker att köket är för stort.", answer: false, tip: "Wat vindt Bram van de keuken?", correction: { answers: ["{Bram|Han} tycker att köket är för litet."] } }
-          - { type: truefalse, statement: "De flyttar i april.", answer: false, tip: "Wanneer verhuizen ze?", correction: { answers: ["De flyttar den första mars.", "De flyttar i mars."] } }
+          - { type: truefalse, statement: "Bram tycker att köket är för stort.", answer: false, tip: "Wat vindt Bram van de keuken?", correction: { answers: ["{Bram|Han} tycker [att ]köket är för litet."] } }
+          - { type: truefalse, statement: "De flyttar i april.", answer: false, tip: "Wanneer verhuizen ze?", correction: { answers: ["De flyttar den {första|1} mars.", "De flyttar i mars."] } }
 
       - id: dialoog-bezichtiging
         title: Een appartement bekijken
@@ -240,7 +244,7 @@ sections:
             prompt: "Vertel hoe je woont: welke kamers er zijn, waar ze liggen, en wat je mooi of minder mooi vindt. Gebruik minstens één bijzin met eftersom, när of att."
             minWords: 35
             require:
-              - { any: ["eftersom", "när", "att", "fast", "om"], label: "Je gebruikt een bijzin (eftersom, när, att …)" }
+              - { any: ["eftersom", "när", "att", "fastän", "fast", "om"], label: "Je gebruikt een bijzin (eftersom, när, att …)" }
               - { any: ["bredvid", "framför", "bakom", "över", "under", "mellan"], label: "Je gebruikt een voorzetsel van plaats (bredvid, bakom …)" }
               - { any: ["kök", "sovrum", "vardagsrum", "badrum", "trädgård", "balkong"], label: "Je noemt kamers" }
             model: "Jag bor i ett radhus i en liten stad. På bottenvåningen finns det ett kök och ett stort vardagsrum. Trädgården ligger bakom huset. På övervåningen finns tre sovrum och ett badrum. Mitt favoritrum är köket, eftersom solen skiner där på morgonen. Jag tycker att badrummet är lite för litet."
@@ -271,7 +275,7 @@ sections:
           - { type: gap, topic: indirekt-tal, text: "Vet du var nyckeln ___? (ligga)", gaps: [{ answers: ["ligger"] }] }
           - { type: gap, topic: tempus, text: "När vi kom hade festen redan ___ (börja).", gaps: [{ answers: ["börjat"] }] }
           - { type: gap, topic: det-finns, text: "I vår lägenhet finns det ___ balkong. (geen)", gaps: [{ answers: ["ingen"], options: ["ingen", "inget", "inga"], shuffle: false }] }
-          - { type: gap, topic: konjunktioner, text: "Vi har inget kök på övervåningen, ___ ett badrum.", gaps: [{ answers: ["utan"], options: ["men", "utan", "eller"], shuffle: false }] }
+          - { type: gap, topic: konjunktioner, text: "Vi bor inte i en lägenhet, ___ i ett radhus.", gaps: [{ answers: ["utan"], options: ["men", "utan", "eller"], shuffle: false, feedback: [{ match: "men", tip: "Het tweede deel vervangt het ontkende eerste deel (niet in een appartement, maar in een rijtjeshuis): utan." }] }] }
           - { type: gap, topic: plural, text: "Huset har fyra ___ (rum).", gaps: [{ answers: ["rum"], feedback: [{ match: ["rummar", "rummen"], tip: "rum is een ett-woord op een medeklinker: geen meervoudsuitgang." }] }] }
           - { type: gap, topic: tidsprep, text: "Vi har bott här ___ fem år.", gaps: [{ answers: ["i"], options: ["om", "i", "på", "för"], shuffle: false }] }
           - { type: order, topic: subjunktioner, start: "Medan Bram lagar mat", tokens: ["Fleur", "dukar", "bordet"], answers: ["Medan Bram lagar mat dukar Fleur bordet."] }
@@ -300,4 +304,4 @@ vocab:
   - { sv: "eftersom", nl: "omdat" }
   - { sv: "medan", nl: "terwijl" }
   - { sv: "innan", nl: "voordat" }
-  - { sv: "fast", nl: "hoewel", alt: ["fastän"] }
+  - { sv: "fastän", nl: "hoewel", alt: ["fast"] }

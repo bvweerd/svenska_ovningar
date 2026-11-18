@@ -3,7 +3,7 @@ chapter: 7
 grammar:
   - id: konjunktioner
     title: Zinnen verbinden – och, men, eller, för, så, utan
-    summary: "Na **och, men, eller, för, så, utan** blijft de woordvolgorde **gewoon** (geen inversie). Na een bijwoord zoals **därför** of **ändå** komt wél inversie."
+    summary: "Na **och, men, eller, för, så, utan** blijft de woordvolgorde **gewoon** (geen inversie). Na een bijwoord zoals **därför** of **ändå** komt wél inversie, en ook na **så** als die een bijzin vooraan herhaalt (*Om det regnar, så stannar jag hemma*)."
     body: |
       Deze voegwoorden verbinden twee hoofdzinnen:
 
@@ -25,6 +25,14 @@ grammar:
       |---|---|
       | Det regnar, **så jag stannar** hemma. | Det regnar. **Därför stannar jag** hemma. |
       | Olle är trött, **men han jobbar** ändå. | Olle är trött. **Ändå jobbar han.** |
+
+      ### så na een bijzin vooraan
+      Begint de zin met een bijzin (*om …, när …, eftersom …*), dan kan er in spreektaal een extra **så** volgen. Die *så* is dan géén voegwoord: hij herhaalt de bijzin op plaats 1, dus komt het werkwoord er **direct** achter:
+
+      - *Om det regnar, **så stannar jag** hemma.* (= *Om det regnar stannar jag hemma.*)
+      - *När vi har ätit, **så går vi** ut.*
+
+      Vergelijk: *Det regnar, **så jag stannar** hemma.* Daar betekent *så* „dus” en blijft de gewone volgorde.
 
   - id: ocksa-heller
     title: Ik ook! Ik ook niet!
@@ -127,10 +135,10 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: konjunktioner
         items:
-          - { type: translate, prompt: "Het is koud, dus ik trek een jas aan.", answers: ["Det är kallt, så jag tar på mig en jacka."], feedback: [{ contains: "så tar jag", tip: "Na het voegwoord så blijft de gewone volgorde: så jag tar …" }] }
-          - { type: translate, prompt: "Ik ga naar huis, want ik ben moe.", answers: ["Jag går hem, för jag är trött."], feedback: [{ contains: "går hemma", tip: "Naar huis is een richting: hem." }] }
-          - { type: translate, prompt: "Het regent. Daarom blijven we binnen.", answers: ["Det regnar. Därför stannar vi inne."], feedback: [{ contains: "därför vi", tip: "därför is een bijwoord: daarna komt eerst het werkwoord." }] }
-          - { type: translate, prompt: "Wil je zwemmen of wandelen?", answers: ["Vill du {bada|simma} eller {vandra|promenera|gå en promenad}?"] }
+          - { type: translate, prompt: "Het is koud, dus ik trek een jas aan.", answers: ["Det är kallt, så jag {tar|sätter} på mig en {jacka|rock}."], feedback: [{ contains: "så tar jag", tip: "Na het voegwoord så blijft de gewone volgorde: så jag tar …" }] }
+          - { type: translate, prompt: "Ik ga naar huis, want ik ben moe.", answers: ["Jag {går|åker} hem, för jag är trött."], feedback: [{ contains: "går hemma", tip: "Naar huis is een richting: hem." }] }
+          - { type: translate, prompt: "Het regent. Daarom blijven we binnen.", answers: ["Det regnar. Därför stannar vi {inne|inomhus}."], feedback: [{ contains: "därför vi", tip: "därför is een bijwoord: daarna komt eerst het werkwoord." }] }
+          - { type: translate, prompt: "Wil je zwemmen of wandelen?", answers: ["Vill du {bada|simma} eller {vandra|promenera|gå en promenad|ta en promenad}?"] }
 
       - id: ik-ook
         title: Ik ook!
@@ -201,7 +209,7 @@ sections:
         topic: konjunktioner
         textTitle: Helg i stugan
         text: |
-          Förra helgen var Fleur och Bram i Olles och Ingrids stuga vid en sjö i Dalarna. På lördagen var det soligt och varmt, så de badade i sjön och plockade blåbär i skogen. Bram ville grilla, men det var eldningsförbud, så de åt sallad i stället.
+          Förra helgen var Fleur och Bram i Olle och Ingrids stuga vid en sjö i Dalarna. På lördagen var det soligt och varmt, så de badade i sjön och plockade blåbär i skogen. Bram ville grilla, men det var eldningsförbud, så de åt sallad i stället.
 
           På söndagen regnade det hela dagen. Olle och Bram spelade kort, men Fleur och Ingrid tog på sig regnkläder och gick en lång promenad. Fleur älskar regn – men det gör inte Bram!
         items:
@@ -238,7 +246,7 @@ sections:
               - { any: ["för", "så", "men"], label: "Je verbindt zinnen met för, så of men" }
               - { any: ["regnar", "snöar", "blåser", "solen", "varmt", "kallt", "grader", "soligt"], label: "Je beschrijft het weer" }
               - { any: ["sommaren", "vintern", "hösten", "våren", "i sommar", "i vinter"], label: "Je noemt een seizoen" }
-            model: "Jag tycker mest om sommaren, för då är det varmt och ljust länge. Solen skiner ofta och det är ungefär tjugo grader. På sommaren badar jag i sjön och jag läser böcker i trädgården. Vintern är också fin, men det är kallt och mörkt, så jag stannar mest inne."
+            model: "Jag tycker mest om sommaren, för då är det varmt och ljust länge på kvällarna. Solen skiner ofta och det är ungefär tjugo grader. På sommaren badar jag i sjön och jag läser böcker i trädgården. Vintern är också fin, men det är kallt och mörkt, så jag stannar mest inne."
 
       - id: zoek-de-fout
         title: Zoek de fout
