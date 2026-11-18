@@ -414,6 +414,8 @@ export function viewGame(id) {
   let q;
   let endAt;
   let timer;
+  let pending; // de ingeplande volgende vraag na een antwoord
+  let restartAfter = 0;
   let locked;
   const recent = [];
 
@@ -431,6 +433,7 @@ export function viewGame(id) {
   };
 
   const nextQuestion = () => {
+    if (Date.now() >= endAt) return; // tijd is op: de uitslag blijft staan
     let tries = 0;
     do q = game.make();
     while (recent.includes(q.prompt) && tries++ < 10);
@@ -459,18 +462,19 @@ export function viewGame(id) {
     if (i === q.answer) {
       score++;
       buttons[i].classList.add('ok');
-      setTimeout(nextQuestion, 180);
+      pending = setTimeout(nextQuestion, 180);
     } else {
       mistakes.push(q.solution);
       buttons[i].classList.add('bad');
       buttons[q.answer].classList.add('ok');
-      setTimeout(nextQuestion, 900);
+      pending = setTimeout(nextQuestion, 900);
     }
     updateStatus();
   };
 
   const finish = () => {
     clearInterval(timer);
+    clearTimeout(pending);
     q = null;
     const record = saveGame(id, score);
     trackEvent(`spel/${id}/klaar`, `${game.title} · score ${score}`);
@@ -482,7 +486,11 @@ export function viewGame(id) {
         h('button', { type: 'button', class: 'btn primary', onclick: start }, 'Nog een keer (Enter)'),
         h('a', { class: 'btn ghost', href: '#/oefenen/spel' }, 'Andere rondes')),
     );
-    stage.querySelector('.btn.primary').focus();
+    // Even geen nieuwe ronde: een tik of toets die nog voor de laatste vraag bedoeld was, start hem niet.
+    restartAfter = Date.now() + 1000;
+    const again = stage.querySelector('.btn.primary');
+    again.disabled = true;
+    setTimeout(() => { again.disabled = false; again.focus(); }, 1000);
   };
 
   function start() {
@@ -504,7 +512,7 @@ export function viewGame(id) {
     stage,
   );
   onKeys(view, (e) => {
-    if (!q && e.key === 'Enter' && !e.target.matches('a, button, input, textarea, select')) {
+    if (!q && e.key === 'Enter' && Date.now() >= restartAfter && !e.target.matches('a, button, input, textarea, select')) {
       e.preventDefault();
       start();
       return;
