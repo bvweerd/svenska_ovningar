@@ -162,31 +162,40 @@ sections:
         instruction: Vul de juiste vorm van het werkwoord in. De infinitief staat tussen haakjes.
         topic: presens
         items:
-          - type: gap
+          - id: wdrb
+            type: gap
             text: "Fleur ___ (jobba) på ett sjukhus."
             gaps: [{ answers: ["jobbar"] }]
-          - type: gap
+          - id: 89ae
+            type: gap
             text: "Bram ___ (läsa) en tidning."
             gaps: [{ answers: ["läser"], feedback: [{ match: "läsar", tip: "Bij läsa wordt de -a een -er: läser." }] }]
-          - type: gap
+          - id: ash8
+            type: gap
             text: "Vi ___ (bo) i Västerås."
             gaps: [{ answers: ["bor"], feedback: [{ match: "boar", tip: "bo is een kort werkwoord: er komt alleen -r achter." }] }]
-          - type: gap
+          - id: 5m7x
+            type: gap
             text: "Wilma ___ (tala) engelska och lite tyska."
             gaps: [{ answers: ["talar"] }]
-          - type: gap
+          - id: nj49
+            type: gap
             text: "Olle ___ (köpa) bröd varje morgon."
             gaps: [{ answers: ["köper"], feedback: [{ match: "köpar", tip: "Bij köpa wordt de -a een -er: köper." }] }]
-          - type: gap
+          - id: beuv
+            type: gap
             text: "Jag ___ (vara) från Nederländerna."
             gaps: [{ answers: ["är"], feedback: [{ match: ["varar", "var"], tip: "vara is onregelmatig. In presens: jag är, du är, hon är …" }] }]
-          - type: gap
+          - id: 9mhm
+            type: gap
             text: "De ___ (ha) en katt."
             gaps: [{ answers: ["har"] }]
-          - type: gap
+          - id: e3aa
+            type: gap
             text: "Nils ___ (gå) till skolan."
             gaps: [{ answers: ["går"] }]
-          - type: gap
+          - id: npzu
+            type: gap
             text: "Du ___ (heta) Ingrid, eller hur?"
             gaps: [{ answers: ["heter"], feedback: [{ match: "hetar", tip: "Bij heta wordt de -a een -er: heter." }] }]
 
@@ -195,23 +204,28 @@ sections:
         instruction: Kies eerst de juiste presensvorm. Gebruik het werkwoord daarna in een eigen zin.
         topic: presens
         items:
-          - type: steps
+          - id: bgpv
+            type: steps
             steps:
               - { type: mc, prompt: "**stanna** (blijven): Vi ___ hemma idag.", options: ["stannar", "stanner", "stanna"], answer: 0, tip: "stanna krijgt -r erachter: stannar. De infinitief zelf (stanna) is nooit de presens." }
               - { type: translate, prompt: "Maak de zin ontkennend: Vi stannar hemma idag.", answers: ["Vi stannar inte hemma {idag|i dag}."], topic: inte }
-          - type: steps
+          - id: vfcd
+            type: steps
             steps:
               - { type: mc, prompt: "**bygga** (bouwen): Grannarna ___ ett nytt hus.", options: ["bygger", "byggar", "bygga"], answer: 0, tip: "Bij bygga wordt de -a een -er: bygger." }
               - { type: translate, prompt: "Maak er een ja/nee-vraag van: Grannarna bygger ett nytt hus.", answers: ["Bygger grannarna ett nytt hus?"], topic: vragen }
-          - type: steps
+          - id: k7ff
+            type: steps
             steps:
               - { type: mc, prompt: "**tro** (geloven, denken): Jag ___ det.", options: ["tror", "troar", "troer"], answer: 0, tip: "tro is een kort werkwoord: alleen -r erachter." }
               - { type: translate, prompt: "Vertaal: Ik geloof het niet.", answers: ["Jag tror inte det.", "Jag tror det inte.", "Det tror jag inte."], topic: inte }
-          - type: steps
+          - id: 5shr
+            type: steps
             steps:
               - { type: mc, prompt: "**göra** (doen): Vad ___ du?", options: ["gör", "görar", "göra"], answer: 0, tip: "göra is onregelmatig: de presens is gör." }
               - { type: translate, prompt: "Vertaal: Wat doen jullie vandaag?", answers: ["Vad gör ni {idag|i dag}?"], topic: vragen }
-          - type: steps
+          - id: k7zr
+            type: steps
             steps:
               - { type: mc, prompt: "**flytta** (verhuizen): Vi ___ till Sverige i maj.", options: ["flyttar", "flytter", "flytta"], answer: 0, tip: "flytta krijgt -r erachter: flyttar." }
               - { type: translate, prompt: "Begin de zin met *I maj*: Vi flyttar till Sverige i maj.", answers: ["I maj flyttar vi till Sverige."], topic: v2 }
@@ -221,7 +235,8 @@ sections:
         instruction: Welke zinnen hebben een **goede** woordvolgorde? Kies alle goede antwoorden.
         topic: v2
         items:
-          - type: multi
+          - id: aa2p
+            type: multi
             options:
               - "Idag jobbar jag hemma."
               - "Idag jag jobbar hemma."
@@ -237,37 +252,44 @@ sections:
         instruction: Maak een zin die begint met het gegeven woord. Klik de woorden in de goede volgorde aan.
         topic: v2
         items:
-          - { type: order, start: "På måndag", tokens: ["börjar", "kursen"], answers: ["På måndag börjar kursen."] }
-          - { type: order, start: "I Västerås", tokens: ["bor", "Fleur och Bram", "nu"], answers: ["I Västerås bor Fleur och Bram nu.", "I Västerås bor nu Fleur och Bram."] }
-          - { type: order, start: "Svenska", tokens: ["Bram", "talar", "lite"], answers: ["Svenska talar Bram lite."] }
-          - { type: order, start: "Varje morgon", tokens: ["kaffe", "dricker", "Olle"], answers: ["Varje morgon dricker Olle kaffe."] }
-          - { type: order, start: "Där", tokens: ["Wilma", "går"], answers: ["Där går Wilma."] }
-          - { type: order, start: "Idag", tokens: ["hemma", "Fleur", "jobbar"], answers: ["Idag jobbar Fleur hemma."] }
+          - { id: 2wvz, type: order, start: "På måndag", tokens: ["börjar", "kursen"], answers: ["På måndag börjar kursen."] }
+          - { id: awbj, type: order, start: "I Västerås", tokens: ["bor", "Fleur och Bram", "nu"], answers: ["I Västerås bor Fleur och Bram nu.", "I Västerås bor nu Fleur och Bram."] }
+          - { id: wzdd, type: order, start: "Svenska", tokens: ["Bram", "talar", "lite"], answers: ["Svenska talar Bram lite."] }
+          - { id: e9uj, type: order, start: "Varje morgon", tokens: ["kaffe", "dricker", "Olle"], answers: ["Varje morgon dricker Olle kaffe."] }
+          - { id: 7nzt, type: order, start: "Där", tokens: ["Wilma", "går"], answers: ["Där går Wilma."] }
+          - { id: ak53, type: order, start: "Idag", tokens: ["hemma", "Fleur", "jobbar"], answers: ["Idag jobbar Fleur hemma."] }
 
       - id: pronomen-kiezen
         title: Wie of wat?
         instruction: Kies het juiste persoonlijk voornaamwoord.
         topic: pronomen
         items:
-          - type: gap
+          - id: v9ax
+            type: gap
             text: "Wilma är femton år. ___ går i nian."
             gaps: [{ answers: ["Hon"], options: ["Hon", "Han", "Den", "Det"] }]
-          - type: gap
+          - id: f8jg
+            type: gap
             text: "Bram och jag kommer från Utrecht. ___ bor i Sverige nu."
             gaps: [{ answers: ["Vi"], options: ["Vi", "Ni", "De"] }]
-          - type: gap
+          - id: da7e
+            type: gap
             text: "Ingrid och Olle har ett hus. ___ är rött."
             gaps: [{ answers: ["Det"], options: ["Det", "Den", "De"], feedback: [{ match: "Den", tip: "hus is een ett-woord (ett hus), dus gebruik je det." }] }]
-          - type: gap
+          - id: d3gh
+            type: gap
             text: "Nils har en hund. ___ heter Sigge."
             gaps: [{ answers: ["Den"], options: ["Den", "Det", "Hon"], feedback: [{ match: "Det", tip: "hund is een en-woord (en hund), dus gebruik je den." }] }]
-          - type: gap
+          - id: j5sn
+            type: gap
             text: "Fleur och Bram, var bor ___?"
             gaps: [{ answers: ["ni"], options: ["ni", "de", "du"], feedback: [{ match: "de", tip: "Je spreekt Fleur en Bram direct aan: dan is het ni (jullie)." }] }]
-          - type: gap
+          - id: srw5
+            type: gap
             text: "Olle är lärare. ___ jobbar på en skola."
             gaps: [{ answers: ["Han"], options: ["Han", "Hon", "Den"] }]
-          - type: gap
+          - id: 8cfk
+            type: gap
             text: "– Vad heter du? – ___ heter Fleur."
             gaps: [{ answers: ["Jag"], options: ["Jag", "Du", "Hon"] }]
 
@@ -277,22 +299,28 @@ sections:
         topic: vragen
         shuffle: true
         items:
-          - type: gap
+          - id: f24v
+            type: gap
             text: "___ heter du? – Jag heter Bram."
             gaps: [{ answers: ["Vad"], options: ["Vad", "Var", "Varifrån", "Vem", "Hur", "Varför"], feedback: [{ match: "Var", tip: "var betekent waar. Hier vraag je wat (je naam) is." }] }]
-          - type: gap
+          - id: ctgc
+            type: gap
             text: "___ bor ni? – Vi bor i Västerås."
             gaps: [{ answers: ["Var"], options: ["Vad", "Var", "Varifrån", "Vem", "Hur", "Varför"], feedback: [{ match: "Vad", tip: "vad betekent wat. Het antwoord is een plaats: waar?" }] }]
-          - type: gap
+          - id: c256
+            type: gap
             text: "___ kommer du? – Från Nederländerna."
             gaps: [{ answers: ["Varifrån"], options: ["Vad", "Var", "Varifrån", "Vem", "Hur", "Varför"] }]
-          - type: gap
+          - id: 4efm
+            type: gap
             text: "___ mår du? – Bra, tack!"
             gaps: [{ answers: ["Hur"], options: ["Vad", "Var", "Varifrån", "Vem", "Hur", "Varför"] }]
-          - type: gap
+          - id: 8f83
+            type: gap
             text: "___ är det? – Det är Ingrid, min granne."
             gaps: [{ answers: ["Vem"], options: ["Vad", "Var", "Varifrån", "Vem", "Hur", "Varför"] }]
-          - type: gap
+          - id: sawm
+            type: gap
             text: "___ bor ni i Sverige? – Fleur jobbar här."
             gaps: [{ answers: ["Varför"], options: ["Vad", "Var", "Varifrån", "Vem", "Hur", "Varför"] }]
 
@@ -301,23 +329,24 @@ sections:
         instruction: Maak van de zin een ja/nee-vraag.
         topic: vragen
         items:
-          - { type: translate, prompt: "Olle har en bil.", answers: ["Har Olle en bil?"] }
-          - { type: translate, prompt: "Ni bor i Göteborg.", answers: ["Bor ni i Göteborg?"] }
-          - { type: translate, prompt: "Wilma är femton år.", answers: ["Är Wilma femton år[ gammal]?"] }
-          - { type: translate, prompt: "Du gillar kaffe.", answers: ["Gillar du kaffe?"] }
-          - { type: translate, prompt: "De kommer från Danmark.", answers: ["Kommer de från Danmark?"] }
+          - { id: qcy3, type: translate, prompt: "Olle har en bil.", answers: ["Har Olle en bil?"] }
+          - { id: 9py6, type: translate, prompt: "Ni bor i Göteborg.", answers: ["Bor ni i Göteborg?"] }
+          - { id: vzgh, type: translate, prompt: "Wilma är femton år.", answers: ["Är Wilma femton år[ gammal]?"] }
+          - { id: jqdf, type: translate, prompt: "Du gillar kaffe.", answers: ["Gillar du kaffe?"] }
+          - { id: dkem, type: translate, prompt: "De kommer från Danmark.", answers: ["Kommer de från Danmark?"] }
 
       - id: ontkennen
         title: Nej, …
         instruction: Geef een ontkennend antwoord op de vraag. Begin met *Nej*.
         topic: inte
         items:
-          - { type: translate, prompt: "Kommer Bram från Belgien?", answers: ["[Nej, ]{han|Bram} kommer inte från Belgien.", "[Nej, ]det gör {han|Bram} inte."] }
-          - { type: translate, prompt: "Bor Ingrid i Stockholm?", answers: ["[Nej, ]{hon|Ingrid} bor inte i Stockholm.", "[Nej, ]det gör {hon|Ingrid} inte."] }
-          - { type: translate, prompt: "Talar ni finska?", answers: ["[Nej, ]vi {talar|pratar} inte finska.", "[Nej, ]det gör vi inte."], feedback: [{ contains: "ni talar inte", tip: "De vraag is aan jullie gesteld (ni). In het antwoord spreek je over jezelf: vi." }] }
-          - { type: translate, prompt: "Är Nils trött?", answers: ["[Nej, ]{han|Nils} är inte trött.", "[Nej, ]det är {han|Nils} inte."] }
-          - { type: translate, prompt: "Jobbar du i en butik?", answers: ["[Nej, ]jag {jobbar|arbetar} inte i en butik.", "[Nej, ]det gör jag inte."], feedback: [{ contains: "du jobbar inte", tip: "Je antwoordt over jezelf: du wordt jag." }] }
-          - type: steps
+          - { id: yq59, type: translate, prompt: "Kommer Bram från Belgien?", answers: ["[Nej, ]{han|Bram} kommer inte från Belgien.", "[Nej, ]det gör {han|Bram} inte."] }
+          - { id: edxw, type: translate, prompt: "Bor Ingrid i Stockholm?", answers: ["[Nej, ]{hon|Ingrid} bor inte i Stockholm.", "[Nej, ]det gör {hon|Ingrid} inte."] }
+          - { id: f8rz, type: translate, prompt: "Talar ni finska?", answers: ["[Nej, ]vi {talar|pratar} inte finska.", "[Nej, ]det gör vi inte."], feedback: [{ contains: "ni talar inte", tip: "De vraag is aan jullie gesteld (ni). In het antwoord spreek je over jezelf: vi." }] }
+          - { id: 839u, type: translate, prompt: "Är Nils trött?", answers: ["[Nej, ]{han|Nils} är inte trött.", "[Nej, ]det är {han|Nils} inte."] }
+          - { id: s6jq, type: translate, prompt: "Jobbar du i en butik?", answers: ["[Nej, ]jag {jobbar|arbetar} inte i en butik.", "[Nej, ]det gör jag inte."], feedback: [{ contains: "du jobbar inte", tip: "Je antwoordt over jezelf: du wordt jag." }] }
+          - id: pv56
+            type: steps
             steps:
               - type: mc
                 prompt: "Waar komt *inte* in deze zin? **Idag jobbar hon … hemma.**"
@@ -333,31 +362,38 @@ sections:
         topic: substantiv
         shuffle: true
         items:
-          - type: steps
+          - id: f3xt
+            type: steps
             steps:
               - { type: mc, prompt: "**bil** (auto)", options: ["en bil", "ett bil"], answer: 0, shuffle: false }
               - { type: gap, text: "en bil → ___ (de auto)", gaps: [{ answers: ["bilen"] }] }
-          - type: steps
+          - id: kczv
+            type: steps
             steps:
               - { type: mc, prompt: "**hus** (huis)", options: ["en hus", "ett hus"], answer: 1, shuffle: false }
               - { type: gap, text: "ett hus → ___ (het huis)", gaps: [{ answers: ["huset"] }] }
-          - type: steps
+          - id: kuyu
+            type: steps
             steps:
               - { type: mc, prompt: "**äpple** (appel)", options: ["en äpple", "ett äpple"], answer: 1, shuffle: false }
               - { type: gap, text: "ett äpple → ___ (de appel)", gaps: [{ answers: ["äpplet"], feedback: [{ match: "äppleet", tip: "äpple eindigt op een klinker: dan komt er alleen -t achter." }] }] }
-          - type: steps
+          - id: hjgb
+            type: steps
             steps:
               - { type: mc, prompt: "**lampa** (lamp)", options: ["en lampa", "ett lampa"], answer: 0, shuffle: false }
               - { type: gap, text: "en lampa → ___ (de lamp)", gaps: [{ answers: ["lampan"], feedback: [{ match: "lampaen", tip: "lampa eindigt op een klinker: dan komt er alleen -n achter." }] }] }
-          - type: steps
+          - id: 5zgg
+            type: steps
             steps:
               - { type: mc, prompt: "**bord** (tafel)", options: ["en bord", "ett bord"], answer: 1, shuffle: false }
               - { type: gap, text: "ett bord → ___ (de tafel)", gaps: [{ answers: ["bordet"] }] }
-          - type: steps
+          - id: xqf9
+            type: steps
             steps:
               - { type: mc, prompt: "**stol** (stoel)", options: ["en stol", "ett stol"], answer: 0, shuffle: false }
               - { type: gap, text: "en stol → ___ (de stoel)", gaps: [{ answers: ["stolen"] }] }
-          - type: steps
+          - id: jqap
+            type: steps
             steps:
               - { type: mc, prompt: "**barn** (kind)", options: ["en barn", "ett barn"], answer: 1, shuffle: false }
               - { type: gap, text: "ett barn → ___ (het kind)", gaps: [{ answers: ["barnet"] }] }
@@ -367,7 +403,8 @@ sections:
         instruction: Welke woorden zijn **ett-woorden**? Kies alle goede antwoorden.
         topic: substantiv
         items:
-          - type: multi
+          - id: 2vvd
+            type: multi
             options: ["hus", "bil", "barn", "äpple", "stol", "bord", "tidning", "kök"]
             answers: [0, 2, 3, 5, 7]
             tip: "Kijk nog eens naar de vorige oefening, of zoek de woorden op in de woordenlijst."
@@ -377,12 +414,12 @@ sections:
         instruction: Vul de bepaalde vorm in van het woord tussen haakjes.
         topic: substantiv
         items:
-          - { type: gap, text: "Nils har en hund. ___ (hund) heter Sigge.", gaps: [{ answers: ["Hunden"] }] }
-          - { type: gap, text: "Ingrid och Olle har ett hus. ___ (hus) ligger i Västerås.", gaps: [{ answers: ["Huset"] }] }
-          - { type: gap, text: "Fleur köper en tidning. Hon läser ___ (tidning) på bussen.", gaps: [{ answers: ["tidningen"] }] }
-          - { type: gap, text: "Där står en stol. ___ (stol) är gammal.", gaps: [{ answers: ["Stolen"] }] }
-          - { type: gap, text: "Nils äter ett äpple. ___ (äpple) är grönt.", gaps: [{ answers: ["Äpplet"] }] }
-          - { type: gap, text: "Var står ___ (lampa)? – På bordet.", gaps: [{ answers: ["lampan"] }] }
+          - { id: fz49, type: gap, text: "Nils har en hund. ___ (hund) heter Sigge.", gaps: [{ answers: ["Hunden"] }] }
+          - { id: wny2, type: gap, text: "Ingrid och Olle har ett hus. ___ (hus) ligger i Västerås.", gaps: [{ answers: ["Huset"] }] }
+          - { id: ggx6, type: gap, text: "Fleur köper en tidning. Hon läser ___ (tidning) på bussen.", gaps: [{ answers: ["tidningen"] }] }
+          - { id: jrbd, type: gap, text: "Där står en stol. ___ (stol) är gammal.", gaps: [{ answers: ["Stolen"] }] }
+          - { id: pb5f, type: gap, text: "Nils äter ett äpple. ___ (äpple) är grönt.", gaps: [{ answers: ["Äpplet"] }] }
+          - { id: n24e, type: gap, text: "Var står ___ (lampa)? – På bordet.", gaps: [{ answers: ["lampan"] }] }
 
       - id: getallen
         title: Getallen
@@ -390,14 +427,14 @@ sections:
         topic: raknord
         shuffle: true
         items:
-          - { type: gap, text: "7 → ___", gaps: [{ answers: ["sju"], feedback: [{ match: "sjutton", tip: "sjutton is 17. Zeven is korter." }] }] }
-          - { type: gap, text: "12 → ___", gaps: [{ answers: ["tolv"] }] }
-          - { type: gap, text: "15 → ___", gaps: [{ answers: ["femton"] }] }
-          - { type: gap, text: "18 → ___", gaps: [{ answers: ["arton"], feedback: [{ match: "åttaton", tip: "18 is een uitzondering: arton, zonder å." }] }] }
-          - { type: gap, text: "20 → ___", gaps: [{ answers: ["tjugo"], feedback: [{ match: "tvåtio", tip: "20 is een uitzondering: tjugo." }] }] }
-          - { type: gap, text: "40 → ___", gaps: [{ answers: ["fyrtio"], feedback: [{ match: "fyratio", tip: "Bijna: in 40 valt de a van fyra weg." }] }] }
-          - { type: gap, text: "34 → ___", gaps: [{ answers: ["trettiofyra"], feedback: [{ match: "fyratrettio", tip: "In het Zweeds komt het tiental eerst: trettio + fyra." }] }] }
-          - { type: gap, text: "11 → ___", gaps: [{ answers: ["elva"] }] }
+          - { id: a6tj, type: gap, text: "7 → ___", gaps: [{ answers: ["sju"], feedback: [{ match: "sjutton", tip: "sjutton is 17. Zeven is korter." }] }] }
+          - { id: yfrc, type: gap, text: "12 → ___", gaps: [{ answers: ["tolv"] }] }
+          - { id: pg4y, type: gap, text: "15 → ___", gaps: [{ answers: ["femton"] }] }
+          - { id: 3scr, type: gap, text: "18 → ___", gaps: [{ answers: ["arton"], feedback: [{ match: "åttaton", tip: "18 is een uitzondering: arton, zonder å." }] }] }
+          - { id: ty66, type: gap, text: "20 → ___", gaps: [{ answers: ["tjugo"], feedback: [{ match: "tvåtio", tip: "20 is een uitzondering: tjugo." }] }] }
+          - { id: 2qct, type: gap, text: "40 → ___", gaps: [{ answers: ["fyrtio"], feedback: [{ match: "fyratio", tip: "Bijna: in 40 valt de a van fyra weg." }] }] }
+          - { id: azkb, type: gap, text: "34 → ___", gaps: [{ answers: ["trettiofyra"], feedback: [{ match: "fyratrettio", tip: "In het Zweeds komt het tiental eerst: trettio + fyra." }] }] }
+          - { id: 43s5, type: gap, text: "11 → ___", gaps: [{ answers: ["elva"] }] }
 
       - id: klokkijken
         title: Hoe laat is het?
@@ -405,15 +442,15 @@ sections:
         topic: klockan
         shuffle: true
         items:
-          - { type: clock, time: "07:30" }
-          - { type: clock, time: "08:55" }
-          - { type: clock, time: "03:15" }
-          - { type: clock, time: "06:40" }
-          - { type: clock, time: "09:00" }
-          - { type: clock, time: "01:35" }
-          - { type: clock, time: "11:10" }
-          - { type: clock, time: "02:45" }
-          - { type: clock, time: "04:25" }
+          - { id: vd3f, type: clock, time: "07:30" }
+          - { id: bxuj, type: clock, time: "08:55" }
+          - { id: yz92, type: clock, time: "03:15" }
+          - { id: gbyw, type: clock, time: "06:40" }
+          - { id: x53h, type: clock, time: "09:00" }
+          - { id: a2x9, type: clock, time: "01:35" }
+          - { id: eeyp, type: clock, time: "11:10" }
+          - { id: wmdk, type: clock, time: "02:45" }
+          - { id: bbpn, type: clock, time: "04:25" }
 
       - id: klok-meerkeuze
         title: Welke tijd hoort erbij?
@@ -421,17 +458,18 @@ sections:
         topic: klockan
         shuffle: true
         items:
-          - { type: mc, prompt: "**halv fyra**", options: ["3.30", "4.30", "4.15"], answer: 0, shuffle: false, tip: "halv + het volgende uur: halv fyra = half vier." }
-          - { type: mc, prompt: "**kvart i sex**", options: ["6.15", "5.45", "6.45"], answer: 1, shuffle: false, tip: "i = voor: een kwartier vóór zes." }
-          - { type: mc, prompt: "**fem i halv tio**", options: ["9.25", "9.35", "10.25"], answer: 0, shuffle: false, tip: "Vijf minuten vóór half tien." }
-          - { type: mc, prompt: "**tjugo över två**", options: ["2.20", "1.40", "2.40"], answer: 0, shuffle: false, tip: "över = over." }
+          - { id: q2zx, type: mc, prompt: "**halv fyra**", options: ["3.30", "4.30", "4.15"], answer: 0, shuffle: false, tip: "halv + het volgende uur: halv fyra = half vier." }
+          - { id: uxeq, type: mc, prompt: "**kvart i sex**", options: ["6.15", "5.45", "6.45"], answer: 1, shuffle: false, tip: "i = voor: een kwartier vóór zes." }
+          - { id: 2q5w, type: mc, prompt: "**fem i halv tio**", options: ["9.25", "9.35", "10.25"], answer: 0, shuffle: false, tip: "Vijf minuten vóór half tien." }
+          - { id: uubw, type: mc, prompt: "**tjugo över två**", options: ["2.20", "1.40", "2.40"], answer: 0, shuffle: false, tip: "över = over." }
 
       - id: begroetingen
         title: Groeten en beleefdheid
         instruction: Koppel de Zweedse uitdrukking aan de Nederlandse betekenis.
         topic: woordenschat
         items:
-          - type: match
+          - id: 8rk7
+            type: match
             pairs:
               - ["Hej!", "Hoi! / Hallo!"]
               - ["Hej då!", "Doei! / Tot ziens!"]
@@ -446,7 +484,8 @@ sections:
         instruction: Zet de zinnen van het gesprek tussen Olle en Bram in de goede volgorde.
         topic: vragen
         items:
-          - type: dialogue
+          - id: yjgk
+            type: dialogue
             lines:
               - "Olle: Hej! Jag heter Olle. Vad heter du?"
               - "Bram: Hej, jag heter Bram."
@@ -466,32 +505,33 @@ sections:
 
           Hemma pratar vi nederländska, men på jobbet talar jag svenska. Vi har inga barn, men vi har en katt. Den heter Pluto. På fritiden springer jag. Bram spelar gitarr.
         items:
-          - { type: truefalse, statement: "Fleur kommer från Sverige.", answer: false, tip: "Kijk naar de eerste zin.", correction: { answers: ["{Fleur|Hon} kommer från Nederländerna.", "{Fleur|Hon} kommer inte från Sverige."] } }
-          - { type: truefalse, statement: "Fleur jobbar på ett sjukhus.", answer: true, tip: "Kijk naar de tweede zin." }
-          - { type: truefalse, statement: "Bram är 31 år.", answer: false, tip: "31 is de leeftijd van Fleur.", correction: { answers: ["{Bram|Han} är 34 år[ gammal]."] } }
-          - { type: truefalse, statement: "Bram jobbar med IT.", answer: true }
-          - { type: truefalse, statement: "Hemma pratar de svenska.", answer: false, tip: "Lees het begin van de tweede alinea.", correction: { answers: ["Hemma {pratar|talar} de nederländska.", "De {pratar|talar} nederländska hemma."], feedback: [{ match: "Hemma de pratar nederländska", tip: "Let op de V2-regel: na Hemma komt eerst het werkwoord." }] } }
-          - { type: truefalse, statement: "Fleur och Bram har en hund.", answer: false, tip: "Welk dier hebben ze?", correction: { answers: ["{Fleur och Bram|De} har en katt.", "{Fleur och Bram|De} har ingen hund."] } }
+          - { id: h9yp, type: truefalse, statement: "Fleur kommer från Sverige.", answer: false, tip: "Kijk naar de eerste zin.", correction: { answers: ["{Fleur|Hon} kommer från Nederländerna.", "{Fleur|Hon} kommer inte från Sverige."] } }
+          - { id: euw8, type: truefalse, statement: "Fleur jobbar på ett sjukhus.", answer: true, tip: "Kijk naar de tweede zin." }
+          - { id: 6twn, type: truefalse, statement: "Bram är 31 år.", answer: false, tip: "31 is de leeftijd van Fleur.", correction: { answers: ["{Bram|Han} är 34 år[ gammal]."] } }
+          - { id: djx9, type: truefalse, statement: "Bram jobbar med IT.", answer: true }
+          - { id: d33z, type: truefalse, statement: "Hemma pratar de svenska.", answer: false, tip: "Lees het begin van de tweede alinea.", correction: { answers: ["Hemma {pratar|talar} de nederländska.", "De {pratar|talar} nederländska hemma."], feedback: [{ match: "Hemma de pratar nederländska", tip: "Let op de V2-regel: na Hemma komt eerst het werkwoord." }] } }
+          - { id: asbb, type: truefalse, statement: "Fleur och Bram har en hund.", answer: false, tip: "Welk dier hebben ze?", correction: { answers: ["{Fleur och Bram|De} har en katt.", "{Fleur och Bram|De} har ingen hund."] } }
 
       - id: vertalen
         title: Vertaal
         instruction: Vertaal de zin naar het Zweeds.
         topic: v2
         items:
-          - { type: translate, prompt: "Ik heet Bram.", answers: ["Jag heter Bram."] }
-          - { type: translate, prompt: "Wij wonen in Zweden.", answers: ["Vi bor i Sverige."] }
-          - { type: translate, prompt: "Spreek jij Zweeds?", answers: ["{Talar|Pratar|Kan} du svenska?"], topic: vragen }
-          - { type: translate, prompt: "Vandaag werkt Fleur thuis.", answers: ["{Idag|I dag} {jobbar|arbetar} Fleur hemma.", "Fleur {jobbar|arbetar} hemma {idag|i dag}."] }
-          - { type: translate, prompt: "Het huis ligt in Västerås.", answers: ["Huset ligger i Västerås."], topic: substantiv }
-          - { type: translate, prompt: "Hoe gaat het met je?", answers: ["Hur mår du?", "Hur är det[ med dig]?"], topic: vragen }
-          - { type: translate, prompt: "Nils spreekt geen Fins.", answers: ["Nils {talar|pratar|kan} inte finska."], topic: inte }
+          - { id: dsge, type: translate, prompt: "Ik heet Bram.", answers: ["Jag heter Bram."] }
+          - { id: v34n, type: translate, prompt: "Wij wonen in Zweden.", answers: ["Vi bor i Sverige."] }
+          - { id: drhy, type: translate, prompt: "Spreek jij Zweeds?", answers: ["{Talar|Pratar|Kan} du svenska?"], topic: vragen }
+          - { id: cwp8, type: translate, prompt: "Vandaag werkt Fleur thuis.", answers: ["{Idag|I dag} {jobbar|arbetar} Fleur hemma.", "Fleur {jobbar|arbetar} hemma {idag|i dag}."] }
+          - { id: ma35, type: translate, prompt: "Het huis ligt in Västerås.", answers: ["Huset ligger i Västerås."], topic: substantiv }
+          - { id: g8tm, type: translate, prompt: "Hoe gaat het met je?", answers: ["Hur mår du?", "Hur är det[ med dig]?"], topic: vragen }
+          - { id: 93zb, type: translate, prompt: "Nils spreekt geen Fins.", answers: ["Nils {talar|pratar|kan} inte finska."], topic: inte }
 
       - id: schrijven-voorstellen
         title: "Schrijven: stel jezelf voor"
         instruction: Schrijf een korte tekst over jezelf.
         topic: presens
         items:
-          - type: free
+          - id: sbrx
+            type: free
             prompt: "Vertel hoe je heet, waar je vandaan komt, waar je woont, welke talen je spreekt en wat je werk is."
             minWords: 25
             require:
@@ -507,12 +547,12 @@ sections:
         topic: v2
         shuffle: true
         items:
-          - { type: findError, topic: v2, sentence: "Idag jag jobbar hemma.", wrong: [1, 2], answers: ["Idag jobbar jag hemma."], tip: "Kijk naar de woordvolgorde: wat staat er op plaats 2?" }
-          - { type: findError, topic: presens, sentence: "Bram läsar en tidning.", wrong: [1], answers: ["Bram läser en tidning."], tip: "Kijk naar de werkwoorden." }
-          - { type: findError, topic: inte, sentence: "Jag talar finska inte.", wrong: [2, 3], answers: ["Jag talar inte finska."], tip: "Kijk waar inte staat." }
-          - { type: findError, topic: substantiv, sentence: "Vi har ett hund.", wrong: [2], answers: ["Vi har en hund."], tip: "Is hund een en- of een ett-woord?" }
-          - { type: findError, topic: vragen, sentence: "Var heter du?", wrong: [0], answers: ["Vad heter du?"], tip: "Kijk naar het vraagwoord." }
-          - { type: findError, topic: pronomen, sentence: "Vi har ett hus. Den ligger i Västerås.", wrong: [4], answers: ["Vi har ett hus. Det ligger i Västerås."], tip: "Welk voornaamwoord hoort bij een ett-woord?" }
+          - { id: 6r5v, type: findError, topic: v2, sentence: "Idag jag jobbar hemma.", wrong: [1, 2], answers: ["Idag jobbar jag hemma."], tip: "Kijk naar de woordvolgorde: wat staat er op plaats 2?" }
+          - { id: ewrt, type: findError, topic: presens, sentence: "Bram läsar en tidning.", wrong: [1], answers: ["Bram läser en tidning."], tip: "Kijk naar de werkwoorden." }
+          - { id: 6dtu, type: findError, topic: inte, sentence: "Jag talar finska inte.", wrong: [2, 3], answers: ["Jag talar inte finska."], tip: "Kijk waar inte staat." }
+          - { id: wfm8, type: findError, topic: substantiv, sentence: "Vi har ett hund.", wrong: [2], answers: ["Vi har en hund."], tip: "Is hund een en- of een ett-woord?" }
+          - { id: mj95, type: findError, topic: vragen, sentence: "Var heter du?", wrong: [0], answers: ["Vad heter du?"], tip: "Kijk naar het vraagwoord." }
+          - { id: 7xxf, type: findError, topic: pronomen, sentence: "Vi har ett hus. Den ligger i Västerås.", wrong: [4], answers: ["Vi har ett hus. Det ligger i Västerås."], tip: "Welk voornaamwoord hoort bij een ett-woord?" }
 
 vocab:
   - { sv: "en bil", nl: "een auto", def: "bilen" }

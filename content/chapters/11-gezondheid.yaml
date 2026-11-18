@@ -110,11 +110,11 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: positionsverb
         items:
-          - { type: translate, prompt: "Ik zit te lezen.", answers: ["Jag sitter och läser."], feedback: [{ contains: "sitter att", tip: "Het Zweeds gebruikt och: sitter och läser." }, { contains: "sitter och läsa", tip: "Beide werkwoorden in dezelfde vorm: sitter och läser." }] }
-          - { type: translate, prompt: "Ze staat af te wassen.", answers: ["Hon står och diskar."] }
-          - { type: translate, prompt: "Nils ligt te slapen.", answers: ["Nils ligger och sover."] }
-          - { type: translate, prompt: "Olle zat tv te kijken.", answers: ["Olle satt och {tittade|såg} på {tv|teve}."], feedback: [{ contains: "satt och tittar", tip: "Beide werkwoorden in dezelfde tijd: satt och tittade." }] }
-          - { type: translate, prompt: "Wij liepen te praten.", answers: ["Vi gick och pratade."], feedback: [{ contains: "gick och pratar", tip: "Beide werkwoorden in dezelfde tijd: gick och pratade." }] }
+          - { id: xpay, type: translate, prompt: "Ik zit te lezen.", answers: ["Jag sitter och läser."], feedback: [{ contains: "sitter att", tip: "Het Zweeds gebruikt och: sitter och läser." }, { contains: "sitter och läsa", tip: "Beide werkwoorden in dezelfde vorm: sitter och läser." }] }
+          - { id: xqwa, type: translate, prompt: "Ze staat af te wassen.", answers: ["Hon står och diskar."] }
+          - { id: kwgt, type: translate, prompt: "Nils ligt te slapen.", answers: ["Nils ligger och sover."] }
+          - { id: vx9b, type: translate, prompt: "Olle zat tv te kijken.", answers: ["Olle satt och {tittade|såg} på {tv|teve}."], feedback: [{ contains: "satt och tittar", tip: "Beide werkwoorden in dezelfde tijd: satt och tittade." }] }
+          - { id: t5qy, type: translate, prompt: "Wij liepen te praten.", answers: ["Vi gick och pratade."], feedback: [{ contains: "gick och pratar", tip: "Beide werkwoorden in dezelfde tijd: gick och pratade." }] }
 
       - id: ligt-of-staat
         title: Ligt, staat, hangt of zit het?
@@ -122,32 +122,36 @@ sections:
         topic: positionsverb
         shuffle: true
         items:
-          - { type: gap, text: "Boken ___ på bordet.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
-          - { type: gap, text: "Vasen ___ på bordet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false, feedback: [{ match: "ligger", tip: "Een vaas staat rechtop: står." }] }] }
-          - { type: gap, text: "Tavlan ___ på väggen.", gaps: [{ answers: ["hänger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
-          - { type: gap, text: "Nyckeln ___ i dörren.", gaps: [{ answers: ["sitter"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false, feedback: [{ match: ["står", "hänger"], tip: "Iets wat vastzit (een sleutel in het slot): sitter." }] }] }
-          - { type: gap, text: "Mjölken ___ i kylskåpet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false, feedback: [{ match: "ligger", tip: "Een pak melk staat rechtop: står." }] }] }
-          - { type: gap, text: "Telefonen ___ på golvet.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
-          - { type: gap, text: "Jackan ___ i hallen.", gaps: [{ answers: ["hänger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
+          - { id: nb5h, type: gap, text: "Boken ___ på bordet.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
+          - { id: peqh, type: gap, text: "Vasen ___ på bordet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false, feedback: [{ match: "ligger", tip: "Een vaas staat rechtop: står." }] }] }
+          - { id: ybsh, type: gap, text: "Tavlan ___ på väggen.", gaps: [{ answers: ["hänger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
+          - { id: 7w54, type: gap, text: "Nyckeln ___ i dörren.", gaps: [{ answers: ["sitter"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false, feedback: [{ match: ["står", "hänger"], tip: "Iets wat vastzit (een sleutel in het slot): sitter." }] }] }
+          - { id: q3x7, type: gap, text: "Mjölken ___ i kylskåpet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false, feedback: [{ match: "ligger", tip: "Een pak melk staat rechtop: står." }] }] }
+          - { id: wjk9, type: gap, text: "Telefonen ___ på golvet.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
+          - { id: k529, type: gap, text: "Jackan ___ i hallen.", gaps: [{ answers: ["hänger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
 
       - id: leggen-en-liggen
         title: Leggen en liggen
         instruction: Kies eerst wat iemand doet. Vul daarna in waar het nu is.
         topic: placera
         items:
-          - type: steps
+          - id: cq2q
+            type: steps
             steps:
               - { type: mc, prompt: "Fleur ___ vasen på bordet.", options: ["ställer", "står"], answer: 0, shuffle: false, tip: "Fleur zet de vaas neer (beweging): ställer." }
               - { type: gap, text: "Nu ___ vasen på bordet.", gaps: [{ answers: ["står"], feedback: [{ match: "ställer", tip: "Nu gaat het om waar de vaas is (resultaat): står." }] }] }
-          - type: steps
+          - id: rwp3
+            type: steps
             steps:
               - { type: mc, prompt: "Bram ___ boken på bordet.", options: ["lägger", "ligger"], answer: 0, shuffle: false, tip: "Bram legt het boek neer (beweging): lägger." }
               - { type: gap, text: "Nu ___ boken på bordet.", gaps: [{ answers: ["ligger"], feedback: [{ match: "lägger", tip: "Nu gaat het om waar het boek is (resultaat): ligger." }] }] }
-          - type: steps
+          - id: 6uuu
+            type: steps
             steps:
               - { type: mc, prompt: "Nils ___ sig på stolen.", options: ["sätter", "sitter"], answer: 0, shuffle: false, tip: "Gaan zitten (beweging) = sätta sig." }
               - { type: gap, text: "Nu ___ han på stolen.", gaps: [{ answers: ["sitter"], feedback: [{ match: "sätter", tip: "Nu gaat het om waar hij is (resultaat): sitter." }] }] }
-          - type: steps
+          - id: mbja
+            type: steps
             steps:
               - { type: mc, prompt: "Ingrid ___ sig i sängen.", options: ["lägger", "ligger"], answer: 0, shuffle: false, tip: "Gaan liggen (beweging) = lägga sig." }
               - { type: gap, text: "Nu ___ hon i sängen och läser.", gaps: [{ answers: ["ligger"] }] }
@@ -158,17 +162,18 @@ sections:
         topic: placera
         shuffle: true
         items:
-          - { type: gap, text: "___ (lägga) boken på bordet!", gaps: [{ answers: ["Lägg"] }] }
-          - { type: gap, text: "___ (ställa) cykeln där!", gaps: [{ answers: ["Ställ"] }] }
-          - { type: gap, text: "___ (sätta) dig, är du snäll!", gaps: [{ answers: ["Sätt"], feedback: [{ match: ["Sitt", "Sitta"], tip: "Gaan zitten (beweging) = sätta sig: Sätt dig!" }] }] }
-          - { type: gap, text: "___ (hänga) jackan i hallen!", gaps: [{ answers: ["Häng"] }] }
+          - { id: yayy, type: gap, text: "___ (lägga) boken på bordet!", gaps: [{ answers: ["Lägg"] }] }
+          - { id: rckw, type: gap, text: "___ (ställa) cykeln där!", gaps: [{ answers: ["Ställ"] }] }
+          - { id: 86hz, type: gap, text: "___ (sätta) dig, är du snäll!", gaps: [{ answers: ["Sätt"], feedback: [{ match: ["Sitt", "Sitta"], tip: "Gaan zitten (beweging) = sätta sig: Sätt dig!" }] }] }
+          - { id: eg6y, type: gap, text: "___ (hänga) jackan i hallen!", gaps: [{ answers: ["Häng"] }] }
 
       - id: lichaam-koppelen
         title: Het lichaam
         instruction: Koppel het Zweedse woord aan de betekenis.
         topic: kroppen
         items:
-          - type: match
+          - id: qebh
+            type: match
             pairs:
               - ["ett huvud", "een hoofd"]
               - ["ett öga", "een oog"]
@@ -184,7 +189,8 @@ sections:
         instruction: Vul het meervoud in. Veel van deze woorden zijn onregelmatig.
         topic: kroppen
         items:
-          - type: table
+          - id: kfr4
+            type: table
             columns: ["Enkelvoud", "Meervoud"]
             rows:
               - ["ett öga", { answers: ["ögon"], feedback: [{ match: ["ögan", "ögor"], tip: "öga is onregelmatig: ögon." }] }]
@@ -201,11 +207,11 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: kroppen
         items:
-          - { type: translate, prompt: "Ik heb hoofdpijn.", answers: ["Jag har ont i huvudet.", "Jag har huvudvärk."], feedback: [{ match: "Jag har ont i huvud", tip: "Na ont i: bepaalde vorm (huvudet)." }] }
-          - { type: translate, prompt: "Mijn rug doet pijn.", answers: ["Jag har ont i ryggen.", "Det gör ont i ryggen.", "{Min rygg|Ryggen} gör ont."] }
-          - { type: translate, prompt: "Nils heeft buikpijn.", answers: ["Nils har {ont i magen|magont|magvärk}."] }
-          - { type: translate, prompt: "Heb je keelpijn?", answers: ["Har du ont i halsen?"], topic: vragen }
-          - { type: translate, prompt: "Mijn voeten doen pijn.", answers: ["Jag har ont i fötterna.", "Det gör ont i fötterna.", "{Mina fötter|Fötterna} gör ont."], feedback: [{ contains: "fotarna", tip: "fot – fötter – fötterna." }] }
+          - { id: f54d, type: translate, prompt: "Ik heb hoofdpijn.", answers: ["Jag har ont i huvudet.", "Jag har huvudvärk."], feedback: [{ match: "Jag har ont i huvud", tip: "Na ont i: bepaalde vorm (huvudet)." }] }
+          - { id: 7uuw, type: translate, prompt: "Mijn rug doet pijn.", answers: ["Jag har ont i ryggen.", "Det gör ont i ryggen.", "{Min rygg|Ryggen} gör ont."] }
+          - { id: 2wqb, type: translate, prompt: "Nils heeft buikpijn.", answers: ["Nils har {ont i magen|magont|magvärk}."] }
+          - { id: ug9y, type: translate, prompt: "Heb je keelpijn?", answers: ["Har du ont i halsen?"], topic: vragen }
+          - { id: aqxw, type: translate, prompt: "Mijn voeten doen pijn.", answers: ["Jag har ont i fötterna.", "Det gör ont i fötterna.", "{Mina fötter|Fötterna} gör ont."], feedback: [{ contains: "fotarna", tip: "fot – fötter – fötterna." }] }
 
       - id: wederkerend
         title: Mig, dig, sig …
@@ -213,13 +219,13 @@ sections:
         topic: reflexiv
         shuffle: true
         items:
-          - { type: gap, text: "Jag känner ___ sjuk idag.", gaps: [{ answers: ["mig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
-          - { type: gap, text: "Nils, skynda ___! Bussen går snart.", gaps: [{ answers: ["dig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
-          - { type: gap, text: "Bram lägger ___ tidigt ikväll.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
-          - { type: gap, text: "Vi måste vila ___ lite.", gaps: [{ answers: ["oss"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
-          - { type: gap, text: "När gifte ni ___?", gaps: [{ answers: ["er"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
-          - { type: gap, text: "Barnen klär på ___.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false, feedback: [{ match: "er", tip: "Bij de (zij, meervoud) is het sig. er hoort bij ni." }] }] }
-          - { type: gap, text: "Wilma sätter ___ i soffan.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
+          - { id: cmvx, type: gap, text: "Jag känner ___ sjuk idag.", gaps: [{ answers: ["mig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
+          - { id: mud7, type: gap, text: "Nils, skynda ___! Bussen går snart.", gaps: [{ answers: ["dig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
+          - { id: mcya, type: gap, text: "Bram lägger ___ tidigt ikväll.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
+          - { id: c2rq, type: gap, text: "Vi måste vila ___ lite.", gaps: [{ answers: ["oss"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
+          - { id: q682, type: gap, text: "När gifte ni ___?", gaps: [{ answers: ["er"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
+          - { id: 5hb9, type: gap, text: "Barnen klär på ___.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false, feedback: [{ match: "er", tip: "Bij de (zij, meervoud) is het sig. er hoort bij ni." }] }] }
+          - { id: vehf, type: gap, text: "Wilma sätter ___ i soffan.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
 
       - id: lezen-rug
         title: "Lezen: Olle heeft rugpijn"
@@ -231,19 +237,20 @@ sections:
 
           Han fick tabletter mot smärtan och läkaren sa att han skulle vila sig och inte lyfta tunga saker på två veckor. Nu ligger Olle i soffan och läser, men han tycker att det är tråkigt!
         items:
-          - { type: truefalse, statement: "Olle har ont i huvudet.", answer: false, tip: "Waar heeft hij pijn?", correction: { answers: ["{Olle|Han} har ont i ryggen."] } }
-          - { type: truefalse, statement: "Olle fick en tid på onsdagen.", answer: true }
-          - { type: truefalse, statement: "Läkaren sa att det var farligt.", answer: false, tip: "Wat zei de arts?", correction: { answers: ["{Läkaren|Hon|Han} sa att det inte var [något ]farligt."], feedback: [{ contains: "det var inte", tip: "In de bijzin staat inte vóór het werkwoord: att det inte var farligt." }] } }
-          - { type: truefalse, statement: "Olle ska vila sig.", answer: true }
-          - { type: truefalse, statement: "Olle får lyfta tunga saker.", answer: false, tip: "Wat zei de arts over tillen?", correction: { answers: ["{Olle|Han} får inte lyfta tunga saker[ på två veckor].", "{Olle|Han} ska inte lyfta tunga saker[ på två veckor]."] } }
-          - { type: truefalse, statement: "Olle tycker att det är roligt att ligga i soffan.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["{Olle|Han} tycker [att ]det är tråkigt[ att ligga i soffan]."] } }
+          - { id: 2zvb, type: truefalse, statement: "Olle har ont i huvudet.", answer: false, tip: "Waar heeft hij pijn?", correction: { answers: ["{Olle|Han} har ont i ryggen."] } }
+          - { id: gb85, type: truefalse, statement: "Olle fick en tid på onsdagen.", answer: true }
+          - { id: d8gx, type: truefalse, statement: "Läkaren sa att det var farligt.", answer: false, tip: "Wat zei de arts?", correction: { answers: ["{Läkaren|Hon|Han} sa att det inte var [något ]farligt."], feedback: [{ contains: "det var inte", tip: "In de bijzin staat inte vóór het werkwoord: att det inte var farligt." }] } }
+          - { id: knga, type: truefalse, statement: "Olle ska vila sig.", answer: true }
+          - { id: t8uk, type: truefalse, statement: "Olle får lyfta tunga saker.", answer: false, tip: "Wat zei de arts over tillen?", correction: { answers: ["{Olle|Han} får inte lyfta tunga saker[ på två veckor].", "{Olle|Han} ska inte lyfta tunga saker[ på två veckor]."] } }
+          - { id: u86b, type: truefalse, statement: "Olle tycker att det är roligt att ligga i soffan.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["{Olle|Han} tycker [att ]det är tråkigt[ att ligga i soffan]."] } }
 
       - id: dialoog-dokter
         title: Bij de dokter
         instruction: Zet het gesprek in de goede volgorde.
         topic: kroppen
         items:
-          - type: dialogue
+          - id: s3qk
+            type: dialogue
             lines:
               - "Läkaren: Välkommen in. Vad kan jag hjälpa dig med?"
               - "Fleur: Jag har haft ont i halsen i tre dagar och jag känner mig så trött."
@@ -258,7 +265,8 @@ sections:
         instruction: Je bent ziek. Schrijf een berichtje aan je leidinggevende of docent.
         topic: reflexiv
         items:
-          - type: free
+          - id: 4cd6
+            type: free
             prompt: "Zeg dat je ziek bent, wat je klachten zijn, en wanneer je denkt terug te zijn."
             minWords: 25
             require:
@@ -273,11 +281,11 @@ sections:
         topic: positionsverb
         shuffle: true
         items:
-          - { type: findError, topic: positionsverb, sentence: "Jag sitter och läsa.", wrong: [3], answers: ["Jag sitter och läser."], tip: "Beide werkwoorden in dezelfde vorm." }
-          - { type: findError, topic: positionsverb, sentence: "Boken står på bordet.", wrong: [1], answers: ["Boken ligger på bordet."], tip: "Het boek ligt plat." }
-          - { type: findError, topic: kroppen, sentence: "Jag har ont i huvud.", wrong: [4], answers: ["Jag har ont i huvudet."], tip: "Welke vorm komt er na ont i?" }
-          - { type: findError, topic: reflexiv, sentence: "Bram lägger honom tidigt.", wrong: [2], answers: ["Bram lägger sig tidigt."], tip: "Bram gaat zelf naar bed." }
-          - { type: findError, topic: placera, sentence: "Sitt dig, är du snäll!", wrong: [0], answers: ["Sätt dig, är du snäll!"], tip: "Gaan zitten is een beweging." }
+          - { id: vyvb, type: findError, topic: positionsverb, sentence: "Jag sitter och läsa.", wrong: [3], answers: ["Jag sitter och läser."], tip: "Beide werkwoorden in dezelfde vorm." }
+          - { id: vruw, type: findError, topic: positionsverb, sentence: "Boken står på bordet.", wrong: [1], answers: ["Boken ligger på bordet."], tip: "Het boek ligt plat." }
+          - { id: j546, type: findError, topic: kroppen, sentence: "Jag har ont i huvud.", wrong: [4], answers: ["Jag har ont i huvudet."], tip: "Welke vorm komt er na ont i?" }
+          - { id: w7d8, type: findError, topic: reflexiv, sentence: "Bram lägger honom tidigt.", wrong: [2], answers: ["Bram lägger sig tidigt."], tip: "Bram gaat zelf naar bed." }
+          - { id: x39c, type: findError, topic: placera, sentence: "Sitt dig, är du snäll!", wrong: [0], answers: ["Sätt dig, är du snäll!"], tip: "Gaan zitten is een beweging." }
 
   - id: herhaling
     title: Herhaling
@@ -288,16 +296,16 @@ sections:
         instruction: Beantwoord de vragen. Ze gaan over hoofdstuk 1 tot en met 11 door elkaar.
         shuffle: true
         items:
-          - { type: gap, topic: positionsverb, text: "När jag kom hem ___ Bram och lagade mat.", gaps: [{ answers: ["stod"], options: ["står", "stod", "ställde"], shuffle: false, feedback: [{ match: "står", tip: "Het verhaal speelt in het verleden: stod." }] }] }
-          - { type: translate, topic: bisats-ordfoljd, prompt: "Ik blijf thuis omdat ik me niet goed voel.", answers: ["Jag stannar hemma {eftersom|för att} jag inte mår bra."], feedback: [{ contains: "jag mår inte", tip: "In de bijzin staat inte vóór het werkwoord." }] }
-          - { type: gap, topic: sin-sitt-sina, text: "Nils har tappat ___ mössa.", gaps: [{ answers: ["sin"], options: ["sin", "hans", "sitt"], shuffle: false }] }
-          - { type: gap, topic: tidsprep, text: "Fleur har varit sjuk ___ en vecka.", gaps: [{ answers: ["i"], options: ["om", "i", "på", "för"], shuffle: false }] }
-          - { type: gap, topic: indirekt-tal, text: "Läkaren frågar ___ jag har feber.", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false }] }
-          - { type: gap, topic: imperativ, text: "___ (dricka) mycket vatten!", gaps: [{ answers: ["Drick"] }] }
-          - { type: gap, topic: supinum, text: "Jag har ___ (ligga) i sängen hela dagen.", gaps: [{ answers: ["legat"] }] }
-          - { type: translate, topic: tycka-tro-tanka, prompt: "Ik denk dat het griep is.", answers: ["Jag tror [att ]det är {influensa|en influensa|influensan}."], feedback: [{ contains: "tycker att", tip: "Een vermoeden: tror." }] }
-          - { type: gap, topic: plural, text: "Wilma har ont i båda ___ (öra, bepaald meervoud).", gaps: [{ answers: ["öronen"] }] }
-          - { type: mc, topic: det-finns, prompt: "Welke zin is goed?", options: ["Finns det ett apotek här i närheten?", "Är det ett apotek här i närheten?", "Har det ett apotek här i närheten?"], answer: 0, tip: "Is er …? = Finns det …?" }
+          - { id: ykpe, type: gap, topic: positionsverb, text: "När jag kom hem ___ Bram och lagade mat.", gaps: [{ answers: ["stod"], options: ["står", "stod", "ställde"], shuffle: false, feedback: [{ match: "står", tip: "Het verhaal speelt in het verleden: stod." }] }] }
+          - { id: j3qf, type: translate, topic: bisats-ordfoljd, prompt: "Ik blijf thuis omdat ik me niet goed voel.", answers: ["Jag stannar hemma {eftersom|för att} jag inte mår bra."], feedback: [{ contains: "jag mår inte", tip: "In de bijzin staat inte vóór het werkwoord." }] }
+          - { id: cvfy, type: gap, topic: sin-sitt-sina, text: "Nils har tappat ___ mössa.", gaps: [{ answers: ["sin"], options: ["sin", "hans", "sitt"], shuffle: false }] }
+          - { id: p4xj, type: gap, topic: tidsprep, text: "Fleur har varit sjuk ___ en vecka.", gaps: [{ answers: ["i"], options: ["om", "i", "på", "för"], shuffle: false }] }
+          - { id: 9ct5, type: gap, topic: indirekt-tal, text: "Läkaren frågar ___ jag har feber.", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false }] }
+          - { id: q9y8, type: gap, topic: imperativ, text: "___ (dricka) mycket vatten!", gaps: [{ answers: ["Drick"] }] }
+          - { id: und4, type: gap, topic: supinum, text: "Jag har ___ (ligga) i sängen hela dagen.", gaps: [{ answers: ["legat"] }] }
+          - { id: g6hz, type: translate, topic: tycka-tro-tanka, prompt: "Ik denk dat het griep is.", answers: ["Jag tror [att ]det är {influensa|en influensa|influensan}."], feedback: [{ contains: "tycker att", tip: "Een vermoeden: tror." }] }
+          - { id: ht6f, type: gap, topic: plural, text: "Wilma har ont i båda ___ (öra, bepaald meervoud).", gaps: [{ answers: ["öronen"] }] }
+          - { id: zwaw, type: mc, topic: det-finns, prompt: "Welke zin is goed?", options: ["Finns det ett apotek här i närheten?", "Är det ett apotek här i närheten?", "Har det ett apotek här i närheten?"], answer: 0, tip: "Is er …? = Finns det …?" }
 
 vocab:
   - { sv: "en kropp", nl: "een lichaam", def: "kroppen" }

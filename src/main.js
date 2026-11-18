@@ -15,7 +15,7 @@ import { setKnownWords, getInputMode, setInputMode } from './render/tiles.js';
 import { expand } from './check/normalize.js';
 import {
   getResult, chapterProgress, resetProgress, recordItem, runState, startRun, completeRun,
-  weakItems, setLast, getLast, exportProgress, importProgress,
+  weakItems, setLast, getLast, exportProgress, importProgress, migrateToIds,
 } from './progress.js';
 
 const app = document.getElementById('app');
@@ -329,6 +329,7 @@ function progressTools() {
     if (!f) return;
     try {
       importProgress(await f.text());
+      migrateToIds(course);
       status.textContent = 'Voortgang geïmporteerd.';
     } catch (e) {
       status.textContent = `Importeren mislukt: ${e.message}`;
@@ -475,6 +476,8 @@ function knownWords() {
 }
 
 setKnownWords(...knownWords());
+// Oude voortgang (opgeslagen op de plek van een vraag) eenmalig omzetten naar vraag-id's.
+migrateToIds(course);
 const updateMenu = createMenu(course);
 initAnalytics();
 window.addEventListener('hashchange', route);
