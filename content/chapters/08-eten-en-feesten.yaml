@@ -1,0 +1,276 @@
+chapter: 8
+
+grammar:
+  - id: tycka-tro-tanka
+    title: Vinden, denken, geloven – tycka, tro, tänka
+    summary: "**tycka** = vinden (mening), **tro** = denken/geloven (niet zeker), **tänka** = nadenken, denken aan, van plan zijn."
+    body: |
+      Het Nederlandse *denken* en *vinden* heeft in het Zweeds drie vertalingen:
+
+      | Werkwoord | Gebruik | Voorbeeld |
+      |---|---|---|
+      | **tycka** | een **mening** of smaak | Jag **tycker** att filmen är bra. (Ik vind de film goed.) |
+      | **tro** | iets **vermoeden**, niet zeker weten | Jag **tror** att det regnar imorgon. (Ik denk dat het morgen regent.) |
+      | **tänka** | **nadenken**, denken **aan** iets | Jag **tänker** ofta på dig. |
+      | **tänka** + infinitief | van plan zijn | Vi **tänker** åka till Paris. |
+
+      Een handige test: kun je in het Nederlands *vinden* zeggen? Dan is het **tycka**. Kun je *vermoeden* of *verwachten* zeggen? Dan is het **tro**.
+
+      - *Vad **tycker** du om maten?* – Wat vind je van het eten?
+      - ***Tror** du att Olle kommer?* – Denk je dat Olle komt?
+      - *Vad **tänker** du på?* – Waar denk je aan?
+
+      En nog eentje: **tycka om** = houden van (hoofdstuk 3).
+
+  - id: berattande
+    title: Vertellen over vroeger
+    summary: "In een verhaal over toen gebruik je de **preteritum**. Woorden als **då** (toen), **sedan** (daarna) en **när** (toen, als) helpen je verhaal op gang."
+    body: |
+      Vertel je wat er gebeurd is, dan staat het hele verhaal in de **preteritum**:
+
+      *När jag var liten **bodde** vi i ett litet hus. Varje sommar **åkte** vi till mormor. Där **åt** vi jordgubbar och **badade** i sjön.*
+
+      ### Tijdwoorden in een verhaal
+      | Nu (nutid) | In een verhaal over toen (dåtid) |
+      |---|---|
+      | nu | då (toen) |
+      | idag | den dagen |
+      | igår | dagen innan |
+      | imorgon | dagen efter |
+      | i år | det året |
+
+      Andere handige woorden: **först** (eerst), **sedan** (daarna), **efteråt** (achteraf, daarna), **till slut** (uiteindelijk), **när** (toen, wanneer).
+
+      Begint de zin met zo'n woord, dan geldt de V2-regel: ***Sedan åkte** vi hem.*
+
+  - id: det-finns
+    title: Det finns – er is, er zijn
+    summary: "**Det finns** = er is/er zijn. Vraag: **Finns det …?** Ontkenning met **ingen** (en-woord), **inget** (ett-woord), **inga** (meervoud)."
+    body: |
+      Met **det finns** zeg je dat iets bestaat of aanwezig is:
+
+      - **Det finns** en bra restaurang i centrum.
+      - I Västerås **finns det** en stor domkyrka. (inversie)
+      - **Finns det** mjölk i kylskåpet?
+
+      ### Geen: ingen, inget, inga
+      | | Voorbeeld |
+      |---|---|
+      | en-woord | Det finns **ingen** mjölk. |
+      | ett-woord | Det finns **inget** bröd. |
+      | meervoud | Det finns **inga** ägg. |
+
+      *Ingen/inget/inga* gebruik je ook met andere werkwoorden: *Vi har **inga** barn. Jag har **ingen** bil.*
+
+  - id: mat-fraser
+    title: Uit eten en fika
+    summary: "*Jag skulle vilja ha …* (Ik zou graag … willen), *Kan vi få notan?*, *Smaklig måltid!*, *Skål!*, *Tack för maten!*"
+    body: |
+      | Zweeds | Nederlands |
+      |---|---|
+      | Vad får det vara? | Wat mag het zijn? |
+      | Jag skulle vilja ha … | Ik zou graag … willen |
+      | Kan jag få …? | Mag ik …? |
+      | Äter du här eller tar du med? | Eet je hier of neem je het mee? |
+      | Smaklig måltid! | Eet smakelijk! |
+      | Skål! | Proost! |
+      | Det var jättegott! | Het was heel lekker! |
+      | Kan vi få notan? | Mogen we de rekening? |
+      | Tack för maten! | Bedankt voor het eten! |
+
+      **Fika** is een Zweeds begrip: even pauze nemen met koffie (of thee) en iets lekkers, zoals een *kanelbulle*. Je kunt het als werkwoord gebruiken: *Ska vi fika?*
+
+      *Tack för maten* zeg je tegen wie heeft gekookt, ook thuis na elke maaltijd.
+
+sections:
+  - id: oefeningen
+    title: Oefeningen
+    exercises:
+      - id: tycka-tro-tanka-kiezen
+        title: Tycker, tror of tänker?
+        instruction: Kies het werkwoord dat past.
+        topic: tycka-tro-tanka
+        shuffle: true
+        items:
+          - { type: gap, text: "Vad ___ du om filmen? – Den var jättebra.", gaps: [{ answers: ["tycker"], options: ["tycker", "tror", "tänker"], shuffle: false, feedback: [{ match: "tror", tip: "Hier wordt naar je mening gevraagd (wat vind je): tycker." }] }] }
+          - { type: gap, text: "Kommer Ingrid ikväll? – Jag ___ det, men jag vet inte.", gaps: [{ answers: ["tror"], options: ["tycker", "tror", "tänker"], shuffle: false, feedback: [{ match: "tycker", tip: "Je weet het niet zeker (je vermoedt het): tror." }] }] }
+          - { type: gap, text: "Jag ___ ofta på mina föräldrar i Holland.", gaps: [{ answers: ["tänker"], options: ["tycker", "tror", "tänker"], shuffle: false }] }
+          - { type: gap, text: "Vi ___ åka till Paris i sommar.", gaps: [{ answers: ["tänker"], options: ["tycker", "tror", "tänker"], shuffle: false, feedback: [{ match: "tror", tip: "Het gaat om een plan: tänker + infinitief." }] }] }
+          - { type: gap, text: "Jag ___ att den nya restaurangen är för dyr.", gaps: [{ answers: ["tycker"], options: ["tycker", "tror", "tänker"], shuffle: false }] }
+          - { type: gap, text: "Det är mörkt ute. Jag ___ att klockan är mycket.", gaps: [{ answers: ["tror"], options: ["tycker", "tror", "tänker"], shuffle: false }] }
+          - { type: gap, text: "Stör mig inte, jag ___!", gaps: [{ answers: ["tänker"], options: ["tycker", "tror", "tänker"], shuffle: false }] }
+          - { type: gap, text: "___ du att det blir regn imorgon?", gaps: [{ answers: ["Tror"], options: ["Tycker", "Tror", "Tänker"], shuffle: false }] }
+
+      - id: tycka-tro-vertalen
+        title: Vertaal met tycka, tro of tänka
+        instruction: Vertaal naar het Zweeds.
+        topic: tycka-tro-tanka
+        items:
+          - { type: translate, prompt: "Ik vind de film goed.", answers: ["Jag tycker att filmen är bra.", "Jag tycker om filmen."], feedback: [{ contains: "tror att filmen", tip: "Een mening (vinden): tycker." }] }
+          - { type: translate, prompt: "Ik denk dat hij ziek is.", answers: ["Jag tror att han är sjuk."], feedback: [{ contains: "tycker att han", tip: "Je weet het niet zeker (vermoeden): tror." }, { contains: "tänker att", tip: "Een vermoeden: tror." }] }
+          - { type: translate, prompt: "Waar denk je aan?", answers: ["Vad tänker du på?"], feedback: [{ match: "På vad tänker du", tip: "Het voorzetsel staat in het Zweeds aan het eind: Vad tänker du på?" }] }
+          - { type: translate, prompt: "Wij zijn van plan een feest te geven.", answers: ["Vi tänker {ha|ordna} en fest."], feedback: [{ contains: "tänker att", tip: "Na tänker (van plan zijn) komt de infinitief zonder att." }] }
+          - { type: translate, prompt: "Wat vind je van Västerås?", answers: ["Vad tycker du om Västerås?"], topic: vragen }
+
+      - id: det-finns-invullen
+        title: Det finns
+        instruction: Vul het ontbrekende woord in.
+        topic: det-finns
+        shuffle: true
+        items:
+          - { type: gap, text: "___ det mjölk i kylskåpet?", gaps: [{ answers: ["Finns"] }] }
+          - { type: gap, text: "I Västerås ___ det en stor domkyrka.", gaps: [{ answers: ["finns"] }] }
+          - { type: gap, text: "Det finns ___ bröd kvar.", hint: "(geen – bröd is een ett-woord)", gaps: [{ answers: ["inget"], options: ["ingen", "inget", "inga"], shuffle: false }] }
+          - { type: gap, text: "Det finns ___ ägg i kylen.", hint: "(geen – meervoud)", gaps: [{ answers: ["inga"], options: ["ingen", "inget", "inga"], shuffle: false }] }
+          - { type: gap, text: "Tyvärr finns det ___ ledig plats.", hint: "(geen – plats is een en-woord)", gaps: [{ answers: ["ingen"], options: ["ingen", "inget", "inga"], shuffle: false }] }
+          - { type: gap, text: "Vi har ___ barn, men vi har en katt.", gaps: [{ answers: ["inga"], options: ["ingen", "inget", "inga"], shuffle: false }] }
+
+      - id: det-finns-vertalen
+        title: Er is …
+        instruction: Vertaal naar het Zweeds.
+        topic: det-finns
+        items:
+          - { type: translate, prompt: "Er is een goed restaurant in het centrum.", answers: ["Det finns en bra restaurang i centrum.", "I centrum finns det en bra restaurang."], feedback: [{ contains: "det är en bra", tip: "Er is (bestaat, is aanwezig) = det finns." }] }
+          - { type: translate, prompt: "Is er nog koffie?", answers: ["Finns det {mer |något |}kaffe[ kvar]?"] }
+          - { type: translate, prompt: "Er zijn geen eieren.", answers: ["Det finns inga ägg."], feedback: [{ contains: "inte ägg", tip: "Geen + meervoud: inga." }] }
+          - { type: translate, prompt: "Ik heb geen auto.", answers: ["Jag har ingen bil."], feedback: [{ match: "Jag har inte en bil", tip: "Geen + en-woord: ingen. „Inte en” klinkt onnatuurlijk." }] }
+
+      - id: restaurant-koppelen
+        title: Aan tafel
+        instruction: Koppel de Zweedse zin aan de betekenis.
+        topic: mat-fraser
+        items:
+          - type: match
+            pairs:
+              - ["Jag skulle vilja ha …", "Ik zou graag … willen"]
+              - ["Kan vi få notan?", "Mogen we de rekening?"]
+              - ["Smaklig måltid!", "Eet smakelijk!"]
+              - ["Skål!", "Proost!"]
+              - ["Tack för maten!", "Bedankt voor het eten!"]
+              - ["Det var jättegott!", "Het was heel lekker!"]
+
+      - id: vertellen-verleden
+        title: Vertellen over vroeger
+        instruction: Zet de werkwoorden in de preteritum.
+        topic: berattande
+        items:
+          - type: gap
+            text: "När jag var liten ___ (bo) vi i ett litet hus på landet. Varje sommar ___ (åka) vi till mormor. Där ___ (äta) vi jordgubbar och ___ (bada) i sjön."
+            gaps:
+              - { answers: ["bodde"] }
+              - { answers: ["åkte"] }
+              - { answers: ["åt"], feedback: [{ match: ["ätte", "ätade"], tip: "äta is sterk: åt." }] }
+              - { answers: ["badade"] }
+          - type: gap
+            text: "Först ___ (gå) vi till stranden. Sedan ___ (köpa) pappa glass till alla. På kvällen ___ (grilla) vi korv och ___ (sjunga) sånger."
+            gaps:
+              - { answers: ["gick"] }
+              - { answers: ["köpte"] }
+              - { answers: ["grillade"] }
+              - { answers: ["sjöng"], feedback: [{ match: ["sjungde", "sjungade"], tip: "sjunga is sterk: sjöng." }] }
+          - type: gap
+            text: "Den dagen ___ (vara) det väldigt varmt. Vi ___ (ha) inget vatten, så vi ___ (bli) törstiga."
+            gaps:
+              - { answers: ["var"] }
+              - { answers: ["hade"] }
+              - { answers: ["blev"], feedback: [{ match: ["blidde", "blide"], tip: "bli is onregelmatig: blev." }] }
+
+      - id: verhaal-volgorde
+        title: Het verhaal op volgorde
+        instruction: Begin de zin met het gegeven woord.
+        topic: berattande
+        items:
+          - { type: order, start: "Först", tokens: ["vi", "åt", "middag"], answers: ["Först åt vi middag."] }
+          - { type: order, start: "Sedan", tokens: ["Olle", "tal", "höll", "ett"], answers: ["Sedan höll Olle ett tal."] }
+          - { type: order, start: "Till slut", tokens: ["alla", "dansade"], answers: ["Till slut dansade alla."] }
+          - { type: order, start: "När festen var slut", tokens: ["gick", "vi", "hem"], answers: ["När festen var slut gick vi hem."] }
+
+      - id: lezen-kraftskiva
+        title: "Lezen: kräftskiva"
+        instruction: Lees de tekst. Is de bewering **rätt** of **fel**? Is hij fout, schrijf dan de juiste zin op.
+        topic: berattande
+        textTitle: Kräftskiva hos Ek
+        text: |
+          I augusti hade Ingrid och Olle kräftskiva i trädgården. Alla gästerna hade roliga hattar och det fanns lyktor i träden. De åt kräftor, ost och knäckebröd och de sjöng många visor.
+
+          Fleur hade aldrig ätit kräftor förut. Hon tyckte att det var svårt att skala dem, men hon tyckte att de var goda. Bram tror att han åt tjugo kräftor! Festen slutade klockan ett på natten.
+        items:
+          - { type: truefalse, statement: "Kräftskivan var i augusti.", answer: true }
+          - { type: truefalse, statement: "Gästerna hade roliga hattar.", answer: true }
+          - { type: truefalse, statement: "Fleur hade ätit kräftor många gånger.", answer: false, tip: "Had ze ze al eens gegeten?", correction: { answers: ["{Fleur|Hon} hade aldrig ätit kräftor[ förut]."] } }
+          - { type: truefalse, statement: "Fleur tyckte att kräftorna var äckliga.", answer: false, tip: "Wat vond ze ervan?", correction: { answers: ["{Fleur|Hon} tyckte att {kräftorna|de} var goda."] } }
+          - { type: truefalse, statement: "Bram åt inga kräftor.", answer: false, tip: "Hoeveel at Bram er?", correction: { answers: ["{Bram|Han} åt [ungefär ]tjugo kräftor."] } }
+          - { type: truefalse, statement: "Festen slutade klockan elva.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["Festen slutade klockan ett[ på natten]."] } }
+
+      - id: dialoog-fika
+        title: Fika
+        instruction: Zet het gesprek in het café in de goede volgorde.
+        topic: mat-fraser
+        items:
+          - type: dialogue
+            lines:
+              - "Personalen: Hej! Vad får det vara?"
+              - "Fleur: Jag skulle vilja ha en kaffe och en kanelbulle, tack."
+              - "Personalen: Vill du ha mjölk i kaffet?"
+              - "Fleur: Ja, lite mjölk, tack. Vad kostar det?"
+              - "Personalen: Det blir 65 kronor. Äter du här eller tar du med?"
+              - "Fleur: Jag äter här. Tack!"
+
+      - id: schrijven-feest
+        title: "Schrijven: een feest"
+        instruction: Vertel over een feest of etentje waar je bent geweest.
+        topic: berattande
+        items:
+          - type: free
+            prompt: "Waar was het, wie waren er, wat aten jullie en wat vond je ervan? Vertel het in de verleden tijd en gebruik först, sedan of till slut."
+            minWords: 35
+            require:
+              - { any: ["först", "sedan", "sen", "till slut", "efteråt"], label: "Je gebruikt först, sedan, efteråt of till slut" }
+              - { any: ["tyckte", "tycker"], label: "Je geeft je mening (tyckte att …)" }
+              - { any: ["åt", "var", "kom", "hade", "drack", "dansade", "sjöng"], label: "Je vertelt in de verleden tijd" }
+            model: "I lördags var jag på min väns födelsedagsfest. Det kom ungefär tjugo gäster. Först drack vi champagne i trädgården. Sedan åt vi lasagne och sallad. Till efterrätt fanns det en stor chokladtårta. Jag tyckte att tårtan var jättegod. Till slut dansade vi till klockan två."
+
+  - id: herhaling
+    title: Herhaling
+    intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 8.
+    exercises:
+      - id: herhaling-gemengd
+        title: Gemengde herhaling
+        instruction: Beantwoord de vragen. Ze gaan over hoofdstuk 1 tot en met 8 door elkaar.
+        shuffle: true
+        items:
+          - { type: gap, topic: tycka-tro-tanka, text: "Jag ___ att du har rätt. (vermoed)", gaps: [{ answers: ["tror"], options: ["tycker", "tror", "tänker"], shuffle: false }] }
+          - { type: gap, topic: starka-verb, text: "Igår ___ (dricka) vi champagne.", gaps: [{ answers: ["drack"] }] }
+          - { type: translate, topic: ocksa-heller, prompt: "– Jag tycker om kräftor. – Ik ook.", answers: ["Det gör jag också."] }
+          - { type: gap, topic: det-finns, text: "Det finns ___ socker i kaffet. (geen)", gaps: [{ answers: ["inget"], options: ["ingen", "inget", "inga"], shuffle: false, feedback: [{ match: "ingen", tip: "socker is een ett-woord (sockret): inget." }] }] }
+          - { type: gap, topic: konjunktioner, text: "Jag är mätt, ___ jag tar ingen efterrätt.", gaps: [{ answers: ["så"], options: ["för", "så", "utan"], shuffle: false }] }
+          - { type: gap, topic: plural, text: "Hur många ___ (kanelbulle) vill du ha?", gaps: [{ answers: ["kanelbullar"] }] }
+          - { type: gap, topic: tidsprep, text: "Middagen är klar ___ tio minuter.", gaps: [{ answers: ["om"], options: ["om", "i", "på", "för"], shuffle: false }] }
+          - { type: translate, topic: modala, prompt: "Mag ik de rekening?", answers: ["Kan jag få notan[, tack]?", "Får jag be om notan?"] }
+          - { type: order, topic: frekvens, start: "På fredagar", tokens: ["äter", "vi", "ofta", "tacos"], answers: ["På fredagar äter vi ofta tacos."] }
+          - { type: gap, topic: possessiv, text: "Tack för maten! ___ köttbullar är de bästa! (jouw)", gaps: [{ answers: ["Dina"], options: ["Din", "Ditt", "Dina"] }] }
+
+vocab:
+  - { sv: "en kräfta", nl: "rivierkreeft", def: "kräftan" }
+  - { sv: "en kanelbulle", nl: "kaneelbroodje", def: "kanelbullen" }
+  - { sv: "en tårta", nl: "taart", def: "tårtan" }
+  - { sv: "ett bröd", nl: "brood", def: "brödet" }
+  - { sv: "en ost", nl: "kaas", def: "osten" }
+  - { sv: "ett ägg", nl: "ei", def: "ägget" }
+  - { sv: "en restaurang", nl: "restaurant", def: "restaurangen" }
+  - { sv: "en meny", nl: "menukaart", def: "menyn" }
+  - { sv: "en nota", nl: "rekening", def: "notan" }
+  - { sv: "en gäst", nl: "gast", def: "gästen" }
+  - { sv: "ett kylskåp", nl: "koelkast", def: "kylskåpet", alt: ["en kyl"] }
+  - { sv: "en efterrätt", nl: "toetje, dessert", def: "efterrätten" }
+  - { sv: "att tycka", nl: "vinden (mening)" }
+  - { sv: "att tro", nl: "denken, geloven (vermoeden)" }
+  - { sv: "att tänka", nl: "(na)denken, van plan zijn" }
+  - { sv: "att smaka", nl: "proeven, smaken" }
+  - { sv: "att baka", nl: "bakken" }
+  - { sv: "att beställa", nl: "bestellen" }
+  - { sv: "att fika", nl: "koffie drinken met iets lekkers" }
+  - { sv: "god", nl: "lekker" }
+  - { sv: "äcklig", nl: "vies" }
+  - { sv: "mätt", nl: "verzadigd, vol" }
+  - { sv: "hungrig", nl: "hongerig" }
