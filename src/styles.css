@@ -229,3 +229,12 @@ table.fill .answer-input { width: 100%; min-width: 90px; }
   .match-row { grid-template-columns: 1fr; gap: 4px; }
   .score { top: 57px; }
 }
+
+.continue { display: flex; align-items: center; gap: 4px 12px; flex-wrap: wrap; padding: 14px 18px; margin-bottom: 20px; background: var(--accent-soft); border-radius: var(--radius); text-decoration: none; color: var(--text); }
+.continue .eyebrow { width: 100%; }
+.continue strong { flex: 1; }
+.continue .arrow { font-size: 1.3rem; color: var(--accent); }
+.continue:hover strong { text-decoration: underline; }
+.ch-stats { font-size: 0.8rem; color: var(--muted); }
+.chapter-progress { display: flex; flex-direction: column; gap: 4px; margin-top: 12px; max-width: 420px; font-size: 0.9rem; }
+.resume { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; justify-content: space-between; padding: 10px 14px; margin-bottom: 16px; background: var(--info-soft); border-radius: 10px; font-size: 0.95rem; }
