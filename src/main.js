@@ -10,6 +10,8 @@ import {
 } from './views/practice.js';
 import { chapterByNo, findTopic, crumbs, progressBar, exerciseRunner, practiceView } from './ui.js';
 import { shuffle } from './build.js';
+import { setKnownWords, getInputMode, setInputMode } from './render/tiles.js';
+import { expand } from './check/normalize.js';
 import {
   getResult, chapterProgress, resetProgress, recordItem, runState, startRun, completeRun,
   weakItems, setLast, getLast, exportProgress, importProgress,
@@ -291,6 +293,14 @@ function viewAbout() {
       h('li', {}, 'Flitskaarten: woorden omdraaien en zelf aangeven of je ze wist.'),
       h('li', {}, 'Snelle rondes: zoveel mogelijk goede antwoorden in 60 seconden.'),
     ),
+    h('h2', {}, 'Antwoorden invoeren'),
+    h('p', {}, 'Bij langere antwoorden kun je typen of woordtegels in de goede volgorde aantikken. Op een telefoon of tablet staan standaard de tegels aan.'),
+    (() => {
+      const sel = h('select', { class: 'answer-input', 'aria-label': 'Invoer bij zinnen', onchange: () => setInputMode(sel.value) },
+        [['auto', 'Automatisch (tegels op een touchscreen)'], ['tiles', 'Altijd woordtegels'], ['type', 'Altijd typen']]
+          .map(([v, l]) => h('option', { value: v, selected: getInputMode() === v }, l)));
+      return sel;
+    })(),
     h('h2', {}, 'Privacy en statistieken'),
     analyticsConfigured()
       ? h('div', {},
@@ -437,6 +447,29 @@ function themeToggle() {
   });
 }
 
+// Woorden uit de oefenstof: met kleine letter midden in een zin, en namen (hoofdletter midden in een zin).
+function knownWords() {
+  const out = new Set();
+  const names = new Set();
+  const add = (pattern) => {
+    const ws = expand(String(pattern))[0].split(/\s+/).slice(1);
+    for (const w of ws) {
+      const clean = w.replace(/[^\p{L}-]/gu, '');
+      if (clean && clean === clean.toLowerCase()) out.add(clean);
+      else if (clean) names.add(clean);
+    }
+  };
+  const visit = (item) => {
+    for (const a of item.answers ?? []) add(a);
+    for (const a of item.correction?.answers ?? []) add(a);
+    for (const g of item.gaps ?? []) for (const a of g.answers ?? []) add(a);
+    (item.steps ?? []).forEach(visit);
+  };
+  for (const ch of course) for (const ex of ch.exercises ?? []) ex.items.forEach(visit);
+  return [out, names];
+}
+
+setKnownWords(...knownWords());
 const updateMenu = createMenu(course);
 initAnalytics();
 window.addEventListener('hashchange', route);
