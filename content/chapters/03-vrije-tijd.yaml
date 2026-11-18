@@ -1,0 +1,271 @@
+chapter: 3
+
+grammar:
+  - id: frekvens
+    title: Hoe vaak? alltid, ofta, ibland, sällan, aldrig
+    summary: "Een woord als *ofta* of *aldrig* staat in een hoofdzin **direct na het werkwoord**, op dezelfde plek als *inte*. Bij inversie: **na het onderwerp**."
+    body: |
+      | Zweeds | Betekenis |
+      |---|---|
+      | alltid | altijd |
+      | ofta | vaak |
+      | ibland | soms |
+      | sällan | zelden |
+      | aldrig | nooit |
+
+      Deze woorden gedragen zich net als *inte*:
+
+      - Jag går **ofta** på bio.
+      - Bram spelar **aldrig** tennis.
+      - På kvällen tittar jag **sällan** på tv. (inversie: na het onderwerp)
+
+      *Ibland* mag ook vooraan staan: **Ibland** fiskar Olle i sjön. Dan geldt gewoon de V2-regel.
+
+      ### brukar + infinitief
+      Met *brukar* zeg je dat je iets **gewoonlijk** doet. Erna komt een infinitief, zonder *att*:
+
+      - Jag **brukar cykla** till jobbet. (Ik fiets meestal naar mijn werk.)
+      - På söndagar **brukar** vi **sova** länge.
+
+  - id: tycka-om
+    title: Iets leuk vinden – tycka om, gilla, älska
+    summary: "*tycka om / gilla / älska* + zelfstandig naamwoord, of + **att + infinitief**: *Jag tycker om att läsa.* Ontkennen: *Jag tycker **inte** om fisk.*"
+    body: |
+      | Zweeds | Betekenis |
+      |---|---|
+      | tycka om | houden van, lekker/leuk vinden |
+      | gilla | leuk vinden (iets informeler) |
+      | älska | dol zijn op, houden van |
+
+      ### Een ding of een activiteit?
+      - Na deze werkwoorden kan direct een **zelfstandig naamwoord** komen: *Jag gillar fotboll. Wilma tycker om musik.*
+      - Gaat het om iets wat je **doet**, dan komt er **att + infinitief**: *Jag tycker om **att** läsa. Nils gillar **att** spela fotboll.*
+
+      ### Let op bij tycka om
+      *Om* hoort bij het werkwoord. *Inte* (en *ofta*, *aldrig* …) staat **tussen** *tycker* en *om*:
+
+      - Bram tycker **inte** om fisk.
+      - Jag tycker **verkligen** om sommaren.
+
+  - id: objekt
+    title: Voornaamwoorden als lijdend voorwerp
+    summary: "Als lijdend voorwerp: *mig, dig, honom, henne, den/det, oss, er, dem*. **Honom** = hem, **henne** = haar."
+    body: |
+      | Onderwerp | Lijdend voorwerp | Nederlands |
+      |---|---|---|
+      | jag | mig | mij |
+      | du | dig | jou |
+      | han | honom | hem |
+      | hon | henne | haar |
+      | den / det | den / det | hem, haar, het (ding) |
+      | vi | oss | ons |
+      | ni | er | jullie |
+      | de | dem | hen, ze |
+
+      - **Jag** ringer **henne**. – **Hon** ringer **mig**.
+      - Ser du Nils? – Ja, jag ser **honom**.
+      - Katterna? Jag ser **dem** i trädgården.
+
+      Uitspraak: *mig, dig* klinken als *mej, dej*. *De* en *dem* klinken allebei als *dom*. Schrijf ze wel verschillend!
+
+      Na een voorzetsel gebruik je ook de objectvorm: *med **mig**, till **honom**, för **oss***.
+
+sections:
+  - id: oefeningen
+    title: Oefeningen
+    exercises:
+      - id: frekvens-betekenis
+        title: Hoe vaak?
+        instruction: Koppel het Zweedse woord aan de betekenis.
+        topic: frekvens
+        items:
+          - type: match
+            pairs:
+              - ["alltid", "altijd"]
+              - ["ofta", "vaak"]
+              - ["ibland", "soms"]
+              - ["sällan", "zelden"]
+              - ["aldrig", "nooit"]
+              - ["brukar", "doet gewoonlijk"]
+
+      - id: frekvens-plaats
+        title: Waar staat ofta?
+        instruction: Maak een zin die begint met het gegeven woord.
+        topic: frekvens
+        items:
+          - { type: order, start: "Wilma", tokens: ["läser", "ofta", "böcker"], answers: ["Wilma läser ofta böcker."] }
+          - { type: order, start: "Bram", tokens: ["spelar", "aldrig", "tennis"], answers: ["Bram spelar aldrig tennis."] }
+          - { type: order, start: "På kvällen", tokens: ["jag", "tittar", "sällan", "på tv"], answers: ["På kvällen tittar jag sällan på tv."] }
+          - { type: order, start: "Fleur", tokens: ["alltid", "cyklar", "till jobbet"], answers: ["Fleur cyklar alltid till jobbet."] }
+          - { type: order, start: "Ibland", tokens: ["Olle", "fiskar", "i sjön"], answers: ["Ibland fiskar Olle i sjön."] }
+          - { type: order, start: "På söndagar", tokens: ["inte", "Nils", "spelar", "fotboll"], answers: ["På söndagar spelar Nils inte fotboll."] }
+
+      - id: frekvens-vertalen
+        title: Vertaal
+        instruction: Vertaal naar het Zweeds.
+        topic: frekvens
+        items:
+          - { type: translate, prompt: "Ik fiets meestal naar mijn werk.", answers: ["Jag brukar cykla till {jobbet|arbetet}."], feedback: [{ contains: "brukar att", tip: "Na brukar komt de infinitief zonder att." }, { contains: "brukar cyklar", tip: "Na brukar komt de infinitief: cykla." }] }
+          - { type: translate, prompt: "Bram drinkt nooit thee.", answers: ["Bram dricker aldrig te."], feedback: [{ contains: "aldrig dricker", tip: "aldrig staat ná het werkwoord, net als inte." }] }
+          - { type: translate, prompt: "Fleur leest vaak 's avonds.", answers: ["Fleur läser ofta på {kvällen|kvällarna}.", "På {kvällen|kvällarna} läser Fleur ofta."], feedback: [{ contains: "fleur ofta läser", tip: "ofta staat ná het werkwoord, net als inte." }] }
+          - { type: translate, prompt: "Op zondag slapen we meestal lang.", answers: ["På {söndagar|söndag|söndagarna} brukar vi sova länge."], feedback: [{ contains: "vi brukar", tip: "Na „På söndagar” komt eerst het werkwoord (brukar), dan vi." }] }
+          - { type: translate, prompt: "Soms gaan we naar de bioscoop.", answers: ["Ibland går vi på bio.", "Vi går på bio ibland.", "Vi går ibland på bio."], feedback: [{ contains: "ibland vi går", tip: "Begin je met Ibland, dan komt eerst het werkwoord: Ibland går vi …" }, { contains: "till bio", tip: "Naar de bioscoop gaan is „gå på bio”." }] }
+
+      - id: tycka-om-att
+        title: Met of zonder att?
+        instruction: Kies of er *att* moet staan.
+        topic: tycka-om
+        shuffle: true
+        items:
+          - { type: gap, text: "Jag gillar ___ fotboll.", gaps: [{ answers: ["(niets)"], options: ["att", "(niets)"], shuffle: false, feedback: [{ match: "att", tip: "fotboll is een zelfstandig naamwoord: dan geen att." }] }] }
+          - { type: gap, text: "Nils gillar ___ spela fotboll.", gaps: [{ answers: ["att"], options: ["att", "(niets)"], shuffle: false, feedback: [{ match: "(niets)", tip: "spela is een werkwoord (een activiteit): dan att + infinitief." }] }] }
+          - { type: gap, text: "Wilma tycker om ___ musik.", gaps: [{ answers: ["(niets)"], options: ["att", "(niets)"], shuffle: false }] }
+          - { type: gap, text: "Fleur tycker om ___ springa.", gaps: [{ answers: ["att"], options: ["att", "(niets)"], shuffle: false }] }
+          - { type: gap, text: "Bram brukar ___ laga mat på söndagar.", gaps: [{ answers: ["(niets)"], options: ["att", "(niets)"], shuffle: false, feedback: [{ match: "att", tip: "Na brukar komt nooit att." }] }] }
+          - { type: gap, text: "Olle älskar ___ fiska.", gaps: [{ answers: ["att"], options: ["att", "(niets)"], shuffle: false }] }
+
+      - id: tycka-om-vertalen
+        title: Waar hou je van?
+        instruction: Vertaal naar het Zweeds.
+        topic: tycka-om
+        items:
+          - { type: translate, prompt: "Ik hou van koken.", answers: ["Jag {tycker om|gillar|älskar} att laga mat."], feedback: [{ match: ["Jag tycker om laga mat", "Jag gillar laga mat"], tip: "Bij een activiteit: att + infinitief." }] }
+          - { type: translate, prompt: "Wilma houdt van muziek.", answers: ["Wilma {tycker om|gillar|älskar} musik."], feedback: [{ contains: "om att musik", tip: "musik is een zelfstandig naamwoord: dan geen att." }] }
+          - { type: translate, prompt: "Bram houdt niet van vis.", answers: ["Bram tycker inte om fisk.", "Bram gillar inte fisk."], feedback: [{ contains: "tycker om inte", tip: "inte staat tussen tycker en om." }, { contains: "inte tycker om", tip: "inte staat ná het werkwoord: tycker inte om." }] }
+          - { type: translate, prompt: "Nils vindt voetballen leuk.", answers: ["Nils {gillar|tycker om|älskar} att spela fotboll."] }
+          - { type: translate, prompt: "Houd jij van dansen?", answers: ["{Tycker du om|Gillar du|Älskar du} att dansa?"], topic: vragen }
+
+      - id: objekt-tabel
+        title: Onderwerp en lijdend voorwerp
+        instruction: Vul de objectvorm in.
+        topic: objekt
+        items:
+          - type: table
+            columns: ["Onderwerp", "Lijdend voorwerp", "Nederlands"]
+            rows:
+              - ["jag", { answers: ["mig"], feedback: [{ match: "mej", tip: "Zo klinkt het, maar je schrijft mig." }] }, "mij"]
+              - ["du", { answers: ["dig"], feedback: [{ match: "dej", tip: "Zo klinkt het, maar je schrijft dig." }] }, "jou"]
+              - ["han", { answers: ["honom"] }, "hem"]
+              - ["hon", { answers: ["henne"] }, "haar"]
+              - ["vi", { answers: ["oss"] }, "ons"]
+              - ["ni", { answers: ["er"] }, "jullie"]
+              - ["de", { answers: ["dem"], feedback: [{ match: "dom", tip: "Zo klinkt het in spreektaal, maar je schrijft dem." }] }, "hen, ze"]
+
+      - id: objekt-kiezen
+        title: Wie of wat?
+        instruction: Kies het juiste voornaamwoord.
+        topic: objekt
+        shuffle: true
+        items:
+          - { type: gap, text: "Ser du Nils? – Ja, jag ser ___.", gaps: [{ answers: ["honom"], options: ["han", "honom", "hon"], feedback: [{ match: "han", tip: "Nils is hier lijdend voorwerp (ik zie hem): honom." }] }] }
+          - { type: gap, text: "Wilma ringer ___ varje dag. (mij)", gaps: [{ answers: ["mig"], options: ["jag", "mig", "min"] }] }
+          - { type: gap, text: "Var är katterna? Jag ser ___ inte.", gaps: [{ answers: ["dem"], options: ["de", "dem", "den"], feedback: [{ match: "de", tip: "de is onderwerp; als lijdend voorwerp wordt het dem." }] }] }
+          - { type: gap, text: "Fleur? Jag träffar ___ ikväll.", gaps: [{ answers: ["henne"], options: ["hon", "henne", "hennes"] }] }
+          - { type: gap, text: "Kan du hjälpa ___? (ons)", gaps: [{ answers: ["oss"], options: ["vi", "oss", "våra"] }] }
+          - { type: gap, text: "Boken? Jag läser ___ nu.", gaps: [{ answers: ["den"], options: ["den", "det", "dem"], feedback: [{ match: "det", tip: "bok is een en-woord: den." }] }] }
+          - { type: gap, text: "Huset? Ja, vi köper ___!", gaps: [{ answers: ["det"], options: ["den", "det", "dem"], feedback: [{ match: "den", tip: "hus is een ett-woord: det." }] }] }
+          - { type: gap, text: "Vill du följa med ___ på bio? (ons)", gaps: [{ answers: ["oss"], options: ["vi", "oss", "er"] }] }
+
+      - id: objekt-vertalen
+        title: Vertaal met een voornaamwoord
+        instruction: Vertaal naar het Zweeds.
+        topic: objekt
+        items:
+          - { type: translate, prompt: "Ik bel haar morgen.", answers: ["Jag ringer henne {imorgon|i morgon}.", "{Imorgon|I morgon} ringer jag henne."], feedback: [{ contains: "ringer hon", tip: "Haar (lijdend voorwerp) = henne." }] }
+          - { type: translate, prompt: "Zie je hem?", answers: ["Ser du honom?"], feedback: [{ match: "Ser du han", tip: "Hem (lijdend voorwerp) = honom." }] }
+          - { type: translate, prompt: "Olle helpt ons vaak.", answers: ["Olle hjälper oss ofta."], feedback: [{ contains: "ofta hjälper", tip: "ofta staat ná het werkwoord." }] }
+          - { type: translate, prompt: "Wij houden van jullie!", answers: ["Vi älskar er!"] }
+          - { type: translate, prompt: "Wil je met mij dansen?", answers: ["Vill du dansa med mig?"], feedback: [{ contains: "med jag", tip: "Na een voorzetsel komt de objectvorm: med mig." }] }
+
+      - id: lezen-wilma
+        title: "Lezen: Wilma's vrije tijd"
+        instruction: Lees de tekst. Is de bewering **rätt** of **fel**? Is hij fout, schrijf dan de juiste zin op.
+        topic: frekvens
+        textTitle: Min fritid
+        text: |
+          Hej! Jag heter Wilma och jag är femton år. På fritiden spelar jag gitarr och sjunger i en kör. Kören övar på onsdagar. Jag tycker också om att läsa, men jag läser sällan på vardagar. Då har jag för mycket läxor.
+
+          På lördagar brukar jag träffa mina kompisar. Ibland går vi på bio och ibland sitter vi bara på ett kafé och pratar. Min lillebror Nils älskar fotboll, men jag tycker inte om sport. Jag simmar aldrig, för vattnet i sjön är alltid så kallt!
+        items:
+          - { type: truefalse, statement: "Wilma spelar piano.", answer: false, tip: "Welk instrument speelt ze?", correction: { answers: ["{Wilma|Hon} spelar gitarr."] } }
+          - { type: truefalse, statement: "Kören övar på onsdagar.", answer: true }
+          - { type: truefalse, statement: "Wilma läser ofta på vardagar.", answer: false, tip: "Hoe vaak leest ze op doordeweekse dagen?", correction: { answers: ["{Wilma|Hon} läser sällan på vardagar."] } }
+          - { type: truefalse, statement: "På lördagar brukar Wilma träffa sina kompisar.", answer: true }
+          - { type: truefalse, statement: "Wilma tycker om sport.", answer: false, tip: "Lees de tweede alinea nog eens.", correction: { answers: ["{Wilma|Hon} tycker inte om sport."] } }
+          - { type: truefalse, statement: "Wilma simmar ofta i sjön.", answer: false, tip: "Hoe vaak zwemt ze?", correction: { answers: ["{Wilma|Hon} simmar aldrig[ i sjön]."] } }
+
+      - id: dialoog-bio
+        title: Zullen we naar de film?
+        instruction: Zet het gesprek tussen Wilma en haar vriendin Elin in de goede volgorde.
+        topic: tycka-om
+        items:
+          - type: dialogue
+            lines:
+              - "Elin: Hej Wilma! Vad ska du göra på lördag?"
+              - "Wilma: Ingenting speciellt. Varför då?"
+              - "Elin: Vill du gå på bio med mig? Det går en ny film."
+              - "Wilma: Vad är det för film?"
+              - "Elin: En skräckfilm. Tycker du om skräckfilmer?"
+              - "Wilma: Nej, inte alls! Men jag följer gärna med om vi ser en komedi."
+              - "Elin: Okej, då ser vi en komedi. Vi ses på lördag!"
+
+      - id: schrijven-hobby
+        title: "Schrijven: jouw vrije tijd"
+        instruction: Schrijf over wat je in je vrije tijd doet.
+        topic: tycka-om
+        items:
+          - type: free
+            prompt: "Vertel wat je graag doet, hoe vaak je het doet en wat je níet leuk vindt."
+            minWords: 30
+            require:
+              - { any: ["tycker om att", "gillar att", "älskar att"], label: "Je vertelt wat je graag doet (tycker om att / gillar att …)" }
+              - { any: ["ofta", "ibland", "sällan", "aldrig", "alltid", "brukar"], label: "Je zegt hoe vaak (ofta, ibland, aldrig, brukar …)" }
+              - { any: ["inte om", "gillar inte"], label: "Je vertelt wat je niet leuk vindt" }
+            model: "På fritiden tycker jag om att läsa och att laga mat. Jag läser nästan varje kväll. På lördagar brukar jag cykla i skogen med min man. Ibland går vi på konsert. Jag spelar aldrig fotboll, för jag tycker inte om sport. Men jag gillar att simma på sommaren."
+
+  - id: herhaling
+    title: Herhaling
+    intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 3.
+    exercises:
+      - id: herhaling-gemengd
+        title: Gemengde herhaling
+        instruction: Beantwoord de vragen. Ze gaan over hoofdstuk 1 tot en met 3 door elkaar.
+        shuffle: true
+        items:
+          - { type: gap, topic: plural, text: "Wilma har många ___ (kompis).", gaps: [{ answers: ["kompisar"] }] }
+          - { type: translate, topic: modala, prompt: "Ik wil vanavond niet koken.", answers: ["Jag vill inte laga mat {ikväll|i kväll}.", "{Ikväll|I kväll} vill jag inte laga mat."] }
+          - { type: gap, topic: objekt, text: "Bram och Fleur? Jag känner ___ inte.", gaps: [{ answers: ["dem"], options: ["de", "dem", "deras"] }] }
+          - { type: order, topic: frekvens, start: "På morgonen", tokens: ["Olle", "dricker", "alltid", "kaffe"], answers: ["På morgonen dricker Olle alltid kaffe."] }
+          - { type: gap, topic: imperativ, text: "___ (lyssna) på mig!", gaps: [{ answers: ["Lyssna"] }] }
+          - { type: gap, topic: substantiv, text: "Jag har en cykel. ___ (cykel) är röd.", gaps: [{ answers: ["Cykeln"], feedback: [{ match: "Cykelen", tip: "Woorden op -el krijgen alleen -n: cykeln." }] }] }
+          - { type: mc, topic: tycka-om, prompt: "Welke zin is goed?", options: ["Jag tycker inte om kaffe.", "Jag inte tycker om kaffe.", "Jag tycker om inte kaffe."], answer: 0, tip: "inte staat tussen tycker en om." }
+          - { type: clock, time: "10:20" }
+          - { type: translate, topic: vragen, prompt: "Waarom woon je in Zweden?", answers: ["Varför bor du i Sverige?"] }
+          - { type: gap, topic: tidsuttryck, text: "På lördag ___ (åka) vi till Stockholm.", gaps: [{ answers: ["åker"] }] }
+
+vocab:
+  - { sv: "en hobby", nl: "hobby", def: "hobbyn" }
+  - { sv: "en bio", nl: "bioscoop", def: "bion" }
+  - { sv: "en kompis", nl: "vriend(in), maat", def: "kompisen" }
+  - { sv: "en sjö", nl: "meer", def: "sjön" }
+  - { sv: "en skog", nl: "bos", def: "skogen" }
+  - { sv: "en cykel", nl: "fiets", def: "cykeln" }
+  - { sv: "en konsert", nl: "concert", def: "konserten" }
+  - { sv: "en kör", nl: "koor", def: "kören" }
+  - { sv: "ett museum", nl: "museum", def: "museet" }
+  - { sv: "ett kafé", nl: "café", def: "kaféet" }
+  - { sv: "att simma", nl: "zwemmen" }
+  - { sv: "att cykla", nl: "fietsen" }
+  - { sv: "att springa", nl: "hardlopen, rennen" }
+  - { sv: "att spela", nl: "spelen (spel, sport, instrument)" }
+  - { sv: "att fiska", nl: "vissen" }
+  - { sv: "att laga mat", nl: "koken" }
+  - { sv: "att träffa", nl: "ontmoeten, afspreken met" }
+  - { sv: "att sjunga", nl: "zingen" }
+  - { sv: "att dansa", nl: "dansen" }
+  - { sv: "att tycka om", nl: "houden van" }
+  - { sv: "alltid", nl: "altijd" }
+  - { sv: "ofta", nl: "vaak" }
+  - { sv: "ibland", nl: "soms" }
+  - { sv: "sällan", nl: "zelden" }
+  - { sv: "aldrig", nl: "nooit" }
