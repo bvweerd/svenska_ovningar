@@ -1,0 +1,201 @@
+chapter: 0
+
+grammar:
+  - id: sje-tje
+    title: Sje-ljud en tje-ljud
+    summary: "**sj, skj, stj, -tion** en **sk** + zachte klinker → sje-ljud; **tj, kj** en **k** + zachte klinker → tje-ljud."
+    body: |
+      Het Zweeds heeft twee klanken die het Nederlands niet kent.
+
+      ### Sje-ljud
+      Een ruisende klank, ergens tussen *sj* en *ch*. Je hoort hem in *sju* (zeven).
+
+      | Spelling | Voorbeeld |
+      |---|---|
+      | sj | sju, sjö |
+      | skj | skjorta |
+      | stj | stjärna |
+      | sk + zachte klinker | sked, skön |
+      | -tion, -sion | station, version |
+      | ch (leenwoorden) | choklad, chef |
+
+      ### Tje-ljud
+      Een lichte, scherpe klank, zoals de *ch* in het Duitse *ich*. Je hoort hem in *tjugo* (twintig).
+
+      | Spelling | Voorbeeld |
+      |---|---|
+      | tj | tjugo, tjej |
+      | kj | kjol |
+      | k + zachte klinker | kyrka, köpa |
+
+  - id: hard-zacht
+    title: Harde en zachte klinkers
+    summary: "Na **k, g** en **sk** bepaalt de klinker de klank: **a, o, u, å** zijn hard, **e, i, y, ä, ö** zijn zacht."
+    body: |
+      Het Zweeds verdeelt de klinkers in twee groepen:
+
+      | Hard | Zacht |
+      |---|---|
+      | a, o, u, å | e, i, y, ä, ö |
+
+      Staat er een **k**, **g** of **sk** voor een klinker, dan hangt de uitspraak af van die klinker:
+
+      | | Voor harde klinker | Voor zachte klinker |
+      |---|---|---|
+      | k | [k]: *katt, kul* | tje-ljud: *kör, kyrka* |
+      | g | [g]: *gata, god* | [j]: *göra, gilla* |
+      | sk | [sk]: *skola, skål* | sje-ljud: *skön, sked* |
+
+      Let op: dit geldt aan het begin van een woord (of lettergreep met klemtoon). Er zijn uitzonderingen, zoals *kille* en *kex*, met een gewone [k].
+
+  - id: klinkerlengte
+    title: Lange en korte klinkers
+    summary: "Eén medeklinker na de klinker → meestal **lang** (*tak*); twee medeklinkers → **kort** (*tack*)."
+    body: |
+      In een beklemtoonde lettergreep is de klinker óf lang óf kort. Dat hoor je goed en het kan het verschil in betekenis maken.
+
+      | Lang | Kort |
+      |---|---|
+      | tak (dak) | tack (dank) |
+      | glas (glas) | glass (ijs) |
+      | vit (wit) | vitt (wit, ett-vorm) |
+      | ful (lelijk) | full (vol) |
+
+      Vuistregel: staat er één medeklinker na de klinker, dan is de klinker meestal lang. Staan er twee (of meer), dan is hij kort.
+
+  - id: klemtoon
+    title: Klemtoon
+    summary: "Meestal ligt de klemtoon op de **eerste** lettergreep; leenwoorden hebben hem vaak achteraan, werkwoorden op **-era** op de *e*."
+    body: |
+      - Bij de meeste Zweedse woorden ligt de klemtoon op de **eerste lettergreep**: *flicka*, *morgon*, *kvinna*.
+      - Veel **leenwoorden** hebben de klemtoon op de **laatste lettergreep**: *station*, *banan*, *telefon*, *choklad*.
+      - Werkwoorden op **-era** hebben de klemtoon op de *e* van *-era*: *promenera*, *studera*, *reparera*.
+      - De voorvoegsels **be-** en **för-** krijgen geen klemtoon: *betala*, *förstå*, *berätta*.
+
+  - id: spreektaal
+    title: Spreektaal
+    summary: "Een aantal veelgebruikte woorden spreek je anders uit dan je ze schrijft: *jag* → *ja*, *och* → *å*, *de* → *dom*."
+    body: |
+      Sommige korte woorden worden in gewone spreektaal anders uitgesproken dan ze geschreven worden. Je schrijft ze wel altijd zoals in de linkerkolom.
+
+      | Geschreven | Gesproken |
+      |---|---|
+      | jag | ja |
+      | och | å |
+      | att | å |
+      | mig, dig, sig | mej, dej, sej |
+      | de, dem | dom |
+      | det | de |
+      | något | nåt |
+      | sedan | sen |
+      | säger | säjer |
+
+sections:
+  - id: oefeningen
+    title: Oefeningen
+    exercises:
+      - id: sje-of-tje
+        title: Sje-ljud of tje-ljud?
+        instruction: Welke klank hoor je aan het begin van het woord?
+        topic: sje-tje
+        shuffle: true
+        items:
+          - { type: mc, prompt: "**sju** (zeven)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "Kijk naar de spelling: sj." }
+          - { type: mc, prompt: "**tjugo** (twintig)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "Kijk naar de spelling: tj." }
+          - { type: mc, prompt: "**kjol** (rok)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "kj klinkt hetzelfde als tj." }
+          - { type: mc, prompt: "**sked** (lepel)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "sk vóór een zachte klinker (e) wordt een sje-ljud." }
+          - { type: mc, prompt: "**kyrka** (kerk)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "k vóór een zachte klinker (y) wordt een tje-ljud." }
+          - { type: mc, prompt: "**stjärna** (ster)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "stj klinkt als sj." }
+          - { type: mc, prompt: "**köpa** (kopen)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "k vóór een zachte klinker (ö) wordt een tje-ljud." }
+          - { type: mc, prompt: "**choklad** (chocolade)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "ch in een leenwoord klinkt als sj." }
+          - { type: mc, prompt: "**tjej** (meisje)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "Kijk naar de spelling: tj." }
+          - { type: mc, prompt: "**skjorta** (overhemd)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "skj klinkt als sj." }
+
+      - id: sje-aan-het-eind
+        title: "Ook midden en achteraan: -tion"
+        instruction: Welke woorden bevatten een sje-ljud? Kies alle goede antwoorden.
+        topic: sje-tje
+        items:
+          - type: multi
+            options: ["station", "information", "tidning", "människa", "kaka", "kök"]
+            answers: [0, 1, 3]
+            tip: "Denk aan -tion en aan sk vóór een zachte klinker (i)."
+
+      - id: hard-of-zacht
+        title: Harde of zachte klank?
+        instruction: Hoe spreek je de eerste klank uit?
+        topic: hard-zacht
+        shuffle: true
+        items:
+          - { type: mc, prompt: "**katt** (kat)", options: ["[k], zoals in kat", "tje-ljud"], answer: 0, shuffle: false, tip: "a is een harde klinker." }
+          - { type: mc, prompt: "**kör** (koor)", options: ["[k], zoals in kat", "tje-ljud"], answer: 1, shuffle: false, tip: "ö is een zachte klinker." }
+          - { type: mc, prompt: "**kul** (leuk)", options: ["[k], zoals in kat", "tje-ljud"], answer: 0, shuffle: false, tip: "u is een harde klinker." }
+          - { type: mc, prompt: "**gata** (straat)", options: ["[g], zoals in het Engelse *go*", "[j], zoals in jas"], answer: 0, shuffle: false, tip: "a is een harde klinker." }
+          - { type: mc, prompt: "**göra** (doen)", options: ["[g], zoals in het Engelse *go*", "[j], zoals in jas"], answer: 1, shuffle: false, tip: "ö is een zachte klinker." }
+          - { type: mc, prompt: "**gilla** (leuk vinden)", options: ["[g], zoals in het Engelse *go*", "[j], zoals in jas"], answer: 1, shuffle: false, tip: "i is een zachte klinker." }
+          - { type: mc, prompt: "**skola** (school)", options: ["[sk]", "sje-ljud"], answer: 0, shuffle: false, tip: "o is een harde klinker." }
+          - { type: mc, prompt: "**skön** (fijn, lekker)", options: ["[sk]", "sje-ljud"], answer: 1, shuffle: false, tip: "ö is een zachte klinker." }
+
+      - id: zachte-klinkers
+        title: Welke klinkers zijn zacht?
+        instruction: Kies alle zachte klinkers.
+        topic: hard-zacht
+        items:
+          - type: multi
+            options: ["a", "e", "i", "o", "u", "y", "å", "ä", "ö"]
+            answers: [1, 5, 7, 8, 2]
+            shuffle: false
+            tip: "Er zijn er vijf. De harde zijn a, o, u en å."
+
+      - id: lang-of-kort
+        title: Lange of korte klinker?
+        instruction: Is de klinker in het vetgedrukte woord lang of kort?
+        topic: klinkerlengte
+        shuffle: true
+        items:
+          - { type: mc, prompt: "**tak** (dak)", options: ["lang", "kort"], answer: 0, shuffle: false, tip: "Na de a staat maar één medeklinker." }
+          - { type: mc, prompt: "**tack** (dank je)", options: ["lang", "kort"], answer: 1, shuffle: false, tip: "Na de a staan twee medeklinkers (ck)." }
+          - { type: mc, prompt: "**glas** (glas)", options: ["lang", "kort"], answer: 0, shuffle: false, tip: "Na de a staat maar één medeklinker." }
+          - { type: mc, prompt: "**glass** (ijsje)", options: ["lang", "kort"], answer: 1, shuffle: false, tip: "Na de a staan twee medeklinkers (ss)." }
+          - { type: mc, prompt: "**ful** (lelijk)", options: ["lang", "kort"], answer: 0, shuffle: false, tip: "Na de u staat maar één medeklinker." }
+          - { type: mc, prompt: "**full** (vol)", options: ["lang", "kort"], answer: 1, shuffle: false, tip: "Na de u staan twee medeklinkers (ll)." }
+
+      - id: klemtoon
+        title: Waar ligt de klemtoon?
+        instruction: Kies de lettergreep met de klemtoon.
+        topic: klemtoon
+        shuffle: true
+        items:
+          - { type: mc, prompt: "**flicka** (meisje)", options: ["FLICK-a", "flick-A"], answer: 0, shuffle: false, tip: "Een gewoon Zweeds woord: klemtoon vooraan." }
+          - { type: mc, prompt: "**station** (station)", options: ["STA-tion", "sta-TION"], answer: 1, shuffle: false, tip: "Een leenwoord: klemtoon achteraan." }
+          - { type: mc, prompt: "**banan** (banaan)", options: ["BA-nan", "ba-NAN"], answer: 1, shuffle: false, tip: "Een leenwoord, net als in het Nederlands." }
+          - { type: mc, prompt: "**betala** (betalen)", options: ["BE-ta-la", "be-TA-la", "be-ta-LA"], answer: 1, shuffle: false, tip: "Het voorvoegsel be- krijgt geen klemtoon." }
+          - { type: mc, prompt: "**promenera** (wandelen)", options: ["PRO-me-ne-ra", "pro-ME-ne-ra", "pro-me-NE-ra"], answer: 2, shuffle: false, tip: "Werkwoorden op -era: klemtoon op de e van -era." }
+          - { type: mc, prompt: "**förstå** (begrijpen)", options: ["FÖR-stå", "för-STÅ"], answer: 1, shuffle: false, tip: "Het voorvoegsel för- krijgt geen klemtoon." }
+          - { type: mc, prompt: "**morgon** (ochtend)", options: ["MOR-gon", "mor-GON"], answer: 0, shuffle: false, tip: "Een gewoon Zweeds woord: klemtoon vooraan." }
+          - { type: mc, prompt: "**telefon** (telefoon)", options: ["TE-le-fon", "te-le-FON"], answer: 1, shuffle: false, tip: "Een leenwoord: klemtoon achteraan." }
+
+      - id: spreektaal
+        title: Zo zeg je het
+        instruction: Hoe wordt het vetgedrukte woord in gewone spreektaal meestal uitgesproken?
+        topic: spreektaal
+        shuffle: true
+        items:
+          - { type: mc, prompt: "**jag** (ik)", options: ["ja", "jag, met duidelijke g", "jak"], answer: 0, tip: "De g aan het eind valt meestal weg." }
+          - { type: mc, prompt: "**och** (en)", options: ["å", "och, met ch zoals in lach", "ok"], answer: 0, tip: "De ch spreek je niet uit." }
+          - { type: mc, prompt: "**de** (zij, meervoud)", options: ["dom", "dee", "de"], answer: 0, tip: "In spreektaal klinken de en dem allebei als dom." }
+          - { type: mc, prompt: "**mig** (mij)", options: ["mej", "mig, met g", "mie"], answer: 0, tip: "mig, dig en sig klinken als mej, dej en sej." }
+          - { type: mc, prompt: "**något** (iets)", options: ["nåt", "nogot", "nägot"], answer: 0, tip: "In spreektaal wordt dit woord ingekort." }
+          - { type: mc, prompt: "**sedan** (daarna)", options: ["sen", "sedan, met duidelijke d", "sedde"], answer: 0, tip: "In spreektaal wordt dit woord ingekort." }
+
+      - id: spreektaal-terug
+        title: Van spreektaal naar schrijftaal
+        instruction: Je hoort de spreektaalvorm. Schrijf het woord zoals het **geschreven** wordt.
+        topic: spreektaal
+        shuffle: true
+        items:
+          - { type: gap, text: "Je hoort *ja* → je schrijft ___", gaps: [{ answers: ["jag"] }] }
+          - { type: gap, text: "Je hoort *dom* (zij) → je schrijft ___", gaps: [{ answers: ["de"] }] }
+          - { type: gap, text: "Je hoort *mej* → je schrijft ___", gaps: [{ answers: ["mig"], feedback: [{ match: "mej", tip: "Zo spreek je het uit, maar je schrijft het met een g aan het eind." }] }] }
+          - { type: gap, text: "Je hoort *nåt* → je schrijft ___", gaps: [{ answers: ["något"] }] }
+          - { type: gap, text: "Je hoort *sen* (daarna) → je schrijft ___", gaps: [{ answers: ["sedan"] }] }

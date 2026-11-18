@@ -1,0 +1,17 @@
+# Overzicht van alle hoofdstukken (0–12). Een hoofdstuk is beschikbaar zodra er een
+# bestand content/chapters/NN-*.yaml met hetzelfde hoofdstuknummer bestaat.
+# "theme" is de ondertitel: de hoofdonderwerpen van het hoofdstuk.
+chapters:
+  - { chapter: 0, theme: "Uitspraak · klanken, klinkerlengte, klemtoon, spreektaal" }
+  - { chapter: 1, theme: "Kennismaken · presens, woordvolgorde, vragen, en/ett, klokkijken" }
+  - { chapter: 2, theme: "Dagritme · tijdsbepalingen, meervoud, gebiedende wijs, modale werkwoorden" }
+  - { chapter: 3, theme: "Vrije tijd · frequentie-adverbia, tycka om (att), objektvormen" }
+  - { chapter: 4, theme: "Familie · preteritum, persoonlijke en bezittelijke voornaamwoorden" }
+  - { chapter: 5, theme: "Ervaringen · perfekt, preteritum of perfekt, hem/hemma, än" }
+  - { chapter: 6, theme: "Op reis · tijdsuitdrukkingen, vervoer, geld" }
+  - { chapter: 7, theme: "Natuur en zomer · nevenschikkende voegwoorden, Det gör jag också" }
+  - { chapter: 8, theme: "Eten en feesten · tycka, tro, tänka, vertellen in de verleden tijd" }
+  - { chapter: 9, theme: "Telefoneren · stamtijden, indirecte rede" }
+  - { chapter: 10, theme: "Wonen · bijzinnen, sin/sitt/sina, voorzetsels van plaats" }
+  - { chapter: 11, theme: "Gezondheid · ligger, sitter, står och …" }
+  - { chapter: 12, theme: "Feestdagen · bijvoeglijke naamwoorden, vergelijken" }
