@@ -240,7 +240,7 @@ sections:
           - { id: 2wqb, type: translate, prompt: "Nils heeft buikpijn.", answers: ["Nils har {ont i magen|magont|magvärk}."] }
           - { id: ug9y, type: translate, prompt: "Heb je keelpijn?", answers: ["Har du ont i halsen?"], topic: vragen }
           - { id: aqxw, type: translate, prompt: "Mijn voeten doen pijn.", answers: ["Jag har ont i fötterna.", "Det gör ont i fötterna.", "{Mina fötter|Fötterna} gör ont."], feedback: [{ contains: "fotarna", tip: "fot – fötter – fötterna." }] }
-          - { id: zgn3, type: translate, prompt: "Wilma heeft oorpijn.", answers: ["Wilma har ont i {örat|öronen}."], feedback: [{ contains: "ont i öra ", tip: "Na ont i: bepaalde vorm (örat)." }] }
+          - { id: zgn3, type: translate, prompt: "Wilma heeft oorpijn.", answers: ["Wilma har {ont i örat|ont i öronen|öronvärk}."], feedback: [{ contains: "ont i öra ", tip: "Na ont i: bepaalde vorm (örat)." }] }
           - { id: 788e, type: translate, prompt: "Mijn arm doet pijn.", answers: ["Jag har ont i armen.", "Det gör ont i armen.", "{Min arm|Armen} gör ont."] }
           - { id: 6myw, type: translate, prompt: "Doet je knie pijn?", answers: ["Har du ont i knät?", "Gör det ont i knät?", "Gör {knät|ditt knä} ont?"], topic: vragen, feedback: [{ contains: "ont i knä?", tip: "Na ont i: bepaalde vorm (knät)." }] }
 
