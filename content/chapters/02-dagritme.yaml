@@ -369,6 +369,89 @@ sections:
           - { id: j7cb, type: translate, prompt: "Morgen wil Nils voetballen.", answers: ["{Imorgon|I morgon} vill Nils spela fotboll.", "Nils vill spela fotboll {imorgon|i morgon}."], feedback: [{ contains: "imorgon Nils vill", tip: "Na de tijdsbepaling komt eerst het werkwoord: imorgon vill Nils …" }, { contains: "vill att", tip: "Na vill komt geen att." }] }
           - { id: tuj5, type: translate, prompt: "Fleur moet vandaag thuiswerken.", answers: ["Fleur måste {jobba|arbeta} hemma {idag|i dag}.", "{Idag|I dag} måste Fleur {jobba|arbeta} hemma."] }
 
+      - id: taak-samen-sporten
+        title: "Taak: samen sporten"
+        instruction: "Je buurvrouw Ingrid staat aan de deur. Ze wil deze week een keer samen met je sporten. Jouw week: je werkt elke dag tot vijf uur, dinsdagavond heb je een vergadering, en donderdag na het werk ben je vrij. **Doel:** spreek een dag en een tijd af. Kies of schrijf bij elke stap wat jij zegt."
+        topic: modala
+        items:
+          - id: tzeh
+            type: steps
+            explain: "Gelukt: jullie sporten donderdag om half zeven, Nils gaat mee en Ingrid wacht bij jouw deur."
+            steps:
+              - type: mc
+                topic: tidsuttryck
+                prompt: "**Ingrid:** Hej! Vill du träna med mig på tisdag? — *Dinsdagavond heb je een vergadering. Wat zeg je?*"
+                options:
+                  - "Tyvärr, på tisdag har jag ett möte."
+                  - "Tyvärr, på tisdag jag har ett möte."
+                  - "Tyvärr, på tisdag har jag en möte."
+                  - "Ja, gärna! På tisdag är jag ledig."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *på tisdag* vooraan komt het werkwoord op plaats 2: *på tisdag **har jag***."
+                  - "*möte* is een ett-woord: *ett möte*."
+                  - "Dinsdag ben je niet vrij: dan heb je een vergadering."
+              - type: translate
+                topic: tidsuttryck
+                prompt: "Ingrid: Okej. När kan du då? — Zeg: Donderdag na het werk kan ik."
+                answers:
+                  - "{På torsdag efter jobbet|Efter jobbet på torsdag} kan jag."
+                  - "Jag kan {på torsdag efter jobbet|efter jobbet på torsdag}."
+                  - "På torsdag kan jag efter jobbet."
+                feedback:
+                  - { contains: "jobbet jag kan", tip: "Begin je met de tijd, dan komt het werkwoord op plaats 2: *… efter jobbet **kan jag***." }
+                  - { contains: "torsdag jag kan", tip: "Begin je met de tijd, dan komt het werkwoord op plaats 2: *på torsdag **kan jag***." }
+              - type: mc
+                prompt: "**Ingrid:** Bra! Ska vi ses klockan fem? — *Je werkt tot vijf uur. Stel half zeven voor.*"
+                options:
+                  - "Klockan fem hinner jag inte. Kan vi träna klockan halv sju?"
+                  - "Klockan fem jag hinner inte. Kan vi träna klockan halv sju?"
+                  - "Klockan fem hinner jag inte. Kan vi ses klockan halv sex?"
+                  - "Klockan fem hinner jag inte. Kan vi träna klockan halv sju på morgonen?"
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *klockan fem* vooraan komt het werkwoord op plaats 2: *klockan fem **hinner jag** inte*."
+                  - "*Halv sex* is half zes (5.30). Half zeven is *halv sju*, net als in het Nederlands."
+                  - "Je wilt na het werk sporten, niet om half zeven 's ochtends."
+              - type: gap
+                topic: modala
+                prompt: "**Ingrid:** Halv sju går bra. Får Nils följa med? — *Dat vind je goed.*"
+                text: "Ja, han ___ gärna följa med."
+                gaps:
+                  - answers: ["får"]
+                    options: ["får", "måste", "vill", "ska"]
+                    feedback:
+                      - { match: "måste", tip: "Nils hoeft niet mee te komen. Ingrid vraagt of hij *mag*: *han får gärna följa med*." }
+                      - { match: "vill", tip: "Of Nils wil, weet Ingrid zelf. Ze vraagt of hij *mag*: *får*." }
+                      - { match: "ska", tip: "Ingrid vraagt of Nils *mag* meekomen. Antwoord met hetzelfde werkwoord: *får*." }
+              - type: mc
+                topic: modala
+                prompt: "**Ingrid:** Toppen! Var ses vi? — *Je wilt dat Ingrid hier bij jouw deur op je wacht. Vraag het vriendelijk.*"
+                options:
+                  - "Kan du vänta på mig här vid dörren?"
+                  - "Kan du väntar på mig här vid dörren?"
+                  - "Kan du att vänta på mig här vid dörren?"
+                  - "Vänta på mig här vid dörren!"
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *kan* komt de infinitief: *vänta*, niet *väntar*."
+                  - "Na een modaal werkwoord komt geen *att*: *kan du vänta*."
+                  - "Dat is een opdracht, en die klinkt in het Zweeds al snel kortaf. Vriendelijk vraag je het met een vraag: *Kan du …?*"
+              - type: translate
+                topic: tidsuttryck
+                prompt: "Ingrid: Javisst! Då säger vi så. — Herhaal de afspraak: Donderdag om half zeven sporten we."
+                answers:
+                  - "{På torsdag [klockan ]halv sju|[Klockan ]halv sju på torsdag} {tränar vi|ska vi träna}."
+                  - "Vi {tränar|ska träna} {på torsdag [klockan ]halv sju|[klockan ]halv sju på torsdag}."
+                  - "På torsdag {tränar vi|ska vi träna} [klockan ]halv sju."
+                feedback:
+                  - { contains: "halv sju vi", tip: "Begin je met de tijd, dan komt het werkwoord op plaats 2: *… klockan halv sju **tränar vi***." }
+                  - { contains: "torsdag vi", tip: "Begin je met de tijd, dan komt het werkwoord op plaats 2: *på torsdag **tränar vi***." }
+                  - { contains: "halv sex", tip: "Half zeven is *halv sju*." }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
