@@ -92,6 +92,8 @@ grammar:
       | sedan | sen |
       | säger | säjer |
 
+      De *å* bij *och* en *att* staat voor een **korte** o, zoals in *pot*: niet de lange klank van *två* of *på*. Wie het woord benadrukt, zegt *och* soms als *ock*.
+
 sections:
   - id: oefeningen
     title: Oefeningen
@@ -186,7 +188,7 @@ sections:
         shuffle: true
         items:
           - { id: pjwx, type: mc, prompt: "**jag** (ik)", options: ["ja", "jag, met duidelijke g", "jak"], answer: 0, tip: "De g aan het eind valt meestal weg." }
-          - { id: jmkx, type: mc, prompt: "**och** (en)", options: ["å", "och, met ch zoals in lach", "ok"], answer: 0, tip: "De ch spreek je niet uit." }
+          - { id: jmkx, type: mc, prompt: "**och** (en)", options: ["o, kort zoals in *pot* (informeel geschreven als *å*)", "och, met ch zoals in *lach*", "oech, met de oe van *boek*"], answer: 0, tip: "De ch valt weg en de o is kort, zoals in *pot*. Met nadruk zeggen Zweden soms *ock*." }
           - { id: tdkq, type: mc, prompt: "**de** (zij, meervoud)", options: ["dom", "dee", "de"], answer: 0, tip: "In spreektaal klinken de en dem allebei als dom." }
           - { id: er54, type: mc, prompt: "**mig** (mij)", options: ["mej", "mig, met g", "mie"], answer: 0, tip: "mig, dig en sig klinken als mej, dej en sej." }
           - { id: jvqd, type: mc, prompt: "**något** (iets)", options: ["nåt", "nogot", "nägot"], answer: 0, tip: "In spreektaal wordt dit woord ingekort." }
