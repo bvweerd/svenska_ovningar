@@ -19,6 +19,13 @@ export const SITE_TEXT = {
   about: 'Svenska övningar is een gratis oefensite voor Nederlandstaligen die Zweeds leren op beginnersniveau. De grammatica wordt in dertien hoofdstukken (0 tot en met 12) in een vaste volgorde opgebouwd, zoals gebruikelijk in een basiscursus.',
 };
 
+/** Naam en beschrijving als app (manifest, beginscherm). */
+export const APP = {
+  name: 'Svenska övningar A1–A2',
+  shortName: 'Svenska A1–A2',
+  description: 'Zweeds oefenen voor beginners (A1–A2), automatisch nagekeken met tips.',
+};
+
 /** De andere site: [tekst voor de link, linktekst, tekst na de link]. */
 export const SIBLING = {
   href: 'https://bvweerd.github.io/svenska_ovningar_b/',
