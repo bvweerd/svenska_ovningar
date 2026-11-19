@@ -307,6 +307,10 @@ sections:
           Fleur och Bram har hittat en ny lägenhet. Den ligger på tredje våningen i ett gammalt hus nära centrum. Lägenheten har tre rum och kök. Vardagsrummet är stort och ljust eftersom det har två stora fönster. Sovrummet ligger bredvid badrummet.
 
           Bram tycker att köket är för litet, men Fleur säger att det inte gör något, eftersom de ändå ofta äter ute. De flyttar den första mars.
+
+          Huset har ingen hiss, så Olle och Nils ska hjälpa dem med möblerna. Innan de flyttar in vill Fleur måla väggarna i sovrummet, eftersom de är gamla och mörka.
+
+          Hyran är 9 500 kronor i månaden. Det är lite dyrt, men lägenheten ligger bra. Det finns en tvättstuga i källaren och en liten trädgård bakom huset. Bram är glad, eftersom han bara behöver cykla tio minuter till jobbet.
         items:
           - { id: m7dn, type: truefalse, statement: "Lägenheten ligger på andra våningen.", answer: false, tip: "Op welke verdieping?", correction: { answers: ["{Lägenheten|Den} ligger på tredje våningen."] } }
           - { id: ykmd, type: truefalse, statement: "Lägenheten har tre rum och kök.", answer: true }
@@ -314,6 +318,10 @@ sections:
           - { id: gv6c, type: truefalse, statement: "Sovrummet ligger bredvid badrummet.", answer: true }
           - { id: 6ks5, type: truefalse, statement: "Bram tycker att köket är för stort.", answer: false, tip: "Wat vindt Bram van de keuken?", correction: { answers: ["{Bram|Han} tycker [att ]köket är för litet."] } }
           - { id: cusy, type: truefalse, statement: "De flyttar i april.", answer: false, tip: "Wanneer verhuizen ze?", correction: { answers: ["De flyttar den {första|1} mars.", "De flyttar i mars."] } }
+          - { id: 7krg, type: truefalse, statement: "Huset har en hiss.", answer: false, tip: "Lees het begin van de derde alinea.", correction: { answers: ["Huset har ingen hiss.", "Det finns ingen hiss[ i huset]."] } }
+          - { id: e2mk, type: truefalse, statement: "Fleur vill måla väggarna i köket.", answer: false, tip: "Welke kamer wil Fleur schilderen?", correction: { answers: ["{Fleur|Hon} vill måla väggarna i sovrummet."] } }
+          - { id: dw68, type: truefalse, statement: "Det finns en tvättstuga i källaren.", answer: true }
+          - { id: m9tj, type: truefalse, statement: "Bram behöver cykla en halvtimme till jobbet.", answer: false, tip: "Hoe lang fietst Bram naar zijn werk?", correction: { answers: ["{Bram|Han} behöver [bara ]cykla tio minuter[ till jobbet].", "Det tar [bara ]tio minuter[ att cykla till jobbet]."] } }
 
       - id: dialoog-bezichtiging
         title: Een appartement bekijken
