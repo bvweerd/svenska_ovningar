@@ -558,6 +558,8 @@ sections:
           Hej! Jag heter Fleur och jag kommer från Nederländerna. Jag är 31 år och jag jobbar på ett sjukhus i Västerås. Jag är gift med Bram. Han kommer också från Nederländerna. Han är 34 år och jobbar med IT.
 
           Hemma pratar vi nederländska, men på jobbet talar jag svenska. Vi har inga barn, men vi har en katt. Den heter Pluto. På fritiden springer jag. Bram spelar gitarr.
+
+          Bram och jag går en kurs i svenska. Kursen börjar klockan sex på måndag. Läraren heter Anna. Grannen heter Olle. Han är lärare och pratar svenska med Bram. Jag gillar Västerås mycket!
         items:
           - { id: h9yp, type: truefalse, statement: "Fleur kommer från Sverige.", answer: false, tip: "Kijk naar de eerste zin.", correction: { answers: ["{Fleur|Hon} kommer från Nederländerna.", "{Fleur|Hon} kommer inte från Sverige."] } }
           - { id: euw8, type: truefalse, statement: "Fleur jobbar på ett sjukhus.", answer: true, tip: "Kijk naar de tweede zin." }
@@ -565,6 +567,9 @@ sections:
           - { id: djx9, type: truefalse, statement: "Bram jobbar med IT.", answer: true }
           - { id: d33z, type: truefalse, statement: "Hemma pratar de svenska.", answer: false, tip: "Lees het begin van de tweede alinea.", correction: { answers: ["Hemma {pratar|talar} de nederländska.", "De {pratar|talar} nederländska hemma."], feedback: [{ match: "Hemma de pratar nederländska", tip: "Let op de V2-regel: na Hemma komt eerst het werkwoord." }] } }
           - { id: asbb, type: truefalse, statement: "Fleur och Bram har en hund.", answer: false, tip: "Welk dier hebben ze?", correction: { answers: ["{Fleur och Bram|De} har en katt.", "{Fleur och Bram|De} har ingen hund."] } }
+          - { id: dfnt, type: truefalse, statement: "Fleur och Bram går en kurs i svenska.", answer: true }
+          - { id: xecy, type: truefalse, statement: "Kursen börjar klockan sju.", answer: false, tip: "Lees de derde alinea: hoe laat begint de cursus?", correction: { answers: ["{Kursen|Den} börjar [klockan ]sex[ på måndag].", "{Kursen|Den} börjar på måndag [klockan ]sex.", "{Kursen|Den} börjar inte [klockan ]sju.", "På måndag börjar {kursen|den} [klockan ]sex."] } }
+          - { id: xk2x, type: truefalse, statement: "Olle är lärare.", answer: true, tip: "Lees wat Fleur over de buurman vertelt." }
 
       - id: dialoog-kennismaken
         title: Een kennismaking

@@ -227,9 +227,9 @@ sections:
         topic: frekvens
         textTitle: Min fritid
         text: |
-          Hej! Jag heter Wilma och jag är femton år. På fritiden spelar jag gitarr och sjunger i en kör. Kören övar på onsdagar. Jag tycker också om att läsa, men jag läser sällan på vardagar. Då har jag för mycket läxor.
+          Hej! Jag heter Wilma och jag är femton år. På fritiden spelar jag gitarr och sjunger i en kör. Kören övar på onsdagar. Jag tycker också om att läsa, men jag läser sällan på vardagar. Då har jag för mycket läxor. Jag har en kompis, Elin. Hon spelar också gitarr, och vi övar ofta tillsammans.
 
-          På lördagar brukar jag träffa mina kompisar. Ibland går vi på bio och ibland sitter vi bara på ett kafé och pratar. Min lillebror Nils älskar fotboll, men jag tycker inte om sport. Jag simmar aldrig, för vattnet i sjön är alltid så kallt!
+          På lördagar brukar jag träffa mina kompisar. Ibland går vi på bio och ibland sitter vi bara på ett kafé och pratar. Min lillebror Nils älskar fotboll, men jag tycker inte om sport. Jag simmar aldrig, för vattnet i sjön är alltid så kallt! Men på söndagar cyklar jag till skogen med mamma. Det tycker jag är kul.
         items:
           - { id: bshg, type: truefalse, statement: "Wilma spelar piano.", answer: false, tip: "Welk instrument speelt ze?", correction: { answers: ["{Wilma|Hon} spelar gitarr."] } }
           - { id: 4gx8, type: truefalse, statement: "Kören övar på onsdagar.", answer: true }
@@ -237,6 +237,9 @@ sections:
           - { id: g8cz, type: truefalse, statement: "På lördagar brukar Wilma träffa sina kompisar.", answer: true }
           - { id: m2qg, type: truefalse, statement: "Wilma tycker om sport.", answer: false, tip: "Lees de tweede alinea nog eens.", correction: { answers: ["{Wilma|Hon} tycker inte om sport."] } }
           - { id: 5nfv, type: truefalse, statement: "Wilma simmar ofta i sjön.", answer: false, tip: "Hoe vaak zwemt ze?", correction: { answers: ["{Wilma|Hon} simmar aldrig[ i sjön]."] } }
+          - { id: r2jh, type: truefalse, statement: "Wilma och Elin övar aldrig tillsammans.", answer: false, tip: "Lees het einde van de eerste alinea: hoe vaak oefenen ze samen?", correction: { answers: ["{Wilma och Elin|De} övar ofta tillsammans.", "{Wilma|Hon} övar ofta [tillsammans ]med Elin."] } }
+          - { id: q3ey, type: truefalse, statement: "På söndagar cyklar Wilma till skogen.", answer: true }
+          - { id: 7vb9, type: truefalse, statement: "Wilma tycker inte om att cykla till skogen.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["{Wilma|Hon} {tycker om|gillar} att cykla[ till skogen][ med mamma].", "{Wilma|Hon} tycker [att ]det är {kul|roligt}[ att cykla till skogen][ med mamma]."] } }
 
       - id: dialoog-bio
         title: Zullen we naar de film?
