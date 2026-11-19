@@ -190,6 +190,8 @@ sections:
           - { id: 2ppy, type: gap, text: "Igår ___ (vakna) jag tidigt. Jag ___ (dricka) kaffe och ___ (läsa) tidningen.", gaps: [{ answers: ["vaknade"] }, { answers: ["drack"], feedback: [{ match: ["drickade", "drickte"], tip: "dricka is sterk: drack." }] }, { answers: ["läste"], feedback: [{ match: "läsade", tip: "läsa is een -er-werkwoord (läser): läste." }] }] }
           - { id: 86n4, type: gap, text: "I somras ___ (resa) vi till Norge. Vi ___ (bo) på ett hotell och ___ (se) fjällen.", gaps: [{ answers: ["reste"] }, { answers: ["bodde"] }, { answers: ["såg"], feedback: [{ match: ["sedde", "seed"], tip: "se is onregelmatig: såg." }] }] }
           - { id: cr95, type: gap, text: "På festen ___ (dansa) alla. Olle ___ (hålla) ett tal, och sedan ___ (äta) vi tårta.", gaps: [{ answers: ["dansade"] }, { answers: ["höll"], feedback: [{ match: ["hållde", "hålde"], tip: "hålla is sterk: höll." }] }, { answers: ["åt"], feedback: [{ match: ["ätte", "ätade"], tip: "äta is sterk: åt." }] }] }
+          - { id: zz23, type: gap, text: "Förra vintern ___ (åka) vi till Kiruna. Det ___ (vara) minus trettio grader, men vi ___ (se) norrsken.", gaps: [{ answers: ["åkte"] }, { answers: ["var"] }, { answers: ["såg"], feedback: [{ match: ["sedde", "seed"], tip: "se is onregelmatig: såg." }] }] }
+          - { id: uxtt, type: gap, text: "Olle ___ (vakna) sent. Han ___ (ta) en snabb dusch och ___ (springa) till bussen.", gaps: [{ answers: ["vaknade"] }, { answers: ["tog"], feedback: [{ match: ["tade", "tagde"], tip: "ta is sterk: tog." }] }, { answers: ["sprang"], feedback: [{ match: ["springade", "springde"], tip: "springa is sterk: sprang." }] }] }
 
       - id: verhaal-volgorde
         title: Het verhaal op volgorde
