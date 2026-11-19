@@ -391,6 +391,8 @@ sections:
           Bram vaknar klockan halv sju. Först duschar han och sedan äter han frukost med Fleur. Han dricker alltid två koppar kaffe. Klockan halv åtta tar han bussen till jobbet. Bram jobbar på ett IT-företag i centrum. På tisdagar och torsdagar jobbar han hemma. Då kan han sova lite längre.
 
           Bram slutar klockan fem. Efter jobbet handlar han mat. På kvällen lagar Fleur och Bram middag tillsammans. Sedan tittar de på tv eller läser. Klockan elva går Bram och lägger sig.
+
+          På fredagar slutar Bram tidigt, klockan tre. Då promenerar han hem. På helgen är han ledig och vaknar sent. Han äter frukost klockan tio.
         items:
           - { id: y534, type: truefalse, statement: "Bram vaknar klockan sju.", answer: false, tip: "Lees de eerste zin nog eens.", correction: { answers: ["{Bram|Han} vaknar [klockan ]halv sju.", "Klockan halv sju vaknar {Bram|han}."] } }
           - { id: tfz2, type: truefalse, statement: "Bram dricker kaffe till frukost.", answer: true }
@@ -398,6 +400,10 @@ sections:
           - { id: 7djs, type: truefalse, statement: "På tisdagar jobbar Bram hemma.", answer: true }
           - { id: 9f7e, type: truefalse, statement: "Bram handlar mat på morgonen.", answer: false, tip: "Wanneer doet hij boodschappen?", correction: { answers: ["{Bram|Han} handlar mat efter jobbet.", "Efter jobbet handlar {Bram|han} mat."] } }
           - { id: u7xz, type: truefalse, statement: "På kvällen lagar Fleur middag ensam.", answer: false, tip: "Wie koken er?", correction: { answers: ["{Fleur och Bram|De} lagar middag tillsammans.", "På kvällen lagar {Fleur och Bram|de} middag tillsammans."] } }
+          - { id: sfj2, type: truefalse, statement: "Bram går och lägger sig klockan tio.", answer: false, tip: "Lees het einde van de tweede alinea.", correction: { answers: ["{Bram|Han} går och lägger sig [klockan ]elva.", "Klockan elva går {Bram|han} och lägger sig."] } }
+          - { id: 3bjd, type: truefalse, statement: "På fredagar slutar Bram klockan fem.", answer: false, tip: "Wat doet Bram op vrijdag anders?", correction: { answers: ["På fredagar slutar {Bram|han} {[klockan ]tre|tidigt|tidigt, klockan tre}.", "{Bram|Han} slutar {[klockan ]tre|tidigt|tidigt, klockan tre} på fredagar.", "På fredagar slutar {Bram|han} inte [klockan ]fem."] } }
+          - { id: y3em, type: truefalse, statement: "På fredagar promenerar Bram hem.", answer: true }
+          - { id: u3ez, type: truefalse, statement: "På helgen vaknar Bram tidigt.", answer: false, tip: "Lees de laatste alinea.", correction: { answers: ["På helgen vaknar {Bram|han} sent.", "{Bram|Han} vaknar sent på helgen.", "{Bram|Han} vaknar inte tidigt på helgen."] } }
 
       - id: dialoog-afspraak
         title: Een afspraak maken

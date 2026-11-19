@@ -353,9 +353,9 @@ sections:
         topic: preteritum
         textTitle: Mormor fyllde nittio
         text: |
-          Förra sommaren hade vi en stor familjefest. Min mormor fyllde nittio år! Hela familjen kom: mina föräldrar, min bror Per med sin fru och deras tre barn, och min moster Karin, som bor i Göteborg.
+          Förra sommaren hade vi en stor familjefest. Min mormor fyllde nittio år! Hela familjen kom: mina föräldrar, min bror Per med sin fru och deras tre barn, och min moster Karin, som bor i Göteborg. Karin kom på fredagen och stannade i tre dagar.
 
-          Vi firade i mormors trädgård. Olle grillade och barnen lekte. Mormor fick många presenter, men hon tyckte bäst om ett gammalt foto från Wilma. På kvällen sjöng vi och dansade. Det var en fantastisk dag!
+          Vi firade i mormors trädgård. Olle grillade och barnen lekte. Nils spelade fotboll med Pers barn och Wilma tog många foton. Mormor fick många presenter, men hon tyckte bäst om ett gammalt foto från Wilma. På kvällen sjöng vi och dansade. Det var en fantastisk dag! Nu vill mormor ha en fest varje år.
         items:
           - { id: pjey, type: truefalse, statement: "Mormor fyllde åttio år.", answer: false, tip: "Hoe oud werd ze?", correction: { answers: ["{Mormor|Hon} fyllde nittio[ år]."] } }
           - { id: xnas, type: truefalse, statement: "Ingrids moster bor i Göteborg.", answer: true }
@@ -363,6 +363,9 @@ sections:
           - { id: exg7, type: truefalse, statement: "Olle grillade.", answer: true }
           - { id: ygw9, type: truefalse, statement: "Mormor fick inga presenter.", answer: false, tip: "Kreeg ze cadeaus?", correction: { answers: ["{Mormor|Hon} fick många presenter."] } }
           - { id: ky5s, type: truefalse, statement: "På kvällen sjöng de.", answer: true }
+          - { id: yqb5, type: truefalse, statement: "Karin stannade i tre dagar.", answer: true }
+          - { id: hpa4, type: truefalse, statement: "Wilma spelade fotboll med Pers barn.", answer: false, tip: "Wie speelde er voetbal, en wat deed Wilma?", correction: { answers: ["Nils spelade fotboll med Pers barn.", "Nils spelade fotboll.", "{Wilma|Hon} tog [många ]foton.", "{Wilma|Hon} spelade inte fotboll.", "{Wilma|Hon} fotograferade."] } }
+          - { id: mkgw, type: truefalse, statement: "Mormor vill ha en fest varje år.", answer: true }
 
       - id: schrijven-familie
         title: "Schrijven: jouw familie"
