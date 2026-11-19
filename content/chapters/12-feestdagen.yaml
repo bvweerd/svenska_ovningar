@@ -180,6 +180,8 @@ sections:
           - { id: fqqb, type: gap, text: "Min ___ bil är elektrisk. (ny)", gaps: [{ answers: ["nya"], feedback: [{ match: "ny", tip: "Na min, din, sin … krijgt het adjectief ook -a: min nya bil." }] }] }
           - { id: 7kgs, type: gap, text: "Den ___ mannen heter Gustav. (gammal)", gaps: [{ answers: ["gamla", "gamle"] }] }
           - { id: mdnz, type: gap, text: "Vi bor i det ___ huset vid sjön. (liten)", gaps: [{ answers: ["lilla"], feedback: [{ match: ["litet", "små"], tip: "Bepaald enkelvoud van liten: lilla." }] }] }
+          - { id: p87f, type: gap, text: "Den ___ katten sover i soffan. (svart)", gaps: [{ answers: ["svarta"], feedback: [{ match: "svart", tip: "Na den (bepaald) krijgt het bijvoeglijk naamwoord -a: den svarta katten." }] }] }
+          - { id: 7pfj, type: gap, text: "Jag tar de ___ skorna idag. (blå)", gaps: [{ answers: ["blå", "blåa"] }] }
 
       - id: trappen-tabel
         title: Vergrotende en overtreffende trap
@@ -209,6 +211,9 @@ sections:
           - { id: yhfx, type: translate, prompt: "Dit is het beste restaurant van de stad.", answers: ["{Det här|Detta} är den bästa restaurangen i {staden|stan}."], feedback: [{ contains: "den bäst restaurangen", tip: "Bepaald: den bästa restaurangen." }] }
           - { id: 8nbz, type: translate, prompt: "Koffie is duurder dan thee.", answers: ["Kaffe är dyrare än te."] }
           - { id: b63z, type: translate, prompt: "Wie is het oudst?", answers: ["Vem är äldst?"] }
+          - { id: qdmv, type: translate, prompt: "Nils is kleiner dan Wilma.", answers: ["Nils är {mindre|kortare} än Wilma."], feedback: [{ contains: "litenare", tip: "liten is onregelmatig: mindre." }] }
+          - { id: zhh9, type: translate, prompt: "Dit is de mooiste kerk van Zweden.", answers: ["{Det här|Detta} är den {vackraste|finaste} kyrkan i Sverige."], feedback: [{ contains: ["den vackrast kyrkan", "den finast kyrkan"], tip: "Bepaald: den vackraste kyrkan." }] }
+          - { id: env4, type: translate, prompt: "Wilma loopt sneller dan Nils.", answers: ["Wilma springer {snabbare|fortare} än Nils."], feedback: [{ contains: "mer snabb", tip: "snabb is een gewoon bijvoeglijk naamwoord: snabbare." }] }
 
       - id: mer-mest
         title: Mer of -are?
@@ -220,6 +225,10 @@ sections:
           - { id: m2q2, type: mc, prompt: "Det var den ___ dagen i mitt liv. (goed)", options: ["bästa", "godaste", "bättre"], answer: 0, shuffle: false, tip: "bra – bättre – bäst; bepaald: den bästa." }
           - { id: huaa, type: mc, prompt: "Idag är det ___ än igår. (koud)", options: ["kallare", "mer kall", "kallast"], answer: 0, shuffle: false, tip: "kall is een gewoon bijvoeglijk naamwoord: -are." }
           - { id: 5fxy, type: mc, prompt: "Vilken bil är ___? (praktisk)", options: ["mest praktisk", "praktiskast", "mer praktiskast"], answer: 0, shuffle: false, tip: "Woorden op -isk krijgen mer/mest." }
+          - { id: ftx3, type: mc, prompt: "Olle är ___ än Bram. (oud)", options: ["äldre", "mer gammal", "gammalare"], answer: 0, shuffle: false, tip: "gammal is onregelmatig: äldre – äldst." }
+          - { id: kgxb, type: mc, prompt: "Min väska är ___ än din. (zwaar)", options: ["tyngre", "tungare", "mer tung"], answer: 0, shuffle: false, tip: "tung – tyngre – tyngst: met klinkerwisseling." }
+          - { id: kmw8, type: mc, prompt: "Lucia är den ___ tiden på året. (donker)", options: ["mörkaste", "mest mörka", "mörkare"], answer: 0, shuffle: false, tip: "mörk is een gewoon bijvoeglijk naamwoord: -ast, en bepaald -aste." }
+          - { id: qr4v, type: mc, prompt: "Vilken film var ___? (leuk, overtreffende trap)", options: ["roligast", "mest rolig", "roligaste"], answer: 0, shuffle: false, tip: "rolig – roligare – roligast. Na var zonder zelfstandig naamwoord: roligast." }
 
       - id: feestdagen-quiz
         title: Wanneer is het feest?
@@ -231,6 +240,10 @@ sections:
           - { id: 89qq, type: mc, prompt: "Wat is **julafton**?", options: ["den tjugofjärde december", "den tjugofemte december", "den trettioförsta december"], answer: 0, shuffle: false, tip: "In Zweden is 24 december de belangrijkste kerstdag." }
           - { id: 3rsq, type: mc, prompt: "Hoeveel **adventszondagen** zijn er?", options: ["fyra", "tre", "sju"], answer: 0, shuffle: false }
           - { id: 23qa, type: mc, prompt: "Wat wens je iemand op 31 december?", options: ["Gott nytt år!", "God jul!", "Glad påsk!"], answer: 0, shuffle: false }
+          - { id: g4dt, type: mc, prompt: "Wanneer is de **nationaldag** van Zweden?", options: ["den sjätte juni", "den första maj", "den trettonde december"], answer: 0, shuffle: false }
+          - { id: hn39, type: mc, prompt: "Wat wens je iemand met **Pasen**?", options: ["Glad påsk!", "God jul!", "Gott nytt år!"], answer: 0, shuffle: false }
+          - { id: p7c7, type: mc, prompt: "Wanneer is **trettondedag jul**?", options: ["den sjätte januari", "den trettonde december", "den tjugofemte december"], answer: 0, shuffle: false, tip: "De dertiende dag van de kerst, als je juldagen (25 december) als eerste dag telt: 6 januari." }
+          - { id: 5teg, type: mc, prompt: "Wat wens je iemand op **julafton**?", options: ["God jul!", "Glad påsk!", "Glad midsommar!"], answer: 0, shuffle: false }
 
       - id: kerstwoorden
         title: Kerstwoorden
@@ -305,6 +318,34 @@ sections:
           - { id: f4br, type: findError, topic: adjektiv-bestamd, sentence: "De liten barnen leker.", wrong: [1], answers: ["De små barnen leker."], tip: "liten is onregelmatig in het meervoud." }
           - { id: drqb, type: findError, topic: komparation, sentence: "Stockholm är mer stor än Västerås.", wrong: [2, 3], answers: ["Stockholm är större än Västerås."], tip: "stor is onregelmatig." }
           - { id: hsk3, type: findError, topic: adjektiv-bestamd, sentence: "Min nya bilen är elektrisk.", wrong: [2], answers: ["Min nya bil är elektrisk."], tip: "Na min + adjectief: onbepaalde vorm." }
+
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: adjektiv-bestamd
+        shuffle: true
+        items:
+          - { id: wd62, type: listen, say: "Jag gillar den gula tröjan.", prompt: "Welke vorm hoor je?", options: ["gula", "gul", "gult"], answer: 0 }
+          - { id: e4za, type: listen, say: "Vi bor i ett litet hus.", prompt: "Welke vorm hoor je?", options: ["litet", "lilla", "liten"], answer: 0, topic: adjektiv-obestamd }
+          - { id: jgs9, type: listen, say: "Stockholm är större än Göteborg.", prompt: "Welke vorm hoor je?", options: ["större", "störst", "stor"], answer: 0, topic: komparation }
+          - { id: grgy, type: listen, say: "God jul och gott nytt år!", prompt: "Wat wensen ze?", options: ["Vrolijk kerstfeest en gelukkig nieuwjaar!", "Fijne Pasen!", "Gefeliciteerd met je verjaardag!"], answer: 0, topic: jul }
+          - { id: aenj, type: listen, say: "Det här är den bästa julen någonsin.", prompt: "Welke vorm hoor je?", options: ["bästa", "bättre", "bra"], answer: 0, topic: komparation }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: adjektiv-obestamd
+        shuffle: true
+        items:
+          - { id: r9j7, type: listen, say: "Huset är rött." }
+          - { id: z96q, type: listen, say: "De små barnen sjunger." }
+          - { id: d2te, type: listen, say: "Kaffe är dyrare än te." }
+          - { id: chw7, type: listen, say: "Vem är äldst?" }
+          - { id: fhtm, type: listen, say: "God jul!" }
 
   - id: herhaling
     title: Eindherhaling

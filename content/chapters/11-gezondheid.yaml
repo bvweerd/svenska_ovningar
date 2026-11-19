@@ -115,6 +115,9 @@ sections:
           - { id: kwgt, type: translate, prompt: "Nils ligt te slapen.", answers: ["Nils ligger och sover."] }
           - { id: vx9b, type: translate, prompt: "Olle zat tv te kijken.", answers: ["Olle satt och {tittade|såg} på {tv|teve}."], feedback: [{ contains: "satt och tittar", tip: "Beide werkwoorden in dezelfde tijd: satt och tittade." }] }
           - { id: t5qy, type: translate, prompt: "Wij liepen te praten.", answers: ["Vi gick och pratade."], feedback: [{ contains: "gick och pratar", tip: "Beide werkwoorden in dezelfde tijd: gick och pratade." }] }
+          - { id: pjdj, type: translate, prompt: "Fleur ligt te lezen.", answers: ["Fleur ligger och läser."], feedback: [{ contains: "ligger och läsa", tip: "Beide werkwoorden in dezelfde vorm: ligger och läser." }] }
+          - { id: bn8q, type: translate, prompt: "Bram staat te koken.", answers: ["Bram står och lagar mat."] }
+          - { id: hs9g, type: translate, prompt: "Wij zaten te eten.", answers: ["Vi satt och åt."], feedback: [{ contains: "satt och äter", tip: "Beide werkwoorden in dezelfde tijd: satt och åt." }] }
 
       - id: ligt-of-staat
         title: Ligt, staat, hangt of zit het?
@@ -129,6 +132,7 @@ sections:
           - { id: q3x7, type: gap, text: "Mjölken ___ i kylskåpet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false, feedback: [{ match: "ligger", tip: "Een pak melk staat rechtop: står." }] }] }
           - { id: wjk9, type: gap, text: "Telefonen ___ på golvet.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
           - { id: k529, type: gap, text: "Jackan ___ i hallen.", gaps: [{ answers: ["hänger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
+          - { id: gexx, type: gap, text: "Katten ___ i soffan och sover.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
 
       - id: leggen-en-liggen
         title: Leggen en liggen
@@ -155,6 +159,26 @@ sections:
             steps:
               - { type: mc, prompt: "Ingrid ___ sig i sängen.", options: ["lägger", "ligger"], answer: 0, shuffle: false, tip: "Gaan liggen (beweging) = lägga sig." }
               - { type: gap, text: "Nu ___ hon i sängen och läser.", gaps: [{ answers: ["ligger"] }] }
+          - id: 7hqa
+            type: steps
+            steps:
+              - { type: mc, prompt: "Nils ___ mobilen på bordet.", options: ["lägger", "ligger"], answer: 0, shuffle: false, tip: "Nils legt de telefoon neer (beweging): lägger." }
+              - { type: gap, text: "Nu ___ mobilen på bordet.", gaps: [{ answers: ["ligger"], feedback: [{ match: "lägger", tip: "Nu gaat het om waar de telefoon is (resultaat): ligger." }] }] }
+          - id: gv3p
+            type: steps
+            steps:
+              - { type: mc, prompt: "Fleur ___ sig i soffan.", options: ["sätter", "sitter"], answer: 0, shuffle: false, tip: "Gaan zitten (beweging) = sätta sig." }
+              - { type: gap, text: "Nu ___ hon i soffan och tittar på tv.", gaps: [{ answers: ["sitter"], feedback: [{ match: "sätter", tip: "Nu gaat het om waar ze is (resultaat): sitter." }] }] }
+          - id: 4zeu
+            type: steps
+            steps:
+              - { type: mc, prompt: "Olle ___ flaskan i kylskåpet.", options: ["ställer", "står"], answer: 0, shuffle: false, tip: "Olle zet de fles neer (beweging): ställer." }
+              - { type: gap, text: "Nu ___ flaskan i kylskåpet.", gaps: [{ answers: ["står"], feedback: [{ match: "ställer", tip: "Nu gaat het om waar de fles is (resultaat): står." }] }] }
+          - id: 5en7
+            type: steps
+            steps:
+              - { type: mc, prompt: "Bram ___ sig på golvet.", options: ["lägger", "ligger"], answer: 0, shuffle: false, tip: "Gaan liggen (beweging) = lägga sig." }
+              - { type: gap, text: "Nu ___ han på golvet och vilar.", gaps: [{ answers: ["ligger"] }] }
 
       - id: zet-het-neer
         title: Zet het neer!
@@ -166,6 +190,10 @@ sections:
           - { id: rckw, type: gap, text: "___ (ställa) cykeln där!", gaps: [{ answers: ["Ställ"] }] }
           - { id: 86hz, type: gap, text: "___ (sätta) dig, är du snäll!", gaps: [{ answers: ["Sätt"], feedback: [{ match: ["Sitt", "Sitta"], tip: "Gaan zitten (beweging) = sätta sig: Sätt dig!" }] }] }
           - { id: eg6y, type: gap, text: "___ (hänga) jackan i hallen!", gaps: [{ answers: ["Häng"] }] }
+          - { id: dbyt, type: gap, text: "___ (lägga) dig och vila en stund!", gaps: [{ answers: ["Lägg"], feedback: [{ match: ["Ligg", "Ligga"], tip: "Gaan liggen (beweging) = lägga sig: Lägg dig!" }] }] }
+          - { id: 8wcr, type: gap, text: "___ (ställa) vasen på bordet!", gaps: [{ answers: ["Ställ"] }] }
+          - { id: gc9w, type: gap, text: "___ (sätta) nyckeln i dörren!", gaps: [{ answers: ["Sätt"] }] }
+          - { id: yz7h, type: gap, text: "___ (lägga) inte mobilen på golvet!", gaps: [{ answers: ["Lägg"] }] }
 
       - id: lichaam-koppelen
         title: Het lichaam
@@ -212,6 +240,9 @@ sections:
           - { id: 2wqb, type: translate, prompt: "Nils heeft buikpijn.", answers: ["Nils har {ont i magen|magont|magvärk}."] }
           - { id: ug9y, type: translate, prompt: "Heb je keelpijn?", answers: ["Har du ont i halsen?"], topic: vragen }
           - { id: aqxw, type: translate, prompt: "Mijn voeten doen pijn.", answers: ["Jag har ont i fötterna.", "Det gör ont i fötterna.", "{Mina fötter|Fötterna} gör ont."], feedback: [{ contains: "fotarna", tip: "fot – fötter – fötterna." }] }
+          - { id: zgn3, type: translate, prompt: "Wilma heeft oorpijn.", answers: ["Wilma har ont i {örat|öronen}."], feedback: [{ contains: "ont i öra ", tip: "Na ont i: bepaalde vorm (örat)." }] }
+          - { id: 788e, type: translate, prompt: "Mijn arm doet pijn.", answers: ["Jag har ont i armen.", "Det gör ont i armen.", "{Min arm|Armen} gör ont."] }
+          - { id: 6myw, type: translate, prompt: "Doet je knie pijn?", answers: ["Har du ont i knät?", "Gör det ont i knät?", "Gör {knät|ditt knä} ont?"], topic: vragen, feedback: [{ contains: "ont i knä?", tip: "Na ont i: bepaalde vorm (knät)." }] }
 
       - id: wederkerend
         title: Mig, dig, sig …
@@ -226,6 +257,7 @@ sections:
           - { id: q682, type: gap, text: "När gifte ni ___?", gaps: [{ answers: ["er"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
           - { id: 5hb9, type: gap, text: "Barnen klär på ___.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false, feedback: [{ match: "er", tip: "Bij de (zij, meervoud) is het sig. er hoort bij ni." }] }] }
           - { id: vehf, type: gap, text: "Wilma sätter ___ i soffan.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
+          - { id: cgqw, type: gap, text: "Har du rakat ___ idag?", gaps: [{ answers: ["dig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
 
       - id: lezen-rug
         title: "Lezen: Olle heeft rugpijn"
@@ -286,6 +318,34 @@ sections:
           - { id: j546, type: findError, topic: kroppen, sentence: "Jag har ont i huvud.", wrong: [4], answers: ["Jag har ont i huvudet."], tip: "Welke vorm komt er na ont i?" }
           - { id: w7d8, type: findError, topic: reflexiv, sentence: "Bram lägger honom tidigt.", wrong: [2], answers: ["Bram lägger sig tidigt."], tip: "Bram gaat zelf naar bed." }
           - { id: x39c, type: findError, topic: placera, sentence: "Sitt dig, är du snäll!", wrong: [0], answers: ["Sätt dig, är du snäll!"], tip: "Gaan zitten is een beweging." }
+
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: positionsverb
+        shuffle: true
+        items:
+          - { id: vbzf, type: listen, say: "Vasen står på bordet.", prompt: "Welk werkwoord hoor je?", options: ["står", "ligger", "sitter"], answer: 0 }
+          - { id: kkjm, type: listen, say: "Tavlan hänger på väggen.", prompt: "Welk werkwoord hoor je?", options: ["hänger", "står", "ligger"], answer: 0 }
+          - { id: kkzy, type: listen, say: "Han har ont i ryggen.", prompt: "Waar heeft hij pijn?", options: ["in zijn rug", "in zijn buik", "in zijn hoofd"], answer: 0, topic: kroppen }
+          - { id: 429b, type: listen, say: "Jag har ont i halsen.", prompt: "Waar heeft ze pijn?", options: ["in haar keel", "in haar oor", "in haar voet"], answer: 0, topic: kroppen }
+          - { id: y7bq, type: listen, say: "Skynda dig, bussen går snart!", prompt: "Welk woord hoor je?", options: ["dig", "mig", "sig"], answer: 0, topic: reflexiv }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: placera
+        shuffle: true
+        items:
+          - { id: h5vv, type: listen, say: "Lägg boken på bordet." }
+          - { id: 2gdh, type: listen, say: "Sätt dig, är du snäll." }
+          - { id: evbr, type: listen, say: "Jag känner mig trött." }
+          - { id: bea8, type: listen, say: "Hon ligger och sover." }
+          - { id: 2c7e, type: listen, say: "Har du feber?" }
 
   - id: herhaling
     title: Herhaling

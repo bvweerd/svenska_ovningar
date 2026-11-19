@@ -226,3 +226,31 @@ sections:
           - { id: yv7a, type: gap, text: "Je hoort *de* (het) → je schrijft ___", gaps: [{ answers: ["det"] }] }
           - { id: v4s7, type: gap, text: "Je hoort *dej* → je schrijft ___", gaps: [{ answers: ["dig"], feedback: [{ match: "dej", tip: "Zo spreek je het uit. De gewone schrijfwijze is met een g aan het eind." }] }] }
           - { id: qkq8, type: gap, text: "Je hoort *säjer* → je schrijft ___", gaps: [{ answers: ["säger"] }] }
+
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-lengte
+        title: "Luisteren: lang of kort?"
+        instruction: Luister en kies het woord dat je hoort.
+        topic: klinkerlengte
+        shuffle: true
+        items:
+          - { id: j4fw, type: listen, say: "tak", options: ["tak", "tack"], answer: 0 }
+          - { id: kezd, type: listen, say: "glass", options: ["glass", "glas"], answer: 0 }
+          - { id: zpf3, type: listen, say: "full", options: ["full", "ful"], answer: 0 }
+          - { id: dhzb, type: listen, say: "vitt", options: ["vitt", "vit"], answer: 0 }
+          - { id: swrs, type: listen, say: "mat", options: ["mat", "matt"], answer: 0 }
+
+      - id: luisteren-sje-tje
+        title: "Luisteren: sje-ljud of tje-ljud?"
+        instruction: Luister. Welke klank hoor je aan het begin van het woord?
+        topic: sje-tje
+        shuffle: true
+        items:
+          - { id: g9fs, type: listen, say: "sjuk", options: ["sje-ljud", "tje-ljud"], answer: 0 }
+          - { id: awru, type: listen, say: "kyrka", options: ["tje-ljud", "sje-ljud"], answer: 0 }
+          - { id: n98e, type: listen, say: "skjorta", options: ["sje-ljud", "tje-ljud"], answer: 0 }
+          - { id: sec3, type: listen, say: "tjugo", options: ["tje-ljud", "sje-ljud"], answer: 0 }
+          - { id: zhdt, type: listen, say: "sked", options: ["sje-ljud", "tje-ljud"], answer: 0 }

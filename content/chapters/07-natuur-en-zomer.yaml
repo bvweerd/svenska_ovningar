@@ -107,6 +107,7 @@ sections:
           - { id: k5h5, type: gap, text: "Fleur läser en bok ___ Bram lagar mat.", gaps: [{ answers: ["och"], options: ["och", "men", "eller", "för", "så"], shuffle: false }] }
           - { id: t9g9, type: gap, text: "Vi äter glass, ___ det är så varmt idag.", gaps: [{ answers: ["för"], options: ["och", "men", "eller", "för", "så"], shuffle: false, feedback: [{ match: "så", tip: "så geeft het gevolg (dus). Hier volgt de reden: för (want)." }] }] }
           - { id: 3w6h, type: gap, text: "Det regnar, ___ vi går ut ändå.", gaps: [{ answers: ["men"], options: ["och", "men", "eller", "för", "så"], shuffle: false }] }
+          - { id: bxm5, type: gap, text: "Ska vi gå på bio ___ stanna hemma?", gaps: [{ answers: ["eller"], options: ["och", "men", "eller", "för", "så"], shuffle: false }] }
 
       - id: men-utan
         title: Men of utan?
@@ -118,6 +119,10 @@ sections:
           - { id: fuys, type: gap, text: "Det är inte varmt, ___ det är soligt.", gaps: [{ answers: ["men"], options: ["men", "utan"], shuffle: false, feedback: [{ match: "utan", tip: "Hier vervang je niets; je zet twee dingen tegenover elkaar: men." }] }] }
           - { id: kjkd, type: gap, text: "Bram dricker inte kaffe ___ te.", gaps: [{ answers: ["utan"], options: ["men", "utan"], shuffle: false }] }
           - { id: vcju, type: gap, text: "Nils är liten, ___ han är stark.", gaps: [{ answers: ["men"], options: ["men", "utan"], shuffle: false }] }
+          - { id: 7pbr, type: gap, text: "Wilma spelar inte piano ___ gitarr.", gaps: [{ answers: ["utan"], options: ["men", "utan"], shuffle: false, feedback: [{ match: "men", tip: "Niet A maar B (je vervangt piano door gitarr): utan." }] }] }
+          - { id: epwu, type: gap, text: "Det är kallt ute, ___ solen skiner.", gaps: [{ answers: ["men"], options: ["men", "utan"], shuffle: false, feedback: [{ match: "utan", tip: "Er staat geen ontkenning; je zet twee dingen tegenover elkaar: men." }] }] }
+          - { id: rhya, type: gap, text: "Vi bor inte i Stockholm ___ i Västerås.", gaps: [{ answers: ["utan"], options: ["men", "utan"], shuffle: false }] }
+          - { id: 6wtx, type: gap, text: "Maten är god, ___ den är lite dyr.", gaps: [{ answers: ["men"], options: ["men", "utan"], shuffle: false }] }
 
       - id: sa-darfor
         title: Så of därför?
@@ -129,6 +134,9 @@ sections:
           - { id: exnq, type: order, start: "Olle är trött, men", tokens: ["han", "jobbar", "ändå"], answers: ["Olle är trött, men han jobbar ändå."] }
           - { id: z5vk, type: order, start: "Olle är trött. Ändå", tokens: ["han", "jobbar"], answers: ["Olle är trött. Ändå jobbar han."] }
           - { id: 6ehb, type: order, start: "Jag tar inte bussen, utan", tokens: ["jag", "cyklar"], answers: ["Jag tar inte bussen, utan jag cyklar."] }
+          - { id: bcv4, type: order, start: "Jag är hungrig, så", tokens: ["äter", "jag", "en smörgås"], answers: ["Jag är hungrig, så jag äter en smörgås."] }
+          - { id: qfwk, type: order, start: "Jag är hungrig. Därför", tokens: ["jag", "äter", "en smörgås"], answers: ["Jag är hungrig. Därför äter jag en smörgås."] }
+          - { id: zfzr, type: order, start: "Det är kallt, men", tokens: ["badar", "vi", "ändå"], answers: ["Det är kallt, men vi badar ändå."] }
 
       - id: zinnen-verbinden
         title: Verbind de zinnen
@@ -139,6 +147,10 @@ sections:
           - { id: 7dx6, type: translate, prompt: "Ik ga naar huis, want ik ben moe.", answers: ["Jag {går|åker} hem, för jag är trött."], feedback: [{ contains: "går hemma", tip: "Naar huis is een richting: hem." }] }
           - { id: 8b4p, type: translate, prompt: "Het regent. Daarom blijven we binnen.", answers: ["Det regnar. Därför stannar vi {inne|inomhus}."], feedback: [{ contains: "därför vi", tip: "därför is een bijwoord: daarna komt eerst het werkwoord." }] }
           - { id: g9ck, type: translate, prompt: "Wil je zwemmen of wandelen?", answers: ["Vill du {bada|simma} eller {vandra|promenera|gå en promenad|ta en promenad}?"] }
+          - { id: wez3, type: translate, prompt: "Nils is moe, maar hij speelt toch voetbal.", answers: ["Nils är trött, men han spelar {fotboll ändå|ändå fotboll}."], feedback: [{ contains: "men spelar han", tip: "Na het voegwoord men blijft de gewone volgorde: men han spelar …" }] }
+          - { id: ce9x, type: translate, prompt: "We gaan niet met de bus, maar we fietsen.", answers: ["Vi {åker inte buss|åker inte med bussen|tar inte bussen}, utan [vi ]cyklar."], feedback: [{ contains: "men vi cyklar", tip: "Na een ontkenning, als je iets vervangt door iets anders: utan." }] }
+          - { id: yyvj, type: translate, prompt: "Het is warm. Daarom zwemmen we in het meer.", answers: ["Det är varmt. Därför {badar|simmar} vi i sjön."], feedback: [{ contains: "därför vi", tip: "därför is een bijwoord: daarna komt eerst het werkwoord." }] }
+          - { id: b5q8, type: translate, prompt: "Wilma heeft honger, dus ze eet een appel.", answers: ["Wilma är hungrig, så hon äter ett äpple."], feedback: [{ contains: "så äter hon", tip: "Na het voegwoord så blijft de gewone volgorde: så hon äter …" }, { contains: "har hunger", tip: "Honger hebben = vara hungrig." }] }
 
       - id: ik-ook
         title: Ik ook!
@@ -152,6 +164,8 @@ sections:
           - { id: suza, type: mc, prompt: "– Jag har en katt. – (Jij ook.)", options: ["Det gör jag också.", "Det har jag också.", "Jag har också."], answer: 1, tip: "Bij har herhaal je har." }
           - { id: byzm, type: mc, prompt: "– Jag dricker inte kaffe. – (Jij wel.)", options: ["Men det gör jag.", "Inte jag heller.", "Det gör inte jag."], answer: 0, tip: "De ander doet het niet, jij wel: Men det gör jag." }
           - { id: cnyu, type: mc, prompt: "– Jag tycker om vintern. – (Jij niet.)", options: ["Det gör inte jag.", "Inte jag heller.", "Men det gör jag."], answer: 0, tip: "De ander wel, jij niet: Det gör inte jag." }
+          - { id: cu3g, type: mc, prompt: "– Jag bor i Sverige. – (Jij ook.)", options: ["Det gör jag också.", "Det bor jag också.", "Inte jag heller."], answer: 0, tip: "bor is een gewoon werkwoord: dan gebruik je gör." }
+          - { id: 3nxk, type: mc, prompt: "– Jag har ingen bil. – (Jij ook niet.)", options: ["Inte jag heller.", "Det har jag också.", "Men det har jag."], answer: 0, tip: "Ook niet: Inte jag heller." }
 
       - id: ik-ook-vertalen
         title: Ik ook – zelf schrijven
@@ -163,6 +177,9 @@ sections:
           - { id: 4w37, type: translate, prompt: "– Jag ska åka till Gotland. – Ik ook.", answers: ["Det ska jag också."] }
           - { id: yapn, type: translate, prompt: "– Jag förstår inte. – Ik ook niet.", answers: ["Inte jag heller.", "Det gör inte jag heller."], feedback: [{ contains: "också", tip: "Bij een ontkenning: heller in plaats van också." }] }
           - { id: kdcd, type: translate, prompt: "– Jag jobbar hemma idag. – Ik niet.", answers: ["Det gör inte jag.", "Inte jag."] }
+          - { id: qvbs, type: translate, prompt: "– Jag är hungrig. – Ik ook.", answers: ["Det är jag också."], feedback: [{ match: "Det gör jag också", tip: "Bij är herhaal je är." }] }
+          - { id: g443, type: translate, prompt: "– Jag kan inte simma. – Ik ook niet.", answers: ["Inte jag heller.", "Det kan inte jag heller."], feedback: [{ contains: "också", tip: "Bij een ontkenning: heller in plaats van också." }] }
+          - { id: hyu8, type: translate, prompt: "– Jag gillar inte regn. – Ik wel.", answers: ["Men det gör jag.", "Det gör jag."] }
 
       - id: weer-koppelen
         title: Het weer
@@ -190,6 +207,9 @@ sections:
           - { id: 9sx6, type: gap, text: "Idag är det 25 grader. Det är ___ (warm).", gaps: [{ answers: ["varmt"], feedback: [{ match: "varm", tip: "Na det är krijgt het weerwoord een -t: varmt." }] }] }
           - { id: 23yh, type: gap, text: "Ta på dig mössan, det är ___ (koud)!", gaps: [{ answers: ["kallt"], feedback: [{ match: ["kall", "kalt"], tip: "Na det är: kall + t = kallt." }] }] }
           - { id: u88h, type: gap, text: "Det ___ (blåsa) mycket vid havet.", gaps: [{ answers: ["blåser"] }] }
+          - { id: jddf, type: gap, text: "Det är ___ (zonnig) idag.", gaps: [{ answers: ["soligt"], feedback: [{ match: "solig", tip: "Na det är krijgt het weerwoord een -t: soligt." }] }] }
+          - { id: nrep, type: gap, text: "Det ___ (åska) ikväll, så stanna inne!", gaps: [{ answers: ["åskar"] }] }
+          - { id: 5ujr, type: gap, text: "Det är ___ (bewolkt), men det regnar inte.", gaps: [{ answers: ["molnigt"], feedback: [{ match: "molnig", tip: "Na det är krijgt het weerwoord een -t: molnigt." }] }] }
 
       - id: allemansrecht
         title: Mag dat?
@@ -203,6 +223,8 @@ sections:
           - { id: ws7p, type: truefalse, statement: "Du får gå genom någons trädgård.", answer: false, tip: "Een tuin bij iemands huis is privé." }
           - { id: 9vfn, type: truefalse, statement: "Du får bada i sjön.", answer: true }
           - { id: 5erf, type: truefalse, statement: "Du får köra bil i skogen där det inte finns någon väg.", answer: false, tip: "Met een auto mag je niet de natuur in (terrängen)." }
+          - { id: rxgc, type: truefalse, statement: "Du får lämna skräp i naturen.", answer: false, tip: "Je neemt je afval altijd mee." }
+          - { id: 6jsr, type: truefalse, statement: "Du får plocka svamp i skogen.", answer: true }
 
       - id: lezen-stuga
         title: "Lezen: een weekend in het zomerhuisje"
@@ -262,6 +284,34 @@ sections:
           - { id: tccr, type: findError, topic: ocksa-heller, sentence: "– Jag gillar glass. – Det är jag också.", wrong: [6], answers: ["– Jag gillar glass. – Det gör jag också."], tip: "Welk werkwoord gebruik je in het korte antwoord?" }
           - { id: gmdp, type: findError, topic: ocksa-heller, sentence: "– Jag dricker inte kaffe. – Inte jag också.", wrong: [8], answers: ["– Jag dricker inte kaffe. – Inte jag heller."], tip: "Ook niet …" }
           - { id: bv46, type: findError, topic: konjunktioner, sentence: "Nils är sjuk, för han stannar hemma.", wrong: [3], answers: ["Nils är sjuk, så han stannar hemma."], tip: "Is het een reden of een gevolg?" }
+
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: konjunktioner
+        shuffle: true
+        items:
+          - { id: ywgf, type: listen, say: "Jag stannar hemma, för jag är sjuk.", prompt: "Welk voegwoord hoor je?", options: ["för", "så", "men"], answer: 0 }
+          - { id: hbcu, type: listen, say: "Det regnar, så vi tar bussen.", prompt: "Welk voegwoord hoor je?", options: ["så", "för", "och"], answer: 0 }
+          - { id: cqt7, type: listen, say: "Vi åker inte till Spanien utan till Grekland.", prompt: "Welk voegwoord hoor je?", options: ["utan", "men", "eller"], answer: 0 }
+          - { id: 2np2, type: listen, say: "Det gör jag också.", prompt: "Wat betekent het?", options: ["Ik ook.", "Ik ook niet.", "Ik niet."], answer: 0, topic: ocksa-heller }
+          - { id: fndm, type: listen, say: "Det blåser och regnar idag.", prompt: "Hoe is het weer?", options: ["winderig en regenachtig", "zonnig en warm", "koud, en het sneeuwt"], answer: 0, topic: vader }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: konjunktioner
+        shuffle: true
+        items:
+          - { id: z7ca, type: listen, say: "Det är kallt, men solen skiner." }
+          - { id: k3jn, type: listen, say: "Därför stannar vi inne." }
+          - { id: 3wur, type: listen, say: "Inte jag heller." }
+          - { id: 89k9, type: listen, say: "Vill du ha te eller kaffe?" }
+          - { id: 2dsp, type: listen, say: "Det snöar i Kiruna." }
 
   - id: herhaling
     title: Herhaling

@@ -591,6 +591,34 @@ sections:
           - { id: mj95, type: findError, topic: vragen, sentence: "Var heter du?", wrong: [0], answers: ["Vad heter du?"], tip: "Kijk naar het vraagwoord." }
           - { id: 7xxf, type: findError, topic: pronomen, sentence: "Vi har ett hus. Den ligger i Västerås.", wrong: [4], answers: ["Vi har ett hus. Det ligger i Västerås."], tip: "Welk voornaamwoord hoort bij een ett-woord?" }
 
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: klockan
+        shuffle: true
+        items:
+          - { id: s9ed, type: listen, say: "Klockan är halv tre.", prompt: "Hoe laat is het?", options: ["2.30", "3.30", "1.30"], answer: 0 }
+          - { id: fyvf, type: listen, say: "Klockan är kvart över sju.", prompt: "Hoe laat is het?", options: ["7.15", "6.45", "7.45"], answer: 0 }
+          - { id: cdjn, type: listen, say: "Jag är trettiofyra år.", prompt: "Welk getal hoor je?", options: ["34", "43", "24"], answer: 0, topic: raknord }
+          - { id: 3h46, type: listen, say: "Mitt nummer slutar på sjuttiosex.", prompt: "Welk getal hoor je?", options: ["76", "67", "16"], answer: 0, topic: raknord }
+          - { id: rz8g, type: listen, say: "Hon kommer från Danmark.", prompt: "Waar komt ze vandaan?", options: ["Denemarken", "Nederland", "Duitsland"], answer: 0, topic: presens }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: presens
+        shuffle: true
+        items:
+          - { id: swas, type: listen, say: "Jag heter Bram." }
+          - { id: 4wpd, type: listen, say: "Var bor du?" }
+          - { id: e96r, type: listen, say: "Vi bor i Västerås." }
+          - { id: 3apr, type: listen, say: "Hon talar lite svenska." }
+          - { id: g558, type: listen, say: "Hur mår du?" }
+
 vocab:
   - { sv: "en bil", nl: "een auto", def: "bilen", pl: "bilar", plDef: "bilarna" }
   - { sv: "ett hus", nl: "een huis", def: "huset", pl: "hus", plDef: "husen" }

@@ -111,6 +111,9 @@ sections:
           - { id: gfc5, type: translate, prompt: "Waar denk je aan?", answers: ["Vad tänker du på?"], feedback: [{ match: "På vad tänker du", tip: "Het voorzetsel staat in het Zweeds meestal aan het eind: Vad tänker du på?" }] }
           - { id: 8ype, type: translate, prompt: "Wij zijn van plan een feest te geven.", answers: ["Vi tänker {ha|ordna} [en ]fest."], feedback: [{ contains: "tänker att", tip: "Na tänker (van plan zijn) komt de infinitief zonder att." }] }
           - { id: 38ws, type: translate, prompt: "Wat vind je van Västerås?", answers: ["Vad tycker du om Västerås?"], topic: vragen }
+          - { id: 2x45, type: translate, prompt: "Ik vind het eten lekker.", answers: ["Jag tycker [att ]maten är god.", "Jag tycker om maten."], feedback: [{ contains: ["tror att maten", "tror maten"], tip: "Een mening (vinden): tycker." }] }
+          - { id: exrh, type: translate, prompt: "Denk je dat Olle komt?", answers: ["Tror du [att ]Olle kommer?"], topic: vragen, feedback: [{ contains: "tycker du", tip: "Je vraagt naar een vermoeden, niet naar een mening: tror." }] }
+          - { id: gum3, type: translate, prompt: "Ik denk vaak aan mijn familie.", answers: ["Jag tänker ofta på min familj."], feedback: [{ contains: ["tror ofta", "tycker ofta"], tip: "Aan iets denken = tänka på." }, { contains: "ofta tänker", tip: "ofta staat ná het werkwoord." }] }
 
       - id: det-finns-invullen
         title: Det finns
@@ -124,6 +127,8 @@ sections:
           - { id: 5x5s, type: gap, text: "Det finns ___ ägg i kylen.", hint: "(geen – meervoud)", gaps: [{ answers: ["inga"], options: ["ingen", "inget", "inga"], shuffle: false }] }
           - { id: gzp2, type: gap, text: "Tyvärr finns det ___ ledig plats.", hint: "(geen – plats is een en-woord)", gaps: [{ answers: ["ingen"], options: ["ingen", "inget", "inga"], shuffle: false }] }
           - { id: tk9w, type: gap, text: "Vi har ___ barn, men vi har en katt.", gaps: [{ answers: ["inga"], options: ["ingen", "inget", "inga"], shuffle: false }] }
+          - { id: jqww, type: gap, text: "Det finns ___ mjölk kvar.", hint: "(geen – mjölk is een en-woord)", gaps: [{ answers: ["ingen"], options: ["ingen", "inget", "inga"], shuffle: false }] }
+          - { id: cnpn, type: gap, text: "I vår stad ___ det många kaféer.", gaps: [{ answers: ["finns"] }] }
 
       - id: det-finns-vertalen
         title: Er is …
@@ -134,6 +139,10 @@ sections:
           - { id: g7g4, type: translate, prompt: "Is er nog koffie?", answers: ["Finns det {mer |något |}kaffe[ kvar]?"] }
           - { id: 3q8g, type: translate, prompt: "Er zijn geen eieren.", answers: ["Det finns inga ägg."], feedback: [{ contains: "inte ägg", tip: "Geen + meervoud: inga." }] }
           - { id: cejj, type: translate, prompt: "Ik heb geen auto.", answers: ["Jag har {ingen|inte någon} bil."], feedback: [{ match: "Jag har inte en bil", tip: "Geen + en-woord: ingen. „Inte en” klinkt onnatuurlijk." }] }
+          - { id: cs94, type: translate, prompt: "Er is geen melk meer.", answers: ["Det finns ingen mjölk kvar.", "Det finns inte {mer|någon} mjölk[ kvar]."] }
+          - { id: 9yky, type: translate, prompt: "Zijn er nog kaartjes?", answers: ["Finns det [några ]biljetter kvar?"], topic: vragen }
+          - { id: 66ym, type: translate, prompt: "In Zweden zijn veel meren.", answers: ["I Sverige finns det många sjöar.", "Det finns många sjöar i Sverige."], feedback: [{ contains: ["det är många sjöar", "är det många sjöar"], tip: "Er zijn (bestaan) = det finns." }, { contains: "sverige det finns", tip: "Na I Sverige vooraan komt eerst het werkwoord: I Sverige finns det …" }] }
+          - { id: b45p, type: translate, prompt: "Wij hebben geen tijd.", answers: ["Vi har {ingen|inte|inte någon} tid."] }
 
       - id: restaurant-koppelen
         title: Aan tafel
@@ -178,6 +187,9 @@ sections:
               - { answers: ["var"] }
               - { answers: ["hade"] }
               - { answers: ["blev"], feedback: [{ match: ["blidde", "blide"], tip: "bli is onregelmatig: blev." }] }
+          - { id: 2ppy, type: gap, text: "Igår ___ (vakna) jag tidigt. Jag ___ (dricka) kaffe och ___ (läsa) tidningen.", gaps: [{ answers: ["vaknade"] }, { answers: ["drack"], feedback: [{ match: ["drickade", "drickte"], tip: "dricka is sterk: drack." }] }, { answers: ["läste"], feedback: [{ match: "läsade", tip: "läsa is een -er-werkwoord (läser): läste." }] }] }
+          - { id: 86n4, type: gap, text: "I somras ___ (resa) vi till Norge. Vi ___ (bo) på ett hotell och ___ (se) fjällen.", gaps: [{ answers: ["reste"] }, { answers: ["bodde"] }, { answers: ["såg"], feedback: [{ match: ["sedde", "seed"], tip: "se is onregelmatig: såg." }] }] }
+          - { id: cr95, type: gap, text: "På festen ___ (dansa) alla. Olle ___ (hålla) ett tal, och sedan ___ (äta) vi tårta.", gaps: [{ answers: ["dansade"] }, { answers: ["höll"], feedback: [{ match: ["hållde", "hålde"], tip: "hålla is sterk: höll." }] }, { answers: ["åt"], feedback: [{ match: ["ätte", "ätade"], tip: "äta is sterk: åt." }] }] }
 
       - id: verhaal-volgorde
         title: Het verhaal op volgorde
@@ -188,6 +200,10 @@ sections:
           - { id: shuk, type: order, start: "Sedan", tokens: ["Olle", "tal", "höll", "ett"], answers: ["Sedan höll Olle ett tal."] }
           - { id: b5bx, type: order, start: "Till slut", tokens: ["alla", "dansade"], answers: ["Till slut dansade alla."] }
           - { id: kgw8, type: order, start: "När festen var slut", tokens: ["gick", "vi", "hem"], answers: ["När festen var slut gick vi hem."] }
+          - { id: ft79, type: order, start: "Efter middagen", tokens: ["vi", "kaffe", "drack"], answers: ["Efter middagen drack vi kaffe."] }
+          - { id: 6hzm, type: order, start: "Sedan", tokens: ["till sjön", "gick", "alla"], answers: ["Sedan gick alla till sjön."] }
+          - { id: tczs, type: order, start: "Klockan elva", tokens: ["hem", "åkte", "Fleur och Bram"], answers: ["Klockan elva åkte Fleur och Bram hem."] }
+          - { id: khaw, type: order, start: "Till slut", tokens: ["somnade", "vi"], answers: ["Till slut somnade vi."] }
 
       - id: lezen-kraftskiva
         title: "Lezen: kräftskiva"
@@ -246,6 +262,34 @@ sections:
           - { id: g5re, type: findError, topic: det-finns, sentence: "Det finns inte ägg i kylen.", wrong: [2], answers: ["Det finns inga ägg i kylen."], tip: "Hoe zeg je geen + meervoud?" }
           - { id: qqze, type: findError, topic: tycka-tro-tanka, sentence: "Vi tänker att åka till Paris.", wrong: [2], answers: ["Vi tänker åka till Paris."], tip: "Kijk naar wat er na tänker komt." }
           - { id: yu3d, type: findError, topic: berattande, sentence: "Först vi åt middag.", wrong: [1, 2], answers: ["Först åt vi middag."], tip: "Het werkwoord moet op plaats 2." }
+
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: tycka-tro-tanka
+        shuffle: true
+        items:
+          - { id: 6v4r, type: listen, say: "Jag tror att det blir regn.", prompt: "Welk werkwoord hoor je?", options: ["tror", "tycker", "tänker"], answer: 0 }
+          - { id: zghe, type: listen, say: "Jag tycker att maten är god.", prompt: "Welk werkwoord hoor je?", options: ["tycker", "tror", "tänker"], answer: 0 }
+          - { id: 4d47, type: listen, say: "Vi tänker åka till Gotland.", prompt: "Welk werkwoord hoor je?", options: ["tänker", "tror", "tycker"], answer: 0 }
+          - { id: ctxn, type: listen, say: "Det finns inga ägg i kylen.", prompt: "Wat betekent het?", options: ["Er zijn geen eieren.", "Er zijn nog eieren.", "Er is geen melk."], answer: 0, topic: det-finns }
+          - { id: hd97, type: listen, say: "Jag skulle vilja ha en kopp kaffe.", prompt: "Wat wil ze hebben?", options: ["een kop koffie", "een kop thee", "een glas water"], answer: 0, topic: mat-fraser }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: berattande
+        shuffle: true
+        items:
+          - { id: p5a2, type: listen, say: "Först åt vi middag." }
+          - { id: 66nb, type: listen, say: "Sedan dansade alla." }
+          - { id: xhzy, type: listen, say: "Finns det mer kaffe?" }
+          - { id: 4pwb, type: listen, say: "Vad tycker du om maten?" }
+          - { id: gn6e, type: listen, say: "Kan vi få notan, tack?" }
 
   - id: herhaling
     title: Herhaling

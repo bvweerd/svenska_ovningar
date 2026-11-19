@@ -106,6 +106,8 @@ sections:
           - { id: pemq, type: gap, text: "Fleur läser tidningen ___ Bram diskar.", gaps: [{ answers: ["medan"], options: ["eftersom", "innan", "medan", "fastän", "tills"], shuffle: false }] }
           - { id: c6tp, type: gap, text: "Wilma har shorts på sig i dag ___ det bara är fem grader ute.", gaps: [{ answers: ["fastän"], options: ["eftersom", "innan", "medan", "fastän", "tills"], shuffle: false, feedback: [{ match: "eftersom", tip: "Ze draagt een korte broek ondanks de kou, niet omdat het koud is: fastän (hoewel)." }] }] }
           - { id: brtg, type: gap, text: "Vänta här ___ jag kommer tillbaka.", gaps: [{ answers: ["tills"], options: ["eftersom", "när", "innan", "medan", "fastän", "tills"], shuffle: false }] }
+          - { id: c2hu, type: gap, text: "Olle badar i sjön ___ vattnet bara är tio grader.", gaps: [{ answers: ["fastän"], options: ["eftersom", "innan", "medan", "fastän", "tills"], shuffle: false, feedback: [{ match: "eftersom", tip: "Hij zwemt ondanks het koude water, niet omdat het koud is: fastän (hoewel)." }] }] }
+          - { id: h7kc, type: gap, text: "Bram lagar mat ___ Fleur dukar bordet.", gaps: [{ answers: ["medan"], options: ["eftersom", "innan", "medan", "fastän", "tills"], shuffle: false }] }
 
       - id: biff-zinsbouw
         title: Inte in de bijzin
@@ -116,6 +118,10 @@ sections:
           - { id: 5cjc, type: order, start: "Han säger att", tokens: ["han", "kommer", "aldrig", "i tid"], answers: ["Han säger att han aldrig kommer i tid."] }
           - { id: ds2s, type: order, start: "Vi vet att", tokens: ["ofta", "Olle", "fiskar"], answers: ["Vi vet att Olle ofta fiskar."] }
           - { id: tucr, type: order, start: "Jag undrar om", tokens: ["har", "inte", "de", "tid"], answers: ["Jag undrar om de inte har tid."] }
+          - { id: q897, type: order, start: "Hon säger att", tokens: ["inte", "hon", "kan", "komma"], answers: ["Hon säger att hon inte kan komma."] }
+          - { id: sdnw, type: order, start: "Jag vet att", tokens: ["cyklar", "Bram", "alltid"], answers: ["Jag vet att Bram alltid cyklar."] }
+          - { id: hw4h, type: order, start: "Vi stannar hemma eftersom", tokens: ["regnar", "det", "fortfarande"], answers: ["Vi stannar hemma eftersom det fortfarande regnar."] }
+          - { id: e4xu, type: order, start: "Det är synd att", tokens: ["stannar", "ni", "inte"], answers: ["Det är synd att ni inte stannar."] }
 
       - id: biff-kiezen
         title: Hoofdzin of bijzin?
@@ -127,6 +133,10 @@ sections:
           - { id: caa6, type: mc, prompt: "Hij zegt dat hij nooit koffie drinkt.", options: ["Han säger att han aldrig dricker kaffe.", "Han säger att han dricker aldrig kaffe.", "Han aldrig säger att han dricker kaffe."], answer: 0, tip: "In de bijzin staat aldrig vóór het werkwoord." }
           - { id: mu47, type: mc, prompt: "Als het regent, blijven we thuis.", options: ["Om det regnar stannar vi hemma.", "Om det regnar vi stannar hemma.", "Om regnar det stannar vi hemma."], answer: 0, tip: "Bijzin vooraan = plaats 1. Dan direct het werkwoord van de hoofdzin." }
           - { id: xtdf, type: mc, prompt: "Ik weet dat ze vaak thuiswerkt.", options: ["Jag vet att hon ofta jobbar hemma.", "Jag vet att hon jobbar ofta hemma.", "Jag vet att ofta jobbar hon hemma."], answer: 0, tip: "In de bijzin staat ofta vóór het werkwoord." }
+          - { id: knfn, type: mc, prompt: "Ze zegt dat ze nooit vlees eet.", options: ["Hon säger att hon aldrig äter kött.", "Hon säger att hon äter aldrig kött.", "Hon aldrig säger att hon äter kött."], answer: 0, tip: "In de bijzin staat aldrig vóór het werkwoord." }
+          - { id: 5p6f, type: mc, prompt: "Als je niet komt, bel me dan.", options: ["Om du inte kommer, ring mig.", "Om du kommer inte, ring mig.", "Om inte du kommer, ring mig."], answer: 0, tip: "In de bijzin staat inte vóór het werkwoord." }
+          - { id: xtys, type: mc, prompt: "Omdat Nils niet thuis is, eten we zonder hem.", options: ["Eftersom Nils inte är hemma äter vi utan honom.", "Eftersom Nils är inte hemma äter vi utan honom.", "Eftersom Nils inte är hemma vi äter utan honom."], answer: 0, tip: "In de bijzin staat inte vóór är. Na de bijzin vooraan komt direct het werkwoord van de hoofdzin." }
+          - { id: xy9g, type: mc, prompt: "Ik denk dat ze het altijd vergeet.", options: ["Jag tror att hon alltid glömmer det.", "Jag tror att hon glömmer alltid det.", "Jag tror alltid att hon glömmer det."], answer: 0, tip: "In de bijzin staat alltid vóór het werkwoord." }
 
       - id: bijzin-vooraan
         title: Begin met de bijzin
@@ -137,6 +147,10 @@ sections:
           - { id: fs5w, type: order, start: "Om det regnar", tokens: ["vi", "inne", "stannar"], answers: ["Om det regnar stannar vi inne."] }
           - { id: mhnj, type: order, start: "Eftersom Nils är sjuk", tokens: ["stannar", "han", "hemma"], answers: ["Eftersom Nils är sjuk stannar han hemma."] }
           - { id: gfcr, type: order, start: "Innan vi flyttar", tokens: ["vi", "måste", "städa"], answers: ["Innan vi flyttar måste vi städa."] }
+          - { id: c727, type: order, start: "När filmen är slut", tokens: ["vi", "hem", "går"], answers: ["När filmen är slut går vi hem."] }
+          - { id: t9xj, type: order, start: "Om du vill", tokens: ["du", "stanna", "kan"], answers: ["Om du vill kan du stanna."] }
+          - { id: de4y, type: order, start: "Medan Bram diskar", tokens: ["läser", "Fleur", "en bok"], answers: ["Medan Bram diskar läser Fleur en bok."] }
+          - { id: vg77, type: order, start: "Fastän det är kallt", tokens: ["Olle", "badar"], answers: ["Fastän det är kallt badar Olle."] }
 
       - id: for-att-eftersom
         title: För att of eftersom?
@@ -148,6 +162,10 @@ sections:
           - { id: upqq, type: gap, text: "___ Fleur behöver mjölk går hon till affären.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (Fleur behöver): dan altijd eftersom. För att (omdat) kan alleen ná de hoofdzin." }] }] }
           - { id: 3fr6, type: gap, text: "___ vi vill köpa ett hus sparar vi pengar.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (vi vill): dan altijd eftersom." }] }] }
           - { id: z2nk, type: gap, text: "Vi sparar pengar ___ köpa ett hus.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false }] }
+          - { id: jqdk, type: gap, text: "Olle går upp tidigt ___ hinna med bussen.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false, feedback: [{ match: "eftersom", tip: "Na het gat volgt een infinitief (hinna): för att = om te." }] }] }
+          - { id: z743, type: gap, text: "___ det regnade stannade vi inne.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (det regnade): dan altijd eftersom." }] }] }
+          - { id: qzek, type: gap, text: "Wilma pluggar mycket ___ klara provet.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false }] }
+          - { id: 6t9d, type: gap, text: "___ Bram inte har bil tar han bussen.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false }] }
 
       - id: sin-of-hans
         title: Sin of hans?
@@ -162,6 +180,7 @@ sections:
           - { id: uw9r, type: gap, text: "Fleur och Bram säljer ___ bil.", gaps: [{ answers: ["sin"], options: ["sin", "deras"], shuffle: false, feedback: [{ match: "deras", tip: "Het is hun eigen auto en zij zijn het onderwerp: sin." }] }] }
           - { id: 7hr4, type: gap, text: "Nils är ledsen. Wilma har tagit ___ cykel.", gaps: [{ answers: ["hans"], options: ["sin", "hans"], shuffle: false, feedback: [{ match: "sin", tip: "Het is de fiets van Nils; Wilma is het onderwerp: hans." }] }] }
           - { id: 3ujn, type: gap, text: "Ingrid vattnar ___ blommor i trädgården.", gaps: [{ answers: ["sina"], options: ["sin", "sina", "hennes"], shuffle: false, feedback: [{ match: "hennes", tip: "Het zijn Ingrids eigen bloemen en Ingrid is het onderwerp: sina." }, { match: "sin", tip: "blommor is meervoud: sina." }] }] }
+          - { id: pbaj, type: gap, text: "Bram ringer ___ mamma varje söndag.", gaps: [{ answers: ["sin"], options: ["sin", "hans"], shuffle: false, feedback: [{ match: "hans", tip: "Het is Brams eigen moeder en Bram is het onderwerp: sin." }] }] }
 
       - id: sin-vertalen
         title: Vertaal met sin, sitt of sina
@@ -172,6 +191,10 @@ sections:
           - { id: 7v8b, type: translate, prompt: "Wilma belt haar (eigen) vriendin.", answers: ["Wilma ringer [till ]{sin kompis|sin vän|sin väninna}."], feedback: [{ contains: "hennes", tip: "Haar eigen vriendin, en Wilma is het onderwerp: sin." }] }
           - { id: nr59, type: translate, prompt: "Ze verkopen hun (eigen) huis.", answers: ["De säljer sitt hus."], feedback: [{ contains: "deras hus", tip: "Hun eigen huis, en zij zijn het onderwerp: sitt." }, { contains: "sin hus", tip: "hus is een ett-woord: sitt." }] }
           - { id: 5znh, type: translate, prompt: "Olle en zijn vrouw wonen in Västerås.", answers: ["Olle och hans fru bor i Västerås."], feedback: [{ contains: "sin fru", tip: "Hier hoort de vrouw bij het onderwerp zelf. Dan geen sin: Olle och hans fru." }] }
+          - { id: jvdc, type: translate, prompt: "Nils leest zijn (eigen) boek.", answers: ["Nils läser sin bok."], feedback: [{ contains: "hans bok", tip: "Nils' eigen boek, en Nils is het onderwerp: sin." }] }
+          - { id: skpu, type: translate, prompt: "Fleur zoekt haar (eigen) telefoon.", answers: ["Fleur letar efter sin {mobil|telefon}."], feedback: [{ contains: "hennes", tip: "Fleurs eigen telefoon, en Fleur is het onderwerp: sin." }] }
+          - { id: rg5t, type: translate, prompt: "Bram kent Olle en zijn vrouw.", answers: ["Bram känner Olle och hans fru."], feedback: [{ contains: "sin fru", tip: "Bram is het onderwerp, maar de vrouw hoort bij Olle: hans." }] }
+          - { id: kdd8, type: translate, prompt: "De kinderen spelen met hun (eigen) hond.", answers: ["Barnen leker med sin hund."], feedback: [{ contains: "deras hund", tip: "Hun eigen hond, en de kinderen zijn het onderwerp: sin." }, { contains: "spelar", tip: "Spelen van kinderen (zonder spel) is leka." }] }
 
       - id: waar-staat-het
         title: Waar staat het?
@@ -263,6 +286,34 @@ sections:
           - { id: 4wqg, type: findError, topic: bisats-ordfoljd, sentence: "När jag kommer hem jag äter middag.", wrong: [4, 5], answers: ["När jag kommer hem äter jag middag."], tip: "De bijzin staat vooraan: wat komt er dan?" }
           - { id: nc34, type: findError, topic: subjunktioner, sentence: "Fleur går till affären eftersom köpa mjölk.", wrong: [4], answers: ["Fleur går till affären för att köpa mjölk."], tip: "Na het voegwoord komt een infinitief." }
           - { id: e8vn, type: findError, topic: bisats-ordfoljd, sentence: "Han säger att han kommer aldrig i tid.", wrong: [5, 6], answers: ["Han säger att han aldrig kommer i tid."], tip: "Denk aan BIFF." }
+
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: bisats-ordfoljd
+        shuffle: true
+        items:
+          - { id: 3v6y, type: listen, say: "Jag vet att hon inte kommer.", prompt: "Welke zin hoor je?", options: ["Jag vet att hon inte kommer.", "Jag vet att hon kommer inte.", "Jag vet inte att hon kommer."], answer: 0 }
+          - { id: kxzx, type: listen, say: "Om det regnar stannar vi hemma.", prompt: "Welke zin hoor je?", options: ["Om det regnar stannar vi hemma.", "Om det regnar vi stannar hemma.", "Om regnar det stannar vi hemma."], answer: 0 }
+          - { id: 6pq7, type: listen, say: "Olle letar efter sina nycklar.", prompt: "Welk woord hoor je?", options: ["sina", "hans", "sin"], answer: 0, topic: sin-sitt-sina }
+          - { id: v2sv, type: listen, say: "Katten ligger under sängen.", prompt: "Waar ligt de kat?", options: ["onder het bed", "op het bed", "naast het bed"], answer: 0, topic: prep-plats }
+          - { id: tug4, type: listen, say: "Lampan står bredvid soffan.", prompt: "Waar staat de lamp?", options: ["naast de bank", "achter de bank", "voor de bank"], answer: 0, topic: prep-plats }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: subjunktioner
+        shuffle: true
+        items:
+          - { id: u47m, type: listen, say: "Jag stannar hemma eftersom jag är sjuk." }
+          - { id: s8j8, type: listen, say: "När jag kommer hem äter jag." }
+          - { id: 4fk4, type: listen, say: "Hon säger att hon aldrig röker." }
+          - { id: wt88, type: listen, say: "Wilma städar sitt rum." }
+          - { id: 8ruy, type: listen, say: "Boken ligger på bordet." }
 
   - id: herhaling
     title: Herhaling

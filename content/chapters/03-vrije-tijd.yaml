@@ -263,6 +263,34 @@ sections:
           - { id: 2r5j, type: findError, topic: tycka-om, sentence: "Wilma tycker om inte fisk.", wrong: [2, 3], answers: ["Wilma tycker inte om fisk."], tip: "Kijk waar inte staat." }
           - { id: f7g5, type: findError, topic: objekt, sentence: "Kan du hjälpa vi?", wrong: [3], answers: ["Kan du hjälpa oss?"], tip: "Kijk naar de voornaamwoorden." }
 
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: frekvens
+        shuffle: true
+        items:
+          - { id: 98vn, type: listen, say: "Bram spelar aldrig tennis.", prompt: "Hoe vaak tennist Bram?", options: ["nooit", "altijd", "soms"], answer: 0 }
+          - { id: 3bsb, type: listen, say: "Wilma läser ofta på kvällen.", prompt: "Hoe vaak leest Wilma 's avonds?", options: ["vaak", "zelden", "nooit"], answer: 0 }
+          - { id: ga38, type: listen, say: "Olle fiskar ibland i sjön.", prompt: "Hoe vaak vist Olle?", options: ["soms", "altijd", "nooit"], answer: 0 }
+          - { id: 2aar, type: listen, say: "Jag ser henne på bion.", prompt: "Welk woord hoor je?", options: ["henne", "hon", "hennes"], answer: 0, topic: objekt }
+          - { id: vck7, type: listen, say: "Nils tycker om att spela fotboll.", prompt: "Waar houdt Nils van?", options: ["voetballen", "tennissen", "zwemmen"], answer: 0, topic: tycka-om }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: frekvens
+        shuffle: true
+        items:
+          - { id: kvqb, type: listen, say: "Jag brukar cykla till jobbet." }
+          - { id: ku9g, type: listen, say: "Vi går på bio ibland." }
+          - { id: xqa9, type: listen, say: "Hon gillar att dansa." }
+          - { id: u2rr, type: listen, say: "Han tycker inte om fisk." }
+          - { id: jtya, type: listen, say: "Ringer du honom?" }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 3.

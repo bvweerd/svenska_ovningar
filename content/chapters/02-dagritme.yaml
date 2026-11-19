@@ -423,6 +423,34 @@ sections:
           - { id: kx6r, type: findError, topic: dagar, sentence: "Vi ses på Måndag.", wrong: [3], answers: ["Vi ses på måndag."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
           - { id: b9ud, type: findError, topic: modala, sentence: "Imorgon jag kan inte komma.", wrong: [1, 2], answers: ["Imorgon kan jag inte komma."], tip: "Het werkwoord moet op plaats 2." }
 
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: dagar
+        shuffle: true
+        items:
+          - { id: ck4j, type: listen, say: "På tisdagar spelar Nils fotboll.", prompt: "Wanneer speelt Nils voetbal?", options: ["elke dinsdag", "aanstaande dinsdag", "afgelopen dinsdag"], answer: 0 }
+          - { id: smew, type: listen, say: "På torsdag ska vi åka till Uppsala.", prompt: "Wanneer gaan ze naar Uppsala?", options: ["aanstaande donderdag", "elke donderdag", "afgelopen donderdag"], answer: 0 }
+          - { id: nqxg, type: listen, say: "Barnen leker i parken.", prompt: "Welke vorm hoor je?", options: ["barnen", "barnet", "barn"], answer: 0, topic: plural }
+          - { id: saj8, type: listen, say: "Stäng dörren, är du snäll!", prompt: "Wat moet je doen?", options: ["de deur dichtdoen", "de deur opendoen", "het raam dichtdoen"], answer: 0, topic: imperativ }
+          - { id: gxqj, type: listen, say: "Vi måste gå nu.", prompt: "Welk werkwoord hoor je?", options: ["måste", "kan", "vill"], answer: 0, topic: modala }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: tidsuttryck
+        shuffle: true
+        items:
+          - { id: 8wrr, type: listen, say: "Klockan sju vaknar Fleur." }
+          - { id: 3bd8, type: listen, say: "På kvällen tittar vi på tv.", answers: ["På kvällen tittar vi på {tv|teve}."] }
+          - { id: 5r6g, type: listen, say: "Nils måste gå till skolan." }
+          - { id: 5tm5, type: listen, say: "Kan du hjälpa mig?" }
+          - { id: 9s6y, type: listen, say: "Bussen går klockan åtta." }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 en 2.

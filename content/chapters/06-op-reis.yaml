@@ -278,6 +278,34 @@ sections:
           - { id: ekfz, type: findError, topic: transport, sentence: "Bram går buss till jobbet.", wrong: [1], answers: ["Bram åker buss till jobbet."], tip: "Lopen of met een voertuig?" }
           - { id: kbaw, type: findError, topic: ordningstal, sentence: "Vi åker hem den 5 Juli.", wrong: [5], answers: ["Vi åker hem den 5 juli."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
 
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: transport
+        shuffle: true
+        items:
+          - { id: uxqg, type: listen, say: "Tåget går kvart över tio.", prompt: "Hoe laat vertrekt de trein?", options: ["10.15", "9.45", "10.45"], answer: 0 }
+          - { id: 6wkc, type: listen, say: "Biljetten kostar nittiofem kronor.", prompt: "Hoeveel kost het kaartje?", options: ["95 kronor", "59 kronor", "90 kronor"], answer: 0, topic: pengar }
+          - { id: fjej, type: listen, say: "Vi åker den tredje juli.", prompt: "Welke datum hoor je?", options: ["3 juli", "13 juli", "30 juli"], answer: 0, topic: ordningstal }
+          - { id: 65fz, type: listen, say: "I somras var vi på Gotland.", prompt: "Wanneer waren ze op Gotland?", options: ["vorige zomer", "deze zomer", "elke zomer"], answer: 0, topic: tidsprep }
+          - { id: fux3, type: listen, say: "Bussen går om tio minuter.", prompt: "Wanneer vertrekt de bus?", options: ["over tien minuten", "tien minuten geleden", "tien minuten lang"], answer: 0, topic: tidsprep }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: transport
+        shuffle: true
+        items:
+          - { id: s99t, type: listen, say: "Jag tar tåget till Stockholm." }
+          - { id: c5mm, type: listen, say: "Var ska jag byta?" }
+          - { id: xw59, type: listen, say: "En biljett till Uppsala, tack." }
+          - { id: ekfk, type: listen, say: "Hon åker buss till jobbet." }
+          - { id: sptf, type: listen, say: "Vi flyger till London i morgon.", answers: ["Vi flyger till London {i morgon|imorgon}."] }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 6.

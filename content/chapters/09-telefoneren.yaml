@@ -123,6 +123,8 @@ sections:
             answer: 0
             shuffle: false
             tip: "Had gelezen = hade + supinum."
+          - { id: w9bf, type: gap, text: "Vi hade redan ___ (äta) när gästerna kom.", gaps: [{ answers: ["ätit"], feedback: [{ match: ["ätat", "ätt"], tip: "äta is sterk: åt – ätit." }] }] }
+          - { id: hfg3, type: gap, text: "Bram hade ___ (glömma) nyckeln hemma.", gaps: [{ answers: ["glömt"], feedback: [{ match: ["glömmt", "glömmat"], tip: "glömma – glömde – glömt: met één m vóór de -t." }] }] }
 
       - id: att-of-om
         title: Att of om?
@@ -135,6 +137,9 @@ sections:
           - { id: fye7, type: gap, text: "Jag undrar ___ det regnar i Stockholm.", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false }] }
           - { id: kexa, type: gap, text: "Vi tror ___ det blir bra.", gaps: [{ answers: ["att"], options: ["att", "om"], shuffle: false }] }
           - { id: ebqf, type: gap, text: "Vet du ___ affären är öppen?", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false }] }
+          - { id: wqjn, type: gap, text: "Kan du kolla ___ tåget är försenat?", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false }] }
+          - { id: 2rp9, type: gap, text: "Mamma säger ___ maten är klar.", gaps: [{ answers: ["att"], options: ["att", "om"], shuffle: false }] }
+          - { id: ptzm, type: gap, text: "Jag vet inte ___ hon är hemma.", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false, feedback: [{ match: "att", tip: "Je weet het antwoord op een ja/nee-vraag niet: om (of)." }] }] }
 
       - id: indirect-maken
         title: Vertel het na
@@ -147,6 +152,8 @@ sections:
           - { id: qfqv, type: translate, prompt: "Ingrid säger: ”Vi ska åka till Göteborg.”", answers: ["Ingrid säger att de ska åka till Göteborg."], feedback: [{ match: "Ingrid säger att vi ska åka till Göteborg", tip: "Ingrid bedoelt zichzelf en haar gezin: in de indirecte rede wordt vi dan de." }] }
           - { id: dce5, type: translate, prompt: "Ingrid frågar: ”Vem ringde?”", answers: ["Ingrid frågar vem som ringde."], feedback: [{ match: "Ingrid frågar vem ringde", tip: "vem is hier het onderwerp: in de bijzin komt er som bij (vem som ringde)." }] }
           - { id: rcc6, type: translate, prompt: "Bram frågar: ”När börjar filmen?”", answers: ["Bram frågar när filmen börjar."], feedback: [{ match: "Bram frågar när börjar filmen", tip: "In de bijzin: eerst het onderwerp (filmen), dan het werkwoord (börjar)." }] }
+          - { id: vhmm, type: translate, prompt: "Wilma säger: ”Jag har ont i magen.”", answers: ["Wilma säger att hon har ont i magen."], feedback: [{ match: "Wilma säger att jag har ont i magen", tip: "Wilma praat over zichzelf: in de indirecte rede wordt dat hon." }] }
+          - { id: 3zq7, type: translate, prompt: "Olle frågar oss: ”Har ni tid imorgon?”", answers: ["Olle frågar [oss ]om vi har tid {imorgon|i morgon}."], feedback: [{ contains: "om har", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om vi har." }, { contains: "om ni har", tip: "Olle vraagt het aan ons: ni wordt vi." }] }
 
       - id: indirect-zinsbouw
         title: Vraag het beleefd
@@ -157,6 +164,10 @@ sections:
           - { id: hupg, type: order, start: "Jag vet inte", tokens: ["om", "kommer", "han"], answers: ["Jag vet inte om han kommer."] }
           - { id: 6pz3, type: order, start: "Hon undrar", tokens: ["vad", "heter", "jag"], answers: ["Hon undrar vad jag heter."] }
           - { id: 7mmv, type: order, start: "Vet du", tokens: ["när", "går", "tåget"], answers: ["Vet du när tåget går?"] }
+          - { id: hjfc, type: order, start: "Jag undrar", tokens: ["när", "börjar", "filmen"], answers: ["Jag undrar när filmen börjar."] }
+          - { id: h3hs, type: order, start: "Vet du", tokens: ["vad", "kostar", "biljetten"], answers: ["Vet du vad biljetten kostar?"] }
+          - { id: fbc5, type: order, start: "Hon frågar", tokens: ["om", "vill", "jag", "komma"], answers: ["Hon frågar om jag vill komma."] }
+          - { id: 9djc, type: order, start: "Jag vet inte", tokens: ["var", "bor", "Olle"], answers: ["Jag vet inte var Olle bor."] }
 
       - id: telefoon-koppelen
         title: Aan de telefoon
@@ -232,6 +243,34 @@ sections:
           - { id: c59j, type: findError, topic: indirekt-tal, sentence: "Hon frågar att du vill ha kaffe.", wrong: [2], answers: ["Hon frågar om du vill ha kaffe."], tip: "Is het een vraag of een bewering?" }
           - { id: egbq, type: findError, topic: tempus, sentence: "När vi kom hade tåget redan gick.", wrong: [6], answers: ["När vi kom hade tåget redan gått."], tip: "Na hade komt de supinum." }
           - { id: k4n4, type: findError, topic: indirekt-tal, sentence: "Kan du säga var ligger stationen?", wrong: [4, 5], answers: ["Kan du säga var stationen ligger?"], tip: "Kijk naar de woordvolgorde in de bijzin." }
+
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: indirekt-tal
+        shuffle: true
+        items:
+          - { id: 8z3g, type: listen, say: "Fleur frågar om Bram kommer i kväll.", prompt: "Wat vraagt Fleur?", options: ["of Bram vanavond komt", "wanneer Bram komt", "waarom Bram niet komt"], answer: 0 }
+          - { id: kspu, type: listen, say: "Olle säger att han är sjuk.", prompt: "Wat zegt Olle?", options: ["dat hij ziek is", "dat hij moe is", "dat hij later komt"], answer: 0 }
+          - { id: cyhp, type: listen, say: "Tåget hade redan gått.", prompt: "Welke vorm hoor je?", options: ["hade gått", "har gått", "gick"], answer: 0, topic: tempus }
+          - { id: tgbh, type: listen, say: "Hej, det är Ingrid. Kan jag få prata med Olle?", prompt: "Wie belt er, en voor wie?", options: ["Ingrid, ze wil Olle spreken", "Olle, hij wil Ingrid spreken", "Ingrid, ze wil Bram spreken"], answer: 0, topic: telefon }
+          - { id: 4af2, type: listen, say: "Han är inte här just nu. Vill du lämna ett meddelande?", prompt: "Wat wordt er gevraagd?", options: ["of je een bericht wilt achterlaten", "of je later terugbelt", "wat je telefoonnummer is"], answer: 0, topic: telefon }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: indirekt-tal
+        shuffle: true
+        items:
+          - { id: vgxc, type: listen, say: "Hon undrar var mobilen är." }
+          - { id: x2gb, type: listen, say: "Vet du när filmen börjar?" }
+          - { id: vfcg, type: listen, say: "Jag ringer tillbaka senare." }
+          - { id: t5q5, type: listen, say: "Han hade glömt nyckeln." }
+          - { id: 2e2f, type: listen, say: "Kan du säga var stationen ligger?" }
 
   - id: herhaling
     title: Herhaling

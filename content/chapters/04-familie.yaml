@@ -317,6 +317,34 @@ sections:
           - { id: b2n9, type: findError, topic: possessiv, sentence: "Det är mitt katt.", wrong: [2], answers: ["Det är min katt."], tip: "Is katt een en- of een ett-woord?" }
           - { id: n69y, type: findError, topic: preteritum, sentence: "Förra året vi bodde i Utrecht.", wrong: [2, 3], answers: ["Förra året bodde vi i Utrecht."], tip: "Het werkwoord moet op plaats 2." }
 
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: preteritum
+        shuffle: true
+        items:
+          - { id: jpua, type: listen, say: "Vi åt fisk igår.", prompt: "Welke tijd hoor je?", options: ["verleden tijd (preteritum)", "tegenwoordige tijd (presens)"], answer: 0 }
+          - { id: 98dg, type: listen, say: "Wilma läser en bok.", prompt: "Welke tijd hoor je?", options: ["tegenwoordige tijd (presens)", "verleden tijd (preteritum)"], answer: 0 }
+          - { id: 6s23, type: listen, say: "Olle skrev ett brev.", prompt: "Welke tijd hoor je?", options: ["verleden tijd (preteritum)", "tegenwoordige tijd (presens)"], answer: 0 }
+          - { id: h8f7, type: listen, say: "Nils går till skolan.", prompt: "Welke tijd hoor je?", options: ["tegenwoordige tijd (presens)", "verleden tijd (preteritum)"], answer: 0 }
+          - { id: 3phx, type: listen, say: "Det är min mormor.", prompt: "Wie is het?", options: ["de moeder van mijn moeder", "de moeder van mijn vader", "de zus van mijn moeder"], answer: 0, topic: familj }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: starka-verb
+        shuffle: true
+        items:
+          - { id: m4a8, type: listen, say: "Igår åt vi pizza.", answers: ["{Igår|I går} åt vi pizza."] }
+          - { id: 4mdn, type: listen, say: "Min bror bodde i Göteborg." }
+          - { id: asur, type: listen, say: "Vad gjorde du i helgen?" }
+          - { id: 5b3z, type: listen, say: "Hennes föräldrar kom på besök." }
+          - { id: 73p2, type: listen, say: "Vi drack kaffe hos mormor." }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 4.

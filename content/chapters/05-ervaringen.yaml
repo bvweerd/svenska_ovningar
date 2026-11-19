@@ -268,6 +268,34 @@ sections:
           - { id: rxum, type: findError, topic: hem-hemma, sentence: "Var ska du? Till affären.", wrong: [0], answers: ["Vart ska du? Till affären."], tip: "Plaats of richting?" }
           - { id: jfd7, type: findError, topic: perfekt-preteritum, sentence: "Vi har bott här sedan tre år.", wrong: [4], answers: ["Vi har bott här i tre år."], tip: "Kijk naar de tijdsbepaling." }
 
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: supinum
+        shuffle: true
+        items:
+          - { id: u793, type: listen, say: "Har du sett filmen?", prompt: "Welke vorm hoor je?", options: ["sett", "såg", "ser"], answer: 0 }
+          - { id: x7rs, type: listen, say: "Vi har aldrig varit i Norrland.", prompt: "Welke vorm hoor je?", options: ["varit", "var", "är"], answer: 0 }
+          - { id: smha, type: listen, say: "Jag har bott här i tre år.", prompt: "Welke vorm hoor je?", options: ["bott", "bodde", "bor"], answer: 0 }
+          - { id: hdee, type: listen, say: "Hon ska gå hem nu.", prompt: "Wat gaat ze doen?", options: ["naar huis", "thuis blijven", "naar haar werk"], answer: 0, topic: hem-hemma }
+          - { id: xph9, type: listen, say: "Han är hemma idag.", prompt: "Waar is hij?", options: ["thuis", "onderweg naar huis", "op zijn werk"], answer: 0, topic: hem-hemma }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en schrijf de zin op.
+        topic: perfekt-preteritum
+        shuffle: true
+        items:
+          - { id: vd5u, type: listen, say: "Har du ätit?" }
+          - { id: 7gb7, type: listen, say: "Jag har aldrig sett en älg." }
+          - { id: 7mwb, type: listen, say: "Förra året bodde vi i Utrecht." }
+          - { id: bpma, type: listen, say: "Vart ska du?" }
+          - { id: wqzb, type: listen, say: "Hon är äldre än jag." }
+
   - id: herhaling
     title: Herhaling
     intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 5.
