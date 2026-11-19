@@ -308,21 +308,21 @@ sections:
           - { id: 7rhm, type: mc, topic: tycka-om, prompt: "Welke zin is goed?", options: ["Mormor tycker om att baka.", "Mormor tycker om baka.", "Mormor tycker att om baka."], answer: 0, tip: "Bij een activiteit: tycker om att + infinitief." }
 
 vocab:
-  - { sv: "en familj", nl: "een gezin, een familie", def: "familjen" }
-  - { sv: "en mamma", nl: "een moeder", def: "mamman", alt: ["en mor"] }
-  - { sv: "en pappa", nl: "een vader", def: "pappan", alt: ["en far"] }
-  - { sv: "en bror", nl: "een broer", def: "brodern" }
-  - { sv: "en syster", nl: "een zus", def: "systern" }
-  - { sv: "en son", nl: "een zoon", def: "sonen" }
-  - { sv: "en dotter", nl: "een dochter", def: "dottern" }
-  - { sv: "en kusin", nl: "een neef, een nicht (kind van oom/tante)", def: "kusinen" }
-  - { sv: "en fru", nl: "een vrouw, een echtgenote", def: "frun" }
-  - { sv: "en man", nl: "een man", def: "mannen" }
-  - { sv: "ett barnbarn", nl: "een kleinkind", def: "barnbarnet" }
-  - { sv: "en present", nl: "een cadeau", def: "presenten" }
-  - { sv: "ett foto", nl: "een foto", def: "fotot" }
-  - { sv: "en fest", nl: "een feest", def: "festen" }
-  - { sv: "en trädgård", nl: "een tuin", def: "trädgården" }
+  - { sv: "en familj", nl: "een gezin, een familie", def: "familjen", pl: "familjer", plDef: "familjerna" }
+  - { sv: "en mamma", nl: "een moeder", def: "mamman", alt: ["en mor"], pl: "mammor", plDef: "mammorna" }
+  - { sv: "en pappa", nl: "een vader", def: "pappan", alt: ["en far"], pl: "pappor", plDef: "papporna" }
+  - { sv: "en bror", nl: "een broer", def: "brodern", pl: "bröder", plDef: "bröderna" }
+  - { sv: "en syster", nl: "een zus", def: "systern", pl: "systrar", plDef: "systrarna" }
+  - { sv: "en son", nl: "een zoon", def: "sonen", pl: "söner", plDef: "sönerna" }
+  - { sv: "en dotter", nl: "een dochter", def: "dottern", pl: "döttrar", plDef: "döttrarna" }
+  - { sv: "en kusin", nl: "een neef, een nicht (kind van oom/tante)", def: "kusinen", pl: "kusiner", plDef: "kusinerna" }
+  - { sv: "en fru", nl: "een vrouw, een echtgenote", def: "frun", pl: "fruar", plDef: "fruarna" }
+  - { sv: "en man", nl: "een man", def: "mannen", pl: "män", plDef: "männen" }
+  - { sv: "ett barnbarn", nl: "een kleinkind", def: "barnbarnet", pl: "barnbarn", plDef: "barnbarnen" }
+  - { sv: "en present", nl: "een cadeau", def: "presenten", pl: "presenter", plDef: "presenterna" }
+  - { sv: "ett foto", nl: "een foto", def: "fotot", pl: "foton", plDef: "fotona" }
+  - { sv: "en fest", nl: "een feest", def: "festen", pl: "fester", plDef: "festerna" }
+  - { sv: "en trädgård", nl: "een tuin", def: "trädgården", pl: "trädgårdar", plDef: "trädgårdarna" }
   - { sv: "att fylla år", nl: "jarig zijn" }
   - { sv: "att fira", nl: "vieren" }
   - { sv: "att besöka", nl: "bezoeken" }

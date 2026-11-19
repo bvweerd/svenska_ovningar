@@ -308,17 +308,17 @@ sections:
           - { id: zwaw, type: mc, topic: det-finns, prompt: "Welke zin is goed?", options: ["Finns det ett apotek här i närheten?", "Är det ett apotek här i närheten?", "Har det ett apotek här i närheten?"], answer: 0, tip: "Is er …? = Finns det …?" }
 
 vocab:
-  - { sv: "en kropp", nl: "een lichaam", def: "kroppen" }
-  - { sv: "ett huvud", nl: "een hoofd", def: "huvudet" }
-  - { sv: "en mage", nl: "een buik, een maag", def: "magen" }
-  - { sv: "en rygg", nl: "een rug", def: "ryggen" }
-  - { sv: "en hals", nl: "een hals, een keel", def: "halsen" }
-  - { sv: "en läkare", nl: "een arts, een dokter", def: "läkaren" }
-  - { sv: "en vårdcentral", nl: "een huisartsenpraktijk, een gezondheidscentrum", def: "vårdcentralen" }
-  - { sv: "ett apotek", nl: "een apotheek", def: "apoteket" }
-  - { sv: "en tablett", nl: "een tablet, een pil", def: "tabletten" }
-  - { sv: "en feber", nl: "de koorts", def: "febern" }
-  - { sv: "en förkylning", nl: "een verkoudheid", def: "förkylningen" }
+  - { sv: "en kropp", nl: "een lichaam", def: "kroppen", pl: "kroppar", plDef: "kropparna" }
+  - { sv: "ett huvud", nl: "een hoofd", def: "huvudet", pl: "huvuden", plDef: "huvudena" }
+  - { sv: "en mage", nl: "een buik, een maag", def: "magen", pl: "magar", plDef: "magarna" }
+  - { sv: "en rygg", nl: "een rug", def: "ryggen", pl: "ryggar", plDef: "ryggarna" }
+  - { sv: "en hals", nl: "een hals, een keel", def: "halsen", pl: "halsar", plDef: "halsarna" }
+  - { sv: "en läkare", nl: "een arts, een dokter", def: "läkaren", pl: "läkare", plDef: "läkarna" }
+  - { sv: "en vårdcentral", nl: "een huisartsenpraktijk, een gezondheidscentrum", def: "vårdcentralen", pl: "vårdcentraler", plDef: "vårdcentralerna" }
+  - { sv: "ett apotek", nl: "een apotheek", def: "apoteket", pl: "apotek", plDef: "apoteken" }
+  - { sv: "en tablett", nl: "een tablet, een pil", def: "tabletten", pl: "tabletter", plDef: "tabletterna" }
+  - { sv: "en feber", nl: "de koorts", def: "febern", mass: true }
+  - { sv: "en förkylning", nl: "een verkoudheid", def: "förkylningen", pl: "förkylningar", plDef: "förkylningarna" }
   - { sv: "att ligga", nl: "liggen" }
   - { sv: "att lägga", nl: "leggen" }
   - { sv: "att stå", nl: "staan" }

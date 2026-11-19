@@ -281,19 +281,19 @@ sections:
           - { id: hymq, type: gap, topic: objekt, text: "Kan du hämta ___ på stationen? (ons)", gaps: [{ answers: ["oss"], options: ["vi", "oss", "vår"] }] }
 
 vocab:
-  - { sv: "en biljett", nl: "een kaartje", def: "biljetten" }
-  - { sv: "en station", nl: "een station", def: "stationen" }
-  - { sv: "en hållplats", nl: "een halte", def: "hållplatsen" }
-  - { sv: "ett spår", nl: "een spoor", def: "spåret" }
-  - { sv: "en färja", nl: "een veerboot", def: "färjan" }
-  - { sv: "ett flygplan", nl: "een vliegtuig", def: "flygplanet" }
-  - { sv: "en krona", nl: "een kroon (munt)", def: "kronan" }
-  - { sv: "ett kort", nl: "een (bank)pas, een kaart", def: "kortet" }
-  - { sv: "ett kvitto", nl: "een bonnetje", def: "kvittot" }
-  - { sv: "en karta", nl: "een (land)kaart", def: "kartan" }
-  - { sv: "ett vandrarhem", nl: "een jeugdherberg, een hostel", def: "vandrarhemmet" }
-  - { sv: "en resväska", nl: "een koffer", def: "resväskan" }
-  - { sv: "ett hotell", nl: "een hotel", def: "hotellet" }
+  - { sv: "en biljett", nl: "een kaartje", def: "biljetten", pl: "biljetter", plDef: "biljetterna" }
+  - { sv: "en station", nl: "een station", def: "stationen", pl: "stationer", plDef: "stationerna" }
+  - { sv: "en hållplats", nl: "een halte", def: "hållplatsen", pl: "hållplatser", plDef: "hållplatserna" }
+  - { sv: "ett spår", nl: "een spoor", def: "spåret", pl: "spår", plDef: "spåren" }
+  - { sv: "en färja", nl: "een veerboot", def: "färjan", pl: "färjor", plDef: "färjorna" }
+  - { sv: "ett flygplan", nl: "een vliegtuig", def: "flygplanet", pl: "flygplan", plDef: "flygplanen" }
+  - { sv: "en krona", nl: "een kroon (munt)", def: "kronan", pl: "kronor", plDef: "kronorna" }
+  - { sv: "ett kort", nl: "een (bank)pas, een kaart", def: "kortet", pl: "kort", plDef: "korten" }
+  - { sv: "ett kvitto", nl: "een bonnetje, een bon", def: "kvittot", pl: "kvitton", plDef: "kvittona" }
+  - { sv: "en karta", nl: "een (land)kaart", def: "kartan", pl: "kartor", plDef: "kartorna" }
+  - { sv: "ett vandrarhem", nl: "een jeugdherberg, een hostel", def: "vandrarhemmet", pl: "vandrarhem", plDef: "vandrarhemmen" }
+  - { sv: "en resväska", nl: "een koffer", def: "resväskan", pl: "resväskor", plDef: "resväskorna" }
+  - { sv: "ett hotell", nl: "een hotel", def: "hotellet", pl: "hotell", plDef: "hotellen" }
   - { sv: "att åka", nl: "gaan, reizen (met een voertuig)" }
   - { sv: "att köra", nl: "(zelf) rijden" }
   - { sv: "att flyga", nl: "vliegen" }

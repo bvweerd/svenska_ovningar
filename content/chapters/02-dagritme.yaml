@@ -132,10 +132,10 @@ sections:
         fixedOrder: true
         items:
           - { id: 8ve7, type: translate, prompt: "Maandag werk ik thuis.", answers: ["På måndag {jobbar|arbetar} jag hemma."], feedback: [{ contains: "måndag jag", tip: "Na de tijdsbepaling komt eerst het werkwoord, dan pas jag." }, { match: ["Måndag jobbar jag hemma", "Måndag arbetar jag hemma"], tip: "Bijna! Voor een dag zet je „på”: på måndag." }] }
-          - { id: wrqp, type: translate, prompt: "'s Avonds kijkt Bram tv.", answers: ["{På kvällen|På kvällarna} tittar Bram på {tv|teve}."], feedback: [{ match: ["På kvällen tittar Bram tv", "På kvällarna tittar Bram tv"], tip: "Kijken naar iets is „titta på”: tittar på tv." }, { match: ["Ikväll tittar Bram på tv", "Ikväll tittar Bram på teve", "I kväll tittar Bram på tv", "I kväll tittar Bram på teve", "Bram tittar på tv ikväll", "Bram tittar på teve ikväll", "Bram tittar på tv i kväll", "Bram tittar på teve i kväll"], tip: "„Ikväll” is vanavond (één keer). 's Avonds als gewoonte is „på kvällen” of „på kvällarna”." }] }
+          - { id: wrqp, type: translate, prompt: "'s Avonds kijkt Bram tv.", answers: ["{På kvällen|På kvällarna|Om kvällarna} tittar Bram på {tv|teve}."], feedback: [{ match: ["På kvällen tittar Bram tv", "På kvällarna tittar Bram tv", "Om kvällarna tittar Bram tv"], tip: "Kijken naar iets is „titta på”: tittar på tv." }, { match: ["Ikväll tittar Bram på tv", "Ikväll tittar Bram på teve", "I kväll tittar Bram på tv", "I kväll tittar Bram på teve", "Bram tittar på tv ikväll", "Bram tittar på teve ikväll", "Bram tittar på tv i kväll", "Bram tittar på teve i kväll"], tip: "„Ikväll” is vanavond (één keer). 's Avonds als gewoonte is „på kvällen”, „på kvällarna” of „om kvällarna”." }] }
           - { id: nh5p, type: translate, prompt: "Om zeven uur eet ik ontbijt.", answers: ["Klockan sju äter jag frukost."] }
           - { id: 3nge, type: translate, prompt: "Vandaag neemt Fleur de bus.", answers: ["{Idag|I dag} tar Fleur bussen.", "{Idag|I dag} åker Fleur [med ]bussen.", "{Idag|I dag} åker Fleur buss."], feedback: [{ match: ["Idag tar Fleur en buss", "I dag tar Fleur en buss"], tip: "De bus is bepaald: bussen." }] }
-          - { id: zbhw, type: translate, prompt: "Op zaterdag slapen we lang.", answers: ["{På lördagar|På lördagarna} sover vi länge.", "På lördag sover vi länge."], feedback: [{ match: ["På lördagar sover vi lång", "På lördagarna sover vi lång", "På lördag sover vi lång"], tip: "Lang (in tijd) is „länge”; „lång” gebruik je voor lengte." }] }
+          - { id: zbhw, type: translate, prompt: "Elke zaterdag slapen we lang.", answers: ["{På lördagar|På lördagarna|Varje lördag} sover vi länge."], feedback: [{ match: ["På lördag sover vi länge", "På lördag sover vi lång"], tip: "Het gaat om een gewoonte (elke zaterdag): på lördagar. På lördag betekent aanstaande zaterdag." }, { match: ["På lördagar sover vi lång", "På lördagarna sover vi lång", "Varje lördag sover vi lång"], tip: "Lang (in tijd) is „länge”; „lång” gebruik je voor lengte." }] }
 
       - id: weekdagen
         title: De dagen van de week
@@ -417,19 +417,19 @@ sections:
           - { id: ej7n, type: translate, topic: plural, prompt: "Wij hebben twee auto's.", answers: ["Vi har två bilar."] }
 
 vocab:
-  - { sv: "en morgon", nl: "een ochtend", def: "morgonen" }
-  - { sv: "en kväll", nl: "een avond", def: "kvällen" }
-  - { sv: "en natt", nl: "een nacht", def: "natten" }
-  - { sv: "en vecka", nl: "een week", def: "veckan" }
-  - { sv: "en dag", nl: "een dag", def: "dagen" }
-  - { sv: "en frukost", nl: "een ontbijt", def: "frukosten" }
-  - { sv: "en middag", nl: "een avondmaaltijd, een diner", def: "middagen" }
-  - { sv: "ett jobb", nl: "een baan", def: "jobbet", alt: ["ett arbete"] }
-  - { sv: "en buss", nl: "een bus", def: "bussen" }
-  - { sv: "en dörr", nl: "een deur", def: "dörren" }
-  - { sv: "ett fönster", nl: "een raam", def: "fönstret" }
-  - { sv: "en kopp", nl: "een kopje", def: "koppen" }
-  - { sv: "en bok", nl: "een boek", def: "boken" }
+  - { sv: "en morgon", nl: "een ochtend", def: "morgonen", pl: "morgnar", plDef: "morgnarna" }
+  - { sv: "en kväll", nl: "een avond", def: "kvällen", pl: "kvällar", plDef: "kvällarna" }
+  - { sv: "en natt", nl: "een nacht", def: "natten", pl: "nätter", plDef: "nätterna" }
+  - { sv: "en vecka", nl: "een week", def: "veckan", pl: "veckor", plDef: "veckorna" }
+  - { sv: "en dag", nl: "een dag", def: "dagen", pl: "dagar", plDef: "dagarna" }
+  - { sv: "en frukost", nl: "een ontbijt", def: "frukosten", pl: "frukostar", plDef: "frukostarna" }
+  - { sv: "en middag", nl: "een avondmaaltijd, een diner", def: "middagen", pl: "middagar", plDef: "middagarna" }
+  - { sv: "ett jobb", nl: "een baan", def: "jobbet", alt: ["ett arbete"], pl: "jobb", plDef: "jobben" }
+  - { sv: "en buss", nl: "een bus", def: "bussen", pl: "bussar", plDef: "bussarna" }
+  - { sv: "en dörr", nl: "een deur", def: "dörren", pl: "dörrar", plDef: "dörrarna" }
+  - { sv: "ett fönster", nl: "een raam", def: "fönstret", pl: "fönster", plDef: "fönstren" }
+  - { sv: "en kopp", nl: "een kopje", def: "koppen", pl: "koppar", plDef: "kopparna" }
+  - { sv: "en bok", nl: "een boek", def: "boken", pl: "böcker", plDef: "böckerna" }
   - { sv: "att vakna", nl: "wakker worden" }
   - { sv: "att stiga upp", nl: "opstaan" }
   - { sv: "att duscha", nl: "douchen" }

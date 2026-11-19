@@ -555,21 +555,21 @@ sections:
           - { id: 7xxf, type: findError, topic: pronomen, sentence: "Vi har ett hus. Den ligger i Västerås.", wrong: [4], answers: ["Vi har ett hus. Det ligger i Västerås."], tip: "Welk voornaamwoord hoort bij een ett-woord?" }
 
 vocab:
-  - { sv: "en bil", nl: "een auto", def: "bilen" }
-  - { sv: "ett hus", nl: "een huis", def: "huset" }
-  - { sv: "ett barn", nl: "een kind", def: "barnet" }
-  - { sv: "en hund", nl: "een hond", def: "hunden" }
-  - { sv: "en katt", nl: "een kat", def: "katten" }
-  - { sv: "ett äpple", nl: "een appel", def: "äpplet" }
-  - { sv: "en tidning", nl: "een krant", def: "tidningen" }
-  - { sv: "ett bord", nl: "een tafel", def: "bordet" }
-  - { sv: "en stol", nl: "een stoel", def: "stolen" }
-  - { sv: "en lampa", nl: "een lamp", def: "lampan" }
-  - { sv: "ett kök", nl: "een keuken", def: "köket" }
-  - { sv: "en skola", nl: "een school", def: "skolan" }
-  - { sv: "ett språk", nl: "een taal", def: "språket" }
-  - { sv: "en granne", nl: "een buurman, een buurvrouw", def: "grannen" }
-  - { sv: "ett sjukhus", nl: "een ziekenhuis", def: "sjukhuset" }
+  - { sv: "en bil", nl: "een auto", def: "bilen", pl: "bilar", plDef: "bilarna" }
+  - { sv: "ett hus", nl: "een huis", def: "huset", pl: "hus", plDef: "husen" }
+  - { sv: "ett barn", nl: "een kind", def: "barnet", pl: "barn", plDef: "barnen" }
+  - { sv: "en hund", nl: "een hond", def: "hunden", pl: "hundar", plDef: "hundarna" }
+  - { sv: "en katt", nl: "een kat", def: "katten", pl: "katter", plDef: "katterna" }
+  - { sv: "ett äpple", nl: "een appel", def: "äpplet", pl: "äpplen", plDef: "äpplena" }
+  - { sv: "en tidning", nl: "een krant", def: "tidningen", pl: "tidningar", plDef: "tidningarna" }
+  - { sv: "ett bord", nl: "een tafel", def: "bordet", pl: "bord", plDef: "borden" }
+  - { sv: "en stol", nl: "een stoel", def: "stolen", pl: "stolar", plDef: "stolarna" }
+  - { sv: "en lampa", nl: "een lamp", def: "lampan", pl: "lampor", plDef: "lamporna" }
+  - { sv: "ett kök", nl: "een keuken", def: "köket", pl: "kök", plDef: "köken" }
+  - { sv: "en skola", nl: "een school", def: "skolan", pl: "skolor", plDef: "skolorna" }
+  - { sv: "ett språk", nl: "een taal", def: "språket", pl: "språk", plDef: "språken" }
+  - { sv: "en granne", nl: "een buurman, een buurvrouw", def: "grannen", pl: "grannar", plDef: "grannarna" }
+  - { sv: "ett sjukhus", nl: "een ziekenhuis", def: "sjukhuset", pl: "sjukhus", plDef: "sjukhusen" }
   - { sv: "att heta", nl: "heten" }
   - { sv: "att bo", nl: "wonen" }
   - { sv: "att jobba", nl: "werken", alt: ["att arbeta"] }

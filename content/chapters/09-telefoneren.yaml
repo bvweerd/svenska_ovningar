@@ -254,15 +254,15 @@ sections:
           - { id: 9cd3, type: mc, topic: ocksa-heller, prompt: "– Jag har ingen mobil. – (Jij ook niet.)", options: ["Inte jag heller.", "Det har jag också.", "Men det har jag."], answer: 0, tip: "Ook niet: Inte jag heller." }
 
 vocab:
-  - { sv: "en mobil", nl: "een mobiele telefoon", def: "mobilen" }
-  - { sv: "ett samtal", nl: "een (telefoon)gesprek", def: "samtalet" }
-  - { sv: "ett meddelande", nl: "een bericht", def: "meddelandet" }
-  - { sv: "ett nummer", nl: "een nummer", def: "numret" }
-  - { sv: "en dator", nl: "een computer", def: "datorn" }
-  - { sv: "ett lösenord", nl: "een wachtwoord", def: "lösenordet" }
-  - { sv: "en app", nl: "een app", def: "appen" }
-  - { sv: "ett mejl", nl: "een e-mail", def: "mejlet" }
-  - { sv: "en tid", nl: "een afspraak (bij dokter e.d.), een tijd", def: "tiden" }
+  - { sv: "en mobil", nl: "een mobiele telefoon", def: "mobilen", pl: "mobiler", plDef: "mobilerna" }
+  - { sv: "ett samtal", nl: "een (telefoon)gesprek", def: "samtalet", pl: "samtal", plDef: "samtalen" }
+  - { sv: "ett meddelande", nl: "een bericht", def: "meddelandet", pl: "meddelanden", plDef: "meddelandena" }
+  - { sv: "ett nummer", nl: "een nummer", def: "numret", pl: "nummer", plDef: "numren" }
+  - { sv: "en dator", nl: "een computer", def: "datorn", pl: "datorer", plDef: "datorerna" }
+  - { sv: "ett lösenord", nl: "een wachtwoord", def: "lösenordet", pl: "lösenord", plDef: "lösenorden" }
+  - { sv: "en app", nl: "een app", def: "appen", pl: "appar", plDef: "apparna" }
+  - { sv: "ett mejl", nl: "een e-mail", def: "mejlet", pl: "mejl", plDef: "mejlen" }
+  - { sv: "en tid", nl: "een afspraak (bij dokter e.d.), een tijd", def: "tiden", pl: "tider", plDef: "tiderna" }
   - { sv: "att ringa", nl: "bellen" }
   - { sv: "att svara", nl: "antwoorden, opnemen" }
   - { sv: "att skicka", nl: "sturen" }

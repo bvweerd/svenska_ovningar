@@ -268,18 +268,18 @@ sections:
           - { id: xmpv, type: gap, topic: possessiv, text: "Tack för maten! ___ köttbullar är de bästa! (jouw)", gaps: [{ answers: ["Dina"], options: ["Din", "Ditt", "Dina"] }] }
 
 vocab:
-  - { sv: "en kräfta", nl: "een rivierkreeft", def: "kräftan" }
-  - { sv: "en kanelbulle", nl: "een kaneelbroodje", def: "kanelbullen" }
-  - { sv: "en tårta", nl: "een taart", def: "tårtan" }
-  - { sv: "ett bröd", nl: "een brood", def: "brödet" }
-  - { sv: "en ost", nl: "een kaas", def: "osten" }
-  - { sv: "ett ägg", nl: "een ei", def: "ägget" }
-  - { sv: "en restaurang", nl: "een restaurant", def: "restaurangen" }
-  - { sv: "en meny", nl: "een menukaart", def: "menyn" }
-  - { sv: "en nota", nl: "een rekening", def: "notan" }
-  - { sv: "en gäst", nl: "een gast", def: "gästen" }
-  - { sv: "ett kylskåp", nl: "een koelkast", def: "kylskåpet", alt: ["en kyl"] }
-  - { sv: "en efterrätt", nl: "een toetje, een dessert", def: "efterrätten" }
+  - { sv: "en kräfta", nl: "een rivierkreeft", def: "kräftan", pl: "kräftor", plDef: "kräftorna" }
+  - { sv: "en kanelbulle", nl: "een kaneelbroodje", def: "kanelbullen", pl: "kanelbullar", plDef: "kanelbullarna" }
+  - { sv: "en tårta", nl: "een taart", def: "tårtan", pl: "tårtor", plDef: "tårtorna" }
+  - { sv: "ett bröd", nl: "een brood", def: "brödet", pl: "bröd", plDef: "bröden" }
+  - { sv: "en ost", nl: "een kaas", def: "osten", pl: "ostar", plDef: "ostarna" }
+  - { sv: "ett ägg", nl: "een ei", def: "ägget", pl: "ägg", plDef: "äggen" }
+  - { sv: "en restaurang", nl: "een restaurant", def: "restaurangen", pl: "restauranger", plDef: "restaurangerna" }
+  - { sv: "en meny", nl: "een menukaart", def: "menyn", pl: "menyer", plDef: "menyerna" }
+  - { sv: "en nota", nl: "een rekening", def: "notan", pl: "notor", plDef: "notorna" }
+  - { sv: "en gäst", nl: "een gast", def: "gästen", pl: "gäster", plDef: "gästerna" }
+  - { sv: "ett kylskåp", nl: "een koelkast", def: "kylskåpet", alt: ["en kyl"], pl: "kylskåp", plDef: "kylskåpen" }
+  - { sv: "en efterrätt", nl: "een toetje, een dessert", def: "efterrätten", pl: "efterrätter", plDef: "efterrätterna" }
   - { sv: "att tycka", nl: "vinden (mening)" }
   - { sv: "att tro", nl: "denken, geloven (vermoeden)" }
   - { sv: "att tänka", nl: "(na)denken, van plan zijn" }

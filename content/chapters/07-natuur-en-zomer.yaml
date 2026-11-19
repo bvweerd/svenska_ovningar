@@ -284,19 +284,19 @@ sections:
           - { id: hahu, type: mc, topic: modala, prompt: "Welke zin is goed?", options: ["Du får inte elda här.", "Du inte får elda här.", "Du får elda inte här."], answer: 0, tip: "inte staat direct na het modale werkwoord." }
 
 vocab:
-  - { sv: "ett väder", nl: "het weer", def: "vädret" }
+  - { sv: "ett väder", nl: "het weer", def: "vädret", mass: true }
   - { sv: "en sol", nl: "een zon", def: "solen" }
-  - { sv: "ett regn", nl: "de regen", def: "regnet" }
-  - { sv: "en vind", nl: "een wind", def: "vinden" }
-  - { sv: "ett moln", nl: "een wolk", def: "molnet" }
-  - { sv: "en grad", nl: "een graad", def: "graden" }
-  - { sv: "en stuga", nl: "een (zomer)huisje", def: "stugan" }
-  - { sv: "ett hav", nl: "een zee", def: "havet" }
-  - { sv: "en strand", nl: "een strand", def: "stranden" }
-  - { sv: "ett blåbär", nl: "een bosbes", def: "blåbäret" }
-  - { sv: "en svamp", nl: "een paddenstoel", def: "svampen" }
-  - { sv: "ett tält", nl: "een tent", def: "tältet" }
-  - { sv: "ett paraply", nl: "een paraplu", def: "paraplyet" }
+  - { sv: "ett regn", nl: "de regen", def: "regnet", mass: true }
+  - { sv: "en vind", nl: "een wind", def: "vinden", pl: "vindar", plDef: "vindarna" }
+  - { sv: "ett moln", nl: "een wolk", def: "molnet", pl: "moln", plDef: "molnen" }
+  - { sv: "en grad", nl: "een graad", def: "graden", pl: "grader", plDef: "graderna" }
+  - { sv: "en stuga", nl: "een (zomer)huisje", def: "stugan", pl: "stugor", plDef: "stugorna" }
+  - { sv: "ett hav", nl: "een zee", def: "havet", pl: "hav", plDef: "haven" }
+  - { sv: "en strand", nl: "een strand", def: "stranden", pl: "stränder", plDef: "stränderna" }
+  - { sv: "ett blåbär", nl: "een bosbes", def: "blåbäret", pl: "blåbär", plDef: "blåbären" }
+  - { sv: "en svamp", nl: "een paddenstoel", def: "svampen", pl: "svampar", plDef: "svamparna" }
+  - { sv: "ett tält", nl: "een tent", def: "tältet", pl: "tält", plDef: "tälten" }
+  - { sv: "ett paraply", nl: "een paraplu", def: "paraplyet", pl: ["paraplyer", "paraplyn"], plDef: ["paraplyerna", "paraplyna"] }
   - { sv: "att regna", nl: "regenen" }
   - { sv: "att snöa", nl: "sneeuwen" }
   - { sv: "att blåsa", nl: "waaien" }

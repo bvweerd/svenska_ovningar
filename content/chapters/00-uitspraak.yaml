@@ -84,7 +84,7 @@ grammar:
       |---|---|
       | jag | ja |
       | och | å |
-      | att | å |
+      | att (vóór een infinitief: *att äta*) | å |
       | mig, dig, sig | mej, dej, sej |
       | de, dem | dom |
       | det | de |
@@ -92,7 +92,7 @@ grammar:
       | sedan | sen |
       | säger | säjer |
 
-      De *å* bij *och* en *att* staat voor een **korte** o, zoals in *pot*: niet de lange klank van *två* of *på*. Wie het woord benadrukt, zegt *och* soms als *ock*.
+      De informele spelling *å* voor *och* en *att* staat voor een **korte** o, zoals in *pot*: niet de lange klank van *två* of *på*. Wie het woord benadrukt, spreekt *och* soms uit als *ock*. Het voegwoord *att* („dat”: *Jag vet att …*) spreek je meestal gewoon met t uit.
 
 sections:
   - id: oefeningen

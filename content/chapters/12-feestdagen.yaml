@@ -340,15 +340,15 @@ sections:
           - { id: 9cbq, type: translate, topic: komparation, prompt: "Dit is de mooiste dag van het jaar.", answers: ["{Det här|Detta} är den {vackraste|finaste|bästa} dagen på året."], feedback: [{ contains: "i året", tip: "Van het jaar: på året." }] }
 
 vocab:
-  - { sv: "en jul", nl: "de kerst", def: "julen" }
-  - { sv: "ett ljus", nl: "een kaars, een licht", def: "ljuset" }
-  - { sv: "en julklapp", nl: "een kerstcadeau", def: "julklappen" }
-  - { sv: "en gran", nl: "een spar, een kerstboom", def: "granen" }
-  - { sv: "en stjärna", nl: "een ster", def: "stjärnan" }
-  - { sv: "en tomte", nl: "een kabouter, een kerstman", def: "tomten" }
-  - { sv: "en pepparkaka", nl: "een gemberkoekje", def: "pepparkakan" }
-  - { sv: "en skinka", nl: "een ham", def: "skinkan" }
-  - { sv: "ett nyår", nl: "het nieuwjaar", def: "nyåret" }
+  - { sv: "en jul", nl: "de kerst", def: "julen", mass: true }
+  - { sv: "ett ljus", nl: "een kaars, een licht", def: "ljuset", pl: "ljus", plDef: "ljusen" }
+  - { sv: "en julklapp", nl: "een kerstcadeau", def: "julklappen", pl: "julklappar", plDef: "julklapparna" }
+  - { sv: "en gran", nl: "een spar, een kerstboom", def: "granen", pl: "granar", plDef: "granarna" }
+  - { sv: "en stjärna", nl: "een ster", def: "stjärnan", pl: "stjärnor", plDef: "stjärnorna" }
+  - { sv: "en tomte", nl: "een kabouter, een kerstman", def: "tomten", pl: "tomtar", plDef: "tomtarna" }
+  - { sv: "en pepparkaka", nl: "een gemberkoekje", def: "pepparkakan", pl: "pepparkakor", plDef: "pepparkakorna" }
+  - { sv: "en skinka", nl: "een ham", def: "skinkan", pl: "skinkor", plDef: "skinkorna" }
+  - { sv: "ett nyår", nl: "het nieuwjaar", def: "nyåret", mass: true }
   - { sv: "att önska", nl: "wensen" }
   - { sv: "att sticka", nl: "breien" }
   - { sv: "att pynta", nl: "versieren" }

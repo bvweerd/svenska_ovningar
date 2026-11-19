@@ -271,16 +271,16 @@ sections:
           - { id: 3deu, type: gap, topic: tidsuttryck, text: "På lördag ___ (åka) vi till Stockholm.", gaps: [{ answers: ["åker"] }] }
 
 vocab:
-  - { sv: "en hobby", nl: "een hobby", def: "hobbyn" }
-  - { sv: "en bio", nl: "een bioscoop", def: "bion" }
-  - { sv: "en kompis", nl: "een vriend(in), een maat", def: "kompisen" }
-  - { sv: "en sjö", nl: "een meer", def: "sjön" }
-  - { sv: "en skog", nl: "een bos", def: "skogen" }
-  - { sv: "en cykel", nl: "een fiets", def: "cykeln" }
-  - { sv: "en konsert", nl: "een concert", def: "konserten" }
-  - { sv: "en kör", nl: "een koor", def: "kören" }
-  - { sv: "ett museum", nl: "een museum", def: "museet" }
-  - { sv: "ett kafé", nl: "een café", def: "kaféet" }
+  - { sv: "en hobby", nl: "een hobby", def: "hobbyn", pl: "hobbyer", plDef: "hobbyerna" }
+  - { sv: "en bio", nl: "een bioscoop", def: "bion", pl: "bior", plDef: "biorna" }
+  - { sv: "en kompis", nl: "een vriend(in), een maat", def: "kompisen", pl: "kompisar", plDef: "kompisarna" }
+  - { sv: "en sjö", nl: "een meer", def: "sjön", pl: "sjöar", plDef: "sjöarna" }
+  - { sv: "en skog", nl: "een bos", def: "skogen", pl: "skogar", plDef: "skogarna" }
+  - { sv: "en cykel", nl: "een fiets", def: "cykeln", pl: "cyklar", plDef: "cyklarna" }
+  - { sv: "en konsert", nl: "een concert", def: "konserten", pl: "konserter", plDef: "konserterna" }
+  - { sv: "en kör", nl: "een koor", def: "kören", pl: "körer", plDef: "körerna" }
+  - { sv: "ett museum", nl: "een museum", def: "museet", pl: "museer", plDef: "museerna" }
+  - { sv: "ett kafé", nl: "een café", def: "kaféet", pl: "kaféer", plDef: "kaféerna" }
   - { sv: "att simma", nl: "zwemmen" }
   - { sv: "att cykla", nl: "fietsen" }
   - { sv: "att springa", nl: "hardlopen, rennen" }

@@ -285,20 +285,20 @@ sections:
           - { id: ug9b, type: mc, topic: perfekt-preteritum, prompt: "Welke zin is goed?", options: ["Vi flyttade hit för två år sedan.", "Vi har flyttat hit för två år sedan.", "Vi flyttar hit för två år sedan."], answer: 0, tip: "för två år sedan is een bepaald moment: preteritum." }
 
 vocab:
-  - { sv: "en lägenhet", nl: "een appartement", def: "lägenheten" }
-  - { sv: "ett rum", nl: "een kamer", def: "rummet" }
-  - { sv: "ett vardagsrum", nl: "een woonkamer", def: "vardagsrummet" }
-  - { sv: "ett sovrum", nl: "een slaapkamer", def: "sovrummet" }
-  - { sv: "ett badrum", nl: "een badkamer", def: "badrummet" }
-  - { sv: "en balkong", nl: "een balkon", def: "balkongen" }
-  - { sv: "en soffa", nl: "een bank", def: "soffan" }
-  - { sv: "en säng", nl: "een bed", def: "sängen" }
-  - { sv: "en bokhylla", nl: "een boekenkast", def: "bokhyllan" }
-  - { sv: "en matta", nl: "een tapijt, een kleed", def: "mattan" }
-  - { sv: "en vägg", nl: "een muur", def: "väggen" }
-  - { sv: "en tavla", nl: "een schilderij", def: "tavlan" }
-  - { sv: "en våning", nl: "een verdieping", def: "våningen" }
-  - { sv: "en hyra", nl: "de huur", def: "hyran" }
+  - { sv: "en lägenhet", nl: "een appartement", def: "lägenheten", pl: "lägenheter", plDef: "lägenheterna" }
+  - { sv: "ett rum", nl: "een kamer", def: "rummet", pl: "rum", plDef: "rummen" }
+  - { sv: "ett vardagsrum", nl: "een woonkamer", def: "vardagsrummet", pl: "vardagsrum", plDef: "vardagsrummen" }
+  - { sv: "ett sovrum", nl: "een slaapkamer", def: "sovrummet", pl: "sovrum", plDef: "sovrummen" }
+  - { sv: "ett badrum", nl: "een badkamer", def: "badrummet", pl: "badrum", plDef: "badrummen" }
+  - { sv: "en balkong", nl: "een balkon", def: "balkongen", pl: "balkonger", plDef: "balkongerna" }
+  - { sv: "en soffa", nl: "een bank", def: "soffan", pl: "soffor", plDef: "sofforna" }
+  - { sv: "en säng", nl: "een bed", def: "sängen", pl: "sängar", plDef: "sängarna" }
+  - { sv: "en bokhylla", nl: "een boekenkast", def: "bokhyllan", pl: "bokhyllor", plDef: "bokhyllorna" }
+  - { sv: "en matta", nl: "een tapijt, een kleed", def: "mattan", pl: "mattor", plDef: "mattorna" }
+  - { sv: "en vägg", nl: "een muur", def: "väggen", pl: "väggar", plDef: "väggarna" }
+  - { sv: "en tavla", nl: "een schilderij", def: "tavlan", pl: "tavlor", plDef: "tavlorna" }
+  - { sv: "en våning", nl: "een verdieping", def: "våningen", pl: "våningar", plDef: "våningarna" }
+  - { sv: "en hyra", nl: "de huur", def: "hyran", pl: "hyror", plDef: "hyrorna" }
   - { sv: "att flytta", nl: "verhuizen" }
   - { sv: "att städa", nl: "schoonmaken, opruimen" }
   - { sv: "att diska", nl: "afwassen" }

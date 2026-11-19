@@ -277,16 +277,16 @@ sections:
           - { id: fqme, type: clock, time: "12:35" }
 
 vocab:
-  - { sv: "en resa", nl: "een reis", def: "resan" }
-  - { sv: "ett land", nl: "een land", def: "landet" }
-  - { sv: "en stad", nl: "een stad", def: "staden" }
-  - { sv: "en semester", nl: "een vakantie", def: "semestern" }
-  - { sv: "ett tåg", nl: "een trein", def: "tåget" }
-  - { sv: "en nyckel", nl: "een sleutel", def: "nyckeln" }
-  - { sv: "en månad", nl: "een maand", def: "månaden" }
-  - { sv: "ett år", nl: "een jaar", def: "året" }
-  - { sv: "ett norrsken", nl: "een noorderlicht", def: "norrskenet" }
-  - { sv: "en människa", nl: "een mens", def: "människan" }
+  - { sv: "en resa", nl: "een reis", def: "resan", pl: "resor", plDef: "resorna" }
+  - { sv: "ett land", nl: "een land", def: "landet", pl: "länder", plDef: "länderna" }
+  - { sv: "en stad", nl: "een stad", def: "staden", pl: "städer", plDef: "städerna" }
+  - { sv: "en semester", nl: "een vakantie", def: "semestern", pl: "semestrar", plDef: "semestrarna" }
+  - { sv: "ett tåg", nl: "een trein", def: "tåget", pl: "tåg", plDef: "tågen" }
+  - { sv: "en nyckel", nl: "een sleutel", def: "nyckeln", pl: "nycklar", plDef: "nycklarna" }
+  - { sv: "en månad", nl: "een maand", def: "månaden", pl: "månader", plDef: "månaderna" }
+  - { sv: "ett år", nl: "een jaar", def: "året", pl: "år", plDef: "åren" }
+  - { sv: "ett norrsken", nl: "het noorderlicht", def: "norrskenet", mass: true }
+  - { sv: "en människa", nl: "een mens", def: "människan", pl: "människor", plDef: "människorna" }
   - { sv: "att resa", nl: "reizen" }
   - { sv: "att hitta", nl: "vinden" }
   - { sv: "att tappa", nl: "verliezen, laten vallen" }
