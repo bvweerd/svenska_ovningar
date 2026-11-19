@@ -168,6 +168,59 @@ sections:
           - { id: e67t, type: translate, prompt: "Wilma heeft het huiswerk al gemaakt.", answers: ["Wilma har redan gjort {läxorna|läxan}."], feedback: [{ contains: "wilma redan har", tip: "redan staat ná har." }, { contains: "gjorde", tip: "„Heeft al gemaakt”, zonder tijdstip: perfekt (har gjort)." }] }
           - { id: hbhe, type: translate, prompt: "Vorige week hebben we een film gezien.", answers: ["Förra veckan såg vi en film.", "Vi såg en film förra veckan."], feedback: [{ contains: "har sett", tip: "Met förra veckan (een afgesloten tijd) gebruik je in het Zweeds de preteritum." }, { contains: "veckan vi", tip: "Na Förra veckan komt eerst het werkwoord." }] }
 
+      - id: tijd-kiezen-maken
+        title: Preteritum of perfekt? Kies en vertaal
+        instruction: Kies eerst welke tijd past, vertaal dan de zin.
+        topic: perfekt-preteritum
+        shuffle: true
+        items:
+          - id: nagg
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik heb gisteren mijn moeder gebeld. Welke tijd?", options: ["preteritum (ringde)", "perfekt (har ringt)"], answer: 0, shuffle: false, tip: "Er staat een tijdstip bij (gisteren): preteritum, ook al zegt het Nederlands *heb gebeld*." }
+              - { type: mc, prompt: "**Waarom?** Waarom preteritum, terwijl het Nederlands *heb gebeld* zegt?", options: ["Er staat een tijdstip in het verleden bij: gisteren.", "Ringa is een sterk werkwoord.", "Het Zweeds gebruikt de perfekt nooit bij bellen."], answer: 0, tip: "Met een tijdstip in het verleden (igår, i fredags, för en vecka sedan) gebruik je de preteritum." }
+              - { type: translate, prompt: "Vertaal: Ik heb gisteren mijn moeder gebeld.", answers: ["Jag ringde[ till] {min mamma|mamma} {igår|i går}."], feedback: [{ contains: "har ringt", tip: "Er staat een tijdstip bij (igår): preteritum, ringde." }] }
+          - id: 22ht
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ben je ooit in Lapland geweest? Welke tijd?", options: ["preteritum (var)", "perfekt (har varit)"], answer: 1, shuffle: false, tip: "Geen tijdstip, het gaat om de ervaring (ooit): perfekt." }
+              - { type: translate, prompt: "Vertaal: Ben je ooit in Lapland geweest?", answers: ["Har du {någonsin|någon gång} varit i Lappland?", "Har du varit i Lappland någon gång?"], feedback: [{ contains: "Var du", tip: "Het gaat om de ervaring, zonder tijdstip: perfekt, har du varit." }] }
+          - id: xkw9
+            type: steps
+            steps:
+              - { type: mc, prompt: "Vorig jaar woonden we in Göteborg. Welke tijd?", options: ["preteritum (bodde)", "perfekt (har bott)"], answer: 0, shuffle: false, tip: "Een tijdstip in het verleden (vorig jaar), en het is voorbij: preteritum." }
+              - { type: translate, prompt: "Vertaal: Vorig jaar woonden we in Göteborg.", answers: ["{Förra året|I fjol|Ifjol} bodde vi i Göteborg."], feedback: [{ contains: "har bott", tip: "Vorig jaar is een tijdstip in het verleden: preteritum, bodde." }, { contains: "Förra året vi bodde", tip: "Na Förra året komt eerst het werkwoord: Förra året bodde vi." }] }
+          - id: 2sjj
+            type: steps
+            steps:
+              - { type: mc, prompt: "We wonen al drie jaar in Zweden (en wonen er nog). Welke tijd?", options: ["preteritum (bodde)", "perfekt (har bott)"], answer: 1, shuffle: false, tip: "Het loopt tot nu door: perfekt. Het Nederlands gebruikt hier de presens, het Zweeds de perfekt." }
+              - { type: translate, prompt: "Vertaal: We wonen al drie jaar in Zweden.", answers: ["Vi har bott i Sverige i tre år[ nu]."], feedback: [{ contains: "Vi bor", tip: "Het begon drie jaar geleden en loopt tot nu: perfekt, Vi har bott … i tre år." }, { contains: "bodde", tip: "Jullie wonen er nog: perfekt, har bott." }] }
+          - id: y4hh
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik ben mijn sleutel kwijt! (Ik heb hem nu niet.) Welke tijd?", options: ["preteritum (tappade)", "perfekt (har tappat)"], answer: 1, shuffle: false, tip: "Het resultaat is nu belangrijk, en er is geen tijdstip: perfekt." }
+              - { type: translate, prompt: "Vertaal: Ik heb mijn sleutel verloren!", answers: ["Jag har tappat[ bort] {min nyckel|nyckeln}!"], feedback: [{ contains: "tappade", tip: "Geen tijdstip, het resultaat is nu belangrijk: perfekt, har tappat." }, { contains: "förlorat", tip: "Iets kwijtraken is tappa (bort). Förlora gebruik je bij een wedstrijd." }] }
+          - id: ms44
+            type: steps
+            steps:
+              - { type: mc, prompt: "Bram is twee jaar geleden naar Stockholm verhuisd. Welke tijd?", options: ["preteritum (flyttade)", "perfekt (har flyttat)"], answer: 0, shuffle: false, tip: "Twee jaar geleden is een tijdstip in het verleden: preteritum." }
+              - { type: translate, prompt: "Vertaal: Bram is twee jaar geleden naar Stockholm verhuisd.", answers: ["Bram flyttade till Stockholm för två år {sedan|sen}.", "För två år {sedan|sen} flyttade Bram till Stockholm."], feedback: [{ contains: "har flyttat", tip: "Met för två år sedan (een tijdstip) gebruik je de preteritum: flyttade." }] }
+          - id: kry3
+            type: steps
+            steps:
+              - { type: mc, prompt: "Wilma heeft het boek nog niet gelezen. Welke tijd?", options: ["preteritum (läste)", "perfekt (har läst)"], answer: 1, shuffle: false, tip: "Nog niet (inte än) loopt tot nu door: perfekt." }
+              - { type: translate, prompt: "Vertaal: Wilma heeft het boek nog niet gelezen.", answers: ["Wilma har inte läst boken {än|ännu}.", "Wilma har ännu inte läst boken."], feedback: [{ contains: "läste", tip: "Nog niet = tot nu: perfekt, har inte läst." }] }
+          - id: n6z2
+            type: steps
+            steps:
+              - { type: mc, prompt: "Toen ik klein was, speelde ik vaak voetbal. Welke tijd?", options: ["preteritum (spelade)", "perfekt (har spelat)"], answer: 0, shuffle: false, tip: "Toen ik klein was is een periode in het verleden die voorbij is: preteritum." }
+              - { type: translate, prompt: "Vertaal: Ik speelde vaak voetbal toen ik klein was.", answers: ["Jag spelade ofta fotboll när jag var liten.", "När jag var liten spelade jag ofta fotboll."], feedback: [{ contains: "har spelat", tip: "När jag var liten is voorbij: preteritum, spelade." }] }
+          - id: hqt5
+            type: steps
+            steps:
+              - { type: mc, prompt: "Afgelopen zaterdag hebben we pannenkoeken gegeten. Welke tijd?", options: ["preteritum (åt)", "perfekt (har ätit)"], answer: 0, shuffle: false, tip: "Afgelopen zaterdag (i lördags) is een tijdstip: preteritum." }
+              - { type: translate, prompt: "Vertaal: Afgelopen zaterdag hebben we pannenkoeken gegeten.", answers: ["I lördags åt vi pannkakor."], feedback: [{ contains: "har ätit", tip: "I lördags is een tijdstip in het verleden: preteritum, åt." }, { contains: "I lördags vi åt", tip: "Na I lördags komt eerst het werkwoord: I lördags åt vi." }] }
+
       - id: var-vart
         title: Var of vart?
         instruction: Kies het juiste vraagwoord.
@@ -197,6 +250,59 @@ sections:
           - { id: h8mm, type: gap, text: "Kiruna? Vi åker ___ i vinter.", gaps: [{ answers: ["dit"], options: ["där", "dit"], shuffle: false }] }
           - { id: 4k3e, type: gap, text: "Katten är ___ i huset.", gaps: [{ answers: ["inne"], options: ["inne", "in"], shuffle: false }] }
           - { id: n2rz, type: gap, text: "Nils springer ___ till övervåningen.", gaps: [{ answers: ["upp"], options: ["uppe", "upp"], shuffle: false }] }
+
+      - id: plaats-richting-maken
+        title: Plaats of richting? Kies en vertaal
+        instruction: Kies eerst of het om een **plaats** (waar?) of een **richting** (waarheen?) gaat, vertaal dan de zin.
+        topic: hem-hemma
+        shuffle: true
+        items:
+          - id: jhks
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik ga nu naar huis. Plaats of richting?", options: ["plaats: hemma", "richting: hem"], answer: 1, shuffle: false, tip: "Je beweegt naar huis toe: richting, hem." }
+              - { type: mc, prompt: "**Waarom?** Waarom *hem* en niet *hemma*?", options: ["Er is een beweging naar huis toe (gaan): richting.", "Na går komt altijd het kortste woord.", "Hemma betekent naar huis."], answer: 0, tip: "Hemma = thuis (je bent er). Hem = naar huis (je gaat erheen)." }
+              - { type: translate, prompt: "Vertaal: Ik ga nu naar huis.", answers: ["Jag {går|åker} hem nu.", "Nu {går|åker} jag hem."], feedback: [{ contains: "hemma", tip: "Je gaat naar huis toe: richting, hem." }] }
+          - id: epk5
+            type: steps
+            steps:
+              - { type: mc, prompt: "Nils is vandaag thuis. Plaats of richting?", options: ["plaats: hemma", "richting: hem"], answer: 0, shuffle: false, tip: "Nils is er al, er is geen beweging: plaats, hemma." }
+              - { type: translate, prompt: "Vertaal: Nils is vandaag thuis.", answers: ["Nils är hemma {idag|i dag}."], feedback: [{ contains: "är hem", tip: "Hij is er al, geen beweging: hemma." }] }
+          - id: 9c3f
+            type: steps
+            steps:
+              - { type: mc, prompt: "Fleur is buiten met de hond. Plaats of richting?", options: ["plaats: ute", "richting: ut"], answer: 0, shuffle: false, tip: "Ze is al buiten, geen beweging: ute." }
+              - { type: translate, prompt: "Vertaal: Fleur is buiten met de hond.", answers: ["Fleur är ute med hunden."], feedback: [{ contains: "är ut", tip: "Ze is al buiten: ute." }] }
+          - id: x5xk
+            type: steps
+            steps:
+              - { type: mc, prompt: "Komen jullie morgen hier? Plaats of richting?", options: ["plaats: här", "richting: hit"], answer: 1, shuffle: false, tip: "Komen = een beweging naar de spreker toe: richting, hit (ook al zegt het Nederlands hier)." }
+              - { type: translate, prompt: "Vertaal: Komen jullie morgen hier?", answers: ["Kommer ni hit {imorgon|i morgon}?"], feedback: [{ contains: "här", tip: "Komen is een beweging: hit." }] }
+          - id: atbr
+            type: steps
+            steps:
+              - { type: mc, prompt: "Waar is de kat? Plaats of richting?", options: ["plaats: var", "richting: vart"], answer: 0, shuffle: false, tip: "Zijn is geen beweging: var." }
+              - { type: translate, prompt: "Vertaal: Waar is de kat?", answers: ["Var är katten?"], feedback: [{ contains: "Vart", tip: "Zijn is geen beweging: var." }] }
+          - id: savu
+            type: steps
+            steps:
+              - { type: mc, prompt: "Waar gaan jullie vanavond heen? Plaats of richting?", options: ["plaats: var", "richting: vart"], answer: 1, shuffle: false, tip: "Waarheen: richting, vart." }
+              - { type: translate, prompt: "Vertaal: Waar gaan jullie vanavond heen?", answers: ["Vart {ska ni|ska ni gå|ska ni åka|går ni|åker ni} {ikväll|i kväll}?"], feedback: [{ match: ["Var ska ni ikväll?", "Var går ni ikväll?"], tip: "Waarheen is richting: vart." }] }
+          - id: ggtr
+            type: steps
+            steps:
+              - { type: mc, prompt: "Gaan jullie naar binnen? Plaats of richting?", options: ["plaats: inne", "richting: in"], answer: 1, shuffle: false, tip: "Naar binnen = beweging: in." }
+              - { type: translate, prompt: "Vertaal: Gaan jullie naar binnen?", answers: ["Går ni in?", "Ska ni gå in?"], feedback: [{ contains: "inne", tip: "Naar binnen gaan is een beweging: in." }] }
+          - id: gg4w
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ken je Uppsala? We gaan er morgen heen. Plaats of richting?", options: ["plaats: där", "richting: dit"], answer: 1, shuffle: false, tip: "Erheen = daarheen, een beweging: dit." }
+              - { type: translate, prompt: "Vertaal: We gaan er morgen heen.", answers: ["Vi {åker|går} dit {imorgon|i morgon}.", "Vi ska {åka|gå} dit {imorgon|i morgon}."], feedback: [{ contains: "där", tip: "Erheen gaan is een beweging: dit." }] }
+          - id: 86wg
+            type: steps
+            steps:
+              - { type: mc, prompt: "Is Olle binnen? Plaats of richting?", options: ["plaats: inne", "richting: in"], answer: 0, shuffle: false, tip: "Hij is er al: plaats, inne." }
+              - { type: translate, prompt: "Vertaal: Is Olle binnen?", answers: ["Är Olle inne?"], feedback: [{ match: "Är Olle in?", tip: "Hij is al binnen, geen beweging: inne." }] }
 
       - id: an-subjekt
         title: Vergelijken met än

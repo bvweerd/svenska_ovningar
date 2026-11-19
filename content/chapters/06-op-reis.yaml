@@ -132,6 +132,59 @@ sections:
           - { id: wur3, type: translate, prompt: "Een week geleden was ik in Uppsala.", answers: ["För en vecka {sedan|sen} var jag i Uppsala.", "Jag var i Uppsala för en vecka {sedan|sen}."], feedback: [{ contains: ["sedan jag var", "sen jag var"], tip: "Na de tijdsbepaling vooraan komt eerst het werkwoord." }] }
           - { id: bnr7, type: translate, prompt: "We hebben twee uur gewacht.", answers: ["Vi har väntat [i ]två timmar.", "Vi väntade [i ]två timmar."], feedback: [{ contains: "på två timmar", tip: "Een duur zonder ontkenning: i två timmar (of zonder voorzetsel)." }] }
 
+      - id: tidsprep-kiezen-maken
+        title: Over, geleden of lang? Kies en vertaal
+        instruction: Kies eerst de tijdsuitdrukking die past, vertaal dan de zin.
+        topic: tidsprep
+        shuffle: true
+        items:
+          - id: e3xj
+            type: steps
+            steps:
+              - { type: mc, prompt: "De bus komt over vijf minuten. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 0, shuffle: false, tip: "Over (in de toekomst) = om." }
+              - { type: translate, prompt: "Vertaal: De bus komt over vijf minuten.", answers: ["Bussen kommer om fem minuter."], feedback: [{ contains: "på fem minuter", tip: "Over vijf minuten (vanaf nu): om." }] }
+          - id: f3yy
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik heb haar een week geleden gezien. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 1, shuffle: false, tip: "Geleden = för … sedan." }
+              - { type: mc, prompt: "**Waarom?** Waarom wordt het *Jag såg henne* (preteritum) en niet *Jag har sett henne*?", options: ["För en vecka sedan is een tijdstip in het verleden.", "Se is een sterk werkwoord.", "Na för komt altijd de preteritum."], answer: 0, tip: "Met een tijdstip in het verleden gebruik je de preteritum (hoofdstuk 5)." }
+              - { type: translate, prompt: "Vertaal: Ik heb haar een week geleden gezien.", answers: ["Jag {såg|träffade} henne för en vecka {sedan|sen}."], feedback: [{ contains: ["har sett", "har träffat"], tip: "För en vecka sedan is een tijdstip: preteritum, såg." }, { match: ["Jag såg henne en vecka sedan.", "En vecka sedan såg jag henne."], tip: "Geleden = för … sedan." }] }
+          - id: tdfq
+            type: steps
+            steps:
+              - { type: mc, prompt: "We wonen hier al twee jaar. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 2, shuffle: false, tip: "Hoe lang iets al duurt: i." }
+              - { type: translate, prompt: "Vertaal: We wonen hier al twee jaar.", answers: ["Vi har bott här [i ]två år."], feedback: [{ contains: "på två år", tip: "(Al) twee jaar lang: i två år." }, { contains: "Vi bor här", tip: "Het loopt tot nu door: perfekt, Vi har bott." }] }
+          - id: ecmc
+            type: steps
+            steps:
+              - { type: mc, prompt: "Nils ontbeet in vijf minuten. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 3, shuffle: false, tip: "Hoe lang je erover doet: på." }
+              - { type: translate, prompt: "Vertaal: Nils ontbeet in vijf minuten.", answers: ["Nils åt frukost på fem minuter."], feedback: [{ contains: "i fem minuter", tip: "Hoe lang hij erover deed: på fem minuter." }] }
+          - id: nm7x
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik heb Olle lang niet gezien. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 3, shuffle: false, tip: "Lang niet = inte på länge." }
+              - { type: translate, prompt: "Vertaal: Ik heb Olle lang niet gezien.", answers: ["Jag har inte {sett|träffat} Olle på länge."], feedback: [{ contains: "i länge", tip: "Lang niet = inte på länge." }] }
+          - id: hxvj
+            type: steps
+            steps:
+              - { type: mc, prompt: "Over een maand gaan we naar Gotland. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 0, shuffle: false, tip: "Over (in de toekomst) = om." }
+              - { type: translate, prompt: "Vertaal: Over een maand gaan we naar Gotland.", answers: ["Om en månad åker vi till Gotland.", "Om en månad ska vi [åka ]till Gotland."], feedback: [{ contains: "Om en månad vi", tip: "Na Om en månad komt eerst het werkwoord: Om en månad åker vi." }] }
+          - id: ha9k
+            type: steps
+            steps:
+              - { type: mc, prompt: "Olle kocht twee weken geleden een nieuwe auto. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 1, shuffle: false, tip: "Geleden = för … sedan." }
+              - { type: translate, prompt: "Vertaal: Olle kocht twee weken geleden een nieuwe auto.", answers: ["Olle köpte en ny bil för två veckor {sedan|sen}."], feedback: [{ contains: "har köpt", tip: "För två veckor sedan is een tijdstip: preteritum, köpte." }] }
+          - id: mb2p
+            type: steps
+            steps:
+              - { type: mc, prompt: "Wilma las een uur lang. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 2, shuffle: false, tip: "Hoe lang iets duurde: i." }
+              - { type: translate, prompt: "Vertaal: Wilma las een uur lang.", answers: ["Wilma läste [i ]en timme."], feedback: [{ contains: "på en timme", tip: "Hoe lang ze las: i en timme. På en timme = binnen een uur." }] }
+          - id: yqxk
+            type: steps
+            steps:
+              - { type: mc, prompt: "Hij schreef de brief in tien minuten. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 3, shuffle: false, tip: "Hoe lang hij erover deed: på." }
+              - { type: translate, prompt: "Vertaal: Hij schreef de brief in tien minuten.", answers: ["Han skrev brevet på tio minuter."], feedback: [{ contains: "i tio minuter", tip: "Hoe lang hij erover deed: på tio minuter." }] }
+
       - id: transport-kiezen
         title: Åka, gå, köra of ta?
         instruction: Kies het werkwoord dat past.

@@ -139,6 +139,59 @@ sections:
           - { id: bn8q, type: translate, prompt: "Bram staat te koken.", answers: ["Bram står och lagar mat."] }
           - { id: hs9g, type: translate, prompt: "Wij zaten te eten.", answers: ["Vi satt och åt."], feedback: [{ contains: "satt och äter", tip: "Beide werkwoorden in dezelfde tijd: satt och åt." }] }
 
+      - id: positie-kiezen-maken
+        title: Welk werkwoord? Kies en vertaal
+        instruction: Kies eerst het werkwoord dat past, vertaal dan de zin.
+        topic: positionsverb
+        shuffle: true
+        items:
+          - id: m4ms
+            type: steps
+            steps:
+              - { type: mc, prompt: "Waar is mijn jas? – Hij hangt in de hal. Welk werkwoord?", options: ["ligger", "står", "hänger", "sitter"], answer: 2, shuffle: false, tip: "Een jas aan de kapstok hangt: hänger." }
+              - { type: translate, prompt: "Vertaal: Hij (de jas) hangt in de hal.", answers: ["{Den|Jackan} hänger i hallen."], feedback: [{ contains: "Han hänger", tip: "Een jas is een ding (en jacka): den." }] }
+          - id: 6mfn
+            type: steps
+            steps:
+              - { type: mc, prompt: "De schoenen staan onder het bed. Welk werkwoord?", options: ["ligger", "står", "hänger", "sitter"], answer: 1, shuffle: false, tip: "Schoenen staan, net als in het Nederlands: står." }
+              - { type: translate, prompt: "Vertaal: De schoenen staan onder het bed.", answers: ["Skorna står under sängen."], feedback: [{ contains: "ligger", tip: "Schoenen staan: står." }] }
+          - id: qunk
+            type: steps
+            steps:
+              - { type: mc, prompt: "Mijn telefoon ligt in mijn tas. Welk werkwoord?", options: ["ligger", "står", "hänger", "sitter"], answer: 0, shuffle: false, tip: "Plat, liggend: ligger." }
+              - { type: translate, prompt: "Vertaal: Mijn telefoon ligt in mijn tas.", answers: ["Min {mobil|mobiltelefon|telefon} ligger i {min väska|väskan}."], feedback: [{ contains: "står", tip: "Een telefoon ligt plat: ligger." }] }
+          - id: nwp9
+            type: steps
+            steps:
+              - { type: mc, prompt: "Het schilderij hangt in de woonkamer. Welk werkwoord?", options: ["ligger", "står", "hänger", "sitter"], answer: 2, shuffle: false, tip: "Aan de muur: hänger." }
+              - { type: translate, prompt: "Vertaal: Het schilderij hangt in de woonkamer.", answers: ["Tavlan hänger i vardagsrummet."], feedback: [{ contains: "sitter", tip: "Een schilderij hangt: hänger." }] }
+          - id: hzfw
+            type: steps
+            steps:
+              - { type: mc, prompt: "Wilma ligt in bed te lezen. Welk werkwoord?", options: ["ligger och läser", "står och läser", "sitter och läser"], answer: 0, shuffle: false, tip: "Ze ligt in bed: ligger och läser." }
+              - { type: translate, prompt: "Vertaal: Wilma ligt in bed te lezen.", answers: ["Wilma ligger {i sängen och läser|och läser i sängen}."], feedback: [{ contains: "att läsa", tip: "Zweeds: positiewerkwoord + och + werkwoord in dezelfde tijd: ligger … och läser." }] }
+          - id: c72u
+            type: steps
+            steps:
+              - { type: mc, prompt: "Bram zat gisteren tv te kijken. Welke vorm?", options: ["satt och tittade", "satt och tittar", "sitter och tittade"], answer: 0, shuffle: false, tip: "Beide werkwoorden in de preteritum: satt och tittade." }
+              - { type: mc, prompt: "**Waarom?** Waarom *satt och tittade*?", options: ["Beide werkwoorden staan in dezelfde tijd.", "Na och komt altijd de preteritum.", "Sitta is een sterk werkwoord."], answer: 0, tip: "Bij sitter och … staan beide werkwoorden altijd in dezelfde tijd: sitter och tittar (nu), satt och tittade (toen)." }
+              - { type: translate, prompt: "Vertaal: Bram zat gisteren tv te kijken.", answers: ["Bram satt och {tittade|såg} på {tv|teve} {igår|i går}.", "Bram satt {igår|i går} och {tittade|såg} på {tv|teve}."], feedback: [{ contains: ["och tittar", "och ser"], tip: "Beide werkwoorden in dezelfde tijd: satt och tittade." }, { contains: "sitter", tip: "Gisteren: preteritum, satt och tittade." }] }
+          - id: kvn4
+            type: steps
+            steps:
+              - { type: mc, prompt: "Olle staat in de keuken te koken. Welk werkwoord?", options: ["ligger och lagar", "står och lagar", "sitter och lagar"], answer: 1, shuffle: false, tip: "Ze staat in de keuken: står och lagar mat." }
+              - { type: translate, prompt: "Vertaal: Olle staat in de keuken te koken.", answers: ["Olle står {i köket och lagar mat|och lagar mat i köket}."], feedback: [{ contains: "att laga", tip: "Zweeds: står … och lagar, beide in de presens." }] }
+          - id: tgxq
+            type: steps
+            steps:
+              - { type: mc, prompt: "De fietsen staan buiten. Welk werkwoord?", options: ["ligger", "står", "hänger", "sitter"], answer: 1, shuffle: false, tip: "Een fiets staat rechtop: står." }
+              - { type: translate, prompt: "Vertaal: De fietsen staan buiten.", answers: ["Cyklarna står {ute|utomhus|utanför}."], feedback: [{ contains: "står ut", tip: "Ze zijn buiten, geen beweging: ute." }] }
+          - id: 3yyy
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ingrid zit in de tuin te lezen. Welk werkwoord?", options: ["ligger och läser", "står och läser", "sitter och läser"], answer: 2, shuffle: false, tip: "Ze zit: sitter och läser." }
+              - { type: translate, prompt: "Vertaal: Ingrid zit in de tuin te lezen.", answers: ["Ingrid sitter {i trädgården och läser|och läser i trädgården}."], feedback: [{ contains: "att läsa", tip: "Zweeds: sitter … och läser, beide in de presens." }] }
+
       - id: leggen-en-liggen
         title: Leggen en liggen
         instruction: Kies eerst wat iemand doet. Vul daarna in waar het nu is.

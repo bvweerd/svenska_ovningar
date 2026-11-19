@@ -283,6 +283,60 @@ sections:
           - { id: 9wg9, type: order, start: "Nu", tokens: ["fotboll", "Nils", "spelar"], answers: ["Nu spelar Nils fotboll."] }
           - { id: ncsb, type: order, start: "I Sverige", tokens: ["svenska", "vi", "talar"], answers: ["I Sverige talar vi svenska."] }
 
+      - id: v2-kiezen-maken
+        title: Inversie of niet? Kies en schrijf
+        instruction: Begin de zin met het **vetgedrukte** deel. Kies eerst de volgorde, schrijf dan de hele zin.
+        topic: v2
+        fixedOrder: true
+        shuffle: true
+        items:
+          - id: 3vhe
+            type: steps
+            steps:
+              - { type: mc, prompt: "Fleur läser tidningen idag. → Begin met **Idag**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 0, shuffle: false, tip: "Idag staat op plaats 1. Het werkwoord blijft op plaats 2, dus het onderwerp komt erachter: inversie." }
+              - { type: mc, prompt: "**Waarom?** Waarom komt *läser* vóór *Fleur*?", options: ["Het werkwoord staat op plaats 2, en plaats 1 is al bezet door Idag.", "Het onderwerp staat in het Zweeds altijd achter het werkwoord.", "Na een tijdsbepaling wordt de zin een vraag."], answer: 0, tip: "Het onderwerp mag gewoon vooraan (Fleur läser …). Alleen als iets anders op plaats 1 staat, schuift het onderwerp achter het werkwoord." }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **Idag**: Fleur läser tidningen idag.", answers: ["{Idag|I dag} läser Fleur tidningen."], feedback: [{ match: ["Idag Fleur läser tidningen", "I dag Fleur läser tidningen"], tip: "Na Idag komt eerst het werkwoord: Idag läser Fleur." }] }
+          - id: 9asb
+            type: steps
+            steps:
+              - { type: mc, prompt: "Vi bor i Västerås nu. → Begin met **Nu**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 0, shuffle: false, tip: "Nu staat op plaats 1, dus het onderwerp komt na het werkwoord." }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **Nu**: Vi bor i Västerås nu.", answers: ["Nu bor vi i Västerås."], feedback: [{ match: "Nu vi bor i Västerås", tip: "Het werkwoord op plaats 2: Nu bor vi." }] }
+          - id: d526
+            type: steps
+            steps:
+              - { type: mc, prompt: "Idag dricker jag kaffe. → Begin met **Jag**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 1, shuffle: false, tip: "Het onderwerp (jag) staat zelf op plaats 1. Het werkwoord komt op plaats 2, er is geen inversie." }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **Jag**: Idag dricker jag kaffe.", answers: ["Jag dricker kaffe {idag|i dag}."], feedback: [{ match: "Jag kaffe dricker idag", tip: "Het werkwoord staat op plaats 2, direct na jag." }, { match: ["Idag dricker jag kaffe", "I dag dricker jag kaffe"], tip: "Goed Zweeds, maar begin de zin met Jag: Jag dricker kaffe idag." }] }
+          - id: bh8w
+            type: steps
+            steps:
+              - { type: mc, prompt: "Wilma läser en bok på kvällen. → Begin met **På kvällen**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 0, shuffle: false, tip: "På kvällen is één geheel op plaats 1. Daarna het werkwoord, dan het onderwerp." }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **På kvällen**: Wilma läser en bok på kvällen.", answers: ["På kvällen läser Wilma en bok."], feedback: [{ match: "På kvällen Wilma läser en bok", tip: "Na På kvällen komt eerst het werkwoord: läser Wilma." }] }
+          - id: ze2q
+            type: steps
+            steps:
+              - { type: mc, prompt: "Olle dricker kaffe klockan sju. → Begin met **Klockan sju**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 0, shuffle: false, tip: "Een tijd op plaats 1: het werkwoord blijft op plaats 2, het onderwerp komt erachter." }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **Klockan sju**: Olle dricker kaffe klockan sju.", answers: ["Klockan sju dricker Olle kaffe."], feedback: [{ match: "Klockan sju Olle dricker kaffe", tip: "Het werkwoord op plaats 2: Klockan sju dricker Olle." }] }
+          - id: 2v2h
+            type: steps
+            steps:
+              - { type: mc, prompt: "De talar nederländska hemma. → Begin met **Hemma**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 0, shuffle: false, tip: "Ook een plaats op plaats 1 geeft inversie." }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **Hemma**: De talar nederländska hemma.", answers: ["Hemma talar de {nederländska|holländska}."], feedback: [{ match: ["Hemma de talar nederländska", "Hemma de talar holländska"], tip: "Het werkwoord op plaats 2: Hemma talar de." }] }
+          - id: zktg
+            type: steps
+            steps:
+              - { type: mc, prompt: "I Västerås jobbar Olle på en skola. → Begin met **Olle**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 1, shuffle: false, tip: "Olle is het onderwerp en staat zelf op plaats 1: geen inversie." }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **Olle**: I Västerås jobbar Olle på en skola.", answers: ["Olle jobbar på en skola i Västerås.", "Olle jobbar i Västerås på en skola."], feedback: [{ match: "Olle på en skola jobbar i Västerås", tip: "Het werkwoord staat op plaats 2, direct na Olle." }, { match: "I Västerås jobbar Olle på en skola", tip: "Goed Zweeds, maar begin de zin met Olle." }] }
+          - id: pgjf
+            type: steps
+            steps:
+              - { type: mc, prompt: "Fleur jobbar på ett sjukhus i Västerås. → Begin met **I Västerås**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 0, shuffle: false, tip: "I Västerås staat op plaats 1, dus het onderwerp komt na het werkwoord." }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **I Västerås**: Fleur jobbar på ett sjukhus i Västerås.", answers: ["I Västerås jobbar Fleur på ett sjukhus."], feedback: [{ match: "I Västerås Fleur jobbar på ett sjukhus", tip: "Het werkwoord op plaats 2: I Västerås jobbar Fleur." }] }
+          - id: jx8c
+            type: steps
+            steps:
+              - { type: mc, prompt: "Varje morgon läser Bram tidningen. → Begin met **Bram**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 1, shuffle: false, tip: "Bram is het onderwerp en staat op plaats 1: geen inversie." }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **Bram**: Varje morgon läser Bram tidningen.", answers: ["Bram läser tidningen varje morgon."], feedback: [{ match: "Bram tidningen läser varje morgon", tip: "Het werkwoord staat op plaats 2, direct na Bram." }, { match: "Varje morgon läser Bram tidningen", tip: "Goed Zweeds, maar begin de zin met Bram: Bram läser tidningen varje morgon." }] }
+
       - id: pronomen-kiezen
         title: Wie of wat?
         instruction: Kies het juiste persoonlijk voornaamwoord.

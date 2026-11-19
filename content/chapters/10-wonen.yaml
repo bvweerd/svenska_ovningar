@@ -202,6 +202,59 @@ sections:
           - { id: rg5t, type: translate, prompt: "Bram kent Olle en zijn vrouw.", answers: ["Bram känner Olle och hans fru."], feedback: [{ contains: "sin fru", tip: "Bram is het onderwerp, maar de vrouw hoort bij Olle: hans." }] }
           - { id: kdd8, type: translate, prompt: "De kinderen spelen met hun (eigen) hond.", answers: ["Barnen leker med sin hund."], feedback: [{ contains: "deras hund", tip: "Hun eigen hond, en de kinderen zijn het onderwerp: sin." }, { contains: "spelar", tip: "Spelen van kinderen (zonder spel) is leka." }] }
 
+      - id: sin-kiezen-maken
+        title: Zijn eigen of van een ander? Kies en vertaal
+        instruction: Kies eerst de goede vorm, vertaal dan de zin.
+        topic: sin-sitt-sina
+        shuffle: true
+        items:
+          - id: h45p
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ingrid wast haar (eigen) auto. Is de bezitter het onderwerp van de zin?", options: ["ja: sin, sitt of sina", "nee: hans, hennes of deras"], answer: 0, shuffle: false, tip: "Ingrid is het onderwerp en de auto is van haar: sin, sitt of sina." }
+              - { type: mc, prompt: "**Waarom?** Waarom *sin* en niet *sitt* of *sina*?", options: ["Bil is een en-woord.", "Ingrid is een vrouw.", "Na tvättar komt altijd sin."], answer: 0, tip: "Sin, sitt en sina passen zich aan het bezit aan, net als min, mitt en mina: en bil → sin bil." }
+              - { type: translate, prompt: "Vertaal: Ingrid wast haar (eigen) auto.", answers: ["Ingrid tvättar sin bil."], feedback: [{ contains: "hennes bil", tip: "Ingrids eigen auto, en Ingrid is het onderwerp: sin." }, { contains: "sitt bil", tip: "bil is een en-woord: sin." }] }
+          - id: jbs7
+            type: steps
+            steps:
+              - { type: mc, prompt: "Bram helpt Ingrid met haar tuin. Is de bezitter het onderwerp van de zin?", options: ["ja: sin, sitt of sina", "nee: hans, hennes of deras"], answer: 1, shuffle: false, tip: "De tuin is van Ingrid, maar Bram is het onderwerp: hennes." }
+              - { type: translate, prompt: "Vertaal: Bram helpt Ingrid met haar tuin.", answers: ["Bram hjälper Ingrid med hennes trädgård."], feedback: [{ contains: "sin trädgård", tip: "Het is niet Brams tuin; Bram is het onderwerp: hennes." }] }
+          - id: kx84
+            type: steps
+            steps:
+              - { type: mc, prompt: "Nils en Wilma bellen hun (eigen) oma. Is de bezitter het onderwerp van de zin?", options: ["ja: sin, sitt of sina", "nee: hans, hennes of deras"], answer: 0, shuffle: false, tip: "Nils en Wilma zijn het onderwerp en het is hun eigen oma: sin." }
+              - { type: translate, prompt: "Vertaal: Nils en Wilma bellen hun (eigen) oma.", answers: ["Nils och Wilma ringer [till ]sin {mormor|farmor}."], feedback: [{ contains: "deras", tip: "Hun eigen oma, en zij zijn het onderwerp: sin." }] }
+          - id: cnxv
+            type: steps
+            steps:
+              - { type: mc, prompt: "Fleur en haar zus gaan naar de stad. Welke vorm?", options: ["sin syster", "hennes syster"], answer: 1, shuffle: false, tip: "Haar zus hoort bij het onderwerp zelf (Fleur och …). Daar kan sin niet: hennes." }
+              - { type: translate, prompt: "Vertaal: Fleur en haar zus gaan naar de stad.", answers: ["Fleur och hennes syster {går|åker} [in ]till {stan|staden|centrum}."], feedback: [{ contains: "sin syster", tip: "In het onderwerp zelf nooit sin: Fleur och hennes syster." }] }
+          - id: g24f
+            type: steps
+            steps:
+              - { type: mc, prompt: "Wilma neemt zijn fiets (die van Nils). Is de bezitter het onderwerp van de zin?", options: ["ja: sin, sitt of sina", "nee: hans, hennes of deras"], answer: 1, shuffle: false, tip: "De fiets is van Nils, maar Wilma is het onderwerp: hans." }
+              - { type: translate, prompt: "Vertaal: Wilma neemt zijn fiets (die van Nils).", answers: ["Wilma tar hans cykel."], feedback: [{ contains: "sin cykel", tip: "Het is niet Wilma's fiets: hans." }] }
+          - id: cjjh
+            type: steps
+            steps:
+              - { type: mc, prompt: "De buren schilderen hun (eigen) huis. Welke vorm?", options: ["sin", "sitt", "sina", "deras"], answer: 1, shuffle: false, tip: "De buren zijn het onderwerp en het huis is van hen; hus is een ett-woord: sitt." }
+              - { type: translate, prompt: "Vertaal: De buren schilderen hun (eigen) huis.", answers: ["Grannarna målar sitt hus."], feedback: [{ contains: "deras", tip: "Hun eigen huis, en de buren zijn het onderwerp: sitt." }, { contains: "sin hus", tip: "hus is een ett-woord: sitt." }] }
+          - id: n49e
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik zoek mijn telefoon. Welke vorm?", options: ["sin", "min"], answer: 1, shuffle: false, tip: "Sin, sitt en sina alleen bij han, hon, den, det en de. Bij jag gewoon min." }
+              - { type: translate, prompt: "Vertaal: Ik zoek mijn telefoon.", answers: ["Jag letar efter min {mobil|telefon|mobiltelefon}."], feedback: [{ contains: "sin", tip: "Bij jag gebruik je gewoon min." }] }
+          - id: x2rk
+            type: steps
+            steps:
+              - { type: mc, prompt: "Olle leest haar brief (die van Ingrid). Is de bezitter het onderwerp van de zin?", options: ["ja: sin, sitt of sina", "nee: hans, hennes of deras"], answer: 1, shuffle: false, tip: "De brief is van Ingrid; Olle is het onderwerp: hennes." }
+              - { type: translate, prompt: "Vertaal: Olle leest haar brief (die van Ingrid).", answers: ["Olle läser hennes brev."], feedback: [{ contains: "sitt brev", tip: "Het is niet Olles brief: hennes." }] }
+          - id: ps4v
+            type: steps
+            steps:
+              - { type: mc, prompt: "Bram luncht met zijn (eigen) collega's. Welke vorm?", options: ["sin", "sitt", "sina", "hans"], answer: 2, shuffle: false, tip: "Bram is het onderwerp en het zijn zijn eigen collega's (meervoud): sina." }
+              - { type: translate, prompt: "Vertaal: Bram luncht met zijn (eigen) collega's.", answers: ["Bram {äter lunch|lunchar} med sina {kollegor|kolleger}."], feedback: [{ contains: ["hans kollegor", "hans kolleger"], tip: "Zijn eigen collega's, en Bram is het onderwerp: sina." }, { contains: ["sin kollegor", "sin kolleger"], tip: "kollegor is meervoud: sina." }] }
+
       - id: waar-staat-het
         title: Waar staat het?
         instruction: Vul het voorzetsel in dat past bij het Nederlandse woord tussen haakjes.

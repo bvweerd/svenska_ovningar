@@ -233,6 +233,63 @@ sections:
           - { id: wzdj, type: gap, text: "___ föräldrar bor i Spanien. (hun)", gaps: [{ answers: ["Deras"], options: ["De", "Dem", "Deras"] }] }
           - { id: jjf4, type: gap, text: "Är det här ___ väskor? (jullie)", gaps: [{ answers: ["era"], options: ["er", "ert", "era"] }] }
 
+      - id: voornaamwoord-kiezen-maken
+        title: Hon, henne of hennes? Kies en vertaal
+        instruction: Kies eerst welke vorm het **vetgedrukte** woord krijgt, vertaal dan de zin.
+        topic: possessiv
+        shuffle: true
+        items:
+          - id: nkxt
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik zie **haar** auto. Welke vorm is *haar* hier?", options: ["hon (onderwerp)", "henne (lijdend voorwerp)", "hennes (bezit)"], answer: 2, shuffle: false, tip: "Het gaat erom van wie de auto is: hennes." }
+              - { type: mc, prompt: "**Waarom?** Waarom *hennes* en niet *henne*?", options: ["Haar zegt hier van wie de auto is: dat is bezit.", "Na ser komt altijd een bezittelijk voornaamwoord.", "Hennes gebruik je alleen bij en-woorden."], answer: 0, tip: "Henne = haar als lijdend voorwerp (Jag ser henne). Hennes = haar als bezit (hennes bil)." }
+              - { type: translate, prompt: "Vertaal: Ik zie haar auto.", answers: ["Jag ser hennes bil."], feedback: [{ contains: "henne bil", tip: "Van wie is de auto? Bezit: hennes." }, { contains: "hennes bilen", tip: "Na een bezittelijk voornaamwoord de onbepaalde vorm: hennes bil." }] }
+          - id: wejr
+            type: steps
+            topic: objekt
+            steps:
+              - { type: mc, prompt: "Ik zie **haar** morgen. Welke vorm is *haar* hier?", options: ["hon (onderwerp)", "henne (lijdend voorwerp)", "hennes (bezit)"], answer: 1, shuffle: false, tip: "Je ziet háár: zij is het lijdend voorwerp. Er komt geen ding achter: henne." }
+              - { type: translate, prompt: "Vertaal: Ik zie haar morgen.", answers: ["Jag {ser|träffar} henne {imorgon|i morgon}.", "Jag ska {se|träffa} henne {imorgon|i morgon}."], feedback: [{ contains: "hennes", tip: "Er komt geen ding achter haar: het lijdend voorwerp is henne." }] }
+          - id: 87zg
+            type: steps
+            topic: objekt
+            steps:
+              - { type: mc, prompt: "Wij bellen **hem** vaak. Welke vorm is *hem* hier?", options: ["han (onderwerp)", "honom (lijdend voorwerp)", "hans (bezit)"], answer: 1, shuffle: false, tip: "Hem is het lijdend voorwerp: honom." }
+              - { type: translate, prompt: "Vertaal: Wij bellen hem vaak.", answers: ["Vi ringer honom ofta.", "Vi ringer ofta till honom."], feedback: [{ contains: "ringer han", tip: "Hem is het lijdend voorwerp: honom." }, { contains: "ringer ofta honom", tip: "Een kort voornaamwoord staat vóór ofta: Vi ringer honom ofta." }] }
+          - id: vw46
+            type: steps
+            steps:
+              - { type: mc, prompt: "Dat is **zijn** fiets. Welke vorm is *zijn* hier?", options: ["han (onderwerp)", "honom (lijdend voorwerp)", "hans (bezit)"], answer: 2, shuffle: false, tip: "Van wie is de fiets? Bezit: hans." }
+              - { type: translate, prompt: "Vertaal: Dat is zijn fiets.", answers: ["Det är hans cykel."], feedback: [{ contains: "hans cykeln", tip: "Na hans de onbepaalde vorm: hans cykel." }] }
+          - id: 5ns5
+            type: steps
+            steps:
+              - { type: mc, prompt: "**Hun** kinderen wonen in Stockholm. Welke vorm is *hun* hier?", options: ["de (onderwerp)", "dem (lijdend voorwerp)", "deras (bezit)"], answer: 2, shuffle: false, tip: "Van wie zijn de kinderen? Bezit: deras." }
+              - { type: translate, prompt: "Vertaal: Hun kinderen wonen in Stockholm.", answers: ["Deras barn bor i Stockholm."], feedback: [{ contains: "Deras barnen", tip: "Na deras de onbepaalde vorm: deras barn." }] }
+          - id: paf6
+            type: steps
+            topic: objekt
+            steps:
+              - { type: mc, prompt: "Kun je **hen** helpen? Welke vorm is *hen* hier?", options: ["de (onderwerp)", "dem (lijdend voorwerp)", "deras (bezit)"], answer: 1, shuffle: false, tip: "Hen is het lijdend voorwerp: dem. Het klinkt als dom, net als de." }
+              - { type: translate, prompt: "Vertaal: Kun je hen helpen?", answers: ["Kan du hjälpa dem?"], feedback: [{ contains: "hjälpa de", tip: "Het lijdend voorwerp is dem (het klinkt hetzelfde als de)." }, { contains: "hjälpa dom", tip: "Zo klinkt het in spreektaal, maar je schrijft dem." }] }
+          - id: tf26
+            type: steps
+            steps:
+              - { type: mc, prompt: "Wij houden van **onze** tuin. Welke vorm is *onze* hier?", options: ["vi (onderwerp)", "oss (lijdend voorwerp)", "vår (bezit)"], answer: 2, shuffle: false, tip: "Van wie is de tuin? Bezit: vår (trädgård is een en-woord)." }
+              - { type: translate, prompt: "Vertaal: Wij houden van onze tuin.", answers: ["Vi {tycker om|älskar|gillar} vår trädgård."], feedback: [{ contains: "vårt", tip: "trädgård is een en-woord: vår trädgård." }, { contains: "oss trädgård", tip: "Van wie is de tuin? Bezit: vår." }] }
+          - id: tnsw
+            type: steps
+            topic: objekt
+            steps:
+              - { type: mc, prompt: "Mijn zus heet Anna. Ken je **haar**? Welke vorm is *haar* hier?", options: ["hon (onderwerp)", "henne (lijdend voorwerp)", "hennes (bezit)"], answer: 1, shuffle: false, tip: "Je kent háár: lijdend voorwerp, henne." }
+              - { type: translate, prompt: "Vertaal: Ken je haar?", answers: ["Känner du henne?"], feedback: [{ contains: "känner du hon", tip: "Haar is hier het lijdend voorwerp: henne." }] }
+          - id: 8hde
+            type: steps
+            steps:
+              - { type: mc, prompt: "Waar zijn **mijn** foto's? Welke vorm is *mijn* hier?", options: ["min", "mitt", "mina"], answer: 2, shuffle: false, tip: "Foto's is meervoud: mina." }
+              - { type: translate, prompt: "Vertaal: Waar zijn mijn foto's?", answers: ["Var är mina foton?"], feedback: [{ contains: ["mitt foto", "min foto"], tip: "Foto's is meervoud: mina foton." }, { contains: "mina fotona", tip: "Na mina de onbepaalde vorm: mina foton." }] }
+
       - id: familie-koppelen
         title: Familie
         instruction: Koppel het Zweedse woord aan de betekenis.

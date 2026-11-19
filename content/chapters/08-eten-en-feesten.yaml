@@ -121,6 +121,59 @@ sections:
           - { id: exrh, type: translate, prompt: "Denk je dat Olle komt?", answers: ["Tror du [att ]Olle kommer?"], topic: vragen, feedback: [{ contains: "tycker du", tip: "Je vraagt naar een vermoeden, niet naar een mening: tror." }] }
           - { id: gum3, type: translate, prompt: "Ik denk vaak aan mijn familie.", answers: ["Jag tänker ofta på min familj."], feedback: [{ contains: ["tror ofta", "tycker ofta"], tip: "Aan iets denken = tänka på." }, { contains: "ofta tänker", tip: "ofta staat ná het werkwoord." }] }
 
+      - id: tycka-tro-kiezen-maken
+        title: Mening, vermoeden of plan? Kies en vertaal
+        instruction: Kies eerst wat de zin uitdrukt, vertaal hem dan met *tycka*, *tro* of *tänka*.
+        topic: tycka-tro-tanka
+        shuffle: true
+        items:
+          - id: gr8k
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik vind dat het eten lekker is. Wat drukt de zin uit?", options: ["een mening: tycka", "een vermoeden: tro", "nadenken of een plan: tänka"], answer: 0, shuffle: false, tip: "Je kunt *vinden* zeggen: een mening, tycka." }
+              - { type: mc, prompt: "**Waarom?** Hoe weet je dat het *tycka* is?", options: ["Je kunt in het Nederlands *vinden* zeggen.", "Je weet niet zeker of het eten lekker is.", "Je bent van plan te eten."], answer: 0, tip: "De test uit de uitleg: vinden → tycka, vermoeden → tro, nadenken of van plan zijn → tänka." }
+              - { type: translate, prompt: "Vertaal: Ik vind dat het eten lekker is.", answers: ["Jag tycker [att ]maten är god."], feedback: [{ contains: "tror", tip: "Het is een mening (vinden): tycker." }, { contains: "maten är gott", tip: "mat is een en-woord: maten är god." }] }
+          - id: tgt5
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik denk dat Olle morgen komt. Wat drukt de zin uit?", options: ["een mening: tycka", "een vermoeden: tro", "nadenken of een plan: tänka"], answer: 1, shuffle: false, tip: "Je weet het niet zeker, je vermoedt het: tro." }
+              - { type: translate, prompt: "Vertaal: Ik denk dat Olle morgen komt.", answers: ["Jag tror [att ]Olle kommer {imorgon|i morgon}."], feedback: [{ contains: "tycker", tip: "Het is geen mening maar een vermoeden: tror." }, { contains: "tänker", tip: "Je vermoedt het: tror." }] }
+          - id: tcnn
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik denk vaak aan de zomer. Wat drukt de zin uit?", options: ["een mening: tycka", "een vermoeden: tro", "nadenken of een plan: tänka"], answer: 2, shuffle: false, tip: "Denken aan iets: tänka på." }
+              - { type: translate, prompt: "Vertaal: Ik denk vaak aan de zomer.", answers: ["Jag tänker ofta på sommaren."], feedback: [{ contains: "tänker på sommaren ofta", tip: "Ofta staat direct na het werkwoord: Jag tänker ofta på …" }] }
+          - id: mupk
+            type: steps
+            steps:
+              - { type: mc, prompt: "Wat vind je van de film? Wat drukt de zin uit?", options: ["een mening: tycka", "een vermoeden: tro", "nadenken of een plan: tänka"], answer: 0, shuffle: false, tip: "Je vraagt naar een mening: tycka." }
+              - { type: translate, prompt: "Vertaal: Wat vind je van de film?", answers: ["Vad tycker du om filmen?"], feedback: [{ contains: "tycker du av", tip: "Een mening over iets: tycka om." }] }
+          - id: 4qd6
+            type: steps
+            steps:
+              - { type: mc, prompt: "We zijn van plan in juli naar Gotland te gaan. Wat drukt de zin uit?", options: ["een mening: tycka", "een vermoeden: tro", "nadenken of een plan: tänka"], answer: 2, shuffle: false, tip: "Van plan zijn: tänka + infinitief." }
+              - { type: translate, prompt: "Vertaal: We zijn van plan in juli naar Gotland te gaan.", answers: ["Vi tänker {åka|resa} till Gotland i juli."], feedback: [{ contains: "tänker att åka", tip: "Na tänka (van plan zijn) komt de infinitief zonder att." }] }
+          - id: qnnn
+            type: steps
+            steps:
+              - { type: mc, prompt: "Denk je dat het morgen regent? Wat drukt de zin uit?", options: ["een mening: tycka", "een vermoeden: tro", "nadenken of een plan: tänka"], answer: 1, shuffle: false, tip: "Je weet niet zeker of het morgen regent, je verwacht het: tro." }
+              - { type: translate, prompt: "Vertaal: Denk je dat het morgen regent?", answers: ["Tror du [att ]det regnar {imorgon|i morgon}?"], feedback: [{ contains: "Tycker du", tip: "Je vraagt niet naar een mening maar naar een verwachting: tror." }] }
+          - id: kkch
+            type: steps
+            steps:
+              - { type: mc, prompt: "Bram vindt dat de soep te heet is. Wat drukt de zin uit?", options: ["een mening: tycka", "een vermoeden: tro", "nadenken of een plan: tänka"], answer: 0, shuffle: false, tip: "Je kunt *vinden* zeggen: een mening, tycka." }
+              - { type: translate, prompt: "Vertaal: Bram vindt dat de soep te heet is.", answers: ["Bram tycker [att ]soppan är för varm."], feedback: [{ contains: "tror", tip: "Het is Brams mening: tycker." }] }
+          - id: jkpu
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ik geloof dat ze in Uppsala woont. Wat drukt de zin uit?", options: ["een mening: tycka", "een vermoeden: tro", "nadenken of een plan: tänka"], answer: 1, shuffle: false, tip: "Je weet het niet zeker: tro." }
+              - { type: translate, prompt: "Vertaal: Ik geloof dat ze in Uppsala woont.", answers: ["Jag tror [att ]hon bor i Uppsala."], feedback: [{ contains: "tycker", tip: "Je weet het niet zeker, het is geen mening: tror." }] }
+          - id: 653r
+            type: steps
+            steps:
+              - { type: mc, prompt: "Wilma is van plan een nieuwe fiets te kopen. Wat drukt de zin uit?", options: ["een mening: tycka", "een vermoeden: tro", "nadenken of een plan: tänka"], answer: 2, shuffle: false, tip: "Van plan zijn: tänka + infinitief." }
+              - { type: translate, prompt: "Vertaal: Wilma is van plan een nieuwe fiets te kopen.", answers: ["Wilma tänker köpa en ny cykel."], feedback: [{ contains: "tänker att köpa", tip: "Na tänka (van plan zijn) komt de infinitief zonder att." }] }
+
       - id: det-finns-invullen
         title: Det finns
         instruction: Vul het ontbrekende woord in.

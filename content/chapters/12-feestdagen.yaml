@@ -189,6 +189,63 @@ sections:
           - { id: p87f, type: gap, text: "Den ___ katten sover i soffan. (svart)", gaps: [{ answers: ["svarta"], feedback: [{ match: "svart", tip: "Na den (bepaald) krijgt het bijvoeglijk naamwoord -a: den svarta katten." }] }] }
           - { id: 7pfj, type: gap, text: "Jag tar de ___ skorna idag. (blå)", gaps: [{ answers: ["blå", "blåa"] }] }
 
+      - id: adjectief-kiezen-maken
+        title: Welke vorm? Kies en vertaal
+        instruction: Kies eerst de goede vorm van het bijvoeglijk naamwoord, vertaal dan de zin.
+        topic: adjektiv-obestamd
+        shuffle: true
+        items:
+          - id: rrkv
+            type: steps
+            steps:
+              - { type: mc, prompt: "Ze hebben een groot huis. Welke vorm?", options: ["stor", "stort", "stora"], answer: 1, shuffle: false, tip: "hus is een ett-woord: +t, stort." }
+              - { type: mc, prompt: "**Waarom?** Waarom *stort*?", options: ["Hus is een ett-woord: het bijvoeglijk naamwoord krijgt -t.", "Na har krijgt een bijvoeglijk naamwoord altijd -t.", "Het huis is van hen."], answer: 0, tip: "Onbepaald: en-woord fin, ett-woord fint, meervoud fina." }
+              - { type: translate, prompt: "Vertaal: Ze hebben een groot huis.", answers: ["De har ett stort hus."], feedback: [{ contains: "stor hus", tip: "hus is een ett-woord: ett stort hus." }] }
+          - id: 7nmd
+            type: steps
+            topic: adjektiv-bestamd
+            steps:
+              - { type: mc, prompt: "Het nieuwe huis is mooi. Hoe zeg je *het nieuwe huis*?", options: ["det nytt huset", "det nya huset", "det nya hus"], answer: 1, shuffle: false, tip: "Bepaald: det + adjectief op -a + bepaalde vorm: det nya huset." }
+              - { type: translate, prompt: "Vertaal: Het nieuwe huis is mooi.", answers: ["Det nya huset är {fint|vackert}."], feedback: [{ contains: ["huset är fin", "huset är vacker"], tip: "Huset is een ett-woord: huset är fint (of vackert)." }, { contains: "nya hus", tip: "Dubbel bepaald: det nya huset." }, { match: ["Nya huset är fint.", "Nya huset är vackert."], tip: "Vergeet het losse lidwoord niet: det nya huset." }] }
+          - id: 6vx5
+            type: steps
+            steps:
+              - { type: mc, prompt: "Bram heeft nieuwe schoenen. Welke vorm?", options: ["ny", "nytt", "nya"], answer: 2, shuffle: false, tip: "Meervoud: +a, nya." }
+              - { type: translate, prompt: "Vertaal: Bram heeft nieuwe schoenen.", answers: ["Bram har nya skor."], feedback: [{ contains: ["ny skor", "nytt skor"], tip: "skor is meervoud: nya." }] }
+          - id: s56u
+            type: steps
+            topic: adjektiv-bestamd
+            steps:
+              - { type: mc, prompt: "Mijn nieuwe fiets is blauw. Hoe zeg je *mijn nieuwe fiets*?", options: ["min ny cykel", "min nya cykel", "min nya cykeln"], answer: 1, shuffle: false, tip: "Na min: adjectief op -a, zelfstandig naamwoord onbepaald." }
+              - { type: translate, prompt: "Vertaal: Mijn nieuwe fiets is blauw.", answers: ["Min nya cykel är blå."], feedback: [{ contains: "nya cykeln", tip: "Na min blijft het zelfstandig naamwoord onbepaald: min nya cykel." }, { contains: "min ny cykel", tip: "Na min krijgt het bijvoeglijk naamwoord -a: min nya cykel." }, { contains: "blått", tip: "cykel is een en-woord: är blå." }] }
+          - id: vy8q
+            type: steps
+            steps:
+              - { type: mc, prompt: "De kamers zijn klein. Welke vorm?", options: ["liten", "litet", "små"], answer: 2, shuffle: false, tip: "Rummen is meervoud: små (meervoud van liten). Ook na är past het bijvoeglijk naamwoord zich aan." }
+              - { type: translate, prompt: "Vertaal: De kamers zijn klein.", answers: ["Rummen är små."], feedback: [{ contains: ["är liten", "är litet", "är lilla"], tip: "Rummen is meervoud: små." }] }
+          - id: t2zk
+            type: steps
+            topic: adjektiv-bestamd
+            steps:
+              - { type: mc, prompt: "Het kleine huis ligt bij het meer. Hoe zeg je *het kleine huis*?", options: ["det liten huset", "det lilla huset", "det små huset"], answer: 1, shuffle: false, tip: "Liten wordt lilla in het bepaalde enkelvoud: det lilla huset." }
+              - { type: translate, prompt: "Vertaal: Het kleine huis ligt bij het meer.", answers: ["Det lilla huset ligger {vid|nära} sjön."], feedback: [{ contains: "små huset", tip: "Små is het meervoud. Enkelvoud bepaald: det lilla huset." }] }
+          - id: f2uj
+            type: steps
+            steps:
+              - { type: mc, prompt: "Het eten is lekker. Welke vorm?", options: ["god", "gott", "goda"], answer: 0, shuffle: false, tip: "Mat is een en-woord: maten är god." }
+              - { type: translate, prompt: "Vertaal: Het eten is lekker.", answers: ["Maten {är god|smakar gott}."], feedback: [{ contains: "är gott", tip: "Mat is een en-woord (maten): god. (Maten smakar gott kan ook: gott is daar een bijwoord.)" }] }
+          - id: 6s8n
+            type: steps
+            steps:
+              - { type: mc, prompt: "We wonen in een oud huis. Welke vorm?", options: ["gammal", "gammalt", "gamla"], answer: 1, shuffle: false, tip: "hus is een ett-woord: gammalt." }
+              - { type: translate, prompt: "Vertaal: We wonen in een oud huis.", answers: ["Vi bor i ett gammalt hus."], feedback: [{ contains: "gammal hus", tip: "hus is een ett-woord: ett gammalt hus." }] }
+          - id: yhyz
+            type: steps
+            topic: adjektiv-bestamd
+            steps:
+              - { type: mc, prompt: "De kleine kinderen slapen. Hoe zeg je *de kleine kinderen*?", options: ["de lilla barnen", "de små barnen", "de små barn"], answer: 1, shuffle: false, tip: "Meervoud van liten is små; bepaald: de små barnen." }
+              - { type: translate, prompt: "Vertaal: De kleine kinderen slapen.", answers: ["De små barnen sover."], feedback: [{ contains: "lilla barnen", tip: "Meervoud: små, niet lilla." }, { contains: "små barn sover", tip: "Dubbel bepaald: de små barnen." }] }
+
       - id: trappen-tabel
         title: Vergrotende en overtreffende trap
         instruction: Vul de vormen in.
