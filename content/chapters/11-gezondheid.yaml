@@ -364,9 +364,13 @@ sections:
 
       - id: schrijven-ziek
         title: "Schrijven: ziekmelden"
-        instruction: Je bent ziek. Schrijf een berichtje aan je leidinggevende of docent.
+        instruction: "Bouw eerst je bericht op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, het hele bericht."
         topic: reflexiv
         items:
+          - { id: 9e7n, type: mc, topic: v2, prompt: "Kies de beste openingszin voor je bericht aan Karin.", options: ["Hej Karin! Tyvärr kan jag inte komma till jobbet idag.", "Hej Karin! Tyvärr jag kan inte komma till jobbet idag.", "Hej Karin! Tyvärr kan jag inte kommer till jobbet idag."], answer: 0, tip: "Na tyvärr komt het werkwoord op plaats 2 (kan jag), en na kan volgt de hele vorm: komma." }
+          - { id: 46hv, type: gap, topic: kroppen, prompt: "Kies het goede woord.", text: "Jag har feber och ont ___ halsen.", gaps: [{ answers: ["i"], options: ["i", "på", "med"], tip: "Pijn in een lichaamsdeel: ont i." }] }
+          - { id: a8kd, type: gap, prompt: "Kies het goede woord.", text: "Jag känner ___ väldigt trött.", gaps: [{ answers: ["mig"], options: ["mig", "jag", "sig"], tip: "känna sig: bij jag hoort mig." }] }
+          - { id: sw46, type: translate, prompt: "Ik hoop dat ik me donderdag beter voel.", answers: ["Jag hoppas[ att] jag {mår bättre|känner mig bättre} på torsdag."], feedback: [{ contains: "känner jag", tip: "Na att komt een bijzin: eerst het onderwerp, dan het werkwoord (att jag känner mig …)." }] }
           - id: 4cd6
             type: free
             prompt: "Zeg dat je ziek bent, wat je klachten zijn, en wanneer je denkt terug te zijn."

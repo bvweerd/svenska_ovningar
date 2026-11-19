@@ -259,9 +259,13 @@ sections:
 
       - id: schrijven-hobby
         title: "Schrijven: jouw vrije tijd"
-        instruction: Schrijf over wat je in je vrije tijd doet.
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, over je eigen vrije tijd."
         topic: tycka-om
         items:
+          - { id: 2b8u, type: mc, prompt: "Kies de beste openingszin.", options: ["På fritiden tycker jag om att läsa.", "På fritiden jag tycker om att läsa.", "På fritiden tycker jag om läsa."], answer: 0, tip: "Na På fritiden komt het werkwoord op plaats 2, en na tycka om komt att + werkwoord." }
+          - { id: paw5, type: order, topic: frekvens, prompt: "Vertel wat je op zaterdag meestal doet.", start: "På lördagar", tokens: ["brukar", "jag", "cykla"], answers: ["På lördagar brukar jag cykla."] }
+          - { id: 5da5, type: gap, topic: frekvens, prompt: "Kies het woord dat past.", text: "Jag spelar ___ fotboll, för jag tycker inte om sport.", gaps: [{ answers: ["aldrig"], options: ["aldrig", "ofta", "alltid"], tip: "Wie sport niet leuk vindt, voetbalt nooit: aldrig." }] }
+          - { id: m4dz, type: translate, prompt: "Ik vind voetbal niet leuk.", answers: ["Jag {tycker inte om|gillar inte} fotboll.", "Jag tycker inte att fotboll är {roligt|kul}."], feedback: [{ contains: "tycker om inte", tip: "inte staat tussen tycker en om: Jag tycker inte om …" }] }
           - id: 8zgw
             type: free
             prompt: "Vertel wat je graag doet, hoe vaak je het doet en wat je níet leuk vindt."
