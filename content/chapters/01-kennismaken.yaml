@@ -233,7 +233,7 @@ sections:
             type: steps
             steps:
               - { type: mc, prompt: "**läsa** (lezen): Fleur ___ en bok.", options: ["läser", "läsar", "läsa"], answer: 0, tip: "Bij läsa wordt de -a een -er: läser." }
-              - { type: translate, prompt: "Maak de zin ontkennend: Fleur läser en bok.", answers: ["Fleur läser inte {en|någon} bok."], topic: inte }
+              - { type: translate, prompt: "Maak de zin ontkennend: Fleur läser en bok.", answers: ["Fleur läser {inte en|inte någon|ingen} bok."], topic: inte }
           - id: kvzv
             type: steps
             steps:

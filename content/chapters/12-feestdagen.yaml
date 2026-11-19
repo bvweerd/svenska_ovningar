@@ -212,8 +212,8 @@ sections:
           - { id: 8nbz, type: translate, prompt: "Koffie is duurder dan thee.", answers: ["Kaffe är dyrare än te."] }
           - { id: b63z, type: translate, prompt: "Wie is het oudst?", answers: ["Vem är äldst?"] }
           - { id: qdmv, type: translate, prompt: "Nils is kleiner dan Wilma.", answers: ["Nils är {mindre|kortare} än Wilma."], feedback: [{ contains: "litenare", tip: "liten is onregelmatig: mindre." }] }
-          - { id: zhh9, type: translate, prompt: "Dit is de mooiste kerk van Zweden.", answers: ["{Det här|Detta} är den {vackraste|finaste} kyrkan i Sverige."], feedback: [{ contains: ["den vackrast kyrkan", "den finast kyrkan"], tip: "Bepaald: den vackraste kyrkan." }] }
-          - { id: env4, type: translate, prompt: "Wilma loopt sneller dan Nils.", answers: ["Wilma springer {snabbare|fortare} än Nils."], feedback: [{ contains: "mer snabb", tip: "snabb is een gewoon bijvoeglijk naamwoord: snabbare." }] }
+          - { id: zhh9, type: translate, prompt: "Dit is de mooiste kerk van Zweden.", answers: ["{Det här|Detta} är den {vackraste|finaste} kyrkan i Sverige.", "{Det här|Detta} är Sveriges {vackraste|finaste} kyrka."], feedback: [{ contains: ["den vackrast kyrkan", "den finast kyrkan"], tip: "Bepaald: den vackraste kyrkan." }] }
+          - { id: env4, type: translate, prompt: "Wilma loopt sneller dan Nils.", answers: ["Wilma {springer|går} {snabbare|fortare} än Nils."], feedback: [{ contains: "mer snabb", tip: "snabb is een gewoon bijvoeglijk naamwoord: snabbare." }] }
 
       - id: mer-mest
         title: Mer of -are?
@@ -227,7 +227,7 @@ sections:
           - { id: 5fxy, type: mc, prompt: "Vilken bil är ___? (praktisk)", options: ["mest praktisk", "praktiskast", "mer praktiskast"], answer: 0, shuffle: false, tip: "Woorden op -isk krijgen mer/mest." }
           - { id: ftx3, type: mc, prompt: "Olle är ___ än Bram. (oud)", options: ["äldre", "mer gammal", "gammalare"], answer: 0, shuffle: false, tip: "gammal is onregelmatig: äldre – äldst." }
           - { id: kgxb, type: mc, prompt: "Min väska är ___ än din. (zwaar)", options: ["tyngre", "tungare", "mer tung"], answer: 0, shuffle: false, tip: "tung – tyngre – tyngst: met klinkerwisseling." }
-          - { id: kmw8, type: mc, prompt: "Lucia är den ___ tiden på året. (donker)", options: ["mörkaste", "mest mörka", "mörkare"], answer: 0, shuffle: false, tip: "mörk is een gewoon bijvoeglijk naamwoord: -ast, en bepaald -aste." }
+          - { id: kmw8, type: mc, prompt: "Lucia firas under den ___ tiden på året. (donker)", options: ["mörkaste", "mest mörka", "mörkare"], answer: 0, shuffle: false, tip: "mörk is een gewoon bijvoeglijk naamwoord: -ast, en bepaald -aste." }
           - { id: qr4v, type: mc, prompt: "Vilken film var ___? (leuk, overtreffende trap)", options: ["roligast", "mest rolig", "roligaste"], answer: 0, shuffle: false, tip: "rolig – roligare – roligast. Na var zonder zelfstandig naamwoord: roligast." }
 
       - id: feestdagen-quiz

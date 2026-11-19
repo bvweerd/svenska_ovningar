@@ -153,7 +153,7 @@ sections:
           - { id: jf4g, type: translate, prompt: "Bram houdt niet van vis.", answers: ["Bram tycker inte om fisk.", "Bram gillar inte fisk."], feedback: [{ contains: "tycker om inte", tip: "inte staat tussen tycker en om." }, { contains: "inte tycker om", tip: "inte staat ná het werkwoord: tycker inte om." }] }
           - { id: fcm5, type: translate, prompt: "Nils vindt voetballen leuk.", answers: ["Nils {gillar|tycker om|älskar} att spela fotboll.", "Nils tycker [att ]det är {roligt|kul} att spela fotboll."] }
           - { id: h5jf, type: translate, prompt: "Houd jij van dansen?", answers: ["{Tycker du om|Gillar du|Älskar du} att dansa?"], topic: vragen }
-          - { id: 5g4v, type: translate, prompt: "Olle houdt van vissen.", answers: ["Olle {tycker om|gillar|älskar} att fiska."], feedback: [{ match: ["Olle tycker om fiska", "Olle gillar fiska", "Olle älskar fiska"], tip: "Bij een activiteit: att + infinitief." }] }
+          - { id: 5g4v, type: translate, prompt: "Olle houdt van vissen (hengelen).", answers: ["Olle {tycker om|gillar|älskar} att fiska."], feedback: [{ match: ["Olle tycker om fiska", "Olle gillar fiska", "Olle älskar fiska"], tip: "Bij een activiteit: att + infinitief." }] }
           - { id: s8wh, type: translate, prompt: "Ik hou niet van koffie.", answers: ["Jag tycker inte om kaffe.", "Jag gillar inte kaffe."], feedback: [{ contains: "tycker om inte", tip: "inte staat tussen tycker en om." }] }
           - { id: dw4t, type: translate, prompt: "Fleur leest graag.", answers: ["Fleur {tycker om|gillar|älskar} att läsa.", "Fleur läser gärna."] }
 

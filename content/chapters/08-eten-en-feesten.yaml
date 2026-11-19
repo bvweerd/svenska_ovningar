@@ -279,7 +279,7 @@ sections:
           - { id: zghe, type: listen, say: "Jag tycker att maten är god.", prompt: "Welk werkwoord hoor je?", options: ["tycker", "tror", "tänker"], answer: 0 }
           - { id: 4d47, type: listen, say: "Vi tänker åka till Gotland.", prompt: "Welk werkwoord hoor je?", options: ["tänker", "tror", "tycker"], answer: 0 }
           - { id: ctxn, type: listen, say: "Det finns inga ägg i kylen.", prompt: "Wat betekent het?", options: ["Er zijn geen eieren.", "Er zijn nog eieren.", "Er is geen melk."], answer: 0, topic: det-finns }
-          - { id: hd97, type: listen, say: "Jag skulle vilja ha en kopp kaffe.", prompt: "Wat wil ze hebben?", options: ["een kop koffie", "een kop thee", "een glas water"], answer: 0, topic: mat-fraser }
+          - { id: hd97, type: listen, say: "Jag skulle vilja ha en kopp kaffe.", prompt: "Wat wil de spreker hebben?", options: ["een kop koffie", "een kop thee", "een glas water"], answer: 0, topic: mat-fraser }
 
       - id: luisteren-dictee
         title: "Dictee"

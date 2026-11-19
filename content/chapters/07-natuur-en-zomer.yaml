@@ -177,8 +177,8 @@ sections:
           - { id: 4w37, type: translate, prompt: "– Jag ska åka till Gotland. – Ik ook.", answers: ["Det ska jag också."] }
           - { id: yapn, type: translate, prompt: "– Jag förstår inte. – Ik ook niet.", answers: ["Inte jag heller.", "Det gör inte jag heller."], feedback: [{ contains: "också", tip: "Bij een ontkenning: heller in plaats van också." }] }
           - { id: kdcd, type: translate, prompt: "– Jag jobbar hemma idag. – Ik niet.", answers: ["Det gör inte jag.", "Inte jag."] }
-          - { id: qvbs, type: translate, prompt: "– Jag är hungrig. – Ik ook.", answers: ["Det är jag också."], feedback: [{ match: "Det gör jag också", tip: "Bij är herhaal je är." }] }
-          - { id: g443, type: translate, prompt: "– Jag kan inte simma. – Ik ook niet.", answers: ["Inte jag heller.", "Det kan inte jag heller."], feedback: [{ contains: "också", tip: "Bij een ontkenning: heller in plaats van också." }] }
+          - { id: qvbs, type: translate, prompt: "– Jag är hungrig. – Ik ook.", answers: ["Det är jag också."], feedback: [{ match: "Det gör jag också", tip: "Bij är herhaal je är." }, { match: ["Jag också", "Jag är också hungrig"], tip: "Dat kan in spreektaal, maar oefen hier de korte vorm: Det är jag också." }] }
+          - { id: g443, type: translate, prompt: "– Jag kan inte simma. – Ik ook niet.", answers: ["Inte jag heller.", "Det kan {inte jag|jag inte} heller."], feedback: [{ contains: "också", tip: "Bij een ontkenning: heller in plaats van också." }] }
           - { id: hyu8, type: translate, prompt: "– Jag gillar inte regn. – Ik wel.", answers: ["Men det gör jag.", "Det gör jag."] }
 
       - id: weer-koppelen

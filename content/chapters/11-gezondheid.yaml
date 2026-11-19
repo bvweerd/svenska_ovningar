@@ -332,7 +332,7 @@ sections:
           - { id: vbzf, type: listen, say: "Vasen står på bordet.", prompt: "Welk werkwoord hoor je?", options: ["står", "ligger", "sitter"], answer: 0 }
           - { id: kkjm, type: listen, say: "Tavlan hänger på väggen.", prompt: "Welk werkwoord hoor je?", options: ["hänger", "står", "ligger"], answer: 0 }
           - { id: kkzy, type: listen, say: "Han har ont i ryggen.", prompt: "Waar heeft hij pijn?", options: ["in zijn rug", "in zijn buik", "in zijn hoofd"], answer: 0, topic: kroppen }
-          - { id: 429b, type: listen, say: "Jag har ont i halsen.", prompt: "Waar heeft ze pijn?", options: ["in haar keel", "in haar oor", "in haar voet"], answer: 0, topic: kroppen }
+          - { id: 429b, type: listen, say: "Jag har ont i halsen.", prompt: "Waar heeft de spreker pijn?", options: ["in de keel", "in het oor", "in de voet"], answer: 0, topic: kroppen }
           - { id: y7bq, type: listen, say: "Skynda dig, bussen går snart!", prompt: "Welk woord hoor je?", options: ["dig", "mig", "sig"], answer: 0, topic: reflexiv }
 
       - id: luisteren-dictee
