@@ -1,4 +1,10 @@
 chapter: 3
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik kan vertellen wat ik in mijn vrije tijd doe en hoe vaak", topics: [frekvens] }
+  - { text: "Ik kan zeggen wat ik leuk vind en wat niet", topics: [tycka-om] }
+  - { text: "Ik kies de goede vorm van een persoonlijk voornaamwoord (jag of mig, han of honom)", topics: [objekt] }
 
 grammar:
   - id: frekvens

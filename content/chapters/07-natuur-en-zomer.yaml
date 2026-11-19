@@ -1,4 +1,10 @@
 chapter: 7
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik kan zinnen verbinden met och, men, så, för en eller", topics: [konjunktioner] }
+  - { text: "Ik kan instemmen met Det gör jag också en Inte jag heller", topics: [ocksa-heller] }
+  - { text: "Ik kan over het weer en de natuur praten", topics: [vader, allemansratten] }
 
 grammar:
   - id: konjunktioner

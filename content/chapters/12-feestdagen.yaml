@@ -1,4 +1,10 @@
 chapter: 12
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik kan bijvoeglijke naamwoorden in de goede vorm gebruiken", topics: [adjektiv-obestamd, adjektiv-bestamd] }
+  - { text: "Ik kan dingen vergelijken (större, störst)", topics: [komparation] }
+  - { text: "Ik kan over kerst en Lucia vertellen", topics: [jul] }
 
 grammar:
   - id: adjektiv-obestamd

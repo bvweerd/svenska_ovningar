@@ -1,4 +1,10 @@
 chapter: 9
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik ken de stamtijden van werkwoorden en kan ze gebruiken", topics: [tempus] }
+  - { text: "Ik kan doorgeven wat iemand anders zei", topics: [indirekt-tal] }
+  - { text: "Ik ken de woorden en vaste zinnen rond telefoneren en internet", topics: [telefon, woordenschat] }
 
 grammar:
   - id: tempus

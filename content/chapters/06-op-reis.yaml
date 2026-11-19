@@ -1,4 +1,10 @@
 chapter: 6
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik kan zeggen wanneer iets gebeurt of gebeurd is (om, för … sedan, i)", topics: [tidsprep] }
+  - { text: "Ik kan vertellen hoe ik reis en over prijzen praten", topics: [transport, pengar, raknord] }
+  - { text: "Ik kan data en rangtelwoorden gebruiken", topics: [ordningstal] }
 
 grammar:
   - id: tidsprep

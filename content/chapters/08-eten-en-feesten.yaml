@@ -1,4 +1,10 @@
 chapter: 8
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik kan zeggen wat ik vind, denk of verwacht (tycka, tro, tänka)", topics: [tycka-tro-tanka] }
+  - { text: "Ik kan in de verleden tijd vertellen over een feest of etentje", topics: [berattande] }
+  - { text: "Ik kan zeggen wat er is en wat er te eten is", topics: [det-finns, mat-fraser] }
 
 grammar:
   - id: tycka-tro-tanka

@@ -1,4 +1,10 @@
 chapter: 2
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik kan vertellen hoe mijn dag en week eruitzien", topics: [tidsuttryck, dagar] }
+  - { text: "Ik kan het meervoud van zelfstandige naamwoorden maken", topics: [plural] }
+  - { text: "Ik kan iemand iets vragen of opdragen, en zeggen wat ik wil, kan of moet", topics: [imperativ, modala] }
 
 # Personages: Fleur en Bram (Nederlands stel in Västerås), buren Ingrid en Olle Ek
 # met hun kinderen Wilma (15) en Nils (10).

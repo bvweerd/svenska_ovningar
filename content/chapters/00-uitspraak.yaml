@@ -1,4 +1,10 @@
 chapter: 0
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik hoor het verschil tussen de sje- en de tje-klank, en weet wanneer k, g en sk zacht klinken", topics: [sje-tje, hard-zacht] }
+  - { text: "Ik hoor of een klinker lang of kort is en waar de klemtoon ligt", topics: [klinkerlengte, klemtoon] }
+  - { text: "Ik herken gewone spreektaalvormen en weet hoe je ze schrijft", topics: [spreektaal] }
 
 grammar:
   - id: sje-tje

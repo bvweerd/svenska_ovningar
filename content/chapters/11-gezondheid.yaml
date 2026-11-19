@@ -1,4 +1,9 @@
 chapter: 11
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik kan zeggen waar iets ligt, staat of zit, en iets ergens neerleggen of neerzetten", topics: [positionsverb, placera] }
+  - { text: "Ik kan bij de dokter vertellen waar ik last van heb", topics: [kroppen, reflexiv] }
 
 grammar:
   - id: positionsverb

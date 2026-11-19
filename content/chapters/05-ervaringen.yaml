@@ -1,4 +1,10 @@
 chapter: 5
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik kan vertellen wat ik ooit heb meegemaakt, en kies tussen perfekt en preteritum", topics: [supinum, perfekt-preteritum] }
+  - { text: "Ik kan zeggen waar iemand is en waar iemand heen gaat (hemma of hem)", topics: [hem-hemma] }
+  - { text: "Ik kan mensen en dingen vergelijken met än", topics: [an] }
 
 grammar:
   - id: supinum

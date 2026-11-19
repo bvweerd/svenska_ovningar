@@ -1,4 +1,10 @@
 chapter: 10
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik kan bijzinnen maken met de goede woordvolgorde", topics: [subjunktioner, bisats-ordfoljd] }
+  - { text: "Ik kan sin, sitt en sina goed gebruiken", topics: [sin-sitt-sina] }
+  - { text: "Ik kan beschrijven waar dingen in huis staan", topics: [prep-plats] }
 
 grammar:
   - id: subjunktioner
