@@ -1,18 +1,22 @@
 import './styles.css';
 import { h } from './dom.js';
 import { markdown, inline } from './md.js';
-import { course } from './content.js';
+import { course, levels } from './content.js';
+import { SITE_TEXT, SIBLING } from './config.js';
+import { reportConfigured } from './report.js';
+import { speakButton, speedSelect } from './render/speak.js';
+import { speechSupported } from './speech.js';
+import { setKnownWords, getInputMode, setInputMode } from './render/tiles.js';
+import { expand } from './check/normalize.js';
+import { viewListenSettings, viewDictation, reportSpeechStatus } from './views/listen.js';
 import { itemCard } from './render/item-card.js';
 import { createMenu } from './menu.js';
-import { reportConfigured } from './report.js';
 import { initAnalytics, trackPage, trackEvent, scoreBucket, analyticsConfigured, optedOut, setOptOut } from './analytics.js';
 import {
   viewPracticeHub, viewDaily, viewVerbTrainer, viewFlashcards, viewTest, viewGames, viewGame, GAMES, dueCount, streakText,
 } from './views/practice.js';
 import { chapterByNo, findTopic, crumbs, progressBar, exerciseRunner, practiceView, splitTheme, plural } from './ui.js';
 import { shuffle } from './build.js';
-import { setKnownWords, getInputMode, setInputMode } from './render/tiles.js';
-import { expand } from './check/normalize.js';
 import {
   getResult, chapterProgress, resetProgress, recordItem, runState, startRun, completeRun,
   weakItems, setLast, getLast, exportProgress, importProgress, migrateToIds,
@@ -27,7 +31,8 @@ function viewHome() {
   return h('div', { class: 'home' },
     h('section', { class: 'hero' },
       h('h1', {}, 'Svenska övningar'),
-      h('p', { class: 'lead' }, 'Oefen Zweedse grammatica en woordenschat, hoofdstuk voor hoofdstuk. Elke oefening wordt meteen nagekeken, en bij een fout krijg je een tip.'),
+      h('p', { class: 'lead' }, SITE_TEXT.lead),
+      h('p', { class: 'muted' }, SIBLING.home[0], h('a', { href: SIBLING.href }, SIBLING.home[1]), SIBLING.home[2]),
     ),
     h('div', { class: 'today' },
       last
@@ -43,8 +48,10 @@ function viewHome() {
           h('span', { class: 'streak-line' }, streakText()));
       })(),
     ),
-    h('ol', { class: 'chapters' },
-      course.map((ch) => {
+    (levels.length ? levels : [{ id: null }]).map((lv) => [
+      lv.id ? h('div', { class: 'level-head' }, h('h2', {}, lv.title), lv.intro ? h('p', { class: 'muted' }, lv.intro) : null) : null,
+      h('ol', { class: 'chapters', start: course.find((c) => !lv.id || c.level === lv.id)?.chapter },
+      course.filter((c) => !lv.id || c.level === lv.id).map((ch) => {
         const p = ch.available ? chapterProgress(ch) : null;
         const { name, topics } = splitTheme(ch.theme);
         const inner = [
@@ -61,7 +68,7 @@ function viewHome() {
         return h('li', { class: `ch-card${ch.available ? '' : ' disabled'}` },
           ch.available ? h('a', { href: `#/k/${ch.chapter}` }, inner) : h('div', {}, inner));
       }),
-    ),
+    )]),
   );
 }
 
@@ -134,6 +141,7 @@ function viewChapter(ch) {
 const TYPE_NAMES = {
   mc: 'meerkeuze', multi: 'meerdere antwoorden', gap: 'invullen', translate: 'vertalen', order: 'zinsbouw',
   match: 'koppelen', table: 'tabel', truefalse: 'rätt/fel', clock: 'klok', dialogue: 'dialoog', free: 'schrijven', findError: 'zoek de fout',
+  transform: 'omvormen', listen: 'luisteren', sort: 'sorteren',
 };
 const typeName = (t) => TYPE_NAMES[t] ?? t;
 
@@ -191,12 +199,29 @@ function viewExercise(ch, ex, query) {
           h('span', {}, `Je gaat verder waar je gebleven was: ${run.done.size} van ${run.total} vragen al gedaan.`),
           h('a', { href: `${href}?opnieuw` }, 'Opnieuw beginnen'))
       : null,
-    ex.text
-      ? h('div', { class: 'reading-layout' }, h('section', { class: 'passage', lang: 'sv' }, ex.textTitle ? h('h2', {}, ex.textTitle) : null, h('div', { html: markdown(ex.text) })), h('div', { class: 'reading-questions' }, score, list, summary), textButton(ex))
-      : [score, list, summary],
+    ex.text && !ex.listen
+      ? h('div', { class: 'reading-layout' }, passage(ex), h('div', { class: 'reading-questions' }, score, list, summary), textButton(ex))
+      : [ex.text ? passage(ex) : null, score, list, summary],
   );
 }
 
+/** Leestekst met voorleesknop. Bij een luisteroefening is de tekst eerst verborgen. */
+function passage(ex) {
+  const listenMode = ex.listen && speechSupported();
+  const body = h('div', { class: 'passage-body', html: markdown(ex.text) });
+  const read = speakButton(ex.text, { label: listenMode ? 'Luister naar de tekst' : 'Lees voor', className: listenMode ? 'big' : '' });
+  const head = h('div', { class: 'passage-head' }, ex.textTitle ? h('h2', {}, ex.textTitle) : null,
+    read ? h('div', { class: 'passage-controls', lang: 'nl' }, read, speedSelect()) : null);
+  if (!listenMode) return h('section', { class: 'passage', lang: 'sv' }, head, body);
+  return h('section', { class: 'passage listen', lang: 'sv' }, head,
+    h('details', { class: 'passage-toggle' }, h('summary', { lang: 'nl' }, 'Toon de tekst'), body),
+    h('p', { class: 'muted small', lang: 'nl' }, 'Werkt het voorlezen niet goed? ', h('a', { href: '#/luisteren' }, 'Luisteren instellen')));
+}
+
+/**
+ * Telefoon: een zwevende knop „Tekst” zodra de leestekst uit beeld is.
+ * Opent de tekst in een paneel, zodat je niet hoeft terug te scrollen.
+ */
 function textButton(ex) {
   const sheet = h('dialog', { class: 'text-sheet', 'aria-label': ex.textTitle ?? 'Tekst' },
     h('div', { class: 'text-sheet-head' },
@@ -209,7 +234,11 @@ function textButton(ex) {
   setTimeout(() => {
     const target = btn.parentElement?.querySelector('.passage');
     if (!target || typeof IntersectionObserver !== 'function') return;
-    new IntersectionObserver(([entry]) => { btn.hidden = entry.isIntersecting; }).observe(target);
+    const watcher = new IntersectionObserver(([entry]) => {
+      if (!btn.isConnected) return watcher.disconnect(); // pagina is weg
+      btn.hidden = entry.isIntersecting;
+    });
+    watcher.observe(target);
   }, 0);
   return [btn, sheet];
 }
@@ -296,7 +325,10 @@ function viewAbout() {
   return h('div', { class: 'prose about' },
     crumbs({ label: 'Start', href: '#/' }, { label: 'Over deze site' }),
     h('h1', {}, 'Over deze site'),
-    h('p', {}, 'Svenska övningar is een gratis oefensite voor Nederlandstaligen die Zweeds leren op beginnersniveau. De grammatica wordt in dertien hoofdstukken (0 tot en met 12) in een vaste volgorde opgebouwd, zoals gebruikelijk in een basiscursus.'),
+    h('p', {}, SITE_TEXT.about),
+    h('p', {}, SIBLING.about[0], h('a', { href: SIBLING.href }, SIBLING.about[1]), SIBLING.about[2]),
+    h('h2', {}, 'Luisteren'),
+    h('p', {}, 'De site leest Zweeds voor met de spraakfunctie van je eigen browser. Hoe goed dat klinkt, hangt af van de Zweedse stemmen op je apparaat. ', h('a', { href: '#/luisteren' }, 'Luisteren instellen'), ' legt per browser uit hoe je een goede stem krijgt.'),
     h('p', {}, 'Alle oefenzinnen, teksten en uitleg op deze site zijn zelf geschreven. De site is niet verbonden aan een uitgever of lesmethode.'),
     h('h2', {}, 'Hoe werkt het nakijken?'),
     h('ul', {},
@@ -393,12 +425,14 @@ function route() {
   let view;
   if (!parts.length) view = viewHome();
   else if (parts[0] === 'over') view = viewAbout();
+  else if (parts[0] === 'luisteren') view = viewListenSettings();
   else if (parts[0] === 'grammatica') view = viewGrammarIndex();
   else if (parts[0] === 'herhalen') view = viewWeakAll();
   else if (parts[0] === 'oefenen') {
     if (!parts[1]) view = viewPracticeHub();
     else if (parts[1] === 'herhaling') view = viewDaily();
     else if (parts[1] === 'werkwoorden') view = viewVerbTrainer();
+    else if (parts[1] === 'luisteren') view = viewDictation(query);
     else if (parts[1] === 'spel' && !parts[2]) view = viewGames();
     else if (parts[1] === 'spel' && GAMES[parts[2]]) view = viewGame(parts[2]);
     else view = notFound();
@@ -481,6 +515,9 @@ function charBar() {
 }
 
 // ---------- Thema ----------
+// Gedeeld met de andere site (zelfde domein): één keuze voor licht of donker.
+const THEME_KEY = 'svensk-ovningar:theme';
+
 function themeToggle() {
   const btn = document.getElementById('theme');
   const apply = (t) => {
@@ -488,7 +525,7 @@ function themeToggle() {
     else delete document.documentElement.dataset.theme;
   };
   let saved = null;
-  try { saved = localStorage.getItem('svensk-ovningar:theme'); } catch { /* */ }
+  try { saved = localStorage.getItem(THEME_KEY); } catch { /* */ }
   apply(saved);
   btn?.addEventListener('click', () => {
     const dark = document.documentElement.dataset.theme
@@ -496,7 +533,7 @@ function themeToggle() {
       : matchMedia('(prefers-color-scheme: dark)').matches;
     const t = dark ? 'light' : 'dark';
     apply(t);
-    try { localStorage.setItem('svensk-ovningar:theme', t); } catch { /* */ }
+    try { localStorage.setItem(THEME_KEY, t); } catch { /* */ }
   });
 }
 
@@ -527,6 +564,7 @@ setKnownWords(...knownWords());
 migrateToIds(course);
 const updateMenu = createMenu(course);
 initAnalytics();
+reportSpeechStatus();
 window.addEventListener('hashchange', route);
 charBar();
 themeToggle();

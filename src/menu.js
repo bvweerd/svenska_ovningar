@@ -3,31 +3,35 @@
 import { h } from './dom.js';
 import { splitTheme } from './ui.js';
 import { dueItems } from './progress.js';
-import { practiceEntries } from './content.js';
+import { practiceEntries, levels } from './content.js';
 
 export function createMenu(course) {
   const nav = document.getElementById('menu');
   const toggle = h('button', { type: 'button', class: 'menu-toggle icon-btn', 'aria-expanded': 'false', 'aria-controls': 'menu-panel', 'aria-label': 'Menu' }, '☰');
   const chaptersBtn = h('button', { type: 'button', class: 'menu-link has-sub', 'aria-expanded': 'false', 'aria-haspopup': 'true' }, 'Hoofdstukken');
   const sub = h('ul', { class: 'submenu', hidden: true },
-    course.map((ch) =>
+    course.map((ch, i) => [
+      levels.length && ch.level !== course[i - 1]?.level
+        ? h('li', { class: 'submenu-head', role: 'presentation' }, levels.find((l) => l.id === ch.level)?.title ?? ch.level)
+        : null,
       h('li', {},
         ch.available
           ? h('a', { href: `#/k/${ch.chapter}`, 'data-chapter': ch.chapter },
               h('strong', {}, `${ch.chapter} · ${splitTheme(ch.theme).name}`), h('span', {}, splitTheme(ch.theme).topics))
           : h('span', { class: 'disabled' }, h('strong', {}, `${ch.chapter} · ${splitTheme(ch.theme).name}`), h('span', {}, 'binnenkort')),
       ),
-    ),
+    ]),
   );
   const weakCount = h('span', { class: 'count', hidden: true });
   const links = {
     grammatica: h('a', { class: 'menu-link', href: '#/grammatica' }, 'Grammatica'),
     oefenen: h('a', { class: 'menu-link', href: '#/oefenen' }, 'Oefenen', weakCount),
+    luisteren: h('a', { class: 'menu-link', href: '#/luisteren' }, 'Luisteren'),
     over: h('a', { class: 'menu-link', href: '#/over' }, 'Over'),
   };
   const panel = h('div', { class: 'menu-panel', id: 'menu-panel' },
     h('div', { class: 'menu-item' }, chaptersBtn, sub),
-    links.oefenen, links.grammatica, links.over,
+    links.oefenen, links.grammatica, links.luisteren, links.over,
   );
   const theme = document.getElementById('theme');
   nav.replaceChildren(panel, theme, toggle);

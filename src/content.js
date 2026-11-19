@@ -6,6 +6,7 @@ const files = import.meta.glob('../content/chapters/*.yaml', { eager: true, impo
 
 export const course = buildCourse(index, Object.values(files));
 export const verbs = verbData.verbs;
+export const levels = index.levels ?? [];
 
 /** Alle losse vragen die buiten hun oefening te gebruiken zijn (geen leesteksten of schrijfopdrachten). */
 export function practiceEntries(chapters = course) {

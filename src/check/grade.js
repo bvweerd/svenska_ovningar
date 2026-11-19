@@ -1,5 +1,6 @@
 // Pure nakijkfuncties per vraagtype. Geven altijd { correct, tip?, kind? } terug.
-import { normalize, variants } from './normalize.js';
+import { normalize, variants, displayAnswer } from './normalize.js';
+import { movedAdverbials } from './adverbial.js';
 import { diagnose } from './diagnose.js';
 import { clockAnswers, clockFeedback } from './clock.js';
 
@@ -18,8 +19,14 @@ export function gradeText(input, spec, ctx = {}) {
     const hitContains = asList(f.contains).some((c) => ` ${n} `.includes(` ${normalize(c, opts)} `));
     if (hitMatch || hitContains) return { correct: false, kind: 'feedback', tip: f.tip };
   }
+  // Tijdsbepaling vooraan of achteraan: ook goed (vastgelegde fouten hierboven gaan voor).
+  if (!spec.options && expected.some((e) => movedAdverbials(e).includes(n))) {
+    return { correct: true, moved: true, note: `Het voorbeeldantwoord zet de tijdsbepaling op een andere plek: „${displayAnswer(spec.answers)}”` };
+  }
+  // Bij een keuzelijst is een vaste tip zinvoller dan een spellingsdiagnose.
+  if (spec.options && spec.tip) return { correct: false, kind: 'feedback', tip: spec.tip };
   const d = diagnose(n, expected, ctx);
-  return { correct: false, kind: d?.kind ?? 'unknown', tip: d?.tip };
+  return { correct: false, kind: d?.kind ?? 'unknown', tip: d?.tip ?? spec.tip };
 }
 
 export function gradeMc(index, item) {
@@ -120,4 +127,20 @@ export function checkFree(text, item) {
     checks.push({ ok, label: req.label ?? `Gebruikt „${opts[0]}”` });
   }
   return { checks, allOk: checks.every((c) => c.ok), words };
+}
+
+/** Sorteren: choice[i] is de gekozen categorie bij item i. */
+export function gradeSort(choice, item) {
+  if (choice.some((c) => c === null || c === undefined)) return { correct: false, empty: true, tip: 'Kies bij elke regel een categorie.' };
+  const fields = choice.map((c, i) => c === item.items[i].cat);
+  const wrong = fields.map((ok, i) => (ok ? null : i)).filter((i) => i !== null);
+  if (!wrong.length) return { correct: true, fields };
+  const first = item.items[wrong[0]];
+  const tip = first.tip ? `„${first.text.replace(/\*/g, '')}”: ${first.tip}` : item.tip;
+  return {
+    correct: false,
+    kind: 'sort',
+    fields,
+    tip: `${wrong.length === 1 ? 'Eén regel staat' : `${wrong.length} regels staan`} nog in de verkeerde categorie.${tip ? ` ${tip}` : ''}`,
+  };
 }

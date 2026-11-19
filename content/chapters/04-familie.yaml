@@ -171,7 +171,7 @@ sections:
             type: steps
             steps:
               - { type: mc, prompt: "För två år sedan ___ Olle 40 år. (fylla)", options: ["fyllde", "fyller"], answer: 0, shuffle: false, tip: "för två år sedan (twee jaar geleden) vraagt om de verleden tijd." }
-              - { type: translate, prompt: "Vorig jaar werd Wilma veertien.", answers: ["Förra året fyllde Wilma fjorton[ år].", "Wilma fyllde fjorton[ år] förra året."], feedback: [{ contains: "blev", tip: "Jarig worden (een leeftijd bereiken) is „fylla … år”: Wilma fyllde fjorton." }] }
+              - { type: translate, prompt: "Vorig jaar werd Wilma veertien.", answers: ["Förra året fyllde Wilma fjorton[ år].", "Wilma fyllde fjorton[ år] förra året.", "{I fjol|Ifjol} fyllde Wilma fjorton[ år].", "Wilma fyllde fjorton[ år] {i fjol|ifjol}."], feedback: [{ contains: "blev", tip: "Jarig worden (een leeftijd bereiken) is „fylla … år”: Wilma fyllde fjorton." }] }
           - id: 9xwq
             type: steps
             steps:

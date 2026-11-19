@@ -7,10 +7,12 @@ import { displayAnswer } from '../check/normalize.js';
 import { shuffle } from '../build.js';
 import {
   gradeText, gradeMc, gradeMulti, gradeTrueFalse, gradeOrder,
-  gradeFields, clockSpec, checkFree,
+  gradeFields, clockSpec, checkFree, gradeSort,
 } from '../check/grade.js';
+import { speakButton, speedSelect } from './speak.js';
 import { sentenceInput } from './tiles.js';
 import { match, dialogue } from './tap.js';
+import { speak, speechStatus } from '../speech.js';
 
 // replaceChildren met geneste arrays en lege waarden
 const fill = (el, ...kids) => el.replaceChildren(...kids.flat(Infinity).filter((k) => k !== null && k !== undefined && k !== false));
@@ -42,7 +44,7 @@ function lockInputs(root) {
   root.querySelectorAll('input, select, button.chip, button.move, textarea').forEach((e) => (e.disabled = true));
 }
 
-/** Zinsveld (typen of woordtegels) met nakijken; gedeeld door vertalen, klok, verbeteren. */
+/** Zinsveld (typen of woordtegels) met nakijken; gedeeld door vertalen, omvormen, luisteren enz. */
 function sentenceField(spec, ctx, { label, source, prefill, topic } = {}) {
   const field = sentenceInput(spec, { label, source, prefill, textInput, onComplete: () => ctx.auto?.() });
   return {
@@ -168,6 +170,106 @@ function translate(item, ctx) {
   const f = sentenceField(item, ctx, { label: 'Jouw vertaling' });
   const el = h('div', {}, h('p', { class: 'prompt source' }, item.prompt), f.field.el);
   return { el, check: f.check, reveal: f.reveal, lock: () => { f.field.lock(); lockInputs(el); } };
+}
+
+// ---------- Omvormen: een Zweedse zin herschrijven (actief → passief, twee zinnen → één) ----------
+function transform(item, ctx) {
+  const f = sentenceField(item, ctx, { label: 'Jouw zin', source: item.prompt });
+  const el = h('div', {},
+    item.task ? h('p', { class: 'task', html: inline(item.task) }) : null,
+    h('p', { class: 'prompt source', lang: 'sv', html: inline(item.prompt) }),
+    f.field.el);
+  return { el, check: f.check, reveal: f.reveal, lock: () => { f.field.lock(); lockInputs(el); } };
+}
+
+// ---------- Luisteren: dictee of „wat hoor je?” ----------
+function listenPlayer(item) {
+  const status = speechStatus();
+  if (status === 'unsupported') {
+    const shown = h('p', { class: 'listen-text', lang: 'sv', hidden: true }, item.say);
+    return {
+      el: h('div', { class: 'listen-player unsupported' },
+        h('p', { class: 'muted' }, 'Deze browser kan niet voorlezen. ', h('a', { href: '#/luisteren' }, 'Bekijk hoe je dat aanzet'), ', of lees de tekst.'),
+        h('button', { type: 'button', class: 'btn ghost small', onclick: (e) => { shown.hidden = false; e.currentTarget.remove(); } }, 'Toon de tekst'),
+        shown),
+      play: () => {},
+    };
+  }
+  const el = h('div', { class: 'listen-player' },
+    speakButton(item.say, { label: 'Luister', className: 'big' }),
+    speakButton(item.say, { label: 'Langzaam', rate: 0.6 }),
+    speedSelect(),
+    status === 'no-voice' ? h('p', { class: 'muted small' }, 'Er is geen Zweedse stem gevonden, dus het kan vreemd klinken. ', h('a', { href: '#/luisteren' }, 'Luisteren instellen')) : null,
+  );
+  return { el, play: () => speak(item.say) };
+}
+
+function listen(item, ctx) {
+  const player = listenPlayer(item);
+  if (item.options) {
+    const inner = mc({ ...item, type: 'mc', prompt: item.prompt ?? 'Wat hoor je?' }, ctx);
+    return { ...inner, el: h('div', {}, player.el, inner.el) };
+  }
+  const spec = { ...item, answers: item.answers ?? [item.say] };
+  const f = sentenceField(spec, ctx, { label: 'Wat hoor je?' });
+  // Enter in een leeg typveld: nog een keer afspelen.
+  f.field.el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.target.matches('input') && !e.target.value.trim()) {
+      e.preventDefault();
+      e.stopPropagation();
+      player.play();
+    }
+  });
+  const el = h('div', {}, player.el, prompt(item.prompt ?? (f.field.kind === 'tiles' ? 'Zet de woorden in de volgorde die je hoort.' : 'Schrijf op wat je hoort.')), f.field.el,
+    f.field.kind === 'tiles' ? null : h('p', { class: 'hint' }, 'Tip: druk op Enter in het lege veld om het nog eens te horen.'));
+  return { el, check: f.check, reveal: f.reveal, lock: () => { f.field.lock(); lockInputs(el); } };
+}
+
+// ---------- Sorteren: elk woord of elke zin in een categorie ----------
+function sort(item, ctx) {
+  const order = item.shuffle === false ? item.items.map((_, i) => i) : shuffle(item.items.map((_, i) => i));
+  const choice = item.items.map(() => null);
+  const rows = [];
+  const groups = order.map((idx) => {
+    const name = nextId('sort');
+    const radios = item.categories.map((cat, c) => {
+      const r = h('input', {
+        type: 'radio', name, value: String(c),
+        onchange: () => {
+          choice[idx] = c;
+          rows[idx].classList.remove('ok', 'bad');
+          if (choice.every((x) => x !== null)) ctx.auto?.();
+        },
+      });
+      return h('label', { class: 'pill' }, r, h('span', {}, cat));
+    });
+    const row = h('div', { class: 'sort-row' },
+      h('span', { class: 'sort-text', lang: 'sv', html: inline(item.items[idx].text) }),
+      h('span', { class: 'pills', role: 'radiogroup', 'aria-label': item.items[idx].text.replace(/\*/g, '') }, radios));
+    rows[idx] = row;
+    return row;
+  });
+  const el = h('div', {}, prompt(item.prompt ?? 'Deel in.'), h('div', { class: 'sort' }, groups));
+  return {
+    el,
+    check() {
+      const res = gradeSort(choice, item);
+      rows.forEach((row, i) => {
+        row.classList.toggle('ok', res.fields?.[i] === true);
+        row.classList.toggle('bad', res.fields?.[i] === false);
+      });
+      return res;
+    },
+    reveal() {
+      rows.forEach((row, i) => {
+        const r = row.querySelector(`input[value="${item.items[i].cat}"]`);
+        if (r) r.checked = true;
+        row.classList.add('ok');
+        row.classList.remove('bad');
+      });
+    },
+    lock: () => lockInputs(el),
+  };
 }
 
 // ---------- Klok ----------
@@ -464,4 +566,4 @@ function steps(item, ctx) {
   };
 }
 
-export const RENDERERS = { mc, multi, gap, translate, clock, order, dialogue, match, table, truefalse, free, steps, findError };
+export const RENDERERS = { mc, multi, gap, translate, transform, listen, sort, clock, order, dialogue, match, table, truefalse, free, steps, findError };

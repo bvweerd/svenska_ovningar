@@ -2,6 +2,7 @@
 import { h } from '../dom.js';
 import { inline } from '../md.js';
 import { RENDERERS } from './items.js';
+import { speakButton, spokenText } from './speak.js';
 import { reportButton } from '../report.js';
 
 const GENERIC_WRONG = 'Nog niet goed. Probeer het nog eens.';
@@ -52,10 +53,15 @@ export function itemCard(item, ctx, number, onDone, label) {
 
   const finish = (revealed) => {
     finished = true;
+    fieldWatcher.disconnect();
     r.lock();
     checkBtn.hidden = true;
     revealBtn.hidden = true;
     card.classList.add(revealed ? 'is-revealed' : 'is-done');
+    // Na afloop: de goede zin beluisteren (als de browser kan voorlezen).
+    const say = spokenText(item);
+    const btn = say ? speakButton(say, { label: 'Beluister de zin', className: 'after' }) : null;
+    if (btn) feedback.append(h('p', { class: 'listen-after' }, btn, h('span', { class: 'muted', lang: 'sv' }, say)));
     onDone({ firstTry: !hadError && !revealed, revealed, neutral: !!r.neutral });
   };
 
@@ -102,7 +108,7 @@ export function itemCard(item, ctx, number, onDone, label) {
       return;
     }
     if (res.correct) {
-      show('good', h('p', {}, hadError ? 'Goed zo, nu klopt het!' : 'Goed!'), item.explain ? h('p', { class: 'explain', html: inline(item.explain) }) : null);
+      show('good', h('p', {}, hadError ? 'Goed zo, nu klopt het!' : 'Goed!'), res.note ? h('p', { class: 'muted' }, res.note) : null, item.explain ? h('p', { class: 'explain', html: inline(item.explain) }) : null);
       finish(false);
       return;
     }
@@ -125,7 +131,10 @@ export function itemCard(item, ctx, number, onDone, label) {
   checkBtn.addEventListener('click', check);
   card.addEventListener('keydown', (e) => {
     if (e.key.startsWith('Arrow') && e.target.matches('input[type="radio"]')) {
+      // De browser verplaatst de keuze (en stuurt change) direct na deze toets. Gebeurt dat niet,
+      // bijvoorbeeld bij de laatste optie, dan mag de vlag de volgende klik niet blokkeren.
       arrowNav = true;
+      setTimeout(() => { arrowNav = false; }, 0);
       return;
     }
     if (e.key === 'Enter' && e.target.matches('input[type="text"], input[type="radio"], input[type="checkbox"]')) {
@@ -143,7 +152,7 @@ export function itemCard(item, ctx, number, onDone, label) {
       return;
     }
     // Cijfertoetsen kiezen een meerkeuzeoptie (niet tijdens het typen).
-    if (/^[1-9]$/.test(e.key) && !e.target.matches('input[type="text"], textarea, select')) {
+    if (/^[1-9]$/.test(e.key) && item.type !== 'sort' && !e.target.matches('input[type="text"], textarea, select')) {
       const radios = [...card.querySelectorAll('input[type="radio"]:not(:disabled), input[type="checkbox"]:not(:disabled)')];
       const target = radios[Number(e.key) - 1];
       if (target) {
@@ -161,7 +170,8 @@ export function itemCard(item, ctx, number, onDone, label) {
     fields.forEach((f, i) => f.setAttribute('enterkeyhint', i < fields.length - 1 ? 'next' : 'done'));
   };
   labelEnterKeys();
-  new MutationObserver(labelEnterKeys).observe(card, { childList: true, subtree: true });
+  const fieldWatcher = new MutationObserver(labelEnterKeys);
+  fieldWatcher.observe(card, { childList: true, subtree: true });
 
   /** Zet de focus op het eerste invulbare element van deze vraag. */
   card.focusFirst = ({ scroll = true } = {}) => {

@@ -1,6 +1,6 @@
 // Anonieme statistieken via GoatCounter: paginabezoeken en events (zoals goed/fout per vraag).
 // Geen cookies en geen persoonsgegevens. Bezoekers kunnen het uitzetten op de pagina "Over".
-import { GOATCOUNTER_CODE } from './config.js';
+import { GOATCOUNTER_CODE, PATH_PREFIX } from './config.js';
 
 const OPT_OUT_KEY = 'svensk-ovningar:analytics-opt-out';
 let loaded = false;
@@ -58,12 +58,12 @@ function push(data) {
 
 /** Paginabezoek. path zonder # en zonder query, bijvoorbeeld "/k/1/o/presens-invullen". */
 export function trackPage(path, title) {
-  push({ path, title });
+  push({ path: `${PATH_PREFIX}${path}`, title });
 }
 
 /** Event, bijvoorbeeld "vraag/1/presens-invullen/3/fout". */
 export function trackEvent(path, title) {
-  push({ path, title, event: true });
+  push({ path: `${PATH_PREFIX}/${path}`, title, event: true });
 }
 
 /** Korte omschrijving van een vraag voor in het dashboard. */

@@ -144,7 +144,7 @@ sections:
           - { id: 98r4, type: translate, prompt: "Ik hou van koken.", answers: ["Jag {tycker om|gillar|älskar} att laga mat."], feedback: [{ match: ["Jag tycker om laga mat", "Jag gillar laga mat"], tip: "Bij een activiteit: att + infinitief." }] }
           - { id: z66u, type: translate, prompt: "Wilma houdt van muziek.", answers: ["Wilma {tycker om|gillar|älskar} musik."], feedback: [{ contains: "om att musik", tip: "musik is een zelfstandig naamwoord: dan geen att." }] }
           - { id: jf4g, type: translate, prompt: "Bram houdt niet van vis.", answers: ["Bram tycker inte om fisk.", "Bram gillar inte fisk."], feedback: [{ contains: "tycker om inte", tip: "inte staat tussen tycker en om." }, { contains: "inte tycker om", tip: "inte staat ná het werkwoord: tycker inte om." }] }
-          - { id: fcm5, type: translate, prompt: "Nils vindt voetballen leuk.", answers: ["Nils {gillar|tycker om|älskar} att spela fotboll."] }
+          - { id: fcm5, type: translate, prompt: "Nils vindt voetballen leuk.", answers: ["Nils {gillar|tycker om|älskar} att spela fotboll.", "Nils tycker [att ]det är {roligt|kul} att spela fotboll."] }
           - { id: h5jf, type: translate, prompt: "Houd jij van dansen?", answers: ["{Tycker du om|Gillar du|Älskar du} att dansa?"], topic: vragen }
 
       - id: objekt-tabel

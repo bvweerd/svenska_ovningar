@@ -1,6 +1,6 @@
 // Controleert de structuur van een (gebouwd) hoofdstuk. Geeft een lijst foutmeldingen.
 
-const TYPES = new Set(['mc', 'multi', 'gap', 'translate', 'order', 'match', 'table', 'truefalse', 'clock', 'dialogue', 'free', 'steps', 'findError']);
+const TYPES = new Set(['mc', 'multi', 'gap', 'translate', 'order', 'match', 'table', 'truefalse', 'clock', 'dialogue', 'free', 'steps', 'findError', 'transform', 'listen', 'sort']);
 
 function checkItem(item, where, errors, topics) {
   const err = (msg) => errors.push(`${where}: ${msg}`);
@@ -14,15 +14,17 @@ function checkItem(item, where, errors, topics) {
       break;
     case 'multi':
       if (!Array.isArray(item.answers) || !item.answers.length) err('multi heeft antwoorden nodig');
-      if (item.answers?.some((a) => a < 0 || a >= item.options.length)) err('multi-antwoord buiten bereik');
+      if (!Array.isArray(item.options) || item.options.length < 2) err('multi heeft minstens 2 opties nodig');
+      if (item.answers?.some((a) => !Number.isInteger(a) || a < 0 || a >= (item.options?.length ?? 0))) err('multi-antwoord buiten bereik');
       break;
     case 'gap': {
+      if (typeof item.text !== 'string') { err('gap heeft een tekst nodig'); break; }
       const holes = (item.text.match(/___/g) ?? []).length;
       if (!holes) err('gap-tekst bevat geen ___');
       if (holes !== item.gaps?.length) err(`gap: ${holes} gaten maar ${item.gaps?.length ?? 0} antwoorden`);
       item.gaps?.forEach((g, i) => {
         if (!g.answers?.length) err(`gap ${i + 1} heeft geen antwoorden`);
-        if (g.options && !g.answers.every((a) => g.options.includes(a))) err(`gap ${i + 1}: antwoord staat niet tussen de opties`);
+        if (g.options && !g.answers?.every((a) => g.options.includes(a))) err(`gap ${i + 1}: antwoord staat niet tussen de opties`);
       });
       break;
     }
@@ -38,13 +40,25 @@ function checkItem(item, where, errors, topics) {
     case 'table':
       if (!item.columns?.length || !item.rows?.length) err('table heeft kolommen en rijen nodig');
       item.rows?.forEach((r, i) => {
-        if (r.length !== item.columns.length) err(`tabelrij ${i + 1} heeft ${r.length} cellen, verwacht ${item.columns.length}`);
+        if (!Array.isArray(r)) err(`tabelrij ${i + 1} is geen lijst`);
+        else if (r.length !== item.columns?.length) err(`tabelrij ${i + 1} heeft ${r.length} cellen, verwacht ${item.columns?.length ?? 0}`);
       });
       break;
     case 'truefalse':
       if (typeof item.answer !== 'boolean' || !item.statement) err('truefalse heeft statement en answer (true/false) nodig');
       if (item.correction && item.answer) err('truefalse: verbetering alleen bij een foute bewering');
       if (!item.answer && item.correction && !item.correction.answers?.length) err('truefalse: verbetering zonder antwoorden');
+      break;
+    case 'transform':
+      if (!item.prompt || !item.answers?.length) err('transform heeft prompt en antwoorden nodig');
+      break;
+    case 'listen':
+      if (!item.say) err('listen heeft een tekst (say) nodig');
+      if (item.options && (!Number.isInteger(item.answer) || item.answer < 0 || item.answer >= item.options.length)) err('listen: antwoord buiten bereik');
+      break;
+    case 'sort':
+      if (!item.categories || item.categories.length < 2) err('sort heeft minstens 2 categorieën nodig');
+      if (!item.items?.length || item.items.some((x) => !x.text || !Number.isInteger(x.cat) || x.cat < 0 || x.cat >= (item.categories?.length ?? 0))) err('sort: elk item heeft text en een geldige cat nodig');
       break;
     case 'clock':
       if (!/^\d{1,2}:\d{2}$/.test(item.time ?? '')) err('clock heeft een tijd "uu:mm" nodig');

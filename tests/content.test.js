@@ -19,6 +19,8 @@ function textSpecs(item) {
   switch (item.type) {
     case 'gap': return item.gaps.filter((g) => !g.options);
     case 'translate': return [item];
+    case 'transform': return [item];
+    case 'listen': return item.options ? [] : [{ ...item, answers: item.answers ?? [item.say] }];
     case 'table': return item.rows.flat().filter((c) => c && typeof c === 'object');
     case 'clock': return [clockSpec(item)];
     case 'truefalse': return item.correction ? [item.correction] : [];
@@ -29,6 +31,17 @@ function textSpecs(item) {
 }
 const allTopics = course.flatMap((c) => c.grammar.map((g) => g.id));
 const allItems = (ex) => ex.items.flatMap((i) => (i.type === 'steps' ? [i, ...i.steps] : [i]));
+
+it.runIf(index.levels)('elk hoofdstuk in index.yaml heeft een bekend niveau', () => {
+  const ids = new Set(index.levels.map((l) => l.id));
+  for (const c of index.chapters) expect(ids.has(c.level), `hoofdstuk ${c.chapter}`).toBe(true);
+});
+
+it('sorteren: elke categorie wordt gebruikt', () => {
+  for (const ch of course) for (const ex of ch.exercises) for (const item of ex.items.filter((i) => i.type === 'sort')) {
+    item.categories.forEach((_, c) => expect(item.items.some((x) => x.cat === c), `${ex.id}: categorie ${c}`).toBe(true));
+  }
+});
 
 it('elk bestand hoort bij een hoofdstuk uit index.yaml', () => {
   const known = new Set(index.chapters.map((c) => c.chapter));
@@ -47,6 +60,7 @@ for (const ch of course) {
       for (const ex of ch.exercises) for (const item of allItems(ex)) for (const spec of textSpecs(item)) {
         for (const a of spec.answers) for (const v of expand(a)) {
           expect(gradeText(v, spec).correct, `${ex.id}: "${v}"`).toBe(true);
+          expect(v.includes('|') || v.includes('{') || v.includes('['), `${ex.id}: patroon niet goed uitgeklapt: "${v}"`).toBe(false);
         }
       }
     });
