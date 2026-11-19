@@ -177,6 +177,26 @@ sections:
             steps:
               - { type: mc, prompt: "Varje dag ___ Nils till skolan. (gå)", options: ["går", "gick"], answer: 0, shuffle: false, tip: "varje dag (elke dag) gaat over een gewoonte nu: tegenwoordige tijd." }
               - { type: translate, prompt: "Vorige week liep Nils naar school.", answers: ["Förra veckan gick Nils till skolan.", "Nils gick till skolan förra veckan."] }
+          - id: 5jk5
+            type: steps
+            steps:
+              - { type: mc, prompt: "Förra sommaren ___ vi till Gotland. (åka)", options: ["åkte", "åker"], answer: 0, shuffle: false, tip: "förra sommaren (vorige zomer) vraagt om de verleden tijd." }
+              - { type: translate, prompt: "Vorige zomer gingen we naar Gotland.", answers: ["Förra sommaren åkte vi till Gotland.", "Vi åkte till Gotland förra sommaren."] }
+          - id: ag5j
+            type: steps
+            steps:
+              - { type: mc, prompt: "På söndagar ___ Ingrid bullar. (baka)", options: ["bakar", "bakade"], answer: 0, shuffle: false, tip: "på söndagar (op zondagen) is een gewoonte nu: tegenwoordige tijd." }
+              - { type: translate, prompt: "Gisteren bakte Ingrid een taart.", answers: ["{Igår|I går} bakade Ingrid en tårta.", "Ingrid bakade en tårta {igår|i går}."] }
+          - id: 8new
+            type: steps
+            steps:
+              - { type: mc, prompt: "I morse ___ Bram kaffe. (dricka)", options: ["drack", "dricker"], answer: 0, shuffle: false, tip: "i morse (vanochtend, al voorbij) vraagt om de verleden tijd." }
+              - { type: translate, prompt: "Vanochtend dronk Fleur thee.", answers: ["{I morse|Imorse} drack Fleur te.", "Fleur drack te {i morse|imorse}."], feedback: [{ contains: "drickade", tip: "dricka is sterk: drack." }] }
+          - id: sbg8
+            type: steps
+            steps:
+              - { type: mc, prompt: "Just nu ___ Wilma en bok. (läsa)", options: ["läser", "läste"], answer: 0, shuffle: false, tip: "just nu (op dit moment) vraagt om de tegenwoordige tijd." }
+              - { type: translate, prompt: "Gisteren las Wilma de hele dag.", answers: ["{Igår|I går} läste Wilma hela dagen.", "Wilma läste hela dagen {igår|i går}."], feedback: [{ contains: "hela dagen igår wilma", tip: "Na de tijdsbepaling vooraan komt eerst het werkwoord." }] }
 
       - id: possessiv-kiezen
         title: Van wie is het?
@@ -202,6 +222,11 @@ sections:
           - { id: qrub, type: mc, prompt: "Mijn auto is rood.", options: ["Min bil är röd.", "Min bilen är röd.", "Mitt bil är röd."], answer: 0, tip: "Na een bezittelijk voornaamwoord: onbepaalde vorm (bil). bil is een en-woord: min." }
           - { id: df28, type: mc, prompt: "Onze kinderen heten Wilma en Nils.", options: ["Våra barn heter Wilma och Nils.", "Våra barnen heter Wilma och Nils.", "Vårt barn heter Wilma och Nils."], answer: 0, tip: "Meervoud: våra + onbepaalde vorm (barn)." }
           - { id: 6wuw, type: mc, prompt: "De tuin van oma is mooi.", options: ["Mormors trädgård är fin.", "Mormors trädgården är fin.", "Mormor's trädgård är fin."], answer: 0, tip: "Bezit met -s, zonder apostrof, en daarna de onbepaalde vorm." }
+          - { id: vwha, type: mc, prompt: "Ons huis is groot.", options: ["Vårt hus är stort.", "Vår hus är stort.", "Vårt huset är stort."], answer: 0, tip: "hus is een ett-woord: vårt. Daarna komt de onbepaalde vorm (hus)." }
+          - { id: xfma, type: mc, prompt: "Waar is jouw sleutel?", options: ["Var är din nyckel?", "Var är ditt nyckel?", "Var är din nyckeln?"], answer: 0, tip: "nyckel is een en-woord: din. Daarna komt de onbepaalde vorm (nyckel)." }
+          - { id: v6gx, type: mc, prompt: "Mijn ouders wonen in Utrecht.", options: ["Mina föräldrar bor i Utrecht.", "Min föräldrar bor i Utrecht.", "Mina föräldrarna bor i Utrecht."], answer: 0, tip: "Meervoud: mina + onbepaalde vorm (föräldrar)." }
+          - { id: xkxp, type: mc, prompt: "Hun hond heet Sigge.", options: ["Deras hund heter Sigge.", "Dem hund heter Sigge.", "Deras hunden heter Sigge."], answer: 0, tip: "Hun (bezit) = deras, met de onbepaalde vorm (hund)." }
+          - { id: sph4, type: mc, prompt: "Het boek van Olle ligt op tafel.", options: ["Olles bok ligger på bordet.", "Olles boken ligger på bordet.", "Olle's bok ligger på bordet."], answer: 0, tip: "Bezit met -s, zonder apostrof, en daarna de onbepaalde vorm." }
 
       - id: familie-koppelen
         title: Familie
@@ -231,6 +256,8 @@ sections:
           - { id: 6k7t, type: gap, text: "Min pappas pappa är min ___.", gaps: [{ answers: ["farfar"] }] }
           - { id: 4n7p, type: gap, text: "Min fasters barn är min ___.", gaps: [{ answers: ["kusin"] }] }
           - { id: zb9h, type: gap, text: "Min bror och min syster är mina ___.", gaps: [{ answers: ["syskon"] }] }
+          - { id: 4fy5, type: gap, text: "Min mammas bror är min ___.", gaps: [{ answers: ["morbror"], feedback: [{ match: "farbror", tip: "Van moederskant: mor-." }] }] }
+          - { id: ck65, type: gap, text: "Min pappas mamma är min ___.", gaps: [{ answers: ["farmor"], feedback: [{ match: "mormor", tip: "Van vaderskant: far-." }] }] }
 
       - id: lezen-feest
         title: "Lezen: een familiefeest"
@@ -259,6 +286,9 @@ sections:
           - { id: bj8w, type: translate, prompt: "Mijn broer woonde in Zweden.", answers: ["Min bror bodde i Sverige."], topic: possessiv }
           - { id: d85t, type: translate, prompt: "Wat deed je gisteren?", answers: ["Vad gjorde du {igår|i går}?"], topic: vragen }
           - { id: 7e3w, type: translate, prompt: "Haar ouders kwamen op bezoek.", answers: ["Hennes föräldrar kom på besök."], feedback: [{ contains: "henne föräldrar", tip: "Haar (bezit) = hennes." }, { contains: "kommde", tip: "komma is sterk: kom." }] }
+          - { id: g73v, type: translate, prompt: "Vorig jaar woonden we in Utrecht.", answers: ["Förra året bodde vi i Utrecht.", "Vi bodde i Utrecht förra året.", "{I fjol|Ifjol} bodde vi i Utrecht.", "Vi bodde i Utrecht {i fjol|ifjol}."], feedback: [{ contains: "året vi", tip: "Na Förra året komt eerst het werkwoord." }] }
+          - { id: z37r, type: translate, prompt: "Gisteren schreef Wilma een brief.", answers: ["{Igår|I går} skrev Wilma ett brev.", "Wilma skrev ett brev {igår|i går}."], feedback: [{ contains: "skrivde", tip: "skriva is sterk: skrev." }] }
+          - { id: uekt, type: translate, prompt: "Zijn zus belde gisteren.", answers: ["Hans syster ringde {igår|i går}.", "{Igår|I går} ringde hans syster."], topic: possessiv, feedback: [{ contains: "honom syster", tip: "Zijn (bezit) = hans." }] }
 
       - id: schrijven-familie
         title: "Schrijven: jouw familie"

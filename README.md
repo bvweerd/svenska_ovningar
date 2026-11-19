@@ -56,6 +56,16 @@ Wat er geteld wordt:
 Moeilijke vragen vind je in het dashboard door te zoeken op `/fout` of `/bekeken` en dat te
 vergelijken met hetzelfde pad op `/goed`.
 
+Sneller gaat het met `npm run stats`. Dat zet per oefening en per vraag goed, fout en bekeken
+naast elkaar, met de tekst van de vraag erbij, en sorteert op hoe vaak het misgaat. Je hebt een
+API-token met leesrechten nodig (GoatCounter → Settings → API):
+
+```bash
+GOATCOUNTER_TOKEN=… npm run stats -- --min 5 --top 30
+```
+
+Achter een proxy heeft Node ook `NODE_USE_ENV_PROXY=1` nodig.
+
 ## Oefeningen toevoegen
 
 De oefenstof staat in `content/chapters/NN-onderwerp.yaml`, één bestand per hoofdstuk.

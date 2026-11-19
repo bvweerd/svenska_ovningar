@@ -96,6 +96,7 @@ sections:
           - { id: ad9n, type: gap, text: "Grannarna har ___ (måla) huset.", gaps: [{ answers: ["målat"] }] }
           - { id: qg2w, type: gap, text: "Bram har ___ (ringa) till jobbet.", gaps: [{ answers: ["ringt"], feedback: [{ match: "ringat", tip: "ringa is een -er-werkwoord (ringer): ringt." }] }] }
           - { id: ve2e, type: gap, text: "Har ni ___ (höra) nyheterna?", gaps: [{ answers: ["hört"] }] }
+          - { id: vkxe, type: gap, text: "Wilma har ___ (städa) rummet.", gaps: [{ answers: ["städat"], feedback: [{ match: "städt", tip: "städa is een -ar-werkwoord (städar): städat." }] }] }
 
       - id: supinum-tabel
         title: Sterke en onregelmatige werkwoorden
@@ -130,6 +131,7 @@ sections:
           - { id: k3bt, type: gap, text: "Jag har ___ (sova) dåligt i natt.", gaps: [{ answers: ["sovit"] }] }
           - { id: z2wf, type: gap, text: "Wilma har ___ (skriva) en sång.", gaps: [{ answers: ["skrivit"] }] }
           - { id: scxm, type: gap, text: "Vad har du ___ (göra) idag?", gaps: [{ answers: ["gjort"] }] }
+          - { id: cbuj, type: gap, text: "Bram har ___ (dricka) för mycket kaffe.", gaps: [{ answers: ["druckit"], feedback: [{ match: ["drickat", "druckat", "drickit"], tip: "dricka is sterk: drack – druckit." }] }] }
 
       - id: perfekt-of-preteritum
         title: Perfekt of preteritum?
@@ -143,6 +145,8 @@ sections:
           - { id: up78, type: gap, text: "___ du sett min nyckel? Jag hittar den inte.", gaps: [{ answers: ["Har"], options: ["Har", "Såg"], shuffle: false, feedback: [{ match: "Såg", tip: "Geen tijdstip, en het resultaat is nu belangrijk: perfekt." }] }] }
           - { id: z52v, type: gap, text: "Olle ___ aldrig ___ i Japan.", gaps: [{ answers: ["har"], options: ["har", "var"], shuffle: false }, { answers: ["varit"], options: ["varit", "var"], shuffle: false }] }
           - { id: we79, type: gap, text: "I måndags ___ Fleur sjuk. (vara)", gaps: [{ answers: ["var"], options: ["var", "har varit"], shuffle: false, feedback: [{ match: "har varit", tip: "i måndags (afgelopen maandag) is een bepaald moment: preteritum." }] }] }
+          - { id: 6eqg, type: gap, text: "I fjol ___ vi i Norge. (vara)", gaps: [{ answers: ["var"], options: ["var", "har varit"], shuffle: false, feedback: [{ match: "har varit", tip: "i fjol (vorig jaar) is een afgesloten tijd: preteritum." }] }] }
+          - { id: t2ab, type: gap, text: "– Har du ätit? – Ja, jag ___ för en timme sedan. (äta)", gaps: [{ answers: ["åt"], options: ["åt", "har ätit"], shuffle: false, feedback: [{ match: "har ätit", tip: "för en timme sedan is een bepaald moment: preteritum." }] }] }
 
       - id: perfekt-vertalen
         title: Vertaal
@@ -155,6 +159,8 @@ sections:
           - { id: pend, type: translate, prompt: "We hebben nog nooit surströmming gegeten.", answers: ["Vi har aldrig ätit surströmming."], feedback: [{ contains: "aldrig har", tip: "aldrig staat na har." }] }
           - { id: a4fa, type: translate, prompt: "Wat heb je vandaag gedaan?", answers: ["Vad har du gjort {idag|i dag}?"] }
           - { id: jza3, type: translate, prompt: "Twee jaar geleden woonden we in Utrecht.", answers: ["För två år {sedan|sen} bodde vi i Utrecht.", "Vi bodde i Utrecht för två år {sedan|sen}."], feedback: [{ contains: "har bott", tip: "Twee jaar geleden is een bepaald moment, en het is voorbij: preteritum." }] }
+          - { id: e67t, type: translate, prompt: "Wilma heeft het huiswerk al gemaakt.", answers: ["Wilma har redan gjort {läxorna|läxan}."], feedback: [{ contains: "wilma redan har", tip: "redan staat ná har." }, { contains: "gjorde", tip: "„Heeft al gemaakt”, zonder tijdstip: perfekt (har gjort)." }] }
+          - { id: hbhe, type: translate, prompt: "Vorige week hebben we een film gezien.", answers: ["Förra veckan såg vi en film.", "Vi såg en film förra veckan."], feedback: [{ contains: "har sett", tip: "Met förra veckan (een afgesloten tijd) gebruik je in het Zweeds de preteritum." }, { contains: "veckan vi", tip: "Na Förra veckan komt eerst het werkwoord." }] }
 
       - id: hemma-hem
         title: Waar of waarheen?
@@ -181,6 +187,10 @@ sections:
           - { id: 4aaz, type: mc, prompt: "___ bor du? – I Västerås.", options: ["Vart", "Var"], answer: 1, shuffle: false, tip: "Het antwoord is een plaats: var." }
           - { id: nu7t, type: mc, prompt: "___ åker ni i sommar? – Till Gotland.", options: ["Vart", "Var"], answer: 0, shuffle: false, tip: "Het antwoord is een richting: vart." }
           - { id: dhkb, type: mc, prompt: "___ är mina nycklar? – På bordet.", options: ["Vart", "Var"], answer: 1, shuffle: false, tip: "Het antwoord is een plaats: var." }
+          - { id: gveb, type: mc, prompt: "___ går bussen? – Till centrum.", options: ["Vart", "Var"], answer: 0, shuffle: false, tip: "Het antwoord is een richting (naar het centrum): vart." }
+          - { id: e543, type: mc, prompt: "___ jobbar Fleur? – På ett kontor.", options: ["Vart", "Var"], answer: 1, shuffle: false, tip: "Het antwoord is een plaats: var." }
+          - { id: 8f3m, type: mc, prompt: "___ ligger Kiruna? – I norra Sverige.", options: ["Vart", "Var"], answer: 1, shuffle: false, tip: "Het antwoord is een plaats: var." }
+          - { id: q44x, type: mc, prompt: "___ ska ni åka i helgen? – Till Stockholm.", options: ["Vart", "Var"], answer: 0, shuffle: false, tip: "Het antwoord is een richting: vart." }
 
       - id: an-subjekt
         title: Vergelijken met än
@@ -194,6 +204,8 @@ sections:
           - { id: py3t, type: gap, text: "Olle springer snabbare än ___. (zij, meervoud)", gaps: [{ answers: ["de", "dem"], feedback: [{ match: "deras", tip: "deras is bezittelijk (hun). Na än: de of dem." }] }] }
           - { id: udhs, type: gap, text: "Fleur är lika gammal ___ jag.", gaps: [{ answers: ["som"], options: ["som", "än"], shuffle: false, feedback: [{ match: "än", tip: "Even … als is lika … som." }] }] }
           - { id: a73p, type: gap, text: "Bram är äldre än ___. (ik)", gaps: [{ answers: ["jag", "mig"], feedback: [{ match: ["min", "mitt"], tip: "min is bezittelijk (mijn). Na än: jag of mig." }] }] }
+          - { id: yt9c, type: gap, text: "Olle är lika lång ___ Bram.", gaps: [{ answers: ["som"], options: ["som", "än"], shuffle: false, feedback: [{ match: "än", tip: "Even … als is lika … som." }] }] }
+          - { id: y366, type: gap, text: "Ingrid är äldre än ___. (zij, enkelvoud)", gaps: [{ answers: ["hon", "henne"], feedback: [{ match: "hennes", tip: "hennes is bezittelijk (haar). Na än: hon of henne." }] }] }
 
       - id: lezen-mail
         title: "Lezen: een mail van Fleur"

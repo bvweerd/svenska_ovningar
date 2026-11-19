@@ -105,15 +105,17 @@ sections:
         shuffle: true
         items:
           - { id: 9u6e, type: mc, prompt: "**sju** (zeven)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "Kijk naar de spelling: sj." }
-          - { id: xceg, type: mc, prompt: "**tjugo** (twintig)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "Kijk naar de spelling: tj." }
-          - { id: ynkg, type: mc, prompt: "**kjol** (rok)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "kj klinkt hetzelfde als tj." }
+          - { id: xceg, type: mc, prompt: "**tjugo** (twintig)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "tj is altijd een tje-ljud, een lichte klank zoals de ch in het Duitse *ich*." }
+          - { id: ynkg, type: mc, prompt: "**kjol** (rok)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "kj is, net als tj, een tje-ljud." }
           - { id: gf3h, type: mc, prompt: "**sked** (lepel)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "sk vóór een zachte klinker (e) wordt een sje-ljud." }
           - { id: 6ak4, type: mc, prompt: "**kyrka** (kerk)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "k vóór een zachte klinker (y) wordt een tje-ljud." }
-          - { id: xyqe, type: mc, prompt: "**stjärna** (ster)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "stj klinkt als sj." }
+          - { id: xyqe, type: mc, prompt: "**stjärna** (ster)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "stj is, net als sj en skj, een sje-ljud: de t hoor je niet." }
           - { id: 9dbd, type: mc, prompt: "**köpa** (kopen)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "k vóór een zachte klinker (ö) wordt een tje-ljud." }
-          - { id: hg92, type: mc, prompt: "**choklad** (chocolade)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "ch in een leenwoord klinkt als sj." }
+          - { id: hg92, type: mc, prompt: "**choklad** (chocolade)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "ch in een leenwoord (choklad, chef) is een sje-ljud." }
           - { id: skpa, type: mc, prompt: "**tjej** (meisje)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "Kijk naar de spelling: tj." }
-          - { id: c3t9, type: mc, prompt: "**skjorta** (overhemd)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "skj klinkt als sj." }
+          - { id: c3t9, type: mc, prompt: "**skjorta** (overhemd)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "skj is, net als sj en stj, een sje-ljud: de k hoor je niet." }
+          - { id: f24q, type: mc, prompt: "**sjö** (meer)", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "sj is altijd een sje-ljud." }
+          - { id: 8vd8, type: mc, prompt: "**kär** (verliefd)", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "k vóór een zachte klinker (ä) wordt een tje-ljud." }
 
       - id: sje-aan-het-eind
         title: "Ook midden en achteraan: -tion"
@@ -125,6 +127,12 @@ sections:
             options: ["station", "information", "tidning", "skina", "kaka", "kök"]
             answers: [0, 1, 3]
             tip: "Denk aan -tion en aan sk vóór een zachte klinker (i) aan het begin van een woord."
+          - id: 7qve
+            type: multi
+            prompt: "Welke woorden bevatten een sje-ljud?"
+            options: ["version", "nation", "sjuk", "kniv", "skal", "tjock"]
+            answers: [0, 1, 2]
+            tip: "-sion, -tion en sj zijn een sje-ljud. tj (tjock) is een tje-ljud, sk vóór een harde klinker (skal) is [sk], en de k in kniv spreek je gewoon uit."
 
       - id: hard-of-zacht
         title: Harde of zachte klank?
@@ -152,6 +160,12 @@ sections:
             answers: [1, 5, 7, 8, 2]
             shuffle: false
             tip: "Er zijn er vijf. De harde zijn a, o, u en å."
+          - id: 395y
+            type: multi
+            prompt: "Bij welke woorden klinkt de g als [j]?"
+            options: ["göra", "gata", "gilla", "gå", "gärna", "god"]
+            answers: [0, 2, 4]
+            tip: "g vóór een zachte klinker (ö, i, ä) klinkt als [j]. Vóór een harde klinker (a, å, o) blijft het [g]."
 
       - id: lang-of-kort
         title: Lange of korte klinker?
@@ -165,6 +179,8 @@ sections:
           - { id: q8e3, type: mc, prompt: "**glass** (ijsje)", options: ["lang", "kort"], answer: 1, shuffle: false, tip: "Na de a staan twee medeklinkers (ss)." }
           - { id: 59ny, type: mc, prompt: "**ful** (lelijk)", options: ["lang", "kort"], answer: 0, shuffle: false, tip: "Na de u staat maar één medeklinker." }
           - { id: zkat, type: mc, prompt: "**full** (vol)", options: ["lang", "kort"], answer: 1, shuffle: false, tip: "Na de u staan twee medeklinkers (ll)." }
+          - { id: mkad, type: mc, prompt: "**vit** (wit)", options: ["lang", "kort"], answer: 0, shuffle: false, tip: "Na de i staat maar één medeklinker." }
+          - { id: v26d, type: mc, prompt: "**vitt** (wit, bij een ett-woord)", options: ["lang", "kort"], answer: 1, shuffle: false, tip: "Na de i staan twee medeklinkers (tt)." }
 
       - id: klemtoon
         title: Waar ligt de klemtoon?
@@ -193,6 +209,8 @@ sections:
           - { id: er54, type: mc, prompt: "**mig** (mij)", options: ["mej", "mig, met g", "mie"], answer: 0, tip: "mig, dig en sig klinken als mej, dej en sej." }
           - { id: jvqd, type: mc, prompt: "**något** (iets)", options: ["nåt", "nogot", "nägot"], answer: 0, tip: "In spreektaal wordt dit woord ingekort." }
           - { id: 8n3v, type: mc, prompt: "**sedan** (daarna)", options: ["sen", "sedan, met duidelijke d", "sedde"], answer: 0, tip: "In spreektaal wordt dit woord ingekort." }
+          - { id: pr7s, type: mc, prompt: "**det** (het)", options: ["de", "dett", "det, met duidelijke t"], answer: 0, tip: "De t aan het eind valt in spreektaal meestal weg." }
+          - { id: pz4z, type: mc, prompt: "**säger** (zegt)", options: ["säjer", "säger, met harde g", "sär"], answer: 0, tip: "De g klinkt hier als een j." }
 
       - id: spreektaal-terug
         title: Van spreektaal naar schrijftaal
@@ -205,3 +223,6 @@ sections:
           - { id: 37hx, type: gap, text: "Je hoort *mej* → je schrijft ___", gaps: [{ answers: ["mig"], feedback: [{ match: "mej", tip: "Zo spreek je het uit. In informele berichtjes zie je ook mej, maar de gewone schrijfwijze is met een g aan het eind." }] }] }
           - { id: r6ny, type: gap, text: "Je hoort *nåt* → je schrijft ___", gaps: [{ answers: ["något"] }] }
           - { id: tbg8, type: gap, text: "Je hoort *sen* (daarna) → je schrijft ___", gaps: [{ answers: ["sedan"], feedback: [{ match: "sen", tip: "sen mag je ook schrijven, maar hier zoeken we de volledige vorm." }] }] }
+          - { id: yv7a, type: gap, text: "Je hoort *de* (het) → je schrijft ___", gaps: [{ answers: ["det"] }] }
+          - { id: v4s7, type: gap, text: "Je hoort *dej* → je schrijft ___", gaps: [{ answers: ["dig"], feedback: [{ match: "dej", tip: "Zo spreek je het uit. De gewone schrijfwijze is met een g aan het eind." }] }] }
+          - { id: qkq8, type: gap, text: "Je hoort *säjer* → je schrijft ___", gaps: [{ answers: ["säger"] }] }
