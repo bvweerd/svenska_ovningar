@@ -417,32 +417,66 @@ sections:
           - { id: ej7n, type: translate, topic: plural, prompt: "Wij hebben twee auto's.", answers: ["Vi har två bilar."] }
 
 vocab:
-  - { sv: "en morgon", nl: "een ochtend", def: "morgonen" }
-  - { sv: "en kväll", nl: "een avond", def: "kvällen" }
-  - { sv: "en natt", nl: "een nacht", def: "natten" }
-  - { sv: "en vecka", nl: "een week", def: "veckan" }
-  - { sv: "en dag", nl: "een dag", def: "dagen" }
-  - { sv: "en frukost", nl: "een ontbijt", def: "frukosten" }
-  - { sv: "en middag", nl: "een avondmaaltijd, een diner", def: "middagen" }
-  - { sv: "ett jobb", nl: "een baan", def: "jobbet", alt: ["ett arbete"] }
-  - { sv: "en buss", nl: "een bus", def: "bussen" }
-  - { sv: "en dörr", nl: "een deur", def: "dörren" }
-  - { sv: "ett fönster", nl: "een raam", def: "fönstret" }
-  - { sv: "en kopp", nl: "een kopje", def: "koppen" }
-  - { sv: "en bok", nl: "een boek", def: "boken" }
-  - { sv: "att vakna", nl: "wakker worden" }
-  - { sv: "att stiga upp", nl: "opstaan" }
-  - { sv: "att duscha", nl: "douchen" }
-  - { sv: "att äta", nl: "eten" }
-  - { sv: "att dricka", nl: "drinken" }
-  - { sv: "att sova", nl: "slapen" }
-  - { sv: "att börja", nl: "beginnen" }
-  - { sv: "att sluta", nl: "ophouden, stoppen" }
-  - { sv: "att handla", nl: "boodschappen doen" }
-  - { sv: "att vänta", nl: "wachten" }
-  - { sv: "att stänga", nl: "dichtdoen, sluiten" }
-  - { sv: "att öppna", nl: "openen, opendoen" }
-  - { sv: "imorgon", nl: "morgen", alt: ["i morgon"] }
-  - { sv: "ikväll", nl: "vanavond", alt: ["i kväll"] }
-  - { sv: "tidigt", nl: "vroeg" }
-  - { sv: "sedan", nl: "daarna", alt: ["sen"] }
+  - { sv: "en morgon", nl: "een ochtend", def: "morgonen", pl: "morgnar", ex: "Jag dricker kaffe på **{morgonen|morgnarna}**.", exNl: "Ik drink 's ochtends koffie." }
+  - { sv: "en förmiddag", nl: "een voormiddag (late ochtend, tot 12 uur)", def: "förmiddagen", pl: "förmiddagar", ex: "Jag jobbar hemma på **{förmiddagen|förmiddagarna}**.", exNl: "In de voormiddag werk ik thuis." }
+  - { sv: "en eftermiddag", nl: "een middag (na 12 uur)", def: "eftermiddagen", pl: "eftermiddagar", ex: "Vad gör du i **eftermiddag**?", exNl: "Wat doe je vanmiddag?" }
+  - { sv: "en kväll", nl: "een avond", def: "kvällen", pl: "kvällar", ex: "På **{kvällen|kvällarna}** läser jag en bok.", exNl: "'s Avonds lees ik een boek." }
+  - { sv: "en natt", nl: "een nacht", def: "natten", pl: "nätter", ex: "Barnet sover hela **natten**.", exNl: "Het kind slaapt de hele nacht." }
+  - { sv: "en dag", nl: "een dag", def: "dagen", pl: "dagar", ex: "Jag jobbar fem **dagar** i veckan.", exNl: "Ik werk vijf dagen per week." }
+  - { sv: "en vecka", nl: "een week", def: "veckan", pl: "veckor", ex: "Nästa **vecka** åker vi till Göteborg.", exNl: "Volgende week gaan we naar Göteborg." }
+  - { sv: "en helg", nl: "een weekend", def: "helgen", pl: "helger", alt: ["en weekend"], ex: "Vad gör du i **helgen**?", exNl: "Wat doe je dit weekend?" }
+  - { sv: "en måndag", nl: "een maandag", def: "måndagen", pl: "måndagar", ex: "Jag har svenska på **{måndagar|måndagarna|måndag}**.", exNl: "Op maandag heb ik Zweeds." }
+  - { sv: "en klocka", nl: "een klok, een horloge", def: "klockan", pl: "klockor", ex: "Har du en **klocka**?", exNl: "Heb je een horloge?" }
+  - { sv: "en timme", nl: "een uur (60 minuten)", def: "timmen", pl: "timmar", ex: "Jag sover åtta **timmar** varje natt.", exNl: "Ik slaap elke nacht acht uur." }
+  - { sv: "en gång", nl: "een keer", def: "gången", pl: "gånger", ex: "Vi ses två **gånger** i veckan.", exNl: "We zien elkaar twee keer per week." }
+  - { sv: "en kvart", nl: "een kwartier", def: "kvarten", pl: "kvartar", ex: "Jag måste vänta en **kvart**.", exNl: "Ik moet een kwartier wachten." }
+  - { sv: "en minut", nl: "een minuut", def: "minuten", pl: "minuter", ex: "Bussen kommer om fem **minuter**.", exNl: "De bus komt over vijf minuten." }
+  - { sv: "en väckarklocka", nl: "een wekker", def: "väckarklockan", pl: "väckarklockor", ex: "**Väckarklockan** ringer klockan sex.", exNl: "De wekker gaat om zes uur." }
+  - { sv: "en tandborste", nl: "een tandenborstel", def: "tandborsten", pl: "tandborstar", ex: "Var är min **tandborste**?", exNl: "Waar is mijn tandenborstel?" }
+  - { sv: "en frukost", nl: "een ontbijt", def: "frukosten", pl: "frukostar", ex: "Vi äter **frukost** klockan sju.", exNl: "We ontbijten om zeven uur." }
+  - { sv: "en lunch", nl: "een lunch", def: "lunchen", pl: "luncher", ex: "Vi äter **lunch** tillsammans.", exNl: "We lunchen samen." }
+  - { sv: "en middag", nl: "een avondmaaltijd, een diner", def: "middagen", pl: "middagar", ex: "Vad blir det till **middag**?", exNl: "Wat eten we vanavond?" }
+  - { sv: "en kopp", nl: "een kopje", def: "koppen", pl: "koppar", ex: "Hon dricker två **koppar** te.", exNl: "Zij drinkt twee kopjes thee." }
+  - { sv: "ett jobb", nl: "een baan, werk", def: "jobbet", pl: "jobb", alt: ["ett arbete"], ex: "Han cyklar till **{jobbet|arbetet}**.", exNl: "Hij fietst naar zijn werk." }
+  - { sv: "ett möte", nl: "een vergadering, een bespreking", def: "mötet", pl: "möten", ex: "Jag har ett **möte** klockan tio.", exNl: "Ik heb om tien uur een vergadering." }
+  - { sv: "en paus", nl: "een pauze", def: "pausen", pl: "pauser", ex: "Vi tar en **paus** klockan tre.", exNl: "Om drie uur nemen we pauze." }
+  - { sv: "ett schema", nl: "een rooster, een schema", def: "schemat", pl: "scheman", ex: "Mitt **schema** är fullt den här veckan.", exNl: "Mijn rooster zit deze week vol." }
+  - { sv: "en läxa", nl: "huiswerk (één opdracht)", def: "läxan", pl: "läxor", ex: "Barnen gör **läxorna** efter skolan.", exNl: "De kinderen maken na school hun huiswerk." }
+  - { sv: "en buss", nl: "een bus", def: "bussen", pl: "bussar", ex: "**Bussen** går klockan åtta.", exNl: "De bus vertrekt om acht uur." }
+  - { sv: "en tunnelbana", nl: "een metro", def: "tunnelbanan", pl: "tunnelbanor", alt: ["en t-bana"], ex: "I Stockholm åker jag **{tunnelbana|t-bana|tunnelbanan|t-banan}** till jobbet.", exNl: "In Stockholm ga ik met de metro naar mijn werk." }
+  - { sv: "en dörr", nl: "een deur", def: "dörren", pl: "dörrar", ex: "Kan du stänga **dörren**?", exNl: "Kun je de deur dichtdoen?" }
+  - { sv: "ett fönster", nl: "een raam", def: "fönstret", pl: "fönster", ex: "Jag öppnar **fönstret**.", exNl: "Ik doe het raam open." }
+  - { sv: "en bok", nl: "een boek", def: "boken", pl: "böcker", ex: "Jag läser en **bok** på bussen.", exNl: "Ik lees een boek in de bus." }
+  - { sv: "att vakna", nl: "wakker worden", ex: "Jag **vaknar** klockan sex.", exNl: "Ik word om zes uur wakker." }
+  - { sv: "att gå och lägga sig", nl: "naar bed gaan", alt: ["att lägga sig"], ex: "Bram **går och lägger sig** klockan elva.", exNl: "Bram gaat om elf uur naar bed." }
+  - { sv: "att bruka", nl: "gewoonlijk doen, plegen te", ex: "Jag **brukar** cykla till jobbet.", exNl: "Meestal fiets ik naar mijn werk." }
+  - { sv: "att stiga upp", nl: "opstaan", alt: ["att gå upp"], ex: "Vi **{stiger upp|går upp}** klockan sju.", exNl: "We staan om zeven uur op." }
+  - { sv: "att duscha", nl: "douchen", ex: "Han **duschar** på morgonen.", exNl: "Hij douchet 's ochtends." }
+  - { sv: "att borsta tänderna", nl: "tanden poetsen", ex: "Glöm inte att **borsta tänderna**!", exNl: "Vergeet niet je tanden te poetsen!" }
+  - { sv: "att äta", nl: "eten", ex: "Vi **äter** lunch klockan tolv.", exNl: "We lunchen om twaalf uur." }
+  - { sv: "att dricka", nl: "drinken", ex: "**Dricker** du kaffe eller te?", exNl: "Drink jij koffie of thee?" }
+  - { sv: "att sova", nl: "slapen", ex: "Barnen **sover** redan.", exNl: "De kinderen slapen al." }
+  - { sv: "att börja", nl: "beginnen", ex: "Skolan **börjar** klockan åtta.", exNl: "De school begint om acht uur." }
+  - { sv: "att sluta", nl: "ophouden, stoppen, eindigen", ex: "Jag **slutar** jobba klockan fem.", exNl: "Ik stop om vijf uur met werken." }
+  - { sv: "att handla", nl: "boodschappen doen", ex: "Vi **handlar** mat efter jobbet.", exNl: "We doen na het werk boodschappen." }
+  - { sv: "att vänta", nl: "wachten", ex: "Hon **väntar** på bussen.", exNl: "Zij wacht op de bus." }
+  - { sv: "att stänga", nl: "dichtdoen, sluiten", ex: "Affären **stänger** klockan sex.", exNl: "De winkel gaat om zes uur dicht." }
+  - { sv: "att öppna", nl: "openen, opendoen", ex: "Kan du **öppna** fönstret?", exNl: "Kun je het raam opendoen?" }
+  - { sv: "att gå", nl: "lopen, gaan (te voet)", ex: "Jag **går** till jobbet.", exNl: "Ik loop naar mijn werk." }
+  - { sv: "att ta", nl: "nemen, pakken", ex: "Jag **tar** bussen till stan.", exNl: "Ik neem de bus naar de stad." }
+  - { sv: "att hinna", nl: "op tijd kunnen doen, tijd hebben om", ex: "Jag **hinner** inte äta frukost.", exNl: "Ik heb geen tijd om te ontbijten." }
+  - { sv: "att träna", nl: "sporten, trainen", ex: "Hon **tränar** varje morgon.", exNl: "Zij sport elke ochtend." }
+  - { sv: "att promenera", nl: "wandelen", ex: "Vi **promenerar** med hunden varje kväll.", exNl: "We wandelen elke avond met de hond." }
+  - { sv: "att titta", nl: "kijken (titta på = kijken naar)", ex: "Vi **tittar** på tv på kvällen.", exNl: "We kijken 's avonds tv." }
+  - { sv: "att lyssna", nl: "luisteren", ex: "Jag **lyssnar** på radio i bilen.", exNl: "Ik luister in de auto naar de radio." }
+  - { sv: "imorgon", nl: "morgen (de dag na vandaag)", alt: ["i morgon"], ex: "Vi ses **imorgon**!", exNl: "Tot morgen!" }
+  - { sv: "ikväll", nl: "vanavond", alt: ["i kväll"], ex: "Vad gör du **ikväll**?", exNl: "Wat doe je vanavond?" }
+  - { sv: "nu", nl: "nu", ex: "Jag måste gå **nu**.", exNl: "Ik moet nu gaan." }
+  - { sv: "snart", nl: "zo meteen, binnenkort", ex: "Bussen kommer **snart**.", exNl: "De bus komt zo." }
+  - { sv: "först", nl: "eerst", ex: "**Först** äter vi frukost.", exNl: "Eerst ontbijten we." }
+  - { sv: "sedan", nl: "daarna", alt: ["sen"], ex: "Först duschar jag och **{sedan|sen}** äter jag frukost.", exNl: "Eerst douche ik en daarna ontbijt ik." }
+  - { sv: "tidigt", nl: "vroeg", ex: "Jag vaknar **tidigt** på måndagar.", exNl: "Op maandag word ik vroeg wakker." }
+  - { sv: "sent", nl: "laat", ex: "På helgerna stiger jag upp **sent**.", exNl: "In het weekend sta ik laat op." }
+  - { sv: "halv", nl: "half (bij de klok)", ex: "Bussen går klockan **halv** åtta.", exNl: "De bus vertrekt om half acht." }
+  - { sv: "varje", nl: "elk(e), ieder(e)", ex: "Jag duschar **varje** morgon.", exNl: "Ik douche elke ochtend." }
+  - { sv: "ledig", nl: "vrij (geen werk of school)", ex: "Är du **ledig** på fredag?", exNl: "Ben je vrijdag vrij?" }
