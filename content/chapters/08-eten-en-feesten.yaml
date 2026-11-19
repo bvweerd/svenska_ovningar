@@ -285,14 +285,20 @@ sections:
         text: |
           I augusti hade Ingrid och Olle kräftskiva i trädgården. Alla gästerna hade roliga hattar och det fanns lyktor i träden. De åt kräftor, ost och knäckebröd och de sjöng många visor.
 
-          Fleur hade aldrig ätit kräftor förut. Hon tyckte att det var svårt att skala dem, men hon tyckte att de var goda. Bram tror att han åt tjugo kräftor! Festen slutade klockan ett på natten.
+          Fleur hade aldrig ätit kräftor förut. Hon tyckte att det var svårt att skala dem, men hon tyckte att de var goda. Bram tror att han åt tjugo kräftor! Efter kräftorna fanns det kaffe och tårta. Ingrid bakade tårtan själv. Bram var redan mätt, men han åt lite tårta ändå. Sedan dansade alla i trädgården. Festen slutade klockan ett på natten.
+
+          Dagen efter var Bram trött. Han åt bara en smörgås till frukost. ”Jag tänker aldrig äta kräftor igen!” sa han. Fleur skrattar bara. Hon tror att han vill gå på kräftskiva igen redan nästa år.
         items:
           - { id: pztz, type: truefalse, statement: "Kräftskivan var i augusti.", answer: true }
           - { id: ysqa, type: truefalse, statement: "Gästerna hade roliga hattar.", answer: true }
           - { id: qdtm, type: truefalse, statement: "Fleur hade ätit kräftor många gånger.", answer: false, tip: "Had ze ze al eens gegeten?", correction: { answers: ["{Fleur|Hon} hade aldrig ätit kräftor[ förut]."] } }
           - { id: nfdc, type: truefalse, statement: "Fleur tyckte att kräftorna var äckliga.", answer: false, tip: "Wat vond ze ervan?", correction: { answers: ["{Fleur|Hon} tyckte att {kräftorna|de} var goda."] } }
           - { id: bejs, type: truefalse, statement: "Bram åt inga kräftor.", answer: false, tip: "Hoeveel at Bram er?", correction: { answers: ["{Bram|Han} åt [ungefär ]tjugo kräftor.", "{Bram|Han} tror att han åt [ungefär ]tjugo kräftor."] } }
-          - { id: 9b9h, type: truefalse, statement: "Festen slutade klockan elva.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["Festen slutade klockan ett[ på natten]."] } }
+          - { id: 9b9h, type: truefalse, statement: "Festen slutade klockan elva.", answer: false, tip: "Hoe laat was het feest afgelopen?", correction: { answers: ["Festen slutade klockan ett[ på natten]."] } }
+          - { id: vk3c, type: truefalse, statement: "Olle bakade tårtan.", answer: false, tip: "Wie bakte de taart?", correction: { answers: ["Ingrid bakade {tårtan|den}[ själv].", "Olle bakade inte {tårtan|den}.", "Det var Ingrid som bakade {tårtan|den}."] } }
+          - { id: dq8k, type: truefalse, statement: "Bram var hungrig efter kräftorna.", answer: false, tip: "Lees het midden van de tweede alinea.", correction: { answers: ["{Bram|Han} var [redan ]mätt[ efter kräftorna].", "{Bram|Han} var inte hungrig[ efter kräftorna]."] } }
+          - { id: jbcr, type: truefalse, statement: "Bram tänker äta kräftor igen nästa vecka.", answer: false, tip: "Wat zegt Bram de volgende dag?", correction: { answers: ["{Bram|Han} tänker aldrig äta kräftor igen.", "{Bram|Han} tänker inte äta kräftor[ igen][ nästa vecka]."] } }
+          - { id: vns9, type: truefalse, statement: "Fleur tror att Bram vill gå på kräftskiva igen.", answer: true }
 
       - id: dialoog-fika
         title: Fika

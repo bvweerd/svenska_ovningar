@@ -341,6 +341,8 @@ sections:
 
           Förra månaden åkte vi till Stockholm och besökte Vasamuseet. I somras var vi en vecka i Dalarna. Bram har aldrig sett norrsken, men jag såg det en gång i Kiruna för fem år sedan. Vi har inte varit i Göteborg än. Kanske åker vi dit i höst!
 
+          Igår tappade Bram nyckeln till huset. Han har inte hittat den än. I natt sover vi hos Ingrid och Olle. Deras hus är större än vårt, och de är mycket snälla!
+
           Kram, Fleur
         items:
           - { id: e258, type: truefalse, statement: "Fleur och Bram har bott i Västerås i fem år.", answer: false, tip: "Lees de eerste zin.", correction: { answers: ["{Fleur och Bram|De} har bott i Västerås i nästan ett år."] } }
@@ -349,6 +351,10 @@ sections:
           - { id: dcbw, type: truefalse, statement: "Bram har sett norrsken.", answer: false, tip: "Wie heeft het noorderlicht gezien?", correction: { answers: ["{Bram|Han} har aldrig sett norrsken.", "{Bram|Han} har inte sett norrsken."] } }
           - { id: gghv, type: truefalse, statement: "De har varit i Göteborg.", answer: false, tip: "Lees het eind van de tweede alinea.", correction: { answers: ["{De|Fleur och Bram|Bram och Fleur} har inte varit i Göteborg[ än].", "{De|Fleur och Bram|Bram och Fleur} har aldrig varit i Göteborg."] } }
           - { id: rh88, type: truefalse, statement: "Fleur såg norrsken i Kiruna.", answer: true }
+          - { id: 3hk9, type: truefalse, statement: "Bram tappade nyckeln igår.", answer: true }
+          - { id: x9vy, type: truefalse, statement: "Bram har hittat nyckeln.", answer: false, tip: "Lees de derde alinea.", correction: { answers: ["{Bram|Han} har inte hittat {nyckeln|den}[ till huset][ än].", "{Bram|Han} har inte hittat {nyckeln|den}[ till huset] ännu.", "{Bram|Han} har tappat {nyckeln|den}[ till huset]."] } }
+          - { id: y4at, type: truefalse, statement: "I natt sover Fleur och Bram hemma.", answer: false, tip: "Waar slapen ze vannacht?", correction: { answers: ["I natt sover {de|Fleur och Bram|Bram och Fleur} hos {Ingrid och Olle|Olle och Ingrid|grannarna}.", "{De|Fleur och Bram|Bram och Fleur} sover hos {Ingrid och Olle|Olle och Ingrid|grannarna}.", "I natt sover {de|Fleur och Bram|Bram och Fleur} inte hemma.", "{De|Fleur och Bram|Bram och Fleur} sover inte hemma."] } }
+          - { id: rqr8, type: truefalse, statement: "Ingrid och Olle har ett större hus än Fleur och Bram.", answer: true }
 
       - id: dialoog-kiruna
         title: Ben je er ooit geweest?

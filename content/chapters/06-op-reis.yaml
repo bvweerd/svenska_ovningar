@@ -390,6 +390,8 @@ sections:
           I sommar ska Fleur och Bram åka till Gotland. De tar tåget från Västerås till Nynäshamn och sedan färjan till Visby. Färjan går klockan elva och resan tar ungefär tre timmar.
 
           De ska bo på ett vandrarhem i en vecka. I somras var de i Dalarna, men på Gotland har de aldrig varit. Biljetterna kostade 1 200 kronor. Fleur köpte dem för en månad sedan.
+
+          De reser den tjugonde juli. Färjan kommer fram till Visby klockan två. Vandrarhemmet ligger nära, och de går dit. På Gotland ska de hyra cyklar. En cykel kostar 120 kronor om dagen. Den tjugosjunde juli åker de hem igen.
         items:
           - { id: apyu, type: truefalse, statement: "Fleur och Bram ska åka till Gotland i sommar.", answer: true }
           - { id: yjdw, type: truefalse, statement: "De åker bil till Nynäshamn.", answer: false, tip: "Hoe reizen ze naar Nynäshamn?", correction: { answers: ["De {tar tåget|åker tåg} till Nynäshamn."] } }
@@ -397,6 +399,10 @@ sections:
           - { id: rw79, type: truefalse, statement: "Resan med färjan tar en timme.", answer: false, tip: "Hoe lang duurt de overtocht?", correction: { answers: ["Resan [med färjan ]tar [ungefär ]tre timmar."] } }
           - { id: rqwq, type: truefalse, statement: "De har varit på Gotland förut.", answer: false, tip: "Lees de tweede alinea.", correction: { answers: ["De har aldrig varit på Gotland[ förut].", "De har inte varit på Gotland[ förut]."] } }
           - { id: bg52, type: truefalse, statement: "Fleur köpte biljetterna för en vecka sedan.", answer: false, tip: "Wanneer kocht ze de kaartjes?", correction: { answers: ["{Fleur|Hon} köpte {biljetterna|dem} för en månad {sedan|sen}."] } }
+          - { id: z9fs, type: truefalse, statement: "De reser den tjugonde juni.", answer: false, tip: "In welke maand reizen ze?", correction: { answers: ["De {reser|åker} den {tjugonde|20:e|20} juli.", "De {reser|åker} i juli."] } }
+          - { id: uchq, type: truefalse, statement: "Färjan kommer fram till Visby klockan två.", answer: true }
+          - { id: edyy, type: truefalse, statement: "De tar en taxi till vandrarhemmet.", answer: false, tip: "Hoe komen ze bij de jeugdherberg?", correction: { answers: ["De {går|promenerar} {dit|till vandrarhemmet}.", "De tar inte [en ]taxi[ till vandrarhemmet].", "De tar ingen taxi[ till vandrarhemmet].", "Vandrarhemmet ligger nära, och de går dit."] } }
+          - { id: qnn4, type: truefalse, statement: "En cykel kostar 200 kronor om dagen.", answer: false, tip: "Hoeveel kost een fiets per dag?", correction: { answers: ["En cykel kostar {120|hundratjugo|etthundratjugo} {kronor|kr}[ om dagen]."] } }
 
       - id: dialoog-station
         title: Een kaartje kopen

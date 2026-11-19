@@ -253,13 +253,21 @@ sections:
           Förra helgen var Fleur och Bram i Olle och Ingrids stuga vid en sjö i Dalarna. På lördagen var det soligt och varmt, så de badade i sjön och plockade blåbär i skogen. Bram ville grilla, men det var eldningsförbud, så de åt sallad i stället.
 
           På söndagen regnade det hela dagen. Olle och Bram spelade kort, men Fleur och Ingrid tog på sig regnkläder och gick en lång promenad. Fleur älskar regn – men det gör inte Bram!
+
+          Sent på kvällen slutade det regna, och det blev soligt igen. Olle och Bram rodde ut på sjön. Vid stranden såg de en älg! Bram ville ta ett foto, men älgen sprang in i skogen. Bram var ändå glad, för det var så tyst och skönt på sjön.
+
+          På måndagen åkte Fleur och Bram hem till Västerås. Fleur ville inte åka hem, och inte Bram heller. Nästa sommar vill de tälta i fjällen!
         items:
           - { id: cgn3, type: truefalse, statement: "Stugan ligger vid en sjö.", answer: true }
           - { id: umkh, type: truefalse, statement: "På lördagen regnade det.", answer: false, tip: "Hoe was het weer op zaterdag?", correction: { answers: ["På lördagen var det soligt och varmt.", "På lördagen var det {soligt|varmt}."] } }
           - { id: gp35, type: truefalse, statement: "De grillade på lördagen.", answer: false, tip: "Waarom niet?", correction: { answers: ["De grillade inte, för det var eldningsförbud.", "De grillade inte.", "De åt sallad i stället."] } }
           - { id: w2rb, type: truefalse, statement: "De plockade blåbär.", answer: true }
-          - { id: sexs, type: truefalse, statement: "Bram tycker om regn.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["{Bram|Han} tycker inte om regn.", "{Bram|Han} älskar inte regn."] } }
+          - { id: sexs, type: truefalse, statement: "Bram tycker om regn.", answer: false, tip: "Lees het eind van de tweede alinea.", correction: { answers: ["{Bram|Han} tycker inte om regn.", "{Bram|Han} älskar inte regn."] } }
           - { id: amxh, type: truefalse, statement: "På söndagen gick Fleur och Ingrid en promenad.", answer: true }
+          - { id: y3zv, type: truefalse, statement: "Bram tog ett foto av älgen.", answer: false, tip: "Wat deed de eland?", correction: { answers: ["{Bram|Han} tog inte [ett ]foto[ av älgen].", "{Bram|Han} tog inget foto[ av älgen].", "{Bram|Han} fotograferade inte älgen.", "Älgen sprang in i skogen.", "{Bram|Han} ville ta ett foto, men älgen sprang in i skogen."] } }
+          - { id: 8yta, type: truefalse, statement: "Fleur ville åka hem på måndagen.", answer: false, tip: "Lees de laatste alinea.", correction: { answers: ["{Fleur|Hon} ville inte åka hem[ till Västerås][ på måndagen].", "{Fleur|Hon} ville stanna[ i stugan]."] } }
+          - { id: zb6e, type: truefalse, statement: "Bram ville inte heller åka hem.", answer: true }
+          - { id: f7w7, type: truefalse, statement: "Nästa sommar vill de bo på hotell i fjällen.", answer: false, tip: "Waar willen ze slapen?", correction: { answers: ["Nästa sommar vill de {tälta|bo i tält|sova i tält}[ i fjällen].", "De vill {tälta|bo i tält|sova i tält}[ i fjällen].", "Nästa sommar vill de inte bo på hotell[ i fjällen].", "De vill inte bo på hotell[ i fjällen]."] } }
 
       - id: dialoog-zomerdag
         title: Wat gaan we doen?
