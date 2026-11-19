@@ -191,21 +191,16 @@ sections:
               - ["Jag ringer tillbaka senare.", "Ik bel later terug."]
               - ["Du har ringt fel nummer.", "Je hebt het verkeerde nummer gebeld."]
 
-      - id: dialoog-afspraak
-        title: Een afspraak maken
-        instruction: Fleur belt de tandarts. Zet het gesprek in de goede volgorde.
-        topic: telefon
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: indirekt-tal
+        shuffle: true
         items:
-          - id: c9p7
-            type: dialogue
-            lines:
-              - "Receptionisten: Västerås tandvård, det är Maja."
-              - "Fleur: Hej, det är Fleur van Dijk. Jag skulle vilja boka en tid."
-              - "Receptionisten: Javisst. Passar det på torsdag klockan nio?"
-              - "Fleur: Tyvärr inte, då jobbar jag. Har ni något på eftermiddagen?"
-              - "Receptionisten: Ja, vi har en tid klockan fyra."
-              - "Fleur: Perfekt, då tar jag den. Tack så mycket!"
-              - "Receptionisten: Välkommen. Hej då!"
+          - { id: 47mc, type: findError, topic: indirekt-tal, sentence: "Bram frågar när börjar filmen.", wrong: [3, 4], answers: ["Bram frågar när filmen börjar."], tip: "Kijk naar de woordvolgorde in de bijzin." }
+          - { id: c59j, type: findError, topic: indirekt-tal, sentence: "Hon frågar att du vill ha kaffe.", wrong: [2], answers: ["Hon frågar om du vill ha kaffe."], tip: "Is het een vraag of een bewering?" }
+          - { id: egbq, type: findError, topic: tempus, sentence: "När vi kom hade tåget redan gick.", wrong: [6], answers: ["När vi kom hade tåget redan gått."], tip: "Na hade komt de supinum." }
+          - { id: k4n4, type: findError, topic: indirekt-tal, sentence: "Kan du säga var ligger stationen?", wrong: [4, 5], answers: ["Kan du säga var stationen ligger?"], tip: "Kijk naar de woordvolgorde in de bijzin." }
 
       - id: lezen-gemist
         title: "Lezen: een gemiste oproep"
@@ -224,6 +219,22 @@ sections:
           - { id: 7qh7, type: truefalse, statement: "Konserten var på lördagen.", answer: false, tip: "Op welke dag was het concert?", correction: { answers: ["Konserten var {på fredagen|i fredags}."] } }
           - { id: peca, type: truefalse, statement: "Fleur ville inte följa med.", answer: false, tip: "Wat zei Fleur toen ze terugbelde?", correction: { answers: ["{Fleur|Hon} ville [gärna ]följa med."] } }
 
+      - id: dialoog-afspraak
+        title: Een afspraak maken
+        instruction: Fleur belt de tandarts. Zet het gesprek in de goede volgorde.
+        topic: telefon
+        items:
+          - id: c9p7
+            type: dialogue
+            lines:
+              - "Receptionisten: Västerås tandvård, det är Maja."
+              - "Fleur: Hej, det är Fleur van Dijk. Jag skulle vilja boka en tid."
+              - "Receptionisten: Javisst. Passar det på torsdag klockan nio?"
+              - "Fleur: Tyvärr inte, då jobbar jag. Har ni något på eftermiddagen?"
+              - "Receptionisten: Ja, vi har en tid klockan fyra."
+              - "Fleur: Perfekt, då tar jag den. Tack så mycket!"
+              - "Receptionisten: Välkommen. Hej då!"
+
       - id: schrijven-bericht
         title: "Schrijven: een voicemail"
         instruction: Je belt een vriend(in), maar die neemt niet op. Spreek een bericht in.
@@ -238,17 +249,6 @@ sections:
               - { any: ["ringer", "ringa"], label: "Je vraagt om terug te bellen (ringa / ringer)" }
               - { any: ["vill du", "kan du", "skulle du"], label: "Je stelt een vraag (Vill du / Kan du …)" }
             model: "Hej Anna, det är Sanne. Jag ringer för att jag har två biljetter till teatern på lördag. Vill du följa med? Föreställningen börjar klockan sju. Kan du ringa mig ikväll eller imorgon? Mitt nummer är 070-123 45 67. Hej då!"
-
-      - id: zoek-de-fout
-        title: Zoek de fout
-        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
-        topic: indirekt-tal
-        shuffle: true
-        items:
-          - { id: 47mc, type: findError, topic: indirekt-tal, sentence: "Bram frågar när börjar filmen.", wrong: [3, 4], answers: ["Bram frågar när filmen börjar."], tip: "Kijk naar de woordvolgorde in de bijzin." }
-          - { id: c59j, type: findError, topic: indirekt-tal, sentence: "Hon frågar att du vill ha kaffe.", wrong: [2], answers: ["Hon frågar om du vill ha kaffe."], tip: "Is het een vraag of een bewering?" }
-          - { id: egbq, type: findError, topic: tempus, sentence: "När vi kom hade tåget redan gick.", wrong: [6], answers: ["När vi kom hade tåget redan gått."], tip: "Na hade komt de supinum." }
-          - { id: k4n4, type: findError, topic: indirekt-tal, sentence: "Kan du säga var ligger stationen?", wrong: [4, 5], answers: ["Kan du säga var stationen ligger?"], tip: "Kijk naar de woordvolgorde in de bijzin." }
 
   - id: luisteren
     title: Luisteren

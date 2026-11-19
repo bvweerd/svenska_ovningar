@@ -115,19 +115,20 @@ sections:
           - { id: c2hu, type: gap, text: "Olle badar i sjön ___ vattnet bara är tio grader.", gaps: [{ answers: ["fastän"], options: ["eftersom", "innan", "medan", "fastän", "tills"], shuffle: false, feedback: [{ match: "eftersom", tip: "Hij zwemt ondanks het koude water, niet omdat het koud is: fastän (hoewel)." }] }] }
           - { id: h7kc, type: gap, text: "Bram lagar mat ___ Fleur dukar bordet.", gaps: [{ answers: ["medan"], options: ["eftersom", "innan", "medan", "fastän", "tills"], shuffle: false }] }
 
-      - id: biff-zinsbouw
-        title: Inte in de bijzin
-        instruction: Maak de bijzin af. Denk aan BIFF.
-        topic: bisats-ordfoljd
+      - id: for-att-eftersom
+        title: För att of eftersom?
+        instruction: Kies *för att* (om te) of *eftersom* (omdat). Let op of er een infinitief of een onderwerp + werkwoord volgt.
+        topic: subjunktioner
+        shuffle: true
         items:
-          - { id: y5be, type: order, start: "Jag stannar hemma eftersom", tokens: ["jag", "inte", "mår", "bra"], answers: ["Jag stannar hemma eftersom jag inte mår bra."] }
-          - { id: 5cjc, type: order, start: "Han säger att", tokens: ["han", "kommer", "aldrig", "i tid"], answers: ["Han säger att han aldrig kommer i tid."] }
-          - { id: ds2s, type: order, start: "Vi vet att", tokens: ["ofta", "Olle", "fiskar"], answers: ["Vi vet att Olle ofta fiskar."] }
-          - { id: tucr, type: order, start: "Jag undrar om", tokens: ["har", "inte", "de", "tid"], answers: ["Jag undrar om de inte har tid."] }
-          - { id: q897, type: order, start: "Hon säger att", tokens: ["inte", "hon", "kan", "komma"], answers: ["Hon säger att hon inte kan komma."] }
-          - { id: sdnw, type: order, start: "Jag vet att", tokens: ["cyklar", "Bram", "alltid"], answers: ["Jag vet att Bram alltid cyklar."] }
-          - { id: hw4h, type: order, start: "Vi stannar hemma eftersom", tokens: ["regnar", "det", "fortfarande"], answers: ["Vi stannar hemma eftersom det fortfarande regnar."] }
-          - { id: e4xu, type: order, start: "Det är synd att", tokens: ["stannar", "ni", "inte"], answers: ["Det är synd att ni inte stannar."] }
+          - { id: bh5u, type: gap, text: "Fleur går till affären ___ köpa mjölk.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false, feedback: [{ match: "eftersom", tip: "Na het gat volgt een infinitief (köpa): för att = om te." }] }] }
+          - { id: upqq, type: gap, text: "___ Fleur behöver mjölk går hon till affären.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (Fleur behöver): dan altijd eftersom. För att (omdat) kan alleen ná de hoofdzin." }] }] }
+          - { id: 3fr6, type: gap, text: "___ vi vill köpa ett hus sparar vi pengar.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (vi vill): dan altijd eftersom." }] }] }
+          - { id: z2nk, type: gap, text: "Vi sparar pengar ___ köpa ett hus.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false }] }
+          - { id: jqdk, type: gap, text: "Olle går upp tidigt ___ hinna med bussen.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false, feedback: [{ match: "eftersom", tip: "Na het gat volgt een infinitief (hinna): för att = om te." }] }] }
+          - { id: z743, type: gap, text: "___ det regnade stannade vi inne.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (det regnade): dan altijd eftersom." }] }] }
+          - { id: qzek, type: gap, text: "Wilma pluggar mycket ___ klara provet.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false }] }
+          - { id: 6t9d, type: gap, text: "___ Bram inte har bil tar han bussen.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false }] }
 
       - id: biff-kiezen
         title: Hoofdzin of bijzin?
@@ -144,6 +145,20 @@ sections:
           - { id: xtys, type: mc, prompt: "Omdat Nils niet thuis is, eten we zonder hem.", options: ["Eftersom Nils inte är hemma äter vi utan honom.", "Eftersom Nils är inte hemma äter vi utan honom.", "Eftersom Nils inte är hemma vi äter utan honom."], answer: 0, tip: "In de bijzin staat inte vóór är. Na de bijzin vooraan komt direct het werkwoord van de hoofdzin." }
           - { id: xy9g, type: mc, prompt: "Ik denk dat ze het altijd vergeet.", options: ["Jag tror att hon alltid glömmer det.", "Jag tror att hon glömmer alltid det.", "Jag tror alltid att hon glömmer det."], answer: 0, tip: "In de bijzin staat alltid vóór het werkwoord." }
 
+      - id: biff-zinsbouw
+        title: Inte in de bijzin
+        instruction: Maak de bijzin af. Denk aan BIFF.
+        topic: bisats-ordfoljd
+        items:
+          - { id: y5be, type: order, start: "Jag stannar hemma eftersom", tokens: ["jag", "inte", "mår", "bra"], answers: ["Jag stannar hemma eftersom jag inte mår bra."] }
+          - { id: 5cjc, type: order, start: "Han säger att", tokens: ["han", "kommer", "aldrig", "i tid"], answers: ["Han säger att han aldrig kommer i tid."] }
+          - { id: ds2s, type: order, start: "Vi vet att", tokens: ["ofta", "Olle", "fiskar"], answers: ["Vi vet att Olle ofta fiskar."] }
+          - { id: tucr, type: order, start: "Jag undrar om", tokens: ["har", "inte", "de", "tid"], answers: ["Jag undrar om de inte har tid."] }
+          - { id: q897, type: order, start: "Hon säger att", tokens: ["inte", "hon", "kan", "komma"], answers: ["Hon säger att hon inte kan komma."] }
+          - { id: sdnw, type: order, start: "Jag vet att", tokens: ["cyklar", "Bram", "alltid"], answers: ["Jag vet att Bram alltid cyklar."] }
+          - { id: hw4h, type: order, start: "Vi stannar hemma eftersom", tokens: ["regnar", "det", "fortfarande"], answers: ["Vi stannar hemma eftersom det fortfarande regnar."] }
+          - { id: e4xu, type: order, start: "Det är synd att", tokens: ["stannar", "ni", "inte"], answers: ["Det är synd att ni inte stannar."] }
+
       - id: bijzin-vooraan
         title: Begin met de bijzin
         instruction: Maak de hoofdzin af. Het werkwoord komt direct na de bijzin.
@@ -157,21 +172,6 @@ sections:
           - { id: t9xj, type: order, start: "Om du vill", tokens: ["du", "stanna", "kan"], answers: ["Om du vill kan du stanna."] }
           - { id: de4y, type: order, start: "Medan Bram diskar", tokens: ["läser", "Fleur", "en bok"], answers: ["Medan Bram diskar läser Fleur en bok."] }
           - { id: vg77, type: order, start: "Fastän det är kallt", tokens: ["Olle", "badar"], answers: ["Fastän det är kallt badar Olle."] }
-
-      - id: for-att-eftersom
-        title: För att of eftersom?
-        instruction: Kies *för att* (om te) of *eftersom* (omdat). Let op of er een infinitief of een onderwerp + werkwoord volgt.
-        topic: subjunktioner
-        shuffle: true
-        items:
-          - { id: bh5u, type: gap, text: "Fleur går till affären ___ köpa mjölk.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false, feedback: [{ match: "eftersom", tip: "Na het gat volgt een infinitief (köpa): för att = om te." }] }] }
-          - { id: upqq, type: gap, text: "___ Fleur behöver mjölk går hon till affären.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (Fleur behöver): dan altijd eftersom. För att (omdat) kan alleen ná de hoofdzin." }] }] }
-          - { id: 3fr6, type: gap, text: "___ vi vill köpa ett hus sparar vi pengar.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (vi vill): dan altijd eftersom." }] }] }
-          - { id: z2nk, type: gap, text: "Vi sparar pengar ___ köpa ett hus.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false }] }
-          - { id: jqdk, type: gap, text: "Olle går upp tidigt ___ hinna med bussen.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false, feedback: [{ match: "eftersom", tip: "Na het gat volgt een infinitief (hinna): för att = om te." }] }] }
-          - { id: z743, type: gap, text: "___ det regnade stannade vi inne.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false, feedback: [{ match: "För att", tip: "De reden staat vooraan, met onderwerp en werkwoord (det regnade): dan altijd eftersom." }] }] }
-          - { id: qzek, type: gap, text: "Wilma pluggar mycket ___ klara provet.", gaps: [{ answers: ["för att"], options: ["för att", "eftersom"], shuffle: false }] }
-          - { id: 6t9d, type: gap, text: "___ Bram inte har bil tar han bussen.", gaps: [{ answers: ["Eftersom"], options: ["För att", "Eftersom"], shuffle: false }] }
 
       - id: sin-of-hans
         title: Sin of hans?
@@ -233,6 +233,18 @@ sections:
               - ["en balkong", "een balkon"]
               - ["en källare", "een kelder"]
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: bisats-ordfoljd
+        shuffle: true
+        items:
+          - { id: 2u6c, type: findError, topic: bisats-ordfoljd, sentence: "Jag kommer inte eftersom jag har inte tid.", wrong: [5, 6], answers: ["Jag kommer inte eftersom jag inte har tid."], tip: "Denk aan BIFF." }
+          - { id: vkcz, type: findError, topic: sin-sitt-sina, sentence: "Olle älskar hans fru.", wrong: [2], answers: ["Olle älskar sin fru."], tip: "Het gaat om zijn eigen vrouw." }
+          - { id: 4wqg, type: findError, topic: bisats-ordfoljd, sentence: "När jag kommer hem jag äter middag.", wrong: [4, 5], answers: ["När jag kommer hem äter jag middag."], tip: "De bijzin staat vooraan: wat komt er dan?" }
+          - { id: nc34, type: findError, topic: subjunktioner, sentence: "Fleur går till affären eftersom köpa mjölk.", wrong: [4], answers: ["Fleur går till affären för att köpa mjölk."], tip: "Na het voegwoord komt een infinitief." }
+          - { id: e8vn, type: findError, topic: bisats-ordfoljd, sentence: "Han säger att han kommer aldrig i tid.", wrong: [5, 6], answers: ["Han säger att han aldrig kommer i tid."], tip: "Denk aan BIFF." }
+
       - id: lezen-appartement
         title: "Lezen: een nieuw appartement"
         instruction: Lees de tekst. Is de bewering **rätt** of **fel**? Is hij fout, schrijf dan de juiste zin op.
@@ -280,18 +292,6 @@ sections:
               - { any: ["bredvid", "framför", "bakom", "över", "under", "mellan"], label: "Je gebruikt een voorzetsel van plaats (bredvid, bakom …)" }
               - { any: ["kök", "sovrum", "vardagsrum", "badrum", "trädgård", "balkong"], label: "Je noemt kamers" }
             model: "Jag bor i ett radhus i en liten stad. På bottenvåningen finns det ett kök och ett stort vardagsrum. Trädgården ligger bakom huset. På övervåningen finns tre sovrum och ett badrum. Mitt favoritrum är köket, eftersom solen skiner där på morgonen. Jag tycker att badrummet är lite för litet."
-
-      - id: zoek-de-fout
-        title: Zoek de fout
-        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
-        topic: bisats-ordfoljd
-        shuffle: true
-        items:
-          - { id: 2u6c, type: findError, topic: bisats-ordfoljd, sentence: "Jag kommer inte eftersom jag har inte tid.", wrong: [5, 6], answers: ["Jag kommer inte eftersom jag inte har tid."], tip: "Denk aan BIFF." }
-          - { id: vkcz, type: findError, topic: sin-sitt-sina, sentence: "Olle älskar hans fru.", wrong: [2], answers: ["Olle älskar sin fru."], tip: "Het gaat om zijn eigen vrouw." }
-          - { id: 4wqg, type: findError, topic: bisats-ordfoljd, sentence: "När jag kommer hem jag äter middag.", wrong: [4, 5], answers: ["När jag kommer hem äter jag middag."], tip: "De bijzin staat vooraan: wat komt er dan?" }
-          - { id: nc34, type: findError, topic: subjunktioner, sentence: "Fleur går till affären eftersom köpa mjölk.", wrong: [4], answers: ["Fleur går till affären för att köpa mjölk."], tip: "Na het voegwoord komt een infinitief." }
-          - { id: e8vn, type: findError, topic: bisats-ordfoljd, sentence: "Han säger att han kommer aldrig i tid.", wrong: [5, 6], answers: ["Han säger att han aldrig kommer i tid."], tip: "Denk aan BIFF." }
 
   - id: luisteren
     title: Luisteren

@@ -311,21 +311,6 @@ sections:
           - { id: e4n6, type: mc, prompt: "Je wilt dat Wilma het niet vergeet.", options: ["Glöm inte!", "Inte glöm!", "Glömmer inte!"], answer: 0, tip: "Inte komt ná de imperativ. glömma → glöm (met één m)." }
           - { id: w7ep, type: mc, prompt: "Je wilt dat iemand binnenkomt.", options: ["Kom in!", "Komma in!", "Kommer in!"], answer: 0, tip: "komma – kommer: de infinitief zonder -a: kom (met één m)." }
 
-      - id: modaal-kiezen
-        title: Welk modaal werkwoord?
-        instruction: Kies het werkwoord dat past bij de betekenis tussen haakjes.
-        topic: modala
-        shuffle: true
-        items:
-          - { id: 54e6, type: gap, text: "Jag ___ inte simma. (kan niet)", gaps: [{ answers: ["kan"], options: ["kan", "vill", "får", "måste", "ska"] }] }
-          - { id: v4sd, type: gap, text: "___ jag öppna fönstret? (mag ik)", gaps: [{ answers: ["Får"], options: ["Kan", "Vill", "Får", "Måste", "Ska"] }] }
-          - { id: h57d, type: gap, text: "Vi ___ jobba imorgon. (moeten)", gaps: [{ answers: ["måste"], options: ["kan", "vill", "får", "måste", "ska"] }] }
-          - { id: xja5, type: gap, text: "Nils ___ ha en hund. (wil)", gaps: [{ answers: ["vill"], options: ["kan", "vill", "får", "måste", "ska"] }] }
-          - { id: g2sf, type: gap, text: "Ikväll ___ vi äta pizza. (gaan)", gaps: [{ answers: ["ska"], options: ["kan", "vill", "får", "måste", "ska"] }] }
-          - { id: phtk, type: gap, text: "Du ___ inte röka här. (mag niet)", gaps: [{ answers: ["får"], options: ["kan", "vill", "får", "måste", "ska"] }] }
-          - { id: s39w, type: gap, text: "___ du hjälpa mig? (kun je)", gaps: [{ answers: ["Kan"], options: ["Kan", "Vill", "Får", "Måste", "Ska"] }] }
-          - { id: hbz5, type: gap, text: "Imorgon ___ jag åka till Stockholm. (ga)", gaps: [{ answers: ["ska"], options: ["kan", "vill", "får", "måste", "ska"] }] }
-
       - id: modaal-vorm
         title: Modaal werkwoord + infinitief
         instruction: Welke zin is goed?
@@ -341,19 +326,20 @@ sections:
           - { id: ucfb, type: mc, prompt: "Vanavond gaan we pizza eten.", options: ["Ikväll ska vi äta pizza.", "Ikväll vi ska äta pizza.", "Ikväll ska vi äter pizza."], answer: 0, tip: "Plaats 2 is ska, dan het onderwerp, en daarna de infinitief." }
           - { id: xpdv, type: mc, prompt: "Wij hoeven morgen niet te werken.", options: ["Vi behöver inte jobba imorgon.", "Vi får inte jobba imorgon.", "Vi behöver inte att jobba imorgon."], answer: 0, tip: "Niet hoeven = behöver inte, zonder att. Får inte betekent: mag niet." }
 
-      - id: modaal-vertalen
-        title: Vertaal met een modaal werkwoord
-        instruction: Vertaal naar het Zweeds.
+      - id: modaal-kiezen
+        title: Welk modaal werkwoord?
+        instruction: Kies het werkwoord dat past bij de betekenis tussen haakjes.
         topic: modala
+        shuffle: true
         items:
-          - { id: s3t9, type: translate, prompt: "Ik kan vandaag niet komen.", answers: ["Jag kan inte komma {idag|i dag}.", "{Idag|I dag} kan jag inte komma."], feedback: [{ contains: "kan inte att", tip: "Na een modaal werkwoord komt geen att." }] }
-          - { id: 2kfg, type: translate, prompt: "Mag ik hier roken?", answers: ["Får jag röka här?"], topic: vragen }
-          - { id: e6sr, type: translate, prompt: "Wij moeten om acht uur beginnen.", answers: ["Vi måste börja klockan åtta.", "Klockan åtta måste vi börja."], feedback: [{ contains: "måste att", tip: "Na måste komt geen att." }] }
-          - { id: xb3f, type: translate, prompt: "Wil jij koffie drinken?", answers: ["Vill du dricka kaffe?"], topic: vragen, feedback: [{ contains: "vill du att", tip: "Na vill komt geen att." }] }
-          - { id: 9qa4, type: translate, prompt: "Je mag hier niet parkeren.", answers: ["{Du|Man} får inte parkera här."], feedback: [{ contains: "får parkera inte", tip: "Inte staat direct na het modale werkwoord." }] }
-          - { id: 8ra6, type: translate, prompt: "Kun jij mij helpen?", answers: ["Kan du hjälpa mig?"], topic: vragen }
-          - { id: j7cb, type: translate, prompt: "Morgen wil Nils voetballen.", answers: ["{Imorgon|I morgon} vill Nils spela fotboll.", "Nils vill spela fotboll {imorgon|i morgon}."], feedback: [{ contains: "imorgon Nils vill", tip: "Na de tijdsbepaling komt eerst het werkwoord: imorgon vill Nils …" }, { contains: "vill att", tip: "Na vill komt geen att." }] }
-          - { id: tuj5, type: translate, prompt: "Fleur moet vandaag thuiswerken.", answers: ["Fleur måste {jobba|arbeta} hemma {idag|i dag}.", "{Idag|I dag} måste Fleur {jobba|arbeta} hemma."] }
+          - { id: 54e6, type: gap, text: "Jag ___ inte simma. (kan niet)", gaps: [{ answers: ["kan"], options: ["kan", "vill", "får", "måste", "ska"] }] }
+          - { id: v4sd, type: gap, text: "___ jag öppna fönstret? (mag ik)", gaps: [{ answers: ["Får"], options: ["Kan", "Vill", "Får", "Måste", "Ska"] }] }
+          - { id: h57d, type: gap, text: "Vi ___ jobba imorgon. (moeten)", gaps: [{ answers: ["måste"], options: ["kan", "vill", "får", "måste", "ska"] }] }
+          - { id: xja5, type: gap, text: "Nils ___ ha en hund. (wil)", gaps: [{ answers: ["vill"], options: ["kan", "vill", "får", "måste", "ska"] }] }
+          - { id: g2sf, type: gap, text: "Ikväll ___ vi äta pizza. (gaan)", gaps: [{ answers: ["ska"], options: ["kan", "vill", "får", "måste", "ska"] }] }
+          - { id: phtk, type: gap, text: "Du ___ inte röka här. (mag niet)", gaps: [{ answers: ["får"], options: ["kan", "vill", "får", "måste", "ska"] }] }
+          - { id: s39w, type: gap, text: "___ du hjälpa mig? (kun je)", gaps: [{ answers: ["Kan"], options: ["Kan", "Vill", "Får", "Måste", "Ska"] }] }
+          - { id: hbz5, type: gap, text: "Imorgon ___ jag åka till Stockholm. (ga)", gaps: [{ answers: ["ska"], options: ["kan", "vill", "får", "måste", "ska"] }] }
 
       - id: modaal-zinsbouw
         title: Zinsbouw met twee werkwoorden
@@ -368,6 +354,33 @@ sections:
           - { id: bh3f, type: order, start: "På fredag", tokens: ["vi", "ska", "bada"], answers: ["På fredag ska vi bada."] }
           - { id: 623u, type: order, start: "Här", tokens: ["får", "inte", "man", "röka"], answers: ["Här får man inte röka."] }
           - { id: 3yg2, type: order, start: "Ikväll", tokens: ["laga mat", "jag", "måste"], answers: ["Ikväll måste jag laga mat."] }
+
+      - id: modaal-vertalen
+        title: Vertaal met een modaal werkwoord
+        instruction: Vertaal naar het Zweeds.
+        topic: modala
+        items:
+          - { id: s3t9, type: translate, prompt: "Ik kan vandaag niet komen.", answers: ["Jag kan inte komma {idag|i dag}.", "{Idag|I dag} kan jag inte komma."], feedback: [{ contains: "kan inte att", tip: "Na een modaal werkwoord komt geen att." }] }
+          - { id: 2kfg, type: translate, prompt: "Mag ik hier roken?", answers: ["Får jag röka här?"], topic: vragen }
+          - { id: e6sr, type: translate, prompt: "Wij moeten om acht uur beginnen.", answers: ["Vi måste börja klockan åtta.", "Klockan åtta måste vi börja."], feedback: [{ contains: "måste att", tip: "Na måste komt geen att." }] }
+          - { id: xb3f, type: translate, prompt: "Wil jij koffie drinken?", answers: ["Vill du dricka kaffe?"], topic: vragen, feedback: [{ contains: "vill du att", tip: "Na vill komt geen att." }] }
+          - { id: 9qa4, type: translate, prompt: "Je mag hier niet parkeren.", answers: ["{Du|Man} får inte parkera här."], feedback: [{ contains: "får parkera inte", tip: "Inte staat direct na het modale werkwoord." }] }
+          - { id: 8ra6, type: translate, prompt: "Kun jij mij helpen?", answers: ["Kan du hjälpa mig?"], topic: vragen }
+          - { id: j7cb, type: translate, prompt: "Morgen wil Nils voetballen.", answers: ["{Imorgon|I morgon} vill Nils spela fotboll.", "Nils vill spela fotboll {imorgon|i morgon}."], feedback: [{ contains: "imorgon Nils vill", tip: "Na de tijdsbepaling komt eerst het werkwoord: imorgon vill Nils …" }, { contains: "vill att", tip: "Na vill komt geen att." }] }
+          - { id: tuj5, type: translate, prompt: "Fleur moet vandaag thuiswerken.", answers: ["Fleur måste {jobba|arbeta} hemma {idag|i dag}.", "{Idag|I dag} måste Fleur {jobba|arbeta} hemma."] }
+
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: tidsuttryck
+        shuffle: true
+        items:
+          - { id: tq5b, type: findError, topic: tidsuttryck, sentence: "På morgonen Bram dricker kaffe.", wrong: [2, 3], answers: ["På morgonen dricker Bram kaffe."], tip: "Het werkwoord moet op plaats 2." }
+          - { id: enkp, type: findError, topic: modala, sentence: "Jag vill att äta pizza.", wrong: [2], answers: ["Jag vill äta pizza."], tip: "Kijk naar wat er na vill komt." }
+          - { id: 2t3y, type: findError, topic: plural, sentence: "Vi har tre bilor.", wrong: [3], answers: ["Vi har tre bilar."], tip: "Kijk naar het meervoud." }
+          - { id: 3k9r, type: findError, topic: imperativ, sentence: "Läsa texten högt!", wrong: [0], answers: ["Läs texten högt!"], tip: "Het is een opdracht." }
+          - { id: kx6r, type: findError, topic: dagar, sentence: "Vi ses på Måndag.", wrong: [3], answers: ["Vi ses på måndag."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
+          - { id: b9ud, type: findError, topic: modala, sentence: "Imorgon jag kan inte komma.", wrong: [1, 2], answers: ["Imorgon kan jag inte komma."], tip: "Het werkwoord moet op plaats 2." }
 
       - id: lezen-bram
         title: "Lezen: een gewone dag"
@@ -415,19 +428,6 @@ sections:
               - { any: ["på morgonen", "på kvällen", "på eftermiddagen", "på förmiddagen"], label: "Je gebruikt een dagdeel (på morgonen, på kvällen …)" }
               - { any: ["måste", "ska", "vill", "kan"], label: "Je gebruikt een modaal werkwoord (måste, ska, vill, kan)" }
             model: "Jag vaknar klockan sju. På morgonen duschar jag och äter frukost. Sedan cyklar jag till jobbet. Jag jobbar på ett kontor. Klockan tolv äter jag lunch. Efter jobbet måste jag handla mat. På kvällen lagar jag middag och sedan läser jag en bok. Imorgon ska jag träffa en vän."
-
-      - id: zoek-de-fout
-        title: Zoek de fout
-        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
-        topic: tidsuttryck
-        shuffle: true
-        items:
-          - { id: tq5b, type: findError, topic: tidsuttryck, sentence: "På morgonen Bram dricker kaffe.", wrong: [2, 3], answers: ["På morgonen dricker Bram kaffe."], tip: "Het werkwoord moet op plaats 2." }
-          - { id: enkp, type: findError, topic: modala, sentence: "Jag vill att äta pizza.", wrong: [2], answers: ["Jag vill äta pizza."], tip: "Kijk naar wat er na vill komt." }
-          - { id: 2t3y, type: findError, topic: plural, sentence: "Vi har tre bilor.", wrong: [3], answers: ["Vi har tre bilar."], tip: "Kijk naar het meervoud." }
-          - { id: 3k9r, type: findError, topic: imperativ, sentence: "Läsa texten högt!", wrong: [0], answers: ["Läs texten högt!"], tip: "Het is een opdracht." }
-          - { id: kx6r, type: findError, topic: dagar, sentence: "Vi ses på Måndag.", wrong: [3], answers: ["Vi ses på måndag."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
-          - { id: b9ud, type: findError, topic: modala, sentence: "Imorgon jag kan inte komma.", wrong: [1, 2], answers: ["Imorgon kan jag inte komma."], tip: "Het werkwoord moet op plaats 2." }
 
   - id: luisteren
     title: Luisteren

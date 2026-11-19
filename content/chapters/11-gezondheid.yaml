@@ -110,20 +110,6 @@ sections:
   - id: oefeningen
     title: Oefeningen
     exercises:
-      - id: zit-te
-        title: Zitten te …
-        instruction: Vertaal naar het Zweeds.
-        topic: positionsverb
-        items:
-          - { id: xpay, type: translate, prompt: "Ik zit te lezen.", answers: ["Jag sitter och läser."], feedback: [{ contains: "sitter att", tip: "Het Zweeds gebruikt och: sitter och läser." }, { contains: "sitter och läsa", tip: "Beide werkwoorden in dezelfde vorm: sitter och läser." }] }
-          - { id: xqwa, type: translate, prompt: "Ze staat af te wassen.", answers: ["Hon står och diskar."] }
-          - { id: kwgt, type: translate, prompt: "Nils ligt te slapen.", answers: ["Nils ligger och sover."] }
-          - { id: vx9b, type: translate, prompt: "Olle zat tv te kijken.", answers: ["Olle satt och {tittade|såg} på {tv|teve}."], feedback: [{ contains: "satt och tittar", tip: "Beide werkwoorden in dezelfde tijd: satt och tittade." }] }
-          - { id: t5qy, type: translate, prompt: "Wij liepen te praten.", answers: ["Vi gick och pratade."], feedback: [{ contains: "gick och pratar", tip: "Beide werkwoorden in dezelfde tijd: gick och pratade." }] }
-          - { id: pjdj, type: translate, prompt: "Fleur ligt te lezen.", answers: ["Fleur ligger och läser."], feedback: [{ contains: "ligger och läsa", tip: "Beide werkwoorden in dezelfde vorm: ligger och läser." }] }
-          - { id: bn8q, type: translate, prompt: "Bram staat te koken.", answers: ["Bram står och lagar mat."] }
-          - { id: hs9g, type: translate, prompt: "Wij zaten te eten.", answers: ["Vi satt och åt."], feedback: [{ contains: "satt och äter", tip: "Beide werkwoorden in dezelfde tijd: satt och åt." }] }
-
       - id: ligt-of-staat
         title: Ligt, staat, hangt of zit het?
         instruction: Kies het werkwoord dat past.
@@ -138,6 +124,20 @@ sections:
           - { id: wjk9, type: gap, text: "Telefonen ___ på golvet.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
           - { id: k529, type: gap, text: "Jackan ___ i hallen.", gaps: [{ answers: ["hänger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
           - { id: gexx, type: gap, text: "Katten ___ i soffan och sover.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
+
+      - id: zit-te
+        title: Zitten te …
+        instruction: Vertaal naar het Zweeds.
+        topic: positionsverb
+        items:
+          - { id: xpay, type: translate, prompt: "Ik zit te lezen.", answers: ["Jag sitter och läser."], feedback: [{ contains: "sitter att", tip: "Het Zweeds gebruikt och: sitter och läser." }, { contains: "sitter och läsa", tip: "Beide werkwoorden in dezelfde vorm: sitter och läser." }] }
+          - { id: xqwa, type: translate, prompt: "Ze staat af te wassen.", answers: ["Hon står och diskar."] }
+          - { id: kwgt, type: translate, prompt: "Nils ligt te slapen.", answers: ["Nils ligger och sover."] }
+          - { id: vx9b, type: translate, prompt: "Olle zat tv te kijken.", answers: ["Olle satt och {tittade|såg} på {tv|teve}."], feedback: [{ contains: "satt och tittar", tip: "Beide werkwoorden in dezelfde tijd: satt och tittade." }] }
+          - { id: t5qy, type: translate, prompt: "Wij liepen te praten.", answers: ["Vi gick och pratade."], feedback: [{ contains: "gick och pratar", tip: "Beide werkwoorden in dezelfde tijd: gick och pratade." }] }
+          - { id: pjdj, type: translate, prompt: "Fleur ligt te lezen.", answers: ["Fleur ligger och läser."], feedback: [{ contains: "ligger och läsa", tip: "Beide werkwoorden in dezelfde vorm: ligger och läser." }] }
+          - { id: bn8q, type: translate, prompt: "Bram staat te koken.", answers: ["Bram står och lagar mat."] }
+          - { id: hs9g, type: translate, prompt: "Wij zaten te eten.", answers: ["Vi satt och åt."], feedback: [{ contains: "satt och äter", tip: "Beide werkwoorden in dezelfde tijd: satt och åt." }] }
 
       - id: leggen-en-liggen
         title: Leggen en liggen
@@ -264,6 +264,18 @@ sections:
           - { id: vehf, type: gap, text: "Wilma sätter ___ i soffan.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
           - { id: cgqw, type: gap, text: "Har du rakat ___ idag?", gaps: [{ answers: ["dig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: positionsverb
+        shuffle: true
+        items:
+          - { id: vyvb, type: findError, topic: positionsverb, sentence: "Jag sitter och läsa.", wrong: [3], answers: ["Jag sitter och läser."], tip: "Beide werkwoorden in dezelfde vorm." }
+          - { id: vruw, type: findError, topic: positionsverb, sentence: "Boken står på bordet.", wrong: [1], answers: ["Boken ligger på bordet."], tip: "Het boek ligt plat." }
+          - { id: j546, type: findError, topic: kroppen, sentence: "Jag har ont i huvud.", wrong: [4], answers: ["Jag har ont i huvudet."], tip: "Welke vorm komt er na ont i?" }
+          - { id: w7d8, type: findError, topic: reflexiv, sentence: "Bram lägger honom tidigt.", wrong: [2], answers: ["Bram lägger sig tidigt."], tip: "Bram gaat zelf naar bed." }
+          - { id: x39c, type: findError, topic: placera, sentence: "Sitt dig, är du snäll!", wrong: [0], answers: ["Sätt dig, är du snäll!"], tip: "Gaan zitten is een beweging." }
+
       - id: lezen-rug
         title: "Lezen: Olle heeft rugpijn"
         instruction: Lees de tekst. Is de bewering **rätt** of **fel**? Is hij fout, schrijf dan de juiste zin op.
@@ -311,18 +323,6 @@ sections:
               - { any: ["känner mig", "mår"], label: "Je zegt hoe je je voelt (känner mig / mår)" }
               - { any: ["kan inte", "kommer inte"], label: "Je zegt dat je niet kunt komen" }
             model: "Hej Karin! Tyvärr kan jag inte komma till jobbet idag. Jag har feber och ont i halsen, och jag känner mig väldigt trött. Jag ska vila mig och dricka mycket te. Jag hoppas att jag mår bättre på torsdag. Hälsningar, Sanne"
-
-      - id: zoek-de-fout
-        title: Zoek de fout
-        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
-        topic: positionsverb
-        shuffle: true
-        items:
-          - { id: vyvb, type: findError, topic: positionsverb, sentence: "Jag sitter och läsa.", wrong: [3], answers: ["Jag sitter och läser."], tip: "Beide werkwoorden in dezelfde vorm." }
-          - { id: vruw, type: findError, topic: positionsverb, sentence: "Boken står på bordet.", wrong: [1], answers: ["Boken ligger på bordet."], tip: "Het boek ligt plat." }
-          - { id: j546, type: findError, topic: kroppen, sentence: "Jag har ont i huvud.", wrong: [4], answers: ["Jag har ont i huvudet."], tip: "Welke vorm komt er na ont i?" }
-          - { id: w7d8, type: findError, topic: reflexiv, sentence: "Bram lägger honom tidigt.", wrong: [2], answers: ["Bram lägger sig tidigt."], tip: "Bram gaat zelf naar bed." }
-          - { id: x39c, type: findError, topic: placera, sentence: "Sitt dig, är du snäll!", wrong: [0], answers: ["Sätt dig, är du snäll!"], tip: "Gaan zitten is een beweging." }
 
   - id: luisteren
     title: Luisteren

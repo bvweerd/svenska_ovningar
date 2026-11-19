@@ -213,6 +213,17 @@ sections:
           - { id: tczs, type: order, start: "Klockan elva", tokens: ["hem", "åkte", "Fleur och Bram"], answers: ["Klockan elva åkte Fleur och Bram hem."] }
           - { id: khaw, type: order, start: "Till slut", tokens: ["somnade", "vi"], answers: ["Till slut somnade vi."] }
 
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: tycka-tro-tanka
+        shuffle: true
+        items:
+          - { id: dzgz, type: findError, topic: tycka-tro-tanka, sentence: "Jag tycker att det regnar imorgon.", wrong: [1], answers: ["Jag tror att det regnar imorgon."], tip: "Is het een mening of een vermoeden?" }
+          - { id: g5re, type: findError, topic: det-finns, sentence: "Det finns inte ägg i kylen.", wrong: [2], answers: ["Det finns inga ägg i kylen."], tip: "Hoe zeg je geen + meervoud?" }
+          - { id: qqze, type: findError, topic: tycka-tro-tanka, sentence: "Vi tänker att åka till Paris.", wrong: [2], answers: ["Vi tänker åka till Paris."], tip: "Kijk naar wat er na tänker komt." }
+          - { id: yu3d, type: findError, topic: berattande, sentence: "Först vi åt middag.", wrong: [1, 2], answers: ["Först åt vi middag."], tip: "Het werkwoord moet op plaats 2." }
+
       - id: lezen-kraftskiva
         title: "Lezen: kräftskiva"
         instruction: Lees de tekst. Is de bewering **rätt** of **fel**? Is hij fout, schrijf dan de juiste zin op.
@@ -259,17 +270,6 @@ sections:
               - { any: ["tyckte", "tycker"], label: "Je geeft je mening (tyckte att …)" }
               - { any: ["åt", "var", "kom", "hade", "drack", "dansade", "sjöng"], label: "Je vertelt in de verleden tijd" }
             model: "I lördags var jag på min väns födelsedagsfest. Det kom ungefär tjugo gäster. Först drack vi champagne i trädgården. Sedan åt vi lasagne och sallad. Till efterrätt fanns det en stor chokladtårta. Jag tyckte att tårtan var jättegod. Till slut dansade vi till klockan två."
-
-      - id: zoek-de-fout
-        title: Zoek de fout
-        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
-        topic: tycka-tro-tanka
-        shuffle: true
-        items:
-          - { id: dzgz, type: findError, topic: tycka-tro-tanka, sentence: "Jag tycker att det regnar imorgon.", wrong: [1], answers: ["Jag tror att det regnar imorgon."], tip: "Is het een mening of een vermoeden?" }
-          - { id: g5re, type: findError, topic: det-finns, sentence: "Det finns inte ägg i kylen.", wrong: [2], answers: ["Det finns inga ägg i kylen."], tip: "Hoe zeg je geen + meervoud?" }
-          - { id: qqze, type: findError, topic: tycka-tro-tanka, sentence: "Vi tänker att åka till Paris.", wrong: [2], answers: ["Vi tänker åka till Paris."], tip: "Kijk naar wat er na tänker komt." }
-          - { id: yu3d, type: findError, topic: berattande, sentence: "Först vi åt middag.", wrong: [1, 2], answers: ["Först åt vi middag."], tip: "Het werkwoord moet op plaats 2." }
 
   - id: luisteren
     title: Luisteren

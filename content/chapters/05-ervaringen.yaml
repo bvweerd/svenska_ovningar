@@ -168,21 +168,6 @@ sections:
           - { id: e67t, type: translate, prompt: "Wilma heeft het huiswerk al gemaakt.", answers: ["Wilma har redan gjort {läxorna|läxan}."], feedback: [{ contains: "wilma redan har", tip: "redan staat ná har." }, { contains: "gjorde", tip: "„Heeft al gemaakt”, zonder tijdstip: perfekt (har gjort)." }] }
           - { id: hbhe, type: translate, prompt: "Vorige week hebben we een film gezien.", answers: ["Förra veckan såg vi en film.", "Vi såg en film förra veckan."], feedback: [{ contains: "har sett", tip: "Met förra veckan (een afgesloten tijd) gebruik je in het Zweeds de preteritum." }, { contains: "veckan vi", tip: "Na Förra veckan komt eerst het werkwoord." }] }
 
-      - id: hemma-hem
-        title: Waar of waarheen?
-        instruction: Kies het woord dat past.
-        topic: hem-hemma
-        shuffle: true
-        items:
-          - { id: htgj, type: gap, text: "Jag är ___ nu.", gaps: [{ answers: ["hemma"], options: ["hemma", "hem"], shuffle: false, feedback: [{ match: "hem", tip: "Je bent ergens (plaats): hemma." }] }] }
-          - { id: bg9y, type: gap, text: "Klockan fem går jag ___.", gaps: [{ answers: ["hem"], options: ["hemma", "hem"], shuffle: false, feedback: [{ match: "hemma", tip: "Je gaat ergens heen (richting): hem." }] }] }
-          - { id: d7f9, type: gap, text: "Kom ___!", gaps: [{ answers: ["hit"], options: ["här", "hit"], shuffle: false }] }
-          - { id: jrp8, type: gap, text: "Barnen leker ___.", gaps: [{ answers: ["ute"], options: ["ute", "ut"], shuffle: false }] }
-          - { id: ggh9, type: gap, text: "Gå ___ och lek!", gaps: [{ answers: ["ut"], options: ["ute", "ut"], shuffle: false }] }
-          - { id: h8mm, type: gap, text: "Kiruna? Vi åker ___ i vinter.", gaps: [{ answers: ["dit"], options: ["där", "dit"], shuffle: false }] }
-          - { id: 4k3e, type: gap, text: "Katten är ___ i huset.", gaps: [{ answers: ["inne"], options: ["inne", "in"], shuffle: false }] }
-          - { id: n2rz, type: gap, text: "Nils springer ___ till övervåningen.", gaps: [{ answers: ["upp"], options: ["uppe", "upp"], shuffle: false }] }
-
       - id: var-vart
         title: Var of vart?
         instruction: Kies het juiste vraagwoord.
@@ -198,6 +183,21 @@ sections:
           - { id: 8f3m, type: mc, prompt: "___ ligger Kiruna? – I norra Sverige.", options: ["Vart", "Var"], answer: 1, shuffle: false, tip: "Het antwoord is een plaats: var." }
           - { id: q44x, type: mc, prompt: "___ ska ni åka i helgen? – Till Stockholm.", options: ["Vart", "Var"], answer: 0, shuffle: false, tip: "Het antwoord is een richting: vart." }
 
+      - id: hemma-hem
+        title: Waar of waarheen?
+        instruction: Kies het woord dat past.
+        topic: hem-hemma
+        shuffle: true
+        items:
+          - { id: htgj, type: gap, text: "Jag är ___ nu.", gaps: [{ answers: ["hemma"], options: ["hemma", "hem"], shuffle: false, feedback: [{ match: "hem", tip: "Je bent ergens (plaats): hemma." }] }] }
+          - { id: bg9y, type: gap, text: "Klockan fem går jag ___.", gaps: [{ answers: ["hem"], options: ["hemma", "hem"], shuffle: false, feedback: [{ match: "hemma", tip: "Je gaat ergens heen (richting): hem." }] }] }
+          - { id: d7f9, type: gap, text: "Kom ___!", gaps: [{ answers: ["hit"], options: ["här", "hit"], shuffle: false }] }
+          - { id: jrp8, type: gap, text: "Barnen leker ___.", gaps: [{ answers: ["ute"], options: ["ute", "ut"], shuffle: false }] }
+          - { id: ggh9, type: gap, text: "Gå ___ och lek!", gaps: [{ answers: ["ut"], options: ["ute", "ut"], shuffle: false }] }
+          - { id: h8mm, type: gap, text: "Kiruna? Vi åker ___ i vinter.", gaps: [{ answers: ["dit"], options: ["där", "dit"], shuffle: false }] }
+          - { id: 4k3e, type: gap, text: "Katten är ___ i huset.", gaps: [{ answers: ["inne"], options: ["inne", "in"], shuffle: false }] }
+          - { id: n2rz, type: gap, text: "Nils springer ___ till övervåningen.", gaps: [{ answers: ["upp"], options: ["uppe", "upp"], shuffle: false }] }
+
       - id: an-subjekt
         title: Vergelijken met än
         instruction: Vul in. Bij een voornaamwoord zijn vaak twee vormen goed.
@@ -212,6 +212,18 @@ sections:
           - { id: a73p, type: gap, text: "Bram är äldre än ___. (ik)", gaps: [{ answers: ["jag", "mig"], feedback: [{ match: ["min", "mitt"], tip: "min is bezittelijk (mijn). Na än: jag of mig." }] }] }
           - { id: yt9c, type: gap, text: "Olle är lika lång ___ Bram.", gaps: [{ answers: ["som"], options: ["som", "än"], shuffle: false, feedback: [{ match: "än", tip: "Even … als is lika … som." }] }] }
           - { id: y366, type: gap, text: "Ingrid är äldre än ___. (zij, enkelvoud)", gaps: [{ answers: ["hon", "henne"], feedback: [{ match: "hennes", tip: "hennes is bezittelijk (haar). Na än: hon of henne." }] }] }
+
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: perfekt-preteritum
+        shuffle: true
+        items:
+          - { id: grmu, type: findError, topic: perfekt-preteritum, sentence: "Igår har jag sett en älg.", wrong: [1, 3], answers: ["Igår såg jag en älg."], tip: "Kijk naar de tijd: er staat een bepaald moment." }
+          - { id: j87m, type: findError, topic: supinum, sentence: "Har du någonsin ätat surströmming?", wrong: [3], answers: ["Har du någonsin ätit surströmming?"], tip: "Kijk naar de supinum." }
+          - { id: tfc6, type: findError, topic: hem-hemma, sentence: "Jag är hem nu.", wrong: [2], answers: ["Jag är hemma nu."], tip: "Plaats of richting?" }
+          - { id: rxum, type: findError, topic: hem-hemma, sentence: "Var ska du? Till affären.", wrong: [0], answers: ["Vart ska du? Till affären."], tip: "Plaats of richting?" }
+          - { id: jfd7, type: findError, topic: perfekt-preteritum, sentence: "Vi har bott här sedan tre år.", wrong: [4], answers: ["Vi har bott här i tre år."], tip: "Kijk naar de tijdsbepaling." }
 
       - id: lezen-mail
         title: "Lezen: een mail van Fleur"
@@ -261,18 +273,6 @@ sections:
               - { any: ["aldrig", "inte än", "någon gång"], label: "Je zegt waar je nog nooit bent geweest (aldrig …)" }
               - { any: ["förra", "sedan", "i somras", "när jag"], label: "Je noemt een moment in het verleden (för … sedan, förra året …)" }
             model: "Jag har varit i många länder i Europa, till exempel Frankrike, Italien och Norge. Jag har aldrig varit i Asien. För två år sedan reste jag till Lofoten med min syster. Vi hyrde en liten stuga vid havet. Vi vandrade varje dag och åt mycket fisk. Det var en fantastisk resa."
-
-      - id: zoek-de-fout
-        title: Zoek de fout
-        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
-        topic: perfekt-preteritum
-        shuffle: true
-        items:
-          - { id: grmu, type: findError, topic: perfekt-preteritum, sentence: "Igår har jag sett en älg.", wrong: [1, 3], answers: ["Igår såg jag en älg."], tip: "Kijk naar de tijd: er staat een bepaald moment." }
-          - { id: j87m, type: findError, topic: supinum, sentence: "Har du någonsin ätat surströmming?", wrong: [3], answers: ["Har du någonsin ätit surströmming?"], tip: "Kijk naar de supinum." }
-          - { id: tfc6, type: findError, topic: hem-hemma, sentence: "Jag är hem nu.", wrong: [2], answers: ["Jag är hemma nu."], tip: "Plaats of richting?" }
-          - { id: rxum, type: findError, topic: hem-hemma, sentence: "Var ska du? Till affären.", wrong: [0], answers: ["Vart ska du? Till affären."], tip: "Plaats of richting?" }
-          - { id: jfd7, type: findError, topic: perfekt-preteritum, sentence: "Vi har bott här sedan tre år.", wrong: [4], answers: ["Vi har bott här i tre år."], tip: "Kijk naar de tijdsbepaling." }
 
   - id: luisteren
     title: Luisteren

@@ -88,6 +88,21 @@ sections:
   - id: oefeningen
     title: Oefeningen
     exercises:
+      - id: seizoenen
+        title: Welke zomer?
+        instruction: Kies de juiste uitdrukking.
+        topic: tidsprep
+        shuffle: true
+        items:
+          - { id: umb4, type: mc, prompt: "**vorige** zomer", options: ["i somras", "i sommar", "på sommaren"], answer: 0, shuffle: false, tip: "Afgelopen seizoen: i + -as/-ras (i somras, i vintras)." }
+          - { id: u9rb, type: mc, prompt: "**deze** zomer (die nog komt)", options: ["i somras", "i sommar", "på sommaren"], answer: 1, shuffle: false, tip: "Dit seizoen: i + seizoen (i sommar)." }
+          - { id: fshv, type: mc, prompt: "in de zomer (**altijd**, in het algemeen)", options: ["i somras", "i sommar", "på sommaren"], answer: 2, shuffle: false, tip: "In het algemeen: på + bepaalde vorm (på sommaren)." }
+          - { id: 3zt6, type: mc, prompt: "**vorige** winter", options: ["i vintras", "i vinter", "på vintern"], answer: 0, shuffle: false, tip: "Afgelopen seizoen: i vintras." }
+          - { id: q5tu, type: mc, prompt: "**deze** herfst", options: ["i höstas", "i höst", "på hösten"], answer: 1, shuffle: false, tip: "Dit seizoen: i höst." }
+          - { id: 4xx6, type: mc, prompt: "**vorige** herfst", options: ["i höstas", "i höst", "på hösten"], answer: 0, shuffle: false, tip: "Afgelopen seizoen: i höstas." }
+          - { id: smay, type: mc, prompt: "in de winter (**altijd**, in het algemeen)", options: ["i vintras", "i vinter", "på vintern"], answer: 2, shuffle: false, tip: "In het algemeen: på + bepaalde vorm (på vintern)." }
+          - { id: g7wr, type: mc, prompt: "**deze** lente", options: ["i våras", "i vår", "på våren"], answer: 1, shuffle: false, tip: "Dit seizoen: i vår." }
+
       - id: tidsprep-kiezen
         title: Om, i, på, för of under?
         instruction: Kies het juiste voorzetsel.
@@ -116,21 +131,6 @@ sections:
           - { id: ajdd, type: translate, prompt: "Over twee weken begint de cursus.", answers: ["Om två veckor börjar kursen.", "Kursen börjar om två veckor."], feedback: [{ contains: "i två veckor", tip: "Over een tijd (toekomst) = om." }, { contains: "veckor kursen börjar", tip: "Na de tijdsbepaling vooraan komt eerst het werkwoord." }] }
           - { id: wur3, type: translate, prompt: "Een week geleden was ik in Uppsala.", answers: ["För en vecka {sedan|sen} var jag i Uppsala.", "Jag var i Uppsala för en vecka {sedan|sen}."], feedback: [{ contains: ["sedan jag var", "sen jag var"], tip: "Na de tijdsbepaling vooraan komt eerst het werkwoord." }] }
           - { id: bnr7, type: translate, prompt: "We hebben twee uur gewacht.", answers: ["Vi har väntat [i ]två timmar.", "Vi väntade [i ]två timmar."], feedback: [{ contains: "på två timmar", tip: "Een duur zonder ontkenning: i två timmar (of zonder voorzetsel)." }] }
-
-      - id: seizoenen
-        title: Welke zomer?
-        instruction: Kies de juiste uitdrukking.
-        topic: tidsprep
-        shuffle: true
-        items:
-          - { id: umb4, type: mc, prompt: "**vorige** zomer", options: ["i somras", "i sommar", "på sommaren"], answer: 0, shuffle: false, tip: "Afgelopen seizoen: i + -as/-ras (i somras, i vintras)." }
-          - { id: u9rb, type: mc, prompt: "**deze** zomer (die nog komt)", options: ["i somras", "i sommar", "på sommaren"], answer: 1, shuffle: false, tip: "Dit seizoen: i + seizoen (i sommar)." }
-          - { id: fshv, type: mc, prompt: "in de zomer (**altijd**, in het algemeen)", options: ["i somras", "i sommar", "på sommaren"], answer: 2, shuffle: false, tip: "In het algemeen: på + bepaalde vorm (på sommaren)." }
-          - { id: 3zt6, type: mc, prompt: "**vorige** winter", options: ["i vintras", "i vinter", "på vintern"], answer: 0, shuffle: false, tip: "Afgelopen seizoen: i vintras." }
-          - { id: q5tu, type: mc, prompt: "**deze** herfst", options: ["i höstas", "i höst", "på hösten"], answer: 1, shuffle: false, tip: "Dit seizoen: i höst." }
-          - { id: 4xx6, type: mc, prompt: "**vorige** herfst", options: ["i höstas", "i höst", "på hösten"], answer: 0, shuffle: false, tip: "Afgelopen seizoen: i höstas." }
-          - { id: smay, type: mc, prompt: "in de winter (**altijd**, in het algemeen)", options: ["i vintras", "i vinter", "på vintern"], answer: 2, shuffle: false, tip: "In het algemeen: på + bepaalde vorm (på vintern)." }
-          - { id: g7wr, type: mc, prompt: "**deze** lente", options: ["i våras", "i vår", "på våren"], answer: 1, shuffle: false, tip: "Dit seizoen: i vår." }
 
       - id: transport-kiezen
         title: Åka, gå, köra of ta?
@@ -225,21 +225,16 @@ sections:
           - { id: v3eg, type: gap, text: "Bram fyller år den ___ oktober. (12)", gaps: [{ answers: ["tolfte"] }] }
           - { id: df3d, type: gap, text: "Skolan börjar den ___ augusti. (20)", gaps: [{ answers: ["tjugonde"] }] }
 
-      - id: dialoog-station
-        title: Een kaartje kopen
-        instruction: Zet het gesprek aan het loket in de goede volgorde.
-        topic: pengar
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: tidsprep
+        shuffle: true
         items:
-          - id: np64
-            type: dialogue
-            lines:
-              - "Bram: Hej! En biljett till Stockholm, tack."
-              - "Kassören: Enkel eller tur och retur?"
-              - "Bram: Tur och retur, tack. Jag åker tillbaka på söndag."
-              - "Kassören: Det blir 420 kronor."
-              - "Bram: Kan jag betala med kort?"
-              - "Kassören: Javisst. Tåget går från spår 3 om tio minuter."
-              - "Bram: Tack så mycket!"
+          - { id: fsqv, type: findError, topic: tidsprep, sentence: "Konserten börjar i en halvtimme.", wrong: [2], answers: ["Konserten börjar om en halvtimme."], tip: "Het gaat over de toekomst: over een halfuur." }
+          - { id: qjm5, type: findError, topic: tidsprep, sentence: "Jag har inte sett honom i länge.", wrong: [5], answers: ["Jag har inte sett honom på länge."], tip: "Kijk naar het voorzetsel na een ontkenning." }
+          - { id: ekfz, type: findError, topic: transport, sentence: "Bram går buss till jobbet.", wrong: [1], answers: ["Bram åker buss till jobbet."], tip: "Lopen of met een voertuig?" }
+          - { id: kbaw, type: findError, topic: ordningstal, sentence: "Vi åker hem den 5 Juli.", wrong: [5], answers: ["Vi åker hem den 5 juli."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
 
       - id: lezen-gotland
         title: "Lezen: naar Gotland"
@@ -258,6 +253,22 @@ sections:
           - { id: rqwq, type: truefalse, statement: "De har varit på Gotland förut.", answer: false, tip: "Lees de tweede alinea.", correction: { answers: ["De har aldrig varit på Gotland[ förut].", "De har inte varit på Gotland[ förut]."] } }
           - { id: bg52, type: truefalse, statement: "Fleur köpte biljetterna för en vecka sedan.", answer: false, tip: "Wanneer kocht ze de kaartjes?", correction: { answers: ["{Fleur|Hon} köpte {biljetterna|dem} för en månad {sedan|sen}."] } }
 
+      - id: dialoog-station
+        title: Een kaartje kopen
+        instruction: Zet het gesprek aan het loket in de goede volgorde.
+        topic: pengar
+        items:
+          - id: np64
+            type: dialogue
+            lines:
+              - "Bram: Hej! En biljett till Stockholm, tack."
+              - "Kassören: Enkel eller tur och retur?"
+              - "Bram: Tur och retur, tack. Jag åker tillbaka på söndag."
+              - "Kassören: Det blir 420 kronor."
+              - "Bram: Kan jag betala med kort?"
+              - "Kassören: Javisst. Tåget går från spår 3 om tio minuter."
+              - "Bram: Tack så mycket!"
+
       - id: schrijven-reis
         title: "Schrijven: een reisplan"
         instruction: Schrijf over een reis die je binnenkort gaat maken (of zou willen maken).
@@ -272,17 +283,6 @@ sections:
               - { any: ["åker", "tar", "flyger", "kör", "cyklar"], label: "Je vertelt hoe je reist (åker, tar, flyger …)" }
               - { any: ["om", "i sommar", "i vinter", "i höst", "i vår", "den"], label: "Je zegt wanneer (om …, i sommar, den …)" }
             model: "I sommar ska jag åka till Norge med min familj. Vi tar tåget från Stockholm till Oslo den femte juli. Resan tar ungefär sex timmar. Sedan hyr vi en bil och kör till fjällen. Vi ska bo i en stuga i en vecka. Jag ser verkligen fram emot resan!"
-
-      - id: zoek-de-fout
-        title: Zoek de fout
-        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
-        topic: tidsprep
-        shuffle: true
-        items:
-          - { id: fsqv, type: findError, topic: tidsprep, sentence: "Konserten börjar i en halvtimme.", wrong: [2], answers: ["Konserten börjar om en halvtimme."], tip: "Het gaat over de toekomst: over een halfuur." }
-          - { id: qjm5, type: findError, topic: tidsprep, sentence: "Jag har inte sett honom i länge.", wrong: [5], answers: ["Jag har inte sett honom på länge."], tip: "Kijk naar het voorzetsel na een ontkenning." }
-          - { id: ekfz, type: findError, topic: transport, sentence: "Bram går buss till jobbet.", wrong: [1], answers: ["Bram åker buss till jobbet."], tip: "Lopen of met een voertuig?" }
-          - { id: kbaw, type: findError, topic: ordningstal, sentence: "Vi åker hem den 5 Juli.", wrong: [5], answers: ["Vi åker hem den 5 juli."], tip: "Kijk naar de hoofdletters.", caseSensitive: true }
 
   - id: luisteren
     title: Luisteren
