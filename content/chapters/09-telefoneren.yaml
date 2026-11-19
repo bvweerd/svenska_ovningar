@@ -160,6 +160,10 @@ sections:
           - { id: rcc6, type: translate, prompt: "Bram frågar: ”När börjar filmen?”", answers: ["Bram frågar när filmen börjar."], feedback: [{ match: "Bram frågar när börjar filmen", tip: "In de bijzin: eerst het onderwerp (filmen), dan het werkwoord (börjar)." }] }
           - { id: vhmm, type: translate, prompt: "Wilma säger: ”Jag har ont i magen.”", answers: ["Wilma säger att hon har ont i magen."], feedback: [{ match: "Wilma säger att jag har ont i magen", tip: "Wilma praat over zichzelf: in de indirecte rede wordt dat hon." }] }
           - { id: 3zq7, type: translate, prompt: "Olle frågar oss: ”Har ni tid imorgon?”", answers: ["Olle frågar [oss ]om vi har tid {imorgon|i morgon}."], feedback: [{ contains: "om har", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om vi har." }, { contains: "om ni har", tip: "Olle vraagt het aan ons: ni wordt vi." }] }
+          - { id: gpzz, type: translate, prompt: "Ingrid frågar Fleur: ”Kan du komma på fredag?”", answers: ["Ingrid frågar [Fleur ]om {hon|Fleur} kan komma på fredag."], feedback: [{ contains: "om kan", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om hon kan." }, { contains: "att hon kan", tip: "Een ja/nee-vraag wordt een bijzin met om." }, { contains: "om du kan", tip: "Ingrid praat tegen Fleur: in de indirecte rede wordt du dan hon." }] }
+          - { id: gqvj, type: translate, prompt: "Bram säger: ”Jag har ringt kundtjänst tre gånger.”", answers: ["Bram säger att han har ringt [till ]{kundtjänst|kundtjänsten} tre gånger."], feedback: [{ contains: "att jag har", tip: "Bram praat over zichzelf: in de indirecte rede wordt dat han." }] }
+          - { id: g7fs, type: translate, prompt: "Wilma frågar: ”Varför svarar ingen i telefon?”", answers: ["Wilma frågar varför ingen svarar i telefon."], feedback: [{ contains: "varför svarar ingen", tip: "In de bijzin: eerst het onderwerp (ingen), dan het werkwoord (svarar)." }] }
+          - { id: v7ub, type: translate, prompt: "Fleur frågar: ”Vad hände på jobbet idag?”", answers: ["Fleur frågar vad som hände på jobbet {idag|i dag}."], feedback: [{ contains: "frågar vad hände", tip: "vad is hier het onderwerp: in de bijzin komt er som bij (vad som hände)." }] }
 
       - id: indirect-zinsbouw
         title: Vraag het beleefd
@@ -191,6 +195,22 @@ sections:
               - ["Jag ringer tillbaka senare.", "Ik bel later terug."]
               - ["Du har ringt fel nummer.", "Je hebt het verkeerde nummer gebeld."]
 
+      - id: gemengd-vertalen
+        title: "Vertalen: bellen en berichten"
+        instruction: Vertaal naar het Zweeds.
+        topic: telefon
+        items:
+          - { id: c4yc, type: translate, topic: tempus, prompt: "Ik had mijn mobiel thuis vergeten, dus ik kon niet opnemen.", answers: ["Jag hade glömt {mobilen|min mobil|telefonen|min telefon} hemma[,] så jag kunde inte svara.", "Jag hade glömt {mobilen|min mobil|telefonen|min telefon} hemma[,] och därför kunde jag inte svara."], feedback: [{ contains: "hade glömde", tip: "Na hade komt de supinum: hade glömt." }, { contains: "så kunde jag", tip: "Na så (dus) blijft de gewone volgorde: så jag kunde inte svara." }] }
+          - { id: 53q7, type: translate, prompt: "Ze is er nu niet. Kun je later terugbellen?", answers: ["Hon är inte {här|hemma} [just ]nu. Kan du ringa [mig ]tillbaka senare?"], feedback: [{ contains: "du kan ringa", tip: "In een ja/nee-vraag staat het werkwoord vooraan: Kan du …?" }] }
+          - { id: pv3m, type: translate, prompt: "Mijn batterij is bijna leeg, dus ik bel je later terug.", answers: ["{Batteriet|Mitt batteri} är nästan slut[,] så jag ringer {dig tillbaka|tillbaka|dig} senare.", "{Batteriet|Mitt batteri} är nästan slut[,] och därför ringer jag {dig tillbaka|tillbaka|dig} senare."], feedback: [{ contains: "min batteri", tip: "batteri is een ett-woord: mitt batteri (of batteriet)." }] }
+          - { id: vd2h, type: translate, topic: indirekt-tal, prompt: "Ingrid vraagt of Fleur vrijdag mee wil naar het concert.", answers: ["Ingrid frågar om Fleur vill följa med [henne ]{på|till} konserten på fredag."], feedback: [{ contains: "om vill", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om Fleur vill." }, { contains: "att Fleur vill", tip: "Een ja/nee-vraag wordt een bijzin met om." }] }
+          - { id: qbdv, type: translate, topic: indirekt-tal, prompt: "Weet je wanneer de winkel zaterdag dichtgaat?", answers: ["Vet du när {affären|butiken} stänger på lördag?"], feedback: [{ contains: "när stänger", tip: "In de bijzin: eerst het onderwerp (affären), dan het werkwoord (stänger)." }] }
+          - { id: 32gz, type: translate, topic: tempus, prompt: "Toen ik thuiskwam, had Bram al gebeld.", answers: ["När jag kom hem hade Bram redan ringt.", "Bram hade redan ringt när jag kom hem."], feedback: [{ contains: "hem Bram hade", tip: "De bijzin staat vooraan: dan komt direct het werkwoord (hade Bram)." }, { contains: ["hade ringde", "hade ringa"], tip: "Na hade komt de supinum: hade ringt." }] }
+          - { id: xftt, type: translate, topic: tempus, prompt: "Ik heb haar drie keer gebeld, maar ze nam niet op.", answers: ["Jag {har ringt|ringde} [till ]henne tre gånger[,] men hon svarade inte."], feedback: [{ contains: "hon inte svarade", tip: "Na men volgt een hoofdzin: hon svarade inte." }] }
+          - { id: sbed, type: translate, topic: indirekt-tal, prompt: "Wilma vroeg wie er gisteren had gebeld.", answers: ["Wilma frågade vem som {hade ringt|ringde} {igår|i går}."], feedback: [{ contains: ["vem hade ringt", "vem ringde"], tip: "vem is hier het onderwerp: in de bijzin komt er som bij (vem som hade ringt)." }] }
+          - { id: wq9w, type: translate, prompt: "Kun je het nummer herhalen? Ik hoor je heel slecht.", answers: ["Kan du upprepa numret[, tack]? Jag hör dig {väldigt|mycket} dåligt.", "Kan du säga numret igen[, tack]? Jag hör dig {väldigt|mycket} dåligt."], feedback: [{ contains: ["nummeret", "nummret"], tip: "ett nummer – numret (de e valt weg)." }] }
+          - { id: vk46, type: translate, topic: indirekt-tal, prompt: "Fleur zegt dat ze haar wachtwoord vergeten is.", answers: ["Fleur säger att hon {har glömt|glömt|glömde} {lösenordet|sitt lösenord}."], feedback: [{ contains: "hennes lösenord", tip: "Bedoel je haar eigen wachtwoord? Zeg dan lösenordet (in hoofdstuk 10 leer je ook sitt lösenord)." }] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
@@ -201,6 +221,10 @@ sections:
           - { id: c59j, type: findError, topic: indirekt-tal, sentence: "Hon frågar att du vill ha kaffe.", wrong: [2], answers: ["Hon frågar om du vill ha kaffe."], tip: "Is het een vraag of een bewering?" }
           - { id: egbq, type: findError, topic: tempus, sentence: "När vi kom hade tåget redan gick.", wrong: [6], answers: ["När vi kom hade tåget redan gått."], tip: "Na hade komt de supinum." }
           - { id: k4n4, type: findError, topic: indirekt-tal, sentence: "Kan du säga var ligger stationen?", wrong: [4, 5], answers: ["Kan du säga var stationen ligger?"], tip: "Kijk naar de woordvolgorde in de bijzin." }
+          - { id: q9xm, type: findError, topic: indirekt-tal, sentence: "Jag vet inte om kommer hon ikväll.", wrong: [4, 5], answers: ["Jag vet inte om hon kommer {ikväll|i kväll}."], tip: "Kijk naar de woordvolgorde in de bijzin." }
+          - { id: cqt4, type: findError, topic: tempus, sentence: "Jag hade redan skrev ett mejl till chefen.", wrong: [3], answers: ["Jag hade redan skrivit ett {mejl|mail} till chefen."], tip: "Welke vorm komt er na hade?" }
+          - { id: y6vx, type: findError, topic: indirekt-tal, sentence: "Bram undrar att Fleur kan komma imorgon.", wrong: [2], answers: ["Bram undrar om Fleur kan komma {imorgon|i morgon}."], tip: "Is het een vraag of een bewering?" }
+          - { id: zv6e, type: findError, topic: indirekt-tal, sentence: "Bram undrar när slutar konserten.", wrong: [3, 4], answers: ["Bram undrar när konserten slutar."], tip: "Kijk naar de woordvolgorde in de bijzin." }
 
       - id: lezen-gemist
         title: "Lezen: een gemiste oproep"
@@ -210,7 +234,11 @@ sections:
         text: |
           I tisdags ringde Ingrid till Fleur, men Fleur svarade inte. Hon hade glömt mobilen hemma. Ingrid lämnade ett meddelande. Hon sa att hon hade två biljetter till en konsert på fredagen och frågade om Fleur ville följa med.
 
-          När Fleur kom hem lyssnade hon på meddelandet och ringde tillbaka direkt. Hon sa att hon gärna ville följa med. Konserten var fantastisk!
+          När Fleur kom hem lyssnade hon på meddelandet och ringde tillbaka direkt. Hon sa att hon gärna ville följa med. Ingrid frågade om de kunde träffas utanför konserthuset klockan sju.
+
+          På fredagen tog Fleur bussen till centrum, men bussen var försenad. Hon skickade ett sms till Ingrid och skrev att hon var på väg. När Fleur kom fram hade konserten redan börjat. Ingrid väntade utanför, och de gick in tillsammans.
+
+          Konserten var fantastisk! Efteråt drack de en kopp kaffe på ett café och pratade om musiken. Fleur var hemma klockan elva.
         items:
           - { id: 3u8c, type: truefalse, statement: "Ingrid ringde i tisdags.", answer: true }
           - { id: sbmz, type: truefalse, statement: "Fleur svarade i telefon.", answer: false, tip: "Waarom niet?", correction: { answers: ["{Fleur|Hon} svarade inte[ i telefon].", "{Fleur|Hon} hade glömt mobilen hemma."] } }
@@ -218,6 +246,10 @@ sections:
           - { id: 4upp, type: truefalse, statement: "Ingrid hade tre biljetter.", answer: false, tip: "Hoeveel kaartjes had ze?", correction: { answers: ["{Ingrid|Hon} hade två biljetter."] } }
           - { id: 7qh7, type: truefalse, statement: "Konserten var på lördagen.", answer: false, tip: "Op welke dag was het concert?", correction: { answers: ["Konserten var {på fredagen|i fredags}."] } }
           - { id: peca, type: truefalse, statement: "Fleur ville inte följa med.", answer: false, tip: "Wat zei Fleur toen ze terugbelde?", correction: { answers: ["{Fleur|Hon} ville [gärna ]följa med."] } }
+          - { id: yyg8, type: truefalse, statement: "Fleur tog bilen till centrum.", answer: false, tip: "Hoe ging Fleur naar het centrum?", correction: { answers: ["{Fleur|Hon} tog bussen[ till centrum].", "På fredagen tog {Fleur|hon} bussen[ till centrum]."] } }
+          - { id: 5kjn, type: truefalse, statement: "När Fleur kom fram hade konserten redan börjat.", answer: true }
+          - { id: hdex, type: truefalse, statement: "Efter konserten drack de kaffe.", answer: true }
+          - { id: pf5c, type: truefalse, statement: "Fleur var hemma klockan tio.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["{Fleur|Hon} var hemma [klockan ]elva.", "Klockan elva var {Fleur|hon} hemma."] } }
 
       - id: dialoog-afspraak
         title: Een afspraak maken

@@ -323,6 +323,22 @@ sections:
               - ["pepparkakor", "gemberkoekjes"]
               - ["lussekatter", "saffraanbroodjes"]
 
+      - id: gemengd-vertalen
+        title: "Vertalen: kerst en vergelijken"
+        instruction: Vertaal naar het Zweeds.
+        topic: adjektiv-obestamd
+        items:
+          - { id: tw7z, type: translate, prompt: "In de woonkamer staat een hoge kerstboom met kleine lampjes.", answers: ["I vardagsrummet står en hög {gran|julgran} med små {ljus|lampor}.", "Det står en hög {gran|julgran} med små {ljus|lampor} i vardagsrummet.", "En hög {gran|julgran} med små {ljus|lampor} står i vardagsrummet."], feedback: [{ contains: ["högt gran", "höga gran", "högt julgran", "höga julgran"], tip: "gran is een en-woord: en hög gran." }, { contains: ["liten ljus", "litet ljus", "lilla ljus"], tip: "ljus is hier meervoud: små ljus." }, { contains: "vardagsrummet en hög", tip: "Begin je met de plaats, dan komt het werkwoord direct daarna: I vardagsrummet står …" }] }
+          - { id: 2cfq, type: translate, topic: adjektiv-bestamd, prompt: "Hun oude huis is groter dan ons nieuwe appartement.", answers: ["Deras gamla hus är större än vår nya lägenhet."], feedback: [{ contains: ["gammalt hus", "gammal hus"], tip: "Na deras krijgt het bijvoeglijk naamwoord -a: deras gamla hus." }, { contains: ["vår ny lägenhet", "vår nya lägenheten"], tip: "Na vår: adjectief op -a en het zelfstandig naamwoord onbepaald: vår nya lägenhet." }, { contains: ["mer stor", "storare"], tip: "stor is onregelmatig: större." }] }
+          - { id: bma3, type: translate, prompt: "Op kerstavond eten we ham, haring en kleine gehaktballetjes.", answers: ["På julafton äter vi skinka, sill och små köttbullar.", "Vi äter skinka, sill och små köttbullar på julafton."], feedback: [{ contains: "julafton vi äter", tip: "Begin je met de tijdsbepaling, dan komt het werkwoord direct daarna: På julafton äter vi …" }, { contains: ["liten köttbullar", "lilla köttbullar"], tip: "Meervoud van liten: små." }] }
+          - { id: hbdf, type: translate, topic: adjektiv-bestamd, prompt: "De kleine kinderen zitten bij het raam en wachten op de kerstman.", answers: ["De små barnen sitter vid fönstret och väntar på {tomten|jultomten}."], feedback: [{ contains: "lilla barnen", tip: "Meervoud: små, niet lilla." }, { contains: "små barn sitter", tip: "Dubbel bepaald: de små barnen." }] }
+          - { id: be4z, type: translate, topic: komparation, prompt: "Vind je de rode trui mooier dan de blauwe?", answers: ["Tycker du [att ]den röda tröjan är {finare|snyggare|vackrare} än den {blå|blåa}[ tröjan]?"], feedback: [{ contains: ["den röd tröjan", "röda tröja är"], tip: "Bepaald: den röda tröjan." }, { contains: ["mer fin", "mer snygg", "mer vacker"], tip: "Gewone bijvoeglijke naamwoorden krijgen -are: finare, snyggare." }] }
+          - { id: sajd, type: translate, topic: komparation, prompt: "Nils is de jongste, maar Olle is de langste van de familie.", answers: ["Nils är {yngst|den yngsta|den yngste}[,] men Olle är {längst|den längsta|den längste} i familjen."], feedback: [{ contains: ["ungast", "mest ung"], tip: "ung is onregelmatig: yngre – yngst." }, { contains: ["långast", "mest lång"], tip: "lång is onregelmatig: längre – längst." }] }
+          - { id: bnzt, type: translate, prompt: "Fleur kreeg warme wanten, en Bram kreeg een nieuw spel.", answers: ["Fleur fick varma vantar[,] och Bram fick ett nytt spel."], feedback: [{ contains: ["ett ny spel", "ett nya spel"], tip: "spel is een ett-woord: ett nytt spel." }, { contains: ["varm vantar", "varmt vantar"], tip: "vantar is meervoud: varma." }] }
+          - { id: 8ysx, type: translate, topic: komparation, prompt: "Ik vind Lucia de gezelligste dag van december.", answers: ["Jag tycker [att ]{Lucia|luciadagen} är den mysigaste dagen i december."], feedback: [{ contains: "den mysigast dagen", tip: "Bepaald: den + overtreffende trap op -e: den mysigaste dagen." }, { contains: "mysigaste dag i", tip: "Dubbel bepaald: den mysigaste dagen." }, { contains: "mest mysig", tip: "mysig is een gewoon bijvoeglijk naamwoord: mysigast, bepaald mysigaste." }] }
+          - { id: yzj8, type: translate, prompt: "Mijn broertje wil een rode fiets voor kerst.", answers: ["{Min lillebror|Min lilla bror|Min lille bror} vill ha en röd cykel {till jul|i julklapp}."], feedback: [{ contains: "en röda", tip: "Onbepaald enkelvoud (en cykel): röd, zonder -a." }, { contains: "min liten bror", tip: "Na min krijgt liten de vorm lilla: min lilla bror (of lillebror)." }] }
+          - { id: 5gjh, type: translate, topic: komparation, prompt: "Glühwein is lekkerder dan koffie als het buiten koud is.", answers: ["Glögg är {godare|bättre} än kaffe {när|om} det är kallt {ute|utomhus}."], feedback: [{ contains: ["mer god", "gottare"], tip: "god – godare – godast." }, { contains: "det är kall ", tip: "Bij det: kallt (ett-vorm)." }] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
@@ -344,6 +360,8 @@ sections:
           Den trettonde december var det luciatåg i Nils skola. Wilma var Lucia. Hon hade ett långt vitt linne och en krona med ljus på huvudet. Nils var stjärngosse. Alla föräldrarna satt i den stora aulan och lyssnade. Efteråt drack de glögg och åt lussekatter och pepparkakor.
 
           På julafton kom Fleur och Bram till familjen Ek. Klockan tre tittade alla på Kalle Anka på tv, som många svenskar gör varje år. Sedan åt de julbord med skinka, sill och köttbullar. På kvällen kom tomten med julklappar. Nils fick den största julklappen – en ny cykel!
+
+          På juldagen sov alla länge. Sedan ville Nils prova sin nya cykel, fastän det låg mycket snö ute. Fleur och Bram åt lunch med familjen och åkte sedan hem till sin nya lägenhet. Fleur tyckte att julen i Sverige var mysigare än julen i Nederländerna. Alla ljusen i de mörka fönstren var så vackra!
         items:
           - { id: czre, type: truefalse, statement: "Luciatåget var den tjugofjärde december.", answer: false, tip: "Wanneer is Lucia?", correction: { answers: ["Luciatåget var den trettonde december."] } }
           - { id: 635e, type: truefalse, statement: "Wilma var Lucia.", answer: true }
@@ -351,6 +369,10 @@ sections:
           - { id: hyxw, type: truefalse, statement: "Efter luciatåget drack de glögg.", answer: true }
           - { id: d3nw, type: truefalse, statement: "På julafton tittade de på Kalle Anka klockan fem.", answer: false, tip: "Hoe laat?", correction: { answers: ["På julafton tittade {de|alla} på Kalle Anka klockan tre.", "{De|Alla} tittade på Kalle Anka klockan tre[ på julafton].", "Klockan tre tittade {de|alla} på Kalle Anka[ på julafton]."] } }
           - { id: 7va6, type: truefalse, statement: "Nils fick en ny cykel.", answer: true }
+          - { id: jtf4, type: truefalse, statement: "På juldagen gick alla upp tidigt.", answer: false, tip: "Lees het begin van de laatste alinea.", correction: { answers: ["På juldagen sov alla länge.", "Alla sov länge[ på juldagen]."] } }
+          - { id: bkja, type: truefalse, statement: "Nils ville prova sin nya cykel.", answer: true }
+          - { id: 4vpd, type: truefalse, statement: "Fleur och Bram bor i ett stort hus.", answer: false, tip: "Waar wonen Fleur en Bram?", correction: { answers: ["{Fleur och Bram|De} bor i en [ny ]lägenhet.", "{Fleur och Bram|De} har en [ny ]lägenhet."] } }
+          - { id: u93x, type: truefalse, statement: "Fleur tyckte att julen i Nederländerna var mysigare.", answer: false, tip: "Welke kerst vond Fleur gezelliger?", correction: { answers: ["{Fleur|Hon} tyckte att julen i Sverige var mysigare[ än julen i Nederländerna].", "Julen i Sverige var mysigare[ än julen i Nederländerna]."] } }
 
       - id: dialoog-cadeau
         title: Een kerstcadeau
