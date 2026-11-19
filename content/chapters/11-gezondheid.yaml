@@ -308,26 +308,64 @@ sections:
           - { id: zwaw, type: mc, topic: det-finns, prompt: "Welke zin is goed?", options: ["Finns det ett apotek här i närheten?", "Är det ett apotek här i närheten?", "Har det ett apotek här i närheten?"], answer: 0, tip: "Is er …? = Finns det …?" }
 
 vocab:
-  - { sv: "en kropp", nl: "een lichaam", def: "kroppen" }
-  - { sv: "ett huvud", nl: "een hoofd", def: "huvudet" }
-  - { sv: "en mage", nl: "een buik, een maag", def: "magen" }
-  - { sv: "en rygg", nl: "een rug", def: "ryggen" }
-  - { sv: "en hals", nl: "een hals, een keel", def: "halsen" }
-  - { sv: "en läkare", nl: "een arts, een dokter", def: "läkaren" }
-  - { sv: "en vårdcentral", nl: "een huisartsenpraktijk, een gezondheidscentrum", def: "vårdcentralen" }
-  - { sv: "ett apotek", nl: "een apotheek", def: "apoteket" }
-  - { sv: "en tablett", nl: "een tablet, een pil", def: "tabletten" }
-  - { sv: "en feber", nl: "de koorts", def: "febern" }
-  - { sv: "en förkylning", nl: "een verkoudheid", def: "förkylningen" }
-  - { sv: "att ligga", nl: "liggen" }
-  - { sv: "att lägga", nl: "leggen" }
-  - { sv: "att stå", nl: "staan" }
-  - { sv: "att ställa", nl: "(neer)zetten" }
-  - { sv: "att sitta", nl: "zitten" }
-  - { sv: "att känna sig", nl: "zich voelen" }
-  - { sv: "att vila sig", nl: "uitrusten" }
-  - { sv: "att skynda sig", nl: "zich haasten" }
-  - { sv: "sjuk", nl: "ziek" }
-  - { sv: "frisk", nl: "gezond" }
-  - { sv: "förkyld", nl: "verkouden" }
-  - { sv: "trött", nl: "moe" }
+  - { sv: "en kropp", nl: "een lichaam", def: "kroppen", pl: "kroppar", ex: "Jag har ont i hela **kroppen**.", exNl: "Mijn hele lichaam doet pijn." }
+  - { sv: "ett huvud", nl: "een hoofd", def: "huvudet", pl: "huvuden", ex: "Det gör ont i **huvudet**.", exNl: "Mijn hoofd doet pijn." }
+  - { sv: "en mage", nl: "een buik, een maag", def: "magen", pl: "magar", ex: "Barnet har ont i **magen**.", exNl: "Het kind heeft pijn in zijn buik." }
+  - { sv: "en rygg", nl: "een rug", def: "ryggen", pl: "ryggar", ex: "Pappa har ont i **ryggen**.", exNl: "Papa heeft pijn in zijn rug." }
+  - { sv: "en hals", nl: "een hals, een keel", def: "halsen", pl: "halsar", ex: "Jag har ont i **halsen**.", exNl: "Ik heb keelpijn." }
+  - { sv: "en läkare", nl: "een arts, een dokter", def: "läkaren", pl: "läkare", ex: "Min syster är **läkare**.", exNl: "Mijn zus is arts." }
+  - { sv: "en vårdcentral", nl: "een huisartsenpraktijk, een gezondheidscentrum", def: "vårdcentralen", pl: "vårdcentraler", ex: "Jag ringer **vårdcentralen** imorgon.", exNl: "Ik bel morgen de huisartsenpraktijk." }
+  - { sv: "ett apotek", nl: "een apotheek", def: "apoteket", pl: "apotek", ex: "Jag köper tabletter på **apoteket**.", exNl: "Ik koop tabletten bij de apotheek." }
+  - { sv: "en tablett", nl: "een tablet (medicijn), een pil", def: "tabletten", pl: "tabletter", ex: "Ta två **tabletter** på morgonen.", exNl: "Neem 's ochtends twee tabletten." }
+  - { sv: "en feber", nl: "de koorts", def: "febern", ex: "Barnet har hög **feber**.", exNl: "Het kind heeft hoge koorts." }
+  - { sv: "en förkylning", nl: "een verkoudheid", def: "förkylningen", pl: "förkylningar", ex: "En **förkylning** går över på en vecka.", exNl: "Een verkoudheid gaat in een week over." }
+  - { sv: "att ligga", nl: "liggen", ex: "Hon **ligger** i sängen hela dagen.", exNl: "Zij ligt de hele dag in bed." }
+  - { sv: "att lägga", nl: "leggen", ex: "Jag **lägger** boken på bordet.", exNl: "Ik leg het boek op tafel." }
+  - { sv: "att stå", nl: "staan", ex: "Vi **står** och väntar på bussen.", exNl: "We staan op de bus te wachten." }
+  - { sv: "att ställa", nl: "(neer)zetten", ex: "Hon **ställer** glaset på bordet.", exNl: "Zij zet het glas op tafel." }
+  - { sv: "att sitta", nl: "zitten", ex: "Patienterna **sitter** och väntar.", exNl: "De patiënten zitten te wachten." }
+  - { sv: "att känna sig", nl: "zich voelen", ex: "Jag **känner mig** inte bra idag.", exNl: "Ik voel me vandaag niet goed." }
+  - { sv: "att vila sig", nl: "uitrusten", alt: ["att vila"], ex: "Du måste **{vila dig|vila}** nu.", exNl: "Je moet nu uitrusten." }
+  - { sv: "att skynda sig", nl: "zich haasten", ex: "**Skynda dig**, bussen går snart!", exNl: "Haast je, de bus vertrekt zo!" }
+  - { sv: "sjuk", nl: "ziek", ex: "Hon är **sjuk** och stannar hemma.", exNl: "Zij is ziek en blijft thuis." }
+  - { sv: "frisk", nl: "gezond", ex: "Nu är jag **frisk** igen.", exNl: "Nu ben ik weer gezond." }
+  - { sv: "förkyld", nl: "verkouden", ex: "Jag är lite **förkyld**.", exNl: "Ik ben een beetje verkouden." }
+  - { sv: "trött", nl: "moe", ex: "Han är **trött** efter jobbet.", exNl: "Hij is moe na het werk." }
+  - { sv: "ett öga", nl: "een oog", def: "ögat", pl: "ögon", ex: "Hon har blå **ögon**.", exNl: "Zij heeft blauwe ogen." }
+  - { sv: "ett öra", nl: "een oor", def: "örat", pl: "öron", ex: "Barnet har ont i **örat**.", exNl: "Het kind heeft pijn in zijn oor." }
+  - { sv: "en näsa", nl: "een neus", def: "näsan", pl: "näsor", ex: "Jag är förkyld och **näsan** rinner.", exNl: "Ik ben verkouden en mijn neus loopt." }
+  - { sv: "en mun", nl: "een mond", def: "munnen", pl: "munnar", ex: "Öppna **munnen**, är du snäll.", exNl: "Doe je mond open, alsjeblieft." }
+  - { sv: "en tand", nl: "een tand", def: "tanden", pl: "tänder", ex: "Barnet har fått sin första **tand**.", exNl: "Het kind heeft zijn eerste tand gekregen." }
+  - { sv: "en arm", nl: "een arm", def: "armen", pl: "armar", ex: "Hon har gips på **armen**.", exNl: "Zij heeft gips om haar arm." }
+  - { sv: "en hand", nl: "een hand", def: "handen", pl: "händer", ex: "Tvätta **händerna** före maten!", exNl: "Was je handen voor het eten!" }
+  - { sv: "ett finger", nl: "een vinger", def: "fingret", pl: "fingrar", ex: "Hon har en ring på **fingret**.", exNl: "Zij heeft een ring om haar vinger." }
+  - { sv: "ett ben", nl: "een been", def: "benet", pl: "ben", ex: "Han har brutit **benet**.", exNl: "Hij heeft zijn been gebroken." }
+  - { sv: "en fot", nl: "een voet", def: "foten", pl: "fötter", ex: "Mina **fötter** är kalla.", exNl: "Mijn voeten zijn koud." }
+  - { sv: "ett knä", nl: "een knie", def: ["knät", "knäet"], pl: "knän", ex: "Det gör ont i **{knät|knäet}** när jag springer.", exNl: "Mijn knie doet pijn als ik hardloop." }
+  - { sv: "ett hjärta", nl: "een hart", def: "hjärtat", pl: "hjärtan", ex: "**Hjärtat** slår snabbt.", exNl: "Het hart klopt snel." }
+  - { sv: "en tandläkare", nl: "een tandarts", def: "tandläkaren", pl: "tandläkare", ex: "Jag har en tid hos **tandläkaren**.", exNl: "Ik heb een afspraak bij de tandarts." }
+  - { sv: "en sjuksköterska", nl: "een verpleegkundige", def: "sjuksköterskan", pl: "sjuksköterskor", ex: "**Sjuksköterskan** tar ett blodprov.", exNl: "De verpleegkundige neemt bloed af." }
+  - { sv: "ett recept", nl: "een recept (van de dokter, of om te koken)", def: "receptet", pl: "recept", ex: "Läkaren skriver ut ett **recept**.", exNl: "De dokter schrijft een recept uit." }
+  - { sv: "en medicin", nl: "een medicijn", def: "medicinen", pl: "mediciner", ex: "Har du tagit din **medicin**?", exNl: "Heb je je medicijn ingenomen?" }
+  - { sv: "en hosta", nl: "hoest", def: "hostan", ex: "Jag har haft **hosta** i en vecka.", exNl: "Ik heb al een week hoest." }
+  - { sv: "en huvudvärk", nl: "hoofdpijn", def: "huvudvärken", ex: "Jag har **huvudvärk** idag.", exNl: "Ik heb vandaag hoofdpijn." }
+  - { sv: "en sjukdom", nl: "een ziekte", def: "sjukdomen", pl: "sjukdomar", ex: "Influensa är en vanlig **sjukdom**.", exNl: "Griep is een veelvoorkomende ziekte." }
+  - { sv: "att ha ont", nl: "pijn hebben (ha ont i = pijn hebben in)", ex: "Jag **har ont** i fötterna.", exNl: "Ik heb pijn aan mijn voeten." }
+  - { sv: "att göra ont", nl: "pijn doen", ex: "Det **gör ont** i ryggen.", exNl: "Mijn rug doet pijn." }
+  - { sv: "att må", nl: "het (goed of slecht) gaan met iemand (hur mår du? = hoe gaat het met je?)", ex: "Hur **mår** du idag?", exNl: "Hoe gaat het vandaag met je?" }
+  - { sv: "att må illa", nl: "misselijk zijn", ex: "Jag **mår illa** efter båtresan.", exNl: "Ik ben misselijk na de boottocht." }
+  - { sv: "att bryta", nl: "breken", ex: "Han **bröt** armen förra veckan.", exNl: "Hij brak vorige week zijn arm." }
+  - { sv: "att skada sig", nl: "zich bezeren", ex: "Hon **{skadade sig|har skadat sig}** i foten.", exNl: "Zij heeft haar voet bezeerd." }
+  - { sv: "att undersöka", nl: "onderzoeken", ex: "Läkaren **undersöker** min rygg.", exNl: "De dokter onderzoekt mijn rug." }
+  - { sv: "att blöda", nl: "bloeden", ex: "Han **blöder** ur näsan.", exNl: "Hij bloedt uit zijn neus." }
+  - { sv: "att sätta sig", nl: "gaan zitten", ex: "**Sätt dig**, är du snäll!", exNl: "Ga zitten, alsjeblieft!" }
+  - { sv: "att klä på sig", nl: "zich aankleden", ex: "Barnen **klär på sig**.", exNl: "De kinderen kleden zich aan." }
+  - { sv: "att andas", nl: "ademen", ex: "**Andas** djupt!", exNl: "Adem diep in!" }
+  - { sv: "att hosta", nl: "hoesten", ex: "Han **hostar** hela natten.", exNl: "Hij hoest de hele nacht." }
+  - { sv: "dålig", nl: "slecht, een beetje ziek", ex: "Jag är lite **dålig** idag.", exNl: "Ik voel me vandaag een beetje slecht." }
+  - { sv: "yr", nl: "duizelig", ex: "Jag känner mig **yr**.", exNl: "Ik voel me duizelig." }
+  - { sv: "sjukskriven", nl: "ziekgemeld (met verklaring van de dokter)", ex: "Hon är **sjukskriven** i en vecka.", exNl: "Zij is een week ziekgemeld." }
+  - { sv: "Krya på dig!", nl: "Beterschap!", ex: "**Krya på dig**, Bram!", exNl: "Beterschap, Bram!" }
+  - { sv: "svag", nl: "zwak", ex: "Jag känner mig **svag** efter febern.", exNl: "Ik voel me zwak na de koorts." }
+  - { sv: "gravid", nl: "zwanger", ex: "Min syster är **gravid**.", exNl: "Mijn zus is zwanger." }
+  - { sv: "allergisk", nl: "allergisch", ex: "Jag är **allergisk** mot katter.", exNl: "Ik ben allergisch voor katten." }

@@ -277,25 +277,59 @@ sections:
           - { id: fqme, type: clock, time: "12:35" }
 
 vocab:
-  - { sv: "en resa", nl: "een reis", def: "resan" }
-  - { sv: "ett land", nl: "een land", def: "landet" }
-  - { sv: "en stad", nl: "een stad", def: "staden" }
-  - { sv: "en semester", nl: "een vakantie", def: "semestern" }
-  - { sv: "ett tåg", nl: "een trein", def: "tåget" }
-  - { sv: "en nyckel", nl: "een sleutel", def: "nyckeln" }
-  - { sv: "en månad", nl: "een maand", def: "månaden" }
-  - { sv: "ett år", nl: "een jaar", def: "året" }
-  - { sv: "ett norrsken", nl: "een noorderlicht", def: "norrskenet" }
-  - { sv: "en människa", nl: "een mens", def: "människan" }
-  - { sv: "att resa", nl: "reizen" }
-  - { sv: "att hitta", nl: "vinden" }
-  - { sv: "att tappa", nl: "verliezen, laten vallen" }
-  - { sv: "att måla", nl: "schilderen, verven" }
-  - { sv: "att hyra", nl: "huren" }
-  - { sv: "någonsin", nl: "ooit", alt: ["någon gång"] }
-  - { sv: "redan", nl: "al" }
-  - { sv: "inte än", nl: "nog niet", alt: ["inte ännu"] }
-  - { sv: "hemma", nl: "thuis" }
-  - { sv: "hem", nl: "naar huis" }
-  - { sv: "ute", nl: "buiten" }
-  - { sv: "ut", nl: "naar buiten" }
+  - { sv: "en resa", nl: "een reis", def: "resan", pl: "resor", ex: "Vi har gjort en lång **resa**.", exNl: "We hebben een lange reis gemaakt." }
+  - { sv: "ett land", nl: "een land", def: "landet", pl: "länder", ex: "Hur många **länder** har du besökt?", exNl: "Hoeveel landen heb jij bezocht?" }
+  - { sv: "en stad", nl: "een stad", def: "staden", pl: "städer", ex: "Vi har bott i tre olika **städer**.", exNl: "We hebben in drie verschillende steden gewoond." }
+  - { sv: "en semester", nl: "een vakantie", def: "semestern", pl: "semestrar", ex: "Var har ni varit på **semester**?", exNl: "Waar zijn jullie op vakantie geweest?" }
+  - { sv: "ett tåg", nl: "een trein", def: "tåget", pl: "tåg", ex: "Har du åkt **{tåg|tåget}** till Kiruna?", exNl: "Ben jij met de trein naar Kiruna gegaan?" }
+  - { sv: "en nyckel", nl: "een sleutel", def: "nyckeln", pl: "nycklar", ex: "Jag har tappat **nyckeln**!", exNl: "Ik ben de sleutel kwijt!" }
+  - { sv: "en månad", nl: "een maand", def: "månaden", pl: "månader", ex: "Jag har bott här i två **månader**.", exNl: "Ik woon hier al twee maanden." }
+  - { sv: "ett år", nl: "een jaar", def: "året", pl: "år", ex: "Vi har bott i Sverige i ett **år**.", exNl: "We wonen al een jaar in Zweden." }
+  - { sv: "ett norrsken", nl: "een noorderlicht", def: "norrskenet", pl: "norrsken", ex: "Har du sett **{norrsken|norrskenet}**?", exNl: "Heb jij het noorderlicht gezien?" }
+  - { sv: "en människa", nl: "een mens", def: "människan", pl: "människor", ex: "Vi har träffat många **människor** här.", exNl: "We hebben hier veel mensen ontmoet." }
+  - { sv: "ett minne", nl: "een herinnering", def: "minnet", pl: "minnen", ex: "Det är ett **minne** för livet.", exNl: "Dat is een herinnering voor het leven." }
+  - { sv: "en upplevelse", nl: "een belevenis, een ervaring", def: "upplevelsen", pl: "upplevelser", ex: "Det var en fantastisk **upplevelse**.", exNl: "Het was een fantastische belevenis." }
+  - { sv: "ett äventyr", nl: "een avontuur", def: "äventyret", pl: "äventyr", ex: "Resan var ett **äventyr**.", exNl: "De reis was een avontuur." }
+  - { sv: "en huvudstad", nl: "een hoofdstad", def: "huvudstaden", pl: "huvudstäder", ex: "Har du varit i Norges **huvudstad**?", exNl: "Ben jij in de hoofdstad van Noorwegen geweest?" }
+  - { sv: "en by", nl: "een dorp", def: "byn", pl: "byar", ex: "Vi har bott i en liten **by**.", exNl: "We hebben in een klein dorp gewoond." }
+  - { sv: "ett slott", nl: "een kasteel, een paleis", def: "slottet", pl: "slott", ex: "Har ni sett **slottet** i Kalmar?", exNl: "Hebben jullie het kasteel in Kalmar gezien?" }
+  - { sv: "ett liv", nl: "een leven", def: "livet", pl: "liv", ex: "Jag har bott här hela mitt **liv**.", exNl: "Ik woon hier al mijn hele leven." }
+  - { sv: "en dröm", nl: "een droom", def: "drömmen", pl: "drömmar", ex: "Det har alltid varit min **dröm**.", exNl: "Dat is altijd mijn droom geweest." }
+  - { sv: "en väska", nl: "een tas", def: "väskan", pl: "väskor", ex: "Någon har tagit min **väska**!", exNl: "Iemand heeft mijn tas gepakt!" }
+  - { sv: "ett körkort", nl: "een rijbewijs", def: "körkortet", pl: "körkort", ex: "Jag har glömt **körkortet** hemma.", exNl: "Ik heb mijn rijbewijs thuis laten liggen." }
+  - { sv: "ett problem", nl: "een probleem", def: "problemet", pl: "problem", ex: "Vi har haft ett **problem** med bilen.", exNl: "We hebben een probleem met de auto gehad." }
+  - { sv: "en olycka", nl: "een ongeluk", def: "olyckan", pl: "olyckor", ex: "Har du någonsin varit med om en **olycka**?", exNl: "Heb jij ooit een ongeluk meegemaakt?" }
+  - { sv: "en tur", nl: "geluk (toeval)", def: "turen", ex: "Vi har haft **tur** med vädret.", exNl: "We hebben geluk gehad met het weer." }
+  - { sv: "ett vykort", nl: "een ansichtkaart", def: "vykortet", pl: "vykort", ex: "Vi har skickat ett **vykort** till farmor.", exNl: "We hebben oma een ansichtkaart gestuurd." }
+  - { sv: "en värld", nl: "een wereld", def: "världen", pl: "världar", ex: "Hon har rest runt hela **världen**.", exNl: "Zij heeft de hele wereld rondgereisd." }
+  - { sv: "att resa", nl: "reizen", ex: "Har du **rest** mycket?", exNl: "Heb jij veel gereisd?" }
+  - { sv: "att hitta", nl: "vinden", ex: "Vi har **hittat** en bra lägenhet.", exNl: "We hebben een goed appartement gevonden." }
+  - { sv: "att tappa", nl: "verliezen, laten vallen", ex: "Nils har **tappat** en tand.", exNl: "Nils is een tand kwijtgeraakt." }
+  - { sv: "att måla", nl: "schilderen, verven", ex: "Fleur har **målat** köket.", exNl: "Fleur heeft de keuken geverfd." }
+  - { sv: "att hyra", nl: "huren", ex: "Vi har **hyrt** en bil.", exNl: "We hebben een auto gehuurd." }
+  - { sv: "att se", nl: "zien", ex: "Har du **sett** filmen?", exNl: "Heb jij de film gezien?" }
+  - { sv: "att höra", nl: "horen", ex: "Har du **hört** något om Olle?", exNl: "Heb jij iets over Olle gehoord?" }
+  - { sv: "att göra", nl: "doen, maken", ex: "Vad har du **gjort** idag?", exNl: "Wat heb jij vandaag gedaan?" }
+  - { sv: "att bli", nl: "worden", ex: "Det har **blivit** kallt.", exNl: "Het is koud geworden." }
+  - { sv: "att prova", nl: "proberen", alt: ["att testa"], ex: "Jag har aldrig **{provat|testat}** att åka skidor.", exNl: "Ik heb nog nooit geprobeerd te skiën." }
+  - { sv: "att uppleva", nl: "beleven, meemaken", ex: "Vi har **upplevt** mycket i Sverige.", exNl: "We hebben veel meegemaakt in Zweden." }
+  - { sv: "att lämna", nl: "achterlaten, verlaten, afgeven", ex: "Har du **lämnat** nyckeln hos grannen?", exNl: "Heb je de sleutel bij de buurman achtergelaten?" }
+  - { sv: "att drömma", nl: "dromen", ex: "Jag har alltid **drömt** om att se norrsken.", exNl: "Ik heb er altijd van gedroomd het noorderlicht te zien." }
+  - { sv: "att visa", nl: "laten zien, tonen", ex: "Olle har **visat** oss stan.", exNl: "Olle heeft ons de stad laten zien." }
+  - { sv: "någonsin", nl: "ooit", alt: ["någon gång"], ex: "Har du **{någonsin|någon gång}** varit i Kiruna?", exNl: "Ben jij ooit in Kiruna geweest?" }
+  - { sv: "redan", nl: "al", ex: "Jag har **redan** ätit.", exNl: "Ik heb al gegeten." }
+  - { sv: "inte än", nl: "nog niet", alt: ["inte ännu"], ex: "Har du ätit? – Nej, **{inte än|inte ännu}**.", exNl: "Heb je gegeten? – Nee, nog niet." }
+  - { sv: "precis", nl: "net (zojuist), precies", alt: ["just"], ex: "Jag har **{precis|just|nyss}** kommit hem.", exNl: "Ik ben net thuisgekomen." }
+  - { sv: "än", nl: "dan (bij vergelijken)", ex: "Nils är yngre **än** Wilma.", exNl: "Nils is jonger dan Wilma." }
+  - { sv: "hemma", nl: "thuis", ex: "Är Olle **hemma**?", exNl: "Is Olle thuis?" }
+  - { sv: "hem", nl: "naar huis", ex: "Nu går jag **hem**.", exNl: "Nu ga ik naar huis." }
+  - { sv: "ute", nl: "buiten", ex: "Barnen har varit **ute** hela dagen.", exNl: "De kinderen zijn de hele dag buiten geweest." }
+  - { sv: "ut", nl: "naar buiten", ex: "Katten vill gå **ut**.", exNl: "De kat wil naar buiten." }
+  - { sv: "inne", nl: "binnen", ex: "Barnen är **inne** och tittar på tv.", exNl: "De kinderen zitten binnen tv te kijken." }
+  - { sv: "in", nl: "naar binnen", ex: "Katten har kommit **in**.", exNl: "De kat is naar binnen gekomen." }
+  - { sv: "uppe", nl: "boven", ex: "Toaletten är **uppe**.", exNl: "De wc is boven." }
+  - { sv: "upp", nl: "naar boven, omhoog", ex: "Nils har klättrat **upp** i trädet.", exNl: "Nils is in de boom geklommen." }
+  - { sv: "nere", nl: "beneden", ex: "Köket är **nere**.", exNl: "De keuken is beneden." }
+  - { sv: "ner", nl: "naar beneden, omlaag", alt: ["ned"], ex: "Solen har gått **{ner|ned}**.", exNl: "De zon is ondergegaan." }
+  - { sv: "hit", nl: "hierheen, hiernaartoe", ex: "Kom **hit**!", exNl: "Kom hierheen!" }
+  - { sv: "dit", nl: "daarheen, daarnaartoe", ex: "Vi har aldrig åkt **dit**.", exNl: "We zijn daar nooit heen gegaan." }

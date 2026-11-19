@@ -281,26 +281,66 @@ sections:
           - { id: hymq, type: gap, topic: objekt, text: "Kan du hämta ___ på stationen? (ons)", gaps: [{ answers: ["oss"], options: ["vi", "oss", "vår"] }] }
 
 vocab:
-  - { sv: "en biljett", nl: "een kaartje", def: "biljetten" }
-  - { sv: "en station", nl: "een station", def: "stationen" }
-  - { sv: "en hållplats", nl: "een halte", def: "hållplatsen" }
-  - { sv: "ett spår", nl: "een spoor", def: "spåret" }
-  - { sv: "en färja", nl: "een veerboot", def: "färjan" }
-  - { sv: "ett flygplan", nl: "een vliegtuig", def: "flygplanet" }
-  - { sv: "en krona", nl: "een kroon (munt)", def: "kronan" }
-  - { sv: "ett kort", nl: "een (bank)pas, een kaart", def: "kortet" }
-  - { sv: "ett kvitto", nl: "een bonnetje", def: "kvittot" }
-  - { sv: "en karta", nl: "een (land)kaart", def: "kartan" }
-  - { sv: "ett vandrarhem", nl: "een jeugdherberg, een hostel", def: "vandrarhemmet" }
-  - { sv: "en resväska", nl: "een koffer", def: "resväskan" }
-  - { sv: "ett hotell", nl: "een hotel", def: "hotellet" }
-  - { sv: "att åka", nl: "gaan, reizen (met een voertuig)" }
-  - { sv: "att köra", nl: "(zelf) rijden" }
-  - { sv: "att flyga", nl: "vliegen" }
-  - { sv: "att betala", nl: "betalen" }
-  - { sv: "att kosta", nl: "kosten" }
-  - { sv: "att boka", nl: "boeken, reserveren" }
-  - { sv: "att byta", nl: "overstappen, ruilen" }
-  - { sv: "att stiga av", nl: "uitstappen" }
-  - { sv: "försenad", nl: "vertraagd" }
-  - { sv: "tur och retur", nl: "retour" }
+  - { sv: "en biljett", nl: "een kaartje", def: "biljetten", pl: "biljetter", ex: "Jag köper en **biljett** till Uppsala.", exNl: "Ik koop een kaartje naar Uppsala." }
+  - { sv: "en station", nl: "een station", def: "stationen", pl: "stationer", ex: "Vi ses vid **stationen** klockan tre.", exNl: "We zien elkaar om drie uur bij het station." }
+  - { sv: "en hållplats", nl: "een halte", def: "hållplatsen", pl: "hållplatser", ex: "Var är **hållplatsen**?", exNl: "Waar is de halte?" }
+  - { sv: "ett spår", nl: "een spoor", def: "spåret", pl: "spår", ex: "Tåget går från **spår** fyra.", exNl: "De trein vertrekt van spoor vier." }
+  - { sv: "en färja", nl: "een veerboot", def: "färjan", pl: "färjor", ex: "Vi tar **färjan** till Gotland.", exNl: "We nemen de veerboot naar Gotland." }
+  - { sv: "ett flygplan", nl: "een vliegtuig", def: "flygplanet", pl: "flygplan", ex: "**Flygplanet** är försenat.", exNl: "Het vliegtuig is vertraagd." }
+  - { sv: "en krona", nl: "een kroon (munt)", def: "kronan", pl: "kronor", ex: "Kaffet kostar trettio **kronor**.", exNl: "De koffie kost dertig kronen." }
+  - { sv: "ett kort", nl: "een (bank)pas, een kaart", def: "kortet", pl: "kort", ex: "Kan jag betala med **{kort|kortet}**?", exNl: "Kan ik met de kaart betalen?" }
+  - { sv: "ett kvitto", nl: "een bonnetje", def: "kvittot", pl: "kvitton", ex: "Kan jag få **kvittot**?", exNl: "Mag ik het bonnetje?" }
+  - { sv: "en karta", nl: "een (land)kaart", def: "kartan", pl: "kartor", ex: "Har du en **karta** över Stockholm?", exNl: "Heb je een kaart van Stockholm?" }
+  - { sv: "ett vandrarhem", nl: "een jeugdherberg, een hostel", def: "vandrarhemmet", pl: "vandrarhem", ex: "Vi bodde på ett **vandrarhem** i Visby.", exNl: "We logeerden in een jeugdherberg in Visby." }
+  - { sv: "en resväska", nl: "een koffer", def: "resväskan", pl: "resväskor", ex: "Min **resväska** är för tung.", exNl: "Mijn koffer is te zwaar." }
+  - { sv: "ett hotell", nl: "een hotel", def: "hotellet", pl: "hotell", ex: "**Hotellet** ligger nära stationen.", exNl: "Het hotel ligt dicht bij het station." }
+  - { sv: "att åka", nl: "gaan, reizen (met een voertuig)", ex: "Vi **åker** tåg till Malmö.", exNl: "We gaan met de trein naar Malmö." }
+  - { sv: "att köra", nl: "(zelf) rijden", ex: "Pappa **kör** bil till Norge.", exNl: "Papa rijdt met de auto naar Noorwegen." }
+  - { sv: "att flyga", nl: "vliegen", ex: "Vi **flög** till London förra året.", exNl: "We vlogen vorig jaar naar Londen." }
+  - { sv: "att betala", nl: "betalen", ex: "Jag **betalar** med kort.", exNl: "Ik betaal met de kaart." }
+  - { sv: "att kosta", nl: "kosten", ex: "Vad **kostar** biljetten?", exNl: "Wat kost het kaartje?" }
+  - { sv: "att boka", nl: "boeken, reserveren", ex: "Jag har **bokat** ett rum på hotellet.", exNl: "Ik heb een kamer in het hotel geboekt." }
+  - { sv: "att byta", nl: "overstappen, ruilen", ex: "Du måste **byta** tåg i Göteborg.", exNl: "Je moet in Göteborg overstappen." }
+  - { sv: "att stiga av", nl: "uitstappen", ex: "Jag **stiger av** vid nästa hållplats.", exNl: "Ik stap bij de volgende halte uit." }
+  - { sv: "försenad", nl: "vertraagd", ex: "Bussen är tio minuter **försenad**.", exNl: "De bus heeft tien minuten vertraging." }
+  - { sv: "tur och retur", nl: "retour", ex: "En biljett **tur och retur**, tack.", exNl: "Een retourkaartje, graag." }
+  - { sv: "en flygplats", nl: "een vliegveld, een luchthaven", def: "flygplatsen", pl: "flygplatser", ex: "Hur kommer jag till **flygplatsen**?", exNl: "Hoe kom ik bij het vliegveld?" }
+  - { sv: "ett pass", nl: "een paspoort", def: "passet", pl: "pass", ex: "Glöm inte **passet**!", exNl: "Vergeet je paspoort niet!" }
+  - { sv: "ett bagage", nl: "bagage", def: "bagaget", ex: "Var kan jag hämta mitt **bagage**?", exNl: "Waar kan ik mijn bagage ophalen?" }
+  - { sv: "en perrong", nl: "een perron", def: "perrongen", pl: "perronger", ex: "Vi väntar på **perrongen**.", exNl: "We wachten op het perron." }
+  - { sv: "en avgång", nl: "een vertrek (van trein, bus, vlucht)", def: "avgången", pl: "avgångar", ex: "Nästa **avgång** är klockan tio.", exNl: "Het volgende vertrek is om tien uur." }
+  - { sv: "en tidtabell", nl: "een dienstregeling", def: "tidtabellen", pl: "tidtabeller", ex: "Titta i **tidtabellen**!", exNl: "Kijk in de dienstregeling!" }
+  - { sv: "en spårvagn", nl: "een tram", def: "spårvagnen", pl: "spårvagnar", ex: "Vi tar **spårvagnen** till centrum.", exNl: "We nemen de tram naar het centrum." }
+  - { sv: "en taxi", nl: "een taxi", def: "taxin", pl: ["taxi", "taxibilar"], ex: "Vi tar en **taxi** till hotellet.", exNl: "We nemen een taxi naar het hotel." }
+  - { sv: "en väg", nl: "een weg", def: "vägen", pl: "vägar", ex: "Kan du visa mig **vägen**?", exNl: "Kun je me de weg wijzen?" }
+  - { sv: "en gata", nl: "een straat", def: "gatan", pl: "gator", ex: "Hotellet ligger på den här **gatan**.", exNl: "Het hotel ligt in deze straat." }
+  - { sv: "en turist", nl: "een toerist", def: "turisten", pl: "turister", ex: "På sommaren kommer många **turister** till Visby.", exNl: "In de zomer komen er veel toeristen naar Visby." }
+  - { sv: "en kö", nl: "een rij (wachtrij)", def: "kön", pl: "köer", ex: "Vi stod i **kö** i en halvtimme.", exNl: "We stonden een halfuur in de rij." }
+  - { sv: "en plånbok", nl: "een portemonnee", def: "plånboken", pl: "plånböcker", ex: "Jag har tappat min **plånbok**.", exNl: "Ik ben mijn portemonnee kwijt." }
+  - { sv: "ett mynt", nl: "een munt (geldstuk)", def: "myntet", pl: "mynt", ex: "En tia är ett **mynt**.", exNl: "Een tia is een munt." }
+  - { sv: "en sedel", nl: "een bankbiljet", def: "sedeln", pl: "sedlar", ex: "Jag har bara **sedlar**, inga mynt.", exNl: "Ik heb alleen bankbiljetten, geen munten." }
+  - { sv: "en hundralapp", nl: "een briefje van honderd", def: "hundralappen", pl: "hundralappar", ex: "Kan du växla en **hundralapp**?", exNl: "Kun je een briefje van honderd wisselen?" }
+  - { sv: "en plats", nl: "een plaats, een zitplaats", def: "platsen", pl: "platser", ex: "Är den här **platsen** ledig?", exNl: "Is deze plaats vrij?" }
+  - { sv: "ett pris", nl: "een prijs", def: "priset", pl: "priser", ex: "**Priset** är tvåhundra kronor.", exNl: "De prijs is tweehonderd kronen." }
+  - { sv: "ett datum", nl: "een datum", def: "datumet", pl: "datum", ex: "Vilket **datum** är det idag?", exNl: "Welke datum is het vandaag?" }
+  - { sv: "en båt", nl: "een boot", def: "båten", pl: "båtar", ex: "Vi åker **båt** till Åland.", exNl: "We gaan met de boot naar Åland." }
+  - { sv: "att stiga på", nl: "instappen", ex: "Vi **steg på** tåget i Lund.", exNl: "We stapten in Lund in de trein." }
+  - { sv: "att missa", nl: "missen", ex: "Jag **missade** bussen igår.", exNl: "Ik miste gisteren de bus." }
+  - { sv: "att landa", nl: "landen", ex: "Flygplanet **landar** klockan fem.", exNl: "Het vliegtuig landt om vijf uur." }
+  - { sv: "att packa", nl: "inpakken", ex: "Har du **packat** resväskan?", exNl: "Heb je je koffer ingepakt?" }
+  - { sv: "att hämta", nl: "ophalen", ex: "Jag **hämtar** dig på stationen.", exNl: "Ik haal je op van het station." }
+  - { sv: "att växla", nl: "wisselen (geld)", ex: "Var kan man **växla** pengar?", exNl: "Waar kun je geld wisselen?" }
+  - { sv: "att stanna", nl: "stoppen, blijven", ex: "Bussen **stannar** inte här.", exNl: "De bus stopt hier niet." }
+  - { sv: "att komma fram", nl: "aankomen", ex: "Vi **kom fram** till Kiruna sent på kvällen.", exNl: "We kwamen laat in de avond aan in Kiruna." }
+  - { sv: "att följa med", nl: "meegaan", ex: "Vill du **följa med** till Gotland?", exNl: "Wil je mee naar Gotland?" }
+  - { sv: "nästa", nl: "volgende", ex: "**Nästa** tåg går klockan sju.", exNl: "De volgende trein vertrekt om zeven uur." }
+  - { sv: "billig", nl: "goedkoop", ex: "Biljetten var väldigt **billig**.", exNl: "Het kaartje was erg goedkoop." }
+  - { sv: "dyr", nl: "duur", ex: "Taxin var väldigt **dyr**.", exNl: "De taxi was erg duur." }
+  - { sv: "gratis", nl: "gratis", ex: "Bussen är **gratis** för barn.", exNl: "De bus is gratis voor kinderen." }
+  - { sv: "inställd", nl: "geannuleerd, afgelast", ex: "Färjan till Gotland är **inställd** idag.", exNl: "De veerboot naar Gotland is vandaag geannuleerd." }
+  - { sv: "i tid", nl: "op tijd", ex: "Tåget kom **i tid**.", exNl: "De trein kwam op tijd." }
+  - { sv: "nära", nl: "dichtbij", ex: "Hotellet ligger **nära** centrum.", exNl: "Het hotel ligt dicht bij het centrum." }
+  - { sv: "långt", nl: "ver", ex: "Är det **långt** till stationen?", exNl: "Is het ver naar het station?" }
+  - { sv: "rakt fram", nl: "rechtdoor", ex: "Gå **rakt fram** till kyrkan.", exNl: "Loop rechtdoor tot aan de kerk." }
+  - { sv: "till vänster", nl: "links, naar links", alt: ["åt vänster"], ex: "Sväng **{till vänster|åt vänster|vänster}** vid kyrkan.", exNl: "Sla bij de kerk linksaf." }
+  - { sv: "till höger", nl: "rechts, naar rechts", alt: ["åt höger"], ex: "Toaletten ligger **till höger**.", exNl: "Het toilet is rechts." }

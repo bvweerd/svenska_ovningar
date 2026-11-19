@@ -308,26 +308,62 @@ sections:
           - { id: 7rhm, type: mc, topic: tycka-om, prompt: "Welke zin is goed?", options: ["Mormor tycker om att baka.", "Mormor tycker om baka.", "Mormor tycker att om baka."], answer: 0, tip: "Bij een activiteit: tycker om att + infinitief." }
 
 vocab:
-  - { sv: "en familj", nl: "een gezin, een familie", def: "familjen" }
-  - { sv: "en mamma", nl: "een moeder", def: "mamman", alt: ["en mor"] }
-  - { sv: "en pappa", nl: "een vader", def: "pappan", alt: ["en far"] }
-  - { sv: "en bror", nl: "een broer", def: "brodern" }
-  - { sv: "en syster", nl: "een zus", def: "systern" }
-  - { sv: "en son", nl: "een zoon", def: "sonen" }
-  - { sv: "en dotter", nl: "een dochter", def: "dottern" }
-  - { sv: "en kusin", nl: "een neef, een nicht (kind van oom/tante)", def: "kusinen" }
-  - { sv: "en fru", nl: "een vrouw, een echtgenote", def: "frun" }
-  - { sv: "en man", nl: "een man", def: "mannen" }
-  - { sv: "ett barnbarn", nl: "een kleinkind", def: "barnbarnet" }
-  - { sv: "en present", nl: "een cadeau", def: "presenten" }
-  - { sv: "ett foto", nl: "een foto", def: "fotot" }
-  - { sv: "en fest", nl: "een feest", def: "festen" }
-  - { sv: "en trädgård", nl: "een tuin", def: "trädgården" }
-  - { sv: "att fylla år", nl: "jarig zijn" }
-  - { sv: "att fira", nl: "vieren" }
-  - { sv: "att besöka", nl: "bezoeken" }
-  - { sv: "att leka", nl: "spelen (van kinderen)" }
-  - { sv: "att grilla", nl: "barbecueën" }
-  - { sv: "igår", nl: "gisteren", alt: ["i går"] }
-  - { sv: "förra veckan", nl: "vorige week" }
-  - { sv: "förut", nl: "vroeger, eerder", alt: ["tidigare"] }
+  - { sv: "en familj", nl: "een gezin, een familie", def: "familjen", pl: "familjer", ex: "Min **familj** bor i Nederländerna.", exNl: "Mijn familie woont in Nederland." }
+  - { sv: "en mamma", nl: "een moeder", def: "mamman", pl: "mammor", alt: ["en mor"], ex: "Fleurs **{mamma|mor}** heter Anja.", exNl: "Fleurs moeder heet Anja." }
+  - { sv: "en pappa", nl: "een vader", def: "pappan", pl: "pappor", alt: ["en far"], ex: "**{Pappa|Far}** lagade middag igår.", exNl: "Papa kookte gisteren." }
+  - { sv: "en bror", nl: "een broer", def: "brodern", pl: "bröder", ex: "Bram har två **bröder**.", exNl: "Bram heeft twee broers." }
+  - { sv: "en syster", nl: "een zus", def: "systern", pl: "systrar", ex: "Min **syster** bor i Amsterdam.", exNl: "Mijn zus woont in Amsterdam." }
+  - { sv: "en son", nl: "een zoon", def: "sonen", pl: "söner", ex: "Ingrid och Olle har en **son**.", exNl: "Ingrid en Olle hebben een zoon." }
+  - { sv: "en dotter", nl: "een dochter", def: "dottern", pl: "döttrar", ex: "Deras **dotter** heter Wilma.", exNl: "Hun dochter heet Wilma." }
+  - { sv: "en kusin", nl: "een neef, een nicht (kind van oom/tante)", def: "kusinen", pl: "kusiner", ex: "Jag har många **kusiner**.", exNl: "Ik heb veel neven en nichten." }
+  - { sv: "en fru", nl: "een echtgenote, een vrouw (van iemand)", def: "frun", pl: "fruar", ex: "Olle och hans **fru** har två barn.", exNl: "Olle en zijn vrouw hebben twee kinderen." }
+  - { sv: "en man", nl: "een man", def: "mannen", pl: "män", ex: "Ingrids **man** heter Olle.", exNl: "Ingrids man heet Olle." }
+  - { sv: "ett barnbarn", nl: "een kleinkind", def: "barnbarnet", pl: "barnbarn", ex: "Ingrid och Olle har inga **barnbarn**.", exNl: "Ingrid en Olle hebben geen kleinkinderen." }
+  - { sv: "en present", nl: "een cadeau", def: "presenten", pl: "presenter", ex: "Vi köpte en **present** till Wilma.", exNl: "We kochten een cadeau voor Wilma." }
+  - { sv: "ett foto", nl: "een foto", def: "fotot", pl: "foton", ex: "Vi tittade på **fotona** från bröllopet.", exNl: "We keken naar de foto's van de bruiloft." }
+  - { sv: "en fest", nl: "een feest", def: "festen", pl: "fester", ex: "**Festen** började klockan sju.", exNl: "Het feest begon om zeven uur." }
+  - { sv: "en trädgård", nl: "een tuin", def: "trädgården", pl: "trädgårdar", ex: "Farmor har en stor **trädgård**.", exNl: "Oma heeft een grote tuin." }
+  - { sv: "en farmor", nl: "een oma (moeder van je vader; van moederskant: mormor)", def: "farmodern", pl: "farmödrar", alt: ["en mormor"], ex: "**{Farmor|Mormor}** bor i Umeå.", exNl: "Oma woont in Umeå." }
+  - { sv: "en farfar", nl: "een opa (vader van je vader; van moederskant: morfar)", def: "farfadern", pl: "farfäder", alt: ["en morfar"], ex: "Min **{farfar|morfar}** fyller nittio i år.", exNl: "Mijn opa wordt dit jaar negentig." }
+  - { sv: "en förälder", nl: "een ouder (vader of moeder)", def: "föräldern", pl: "föräldrar", ex: "Mina **föräldrar** bor i Utrecht.", exNl: "Mijn ouders wonen in Utrecht." }
+  - { sv: "ett syskon", nl: "een broer of zus", def: "syskonet", pl: "syskon", ex: "Har du några **syskon**?", exNl: "Heb jij broers of zussen?" }
+  - { sv: "en farbror", nl: "een oom (broer van je vader; van moederskant: morbror)", def: "farbrodern", pl: "farbröder", alt: ["en morbror"], ex: "Min **{farbror|morbror}** heter Kees.", exNl: "Mijn oom heet Kees." }
+  - { sv: "en faster", nl: "een tante (zus van je vader; van moederskant: moster)", def: "fastern", pl: "fastrar", alt: ["en moster"], ex: "Min **{faster|moster}** bor i Malmö.", exNl: "Mijn tante woont in Malmö." }
+  - { sv: "en sambo", nl: "een partner (samenwonend, niet getrouwd)", def: "sambon", pl: "sambor", ex: "Min bror och hans **sambo** har en hund.", exNl: "Mijn broer en zijn partner hebben een hond." }
+  - { sv: "en pojkvän", nl: "een vriendje (relatie), een vriend", def: "pojkvännen", pl: "pojkvänner", ex: "Wilma har en **pojkvän**.", exNl: "Wilma heeft een vriendje." }
+  - { sv: "en flickvän", nl: "een vriendinnetje (relatie), een vriendin", def: "flickvännen", pl: "flickvänner", ex: "Min bror har en ny **flickvän**.", exNl: "Mijn broer heeft een nieuw vriendinnetje." }
+  - { sv: "en pojke", nl: "een jongen", def: "pojken", pl: "pojkar", alt: ["en kille"], ex: "Nils är en glad **{pojke|kille}**.", exNl: "Nils is een vrolijke jongen." }
+  - { sv: "en flicka", nl: "een meisje", def: "flickan", pl: "flickor", alt: ["en tjej"], ex: "De har två barn, en **{flicka|tjej}** och en pojke.", exNl: "Ze hebben twee kinderen, een meisje en een jongen." }
+  - { sv: "en bebis", nl: "een baby", def: "bebisen", pl: "bebisar", alt: ["en baby"], ex: "Min syster fick en **{bebis|baby}** i maj.", exNl: "Mijn zus kreeg in mei een baby." }
+  - { sv: "en tvilling", nl: "een tweelingbroer, een tweelingzus", def: "tvillingen", pl: "tvillingar", ex: "Anna och Eva är **tvillingar**.", exNl: "Anna en Eva zijn tweelingzussen." }
+  - { sv: "en födelsedag", nl: "een verjaardag", def: "födelsedagen", pl: "födelsedagar", ex: "Grattis på **födelsedagen**!", exNl: "Gefeliciteerd met je verjaardag!" }
+  - { sv: "en släkt", nl: "de familie (alle verwanten)", def: "släkten", pl: "släkter", ex: "Hela **släkten** kom till festen.", exNl: "De hele familie kwam naar het feest." }
+  - { sv: "ett bröllop", nl: "een bruiloft", def: "bröllopet", pl: "bröllop", ex: "**Bröllopet** var i juni.", exNl: "De bruiloft was in juni." }
+  - { sv: "att fylla år", nl: "jarig zijn", ex: "Wilma **fyllde år** igår.", exNl: "Wilma was gisteren jarig." }
+  - { sv: "att fira", nl: "vieren", ex: "Vi **firade** mammas födelsedag.", exNl: "We vierden mama's verjaardag." }
+  - { sv: "att besöka", nl: "bezoeken", ex: "Igår **besökte** vi farmor.", exNl: "Gisteren bezochten we oma." }
+  - { sv: "att leka", nl: "spelen als kind, spelen (van kinderen)", ex: "Nils **lekte** med katten.", exNl: "Nils speelde met de kat." }
+  - { sv: "att grilla", nl: "barbecueën", ex: "Förra veckan **grillade** vi hos Olle.", exNl: "Vorige week barbecueden we bij Olle." }
+  - { sv: "att gifta sig", nl: "trouwen", ex: "Ingrid och Olle **gifte sig** 2005.", exNl: "Ingrid en Olle trouwden in 2005." }
+  - { sv: "att födas", nl: "geboren worden", ex: "Jag **föddes** i Leiden.", exNl: "Ik ben in Leiden geboren." }
+  - { sv: "att växa upp", nl: "opgroeien", ex: "Bram **växte upp** i Groningen.", exNl: "Bram groeide op in Groningen." }
+  - { sv: "att hälsa på", nl: "op bezoek gaan (bij)", ex: "Vi **hälsade på** mormor i helgen.", exNl: "Afgelopen weekend gingen we bij oma op bezoek." }
+  - { sv: "att likna", nl: "lijken op", ex: "Du **liknar** din pappa!", exNl: "Jij lijkt op je vader!" }
+  - { sv: "att ta hand om", nl: "zorgen voor", ex: "Morfar **tog hand om** barnen.", exNl: "Opa zorgde voor de kinderen." }
+  - { sv: "att ge", nl: "geven", ex: "Vi **gav** henne en bok.", exNl: "We gaven haar een boek." }
+  - { sv: "att få", nl: "krijgen", ex: "Wilma **fick** en cykel på födelsedagen.", exNl: "Wilma kreeg een fiets voor haar verjaardag." }
+  - { sv: "att skratta", nl: "lachen", ex: "Alla **skrattade** mycket på festen.", exNl: "Iedereen lachte veel op het feest." }
+  - { sv: "att gråta", nl: "huilen", ex: "Bebisen **grät** hela natten.", exNl: "De baby huilde de hele nacht." }
+  - { sv: "igår", nl: "gisteren", alt: ["i går"], ex: "Jag ringde mamma **{igår|i går}**.", exNl: "Ik heb gisteren mama gebeld." }
+  - { sv: "förra veckan", nl: "vorige week", ex: "Vi var i Göteborg **förra veckan**.", exNl: "Vorige week waren we in Göteborg." }
+  - { sv: "förut", nl: "vroeger, eerder", alt: ["tidigare"], ex: "**{Förut|Tidigare}** bodde vi i Utrecht.", exNl: "Vroeger woonden we in Utrecht." }
+  - { sv: "förra året", nl: "vorig jaar", alt: ["i fjol"], ex: "Vi firade jul hos farmor **{förra året|i fjol}**.", exNl: "Vorig jaar vierden we kerst bij oma." }
+  - { sv: "då", nl: "toen, dan", ex: "**Då** bodde vi i Delft.", exNl: "Toen woonden we in Delft." }
+  - { sv: "länge", nl: "lang (tijd)", ex: "Vi pratade **länge** i telefon.", exNl: "We hebben lang gebeld." }
+  - { sv: "gift", nl: "getrouwd", ex: "Är du **gift**?", exNl: "Ben jij getrouwd?" }
+  - { sv: "skild", nl: "gescheiden", alt: ["frånskild"], ex: "Olles bror är **{skild|frånskild}**.", exNl: "Olles broer is gescheiden." }
+  - { sv: "singel", nl: "vrijgezel, single", ex: "Min kusin är **singel**.", exNl: "Mijn neef is vrijgezel." }
+  - { sv: "ung", nl: "jong", ex: "Farmor var mycket **ung** på fotot.", exNl: "Oma was heel jong op de foto." }
+  - { sv: "glad", nl: "blij, vrolijk", ex: "Mamma blev mycket **glad** för presenten.", exNl: "Mama was erg blij met het cadeau." }
+  - { sv: "ledsen", nl: "verdrietig", ex: "Nils var **ledsen** igår.", exNl: "Nils was gisteren verdrietig." }
+  - { sv: "snäll", nl: "lief, aardig", ex: "Min moster är väldigt **snäll**.", exNl: "Mijn tante is heel lief." }

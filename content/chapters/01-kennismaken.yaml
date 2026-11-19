@@ -555,29 +555,62 @@ sections:
           - { id: 7xxf, type: findError, topic: pronomen, sentence: "Vi har ett hus. Den ligger i Västerås.", wrong: [4], answers: ["Vi har ett hus. Det ligger i Västerås."], tip: "Welk voornaamwoord hoort bij een ett-woord?" }
 
 vocab:
-  - { sv: "en bil", nl: "een auto", def: "bilen" }
-  - { sv: "ett hus", nl: "een huis", def: "huset" }
-  - { sv: "ett barn", nl: "een kind", def: "barnet" }
-  - { sv: "en hund", nl: "een hond", def: "hunden" }
-  - { sv: "en katt", nl: "een kat", def: "katten" }
-  - { sv: "ett äpple", nl: "een appel", def: "äpplet" }
-  - { sv: "en tidning", nl: "een krant", def: "tidningen" }
-  - { sv: "ett bord", nl: "een tafel", def: "bordet" }
-  - { sv: "en stol", nl: "een stoel", def: "stolen" }
-  - { sv: "en lampa", nl: "een lamp", def: "lampan" }
-  - { sv: "ett kök", nl: "een keuken", def: "köket" }
-  - { sv: "en skola", nl: "een school", def: "skolan" }
-  - { sv: "ett språk", nl: "een taal", def: "språket" }
-  - { sv: "en granne", nl: "een buurman, een buurvrouw", def: "grannen" }
-  - { sv: "ett sjukhus", nl: "een ziekenhuis", def: "sjukhuset" }
-  - { sv: "att heta", nl: "heten" }
-  - { sv: "att bo", nl: "wonen" }
-  - { sv: "att jobba", nl: "werken", alt: ["att arbeta"] }
-  - { sv: "att tala", nl: "spreken", alt: ["att prata"] }
-  - { sv: "att komma", nl: "komen" }
-  - { sv: "att läsa", nl: "lezen" }
-  - { sv: "att köpa", nl: "kopen" }
-  - { sv: "att gilla", nl: "leuk vinden" }
-  - { sv: "idag", nl: "vandaag", alt: ["i dag"] }
-  - { sv: "också", nl: "ook" }
-  - { sv: "lite", nl: "een beetje" }
+  - { sv: "en bil", nl: "een auto", def: "bilen", pl: "bilar", ex: "Har ni en **bil**?", exNl: "Hebben jullie een auto?" }
+  - { sv: "ett hus", nl: "een huis", def: "huset", pl: "hus", ex: "Ingrid och Olle bor i ett **hus**.", exNl: "Ingrid en Olle wonen in een huis." }
+  - { sv: "ett barn", nl: "een kind", def: "barnet", pl: "barn", ex: "Ingrid och Olle har två **barn**.", exNl: "Ingrid en Olle hebben twee kinderen." }
+  - { sv: "en hund", nl: "een hond", def: "hunden", pl: "hundar", ex: "Grannen har en **hund**.", exNl: "De buurman heeft een hond." }
+  - { sv: "en katt", nl: "een kat", def: "katten", pl: "katter", ex: "**Katten** heter Sixten.", exNl: "De kat heet Sixten." }
+  - { sv: "ett äpple", nl: "een appel", def: "äpplet", pl: "äpplen", ex: "Nils äter ett **äpple**.", exNl: "Nils eet een appel." }
+  - { sv: "en tidning", nl: "een krant", def: "tidningen", pl: "tidningar", ex: "Olle läser **tidningen** i köket.", exNl: "Olle leest de krant in de keuken." }
+  - { sv: "ett bord", nl: "een tafel", def: "bordet", pl: "bord", ex: "Fleur sitter vid **bordet**.", exNl: "Fleur zit aan de tafel." }
+  - { sv: "en stol", nl: "een stoel", def: "stolen", pl: "stolar", ex: "Nils sitter på en **stol**.", exNl: "Nils zit op een stoel." }
+  - { sv: "en lampa", nl: "een lamp", def: "lampan", pl: "lampor", ex: "Vi köper en **lampa** till köket.", exNl: "We kopen een lamp voor de keuken." }
+  - { sv: "ett kök", nl: "een keuken", def: "köket", pl: "kök", ex: "Fleur dricker kaffe i **köket**.", exNl: "Fleur drinkt koffie in de keuken." }
+  - { sv: "en skola", nl: "een school", def: "skolan", pl: "skolor", ex: "**Skolan** ligger nära huset.", exNl: "De school ligt dicht bij het huis." }
+  - { sv: "ett språk", nl: "een taal", def: "språket", pl: "språk", ex: "Hur många **språk** talar du?", exNl: "Hoeveel talen spreek jij?" }
+  - { sv: "en granne", nl: "een buurman, een buurvrouw", def: "grannen", pl: "grannar", ex: "**Grannen** heter Olle.", exNl: "De buurman heet Olle." }
+  - { sv: "ett sjukhus", nl: "een ziekenhuis", def: "sjukhuset", pl: "sjukhus", ex: "Ingrid jobbar på ett **sjukhus**.", exNl: "Ingrid werkt in een ziekenhuis." }
+  - { sv: "ett namn", nl: "een naam", def: "namnet", pl: "namn", ex: "Mitt **namn** är Fleur.", exNl: "Mijn naam is Fleur." }
+  - { sv: "ett efternamn", nl: "een achternaam", def: "efternamnet", pl: "efternamn", ex: "Vad heter du i **efternamn**?", exNl: "Wat is je achternaam?" }
+  - { sv: "en adress", nl: "een adres", def: "adressen", pl: "adresser", ex: "Vad har du för **adress**?", exNl: "Wat is je adres?" }
+  - { sv: "en lärare", nl: "een leraar, een lerares", def: "läraren", pl: "lärare", ex: "**Läraren** heter Anna.", exNl: "De lerares heet Anna." }
+  - { sv: "en student", nl: "een student", def: "studenten", pl: "studenter", ex: "Är du **student**?", exNl: "Ben jij student?" }
+  - { sv: "ett yrke", nl: "een beroep", def: "yrket", pl: "yrken", ex: "Vad har du för **yrke**?", exNl: "Wat is je beroep?" }
+  - { sv: "en vän", nl: "een vriend, een vriendin", def: "vännen", pl: "vänner", ex: "Olle är en bra **vän**.", exNl: "Olle is een goede vriend." }
+  - { sv: "en kurs", nl: "een cursus", def: "kursen", pl: "kurser", ex: "Fleur går en **kurs** i svenska.", exNl: "Fleur volgt een cursus Zweeds." }
+  - { sv: "en holländare", nl: "een Nederlander", def: "holländaren", pl: "holländare", alt: ["en nederländare"], ex: "Bram är **{holländare|nederländare}**.", exNl: "Bram is Nederlander." }
+  - { sv: "en svensk", nl: "een Zweed", def: "svensken", pl: "svenskar", ex: "Hon pratar som en **svensk**.", exNl: "Zij praat als een Zweed." }
+  - { sv: "en kvinna", nl: "een vrouw", def: "kvinnan", pl: "kvinnor", ex: "Vem är **kvinnan** i köket?", exNl: "Wie is de vrouw in de keuken?" }
+  - { sv: "ett företag", nl: "een bedrijf", def: "företaget", pl: "företag", ex: "Vad heter **företaget**?", exNl: "Hoe heet het bedrijf?" }
+  - { sv: "ett ord", nl: "een woord", def: "ordet", pl: "ord", ex: "Vad betyder **ordet**?", exNl: "Wat betekent het woord?" }
+  - { sv: "en fråga", nl: "een vraag", def: "frågan", pl: "frågor", ex: "Jag har en **fråga**.", exNl: "Ik heb een vraag." }
+  - { sv: "att heta", nl: "heten", ex: "Vad **heter** du?", exNl: "Hoe heet jij?" }
+  - { sv: "att bo", nl: "wonen", ex: "Vi **bor** i Västerås.", exNl: "Wij wonen in Västerås." }
+  - { sv: "att jobba", nl: "werken", alt: ["att arbeta"], ex: "Bram **{jobbar|arbetar}** på ett kontor.", exNl: "Bram werkt op een kantoor." }
+  - { sv: "att tala", nl: "spreken", alt: ["att prata"], ex: "**{Talar|Pratar}** du engelska?", exNl: "Spreek jij Engels?" }
+  - { sv: "att komma", nl: "komen", ex: "Jag **kommer** från Nederländerna.", exNl: "Ik kom uit Nederland." }
+  - { sv: "att läsa", nl: "lezen", ex: "Wilma **läser** en bok.", exNl: "Wilma leest een boek." }
+  - { sv: "att köpa", nl: "kopen", ex: "Var **köper** du kaffe?", exNl: "Waar koop jij koffie?" }
+  - { sv: "att gilla", nl: "leuk vinden", ex: "Jag **gillar** Västerås.", exNl: "Ik vind Västerås leuk." }
+  - { sv: "att vara", nl: "zijn", ex: "Var **är** katten?", exNl: "Waar is de kat?" }
+  - { sv: "att ha", nl: "hebben", ex: "Nils **har** en katt.", exNl: "Nils heeft een kat." }
+  - { sv: "att studera", nl: "studeren", alt: ["att plugga"], ex: "**{Studerar|Pluggar}** du eller jobbar du?", exNl: "Studeer je of werk je?" }
+  - { sv: "att skriva", nl: "schrijven", ex: "Bram **skriver** ett mejl till Olle.", exNl: "Bram schrijft een mail aan Olle." }
+  - { sv: "att känna", nl: "kennen (een persoon)", ex: "**Känner** du Olle?", exNl: "Ken jij Olle?" }
+  - { sv: "att stava", nl: "spellen", ex: "Hur **stavar** du det?", exNl: "Hoe spel je dat?" }
+  - { sv: "att lära sig", nl: "leren (zelf iets leren)", ex: "Fleur och Bram **lär sig** svenska.", exNl: "Fleur en Bram leren Zweeds." }
+  - { sv: "idag", nl: "vandaag", alt: ["i dag"], ex: "Vad gör du **{idag|i dag}**?", exNl: "Wat doe je vandaag?" }
+  - { sv: "också", nl: "ook", ex: "Jag talar **också** engelska.", exNl: "Ik spreek ook Engels." }
+  - { sv: "lite", nl: "een beetje", ex: "Jag talar **lite** svenska.", exNl: "Ik spreek een beetje Zweeds." }
+  - { sv: "svenska", nl: "Zweeds (de taal)", ex: "Ingrid talar **svenska** med Fleur.", exNl: "Ingrid spreekt Zweeds met Fleur." }
+  - { sv: "hej", nl: "hallo, hoi", ex: "**Hej**, jag heter Fleur!", exNl: "Hallo, ik heet Fleur!" }
+  - { sv: "hej då", nl: "doei, dag (bij afscheid)", ex: "**Hej då**, vi ses!", exNl: "Doei, tot ziens!" }
+  - { sv: "tack", nl: "dank je, bedankt", ex: "**Tack** för kaffet!", exNl: "Bedankt voor de koffie!" }
+  - { sv: "ursäkta", nl: "pardon, excuseer", ex: "**Ursäkta**, talar du engelska?", exNl: "Pardon, spreekt u Engels?" }
+  - { sv: "välkommen", nl: "welkom", ex: "**Välkommen** till Västerås!", exNl: "Welkom in Västerås!" }
+  - { sv: "trevligt att träffas", nl: "leuk je te ontmoeten, aangenaam", ex: "Hej Olle, **trevligt att träffas**!", exNl: "Hoi Olle, leuk je te ontmoeten!" }
+  - { sv: "bra", nl: "goed", ex: "Hur mår du? – **Bra**, tack!", exNl: "Hoe gaat het met je? – Goed, dank je!" }
+  - { sv: "gärna", nl: "graag", ex: "Jag dricker **gärna** kaffe.", exNl: "Ik drink graag koffie." }
+  - { sv: "mycket", nl: "veel, erg, heel", ex: "Tack så **mycket**!", exNl: "Heel erg bedankt!" }
+  - { sv: "här", nl: "hier", ex: "Bor du **här**?", exNl: "Woon jij hier?" }
+  - { sv: "där", nl: "daar", ex: "Olle bor **där**.", exNl: "Olle woont daar." }

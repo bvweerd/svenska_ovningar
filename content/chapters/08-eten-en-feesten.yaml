@@ -268,26 +268,66 @@ sections:
           - { id: xmpv, type: gap, topic: possessiv, text: "Tack för maten! ___ köttbullar är de bästa! (jouw)", gaps: [{ answers: ["Dina"], options: ["Din", "Ditt", "Dina"] }] }
 
 vocab:
-  - { sv: "en kräfta", nl: "een rivierkreeft", def: "kräftan" }
-  - { sv: "en kanelbulle", nl: "een kaneelbroodje", def: "kanelbullen" }
-  - { sv: "en tårta", nl: "een taart", def: "tårtan" }
-  - { sv: "ett bröd", nl: "een brood", def: "brödet" }
-  - { sv: "en ost", nl: "een kaas", def: "osten" }
-  - { sv: "ett ägg", nl: "een ei", def: "ägget" }
-  - { sv: "en restaurang", nl: "een restaurant", def: "restaurangen" }
-  - { sv: "en meny", nl: "een menukaart", def: "menyn" }
-  - { sv: "en nota", nl: "een rekening", def: "notan" }
-  - { sv: "en gäst", nl: "een gast", def: "gästen" }
-  - { sv: "ett kylskåp", nl: "een koelkast", def: "kylskåpet", alt: ["en kyl"] }
-  - { sv: "en efterrätt", nl: "een toetje, een dessert", def: "efterrätten" }
-  - { sv: "att tycka", nl: "vinden (mening)" }
-  - { sv: "att tro", nl: "denken, geloven (vermoeden)" }
-  - { sv: "att tänka", nl: "(na)denken, van plan zijn" }
-  - { sv: "att smaka", nl: "proeven, smaken" }
-  - { sv: "att baka", nl: "bakken" }
-  - { sv: "att beställa", nl: "bestellen" }
-  - { sv: "att fika", nl: "koffie drinken met iets lekkers" }
-  - { sv: "god", nl: "lekker" }
-  - { sv: "äcklig", nl: "vies" }
-  - { sv: "mätt", nl: "verzadigd, vol" }
-  - { sv: "hungrig", nl: "hongerig" }
+  - { sv: "en kräfta", nl: "een rivierkreeft", def: "kräftan", pl: "kräftor", ex: "I augusti äter vi **kräftor**.", exNl: "In augustus eten we rivierkreeften." }
+  - { sv: "en kanelbulle", nl: "een kaneelbroodje", def: "kanelbullen", pl: "kanelbullar", ex: "Jag tar en kopp kaffe och en **kanelbulle**.", exNl: "Ik neem een kopje koffie en een kaneelbroodje." }
+  - { sv: "en tårta", nl: "een taart", def: "tårtan", pl: "tårtor", ex: "Mormor bakade en **tårta** till festen.", exNl: "Oma bakte een taart voor het feest." }
+  - { sv: "ett bröd", nl: "een brood", def: "brödet", pl: "bröd", ex: "Kan du skicka **brödet**, tack?", exNl: "Kun je het brood even doorgeven?" }
+  - { sv: "en ost", nl: "een kaas", def: "osten", pl: "ostar", ex: "Jag äter en smörgås med **ost**.", exNl: "Ik eet een boterham met kaas." }
+  - { sv: "ett ägg", nl: "een ei", def: "ägget", pl: "ägg", ex: "Jag kokar två **ägg** till frukost.", exNl: "Ik kook twee eieren voor het ontbijt." }
+  - { sv: "en restaurang", nl: "een restaurant", def: "restaurangen", pl: "restauranger", ex: "Vi åt middag på en italiensk **restaurang**.", exNl: "We aten 's avonds in een Italiaans restaurant." }
+  - { sv: "en meny", nl: "een menukaart", def: "menyn", pl: "menyer", ex: "Kan vi få **menyn**, tack?", exNl: "Mogen we de menukaart, alstublieft?" }
+  - { sv: "en nota", nl: "een rekening", def: "notan", pl: "notor", ex: "Jag betalar **notan** idag.", exNl: "Ik betaal vandaag de rekening." }
+  - { sv: "en gäst", nl: "een gast", def: "gästen", pl: "gäster", ex: "Vi hade tjugo **gäster** på festen.", exNl: "We hadden twintig gasten op het feest." }
+  - { sv: "ett kylskåp", nl: "een koelkast", def: "kylskåpet", pl: "kylskåp", alt: ["en kyl"], ex: "Mjölken står i **{kylskåpet|kylen}**.", exNl: "De melk staat in de koelkast." }
+  - { sv: "en efterrätt", nl: "een toetje, een dessert", def: "efterrätten", pl: "efterrätter", alt: ["en dessert"], ex: "Vad vill du ha till **{efterrätt|dessert}**?", exNl: "Wat wil je als toetje?" }
+  - { sv: "att tycka", nl: "vinden (mening)", ex: "Vad **tycker** du om maten?", exNl: "Wat vind je van het eten?" }
+  - { sv: "att tro", nl: "denken, geloven (vermoeden)", ex: "Jag **tror** att restaurangen är stängd idag.", exNl: "Ik denk dat het restaurant vandaag dicht is." }
+  - { sv: "att tänka", nl: "nadenken, van plan zijn (tänka på = denken aan)", ex: "Jag **tänker** baka en tårta.", exNl: "Ik ben van plan een taart te bakken." }
+  - { sv: "att smaka", nl: "proeven, smaken", ex: "**Smaka** på soppan!", exNl: "Proef de soep eens!" }
+  - { sv: "att baka", nl: "bakken", ex: "Vi **bakade** kanelbullar igår.", exNl: "We bakten gisteren kaneelbroodjes." }
+  - { sv: "att beställa", nl: "bestellen", ex: "Jag skulle vilja **beställa** en pizza.", exNl: "Ik zou graag een pizza willen bestellen." }
+  - { sv: "att fika", nl: "koffie drinken met iets lekkers", ex: "Ska vi **fika** efter jobbet?", exNl: "Zullen we na het werk koffiedrinken?" }
+  - { sv: "god", nl: "lekker", ex: "Soppan är mycket **god**.", exNl: "De soep is erg lekker." }
+  - { sv: "äcklig", nl: "vies", ex: "Den här osten är **äcklig**!", exNl: "Deze kaas is vies!" }
+  - { sv: "mätt", nl: "verzadigd, vol", ex: "Tack, jag är **mätt**.", exNl: "Dank je, ik zit vol." }
+  - { sv: "hungrig", nl: "hongerig", ex: "Är du **hungrig**?", exNl: "Heb je honger?" }
+  - { sv: "en mat", nl: "het eten, voedsel", def: "maten", ex: "**Maten** är klar!", exNl: "Het eten is klaar!" }
+  - { sv: "en kniv", nl: "een mes", def: "kniven", pl: "knivar", ex: "Kan du skicka **kniven**?", exNl: "Kun je het mes even aangeven?" }
+  - { sv: "en gaffel", nl: "een vork", def: "gaffeln", pl: "gafflar", ex: "Vi behöver fyra **gafflar**.", exNl: "We hebben vier vorken nodig." }
+  - { sv: "en mjölk", nl: "melk", def: "mjölken", ex: "Det finns ingen **mjölk** kvar.", exNl: "Er is geen melk meer." }
+  - { sv: "ett vatten", nl: "water", def: "vattnet", ex: "Kan jag få ett glas **vatten**?", exNl: "Mag ik een glas water?" }
+  - { sv: "ett vin", nl: "wijn", def: "vinet", pl: "viner", ex: "Vill du ha rött eller vitt **vin**?", exNl: "Wil je rode of witte wijn?" }
+  - { sv: "en smörgås", nl: "een boterham", def: "smörgåsen", pl: "smörgåsar", ex: "Jag åt två **smörgåsar** till lunch.", exNl: "Ik at twee boterhammen als lunch." }
+  - { sv: "en fisk", nl: "een vis, vis", def: "fisken", pl: "fiskar", ex: "Vi äter **fisk** på fredagar.", exNl: "Op vrijdag eten we vis." }
+  - { sv: "ett kött", nl: "vlees", def: "köttet", ex: "Hon äter inte **kött**.", exNl: "Zij eet geen vlees." }
+  - { sv: "en kyckling", nl: "een kip (als eten), een kuiken", def: "kycklingen", pl: "kycklingar", ex: "Vi grillar **kyckling** ikväll.", exNl: "We grillen vanavond kip." }
+  - { sv: "en potatis", nl: "een aardappel", def: "potatisen", pl: "potatisar", ex: "På midsommar äter vi sill och **{potatis|potatisar}**.", exNl: "Met midzomer eten we haring met aardappelen." }
+  - { sv: "en sallad", nl: "een salade, sla", def: "salladen", pl: "sallader", ex: "Jag tar en **sallad**, tack.", exNl: "Ik neem een salade, graag." }
+  - { sv: "en soppa", nl: "een soep", def: "soppan", pl: "soppor", ex: "**Soppan** är för varm.", exNl: "De soep is te heet." }
+  - { sv: "ett glas", nl: "een glas", def: "glaset", pl: "glas", ex: "Han drack tre **glas** vin.", exNl: "Hij dronk drie glazen wijn." }
+  - { sv: "en tallrik", nl: "een bord", def: "tallriken", pl: "tallrikar", ex: "Hon tar fram fyra **tallrikar**.", exNl: "Zij pakt vier borden." }
+  - { sv: "en servitör", nl: "een ober, een serveerder", def: "servitören", pl: "servitörer", alt: ["en servitris"], ex: "**{Servitören|Servitrisen}** kommer med maten.", exNl: "De ober komt met het eten." }
+  - { sv: "en kock", nl: "een kok", def: "kocken", pl: "kockar", ex: "**Kocken** lagar mat i köket.", exNl: "De kok kookt in de keuken." }
+  - { sv: "en frukt", nl: "fruit, een vrucht", def: "frukten", pl: "frukter", ex: "Barnen äter mycket **frukt**.", exNl: "De kinderen eten veel fruit." }
+  - { sv: "en grönsak", nl: "een groente", def: "grönsaken", pl: "grönsaker", ex: "Du borde äta mer **grönsaker**.", exNl: "Je zou meer groente moeten eten." }
+  - { sv: "ett kalas", nl: "een (verjaardags)feestje", def: "kalaset", pl: "kalas", ex: "Wilma har **kalas** på lördag.", exNl: "Wilma geeft zaterdag een feestje." }
+  - { sv: "en dricks", nl: "een fooi", def: "dricksen", ex: "Vi lämnade tio procent i **dricks**.", exNl: "We gaven tien procent fooi." }
+  - { sv: "en kräftskiva", nl: "een kreeftenfeest", def: "kräftskivan", pl: "kräftskivor", ex: "I augusti har vi **kräftskiva**.", exNl: "In augustus houden we een kreeftenfeest." }
+  - { sv: "att koka", nl: "koken (in water), aan de kook brengen", ex: "Vattnet **kokar**.", exNl: "Het water kookt." }
+  - { sv: "att steka", nl: "braden, bakken (in de pan)", ex: "Pappa **steker** fisk i pannan.", exNl: "Papa bakt vis in de pan." }
+  - { sv: "att skära", nl: "snijden", ex: "Kan du **skära** brödet?", exNl: "Kun je het brood snijden?" }
+  - { sv: "att duka", nl: "de tafel dekken", ex: "Vi **dukar** fint för gästerna.", exNl: "We dekken de tafel mooi voor de gasten." }
+  - { sv: "att bjuda", nl: "trakteren (bjuda på), uitnodigen", ex: "Jag **bjuder** på kaffe!", exNl: "Ik trakteer op koffie!" }
+  - { sv: "att dela", nl: "delen", ex: "Ska vi **dela** på notan?", exNl: "Zullen we de rekening delen?" }
+  - { sv: "att skåla", nl: "proosten", ex: "Vi **skålar** för Anna!", exNl: "We proosten op Anna!" }
+  - { sv: "att servera", nl: "serveren", ex: "Restaurangen **serverar** lunch mellan elva och två.", exNl: "Het restaurant serveert lunch tussen elf en twee." }
+  - { sv: "skål", nl: "proost!", ex: "**Skål** och välkomna allihop!", exNl: "Proost en welkom allemaal!" }
+  - { sv: "smaklig måltid", nl: "eet smakelijk", ex: "Maten är klar, **smaklig måltid**!", exNl: "Het eten is klaar, eet smakelijk!" }
+  - { sv: "tack för maten", nl: "bedankt voor het eten", ex: "**Tack för maten**, det var jättegott!", exNl: "Bedankt voor het eten, het was heel lekker!" }
+  - { sv: "söt", nl: "zoet, schattig", ex: "Tårtan är väldigt **söt**.", exNl: "De taart is erg zoet." }
+  - { sv: "stark", nl: "pittig, sterk", ex: "Maten var väldigt **stark**.", exNl: "Het eten was erg pittig." }
+  - { sv: "färsk", nl: "vers", ex: "Vi köpte **färsk** fisk i hamnen.", exNl: "We kochten verse vis in de haven." }
+  - { sv: "törstig", nl: "dorstig", ex: "Jag är så **törstig**!", exNl: "Ik heb zo'n dorst!" }
+  - { sv: "vegetarisk", nl: "vegetarisch", ex: "Har ni **vegetarisk** mat?", exNl: "Hebben jullie vegetarisch eten?" }
+  - { sv: "lagom", nl: "precies goed, niet te veel en niet te weinig", ex: "Kaffet är **lagom** varmt.", exNl: "De koffie is precies warm genoeg." }
+  - { sv: "till slut", nl: "uiteindelijk, tot slot", ex: "**Till slut** åt vi tårta.", exNl: "Tot slot aten we taart." }

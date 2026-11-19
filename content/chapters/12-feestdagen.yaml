@@ -340,26 +340,58 @@ sections:
           - { id: 9cbq, type: translate, topic: komparation, prompt: "Dit is de mooiste dag van het jaar.", answers: ["{Det här|Detta} är den {vackraste|finaste|bästa} dagen på året."], feedback: [{ contains: "i året", tip: "Van het jaar: på året." }] }
 
 vocab:
-  - { sv: "en jul", nl: "de kerst", def: "julen" }
-  - { sv: "ett ljus", nl: "een kaars, een licht", def: "ljuset" }
-  - { sv: "en julklapp", nl: "een kerstcadeau", def: "julklappen" }
-  - { sv: "en gran", nl: "een spar, een kerstboom", def: "granen" }
-  - { sv: "en stjärna", nl: "een ster", def: "stjärnan" }
-  - { sv: "en tomte", nl: "een kabouter, een kerstman", def: "tomten" }
-  - { sv: "en pepparkaka", nl: "een gemberkoekje", def: "pepparkakan" }
-  - { sv: "en skinka", nl: "een ham", def: "skinkan" }
-  - { sv: "ett nyår", nl: "het nieuwjaar", def: "nyåret" }
-  - { sv: "att önska", nl: "wensen" }
-  - { sv: "att sticka", nl: "breien" }
-  - { sv: "att pynta", nl: "versieren" }
-  - { sv: "att tända", nl: "aansteken" }
-  - { sv: "vacker", nl: "mooi" }
-  - { sv: "ny", nl: "nieuw" }
-  - { sv: "gammal", nl: "oud" }
-  - { sv: "liten", nl: "klein" }
-  - { sv: "stor", nl: "groot" }
-  - { sv: "röd", nl: "rood" }
-  - { sv: "vit", nl: "wit" }
-  - { sv: "mörk", nl: "donker" }
-  - { sv: "ljus", nl: "licht (van kleur)" }
-  - { sv: "mysig", nl: "gezellig" }
+  - { sv: "en jul", nl: "de kerst", def: "julen", pl: "jular", ex: "Vad gör ni i **jul**?", exNl: "Wat doen jullie met kerst?" }
+  - { sv: "ett ljus", nl: "een kaars, een licht", def: "ljuset", pl: "ljus", ex: "Vi tänder **ljus** i fönstret.", exNl: "We steken kaarsen aan bij het raam." }
+  - { sv: "en julklapp", nl: "een kerstcadeau", def: "julklappen", pl: "julklappar", ex: "Barnen öppnar sina **julklappar**.", exNl: "De kinderen maken hun kerstcadeaus open." }
+  - { sv: "en gran", nl: "een spar, een kerstboom", def: "granen", pl: "granar", alt: ["en julgran"], ex: "Vi köper en **{gran|julgran}** på torget.", exNl: "We kopen een kerstboom op de markt." }
+  - { sv: "en stjärna", nl: "een ster", def: "stjärnan", pl: "stjärnor", ex: "Det sitter en **stjärna** i toppen på granen.", exNl: "Er zit een ster in de top van de kerstboom." }
+  - { sv: "en tomte", nl: "een kabouter, een kerstman", def: "tomten", pl: "tomtar", ex: "**Tomten** kommer på julafton.", exNl: "De kerstman komt op kerstavond." }
+  - { sv: "en pepparkaka", nl: "een gemberkoekje", def: "pepparkakan", pl: "pepparkakor", ex: "Vi bakar **pepparkakor** i advent.", exNl: "In de adventstijd bakken we gemberkoekjes." }
+  - { sv: "en skinka", nl: "een ham", def: "skinkan", pl: "skinkor", ex: "**Skinkan** står på julbordet.", exNl: "De ham staat op het kerstbuffet." }
+  - { sv: "ett nyår", nl: "het nieuwjaar", def: "nyåret", pl: "nyår", ex: "Vi firar **nyår** hos mina föräldrar.", exNl: "We vieren oud en nieuw bij mijn ouders." }
+  - { sv: "att önska", nl: "wensen", ex: "Vad **önskar** du dig i julklapp?", exNl: "Wat wens jij je als kerstcadeau?" }
+  - { sv: "att sticka", nl: "breien", ex: "Mormor **stickar** en tröja till mig.", exNl: "Oma breit een trui voor mij." }
+  - { sv: "att pynta", nl: "versieren", ex: "Vi **pyntar** huset till jul.", exNl: "We versieren het huis voor kerst." }
+  - { sv: "att tända", nl: "aansteken", ex: "Vi **tänder** ett ljus varje söndag i advent.", exNl: "In de advent steken we elke zondag een kaars aan." }
+  - { sv: "vacker", nl: "mooi", ex: "Granen är så **vacker**!", exNl: "De kerstboom is zo mooi!" }
+  - { sv: "ny", nl: "nieuw", ex: "Snart börjar ett **nytt** år.", exNl: "Binnenkort begint een nieuw jaar." }
+  - { sv: "gammal", nl: "oud", ex: "Vi bor i ett **gammalt** hus.", exNl: "We wonen in een oud huis." }
+  - { sv: "liten", nl: "klein", ex: "I år har vi en **liten** gran.", exNl: "Dit jaar hebben we een kleine kerstboom." }
+  - { sv: "stor", nl: "groot", ex: "Den **stora** granen står på torget.", exNl: "De grote kerstboom staat op het plein." }
+  - { sv: "röd", nl: "rood", ex: "Tomten har en **röd** luva.", exNl: "De kerstman heeft een rode muts." }
+  - { sv: "vit", nl: "wit", ex: "Lucia har en lång **vit** klänning.", exNl: "Lucia draagt een lange witte jurk." }
+  - { sv: "mörk", nl: "donker", ex: "I december är det **mörkt** på eftermiddagen.", exNl: "In december is het 's middags donker." }
+  - { sv: "ljus", nl: "licht (van kleur)", ex: "Hon har **ljust** hår.", exNl: "Zij heeft licht haar." }
+  - { sv: "mysig", nl: "gezellig", ex: "Det är så **mysigt** med levande ljus.", exNl: "Het is zo gezellig met echte kaarsen." }
+  - { sv: "en advent", nl: "de advent (de vier weken voor kerst)", def: "adventen", ex: "Fyra söndagar före jul börjar **{advent|adventen}**.", exNl: "Vier zondagen voor kerst begint de advent." }
+  - { sv: "en adventskalender", nl: "een adventskalender", def: "adventskalendern", pl: "adventskalendrar", ex: "Barnen öppnar en lucka i **adventskalendern**.", exNl: "De kinderen doen een luikje open in de adventskalender." }
+  - { sv: "en julafton", nl: "kerstavond (24 december)", def: "julaftonen", pl: "julaftnar", ex: "Vi öppnar julklapparna på **julafton**.", exNl: "Op kerstavond maken we de cadeaus open." }
+  - { sv: "en nyårsafton", nl: "oudejaarsavond", def: "nyårsaftonen", pl: "nyårsaftnar", ex: "Vad gör du på **nyårsafton**?", exNl: "Wat doe je op oudejaarsavond?" }
+  - { sv: "ett luciatåg", nl: "een luciaoptocht", def: "luciatåget", pl: "luciatåg", ex: "Barnen går i **{luciatåget|luciatåg}**.", exNl: "De kinderen lopen mee in de luciaoptocht." }
+  - { sv: "ett julbord", nl: "een kerstbuffet", def: "julbordet", pl: "julbord", ex: "Vi äter **julbord** på restaurang.", exNl: "We eten een kerstbuffet in een restaurant." }
+  - { sv: "en glögg", nl: "glühwein (warme kruidenwijn)", def: "glöggen", ex: "Vill du ha lite **glögg**?", exNl: "Wil je wat glühwein?" }
+  - { sv: "en lussekatt", nl: "een saffraanbroodje", def: "lussekatten", pl: "lussekatter", ex: "Vi bakar **lussekatter** till Lucia.", exNl: "We bakken saffraanbroodjes voor Lucia." }
+  - { sv: "en påsk", nl: "Pasen", def: "påsken", pl: "påskar", ex: "Vi åker till mormor i **påsk**.", exNl: "Met Pasen gaan we naar oma." }
+  - { sv: "ett påskägg", nl: "een paasei", def: "påskägget", pl: "påskägg", ex: "Barnen letar efter **påskägg** i trädgården.", exNl: "De kinderen zoeken paaseieren in de tuin." }
+  - { sv: "en kyrka", nl: "een kerk", def: "kyrkan", pl: "kyrkor", ex: "På juldagen går vi i **kyrkan**.", exNl: "Op eerste kerstdag gaan we naar de kerk." }
+  - { sv: "ett fyrverkeri", nl: "vuurwerk", def: "fyrverkeriet", pl: "fyrverkerier", ex: "Vid midnatt tittar vi på **{fyrverkeriet|fyrverkerierna}**.", exNl: "Om middernacht kijken we naar het vuurwerk." }
+  - { sv: "ett julkort", nl: "een kerstkaart", def: "julkortet", pl: "julkort", ex: "Jag skriver **julkort** till mina vänner.", exNl: "Ik schrijf kerstkaarten aan mijn vrienden." }
+  - { sv: "en krans", nl: "een krans", def: "kransen", pl: "kransar", ex: "Lucia har en **krans** med ljus i håret.", exNl: "Lucia heeft een krans met kaarsjes in haar haar." }
+  - { sv: "en tradition", nl: "een traditie", def: "traditionen", pl: "traditioner", ex: "Det är en gammal svensk **tradition**.", exNl: "Het is een oude Zweedse traditie." }
+  - { sv: "en helgdag", nl: "een feestdag (officiële vrije dag)", def: "helgdagen", pl: "helgdagar", ex: "Juldagen är en **helgdag** i Sverige.", exNl: "Eerste kerstdag is in Zweden een feestdag." }
+  - { sv: "ett paket", nl: "een pakje, een pakket", def: "paketet", pl: "paket", ex: "Vem är **paketet** till?", exNl: "Voor wie is het pakje?" }
+  - { sv: "en ängel", nl: "een engel", def: "ängeln", pl: "änglar", ex: "Det hänger små **änglar** i granen.", exNl: "Er hangen kleine engeltjes in de kerstboom." }
+  - { sv: "ett nyårslöfte", nl: "een goed voornemen (voor het nieuwe jaar)", def: "nyårslöftet", pl: "nyårslöften", ex: "Mitt **nyårslöfte** är att träna mer.", exNl: "Mijn goede voornemen is meer sporten." }
+  - { sv: "en julsång", nl: "een kerstlied", def: "julsången", pl: "julsånger", ex: "Vi sjunger **julsånger** runt granen.", exNl: "We zingen kerstliedjes rond de kerstboom." }
+  - { sv: "att slå in", nl: "inpakken (een cadeau)", ex: "Vi **slår in** julklapparna ikväll.", exNl: "Vanavond pakken we de kerstcadeaus in." }
+  - { sv: "att klä granen", nl: "de kerstboom optuigen", alt: ["att klä julgranen"], ex: "Barnen hjälper till att **{klä granen|klä julgranen}**.", exNl: "De kinderen helpen de kerstboom op te tuigen." }
+  - { sv: "att gratulera", nl: "feliciteren", ex: "Vi **gratulerar** dig på födelsedagen!", exNl: "We feliciteren je met je verjaardag!" }
+  - { sv: "att längta", nl: "verlangen (längta efter = verlangen naar)", ex: "Barnen **längtar** efter julen.", exNl: "De kinderen verlangen naar kerst." }
+  - { sv: "att tacka", nl: "bedanken", ex: "Vi **tackar** för maten.", exNl: "We bedanken voor het eten." }
+  - { sv: "God jul!", nl: "Vrolijk kerstfeest!", ex: "**God jul** och gott nytt år!", exNl: "Vrolijk kerstfeest en een gelukkig nieuwjaar!" }
+  - { sv: "Gott nytt år!", nl: "Gelukkig nieuwjaar!", ex: "**Gott nytt år**, allihop!", exNl: "Gelukkig nieuwjaar, allemaal!" }
+  - { sv: "fin", nl: "fijn, mooi, netjes", ex: "Vilken **fin** gran ni har!", exNl: "Wat hebben jullie een mooie kerstboom!" }
+  - { sv: "härlig", nl: "heerlijk", ex: "Vilken **härlig** dag!", exNl: "Wat een heerlijke dag!" }
+  - { sv: "lång", nl: "lang", ex: "I december är nätterna **längre** än dagarna.", exNl: "In december zijn de nachten langer dan de dagen." }
+  - { sv: "tung", nl: "zwaar", ex: "Paketet är ganska **tungt**.", exNl: "Het pakje is vrij zwaar." }
+  - { sv: "lätt", nl: "makkelijk, licht (van gewicht)", ex: "Det är **lätt** att baka pepparkakor.", exNl: "Het is makkelijk om gemberkoekjes te bakken." }

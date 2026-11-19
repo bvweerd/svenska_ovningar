@@ -271,28 +271,64 @@ sections:
           - { id: 3deu, type: gap, topic: tidsuttryck, text: "På lördag ___ (åka) vi till Stockholm.", gaps: [{ answers: ["åker"] }] }
 
 vocab:
-  - { sv: "en hobby", nl: "een hobby", def: "hobbyn" }
-  - { sv: "en bio", nl: "een bioscoop", def: "bion" }
-  - { sv: "en kompis", nl: "een vriend(in), een maat", def: "kompisen" }
-  - { sv: "en sjö", nl: "een meer", def: "sjön" }
-  - { sv: "en skog", nl: "een bos", def: "skogen" }
-  - { sv: "en cykel", nl: "een fiets", def: "cykeln" }
-  - { sv: "en konsert", nl: "een concert", def: "konserten" }
-  - { sv: "en kör", nl: "een koor", def: "kören" }
-  - { sv: "ett museum", nl: "een museum", def: "museet" }
-  - { sv: "ett kafé", nl: "een café", def: "kaféet" }
-  - { sv: "att simma", nl: "zwemmen" }
-  - { sv: "att cykla", nl: "fietsen" }
-  - { sv: "att springa", nl: "hardlopen, rennen" }
-  - { sv: "att spela", nl: "spelen (spel, sport, instrument)" }
-  - { sv: "att fiska", nl: "vissen" }
-  - { sv: "att laga mat", nl: "koken" }
-  - { sv: "att träffa", nl: "ontmoeten, afspreken met" }
-  - { sv: "att sjunga", nl: "zingen" }
-  - { sv: "att dansa", nl: "dansen" }
-  - { sv: "att tycka om", nl: "houden van" }
-  - { sv: "alltid", nl: "altijd" }
-  - { sv: "ofta", nl: "vaak" }
-  - { sv: "ibland", nl: "soms" }
-  - { sv: "sällan", nl: "zelden" }
-  - { sv: "aldrig", nl: "nooit" }
+  - { sv: "en hobby", nl: "een hobby", def: "hobbyn", pl: "hobbyer", ex: "Vad har du för **hobbyer**?", exNl: "Wat voor hobby's heb jij?" }
+  - { sv: "en bio", nl: "een bioscoop", def: "bion", pl: "bior", ex: "Vi går på **{bio|bion}** ikväll.", exNl: "We gaan vanavond naar de bioscoop." }
+  - { sv: "en kompis", nl: "een maat, een vriend(in)", def: "kompisen", pl: "kompisar", ex: "Wilma har många **kompisar**.", exNl: "Wilma heeft veel vrienden." }
+  - { sv: "en sjö", nl: "een meer", def: "sjön", pl: "sjöar", ex: "Vi simmar i **sjön**.", exNl: "We zwemmen in het meer." }
+  - { sv: "en skog", nl: "een bos", def: "skogen", pl: "skogar", ex: "Vi promenerar i **skogen**.", exNl: "We wandelen in het bos." }
+  - { sv: "en cykel", nl: "een fiets", def: "cykeln", pl: "cyklar", ex: "Nils har en ny **cykel**.", exNl: "Nils heeft een nieuwe fiets." }
+  - { sv: "en konsert", nl: "een concert", def: "konserten", pl: "konserter", ex: "Vi ska på en **konsert** på lördag.", exNl: "We gaan zaterdag naar een concert." }
+  - { sv: "en kör", nl: "een koor", def: "kören", pl: "körer", ex: "Ingrid sjunger i en **kör**.", exNl: "Ingrid zingt in een koor." }
+  - { sv: "ett museum", nl: "een museum", def: "museet", pl: "museer", ex: "Vi går på **museum** på söndag.", exNl: "We gaan zondag naar een museum." }
+  - { sv: "ett kafé", nl: "een café", def: "kaféet", pl: "kaféer", alt: ["ett café"], ex: "Vi dricker kaffe på ett **{kafé|café}**.", exNl: "We drinken koffie in een café." }
+  - { sv: "en fritid", nl: "vrije tijd", def: "fritiden", ex: "Vad gör du på **fritiden**?", exNl: "Wat doe jij in je vrije tijd?" }
+  - { sv: "ett intresse", nl: "een interesse", def: "intresset", pl: "intressen", ex: "Vi har samma **intressen**.", exNl: "We hebben dezelfde interesses." }
+  - { sv: "en film", nl: "een film", def: "filmen", pl: "filmer", ex: "Vi tittar på en **film** ikväll.", exNl: "We kijken vanavond een film." }
+  - { sv: "en serie", nl: "een serie (op tv)", def: "serien", pl: "serier", ex: "Jag tittar på en ny **serie**.", exNl: "Ik kijk naar een nieuwe serie." }
+  - { sv: "en fotboll", nl: "voetbal, een voetbal", def: "fotbollen", pl: "fotbollar", ex: "Nils spelar **fotboll** på lördagar.", exNl: "Nils voetbalt op zaterdag." }
+  - { sv: "en match", nl: "een wedstrijd", def: "matchen", pl: "matcher", ex: "Vi tittar på **matchen** ikväll.", exNl: "We kijken vanavond naar de wedstrijd." }
+  - { sv: "ett lag", nl: "een team, een ploeg", def: "laget", pl: "lag", ex: "Nils spelar i samma **lag** som Erik.", exNl: "Nils speelt in hetzelfde team als Erik." }
+  - { sv: "ett spel", nl: "een spel, een spelletje", def: "spelet", pl: "spel", ex: "Ska vi spela ett **spel**?", exNl: "Zullen we een spelletje doen?" }
+  - { sv: "en gitarr", nl: "een gitaar", def: "gitarren", pl: "gitarrer", ex: "Wilma spelar **gitarr**.", exNl: "Wilma speelt gitaar." }
+  - { sv: "ett piano", nl: "een piano", def: "pianot", pl: "pianon", ex: "Nils spelar **piano**.", exNl: "Nils speelt piano." }
+  - { sv: "en låt", nl: "een liedje, een nummer", def: "låten", pl: "låtar", ex: "Vilken **låt** sjunger ni?", exNl: "Welk liedje zingen jullie?" }
+  - { sv: "ett gym", nl: "een sportschool", def: "gymmet", pl: "gym", ex: "Hon tränar på **{gymmet|gym}** tre gånger i veckan.", exNl: "Zij traint drie keer per week in de sportschool." }
+  - { sv: "en simhall", nl: "een zwembad (overdekt)", def: "simhallen", pl: "simhallar", ex: "**Simhallen** öppnar klockan sju.", exNl: "Het zwembad gaat om zeven uur open." }
+  - { sv: "en teater", nl: "een theater, een schouwburg", def: "teatern", pl: "teatrar", ex: "Ingrid går ofta på **{teater|teatern}**.", exNl: "Ingrid gaat vaak naar het theater." }
+  - { sv: "en utställning", nl: "een tentoonstelling", def: "utställningen", pl: "utställningar", ex: "**Utställningen** på museet är bra.", exNl: "De tentoonstelling in het museum is goed." }
+  - { sv: "ett bibliotek", nl: "een bibliotheek", def: "biblioteket", pl: "bibliotek", ex: "Jag lånar böcker på **biblioteket**.", exNl: "Ik leen boeken in de bibliotheek." }
+  - { sv: "en förening", nl: "een vereniging, een club", def: "föreningen", pl: "föreningar", ex: "Olle är med i en **förening**.", exNl: "Olle is lid van een vereniging." }
+  - { sv: "en promenad", nl: "een wandeling", def: "promenaden", pl: "promenader", ex: "Vi tar en **promenad** efter middagen.", exNl: "We maken na het eten een wandeling." }
+  - { sv: "att simma", nl: "zwemmen", ex: "Nils **simmar** varje tisdag.", exNl: "Nils zwemt elke dinsdag." }
+  - { sv: "att cykla", nl: "fietsen", ex: "Vi **cyklar** till sjön.", exNl: "We fietsen naar het meer." }
+  - { sv: "att springa", nl: "hardlopen, rennen", ex: "Olle **springer** fem kilometer.", exNl: "Olle loopt vijf kilometer hard." }
+  - { sv: "att spela", nl: "spelen (spel, sport, instrument)", ex: "**Spelar** du schack?", exNl: "Speel jij schaak?" }
+  - { sv: "att fiska", nl: "vissen", ex: "Olle **fiskar** ofta i sjön.", exNl: "Olle vist vaak in het meer." }
+  - { sv: "att laga mat", nl: "koken", ex: "Bram **lagar mat** på helgen.", exNl: "Bram kookt in het weekend." }
+  - { sv: "att träffa", nl: "ontmoeten, afspreken met", ex: "Jag **träffar** Ingrid på kaféet.", exNl: "Ik spreek met Ingrid af in het café." }
+  - { sv: "att sjunga", nl: "zingen", ex: "Wilma **sjunger** i duschen.", exNl: "Wilma zingt onder de douche." }
+  - { sv: "att dansa", nl: "dansen", ex: "**Dansar** du tango?", exNl: "Dans jij tango?" }
+  - { sv: "att tycka om", nl: "houden van", ex: "Jag **tycker om** att läsa.", exNl: "Ik houd van lezen." }
+  - { sv: "att åka skidor", nl: "skiën", ex: "Vi **åker skidor** varje vinter.", exNl: "We skiën elke winter." }
+  - { sv: "att åka skridskor", nl: "schaatsen", ex: "Barnen **åker skridskor** på sjön.", exNl: "De kinderen schaatsen op het meer." }
+  - { sv: "att rita", nl: "tekenen", ex: "Nils **ritar** en katt.", exNl: "Nils tekent een kat." }
+  - { sv: "att fotografera", nl: "fotograferen", ex: "Bram **fotograferar** gärna.", exNl: "Bram fotografeert graag." }
+  - { sv: "att vinna", nl: "winnen", ex: "Vem **vinner** matchen?", exNl: "Wie wint de wedstrijd?" }
+  - { sv: "att förlora", nl: "verliezen (een wedstrijd)", ex: "Ibland **förlorar** vi.", exNl: "Soms verliezen we." }
+  - { sv: "att koppla av", nl: "ontspannen", ex: "Jag **kopplar av** med en bok.", exNl: "Ik ontspan met een boek." }
+  - { sv: "att öva", nl: "oefenen", ex: "Wilma **övar** på gitarren varje dag.", exNl: "Wilma oefent elke dag op haar gitaar." }
+  - { sv: "alltid", nl: "altijd", ex: "Olle dricker **alltid** kaffe på morgonen.", exNl: "Olle drinkt 's ochtends altijd koffie." }
+  - { sv: "ofta", nl: "vaak", ex: "Vi äter **ofta** pizza på fredagar.", exNl: "Op vrijdag eten we vaak pizza." }
+  - { sv: "ibland", nl: "soms", ex: "**Ibland** spelar vi kort.", exNl: "Soms spelen we kaart." }
+  - { sv: "sällan", nl: "zelden", ex: "Jag tittar **sällan** på tv.", exNl: "Ik kijk zelden tv." }
+  - { sv: "aldrig", nl: "nooit", ex: "Bram dansar **aldrig**.", exNl: "Bram danst nooit." }
+  - { sv: "oftast", nl: "meestal", alt: ["för det mesta", "vanligtvis"], ex: "**{Oftast|För det mesta|Vanligtvis}** tränar jag på morgonen.", exNl: "Meestal sport ik 's ochtends." }
+  - { sv: "kul", nl: "leuk", alt: ["rolig"], ex: "Det är **{kul|roligt}** att dansa!", exNl: "Dansen is leuk!" }
+  - { sv: "rolig", nl: "grappig, leuk", ex: "Filmen är väldigt **rolig**.", exNl: "De film is heel grappig." }
+  - { sv: "tråkig", nl: "saai", ex: "Matchen är **tråkig**.", exNl: "De wedstrijd is saai." }
+  - { sv: "intresserad", nl: "geïnteresseerd", ex: "Bram är **intresserad** av konst.", exNl: "Bram is geïnteresseerd in kunst." }
+  - { sv: "duktig", nl: "knap, goed (in iets)", ex: "Wilma är **duktig** på att sjunga.", exNl: "Wilma kan goed zingen." }
+  - { sv: "hellre", nl: "liever", ex: "Jag vill **hellre** gå på bio.", exNl: "Ik wil liever naar de bioscoop." }
+  - { sv: "helst", nl: "het liefst", ex: "Vad gör du **helst** på helgen?", exNl: "Wat doe jij in het weekend het liefst?" }
+  - { sv: "tillsammans", nl: "samen", ex: "Vi spelar fotboll **tillsammans**.", exNl: "We voetballen samen." }
+  - { sv: "ensam", nl: "alleen (zonder anderen)", ex: "Olle fiskar gärna **{ensam|själv}**.", exNl: "Olle vist graag alleen." }

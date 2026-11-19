@@ -285,26 +285,58 @@ sections:
           - { id: ug9b, type: mc, topic: perfekt-preteritum, prompt: "Welke zin is goed?", options: ["Vi flyttade hit för två år sedan.", "Vi har flyttat hit för två år sedan.", "Vi flyttar hit för två år sedan."], answer: 0, tip: "för två år sedan is een bepaald moment: preteritum." }
 
 vocab:
-  - { sv: "en lägenhet", nl: "een appartement", def: "lägenheten" }
-  - { sv: "ett rum", nl: "een kamer", def: "rummet" }
-  - { sv: "ett vardagsrum", nl: "een woonkamer", def: "vardagsrummet" }
-  - { sv: "ett sovrum", nl: "een slaapkamer", def: "sovrummet" }
-  - { sv: "ett badrum", nl: "een badkamer", def: "badrummet" }
-  - { sv: "en balkong", nl: "een balkon", def: "balkongen" }
-  - { sv: "en soffa", nl: "een bank", def: "soffan" }
-  - { sv: "en säng", nl: "een bed", def: "sängen" }
-  - { sv: "en bokhylla", nl: "een boekenkast", def: "bokhyllan" }
-  - { sv: "en matta", nl: "een tapijt, een kleed", def: "mattan" }
-  - { sv: "en vägg", nl: "een muur", def: "väggen" }
-  - { sv: "en tavla", nl: "een schilderij", def: "tavlan" }
-  - { sv: "en våning", nl: "een verdieping", def: "våningen" }
-  - { sv: "en hyra", nl: "de huur", def: "hyran" }
-  - { sv: "att flytta", nl: "verhuizen" }
-  - { sv: "att städa", nl: "schoonmaken, opruimen" }
-  - { sv: "att diska", nl: "afwassen" }
-  - { sv: "att leta efter", nl: "zoeken naar" }
-  - { sv: "att sälja", nl: "verkopen" }
-  - { sv: "eftersom", nl: "omdat" }
-  - { sv: "medan", nl: "terwijl" }
-  - { sv: "innan", nl: "voordat" }
-  - { sv: "fastän", nl: "hoewel", alt: ["fast"] }
+  - { sv: "en lägenhet", nl: "een appartement", def: "lägenheten", pl: "lägenheter", ex: "Vi bor i en **lägenhet** i centrum.", exNl: "We wonen in een appartement in het centrum." }
+  - { sv: "ett rum", nl: "een kamer", def: "rummet", pl: "rum", ex: "Lägenheten har tre **rum** och kök.", exNl: "Het appartement heeft drie kamers en een keuken." }
+  - { sv: "ett vardagsrum", nl: "een woonkamer", def: "vardagsrummet", pl: "vardagsrum", ex: "Vi tittar på tv i **vardagsrummet**.", exNl: "We kijken tv in de woonkamer." }
+  - { sv: "ett sovrum", nl: "een slaapkamer", def: "sovrummet", pl: "sovrum", ex: "Huset har två **sovrum**.", exNl: "Het huis heeft twee slaapkamers." }
+  - { sv: "ett badrum", nl: "een badkamer", def: "badrummet", pl: "badrum", ex: "Tandborsten ligger i **badrummet**.", exNl: "De tandenborstel ligt in de badkamer." }
+  - { sv: "en balkong", nl: "een balkon", def: "balkongen", pl: "balkonger", ex: "Vi dricker kaffe på **balkongen**.", exNl: "We drinken koffie op het balkon." }
+  - { sv: "en soffa", nl: "een bank (om op te zitten)", def: "soffan", pl: "soffor", ex: "Katten sover i **soffan**.", exNl: "De kat slaapt op de bank." }
+  - { sv: "en säng", nl: "een bed", def: "sängen", pl: "sängar", ex: "Hotellrummet har två **sängar**.", exNl: "De hotelkamer heeft twee bedden." }
+  - { sv: "en bokhylla", nl: "een boekenkast", def: "bokhyllan", pl: "bokhyllor", ex: "Böckerna står i **bokhyllan**.", exNl: "De boeken staan in de boekenkast." }
+  - { sv: "en matta", nl: "een tapijt, een kleed", def: "mattan", pl: "mattor", ex: "Vi har en **matta** i hallen.", exNl: "We hebben een kleed in de gang." }
+  - { sv: "en vägg", nl: "een muur", def: "väggen", pl: "väggar", ex: "Tavlan hänger på **väggen**.", exNl: "Het schilderij hangt aan de muur." }
+  - { sv: "en tavla", nl: "een schilderij", def: "tavlan", pl: "tavlor", ex: "Hon målar **tavlor** på helgerna.", exNl: "Zij schildert in het weekend schilderijen." }
+  - { sv: "en våning", nl: "een verdieping", def: "våningen", pl: "våningar", ex: "Vi bor på tredje **våningen**.", exNl: "We wonen op de derde verdieping." }
+  - { sv: "en hyra", nl: "de huur", def: "hyran", pl: "hyror", ex: "**Hyran** är 8 000 kronor i månaden.", exNl: "De huur is 8000 kronen per maand." }
+  - { sv: "att flytta", nl: "verhuizen", ex: "Vi **flyttade** till Uppsala förra året.", exNl: "Vorig jaar verhuisden we naar Uppsala." }
+  - { sv: "att städa", nl: "schoonmaken, opruimen", ex: "Jag **städar** lägenheten på lördagar.", exNl: "Op zaterdag maak ik het appartement schoon." }
+  - { sv: "att diska", nl: "afwassen", ex: "Vem **diskar** idag?", exNl: "Wie wast er vandaag af?" }
+  - { sv: "att leta efter", nl: "zoeken naar", ex: "Jag **letar efter** mina nycklar.", exNl: "Ik zoek mijn sleutels." }
+  - { sv: "att sälja", nl: "verkopen", ex: "De **säljer** sitt hus.", exNl: "Zij verkopen hun huis." }
+  - { sv: "eftersom", nl: "omdat", ex: "**Eftersom** lägenheten är för liten flyttar vi.", exNl: "Omdat het appartement te klein is, verhuizen we." }
+  - { sv: "medan", nl: "terwijl", ex: "Jag lyssnar på radio **medan** jag diskar.", exNl: "Ik luister naar de radio terwijl ik afwas." }
+  - { sv: "innan", nl: "voordat", ex: "Vi städar **innan** gästerna kommer.", exNl: "We maken schoon voordat de gasten komen." }
+  - { sv: "fastän", nl: "hoewel", alt: ["fast", "trots att"], ex: "Huset är billigt **{fastän|fast|trots att}** det är stort.", exNl: "Het huis is goedkoop, hoewel het groot is." }
+  - { sv: "en hall", nl: "een hal, een gang", def: "hallen", pl: "hallar", ex: "Skorna står i **hallen**.", exNl: "De schoenen staan in de gang." }
+  - { sv: "en toalett", nl: "een wc, een toilet", def: "toaletten", pl: "toaletter", alt: ["en toa"], ex: "Ursäkta, var är **{toaletten|toan}**?", exNl: "Pardon, waar is de wc?" }
+  - { sv: "ett golv", nl: "een vloer", def: "golvet", pl: "golv", ex: "Barnen leker på **golvet**.", exNl: "De kinderen spelen op de vloer." }
+  - { sv: "ett tak", nl: "een plafond, een dak", def: "taket", pl: "tak", ex: "Lampan hänger i **taket**.", exNl: "De lamp hangt aan het plafond." }
+  - { sv: "en trappa", nl: "een trap", def: "trappan", pl: "trappor", ex: "Jag tar **{trappan|trapporna}** i stället för hissen.", exNl: "Ik neem de trap in plaats van de lift." }
+  - { sv: "en hiss", nl: "een lift", def: "hissen", pl: "hissar", ex: "Huset har ingen **hiss**.", exNl: "Het gebouw heeft geen lift." }
+  - { sv: "en spis", nl: "een fornuis, een kookplaat", def: "spisen", pl: "spisar", ex: "Maten står på **spisen**.", exNl: "Het eten staat op het fornuis." }
+  - { sv: "en diskmaskin", nl: "een vaatwasser", def: "diskmaskinen", pl: "diskmaskiner", ex: "Har ni en **diskmaskin**?", exNl: "Hebben jullie een vaatwasser?" }
+  - { sv: "en tvättmaskin", nl: "een wasmachine", def: "tvättmaskinen", pl: "tvättmaskiner", ex: "**Tvättmaskinen** står i badrummet.", exNl: "De wasmachine staat in de badkamer." }
+  - { sv: "en tvättstuga", nl: "een wasruimte (gemeenschappelijk, in een flatgebouw)", def: "tvättstugan", pl: "tvättstugor", ex: "Jag tvättar i **tvättstugan** på tisdag.", exNl: "Dinsdag doe ik de was in de wasruimte." }
+  - { sv: "en källare", nl: "een kelder", def: "källaren", pl: "källare", ex: "Cyklarna står i **källaren**.", exNl: "De fietsen staan in de kelder." }
+  - { sv: "en garderob", nl: "een kledingkast", def: "garderoben", pl: "garderober", ex: "Kläderna hänger i **garderoben**.", exNl: "De kleren hangen in de kledingkast." }
+  - { sv: "ett skåp", nl: "een kast", def: "skåpet", pl: "skåp", ex: "Kopparna står i **skåpet**.", exNl: "De kopjes staan in de kast." }
+  - { sv: "en gardin", nl: "een gordijn", def: "gardinen", pl: "gardiner", ex: "Kan du dra för **gardinerna**?", exNl: "Kun je de gordijnen dichtdoen?" }
+  - { sv: "en kudde", nl: "een kussen", def: "kudden", pl: "kuddar", ex: "Jag sover med två **kuddar**.", exNl: "Ik slaap met twee kussens." }
+  - { sv: "ett täcke", nl: "een dekbed", def: "täcket", pl: "täcken", ex: "Barnet ligger under **täcket**.", exNl: "Het kind ligt onder het dekbed." }
+  - { sv: "en möbel", nl: "een meubel(stuk)", def: "möbeln", pl: "möbler", ex: "Vi har inte så många **möbler**.", exNl: "We hebben niet zo veel meubels." }
+  - { sv: "en villa", nl: "een vrijstaand huis, een villa", def: "villan", pl: "villor", ex: "De bor i en **villa** utanför stan.", exNl: "Ze wonen in een vrijstaand huis buiten de stad." }
+  - { sv: "ett radhus", nl: "een rijtjeshuis", def: "radhuset", pl: "radhus", ex: "Vi har köpt ett **radhus**.", exNl: "We hebben een rijtjeshuis gekocht." }
+  - { sv: "att tvätta", nl: "wassen (kleren, handen)", ex: "Jag **tvättar** kläder på söndagar.", exNl: "Op zondag was ik kleren." }
+  - { sv: "att dammsuga", nl: "stofzuigen", ex: "Han **dammsuger** vardagsrummet.", exNl: "Hij stofzuigt de woonkamer." }
+  - { sv: "att laga", nl: "repareren, maken", alt: ["att reparera"], ex: "Kan du **laga** diskmaskinen?", exNl: "Kun je de vaatwasser repareren?" }
+  - { sv: "att möblera", nl: "inrichten (met meubels)", alt: ["att inreda"], ex: "Hon har **möblerat** lägenheten själv.", exNl: "Zij heeft het appartement zelf ingericht." }
+  - { sv: "att trivas", nl: "het naar zijn zin hebben, zich thuis voelen", ex: "Vi **trivs** bra i Uppsala.", exNl: "We hebben het goed naar ons zin in Uppsala." }
+  - { sv: "att bädda", nl: "(het bed) opmaken", ex: "**Bädda** sängen, är du snäll!", exNl: "Maak je bed even op, alsjeblieft!" }
+  - { sv: "att hänga", nl: "hangen, ophangen", ex: "Vi **{hänger|hänger upp}** tavlan i hallen.", exNl: "We hangen het schilderij op in de gang." }
+  - { sv: "att låsa", nl: "op slot doen", ex: "Glöm inte att **låsa** dörren!", exNl: "Vergeet niet de deur op slot te doen!" }
+  - { sv: "bredvid", nl: "naast", ex: "Lampan står **bredvid** sängen.", exNl: "De lamp staat naast het bed." }
+  - { sv: "mellan", nl: "tussen", ex: "Bordet står **mellan** soffan och fönstret.", exNl: "De tafel staat tussen de bank en het raam." }
+  - { sv: "bakom", nl: "achter", ex: "Trädgården ligger **bakom** huset.", exNl: "De tuin ligt achter het huis." }
+  - { sv: "framför", nl: "voor (plaats)", ex: "Bilen står **framför** huset.", exNl: "De auto staat voor het huis." }
+  - { sv: "ren", nl: "schoon", ex: "Nu är mattan **ren** igen.", exNl: "Nu is het kleed weer schoon." }
