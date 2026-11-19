@@ -264,6 +264,100 @@ sections:
           - { id: vehf, type: gap, text: "Wilma sätter ___ i soffan.", gaps: [{ answers: ["sig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
           - { id: cgqw, type: gap, text: "Har du rakat ___ idag?", gaps: [{ answers: ["dig"], options: ["mig", "dig", "sig", "oss", "er"], shuffle: false }] }
 
+      - id: taak-alarmnummer
+        title: "Taak: 112 bellen"
+        instruction: "Je buurman Olle is in de tuin van een ladder gevallen (*ramla* = vallen). Hij ligt op het gras, zijn arm doet erg pijn en hij bloedt een beetje aan zijn hoofd. Je belt 112. **Doel:** vertel wat er is gebeurd en waar, en doe wat de centralist zegt tot de ambulance er is. Kies of schrijf bij elke stap wat jij zegt."
+        topic: kroppen
+        items:
+          - id: gm3z
+            type: steps
+            explain: "Gelukt: de meldkamer weet wat er is gebeurd en waar, en Olle ligt goed tot de ambulance er is."
+            steps:
+              - type: mc
+                topic: positionsverb
+                prompt: "**Larmoperatören:** 112, vad har hänt? — *Vertel wat er met Olle is.*"
+                options:
+                  - "Min granne har ramlat. Han ligger på gräset och har ont i armen."
+                  - "Min granne har ramlat. Han lägger på gräset och har ont i armen."
+                  - "Min granne har ramlat. Han står på gräset och har ont i armen."
+                  - "Min granne har ramlat. Han ligger på gräset och har ont på armen."
+                answer: 0
+                optionTips:
+                  - null
+                  - "*lägga* is iets neerleggen (een beweging). Waar Olle is: hij *ligger*."
+                  - "Olle staat niet: hij ligt op het gras."
+                  - "Pijn in een lichaamsdeel: *ont **i** armen*."
+              - type: translate
+                topic: woordenschat
+                prompt: "Larmoperatören: Var är ni någonstans? — Zeg: We zijn in de tuin, Storgatan 12 in Västerås."
+                answers:
+                  - "Vi är i trädgården[,] [på ]Storgatan {12|tolv}[,] i Västerås."
+                  - "Vi är på Storgatan {12|tolv} i Västerås, i trädgården."
+                  - "Vi är [ute ]i trädgården[,] [på ]Storgatan {12|tolv}[,] Västerås."
+                  - "Vi är ute i trädgården[,] [på ]Storgatan {12|tolv}[,] i Västerås."
+                feedback:
+                  - { contains: "i trädgård ", tip: "*De* tuin: de bepaalde vorm, *i trädgården*." }
+              - type: gap
+                topic: reflexiv
+                prompt: "**Larmoperatören:** Är han vaken? Kan han prata? — *Ja, maar hij voelt zich duizelig.*"
+                text: "Ja, han kan prata, men han känner ___ yr."
+                gaps:
+                  - answers: ["sig"]
+                    options: ["sig", "honom", "han", "mig"]
+                    feedback:
+                      - { match: "honom", tip: "Bij *han* en *hon* is het wederkerend voornaamwoord *sig*: *han känner sig yr*." }
+                      - { match: "han", tip: "Na *känner* komt het wederkerend voornaamwoord: *han känner sig*." }
+                      - { match: "mig", tip: "Het gaat over Olle (*han*), niet over jou: *han känner sig*." }
+              - type: mc
+                topic: kroppen
+                prompt: "**Larmoperatören:** En ambulans är på väg. Blöder han? — *Ja, een beetje, aan zijn hoofd.*"
+                options:
+                  - "Ja, han blöder lite från huvudet."
+                  - "Ja, han blöder lite från hans huvud."
+                  - "Ja, han blöder lite från huvud."
+                  - "Nej, han blöder inte."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Met *hans* zou het om het hoofd van iemand anders gaan (zie *sin/sitt/sina*). Bij een lichaamsdeel zeg je gewoon de bepaalde vorm: *från huvudet*."
+                  - "Bij een lichaamsdeel gebruik je de bepaalde vorm: *från huvudet*."
+                  - "Olle bloedt wel een beetje aan zijn hoofd."
+              - type: gap
+                topic: placera
+                prompt: "**Larmoperatören:** Okej. Flytta honom inte, men lägg en jacka över honom. — *Je hebt het gedaan. Wat zeg je?*"
+                text: "Okej, nu har jag ___ en jacka över honom."
+                gaps:
+                  - answers: ["lagt"]
+                    options: ["lagt", "legat", "ställt"]
+                    feedback:
+                      - { match: "legat", tip: "*legat* hoort bij *ligga* (liggen). Iets neerleggen is *lägga*: *jag har lagt*." }
+                      - { match: "ställt", tip: "*ställa* is iets rechtop neerzetten. Een jas leg je over iemand heen: *lägga → har lagt*." }
+              - type: mc
+                topic: reflexiv
+                prompt: "**Larmoperatören:** Bra. Han ska ligga kvar tills ambulansen kommer. — *Olle wil overeind komen. Wat zeg je tegen hem?*"
+                options:
+                  - "Ligg still, Olle! Sätt dig inte upp."
+                  - "Ligg still, Olle! Sätt sig inte upp."
+                  - "Lägg still, Olle! Sätt dig inte upp."
+                  - "Ligg still, Olle! Sätt mig inte upp."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Je praat tegen Olle (*du*): dan is het *dig*. *Sätt dig inte upp!*"
+                  - "*Lägg!* is de gebiedende wijs van *lägga* (iets neerleggen). Blijf liggen: *Ligg still!*"
+                  - "Je praat tegen Olle (*du*): dan is het *dig*, niet *mig*."
+              - type: translate
+                topic: woordenschat
+                prompt: "Larmoperatören: Hur mår han nu? — Zeg: Hij heeft het koud en hij is moe."
+                answers:
+                  - "Han fryser och [han ]är trött."
+                  - "Han är trött och [han ]fryser."
+                  - "Han fryser och känner sig trött."
+                feedback:
+                  - { contains: "är kall", tip: "Het koud hebben is *frysa*: *han fryser*. *Han är kall* betekent dat hij koud aanvoelt." }
+                  - { contains: "har kallt", tip: "Het koud hebben is *frysa*: *han fryser*." }
+                  - { contains: "har det kallt", tip: "Het koud hebben is *frysa*: *han fryser*." }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
