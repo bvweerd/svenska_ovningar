@@ -311,7 +311,7 @@ vocab:
   - { sv: "en familj", nl: "een gezin, een familie", def: "familjen", pl: "familjer", plDef: "familjerna" }
   - { sv: "en mamma", nl: "een moeder", def: "mamman", alt: ["en mor"], pl: "mammor", plDef: "mammorna" }
   - { sv: "en pappa", nl: "een vader", def: "pappan", alt: ["en far"], pl: "pappor", plDef: "papporna" }
-  - { sv: "en bror", nl: "een broer", def: "brodern", pl: "bröder", plDef: "bröderna" }
+  - { sv: "en bror", nl: "een broer", def: ["brodern", "brorn"], pl: "bröder", plDef: "bröderna" }
   - { sv: "en syster", nl: "een zus", def: "systern", pl: "systrar", plDef: "systrarna" }
   - { sv: "en son", nl: "een zoon", def: "sonen", pl: "söner", plDef: "sönerna" }
   - { sv: "en dotter", nl: "een dochter", def: "dottern", pl: "döttrar", plDef: "döttrarna" }

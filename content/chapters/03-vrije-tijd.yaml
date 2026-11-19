@@ -280,7 +280,7 @@ vocab:
   - { sv: "en konsert", nl: "een concert", def: "konserten", pl: "konserter", plDef: "konserterna" }
   - { sv: "en kör", nl: "een koor", def: "kören", pl: "körer", plDef: "körerna" }
   - { sv: "ett museum", nl: "een museum", def: "museet", pl: "museer", plDef: "museerna" }
-  - { sv: "ett kafé", nl: "een café", def: "kaféet", pl: "kaféer", plDef: "kaféerna" }
+  - { sv: "ett kafé", nl: "een café", def: ["kaféet", "caféet"], pl: ["kaféer", "caféer"], plDef: ["kaféerna", "caféerna"], alt: ["ett café"] }
   - { sv: "att simma", nl: "zwemmen" }
   - { sv: "att cykla", nl: "fietsen" }
   - { sv: "att springa", nl: "hardlopen, rennen" }
