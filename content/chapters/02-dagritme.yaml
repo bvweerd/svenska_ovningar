@@ -129,6 +129,7 @@ sections:
         title: Vertaal met de tijd vooraan
         instruction: Vertaal naar het Zweeds. Begin de zin met de tijdsbepaling, net als in het Nederlands.
         topic: tidsuttryck
+        fixedOrder: true
         items:
           - { id: 8ve7, type: translate, prompt: "Maandag werk ik thuis.", answers: ["På måndag {jobbar|arbetar} jag hemma."], feedback: [{ contains: "måndag jag", tip: "Na de tijdsbepaling komt eerst het werkwoord, dan pas jag." }, { match: ["Måndag jobbar jag hemma", "Måndag arbetar jag hemma"], tip: "Bijna! Voor een dag zet je „på”: på måndag." }] }
           - { id: wrqp, type: translate, prompt: "'s Avonds kijkt Bram tv.", answers: ["{På kvällen|På kvällarna} tittar Bram på {tv|teve}."], feedback: [{ match: ["På kvällen tittar Bram tv", "På kvällarna tittar Bram tv"], tip: "Kijken naar iets is „titta på”: tittar på tv." }, { match: ["Ikväll tittar Bram på tv", "Ikväll tittar Bram på teve", "I kväll tittar Bram på tv", "I kväll tittar Bram på teve", "Bram tittar på tv ikväll", "Bram tittar på teve ikväll", "Bram tittar på tv i kväll", "Bram tittar på teve i kväll"], tip: "„Ikväll” is vanavond (één keer). 's Avonds als gewoonte is „på kvällen” of „på kvällarna”." }] }
