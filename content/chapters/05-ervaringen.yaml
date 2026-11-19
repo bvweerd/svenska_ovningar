@@ -261,9 +261,13 @@ sections:
 
       - id: schrijven-ervaringen
         title: "Schrijven: waar ben je geweest?"
-        instruction: Schrijf over plaatsen waar je geweest bent, en over één reis in het bijzonder.
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, over je eigen reizen."
         topic: perfekt-preteritum
         items:
+          - { id: 42xz, type: mc, prompt: "Je begint met je ervaring in het algemeen, zonder tijdstip. Kies de beste openingszin.", options: ["Jag har varit i många länder.", "Jag var i många länder.", "Jag har varat i många länder."], answer: 0, tip: "Ervaring zonder tijdstip: perfekt. De supinum van vara is varit." }
+          - { id: 8me3, type: translate, topic: supinum, prompt: "Ik ben nog nooit in Azië geweest.", answers: ["Jag har aldrig[ någonsin] varit i Asien."], feedback: [{ match: "Jag var aldrig i Asien.", tip: "Nog nooit (tot nu toe): perfekt, har aldrig varit." }, { contains: "aldrig har", tip: "aldrig staat na het eerste werkwoord: Jag har aldrig varit …" }] }
+          - { id: 8cbb, type: gap, prompt: "Kies de goede vorm.", text: "För två år sedan ___ jag till Lofoten.", gaps: [{ answers: ["reste"], options: ["reste", "har rest"], shuffle: false, tip: "Met een tijdstip in het verleden (för två år sedan) gebruik je preteritum." }] }
+          - { id: nvun, type: gap, topic: an, prompt: "Kies het goede woord.", text: "Norge är större ___ Nederländerna.", gaps: [{ answers: ["än"], options: ["än", "som", "då"], tip: "Na een vergelijkende vorm (större) komt än (dan)." }] }
           - id: 6gu6
             type: free
             prompt: "Vertel in welke landen of steden je al bent geweest en waar je nog nooit bent geweest. Vertel daarna over één reis: wanneer was het en wat deed je?"

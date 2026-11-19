@@ -280,9 +280,13 @@ sections:
 
       - id: schrijven-huis
         title: "Schrijven: jouw huis"
-        instruction: Beschrijf je huis of appartement.
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna beschrijf je, als je wilt, je eigen huis."
         topic: bisats-ordfoljd
         items:
+          - { id: kkry, type: mc, prompt: "Kies de beste openingszin.", options: ["Jag bor i ett radhus i en liten stad.", "I en liten stad jag bor i ett radhus.", "Jag bor i en radhus i en liten stad."], answer: 0, tip: "Het werkwoord staat op plaats 2, en het is ett radhus (ett hus)." }
+          - { id: 39mk, type: gap, topic: prep-plats, prompt: "Kies het goede woord. (De tuin ligt áchter het huis.)", text: "Trädgården ligger ___ huset.", gaps: [{ answers: ["bakom"], options: ["bakom", "framför", "bredvid"], tip: "achter = bakom." }] }
+          - { id: 2fx5, type: order, prompt: "Zeg waarom de keuken je lievelingskamer is.", start: "Mitt favoritrum är köket, eftersom", tokens: ["solen", "skiner", "där", "på", "morgonen"], answers: ["Mitt favoritrum är köket, eftersom solen skiner där på morgonen."] }
+          - { id: 98t8, type: gap, prompt: "Kies de goede volgorde.", text: "Jag tycker att badrummet ___ så stort.", gaps: [{ answers: ["inte är"], options: ["inte är", "är inte"], shuffle: false, tip: "In een bijzin (na att) staat inte vóór het werkwoord: att badrummet inte är …" }] }
           - id: nt5c
             type: free
             prompt: "Vertel hoe je woont: welke kamers er zijn, waar ze liggen, en wat je mooi of minder mooi vindt. Gebruik minstens één bijzin met eftersom, när of att."

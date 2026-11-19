@@ -271,9 +271,13 @@ sections:
 
       - id: schrijven-reis
         title: "Schrijven: een reisplan"
-        instruction: Schrijf over een reis die je binnenkort gaat maken (of zou willen maken).
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, over je eigen reisplan."
         topic: transport
         items:
+          - { id: puv3, type: mc, prompt: "Je reis is deze zomer. Kies de beste openingszin.", options: ["I sommar ska jag åka till Norge.", "I sommar jag ska åka till Norge.", "Förra sommaren åkte jag till Norge."], answer: 0, tip: "Toekomst: ska + werkwoord. Na I sommar komt het werkwoord op plaats 2." }
+          - { id: wbsp, type: gap, topic: tidsprep, prompt: "Kies het goede woord. (Je vertrekt over twee weken.)", text: "Vi åker ___ två veckor.", gaps: [{ answers: ["om"], options: ["om", "i", "för"], tip: "Over (een tijd in de toekomst) = om." }] }
+          - { id: c4w7, type: translate, prompt: "We nemen de trein naar Oslo.", answers: ["Vi {tar tåget|åker tåg|åker med tåget|åker med tåg} till Oslo."] }
+          - { id: aaqs, type: gap, topic: ordningstal, prompt: "Schrijf de datum voluit: de 5e juli.", text: "Vi åker den ___ juli.", gaps: [{ answers: ["femte"], feedback: [{ match: "fem", tip: "Een datum is een rangtelwoord: den femte juli." }] }] }
           - id: bpx6
             type: free
             prompt: "Vertel waar je naartoe gaat, wanneer, hoe je reist en hoe lang je blijft."

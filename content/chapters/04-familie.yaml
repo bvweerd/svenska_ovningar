@@ -309,9 +309,13 @@ sections:
 
       - id: schrijven-familie
         title: "Schrijven: jouw familie"
-        instruction: Schrijf over je familie of over wat je vorig weekend hebt gedaan.
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, over je eigen familie."
         topic: preteritum
         items:
+          - { id: 9sjj, type: gap, topic: possessiv, prompt: "Kies het goede woord.", text: "___ föräldrar bor i Arnhem.", gaps: [{ answers: ["Mina"], options: ["Mina", "Min", "Mitt"], tip: "föräldrar is meervoud: mina." }] }
+          - { id: mpd4, type: gap, text: "Förra helgen ___ (besöka) jag mina föräldrar.", gaps: [{ answers: ["besökte"], feedback: [{ match: ["besökade", "besöker"], tip: "Förra helgen is verleden tijd. besöka is een -er-werkwoord: besökte." }] }] }
+          - { id: hjdy, type: order, prompt: "Vertel wat jullie gisteren samen deden.", start: "Igår", tokens: ["åt", "vi", "middag", "tillsammans"], answers: ["Igår åt vi middag tillsammans."] }
+          - { id: u4b7, type: gap, topic: starka-verb, text: "På söndagen ___ (gå) vi en lång promenad.", gaps: [{ answers: ["gick"], feedback: [{ match: ["gådde", "gåde", "går"], tip: "gå is onregelmatig: gick." }] }] }
           - id: 9qz8
             type: free
             prompt: "Vertel over je familie (wie zijn er, waar wonen ze) en over iets wat je onlangs samen gedaan hebt. Gebruik de verleden tijd."

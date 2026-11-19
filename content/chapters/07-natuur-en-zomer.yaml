@@ -278,9 +278,13 @@ sections:
 
       - id: schrijven-weer
         title: "Schrijven: zomer of winter?"
-        instruction: Schrijf over je favoriete seizoen.
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, over je eigen favoriete seizoen."
         topic: konjunktioner
         items:
+          - { id: 7x6t, type: mc, prompt: "Kies de beste openingszin.", options: ["Jag tycker mest om sommaren, för då är det varmt.", "Jag tycker mest om sommaren, för då det är varmt.", "Jag tycker mest om sommaren, för det då är varmt."], answer: 0, tip: "Na för komt een gewone hoofdzin. Begint die met då, dan volgt het werkwoord: då är det." }
+          - { id: yr2x, type: translate, topic: vader, prompt: "In de herfst regent het vaak.", answers: ["På hösten regnar det ofta.", "Det regnar ofta på hösten."], feedback: [{ contains: "hösten det regnar", tip: "Begin je met På hösten, dan komt het werkwoord op plaats 2: På hösten regnar det …" }] }
+          - { id: c72y, type: gap, prompt: "Kies het woord dat past.", text: "På vintern är det kallt och mörkt, ___ jag stannar mest inne.", gaps: [{ answers: ["så"], options: ["så", "för", "men"], tip: "Binnen blijven is het gevolg van de kou: så (dus)." }] }
+          - { id: j2f2, type: order, prompt: "Maak de zin af: waarom blijf je binnen?", start: "Jag stannar inne, för", tokens: ["det", "regnar", "idag"], answers: ["Jag stannar inne, för det regnar idag.", "Jag stannar inne, för idag regnar det."] }
           - id: gkdz
             type: free
             prompt: "Vertel welk seizoen je het leukst vindt, hoe het weer dan is en wat je dan graag doet. Verbind je zinnen met och, men, för of så."

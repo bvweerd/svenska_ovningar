@@ -416,9 +416,13 @@ sections:
 
       - id: schrijven-dag
         title: "Schrijven: jouw dag"
-        instruction: Beschrijf een gewone dag van jezelf.
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna beschrijf je, als je wilt, een gewone dag van jezelf."
         topic: tidsuttryck
         items:
+          - { id: synn, type: mc, prompt: "Kies de beste openingszin.", options: ["Klockan sju vaknar jag.", "Klockan sju jag vaknar.", "Jag klockan sju vaknar."], answer: 0, tip: "Begint de zin met een tijd, dan komt het werkwoord op plaats 2 en het onderwerp erna." }
+          - { id: wghd, type: order, prompt: "Vertel wat je 's ochtends doet.", start: "På morgonen", tokens: ["duschar", "jag", "och", "äter", "frukost"], answers: ["På morgonen duschar jag och äter frukost.", "På morgonen äter jag frukost och duschar."] }
+          - { id: kc3m, type: gap, prompt: "Kies het woord dat past.", text: "Jag äter frukost. ___ cyklar jag till jobbet.", gaps: [{ answers: ["Sedan"], options: ["Sedan", "Och", "Men"], feedback: [{ match: ["Och", "Men"], tip: "Na och en men komt een gewone zin (och jag cyklar). Hier staat het werkwoord direct na het eerste woord: Sedan (daarna) cyklar jag." }] }] }
+          - { id: p539, type: translate, topic: modala, prompt: "Morgen wil ik een vriend ontmoeten.", answers: ["{Imorgon|I morgon} vill jag träffa en {vän|kompis}.", "Jag vill träffa en {vän|kompis} {imorgon|i morgon}."], feedback: [{ contains: "morgon jag vill", tip: "Begin je met imorgon, dan komt het werkwoord op plaats 2: Imorgon vill jag …" }] }
           - id: kazh
             type: free
             prompt: "Vertel hoe laat je opstaat, wat je 's ochtends en 's avonds doet en wat je vandaag of morgen nog moet of wilt doen. Begin een paar zinnen met een tijd."

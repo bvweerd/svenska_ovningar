@@ -312,9 +312,13 @@ sections:
 
       - id: schrijven-feestdag
         title: "Schrijven: jouw favoriete feestdag"
-        instruction: Beschrijf je favoriete feestdag.
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna beschrijf je, als je wilt, je eigen favoriete feestdag."
         topic: adjektiv-obestamd
         items:
+          - { id: cm3p, type: mc, prompt: "Kies de beste openingszin.", options: ["Julen är en mysig högtid.", "Julen är en mysigt högtid.", "Julen är ett mysig högtid."], answer: 0, tip: "Het is en högtid, dus het bijvoeglijk naamwoord krijgt geen -t: en mysig högtid." }
+          - { id: qq62, type: gap, prompt: "Vul de goede vorm in.", text: "Vi har en stor gran med ___ (röd) kulor.", gaps: [{ answers: ["röda"], feedback: [{ match: ["röd", "rött"], tip: "kulor is meervoud: röda." }] }] }
+          - { id: k9kd, type: gap, topic: adjektiv-bestamd, prompt: "Vul de goede vorm in.", text: "Vi firar hemma hos mina föräldrar i deras ___ (gammal) hus.", gaps: [{ answers: ["gamla"], feedback: [{ match: ["gammalt", "gammal", "gammala"], tip: "Na deras (een bezittelijk voornaamwoord) krijgt het bijvoeglijk naamwoord -a: deras gamla hus." }] }] }
+          - { id: r3ne, type: gap, topic: komparation, prompt: "Kies de goede vorm.", text: "Jag tycker att julen är ___ än nyår.", gaps: [{ answers: ["mysigare"], options: ["mysigare", "mysigast", "mysig"], tip: "Twee dingen vergelijken met än: de vergrotende trap, mysigare." }] }
           - id: ngt8
             type: free
             prompt: "Vertel welke feestdag je het leukst vindt, hoe je die viert en waarom. Gebruik bijvoeglijke naamwoorden en minstens één vergelijking."

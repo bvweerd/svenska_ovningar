@@ -237,9 +237,13 @@ sections:
 
       - id: schrijven-bericht
         title: "Schrijven: een voicemail"
-        instruction: Je belt een vriend(in), maar die neemt niet op. Spreek een bericht in.
+        instruction: "Bouw eerst je bericht op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, het hele bericht op."
         topic: telefon
         items:
+          - { id: d2j2, type: mc, prompt: "Je belt je vriendin Anna. Hoe begin je het bericht?", options: ["Hej Anna, det är Sanne.", "Hej Anna, jag är Sanne.", "God dag, mitt namn är Sanne."], answer: 0, tip: "Aan de telefoon zeg je wie je bent met Det är … God dag … is te formeel voor een vriendin." }
+          - { id: yumb, type: gap, prompt: "Kies het woord dat past.", text: "Jag ringer ___ jag har två biljetter till teatern.", gaps: [{ answers: ["för att"], options: ["för att", "så att", "men"], tip: "Je geeft de reden: för att (omdat)." }] }
+          - { id: z48w, type: translate, prompt: "Kun je me vanavond terugbellen?", answers: ["Kan du ringa {tillbaka|mig tillbaka|tillbaka till mig|upp mig|mig} {ikväll|i kväll}?"], feedback: [{ contains: "du kan ringa", tip: "In een ja/nee-vraag staat het werkwoord vooraan: Kan du …?" }] }
+          - { id: xjjn, type: gap, topic: indirekt-tal, prompt: "Anna zegt: „Jag kan inte komma.” Vertel het verder.", text: "Anna säger att hon ___ komma.", gaps: [{ answers: ["inte kan"], options: ["inte kan", "kan inte"], shuffle: false, tip: "In een bijzin met att staat inte vóór het werkwoord: att hon inte kan." }] }
           - id: jzpv
             type: free
             prompt: "Zeg wie je bent, waarom je belt (bijvoorbeeld een uitnodiging) en vraag of hij of zij terugbelt."

@@ -258,9 +258,13 @@ sections:
 
       - id: schrijven-feest
         title: "Schrijven: een feest"
-        instruction: Vertel over een feest of etentje waar je bent geweest.
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna vertel je, als je wilt, over een feest waar jij was."
         topic: berattande
         items:
+          - { id: 5r2s, type: mc, prompt: "Je vertelt over een feest. Welke zin past als eerste zin?", options: ["I lördags var jag på en fest hos min vän.", "Sedan åt vi lasagne och sallad.", "Till slut dansade vi till klockan två."], answer: 0, tip: "De eerste zin zegt waar en wanneer. Sedan (daarna) en till slut (ten slotte) komen later in het verhaal." }
+          - { id: jfxn, type: order, topic: berattande, prompt: "Vertel wat jullie daarna aten.", start: "Sedan", tokens: ["åt", "vi", "lasagne", "och", "sallad"], answers: ["Sedan åt vi lasagne och sallad.", "Sedan åt vi sallad och lasagne."] }
+          - { id: qc95, type: gap, topic: det-finns, prompt: "Kies de goede vorm. (Het feest was afgelopen zaterdag.)", text: "Till efterrätt ___ det en stor chokladtårta.", gaps: [{ answers: ["fanns"], options: ["fanns", "finns"], shuffle: false, tip: "Het feest is voorbij: verleden tijd, det fanns." }] }
+          - { id: gd6g, type: gap, topic: tycka-tro-tanka, prompt: "Je geeft je mening over de taart die je hebt geproefd.", text: "Jag ___ att tårtan var jättegod.", gaps: [{ answers: ["tyckte"], options: ["tyckte", "trodde", "tänkte"], tip: "Een mening over iets wat je zelf hebt geproefd: tycka (tyckte)." }] }
           - id: beek
             type: free
             prompt: "Waar was het, wie waren er, wat aten jullie en wat vond je ervan? Vertel het in de verleden tijd en gebruik först, sedan of till slut."

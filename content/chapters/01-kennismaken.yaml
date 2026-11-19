@@ -584,9 +584,13 @@ sections:
 
       - id: schrijven-voorstellen
         title: "Schrijven: stel jezelf voor"
-        instruction: Schrijf een korte tekst over jezelf.
+        instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, een korte tekst over jezelf."
         topic: presens
         items:
+          - { id: 7zwc, type: mc, topic: v2, prompt: "Kies de beste openingszin.", options: ["Hej! Jag heter Sanne.", "Hej! Heter jag Sanne.", "Hej! Jag Sanne heter."], answer: 0, tip: "In een gewone zin staat het werkwoord op plaats 2: Jag heter …" }
+          - { id: vau2, type: order, topic: v2, prompt: "Vertel waar je woont. Begin met Nu.", start: "Nu", tokens: ["bor", "jag", "i", "Zwolle"], answers: ["Nu bor jag i Zwolle."] }
+          - { id: 3bp9, type: translate, topic: presens, prompt: "Ik spreek Nederlands en een beetje Zweeds.", answers: ["Jag {talar|pratar} nederländska och lite svenska."], feedback: [{ contains: "svenska lite", tip: "lite staat vóór het woord: lite svenska." }] }
+          - { id: gc8b, type: order, topic: inte, prompt: "Zeg welke taal je níet spreekt.", start: "Jag", tokens: ["talar", "inte", "finska"], answers: ["Jag talar inte finska."] }
           - id: sbrx
             type: free
             prompt: "Vertel hoe je heet, waar je vandaan komt, waar je woont, welke talen je spreekt en wat je werk is."
