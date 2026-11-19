@@ -293,24 +293,59 @@ sections:
           - { id: 9cd3, type: mc, topic: ocksa-heller, prompt: "– Jag har ingen mobil. – (Jij ook niet.)", options: ["Inte jag heller.", "Det har jag också.", "Men det har jag."], answer: 0, tip: "Ook niet: Inte jag heller." }
 
 vocab:
-  - { sv: "en mobil", nl: "een mobiele telefoon", def: "mobilen", pl: "mobiler", plDef: "mobilerna" }
-  - { sv: "ett samtal", nl: "een (telefoon)gesprek", def: "samtalet", pl: "samtal", plDef: "samtalen" }
-  - { sv: "ett meddelande", nl: "een bericht", def: "meddelandet", pl: "meddelanden", plDef: "meddelandena" }
-  - { sv: "ett nummer", nl: "een nummer", def: "numret", pl: "nummer", plDef: "numren" }
-  - { sv: "en dator", nl: "een computer", def: "datorn", pl: "datorer", plDef: "datorerna" }
-  - { sv: "ett lösenord", nl: "een wachtwoord", def: "lösenordet", pl: "lösenord", plDef: "lösenorden" }
-  - { sv: "en app", nl: "een app", def: "appen", pl: "appar", plDef: "apparna" }
-  - { sv: "ett mejl", nl: "een e-mail", def: "mejlet", pl: "mejl", plDef: "mejlen" }
-  - { sv: "en tid", nl: "een afspraak (bij dokter e.d.), een tijd", def: "tiden", pl: "tider", plDef: "tiderna" }
-  - { sv: "att ringa", nl: "bellen" }
-  - { sv: "att svara", nl: "antwoorden, opnemen" }
-  - { sv: "att skicka", nl: "sturen" }
-  - { sv: "att glömma", nl: "vergeten" }
-  - { sv: "att undra", nl: "zich afvragen" }
-  - { sv: "att fråga", nl: "vragen" }
-  - { sv: "att säga", nl: "zeggen" }
-  - { sv: "att veta", nl: "weten" }
-  - { sv: "att förstå", nl: "begrijpen" }
-  - { sv: "just nu", nl: "op dit moment" }
-  - { sv: "senare", nl: "later" }
-  - { sv: "tillbaka", nl: "terug" }
+  - { sv: "en mobil", nl: "een mobiele telefoon", def: "mobilen", pl: "mobiler", plDef: "mobilerna", alt: ["en mobiltelefon"], ex: "Nils hittar inte **mobilen**.", exNl: "Nils kan de mobiel niet vinden." }
+  - { sv: "ett samtal", nl: "een (telefoon)gesprek", def: "samtalet", pl: "samtal", plDef: "samtalen", ex: "Jag har tre missade **samtal**.", exNl: "Ik heb drie gemiste gesprekken." }
+  - { sv: "ett meddelande", nl: "een bericht", def: "meddelandet", pl: "meddelanden", plDef: "meddelandena", ex: "Jag fick ett **meddelande** från Bram.", exNl: "Ik kreeg een bericht van Bram." }
+  - { sv: "ett nummer", nl: "een nummer", def: "numret", pl: "nummer", plDef: "numren", ex: "Du har ringt fel **nummer**.", exNl: "Je hebt het verkeerde nummer gebeld." }
+  - { sv: "en dator", nl: "een computer", def: "datorn", pl: "datorer", plDef: "datorerna", ex: "Jag skriver mejl på **datorn**.", exNl: "Ik schrijf e-mails op de computer." }
+  - { sv: "ett lösenord", nl: "een wachtwoord", def: "lösenordet", pl: "lösenord", plDef: "lösenorden", ex: "Jag har glömt **lösenordet**.", exNl: "Ik ben het wachtwoord vergeten." }
+  - { sv: "en app", nl: "een app", def: "appen", pl: "appar", plDef: "apparna", ex: "Jag betalar med en **app** på mobilen.", exNl: "Ik betaal met een app op mijn mobiel." }
+  - { sv: "ett mejl", nl: "een e-mail", def: "mejlet", pl: "mejl", plDef: "mejlen", alt: ["ett mail"], ex: "Jag skickade ett **{mejl|mail}** till chefen.", exNl: "Ik stuurde een e-mail naar de baas." }
+  - { sv: "en tid", nl: "een afspraak (bij dokter e.d.), een tijd", def: "tiden", pl: "tider", plDef: "tiderna", ex: "Jag vill boka en **tid** hos tandläkaren.", exNl: "Ik wil een afspraak maken bij de tandarts." }
+  - { sv: "att ringa", nl: "bellen", ex: "Jag **ringde** dig tre gånger igår.", exNl: "Ik belde je gisteren drie keer." }
+  - { sv: "att svara", nl: "antwoorden, opnemen", ex: "Varför **svarar** du inte?", exNl: "Waarom neem je niet op?" }
+  - { sv: "att skicka", nl: "sturen", ex: "Kan du **skicka** adressen till mig?", exNl: "Kun je mij het adres sturen?" }
+  - { sv: "att glömma", nl: "vergeten", ex: "Jag har **glömt** hans nummer.", exNl: "Ik ben zijn nummer vergeten." }
+  - { sv: "att undra", nl: "zich afvragen", ex: "Jag **undrar** om du kan komma imorgon.", exNl: "Ik vraag me af of je morgen kunt komen." }
+  - { sv: "att fråga", nl: "vragen", ex: "Hon **frågar** när tåget går.", exNl: "Zij vraagt wanneer de trein vertrekt." }
+  - { sv: "att säga", nl: "zeggen", ex: "Han **{sa|sade}** att han var sjuk.", exNl: "Hij zei dat hij ziek was." }
+  - { sv: "att veta", nl: "weten", ex: "Jag **vet** inte var hon bor.", exNl: "Ik weet niet waar ze woont." }
+  - { sv: "att förstå", nl: "begrijpen", ex: "Jag **förstår** inte vad du säger.", exNl: "Ik begrijp niet wat je zegt." }
+  - { sv: "just nu", nl: "op dit moment", ex: "Hon är inte här **just nu**.", exNl: "Ze is er op dit moment niet." }
+  - { sv: "senare", nl: "later", ex: "Jag ringer dig **senare**.", exNl: "Ik bel je later." }
+  - { sv: "tillbaka", nl: "terug", ex: "Kan du ringa **tillbaka** imorgon?", exNl: "Kun je morgen terugbellen?" }
+  - { sv: "en telefon", nl: "een telefoon", def: "telefonen", pl: "telefoner", ex: "**Telefonen** ringer!", exNl: "De telefoon gaat!" }
+  - { sv: "en röst", nl: "een stem", def: "rösten", pl: "röster", ex: "Jag känner igen din **röst**.", exNl: "Ik herken je stem." }
+  - { sv: "ett sms", nl: "een sms(je)", def: "sms:et", pl: "sms", ex: "Jag skickar ett **sms** när jag är framme.", exNl: "Ik stuur een sms'je als ik er ben." }
+  - { sv: "en laddare", nl: "een oplader", def: "laddaren", pl: "laddare", ex: "Har du en **laddare** till min mobil?", exNl: "Heb je een oplader voor mijn mobiel?" }
+  - { sv: "ett batteri", nl: "een batterij, een accu", def: "batteriet", pl: "batterier", plDef: "batterierna", ex: "**Batteriet** är nästan slut.", exNl: "De batterij is bijna leeg." }
+  - { sv: "en skärm", nl: "een scherm", def: "skärmen", pl: "skärmar", ex: "**Skärmen** på min mobil är trasig.", exNl: "Het scherm van mijn mobiel is kapot." }
+  - { sv: "en mejladress", nl: "een e-mailadres", def: "mejladressen", pl: "mejladresser", alt: ["en e-postadress", "en mailadress"], ex: "Vad är din **{mejladress|e-postadress|mailadress}**?", exNl: "Wat is je e-mailadres?" }
+  - { sv: "en hemsida", nl: "een website", def: "hemsidan", pl: "hemsidor", alt: ["en webbplats"], ex: "Titta på vår **{hemsida|webbplats}**!", exNl: "Kijk op onze website!" }
+  - { sv: "en kund", nl: "een klant", def: "kunden", pl: "kunder", ex: "Affären har många **kunder**.", exNl: "De winkel heeft veel klanten." }
+  - { sv: "en kundtjänst", nl: "een klantenservice", def: "kundtjänsten", ex: "Jag ringde **{kundtjänst|kundtjänsten}** igår.", exNl: "Ik belde gisteren de klantenservice." }
+  - { sv: "ett fel", nl: "een fout", def: "felet", pl: "fel", ex: "Det finns ett **fel** i mejlet.", exNl: "Er zit een fout in de e-mail." }
+  - { sv: "ett svar", nl: "een antwoord", def: "svaret", pl: "svar", ex: "Jag väntar fortfarande på ett **svar**.", exNl: "Ik wacht nog steeds op een antwoord." }
+  - { sv: "en kollega", nl: "een collega", def: "kollegan", pl: ["kollegor", "kolleger"], plDef: ["kollegorna", "kollegerna"], ex: "Min **kollega** är sjuk idag.", exNl: "Mijn collega is vandaag ziek." }
+  - { sv: "en chef", nl: "een baas, een leidinggevende", def: "chefen", pl: "chefer", plDef: "cheferna", ex: "**Chefen** sitter i ett möte.", exNl: "De baas zit in een vergadering." }
+  - { sv: "ett kontor", nl: "een kantoor", def: "kontoret", pl: "kontor", ex: "Hon jobbar på ett **kontor**.", exNl: "Zij werkt op een kantoor." }
+  - { sv: "ett brev", nl: "een brief", def: "brevet", pl: "brev", ex: "Jag skrev ett **brev** till mormor.", exNl: "Ik schreef een brief aan oma." }
+  - { sv: "ett videosamtal", nl: "een videogesprek", def: "videosamtalet", pl: "videosamtal", ex: "Vi har ett **videosamtal** varje söndag.", exNl: "We hebben elke zondag een videogesprek." }
+  - { sv: "en täckning", nl: "bereik (van het mobiele netwerk)", def: "täckningen", ex: "Jag har ingen **täckning** här.", exNl: "Ik heb hier geen bereik." }
+  - { sv: "ett ögonblick", nl: "een ogenblik, een moment", def: "ögonblicket", pl: "ögonblick", ex: "Vänta ett **ögonblick**, jag hämtar henne.", exNl: "Wacht een ogenblik, ik haal haar even." }
+  - { sv: "att prata", nl: "praten", ex: "Kan jag få **prata** med Ingrid?", exNl: "Mag ik Ingrid spreken?" }
+  - { sv: "att ladda", nl: "opladen", ex: "Jag måste **ladda** mobilen.", exNl: "Ik moet mijn mobiel opladen." }
+  - { sv: "att lägga på", nl: "ophangen (de telefoon)", ex: "Hon blev arg och **{lade på|la på}**.", exNl: "Ze werd boos en hing op." }
+  - { sv: "att upprepa", nl: "herhalen", ex: "Kan du **upprepa** numret, tack?", exNl: "Kun je het nummer herhalen, alsjeblieft?" }
+  - { sv: "att berätta", nl: "vertellen", ex: "Hon **berättade** att hon skulle flytta.", exNl: "Zij vertelde dat ze ging verhuizen." }
+  - { sv: "att hälsa", nl: "groeten (de groeten doen)", ex: "**Hälsa** till Anna från mig!", exNl: "Doe Anna de groeten van mij!" }
+  - { sv: "att be", nl: "verzoeken, vragen (om iets)", ex: "Kan du **be** henne ringa mig?", exNl: "Kun je haar vragen mij te bellen?" }
+  - { sv: "upptagen", nl: "bezet, bezig (niet beschikbaar)", ex: "Chefen är **upptagen** just nu.", exNl: "De baas is op dit moment bezig." }
+  - { sv: "tyvärr", nl: "helaas", ex: "**Tyvärr** kan jag inte komma.", exNl: "Helaas kan ik niet komen." }
+  - { sv: "vi hörs", nl: "we spreken elkaar (nog)", ex: "Tack för samtalet, **vi hörs**!", exNl: "Bedankt voor het gesprek, we spreken elkaar!" }
+  - { sv: "hallå", nl: "hallo (aan de telefoon)", ex: "**Hallå**, det är Fleur.", exNl: "Hallo, met Fleur." }
+  - { sv: "tydligt", nl: "duidelijk", ex: "Han pratar alltid väldigt **tydligt**.", exNl: "Hij praat altijd heel duidelijk." }
+  - { sv: "långsamt", nl: "langzaam", ex: "Kan du prata **långsamt**? Jag förstår inte.", exNl: "Kun je langzaam praten? Ik begrijp het niet." }
+  - { sv: "igen", nl: "opnieuw, weer", ex: "Kan du ringa **igen** imorgon?", exNl: "Kun je morgen opnieuw bellen?" }
+  - { sv: "direkt", nl: "meteen, direct", ex: "Jag ringer dig **direkt**.", exNl: "Ik bel je meteen." }
+  - { sv: "dåligt", nl: "slecht", ex: "Jag hör dig väldigt **dåligt**.", exNl: "Ik hoor je heel slecht." }

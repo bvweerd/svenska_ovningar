@@ -334,26 +334,67 @@ sections:
           - { id: hahu, type: mc, topic: modala, prompt: "Welke zin is goed?", options: ["Du får inte elda här.", "Du inte får elda här.", "Du får elda inte här."], answer: 0, tip: "inte staat direct na het modale werkwoord." }
 
 vocab:
-  - { sv: "ett väder", nl: "het weer", def: "vädret", mass: true }
-  - { sv: "en sol", nl: "een zon", def: "solen" }
-  - { sv: "ett regn", nl: "de regen", def: "regnet", mass: true }
-  - { sv: "en vind", nl: "een wind", def: "vinden", pl: "vindar", plDef: "vindarna" }
-  - { sv: "ett moln", nl: "een wolk", def: "molnet", pl: "moln", plDef: "molnen" }
-  - { sv: "en grad", nl: "een graad", def: "graden", pl: "grader", plDef: "graderna" }
-  - { sv: "en stuga", nl: "een (zomer)huisje", def: "stugan", pl: "stugor", plDef: "stugorna" }
-  - { sv: "ett hav", nl: "een zee", def: "havet", pl: "hav", plDef: "haven" }
-  - { sv: "en strand", nl: "een strand", def: "stranden", pl: "stränder", plDef: "stränderna" }
-  - { sv: "ett blåbär", nl: "een bosbes", def: "blåbäret", pl: "blåbär", plDef: "blåbären" }
-  - { sv: "en svamp", nl: "een paddenstoel", def: "svampen", pl: "svampar", plDef: "svamparna" }
-  - { sv: "ett tält", nl: "een tent", def: "tältet", pl: "tält", plDef: "tälten" }
-  - { sv: "ett paraply", nl: "een paraplu", def: "paraplyet", pl: ["paraplyer", "paraplyn"], plDef: ["paraplyerna", "paraplyna"] }
-  - { sv: "att regna", nl: "regenen" }
-  - { sv: "att snöa", nl: "sneeuwen" }
-  - { sv: "att blåsa", nl: "waaien" }
-  - { sv: "att skina", nl: "schijnen" }
-  - { sv: "att bada", nl: "zwemmen, baden (buiten)" }
-  - { sv: "att plocka", nl: "plukken" }
-  - { sv: "att tälta", nl: "kamperen (in een tent)" }
-  - { sv: "ändå", nl: "toch" }
-  - { sv: "därför", nl: "daarom" }
-  - { sv: "i stället", nl: "in plaats daarvan" }
+  - { sv: "ett väder", nl: "het weer", def: "vädret", mass: true, ex: "Hur är **vädret** idag?", exNl: "Hoe is het weer vandaag?" }
+  - { sv: "en sol", nl: "een zon", def: "solen", ex: "**Solen** skiner idag.", exNl: "De zon schijnt vandaag." }
+  - { sv: "ett regn", nl: "de regen", def: "regnet", mass: true, ex: "Vi gick hem i **regnet**.", exNl: "We liepen in de regen naar huis." }
+  - { sv: "en vind", nl: "een wind", def: "vinden", pl: "vindar", plDef: "vindarna", ex: "**Vinden** är kall idag.", exNl: "De wind is koud vandaag." }
+  - { sv: "ett moln", nl: "een wolk", def: "molnet", pl: "moln", plDef: "molnen", ex: "Solen gick in bakom ett **moln**.", exNl: "De zon ging achter een wolk." }
+  - { sv: "en grad", nl: "een graad", def: "graden", pl: "grader", plDef: "graderna", ex: "Det är tjugofem **grader** idag.", exNl: "Het is vandaag vijfentwintig graden." }
+  - { sv: "en stuga", nl: "een (zomer)huisje", def: "stugan", pl: "stugor", plDef: "stugorna", ex: "Vi har en **stuga** i Dalarna.", exNl: "We hebben een zomerhuisje in Dalarna." }
+  - { sv: "ett hav", nl: "een zee", def: "havet", pl: "hav", plDef: "haven", ex: "Barnen badar i **havet**.", exNl: "De kinderen zwemmen in de zee." }
+  - { sv: "en strand", nl: "een strand", def: "stranden", pl: "stränder", plDef: "stränderna", ex: "Barnen leker på **stranden**.", exNl: "De kinderen spelen op het strand." }
+  - { sv: "ett blåbär", nl: "een bosbes", def: "blåbäret", pl: "blåbär", plDef: "blåbären", ex: "Vi plockar **blåbär** i skogen.", exNl: "We plukken bosbessen in het bos." }
+  - { sv: "en svamp", nl: "een paddenstoel", def: "svampen", pl: "svampar", plDef: "svamparna", ex: "I september plockar vi **{svamp|svampar}**.", exNl: "In september plukken we paddenstoelen." }
+  - { sv: "ett tält", nl: "een tent", def: "tältet", pl: "tält", plDef: "tälten", ex: "Vi sov i ett **tält** vid sjön.", exNl: "We sliepen in een tent bij het meer." }
+  - { sv: "ett paraply", nl: "een paraplu", def: "paraplyet", pl: "paraplyer", ex: "Ta med ett **paraply**, det regnar!", exNl: "Neem een paraplu mee, het regent!" }
+  - { sv: "att regna", nl: "regenen", ex: "Det **regnade** hela dagen igår.", exNl: "Het regende gisteren de hele dag." }
+  - { sv: "att snöa", nl: "sneeuwen", ex: "Titta, det **snöar** ute!", exNl: "Kijk, het sneeuwt buiten!" }
+  - { sv: "att blåsa", nl: "waaien", ex: "Det **blåser** mycket vid havet.", exNl: "Het waait hard aan zee." }
+  - { sv: "att skina", nl: "schijnen", ex: "Solen **sken** hela dagen.", exNl: "De zon scheen de hele dag." }
+  - { sv: "att bada", nl: "baden, zwemmen (buiten)", ex: "Vi **badade** i sjön varje dag.", exNl: "We zwommen elke dag in het meer." }
+  - { sv: "att plocka", nl: "plukken", ex: "Barnen **plockar** blommor.", exNl: "De kinderen plukken bloemen." }
+  - { sv: "att tälta", nl: "kamperen (in een tent)", ex: "Man får **tälta** en natt i naturen.", exNl: "Je mag een nacht in de natuur kamperen." }
+  - { sv: "ändå", nl: "toch", ex: "Det regnade, men vi badade **ändå**.", exNl: "Het regende, maar we zwommen toch." }
+  - { sv: "därför", nl: "daarom", ex: "Det regnar, **därför** stannar vi hemma.", exNl: "Het regent, daarom blijven we thuis." }
+  - { sv: "i stället", nl: "in plaats daarvan", alt: ["istället"], ex: "Det regnade, så vi gick på bio **{i stället|istället}**.", exNl: "Het regende, dus gingen we in plaats daarvan naar de bioscoop." }
+  - { sv: "en ö", nl: "een eiland", def: "ön", pl: "öar", ex: "Vi bor på en liten **ö**.", exNl: "We wonen op een klein eiland." }
+  - { sv: "ett berg", nl: "een berg", def: "berget", pl: "berg", ex: "Vi klättrade upp på **berget**.", exNl: "We klommen de berg op." }
+  - { sv: "ett fjäll", nl: "een fjell (kale berg in het noorden)", def: "fjället", pl: "fjäll", ex: "På sommaren vandrar vi i **fjällen**.", exNl: "In de zomer trekken we door de fjells." }
+  - { sv: "ett träd", nl: "een boom", def: "trädet", pl: "träd", ex: "Vi sitter i skuggan under ett **träd**.", exNl: "We zitten in de schaduw onder een boom." }
+  - { sv: "en blomma", nl: "een bloem", def: "blomman", pl: "blommor", ex: "Jag plockade **blommor** i trädgården.", exNl: "Ik plukte bloemen in de tuin." }
+  - { sv: "ett gräs", nl: "het gras", def: "gräset", ex: "Vi ligger i **gräset** och vilar.", exNl: "We liggen in het gras uit te rusten." }
+  - { sv: "en sommar", nl: "een zomer", def: "sommaren", pl: "somrar", ex: "**Sommaren** är kort i norra Sverige.", exNl: "De zomer is kort in Noord-Zweden." }
+  - { sv: "en vår", nl: "een lente, een voorjaar", def: "våren", pl: "vårar", ex: "På **våren** kommer fåglarna tillbaka.", exNl: "In de lente komen de vogels terug." }
+  - { sv: "en höst", nl: "een herfst", def: "hösten", pl: "höstar", ex: "På **hösten** plockar vi svamp.", exNl: "In de herfst plukken we paddenstoelen." }
+  - { sv: "en himmel", nl: "een hemel, de lucht", def: "himlen", pl: "himlar", ex: "**Himlen** är alldeles blå idag.", exNl: "De lucht is vandaag helemaal blauw." }
+  - { sv: "en åska", nl: "onweer", def: "åskan", ex: "Jag är rädd för **åskan**.", exNl: "Ik ben bang voor het onweer." }
+  - { sv: "en temperatur", nl: "een temperatuur", def: "temperaturen", pl: "temperaturer", ex: "**Temperaturen** i vattnet är arton grader.", exNl: "De temperatuur van het water is achttien graden." }
+  - { sv: "en fågel", nl: "een vogel", def: "fågeln", pl: "fåglar", ex: "**Fåglarna** sjunger på morgonen.", exNl: "De vogels zingen 's ochtends." }
+  - { sv: "en mygga", nl: "een mug", def: "myggan", pl: "myggor", ex: "**Myggorna** bet mig hela natten.", exNl: "De muggen staken me de hele nacht." }
+  - { sv: "ett djur", nl: "een dier", def: "djuret", pl: "djur", ex: "Vilka **djur** lever i skogen?", exNl: "Welke dieren leven in het bos?" }
+  - { sv: "en älg", nl: "een eland", def: "älgen", pl: "älgar", plDef: "älgarna", ex: "Vi såg en **älg** vid vägen.", exNl: "We zagen een eland langs de weg." }
+  - { sv: "en stig", nl: "een (voet)pad", def: "stigen", pl: "stigar", ex: "Vi går på en smal **stig** genom skogen.", exNl: "We lopen over een smal pad door het bos." }
+  - { sv: "en sten", nl: "een steen", def: "stenen", pl: "stenar", ex: "Barnen kastar **stenar** i sjön.", exNl: "De kinderen gooien stenen in het meer." }
+  - { sv: "en flod", nl: "een rivier", def: "floden", pl: "floder", ex: "Vi paddlade kanot på **floden**.", exNl: "We kanoden op de rivier." }
+  - { sv: "en natur", nl: "de natuur", def: "naturen", ex: "Jag älskar att vara ute i **naturen**.", exNl: "Ik ben dol op buiten zijn in de natuur." }
+  - { sv: "en ryggsäck", nl: "een rugzak", def: "ryggsäcken", pl: "ryggsäckar", ex: "Jag packar **ryggsäcken** för vandringen.", exNl: "Ik pak de rugzak in voor de trektocht." }
+  - { sv: "en eld", nl: "een vuur", def: "elden", pl: "eldar", ex: "Vi grillar korv över **elden**.", exNl: "We roosteren worstjes boven het vuur." }
+  - { sv: "att vandra", nl: "een trektocht maken, wandelen (in de natuur)", ex: "Vi **vandrade** i fjällen i en vecka.", exNl: "We maakten een week lang een trektocht door de fjells." }
+  - { sv: "att ro", nl: "roeien", ex: "Vi **rodde** ut på sjön.", exNl: "We roeiden het meer op." }
+  - { sv: "att paddla", nl: "kanoën, peddelen", ex: "Vi **paddlar** kanot på sjön.", exNl: "We kanoën op het meer." }
+  - { sv: "att sola", nl: "zonnen, in de zon liggen", alt: ["att sola sig"], ex: "Hon **{solar|solar sig}** på stranden.", exNl: "Zij ligt in de zon op het strand." }
+  - { sv: "att frysa", nl: "het koud hebben", ex: "Jag **fryser**! Kan vi gå hem?", exNl: "Ik heb het koud! Kunnen we naar huis gaan?" }
+  - { sv: "att svettas", nl: "zweten", ex: "Det är så varmt att jag **svettas**.", exNl: "Het is zo warm dat ik zweet." }
+  - { sv: "att växa", nl: "groeien", ex: "Blåbären **växer** i skogen.", exNl: "De bosbessen groeien in het bos." }
+  - { sv: "att klättra", nl: "klimmen", ex: "Barnen **klättrar** i träden.", exNl: "De kinderen klimmen in de bomen." }
+  - { sv: "att njuta", nl: "genieten (njuta av = genieten van)", ex: "Vi **njuter** av solen.", exNl: "We genieten van de zon." }
+  - { sv: "varm", nl: "warm", ex: "Det är **varmt** i vattnet idag.", exNl: "Het water is warm vandaag." }
+  - { sv: "kall", nl: "koud", ex: "Det är **kallt** ute idag.", exNl: "Het is koud buiten vandaag." }
+  - { sv: "solig", nl: "zonnig", ex: "Imorgon blir det **soligt**.", exNl: "Morgen wordt het zonnig." }
+  - { sv: "molnig", nl: "bewolkt", ex: "Idag är det **molnigt**.", exNl: "Vandaag is het bewolkt." }
+  - { sv: "blöt", nl: "nat", ex: "Min jacka är alldeles **blöt**.", exNl: "Mijn jas is helemaal nat." }
+  - { sv: "skön", nl: "fijn, heerlijk (aangenaam)", ex: "Det är så **skönt** att bada!", exNl: "Het is zo fijn om te zwemmen!" }
+  - { sv: "tyst", nl: "stil", ex: "Det är så **tyst** i skogen.", exNl: "Het is zo stil in het bos." }
+  - { sv: "inte heller", nl: "ook niet", ex: "Jag kan **inte heller** simma.", exNl: "Ik kan ook niet zwemmen." }
+  - { sv: "utan", nl: "maar (na een ontkenning)", ex: "Det är inte kallt **utan** varmt.", exNl: "Het is niet koud maar warm." }
+  - { sv: "på landet", nl: "op het platteland", ex: "På sommaren bor vi **på landet**.", exNl: "In de zomer wonen we op het platteland." }
