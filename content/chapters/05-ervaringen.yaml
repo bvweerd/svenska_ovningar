@@ -5,7 +5,7 @@ grammar:
     title: De voltooide tijd (perfekt)
     summary: "**har + supinum**: *jobba → har jobbat*, *köpa → har köpt*, *bo → har bott*, *skriva → har skrivit*."
     body: |
-      De perfekt maak je met **har** + de **supinum**. De supinum lijkt op het Nederlandse voltooid deelwoord, maar is een aparte vorm die je alleen na *har* (of *hade*) gebruikt. Het Zweedse voltooid deelwoord als bijvoeglijk naamwoord ziet er soms anders uit: *Jag **har skrivit** en text*, maar *en **skriven** text*. *Har* is voor iedereen hetzelfde, ook waar het Nederlands *ben* gebruikt: *Jag **har** varit i Kiruna* (Ik **ben** in Kiruna geweest).
+      De perfekt maak je met **har** + de **supinum**. De supinum lijkt op het Nederlandse voltooid deelwoord, maar is een aparte vorm die je alleen na een vorm van *ha* (*har, hade, ha*) gebruikt. Het Zweedse voltooid deelwoord als bijvoeglijk naamwoord ziet er soms anders uit: *Jag **har skrivit** en text*, maar *en **skriven** text*. *Har* is voor iedereen hetzelfde, ook waar het Nederlands *ben* gebruikt: *Jag **har** varit i Kiruna* (Ik **ben** in Kiruna geweest).
 
       | Infinitief | Preteritum | Supinum | Regel |
       |---|---|---|---|
@@ -155,7 +155,7 @@ sections:
         items:
           - { id: 3vkp, type: translate, prompt: "Gisteren heb ik een boek gekocht.", answers: ["{Igår|I går} köpte jag en bok.", "Jag köpte en bok {igår|i går}."], feedback: [{ contains: "har köpt", tip: "In het Nederlands zeg je „heb gekocht”, maar met igår gebruik je in het Zweeds de preteritum." }, { contains: "igår jag", tip: "Na Igår komt eerst het werkwoord." }] }
           - { id: vrb9, type: translate, prompt: "Ik woon al drie jaar in Zweden.", answers: ["Jag har bott i Sverige i tre år[ nu].", "Nu har jag bott i Sverige i tre år."], feedback: [{ match: "Jag bor i Sverige i tre år", tip: "Iets wat tot nu doorloopt met een duur: perfekt (har bott) + i tre år." }] }
-          - { id: dcr5, type: translate, prompt: "Ben je ooit in Stockholm geweest?", answers: ["Har du {någonsin|någon gång} varit i Stockholm?"], feedback: [{ contains: "är du", tip: "Bij de perfekt gebruik je altijd har, ook waar het Nederlands „ben” zegt." }] }
+          - { id: dcr5, type: translate, prompt: "Ben je ooit in Stockholm geweest?", answers: ["Har du {någonsin|någon gång} varit i Stockholm?", "Har du varit i Stockholm någon gång?"], feedback: [{ contains: "är du", tip: "Bij de perfekt gebruik je altijd har, ook waar het Nederlands „ben” zegt." }] }
           - { id: pend, type: translate, prompt: "We hebben nog nooit surströmming gegeten.", answers: ["Vi har aldrig ätit surströmming."], feedback: [{ contains: "aldrig har", tip: "aldrig staat na har." }] }
           - { id: a4fa, type: translate, prompt: "Wat heb je vandaag gedaan?", answers: ["Vad har du gjort {idag|i dag}?"] }
           - { id: jza3, type: translate, prompt: "Twee jaar geleden woonden we in Utrecht.", answers: ["För två år {sedan|sen} bodde vi i Utrecht.", "Vi bodde i Utrecht för två år {sedan|sen}."], feedback: [{ contains: "har bott", tip: "Twee jaar geleden is een bepaald moment, en het is voorbij: preteritum." }] }
@@ -370,6 +370,6 @@ vocab:
   - { sv: "uppe", nl: "boven", ex: "Toaletten är **uppe**.", exNl: "De wc is boven." }
   - { sv: "upp", nl: "naar boven, omhoog", ex: "Nils har klättrat **upp** i trädet.", exNl: "Nils is in de boom geklommen." }
   - { sv: "nere", nl: "beneden", ex: "Köket är **nere**.", exNl: "De keuken is beneden." }
-  - { sv: "ner", nl: "naar beneden, omlaag", alt: ["ned"], ex: "Solen har gått **{ner|ned}**.", exNl: "De zon is ondergegaan." }
+  - { sv: "ner", nl: "naar beneden, omlaag", ex: "Solen har gått **ner**.", exNl: "De zon is ondergegaan." }
   - { sv: "hit", nl: "hierheen, hiernaartoe", ex: "Kom **hit**!", exNl: "Kom hierheen!" }
   - { sv: "dit", nl: "daarheen, daarnaartoe", ex: "Vi har aldrig åkt **dit**.", exNl: "We zijn daar nooit heen gegaan." }

@@ -285,7 +285,7 @@ sections:
           - { id: nkx2, type: translate, prompt: "Vorige week was ik ziek.", answers: ["Förra veckan var jag sjuk.", "Jag var sjuk förra veckan."] }
           - { id: bj8w, type: translate, prompt: "Mijn broer woonde in Zweden.", answers: ["Min bror bodde i Sverige."], topic: possessiv }
           - { id: d85t, type: translate, prompt: "Wat deed je gisteren?", answers: ["Vad gjorde du {igår|i går}?"], topic: vragen }
-          - { id: 7e3w, type: translate, prompt: "Haar ouders kwamen op bezoek.", answers: ["Hennes föräldrar kom på besök."], feedback: [{ contains: "henne föräldrar", tip: "Haar (bezit) = hennes." }, { contains: "kommde", tip: "komma is sterk: kom." }] }
+          - { id: 7e3w, type: translate, prompt: "Haar ouders kwamen op bezoek.", answers: ["Hennes föräldrar kom på besök.", "Hennes föräldrar hälsade på."], feedback: [{ contains: "henne föräldrar", tip: "Haar (bezit) = hennes." }, { contains: "kommde", tip: "komma is sterk: kom." }] }
           - { id: g73v, type: translate, prompt: "Vorig jaar woonden we in Utrecht.", answers: ["Förra året bodde vi i Utrecht.", "Vi bodde i Utrecht förra året.", "{I fjol|Ifjol} bodde vi i Utrecht.", "Vi bodde i Utrecht {i fjol|ifjol}."], feedback: [{ contains: "året vi", tip: "Na Förra året komt eerst het werkwoord." }] }
           - { id: z37r, type: translate, prompt: "Gisteren schreef Wilma een brief.", answers: ["{Igår|I går} skrev Wilma ett brev.", "Wilma skrev ett brev {igår|i går}."], feedback: [{ contains: "skrivde", tip: "skriva is sterk: skrev." }] }
           - { id: uekt, type: translate, prompt: "Zijn zus belde gisteren.", answers: ["Hans syster ringde {igår|i går}.", "{Igår|I går} ringde hans syster."], topic: possessiv, feedback: [{ contains: "honom syster", tip: "Zijn (bezit) = hans." }] }
@@ -400,7 +400,7 @@ vocab:
   - { sv: "att fylla år", nl: "jarig zijn", ex: "Wilma **fyllde år** igår.", exNl: "Wilma was gisteren jarig." }
   - { sv: "att fira", nl: "vieren", ex: "Vi **firade** mammas födelsedag.", exNl: "We vierden mama's verjaardag." }
   - { sv: "att besöka", nl: "bezoeken", ex: "Igår **besökte** vi farmor.", exNl: "Gisteren bezochten we oma." }
-  - { sv: "att leka", nl: "spelen als kind, spelen (van kinderen)", ex: "Nils **lekte** med katten.", exNl: "Nils speelde met de kat." }
+  - { sv: "att leka", nl: "spelen (van kinderen)", ex: "Nils **lekte** med katten.", exNl: "Nils speelde met de kat." }
   - { sv: "att grilla", nl: "barbecueën", ex: "Förra veckan **grillade** vi hos Olle.", exNl: "Vorige week barbecueden we bij Olle." }
   - { sv: "att gifta sig", nl: "trouwen", ex: "Ingrid och Olle **gifte sig** 2005.", exNl: "Ingrid en Olle trouwden in 2005." }
   - { sv: "att födas", nl: "geboren worden", ex: "Jag **föddes** i Leiden.", exNl: "Ik ben in Leiden geboren." }

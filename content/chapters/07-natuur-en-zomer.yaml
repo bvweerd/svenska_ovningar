@@ -143,7 +143,7 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: konjunktioner
         items:
-          - { id: ky8a, type: translate, prompt: "Het is koud, dus ik trek een jas aan.", answers: ["Det är kallt, så jag {tar|sätter} på mig en {jacka|rock}."], feedback: [{ contains: "så tar jag", tip: "Na het voegwoord så blijft de gewone volgorde: så jag tar …" }] }
+          - { id: ky8a, type: translate, prompt: "Het is koud, dus ik trek een jas aan.", answers: ["Det är kallt, så jag {tar|sätter} på mig {en jacka|en rock|en kappa|jackan|rocken|kappan}."], feedback: [{ contains: "så tar jag", tip: "Na het voegwoord så blijft de gewone volgorde: så jag tar …" }] }
           - { id: 7dx6, type: translate, prompt: "Ik ga naar huis, want ik ben moe.", answers: ["Jag {går|åker} hem, för jag är trött."], feedback: [{ contains: "går hemma", tip: "Naar huis is een richting: hem." }] }
           - { id: 8b4p, type: translate, prompt: "Het regent. Daarom blijven we binnen.", answers: ["Det regnar. Därför stannar vi {inne|inomhus}."], feedback: [{ contains: "därför vi", tip: "därför is een bijwoord: daarna komt eerst het werkwoord." }] }
           - { id: g9ck, type: translate, prompt: "Wil je zwemmen of wandelen?", answers: ["Vill du {bada|simma} eller {vandra|promenera|gå en promenad|ta en promenad}?"] }

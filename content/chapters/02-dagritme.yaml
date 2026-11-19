@@ -140,7 +140,7 @@ sections:
           - { id: zbhw, type: translate, prompt: "Elke zaterdag slapen we lang.", answers: ["{På lördagar|På lördagarna|Om lördagarna|Varje lördag} sover vi länge."], feedback: [{ match: ["På lördag sover vi länge", "På lördag sover vi lång"], tip: "Het gaat om een gewoonte (elke zaterdag): på lördagar. På lördag betekent aanstaande zaterdag." }, { match: ["På lördagar sover vi lång", "På lördagarna sover vi lång", "Om lördagarna sover vi lång", "Varje lördag sover vi lång"], tip: "Lang (in tijd) is „länge”; „lång” gebruik je voor lengte." }] }
           - { id: g93s, type: translate, prompt: "Morgen gaat Wilma naar school.", answers: ["{Imorgon|I morgon} går Wilma till skolan."], feedback: [{ contains: "imorgon Wilma", tip: "Na de tijdsbepaling komt eerst het werkwoord, dan pas Wilma." }] }
           - { id: eh6a, type: translate, prompt: "Om half acht drinkt Olle koffie.", answers: ["[Klockan ]halv åtta dricker Olle kaffe."], feedback: [{ contains: "åtta Olle", tip: "Na de tijdsbepaling komt eerst het werkwoord, dan pas Olle." }, { contains: "halv sju", tip: "halv + het volgende uur: half acht = halv åtta." }] }
-          - { id: se8d, type: translate, prompt: "Na het werk kookt Bram.", answers: ["Efter {jobbet|arbetet} lagar Bram mat."], feedback: [{ contains: "Bram lagar", tip: "Na de tijdsbepaling komt eerst het werkwoord, dan pas Bram." }] }
+          - { id: se8d, type: translate, prompt: "Na het werk kookt Bram.", answers: ["Efter {jobbet|arbetet} lagar Bram {mat|middag}."], feedback: [{ contains: "Bram lagar", tip: "Na de tijdsbepaling komt eerst het werkwoord, dan pas Bram." }] }
 
       - id: weekdagen
         title: De dagen van de week
@@ -490,7 +490,7 @@ vocab:
   - { sv: "en dag", nl: "een dag", def: "dagen", pl: "dagar", plDef: "dagarna", ex: "Jag jobbar fem **dagar** i veckan.", exNl: "Ik werk vijf dagen per week." }
   - { sv: "en vecka", nl: "een week", def: "veckan", pl: "veckor", plDef: "veckorna", ex: "Nästa **vecka** åker vi till Göteborg.", exNl: "Volgende week gaan we naar Göteborg." }
   - { sv: "en helg", nl: "een weekend", def: "helgen", pl: "helger", alt: ["en weekend"], ex: "Vad gör du i **helgen**?", exNl: "Wat doe je dit weekend?" }
-  - { sv: "en måndag", nl: "een maandag", def: "måndagen", pl: "måndagar", ex: "Jag har svenska på **{måndagar|måndagarna|måndag}**.", exNl: "Op maandag heb ik Zweeds." }
+  - { sv: "en måndag", nl: "een maandag", def: "måndagen", pl: "måndagar", ex: "Jag har svenska på **{måndagar|måndagarna}**.", exNl: "Op maandag heb ik Zweeds." }
   - { sv: "en klocka", nl: "een klok, een horloge", def: "klockan", pl: "klockor", ex: "Har du en **klocka**?", exNl: "Heb je een horloge?" }
   - { sv: "en timme", nl: "een uur (60 minuten)", def: "timmen", pl: "timmar", ex: "Jag sover åtta **timmar** varje natt.", exNl: "Ik slaap elke nacht acht uur." }
   - { sv: "en gång", nl: "een keer", def: "gången", pl: "gånger", ex: "Vi ses två **gånger** i veckan.", exNl: "We zien elkaar twee keer per week." }

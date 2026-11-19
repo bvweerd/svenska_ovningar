@@ -143,7 +143,7 @@ sections:
 
       - id: indirect-maken
         title: Vertel het na
-        instruction: Maak er indirecte rede van. Let op het voornaamwoord en de woordvolgorde.
+        instruction: "Maak er indirecte rede van. Jij vertelt na wat een ander zei: *jag* en *vi* van de spreker worden dus *han/hon* en *de*. Let ook op de woordvolgorde."
         topic: indirekt-tal
         items:
           - { id: kkqq, type: translate, prompt: "Olle säger: ”Jag är sjuk.”", answers: ["Olle säger att han är sjuk."], feedback: [{ match: "Olle säger att jag är sjuk", tip: "Olle praat over zichzelf: in de indirecte rede wordt dat han." }] }
@@ -215,7 +215,7 @@ sections:
           - { id: sbmz, type: truefalse, statement: "Fleur svarade i telefon.", answer: false, tip: "Waarom niet?", correction: { answers: ["{Fleur|Hon} svarade inte[ i telefon].", "{Fleur|Hon} hade glömt mobilen hemma."] } }
           - { id: d3vq, type: truefalse, statement: "Ingrid lämnade ett meddelande.", answer: true }
           - { id: 4upp, type: truefalse, statement: "Ingrid hade tre biljetter.", answer: false, tip: "Hoeveel kaartjes had ze?", correction: { answers: ["{Ingrid|Hon} hade två biljetter."] } }
-          - { id: 7qh7, type: truefalse, statement: "Konserten var på lördag.", answer: false, tip: "Op welke dag was het concert?", correction: { answers: ["Konserten var på fredagen.", "Konserten var {på fredag|i fredags}."] } }
+          - { id: 7qh7, type: truefalse, statement: "Konserten var på lördagen.", answer: false, tip: "Op welke dag was het concert?", correction: { answers: ["Konserten var {på fredagen|i fredags}."] } }
           - { id: peca, type: truefalse, statement: "Fleur ville inte följa med.", answer: false, tip: "Wat zei Fleur toen ze terugbelde?", correction: { answers: ["{Fleur|Hon} ville [gärna ]följa med."] } }
 
       - id: schrijven-bericht

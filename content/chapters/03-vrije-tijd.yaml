@@ -199,7 +199,7 @@ sections:
           - { id: qqg4, type: translate, prompt: "Olle helpt ons vaak.", answers: ["Olle hjälper oss ofta."], feedback: [{ contains: "ofta hjälper", tip: "ofta staat ná het werkwoord." }, { contains: "hjälper ofta oss", tip: "Een kort voornaamwoord (oss) staat vóór ofta: hjälper oss ofta." }] }
           - { id: waf3, type: translate, prompt: "Wij houden van jullie!", answers: ["Vi älskar er!"] }
           - { id: c7bj, type: translate, prompt: "Wil je met mij dansen?", answers: ["Vill du dansa med mig?"], feedback: [{ contains: "med jag", tip: "Na een voorzetsel komt de objectvorm: med mig." }] }
-          - { id: 4ngd, type: translate, prompt: "Bram ziet hen niet.", answers: ["Bram ser {dem|dom} inte.", "Bram ser inte {dem|dom}."], feedback: [{ contains: "ser de", tip: "Hen (lijdend voorwerp) = dem." }] }
+          - { id: 4ngd, type: translate, prompt: "Bram ziet hen niet.", answers: ["Bram ser dem inte.", "Bram ser inte dem."], feedback: [{ contains: "ser de", tip: "Hen (lijdend voorwerp) = dem." }, { contains: "dom", tip: "Zo klinkt het in spreektaal, maar je schrijft dem." }] }
           - { id: 7scv, type: translate, prompt: "Ingrid belt jou vanavond.", answers: ["Ingrid ringer[ till] dig {ikväll|i kväll}.", "{Ikväll|I kväll} ringer Ingrid[ till] dig."], feedback: [{ contains: ["ringer du", "till du"], tip: "Jou (lijdend voorwerp) = dig." }] }
           - { id: 4bap, type: translate, prompt: "Wilma kent hem niet.", answers: ["Wilma känner {honom inte|inte honom}."], feedback: [{ contains: "känner han", tip: "Hem (lijdend voorwerp) = honom." }] }
 

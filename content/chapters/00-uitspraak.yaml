@@ -63,7 +63,7 @@ grammar:
 
       Vuistregel: staat er één medeklinker na de klinker, dan is de klinker meestal lang. Staan er twee (of meer), dan is hij kort.
 
-      Let op: een aantal korte, veelgebruikte woorden heeft een **korte** klinker, ook al staat er maar één medeklinker achter: *han, man, kan, hon, vad, med, den, rum, hem*.
+      Let op: een aantal korte, veelgebruikte woorden heeft een **korte** klinker, ook al staat er maar één medeklinker achter: *han, man, kan, hon, vem, som, dem, den, rum, hem*.
 
   - id: klemtoon
     title: Klemtoon
