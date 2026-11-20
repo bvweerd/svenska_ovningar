@@ -229,12 +229,12 @@ sections:
         text: |
           Hej! Jag heter Wilma och jag är femton år. På fritiden spelar jag gitarr och sjunger i en kör. Kören övar på onsdagar. Jag tycker också om att läsa, men jag läser sällan på vardagar. Då har jag för mycket läxor. Jag har en kompis, Elin. Hon spelar också gitarr, och vi övar ofta tillsammans.
 
-          På lördagar brukar jag träffa mina kompisar. Ibland går vi på bio och ibland sitter vi bara på ett kafé och pratar. Min lillebror Nils älskar fotboll, men jag tycker inte om sport. Jag simmar aldrig, för vattnet i sjön är alltid så kallt! Men på söndagar cyklar jag till skogen med mamma. Det tycker jag är kul.
+          På lördagar brukar jag träffa kompisar. Ibland går vi på bio och ibland sitter vi bara på ett kafé och pratar. Jag har en lillebror, Nils. Han älskar fotboll, men jag tycker inte om sport. Jag simmar aldrig, för vattnet i sjön är alltid så kallt! Men på söndagar cyklar jag till skogen med mamma. Det tycker jag är kul.
         items:
           - { id: bshg, type: truefalse, statement: "Wilma spelar piano.", answer: false, tip: "Welk instrument speelt ze?", correction: { answers: ["{Wilma|Hon} spelar gitarr."] } }
           - { id: 4gx8, type: truefalse, statement: "Kören övar på onsdagar.", answer: true }
           - { id: vqub, type: truefalse, statement: "Wilma läser ofta på vardagar.", answer: false, tip: "Hoe vaak leest ze op doordeweekse dagen?", correction: { answers: ["{Wilma|Hon} läser sällan på vardagar."] } }
-          - { id: g8cz, type: truefalse, statement: "På lördagar brukar Wilma träffa sina kompisar.", answer: true }
+          - { id: g8cz, type: truefalse, statement: "På lördagar brukar Wilma träffa kompisar.", answer: true }
           - { id: m2qg, type: truefalse, statement: "Wilma tycker om sport.", answer: false, tip: "Lees de tweede alinea nog eens.", correction: { answers: ["{Wilma|Hon} tycker inte om sport."] } }
           - { id: 5nfv, type: truefalse, statement: "Wilma simmar ofta i sjön.", answer: false, tip: "Hoe vaak zwemt ze?", correction: { answers: ["{Wilma|Hon} simmar aldrig[ i sjön]."] } }
           - { id: r2jh, type: truefalse, statement: "Wilma och Elin övar aldrig tillsammans.", answer: false, tip: "Lees het einde van de eerste alinea: hoe vaak oefenen ze samen?", correction: { answers: ["{Wilma och Elin|De} övar ofta tillsammans.", "{Wilma|Hon} övar ofta [tillsammans ]med Elin."] } }
@@ -274,7 +274,7 @@ sections:
               - { any: ["tycker om att", "gillar att", "älskar att"], label: "Je vertelt wat je graag doet (tycker om att / gillar att …)" }
               - { any: ["ofta", "ibland", "sällan", "aldrig", "alltid", "brukar"], label: "Je zegt hoe vaak (ofta, ibland, aldrig, brukar …)" }
               - { any: ["inte om", "gillar inte"], label: "Je vertelt wat je niet leuk vindt" }
-            model: "På fritiden tycker jag om att läsa och att laga mat. Jag läser nästan varje kväll. På lördagar brukar jag cykla i skogen med min man. Ibland går vi på konsert. Jag spelar aldrig fotboll, för jag tycker inte om sport. Men jag gillar att simma på sommaren."
+            model: "På fritiden tycker jag om att läsa och att laga mat. Jag läser nästan varje kväll. På lördagar brukar jag cykla i skogen. Ibland går jag på konsert. Jag spelar aldrig fotboll, för jag tycker inte om sport. Men jag gillar att simma på sommaren."
 
   - id: luisteren
     title: Luisteren

@@ -219,7 +219,7 @@ sections:
             type: steps
             steps:
               - { type: mc, prompt: "Afgelopen zaterdag hebben we pannenkoeken gegeten. Welke tijd?", options: ["preteritum (åt)", "perfekt (har ätit)"], answer: 0, shuffle: false, tip: "Afgelopen zaterdag (i lördags) is een tijdstip: preteritum." }
-              - { type: translate, prompt: "Vertaal: Afgelopen zaterdag hebben we pannenkoeken gegeten.", answers: ["I lördags åt vi pannkakor."], feedback: [{ contains: "har ätit", tip: "I lördags is een tijdstip in het verleden: preteritum, åt." }, { contains: "I lördags vi åt", tip: "Na I lördags komt eerst het werkwoord: I lördags åt vi." }] }
+              - { type: translate, prompt: "Vertaal: Afgelopen zaterdag hebben we pannenkoeken (*pannkakor*) gegeten.", answers: ["I lördags åt vi pannkakor."], feedback: [{ contains: "har ätit", tip: "I lördags is een tijdstip in het verleden: preteritum, åt." }, { contains: "I lördags vi åt", tip: "Na I lördags komt eerst het werkwoord: I lördags åt vi." }] }
 
       - id: var-vart
         title: Var of vart?
@@ -341,7 +341,7 @@ sections:
 
           Förra månaden åkte vi till Stockholm och besökte Vasamuseet. I somras var vi en vecka i Dalarna. Bram har aldrig sett norrsken, men jag såg det en gång i Kiruna för fem år sedan. Vi har inte varit i Göteborg än. Kanske åker vi dit i höst!
 
-          Igår tappade Bram nyckeln till huset. Han har inte hittat den än. I natt sover vi hos Ingrid och Olle. Deras hus är större än vårt, och de är mycket snälla!
+          Igår tappade Bram nyckeln till huset. Han har inte hittat den än. I natt sov vi hos Ingrid och Olle. Deras hus är större än vårt, och de är mycket snälla!
 
           Kram, Fleur
         items:
@@ -353,7 +353,7 @@ sections:
           - { id: rh88, type: truefalse, statement: "Fleur såg norrsken i Kiruna.", answer: true }
           - { id: 3hk9, type: truefalse, statement: "Bram tappade nyckeln igår.", answer: true }
           - { id: x9vy, type: truefalse, statement: "Bram har hittat nyckeln.", answer: false, tip: "Lees de derde alinea.", correction: { answers: ["{Bram|Han} har inte hittat {nyckeln|den}[ till huset][ än].", "{Bram|Han} har inte hittat {nyckeln|den}[ till huset] ännu.", "{Bram|Han} har tappat {nyckeln|den}[ till huset]."] } }
-          - { id: y4at, type: truefalse, statement: "I natt sover Fleur och Bram hemma.", answer: false, tip: "Waar slapen ze vannacht?", correction: { answers: ["I natt sover {de|Fleur och Bram|Bram och Fleur} hos {Ingrid och Olle|Olle och Ingrid|grannarna}.", "{De|Fleur och Bram|Bram och Fleur} sover hos {Ingrid och Olle|Olle och Ingrid|grannarna}.", "I natt sover {de|Fleur och Bram|Bram och Fleur} inte hemma.", "{De|Fleur och Bram|Bram och Fleur} sover inte hemma."] } }
+          - { id: y4at, type: truefalse, statement: "I natt sov Fleur och Bram hemma.", answer: false, tip: "Waar sliepen ze afgelopen nacht?", correction: { answers: ["I natt sov {de|Fleur och Bram|Bram och Fleur} hos {Ingrid och Olle|Olle och Ingrid|grannarna}.", "{De|Fleur och Bram|Bram och Fleur} sov hos {Ingrid och Olle|Olle och Ingrid|grannarna}[ i natt].", "I natt sov {de|Fleur och Bram|Bram och Fleur} inte hemma.", "{De|Fleur och Bram|Bram och Fleur} sov inte hemma[ i natt].", "{De|Fleur och Bram|Bram och Fleur} har sovit hos {Ingrid och Olle|Olle och Ingrid|grannarna}[ i natt]."], feedback: [{ contains: ["sover hos", "sover inte"], tip: "Het gaat over afgelopen nacht (i natt sov vi): gebruik de verleden tijd, sov." }] } }
           - { id: rqr8, type: truefalse, statement: "Ingrid och Olle har ett större hus än Fleur och Bram.", answer: true }
 
       - id: dialoog-kiruna

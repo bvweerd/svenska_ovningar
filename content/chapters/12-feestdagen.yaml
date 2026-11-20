@@ -476,6 +476,7 @@ vocab:
   - { sv: "en gran", nl: "een spar, een kerstboom", def: "granen", pl: "granar", plDef: "granarna", alt: ["en julgran"], ex: "Vi köper en **{gran|julgran}** på torget.", exNl: "We kopen een kerstboom op de markt." }
   - { sv: "en stjärna", nl: "een ster", def: "stjärnan", pl: "stjärnor", plDef: "stjärnorna", ex: "Det sitter en **stjärna** i toppen på granen.", exNl: "Er zit een ster in de top van de kerstboom." }
   - { sv: "en tomte", nl: "een kabouter, een kerstman", def: "tomten", pl: "tomtar", plDef: "tomtarna", ex: "**Tomten** kommer på julafton.", exNl: "De kerstman komt op kerstavond." }
+  - { sv: "en vante", nl: "een want", def: "vanten", pl: "vantar", plDef: "vantarna", ex: "Fleur fick varma **vantar** i julklapp.", exNl: "Fleur kreeg warme wanten als kerstcadeau." }
   - { sv: "en pepparkaka", nl: "een gemberkoekje", def: "pepparkakan", pl: "pepparkakor", plDef: "pepparkakorna", ex: "Vi bakar **pepparkakor** i advent.", exNl: "In de adventstijd bakken we gemberkoekjes." }
   - { sv: "en skinka", nl: "een ham", def: "skinkan", pl: "skinkor", plDef: "skinkorna", ex: "**Skinkan** står på julbordet.", exNl: "De ham staat op het kerstbuffet." }
   - { sv: "ett nyår", nl: "het nieuwjaar", def: "nyåret", mass: true, pl: "nyår", ex: "Vi firar **nyår** hos mina föräldrar.", exNl: "We vieren oud en nieuw bij mijn ouders." }

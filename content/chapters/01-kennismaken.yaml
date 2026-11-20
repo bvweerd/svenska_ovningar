@@ -305,7 +305,7 @@ sections:
             type: steps
             steps:
               - { type: mc, prompt: "Idag dricker jag kaffe. → Begin met **Jag**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 1, shuffle: false, tip: "Het onderwerp (jag) staat zelf op plaats 1. Het werkwoord komt op plaats 2, er is geen inversie." }
-              - { type: translate, prompt: "Schrijf de zin, beginnend met **Jag**: Idag dricker jag kaffe.", answers: ["Jag dricker kaffe {idag|i dag}."], feedback: [{ match: "Jag kaffe dricker idag", tip: "Het werkwoord staat op plaats 2, direct na jag." }, { match: ["Idag dricker jag kaffe", "I dag dricker jag kaffe"], tip: "Goed Zweeds, maar begin de zin met Jag: Jag dricker kaffe idag." }] }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **Jag**: Idag dricker jag kaffe.", answers: ["Jag dricker kaffe {idag|i dag}."], feedback: [{ match: "Jag kaffe dricker idag", tip: "Het werkwoord staat op plaats 2, direct na jag." }] }
           - id: bh8w
             type: steps
             steps:
@@ -335,7 +335,7 @@ sections:
             type: steps
             steps:
               - { type: mc, prompt: "Varje morgon läser Bram tidningen. → Begin met **Bram**. Welke volgorde krijg je?", options: ["inversie: eerst het werkwoord, dan het onderwerp", "geen inversie: eerst het onderwerp, dan het werkwoord"], answer: 1, shuffle: false, tip: "Bram is het onderwerp en staat op plaats 1: geen inversie." }
-              - { type: translate, prompt: "Schrijf de zin, beginnend met **Bram**: Varje morgon läser Bram tidningen.", answers: ["Bram läser tidningen varje morgon."], feedback: [{ match: "Bram tidningen läser varje morgon", tip: "Het werkwoord staat op plaats 2, direct na Bram." }, { match: "Varje morgon läser Bram tidningen", tip: "Goed Zweeds, maar begin de zin met Bram: Bram läser tidningen varje morgon." }] }
+              - { type: translate, prompt: "Schrijf de zin, beginnend met **Bram**: Varje morgon läser Bram tidningen.", answers: ["Bram läser tidningen varje morgon."], feedback: [{ match: "Bram tidningen läser varje morgon", tip: "Het werkwoord staat op plaats 2, direct na Bram." }] }
 
       - id: pronomen-kiezen
         title: Wie of wat?
@@ -659,7 +659,7 @@ sections:
               - { any: ["kommer från"], label: "Je vertelt waar je vandaan komt (kommer från)" }
               - { any: ["bor"], label: "Je vertelt waar je woont (bor)" }
               - { any: ["talar", "pratar"], label: "Je vertelt welke talen je spreekt (talar/pratar)" }
-            model: "Hej! Jag heter Sanne och jag kommer från Nederländerna. Jag bor i Zwolle med min man och två barn. Jag talar nederländska, engelska och lite svenska. Jag jobbar på en bank. På fritiden läser jag och spelar tennis."
+            model: "Hej! Jag heter Sanne och jag kommer från Nederländerna. Jag är gift och har två barn. Vi bor i Zwolle. Jag talar nederländska, engelska och lite svenska. Jag jobbar på en bank. På fritiden läser jag och spelar tennis."
 
   - id: luisteren
     title: Luisteren

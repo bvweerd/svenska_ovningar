@@ -200,9 +200,9 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: telefon
         items:
-          - { id: c4yc, type: translate, topic: tempus, prompt: "Ik had mijn mobiel thuis vergeten, dus ik kon niet opnemen.", answers: ["Jag hade glömt {mobilen|min mobil|telefonen|min telefon} hemma[,] så jag kunde inte svara.", "Jag hade glömt {mobilen|min mobil|telefonen|min telefon} hemma[,] och därför kunde jag inte svara."], feedback: [{ contains: "hade glömde", tip: "Na hade komt de supinum: hade glömt." }, { contains: "så kunde jag", tip: "Na så (dus) blijft de gewone volgorde: så jag kunde inte svara." }] }
+          - { id: c4yc, type: translate, topic: tempus, prompt: "Ik had mijn mobiel thuis vergeten, dus ik kon niet opnemen.", answers: ["Jag hade glömt {mobilen|min mobil|telefonen|min telefon} hemma[,] så jag kunde inte svara.", "Jag hade glömt {mobilen|min mobil|telefonen|min telefon} hemma[,] och därför kunde jag inte svara."], feedback: [{ contains: "hade glömde", tip: "Na hade komt de supinum: hade glömt." }, { contains: "så kunde jag", tip: "Na så (dus) blijft de gewone volgorde, zoals in hoofdstuk 7: så jag kunde inte svara." }] }
           - { id: 53q7, type: translate, prompt: "Ze is er nu niet. Kun je later terugbellen?", answers: ["Hon är inte {här|hemma} [just ]nu. Kan du ringa [mig ]tillbaka senare?"], feedback: [{ contains: "du kan ringa", tip: "In een ja/nee-vraag staat het werkwoord vooraan: Kan du …?" }] }
-          - { id: pv3m, type: translate, prompt: "Mijn batterij is bijna leeg, dus ik bel je later terug.", answers: ["{Batteriet|Mitt batteri} är nästan slut[,] så jag ringer {dig tillbaka|tillbaka|dig} senare.", "{Batteriet|Mitt batteri} är nästan slut[,] och därför ringer jag {dig tillbaka|tillbaka|dig} senare."], feedback: [{ contains: "min batteri", tip: "batteri is een ett-woord: mitt batteri (of batteriet)." }] }
+          - { id: pv3m, type: translate, prompt: "Mijn batterij is bijna leeg, dus ik bel je later terug.", answers: ["{Batteriet|Mitt batteri} är nästan {slut|tomt}[,] så jag ringer {dig tillbaka|tillbaka|dig} senare.", "{Batteriet|Mitt batteri} är nästan {slut|tomt}[,] och därför ringer jag {dig tillbaka|tillbaka|dig} senare."], feedback: [{ contains: "min batteri", tip: "batteri is een ett-woord: mitt batteri (of batteriet)." }, { contains: "nästan tom", tip: "batteri is een ett-woord: tomt (of: slut)." }] }
           - { id: vd2h, type: translate, topic: indirekt-tal, prompt: "Ingrid vraagt of Fleur vrijdag mee wil naar het concert.", answers: ["Ingrid frågar om Fleur vill följa med [henne ]{på|till} konserten på fredag."], feedback: [{ contains: "om vill", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om Fleur vill." }, { contains: "att Fleur vill", tip: "Een ja/nee-vraag wordt een bijzin met om." }] }
           - { id: qbdv, type: translate, topic: indirekt-tal, prompt: "Weet je wanneer de winkel zaterdag dichtgaat?", answers: ["Vet du när {affären|butiken} stänger på lördag?"], feedback: [{ contains: "när stänger", tip: "In de bijzin: eerst het onderwerp (affären), dan het werkwoord (stänger)." }] }
           - { id: 32gz, type: translate, topic: tempus, prompt: "Toen ik thuiskwam, had Bram al gebeld.", answers: ["När jag kom hem hade Bram redan ringt.", "Bram hade redan ringt när jag kom hem."], feedback: [{ contains: "hem Bram hade", tip: "De bijzin staat vooraan: dan komt direct het werkwoord (hade Bram)." }, { contains: ["hade ringde", "hade ringa"], tip: "Na hade komt de supinum: hade ringt." }] }
@@ -269,7 +269,7 @@ sections:
 
       - id: schrijven-bericht
         title: "Schrijven: een voicemail"
-        instruction: "Bouw eerst je bericht op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, het hele bericht op."
+        instruction: "Je belt je vriendin Anna en krijgt haar voicemail. Schrijf op wat je inspreekt. Bouw de tekst eerst op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, het hele bericht op."
         topic: telefon
         items:
           - { id: d2j2, type: mc, prompt: "Je belt je vriendin Anna. Hoe begin je het bericht?", options: ["Hej Anna, det är Sanne.", "Hej Anna, jag är Sanne.", "God dag, mitt namn är Sanne."], answer: 0, tip: "Aan de telefoon zeg je wie je bent met Det är … God dag … is te formeel voor een vriendin." }
@@ -278,13 +278,13 @@ sections:
           - { id: xjjn, type: gap, topic: indirekt-tal, prompt: "Anna zegt: „Jag kan inte komma.” Vertel het verder.", text: "Anna säger att hon ___ komma.", gaps: [{ answers: ["inte kan"], options: ["inte kan", "kan inte"], shuffle: false, tip: "In een bijzin met att staat inte vóór het werkwoord: att hon inte kan." }] }
           - id: jzpv
             type: free
-            prompt: "Zeg wie je bent, waarom je belt (bijvoorbeeld een uitnodiging) en vraag of hij of zij terugbelt."
+            prompt: "Schrijf op wat je op de voicemail inspreekt: zeg wie je bent, waarom je belt (bijvoorbeeld een uitnodiging) en vraag of ze terugbelt."
             minWords: 25
             require:
               - { any: ["det är", "jag heter"], label: "Je zegt wie je bent (Det är …)" }
               - { any: ["ringer", "ringa"], label: "Je vraagt om terug te bellen (ringa / ringer)" }
               - { any: ["vill du", "kan du", "skulle du"], label: "Je stelt een vraag (Vill du / Kan du …)" }
-            model: "Hej Anna, det är Sanne. Jag ringer för att jag har två biljetter till teatern på lördag. Vill du följa med? Föreställningen börjar klockan sju. Kan du ringa mig ikväll eller imorgon? Mitt nummer är 070-123 45 67. Hej då!"
+            model: "Hej Anna, det är Sanne. Jag ringer för att jag har två biljetter till teatern på lördag. Vill du följa med? Det börjar klockan sju. Kan du ringa mig ikväll eller imorgon? Mitt nummer är 070-123 45 67. Hej då!"
 
   - id: luisteren
     title: Luisteren

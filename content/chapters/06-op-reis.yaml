@@ -278,98 +278,6 @@ sections:
           - { id: v3eg, type: gap, text: "Bram fyller år den ___ oktober. (12)", gaps: [{ answers: ["tolfte"] }] }
           - { id: df3d, type: gap, text: "Skolan börjar den ___ augusti. (20)", gaps: [{ answers: ["tjugonde"] }] }
 
-      - id: taak-jeugdherberg
-        title: "Taak: een bed in de jeugdherberg"
-        instruction: "Je komt zonder reservering aan bij een jeugdherberg (*vandrarhem*) in Visby. **Doel:** regel een bed voor twee nachten, van 3 tot 5 juli, betaal met je pinpas en zoek uit hoe je met de bus naar het centrum komt. Kies of schrijf bij elke stap wat jij zegt."
-        topic: transport
-        items:
-          - id: qhgs
-            type: steps
-            explain: "Gelukt: je hebt een bed van 3 tot 5 juli, je hebt met je pas betaald en je neemt de bus van over twintig minuten."
-            steps:
-              - type: mc
-                topic: tidsprep
-                prompt: "**Receptionisten:** Hej och välkommen! — *Je wilt een bed voor twee nachten.*"
-                options:
-                  - "Hej! Har ni någon ledig plats i två nätter?"
-                  - "Hej! Har ni någon ledig plats i två natter?"
-                  - "Hej! Har ni någon ledig plats om två nätter?"
-                  - "Hej! Kan jag köpa en biljett till Visby?"
-                answer: 0
-                optionTips:
-                  - null
-                  - "*natt* heeft een onregelmatig meervoud: *en natt – två nätter*."
-                  - "*om två nätter* betekent *over twee nachten* (vanaf nu). Hoe lang iets duurt: *i två nätter*."
-                  - "Je bent al in Visby. Je wilt een bed (*en plats*), geen kaartje."
-              - type: gap
-                topic: ordningstal
-                prompt: "**Receptionisten:** Vilka datum? — *Van 3 tot 5 juli.*"
-                text: "Från den ___ (3) till den ___ (5) juli."
-                gaps:
-                  - answers: ["tredje"]
-                    feedback: [{ match: "tre", tip: "Bij een datum gebruik je het rangtelwoord: *den tredje*." }]
-                  - answers: ["femte"]
-                    feedback: [{ match: "fem", tip: "Bij een datum gebruik je het rangtelwoord: *den femte*." }]
-              - type: translate
-                topic: tidsprep
-                prompt: "Receptionisten: Har du bott hos oss förut? — Zeg: Ja, twee jaar geleden."
-                answers:
-                  - "Ja, för två år {sedan|sen}."
-                  - "Ja, jag {bodde här|bodde hos er|var här} för två år {sedan|sen}."
-                feedback:
-                  - { match: "ja två år sedan", tip: "*Geleden* is *för … sedan*: *för två år sedan*." }
-                  - { match: "ja för två år", tip: "*Geleden* is *för … sedan*: je mist *sedan*." }
-                  - { contains: "i två år", tip: "*i två år* betekent *twee jaar lang*. *Geleden* is *för två år sedan*." }
-              - type: mc
-                topic: pengar
-                prompt: "**Receptionisten:** Välkommen tillbaka! En plats kostar 350 kronor per natt, så det blir 700 kronor. — *Je wilt met je pinpas betalen.*"
-                options:
-                  - "Kan jag betala med kort?"
-                  - "Kan jag betalar med kort?"
-                  - "Kan jag betala med biljett?"
-                  - "Vad kostar det?"
-                answer: 0
-                optionTips:
-                  - null
-                  - "Na *kan* komt de infinitief: *betala*."
-                  - "*En biljett* is een kaartje voor trein of bus. Je pinpas is *ett kort*."
-                  - "De prijs weet je al: 700 kronor. Je wilt weten of je met de kaart kunt betalen."
-              - type: translate
-                topic: transport
-                prompt: "Receptionisten: Javisst. Varsågod, här är kvittot. — Vraag: Gaat er een bus naar het centrum?"
-                answers:
-                  - "{Går|Finns} det {en|någon} buss [in ]till {centrum|stan}?"
-                  - "Går det bussar [in ]till {centrum|stan}?"
-                feedback:
-                  - { contains: "åker det", tip: "Van een bus die rijdt zeg je *gå*: *Går det en buss …?*" }
-                  - { contains: "går en buss", tip: "Het Zweeds heeft hier *det* nodig, zoals het Nederlands *er*: *Går **det** en buss …?*" }
-              - type: mc
-                topic: transport
-                prompt: "**Receptionisten:** Ja, buss 1 går från hållplatsen här utanför. Den går om fem minuter. — *Je wilt eerst je tas naar je bed brengen. Vijf minuten is te kort.*"
-                options:
-                  - "Det hinner jag inte. När går nästa buss?"
-                  - "Det hinner jag inte. När går nästa bussen?"
-                  - "Det hinner jag inte. När gick nästa buss?"
-                  - "Det hinner jag inte. När går nästa tåg?"
-                answer: 0
-                optionTips:
-                  - null
-                  - "Na *nästa* komt de onbepaalde vorm: *nästa buss* (zoals *När går nästa tåg?*)."
-                  - "Je vraagt naar iets wat nog moet komen: *När går …?*"
-                  - "Je wilt met de bus, niet met de trein."
-              - type: translate
-                topic: transport
-                prompt: "Receptionisten: Nästa buss går om tjugo minuter. — Zeg: Goed, dan neem ik die bus."
-                answers:
-                  - "{Bra|Okej|Ok|Perfekt|Fint}, då {tar jag|åker jag med} den[ bussen]."
-                  - "Då {tar jag|åker jag med} den[ bussen]."
-                  - "{Bra|Okej|Ok}, jag {tar|åker med} den[ bussen][ då]."
-                  - "Jag {tar|åker med} den[ bussen][ då]."
-                feedback:
-                  - { match: "då jag tar den bussen", tip: "Na *då* vooraan komt het werkwoord op plaats 2: *då **tar jag** den bussen*." }
-                  - { match: "då jag tar den", tip: "Na *då* vooraan komt het werkwoord op plaats 2: *då **tar jag** den*." }
-                  - { contains: "bra då jag tar", tip: "Na *då* vooraan komt het werkwoord op plaats 2: *då **tar jag** den bussen*." }
-
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
@@ -402,7 +310,7 @@ sections:
           - { id: z9fs, type: truefalse, statement: "De reser den tjugonde juni.", answer: false, tip: "In welke maand reizen ze?", correction: { answers: ["De {reser|åker} den {tjugonde|20:e|20} juli.", "De {reser|åker} i juli."] } }
           - { id: uchq, type: truefalse, statement: "Färjan kommer fram till Visby klockan två.", answer: true }
           - { id: edyy, type: truefalse, statement: "De tar en taxi till vandrarhemmet.", answer: false, tip: "Hoe komen ze bij de jeugdherberg?", correction: { answers: ["De {går|promenerar} {dit|till vandrarhemmet}.", "De tar inte [en ]taxi[ till vandrarhemmet].", "De tar ingen taxi[ till vandrarhemmet].", "Vandrarhemmet ligger nära, och de går dit."] } }
-          - { id: qnn4, type: truefalse, statement: "En cykel kostar 200 kronor om dagen.", answer: false, tip: "Hoeveel kost een fiets per dag?", correction: { answers: ["En cykel kostar {120|hundratjugo|etthundratjugo} {kronor|kr}[ om dagen]."] } }
+          - { id: qnn4, type: truefalse, statement: "En cykel kostar 200 kronor om dagen.", answer: false, tip: "Hoeveel kost een fiets per dag?", correction: { answers: ["{En cykel|Att hyra en cykel} kostar {120|hundratjugo|etthundratjugo} {kronor|kr}[ {om dagen|per dag}].", "Det kostar {120|hundratjugo|etthundratjugo} {kronor|kr}[ {om dagen|per dag}] att hyra en cykel."] } }
 
       - id: dialoog-station
         title: Een kaartje kopen
@@ -419,6 +327,99 @@ sections:
               - "Bram: Kan jag betala med kort?"
               - "Kassören: Javisst. Tåget går från spår 3 om tio minuter."
               - "Bram: Tack så mycket!"
+
+      - id: taak-jeugdherberg
+        title: "Taak: een bed in de jeugdherberg"
+        kind: taak
+        instruction: "Je komt zonder reservering aan bij een jeugdherberg (*vandrarhem*) in Visby. **Doel:** regel een bed voor twee nachten, van 3 tot 5 juli, betaal met je pinpas en zoek uit hoe je met de bus naar het centrum komt. Kies of schrijf bij elke stap wat jij zegt."
+        topic: transport
+        items:
+          - id: qhgs
+            type: steps
+            explain: "Gelukt: je hebt een bed van 3 tot 5 juli, je hebt met je pas betaald en je neemt de bus van over twintig minuten."
+            steps:
+              - type: mc
+                topic: tidsprep
+                prompt: "**Receptionisten:** Hej och välkommen! — *Je wilt een bed voor twee nachten.*"
+                options:
+                  - "Hej! Har ni någon ledig plats i två nätter?"
+                  - "Hej! Har ni någon ledig plats i två natter?"
+                  - "Hej! Har ni någon ledig plats om två nätter?"
+                  - "Hej! Kan jag köpa en biljett till Visby?"
+                answer: 0
+                optionTips:
+                  - null
+                  - "*natt* heeft een onregelmatig meervoud: *en natt – två nätter*."
+                  - "*om två nätter* betekent *over twee nachten* (vanaf nu). Hoe lang iets duurt: *i två nätter*."
+                  - "Je bent al in Visby. Je wilt een bed (*en plats*), geen kaartje."
+              - type: gap
+                topic: ordningstal
+                prompt: "**Receptionisten:** Vilka datum? — *Van 3 tot 5 juli.*"
+                text: "Från den ___ (3) till den ___ (5) juli."
+                gaps:
+                  - answers: ["tredje", "3:e"]
+                    feedback: [{ match: "tre", tip: "Bij een datum gebruik je het rangtelwoord: *den tredje*." }]
+                  - answers: ["femte", "5:e"]
+                    feedback: [{ match: "fem", tip: "Bij een datum gebruik je het rangtelwoord: *den femte*." }]
+              - type: translate
+                topic: tidsprep
+                prompt: "Receptionisten: Har du bott hos oss förut? — Zeg: Ja, twee jaar geleden."
+                answers:
+                  - "Ja, för två år {sedan|sen}[ {bodde jag här|bodde jag hos er|var jag här}]."
+                  - "Ja, jag {bodde här|bodde hos er|var här} för två år {sedan|sen}."
+                feedback:
+                  - { match: "ja två år sedan", tip: "*Geleden* is *för … sedan*: *för två år sedan*." }
+                  - { match: "ja för två år", tip: "*Geleden* is *för … sedan*: je mist *sedan*." }
+                  - { contains: "i två år", tip: "*i två år* betekent *twee jaar lang*. *Geleden* is *för två år sedan*." }
+              - type: mc
+                topic: pengar
+                prompt: "**Receptionisten:** Välkommen tillbaka! En plats kostar 350 kronor per natt, så det blir 700 kronor. — *Je wilt met je pinpas betalen.*"
+                options:
+                  - "Kan jag betala med kort?"
+                  - "Kan jag betalar med kort?"
+                  - "Kan jag betala med biljett?"
+                  - "Vad kostar det?"
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *kan* komt de infinitief: *betala*."
+                  - "*En biljett* is een kaartje voor trein of bus. Je pinpas is *ett kort*."
+                  - "De prijs weet je al: 700 kronor. Je wilt weten of je met de kaart kunt betalen."
+              - type: translate
+                topic: transport
+                prompt: "Receptionisten: Javisst. Varsågod, här är kvittot. — Vraag: Gaat er een bus naar het centrum?"
+                answers:
+                  - "{Går|Finns} det {en|någon} buss [in ]till {centrum|stan}?"
+                  - "{Går|Finns} det bussar [in ]till {centrum|stan}?"
+                feedback:
+                  - { contains: "åker det", tip: "Van een bus die rijdt zeg je *gå*: *Går det en buss …?*" }
+                  - { contains: "går en buss", tip: "Het Zweeds heeft hier *det* nodig, zoals het Nederlands *er*: *Går **det** en buss …?*" }
+              - type: mc
+                topic: transport
+                prompt: "**Receptionisten:** Ja, buss 1 går från hållplatsen här utanför. Den går om fem minuter. — *Je wilt eerst je tas naar je bed brengen. Vijf minuten is te kort.*"
+                options:
+                  - "Det hinner jag inte. När går nästa buss?"
+                  - "Det hinner jag inte. När går nästa bussen?"
+                  - "Det hinner jag inte. När gick nästa buss?"
+                  - "Det hinner jag inte. När går nästa tåg?"
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *nästa* komt de onbepaalde vorm: *nästa buss* (zoals *När går nästa tåg?*)."
+                  - "Je vraagt naar iets wat nog moet komen: *När går …?*"
+                  - "Je wilt met de bus, niet met de trein."
+              - type: translate
+                topic: transport
+                prompt: "Receptionisten: Nästa buss går om tjugo minuter. — Zeg: Goed, dan neem ik die bus."
+                answers:
+                  - "{Bra|Okej|Ok|Perfekt|Fint}, då {tar jag|åker jag med} {den|den bussen|bussen}."
+                  - "Då {tar jag|åker jag med} {den|den bussen|bussen}."
+                  - "{Bra|Okej|Ok}, jag {tar|åker med} {den|den bussen|bussen}[ då]."
+                  - "Jag {tar|åker med} {den|den bussen|bussen}[ då]."
+                feedback:
+                  - { match: "då jag tar den bussen", tip: "Na *då* vooraan komt het werkwoord op plaats 2: *då **tar jag** den bussen*." }
+                  - { match: "då jag tar den", tip: "Na *då* vooraan komt het werkwoord op plaats 2: *då **tar jag** den*." }
+                  - { contains: "bra då jag tar", tip: "Na *då* vooraan komt het werkwoord op plaats 2: *då **tar jag** den bussen*." }
 
       - id: schrijven-reis
         title: "Schrijven: een reisplan"
