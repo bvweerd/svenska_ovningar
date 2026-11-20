@@ -123,6 +123,9 @@ Alles in november 2026.
   samengestelde onderwerpen (*Fleur och Bram*); de tip bij `fixedOrder` volgt de opdracht.
 - **Twijfelronde**: open taalreview-twijfels in H1–H30 opgelost (meer goede antwoorden, zachtere tips,
   geen stof uit later hoofdstuk); doeltaken met `kind: taak` op vaste plek.
+- **Voortgang op meer apparaten**: importeren voegt samen (`mergeStates`); synchroniseren met een synccode
+  via de Worker en Cloudflare D1 (opt-in, besloten door de eigenaar). Nog te doen: D1 aanmaken, Worker
+  deployen, `SYNC_URL` zetten (`worker/README.md`, „Synchronisatie”).
 
 ## Open / volgende stappen
 
