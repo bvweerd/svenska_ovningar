@@ -72,7 +72,7 @@ Achter een proxy heeft Node ook `NODE_USE_ENV_PROXY=1` nodig.
 
 De oefenstof staat in `content/chapters/NN-onderwerp.yaml`, één bestand per hoofdstuk.
 Een hoofdstuk verschijnt automatisch zodra het bestand bestaat (het nummer moet in
-`content/index.yaml` staan). Zie `PLAN.md` voor de opzet en `content/chapters/01-kennismaken.yaml`
+`content/index.yaml` staan). Zie `PLAN.md` voor het plan en `content/chapters/01-kennismaken.yaml`
 voor voorbeelden van alle vraagtypen.
 
 ### Woordvolgorde: tijdsbepaling vooraan of achteraan
@@ -150,7 +150,7 @@ vastgelegde fout als fout.
 ### Volgorde in een hoofdstuk
 
 De knop „Begin/Verder” loopt de oefeningen af in de volgorde van het bestand, dus die volgorde ligt vast
-(fase 1b in `PLAN.md`; `npm test` controleert hem). A-site: woorden → per onderwerp herkennen, vorm, kiezen →
+(zie `PLAN.md`; `npm test` controleert hem). A-site: woorden → per onderwerp herkennen, vorm, kiezen →
 gemengd (vertalen, zoek de fout) → lezen → dialoog en taak → schrijven → luisteren → herhaling → overige woordenschat.
 B-site: Läsa → Ord → Grammatik → Zoek de fout → Lyssna → Praktiskt → Skriva → Herhaling → overige woordenschat.
 De eerste woordenoefening („Wat betekent het?”) zet de app zelf vooraan; „Verder” slaat een woordenoefening
