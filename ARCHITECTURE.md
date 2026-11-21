@@ -159,6 +159,25 @@ Hetzelfde patroon, kleiner, voor **oefenvormen** (`ui/views/practice/`): elke vo
 spel, flitskaarten, dictee) is een module met `{ id, title, path, pick(ctx), view }`, zodat de hub
 en het menu ze uit één lijst opbouwen.
 
+## Voorbeeld: badges (toetssteen voor nieuwe functies)
+
+Een beloningsstructuur past zonder nieuwe mechanismen; de kan-doen-vinkjes (`canDoStatus`/`newCanDo`)
+werken al zo, alleen nog verspreid over `progress.js` en `main.js`.
+
+- `core/rewards/badges.js`: badges als lijst van gegevens, `{ id, title, text, rule(state, course) →
+  { earned, progress } }`. Puur, dus te testen met een gemaakte toestand. De id is vast, net als
+  vraag-id's.
+- De toestand krijgt `badges: { "<id>": tijdstip }`. Een behaalde badge blijft staan, ook als de inhoud
+  later verandert. `core/progress/merge.js` neemt de vereniging, met het vroegste tijdstip; sync en
+  import werken daarna vanzelf.
+- `app/actions.js`: na elke `store.update` vergelijkt `newBadges(voor, na)`; nieuwe badges worden
+  opgeslagen, gemeld aan analytics (`badge/<id>`) en als gebeurtenis doorgegeven.
+- `ui/components/toast.js` toont de melding; `ui/views/badges.js` is één regel in de routetabel
+  (bijv. `/prestaties`), en het menu bouwt de link uit dezelfde tabel.
+- Spelregels: een badge hangt alleen aan wat de app zelf nakijkt (doos, kan-doen, afgeronde oefening,
+  toetsscore), nooit aan zelfbeoordeling. Didactisch voorkeur voor beheersing boven hoeveelheid; welke
+  badges er komen, beslist de eigenaar.
+
 ## Inhoud
 
 - **Nu**: YAML → JSON via de Vite-plugin, `buildCourse` en (in tests) `validateChapter` op runtime.
