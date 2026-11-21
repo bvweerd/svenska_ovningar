@@ -142,3 +142,5 @@ Alles in november 2026.
    (`/b/luisteren/oordeel/…`) en de status (`/b/luisteren/status/…`) laten zien of de browserstemmen
    goed genoeg zijn.
 4. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.
+5. **Architectuur** voor de groeiende app: ontwerp en stappen in `ARCHITECTURE.md` (lagen, register van
+   vraagtypen, routetabel, store). Eerst stap 1 (bewaking), dan het register.
