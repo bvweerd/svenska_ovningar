@@ -632,7 +632,7 @@ vocab:
   - { sv: "att hinna", nl: "op tijd kunnen doen, tijd hebben om", ex: "Jag **hinner** inte äta frukost.", exNl: "Ik heb geen tijd om te ontbijten." }
   - { sv: "att träna", nl: "sporten, trainen", ex: "Hon **tränar** varje morgon.", exNl: "Zij sport elke ochtend." }
   - { sv: "att promenera", nl: "wandelen", ex: "Vi **promenerar** med hunden varje kväll.", exNl: "We wandelen elke avond met de hond." }
-  - { sv: "att titta", nl: "kijken (titta på = kijken naar)", ex: "Vi **tittar** på tv på kvällen.", exNl: "We kijken 's avonds tv." }
+  - { sv: "att titta", nl: "kijken", ex: "Vi **tittar** på tv på kvällen.", exNl: "We kijken 's avonds tv." }
   - { sv: "att lyssna", nl: "luisteren", ex: "Jag **lyssnar** på radio i bilen.", exNl: "Ik luister in de auto naar de radio." }
   - { sv: "imorgon", nl: "morgen (de dag na vandaag)", alt: ["i morgon"], ex: "Vi ses **imorgon**!", exNl: "Tot morgen!" }
   - { sv: "ikväll", nl: "vanavond", alt: ["i kväll"], ex: "Vad gör du **ikväll**?", exNl: "Wat doe je vanavond?" }
