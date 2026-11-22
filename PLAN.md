@@ -131,6 +131,11 @@ Alles in november 2026.
   met bewakingstest, register van vraagtypen, routetabel, pure voortgangsregels met store, rooktest in
   de browser (`npm run smoke`, ook in CI). Gedrag, opslag en antwoordhashes ongewijzigd.
 
+- **Issues november 2026** (branch `dev`): #11/#12 hoofdletters bij tegels en hints die het antwoord
+  verklapten (knop Hint); #10 code alle rechten voorbehouden; #7 prestaties (badges); #8 hand-outs A4 per
+  uitlegkaart; #6 gebruikersfeedback (overslaan, slepen, deelpunten, dagdoel herhaling, statistieken,
+  getallen als woord in H6, groepen in H2/H4, met taalreview); #9 UX-analyse (`UX-REVIEW.md`).
+
 ## Open / volgende stappen
 
 1. **Meten na publicatie** met `npm run stats -- --min 5` (README, „Statistieken”). Er is geen
