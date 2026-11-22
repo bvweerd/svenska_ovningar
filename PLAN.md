@@ -134,7 +134,8 @@ Alles in november 2026.
 - **Issues november 2026** (branch `dev`): #11/#12 hoofdletters bij tegels en hints die het antwoord
   verklapten (knop Hint); #10 code alle rechten voorbehouden; #7 prestaties (badges); #8 hand-outs A4 per
   uitlegkaart; #6 gebruikersfeedback (overslaan, slepen, deelpunten, dagdoel herhaling, statistieken,
-  getallen als woord in H6, groepen in H2/H4, met taalreview); #9 UX-analyse (`UX-REVIEW.md`).
+  getallen als woord in H6, groepen in H2/H4, met taalreview); #9 UX-analyse (`UX-REVIEW.md`); afgesloten met een
+  code-review (10 bevindingen, alle verwerkt).
 
 ## Open / volgende stappen
 
