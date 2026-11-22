@@ -69,6 +69,8 @@ grammar:
 
       Sommige woorden veranderen van klinker: *en bok → böcker*, *en stad → städer*, *en man → män*. Die leer je uit je hoofd.
 
+      In leerboeken en grammatica's heten deze vormen vaak **groep 1 tot en met 5**: 1 = **-or**, 2 = **-ar**, 3 = **-er**, 4 = **-n**, 5 = **geen uitgang**. Leer bij een nieuw woord het meervoud meteen mee: *en bil – bilar*.
+
       ### Bepaald meervoud (de …)
       | Meervoud | Bepaald meervoud | Regel |
       |---|---|---|
@@ -284,7 +286,7 @@ sections:
 
       - id: imperativ-invullen
         title: Gebiedende wijs
-        instruction: Vul de gebiedende wijs (imperativ) in van het werkwoord tussen haakjes.
+        instruction: "Vul de gebiedende wijs (imperativ) in van het werkwoord tussen haakjes. Let op: soms is de gebiedende wijs gelijk aan het werkwoord tussen haakjes (*Vänta!*), soms valt er iets weg (*Läs!*)."
         topic: imperativ
         items:
           - { id: 6ccu, type: gap, text: "___ (vänta)! Jag kommer.", gaps: [{ answers: ["Vänta"], feedback: [{ match: "Väntar", tip: "Dat is de presens. De imperativ van een -ar-werkwoord is gelijk aan de infinitief." }] }] }
@@ -600,7 +602,7 @@ vocab:
   - { sv: "en tandborste", nl: "een tandenborstel", def: "tandborsten", pl: "tandborstar", ex: "Var är min **tandborste**?", exNl: "Waar is mijn tandenborstel?" }
   - { sv: "en frukost", nl: "een ontbijt", def: "frukosten", pl: "frukostar", plDef: "frukostarna", ex: "Vi äter **frukost** klockan sju.", exNl: "We ontbijten om zeven uur." }
   - { sv: "en lunch", nl: "een lunch", def: "lunchen", pl: "luncher", ex: "Vi äter **lunch** tillsammans.", exNl: "We lunchen samen." }
-  - { sv: "en middag", nl: "een avondmaaltijd, een diner", def: "middagen", pl: "middagar", plDef: "middagarna", ex: "Vad blir det till **middag**?", exNl: "Wat eten we vanavond?" }
+  - { sv: "en middag", nl: "een avondmaaltijd, een diner", def: "middagen", pl: "middagar", plDef: "middagarna", ex: "Vad blir det till **middag**?", exNl: "Wat hebben we als avondeten?" }
   - { sv: "en kopp", nl: "een kopje", def: "koppen", pl: "koppar", plDef: "kopparna", ex: "Hon dricker två **koppar** te.", exNl: "Zij drinkt twee kopjes thee." }
   - { sv: "ett jobb", nl: "een baan, werk", def: "jobbet", pl: "jobb", plDef: "jobben", alt: ["ett arbete"], ex: "Han cyklar till **{jobbet|arbetet}**.", exNl: "Hij fietst naar zijn werk." }
   - { sv: "ett möte", nl: "een vergadering, een bespreking", def: "mötet", pl: "möten", plDef: "mötena", ex: "Jag har ett **möte** klockan tio.", exNl: "Ik heb om tien uur een vergadering." }

@@ -12,20 +12,22 @@ grammar:
     body: |
       De preteritum gebruik je voor iets wat op een **bepaald moment in het verleden** gebeurde: *igår, i måndags, förra veckan, förra året, för två år sedan*.
 
-      | Presens | Preteritum | Regel |
-      |---|---|---|
-      | jobbar, pratar, tittar | jobb**ade**, prat**ade**, titt**ade** | -ar wordt **-ade** |
-      | ringer, stänger, hör | ring**de**, stäng**de**, hör**de** | stam + **-de** |
-      | köper, läser, åker | köp**te**, läs**te**, åk**te** | stam op **k, p, s, t, x** + **-te** |
-      | bor, tror, mår | bo**dde**, tro**dde**, må**dde** | korte werkwoorden + **-dde** |
+      | Groep | Presens | Preteritum | Regel |
+      |---|---|---|---|
+      | 1 | jobbar, pratar, tittar | jobb**ade**, prat**ade**, titt**ade** | -ar wordt **-ade** |
+      | 2a | ringer, stänger, hör | ring**de**, stäng**de**, hör**de** | stam + **-de** |
+      | 2b | köper, läser, åker | köp**te**, läs**te**, åk**te** | stam op **k, p, s, t, x** + **-te** |
+      | 3 | bor, tror, mår | bo**dde**, tro**dde**, må**dde** | korte werkwoorden + **-dde** |
 
       De stam is de infinitief zonder *-a*: *köpa → köp*. Eindigt die stam op een "harde" medeklinker (**k, p, s, t, x**), dan wordt het **-te**, anders **-de**. Vergelijk het Nederlandse 't kofschip.
+
+      In leerboeken en woordenlijsten heten deze werkwoorden vaak **groep 1, 2a, 2b en 3**; de sterke en onregelmatige werkwoorden (hieronder) zijn **groep 4**. Soms staat er alleen het groepsnummer: *köpa (2b)* betekent dus *köpte*. Bij groep 1 tot en met 3 weet je zo de vormen; groep 4 leer je uit je hoofd.
 
   - id: starka-verb
     title: Sterke en onregelmatige werkwoorden
     summary: "Veel gewone werkwoorden veranderen van klinker en krijgen **geen uitgang**: *gå → gick, äta → åt, vara → var*. Andere zijn op hun eigen manier onregelmatig: *ha → hade, göra → gjorde, säga → sa*. Uit je hoofd leren."
     body: |
-      **Sterke** werkwoorden veranderen van klinker en krijgen in de preteritum geen uitgang (*gick, åt, drack, skrev*). Een paar andere werkwoorden zijn **onregelmatig**: ze krijgen wél een uitgang, maar de stam verandert (*hade, gjorde, sa/sade*).
+      **Sterke** werkwoorden veranderen van klinker en krijgen in de preteritum geen uitgang (*gick, åt, drack, skrev*). Een paar andere werkwoorden zijn **onregelmatig**: ze krijgen wél een uitgang, maar de stam verandert (*hade, gjorde, sa/sade*). Samen heten ze in leerboeken **groep 4**.
 
       | Infinitief | Presens | Preteritum | Nederlands |
       |---|---|---|---|
