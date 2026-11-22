@@ -127,6 +127,10 @@ Alles in november 2026.
   via de Worker en Cloudflare D1 (opt-in, besloten door de eigenaar). Nog te doen: D1 aanmaken, Worker
   deployen, `SYNC_URL` zetten (`worker/README.md`, „Synchronisatie”).
 
+- **Architectuur** (`ARCHITECTURE.md`, stap 1–5, branch `dev`): code in lagen (core, platform, app, ui)
+  met bewakingstest, register van vraagtypen, routetabel, pure voortgangsregels met store, rooktest in
+  de browser (`npm run smoke`, ook in CI). Gedrag, opslag en antwoordhashes ongewijzigd.
+
 ## Open / volgende stappen
 
 1. **Meten na publicatie** met `npm run stats -- --min 5` (README, „Statistieken”). Er is geen
@@ -142,5 +146,3 @@ Alles in november 2026.
    (`/b/luisteren/oordeel/…`) en de status (`/b/luisteren/status/…`) laten zien of de browserstemmen
    goed genoeg zijn.
 4. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.
-5. **Architectuur** voor de groeiende app: ontwerp en stappen in `ARCHITECTURE.md` (lagen, register van
-   vraagtypen, routetabel, store). Eerst stap 1 (bewaking), dan het register.
