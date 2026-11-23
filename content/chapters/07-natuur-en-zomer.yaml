@@ -242,10 +242,10 @@ sections:
           - { id: sh3k, type: translate, topic: konjunktioner, prompt: "Een vriend vraagt hoe het weer is. Zeg dat het regent, maar dat het warm is.", answers: ["Det regnar, men det är varmt[ ute]."], feedback: [{ contains: "men är det", tip: "men is een voegwoord: daarna blijft de gewone volgorde, men det är …" }, { match: "Det regnar, men det är varm.", tip: "Na det är krijgt het weerwoord een -t: varmt." }] }
           - { id: jmcf, type: translate, topic: konjunktioner, prompt: "Zeg dat je thuisblijft, want het sneeuwt.", answers: ["Jag stannar hemma, {för|för att|eftersom} det snöar."], feedback: [{ contains: "för snöar det", tip: "Na för blijft de gewone volgorde: för det snöar." }] }
           - { id: st7p, type: translate, topic: konjunktioner, prompt: "Zeg in twee zinnen dat het koud is en dat je daarom thuisblijft. Begin de tweede zin met *Därför*.", answers: ["Det är kallt[ ute][ idag]. Därför stannar jag hemma[ idag]."], feedback: [{ contains: "därför jag", tip: "*därför* is een bijwoord: daarna komt het werkwoord op plaats 2, *Därför **stannar jag** hemma*." }, { contains: "är kall.", tip: "Na *det är* krijgt het weerwoord een -t: *kallt*." }, { contains: "stannar jag hem.", tip: "Thuis (waar je bent) = *hemma*." }] }
-          - { id: sbkc, type: translate, topic: konjunktioner, prompt: "Een vriend denkt dat je naar Spanje gaat. Zeg dat je niet naar Spanje gaat, maar naar Noorwegen.", answers: ["[Nej, ]jag {åker|ska åka|reser|ska resa} inte till Spanien[,] utan till Norge."], feedback: [{ contains: "men till norge", tip: "Niet A maar B: na een ontkenning gebruik je *utan*." }, { contains: ["jag inte åker", "jag inte ska", "jag inte reser"], tip: "*inte* staat na het werkwoord: *jag åker inte …*" }] }
-          - { id: aeeq, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag kan inte åka skidor.” Zeg dat jij het ook niet kunt.", answers: ["{Inte jag heller|Det kan inte jag heller|Det kan jag inte heller}."], feedback: [{ contains: "det gör", tip: "Bij *kan* herhaal je *kan*, niet *gör*: *Det kan inte jag heller*, of kort: *Inte jag heller*." }, { contains: ["också", "med"], tip: "Bij een ontkenning: *inte jag heller*." }] }
-          - { id: 8u6f, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag tycker inte om att tälta.” Zeg dat jij het wél leuk vindt.", answers: ["[Men ]det gör jag[!]"], feedback: [{ contains: ["också", "med", "heller"], tip: "Je bent het níét eens: *Men det gör jag!*" }, { contains: ["det tycker jag", "det är jag"], tip: "Bij *tycker om* gebruik je *gör*: *Men det gör jag!*" }] }
-          - { id: 2sb8, type: translate, topic: vader, prompt: "Een collega in Nederland belt. Zeg dat het hier vijf graden vriest en dat het sneeuwt.", answers: ["{Det är|Här är det} {fem minusgrader|minus fem[ grader]|fem grader kallt}[ här][,] och det snöar."], feedback: [{ contains: ["det är snö", "det sneeuwt", "det snöer"], tip: "Het sneeuwt = *det snöar*." }, { contains: ["och snöar det", "och snöar"], tip: "Na *och* blijft de gewone volgorde: *och det snöar*." }, { contains: ["fem grader.", "fem grader och", "fem grader, och"], tip: "Vriezen: *fem minusgrader* (of *minus fem grader*)." }] }
+          - { id: sbkc, type: translate, topic: konjunktioner, prompt: "Een vriend denkt dat je naar Spanje gaat. Zeg dat je niet naar Spanje gaat, maar naar Noorwegen.", answers: ["[Nej, ]jag {åker|ska åka|reser|ska resa} inte till Spanien[,] utan till Norge.", "[Nej, ]inte till Spanien[,] utan till Norge.", "[Nej, ]jag {åker|ska åka} till Norge[,] inte till Spanien."], feedback: [{ contains: "men till norge", tip: "Niet A maar B: na een ontkenning gebruik je *utan*." }, { contains: ["jag inte åker", "jag inte ska", "jag inte reser"], tip: "*inte* staat na het werkwoord: *jag åker inte …*" }] }
+          - { id: aeeq, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag kan inte åka skidor.” Zeg dat jij het ook niet kunt.", answers: ["{Inte jag heller|Det kan inte jag heller|Det kan jag inte heller|Jag kan inte det heller}."], feedback: [{ contains: "det gör", tip: "Bij *kan* herhaal je *kan*, niet *gör*: *Det kan inte jag heller*, of kort: *Inte jag heller*." }, { contains: ["också", "med"], tip: "Bij een ontkenning: *inte jag heller*." }] }
+          - { id: 8u6f, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag tycker inte om att tälta.” Zeg dat jij het wél leuk vindt.", answers: ["[Men ]{det gör jag|det tycker jag om|jag tycker om det|jag tycker om att tälta}[!]"], feedback: [{ contains: ["också", "med", "heller"], tip: "Je bent het níét eens: *Men det gör jag!*" }, { match: ["[Men ]{det tycker jag|det är jag}[!]"], tip: "Bij *tycker om* gebruik je *gör*: *Men det gör jag!*" }] }
+          - { id: 2sb8, type: translate, topic: vader, prompt: "Een collega in Nederland belt. Zeg dat het hier vijf graden vriest en dat het sneeuwt.", answers: ["{Det är {fem minusgrader|minus fem[ grader]|fem grader kallt}[ här]|Här är det {fem minusgrader|minus fem[ grader]|fem grader kallt}}[,] och det snöar."], feedback: [{ contains: ["det är snö", "det sneeuwt", "det snöer"], tip: "Het sneeuwt = *det snöar*." }, { contains: ["och snöar det", "och snöar"], tip: "Na *och* blijft de gewone volgorde: *och det snöar*." }, { match: ["{Det är fem grader[ här]|Här är det fem grader}[,] och det snöar"], tip: "Vriezen: *fem minusgrader* (of *minus fem grader*)." }] }
           - { id: 53b8, type: translate, topic: allemansratten, prompt: "Je ziet iemand afval achterlaten in het bos. Zeg vriendelijk dat je geen afval in de natuur mag achterlaten.", answers: ["[Ursäkta, ]{man|du} får inte lämna skräp i {naturen|skogen}."], feedback: [{ contains: ["måste inte", "behöver inte"], tip: "Niet mogen = *får inte*." }, { contains: "får inte att", tip: "Na *får* komt geen *att*: *man får inte lämna …*" }, { contains: ["får inte lämnar", "får inte lämnade"], tip: "Na *får* komt de infinitief: *lämna*." }] }
 
       - id: zoek-de-fout
@@ -332,7 +332,7 @@ sections:
         items:
           - id: vmct
             type: steps
-            explain: "Gelukt: jullie gaan zondag met de bus naar het meer, met broodjes en salade, en jullie maken geen vuur."
+            explain: "Gelukt: jullie gaan zondag naar het meer, met broodjes of salade, en jullie maken geen vuur."
             steps:
               - type: mc
                 topic: konjunktioner
@@ -362,8 +362,9 @@ sections:
                 prompt: "**Wilma:** Härligt! Jag älskar att bada. — *Zeg dat jij dat ook doet.*"
                 answers:
                   - "{Det gör jag också|Jag också|Det gör jag med|Jag med}[!]"
+                  - "{Det älskar jag också|Jag älskar också att bada|Jag älskar det också}[!]"
                 feedback:
-                  - { contains: ["det är jag", "det älskar jag"], tip: "Bij een gewoon werkwoord (*älskar*) gebruik je *gör*: *Det gör jag också.*" }
+                  - { contains: "det är jag", tip: "Bij een gewoon werkwoord (*älskar*) gebruik je *gör*: *Det gör jag också.*" }
                   - { contains: "heller", tip: "*heller* is alleen bij een ontkenning. Hier: *Det gör jag också.*" }
               - type: gap
                 topic: konjunktioner
@@ -389,9 +390,9 @@ sections:
                 topic: ocksa-heller
                 prompt: "**Wilma:** Jag vill inte cykla dit. Det är för långt. — *Zeg dat jij het ook niet wilt.*"
                 answers:
-                  - "{Inte jag heller|Det vill inte jag heller|Det vill jag inte heller}[. {Vi tar bussen|Vi kan ta bussen}]."
+                  - "{Inte jag heller|Det vill inte jag heller|Det vill jag inte heller}[. {Vi tar bussen|Vi kan ta bussen|Vi {åker|kan åka} buss[en]}]."
                 feedback:
-                  - { contains: ["också", " med"], tip: "Bij een ontkenning: *Inte jag heller*." }
+                  - { match: ["{Jag med|Jag också|Det vill jag med|Det vill jag också}"], tip: "Bij een ontkenning: *Inte jag heller*." }
                   - { contains: "det gör", tip: "Bij *vill* herhaal je *vill*: *Det vill inte jag heller*, of kort: *Inte jag heller*." }
 
       - id: schrijven-weer
