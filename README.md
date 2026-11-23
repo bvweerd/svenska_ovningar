@@ -4,6 +4,10 @@ Interactieve oefensite voor Zweeds op beginnersniveau, voor Nederlandstaligen.
 Dertien hoofdstukken (0–12) met grammatica-uitleg, oefeningen en woordenschat.
 Alle vragen worden automatisch nagekeken, met gerichte tips bij fouten.
 
+De spellingscontrole heeft hunspell met het Zweedse woordenboek nodig (`apt-get install hunspell hunspell-sv`);
+zonder hunspell slaat die test zich lokaal over, in CI niet. Een nieuw woord dat het woordenboek niet kent (een naam,
+spreektaal, een samenstelling) zet je na controle in `content/stavning.txt` (`npm run spelling -- --write`).
+
 Alle oefenstof is zelf geschreven; de site is niet verbonden aan een uitgever of lesmethode.
 
 ## Lokaal draaien
@@ -11,10 +15,14 @@ Alle oefenstof is zelf geschreven; de site is niet verbonden aan een uitgever of
 ```bash
 npm install
 npm run dev      # ontwikkelserver
-npm test         # nakijklogica + controle van alle oefenstof
+npm test         # nakijklogica, alle oefenstof, spelling en de interface (happy-dom)
+npm run coverage # hetzelfde met codedekking van src/ (CI; minimum in vite.config.js)
+npm run spelling # Zweedse woorden die hunspell (sv_SE) niet kent; goed woord → content/stavning.txt
+npm run smoke    # na build: elke pagina in Chromium, en per vraagvorm een vraag fout en goed beantwoorden
 npm run build    # statische site in dist/
 npm run difficulty-report   # moeilijkheid per hoofdstuk naast de moeilijkheidslijn (PLAN.md)
 npm run content-report      # rapport taalinhoud en didactiek (ook in CI, als samenvatting van de testrun)
+                            # dezelfde metingen staan leesbaar op de pagina #/verantwoording (scripts/verantwoording.mjs)
 ```
 
 ## Publiceren
@@ -210,7 +218,7 @@ niet mee voor de leestekstlijn. `npm test` controleert aantal, lengte, `text` zo
 nagekeken vragen.
 
 **„Wat zeg je?” (`kind: situatie`).** Een situatie in het Nederlands; de leerling zegt het zelf in het Zweeds
-(`translate`, meestal meer goede antwoorden en foutregels). Geen `text`. Vanaf H5 minstens 4 vragen per
+(`translate`, meestal meer goede antwoorden en foutregels). Geen `text`. Vanaf H1 minstens 4 vragen per
 hoofdstuk; op de A-site vóór „Zoek de fout”, op de B-site in `praktiskt`.
 
 **Vlot herhalen en instaptoets.** „Vlot herhalen” (bij de snelle rondes) vraagt alleen wat al in doos 2 of

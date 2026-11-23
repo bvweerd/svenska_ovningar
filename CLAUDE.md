@@ -31,7 +31,7 @@ Leitner-dozen, feedback in lagen, de app kijkt na, van vorm naar gebruik, kan-do
 wordt, instap op niveau, uitspraak horen (geen spreken), frequente woorden, eigen werk. Toets elk voorstel
 en elke nieuwe oefening daaraan, en noem in de oplevering hoe het past. `npm test` dwingt af: minstens 2
 makkelijke teksten (`kind: makkelijk`) per hoofdstuk vanaf H1, een „Wat zeg je?”-oefening
-(`kind: situatie`) vanaf H5, en de plek in de vaste volgorde. Methoden en hun antwoordmodellen niet
+(`kind: situatie`) vanaf H1, en de plek in de vaste volgorde. Methoden en hun antwoordmodellen niet
 automatisch inlezen of minen: de uitgever behoudt tekst- en datamining voor (colofon). Twijfel → eigenaar.
 
 ## Spelregels (afgesproken met de eigenaar)
@@ -83,7 +83,8 @@ automatisch inlezen of minen: de uitgever behoudt tekst- en datamining voor (col
 
 ## Controleren en opleveren
 
-1. In **beide** repo's: `npm test`, `npm run build`, `npm run check-sync`.
+1. In **beide** repo's: `npm test` (of `npm run coverage`), `npm run build`, `npm run check-sync`. `npm test` controleert ook
+   de Zweedse spelling (hunspell; een goed woord dat het woordenboek niet kent → `content/stavning.txt`) en de interface.
 2. Wijzigingen in de interface ook bekijken in een browser op telefoonformaat (Playwright met
    `devices['Pixel 7']` of `devices['iPhone 13']`), licht en donker.
 3. Werk op een eigen branch en commit in beide repo's met hetzelfde bericht. **Controleer vóór elke commit

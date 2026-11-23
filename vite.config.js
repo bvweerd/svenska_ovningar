@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import { defineConfig } from 'vite';
 import yaml from 'js-yaml';
 import { pwaPlugin } from './scripts/pwa.mjs';
+import { verantwoordingPlugin } from './scripts/verantwoording.mjs';
 
 // Laadt .yaml-bestanden als JavaScript-objecten.
 const yamlPlugin = {
@@ -29,6 +30,28 @@ function appVersion() {
 export default defineConfig({
   define: { 'import.meta.env.APP_VERSION': JSON.stringify(appVersion()) },
   base: './',
-  plugins: [yamlPlugin, pwaPlugin()],
-  test: { include: ['tests/**/*.test.js', 'worker/**/*.test.js'] },
+  plugins: [yamlPlugin, pwaPlugin(), verantwoordingPlugin()],
+  // Elk hoofdstuk een eigen bestand: geen bundel boven de 500 kB, en een nieuwe versie van één hoofdstuk
+  // laat de rest van de cache van de browser en de service worker ongemoeid.
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          const m = id.match(/content\/chapters\/(\d+)-[^/]*\.yaml$/);
+          return m ? `hoofdstuk-${m[1]}` : undefined;
+        },
+      },
+    },
+  },
+  test: {
+    include: ['tests/**/*.test.js', 'worker/**/*.test.js'],
+    // npm run coverage (ook in CI): faalt als de dekking van src/ onder deze grens zakt. Verhoog de grens
+    // als de dekking stijgt; verlaag hem niet om een test te laten slagen.
+    coverage: {
+      provider: 'v8',
+      include: ['src/**'],
+      reporter: ['text-summary'],
+      thresholds: { lines: 83, statements: 80, functions: 80, branches: 67 },
+    },
+  },
 });

@@ -228,14 +228,14 @@ sections:
         topic: ordaccent
         shuffle: true
         items:
-          - { id: 6mdz, type: mc, prompt: "**bilen** (de auto)", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "Eén lettergreep (bil) met -en erachter: accent 1." }
-          - { id: 5gbh, type: mc, prompt: "**flicka** (meisje)", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een gewoon woord van twee lettergrepen: accent 2." }
-          - { id: ut83, type: mc, prompt: "**huset** (het huis)", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "Eén lettergreep (hus) met -et erachter: accent 1." }
-          - { id: jzu2, type: mc, prompt: "**bilar** (auto's)", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een meervoud op -ar: accent 2." }
-          - { id: s7tm, type: mc, prompt: "**läser** (leest)", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "De presensvorm op -er van een kort werkwoord: accent 1." }
-          - { id: 5t3k, type: mc, prompt: "**läsa** (lezen)", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een infinitief op -a: twee lettergrepen, accent 2." }
-          - { id: 36t9, type: mc, prompt: "**katten** (de kat)", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "Eén lettergreep (katt) met -en erachter: accent 1." }
-          - { id: 9p48, type: mc, prompt: "**sjukhus** (ziekenhuis)", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een samenstelling (sjuk + hus): accent 2." }
+          - { id: 6mdz, type: mc, prompt: "**bilen** (de auto)", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 0, shuffle: false, tip: "Eén lettergreep (bil) met -en erachter: accent 1." }
+          - { id: 5gbh, type: mc, prompt: "**flicka** (meisje)", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 1, shuffle: false, tip: "Een gewoon woord van twee lettergrepen: accent 2." }
+          - { id: ut83, type: mc, prompt: "**huset** (het huis)", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 0, shuffle: false, tip: "Eén lettergreep (hus) met -et erachter: accent 1." }
+          - { id: jzu2, type: mc, prompt: "**bilar** (auto's)", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 1, shuffle: false, tip: "Een meervoud op -ar: accent 2." }
+          - { id: s7tm, type: mc, prompt: "**läser** (leest)", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 0, shuffle: false, tip: "De presensvorm op -er van een kort werkwoord: accent 1." }
+          - { id: 5t3k, type: mc, prompt: "**läsa** (lezen)", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 1, shuffle: false, tip: "Een infinitief op -a: twee lettergrepen, accent 2." }
+          - { id: 36t9, type: mc, prompt: "**katten** (de kat)", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 0, shuffle: false, tip: "Eén lettergreep (katt) met -en erachter: accent 1." }
+          - { id: 9p48, type: mc, prompt: "**sjukhus** (ziekenhuis)", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 1, shuffle: false, tip: "Een samenstelling (sjuk + hus): accent 2." }
 
       - id: spreektaal
         title: Zo zeg je het
@@ -285,16 +285,16 @@ sections:
 
       - id: luisteren-accent
         title: "Luisteren: accent 1 of accent 2?"
-        instruction: Luister. Hoor je één toon (accent 1) of een „zingende” dubbele toon (accent 2)? Let op, het is een computerstem.
+        instruction: Luister naar het woord en kies welk woordaccent je hoort. Let op, het is een computerstem.
         topic: ordaccent
         shuffle: true
         items:
-          - { id: qwms, type: listen, say: "boken", options: ["accent 1", "accent 2"], answer: 0, shuffle: false }
-          - { id: yfqg, type: listen, say: "gata", options: ["accent 1", "accent 2"], answer: 1, shuffle: false }
-          - { id: w89x, type: listen, say: "huset", options: ["accent 1", "accent 2"], answer: 0, shuffle: false }
-          - { id: s5jy, type: listen, say: "pojke", options: ["accent 1", "accent 2"], answer: 1, shuffle: false }
-          - { id: 2tb4, type: listen, say: "köper", options: ["accent 1", "accent 2"], answer: 0, shuffle: false }
-          - { id: cbh9, type: listen, say: "stolar", options: ["accent 1", "accent 2"], answer: 1, shuffle: false }
+          - { id: qwms, type: listen, say: "boken", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 0, shuffle: false }
+          - { id: yfqg, type: listen, say: "gata", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 1, shuffle: false }
+          - { id: w89x, type: listen, say: "huset", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 0, shuffle: false }
+          - { id: s5jy, type: listen, say: "pojke", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 1, shuffle: false }
+          - { id: 2tb4, type: listen, say: "köper", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 0, shuffle: false }
+          - { id: cbh9, type: listen, say: "stolar", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 1, shuffle: false }
 
       - id: luisteren-sje-tje
         title: "Luisteren: sje-ljud of tje-ljud?"

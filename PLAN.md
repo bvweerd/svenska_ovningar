@@ -88,7 +88,7 @@ Elke nieuwe oefening, oefenvorm of functie past in deze lijn. Wat meetbaar is, c
    - *input met aandacht voor betekenis*: de leestekst van het hoofdstuk plus **minstens 2 makkelijke
      teksten** per hoofdstuk (`kind: makkelijk`, vanaf H1): bijna alleen bekende woorden, 2–3 nagekeken
      begripsvragen; korter dan de leestekst (A1 30–80, A2 40–120, B1 60–180, B2 80–250 woorden, `LINE` in `difficulty-report`);
-   - *output met aandacht voor betekenis*: geleid schrijven en, vanaf H5, **„Wat zeg je?”**
+   - *output met aandacht voor betekenis*: geleid schrijven en, vanaf H1, **„Wat zeg je?”**
      (`kind: situatie`, minstens 4 vragen): een situatie in het Nederlands, de leerling zegt het in het
      Zweeds; meer goede antwoorden toestaan;
    - *vloeiendheid*: de vloeiendheidsronde (snelle ronde met alleen al gekende stof) en de snelle rondes.
@@ -171,7 +171,18 @@ Alles in november 2026.
   code-review (10 bevindingen, alle verwerkt).
 - **Rapport inhoud en didactiek** (`npm run content-report`, ook in CI): A-site bijgewerkt tot 0 aandachtspunten:
   foutregels H0–H2 en H7–H10 ≥ 50%, uitspraak- en themakaarten terug in latere herhalingen, `pengar` en
-  `mat-fraser` aangevuld, woordenschat H7–H9 vaker terug, makkelijke tekst H2. Met taalreview.
+  `mat-fraser` aangevuld, woordenschat H7–H9 vaker terug, makkelijke tekst H2. B-site ook op 0: makkelijke
+  teksten ≥ 95% bekend, langere zinnen, foutregels, woordenschat H21/H26/H27 vaker terug. Met taalreview.
+- **„Wat zeg je?” ook in H1–H4** (output op A1 omhoog, 4–5 situaties per hoofdstuk) en lange zinnen met één
+  antwoord verruimd op beide sites (A: H6, H7; B: H13, H19, H23, H25). Met taalreview.
+- **Testdekking**: Zweedse spelling met hunspell (`content/stavning.txt`), interactietest in de rooktest, UI-tests
+  in happy-dom (elke vraag en pagina); dekking van `src/` van 34% naar 85% van de regels, met een minimum in CI.
+- **H19-woordenschat** (B #5): alle 69 woorden in een zin of tekst (was 22), met taalreview.
+- **Pagina Verantwoording** (`#/verantwoording`, via Over): het rapport inhoud en didactiek leesbaar voor
+  gebruikers, met grafieken en tabellen; bij elke build berekend (`scripts/verantwoording.mjs`).
+- **Meer output A1–A2** (gestuurde situaties + doeltaken, na te kijken): H1 4→8% (taak nieuwe buurvrouw),
+  H2 8→12%, H10 5→11% (taak vaatwasser kapot). Tips en vertaalopdrachten tonen nu *cursief*/**vet**.
+  Met taalreview. Volgende: andere A2-hoofdstukken op dezelfde manier.
 
 ## Open / volgende stappen
 
