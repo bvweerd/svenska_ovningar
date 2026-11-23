@@ -175,6 +175,8 @@ Alles in november 2026.
   teksten ≥ 95% bekend, langere zinnen, foutregels, woordenschat H21/H26/H27 vaker terug. Met taalreview.
 - **„Wat zeg je?” ook in H1–H4** (output op A1 omhoog, 4–5 situaties per hoofdstuk) en lange zinnen met één
   antwoord verruimd op beide sites (A: H6, H7; B: H13, H19, H23, H25). Met taalreview.
+- **Testdekking**: Zweedse spelling met hunspell (`content/stavning.txt`), interactietest in de rooktest, UI-tests
+  in happy-dom (elke vraag en pagina); dekking van `src/` van 34% naar 85% van de regels, met een minimum in CI.
 
 ## Open / volgende stappen
 
