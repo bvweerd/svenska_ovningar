@@ -301,7 +301,7 @@ sections:
         kind: makkelijk
         textTitle: "Wilma och Elin"
         text: |
-          Wilma och Elin är kompisar. De träffas ofta efter skolan. Elin tycker om musik, och hon spelar gitarr. Wilma lyssnar gärna på henne. Ibland går de på bio, eller så tittar de på en film hemma hos Wilma. Elin vill alltid se en gammal film.
+          Wilma och Elin är kompisar. De träffas ofta efter skolan. Elin tycker om musik, och hon spelar gitarr. Wilma lyssnar gärna på henne. Ibland går de på bio, eller så tittar de på en film hemma. Elin vill alltid titta på en gammal film.
         items:
           - { id: 948n, type: mc, prompt: "Vad spelar Elin?", options: ["Gitarr.", "Piano.", "Fotboll."], answer: 0 }
           - { id: uewy, type: truefalse, statement: "Wilma lyssnar gärna på Elin.", answer: true }
