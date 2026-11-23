@@ -319,6 +319,16 @@ sections:
           - { id: yt9c, type: gap, text: "Olle är lika lång ___ Bram.", gaps: [{ answers: ["som"], options: ["som", "än"], shuffle: false, feedback: [{ match: "än", tip: "Even … als is lika … som." }] }] }
           - { id: y366, type: gap, text: "Ingrid är äldre än ___. (zij, enkelvoud)", gaps: [{ answers: ["hon", "henne"], feedback: [{ match: "hennes", tip: "hennes is bezittelijk (haar). Na än: hon of henne." }] }] }
 
+      - id: wat-zeg-je
+        title: Wat zeg je?
+        instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
+        kind: situatie
+        items:
+          - { id: d94a, type: translate, topic: supinum, prompt: "Een collega vraagt of je weleens in Stockholm bent geweest. Zeg dat je er nog nooit bent geweest.", answers: ["[Nej, ]jag har aldrig varit {där|i Stockholm}."], feedback: [{ contains: "var aldrig", tip: "Je ervaring tot nu toe: har + supinum (har aldrig varit)." }] }
+          - { id: aqsc, type: translate, topic: hem-hemma, prompt: "Een vriend belt. Zeg dat je thuis bent.", answers: ["Jag är hemma[ nu]."], feedback: [{ contains: "är hem", tip: "Waar je bent: hemma. Hem is de richting (naar huis)." }] }
+          - { id: shun, type: translate, topic: hem-hemma, prompt: "Je gaat weg van een feest. Zeg dat je nu naar huis gaat.", answers: ["Jag {går|åker} hem[ nu].", "Nu {går|åker} jag hem."], feedback: [{ contains: "hemma", tip: "Naar huis is een richting: hem." }] }
+          - { id: nbr6, type: translate, topic: supinum, prompt: "Iemand vraagt of je je huiswerk al hebt gemaakt. Zeg dat je het al gedaan hebt.", answers: ["[Ja, ]jag har redan gjort {den|läxan}."], feedback: [{ contains: "har redan gör", tip: "Na har komt het supinum: gjort." }] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
@@ -355,6 +365,30 @@ sections:
           - { id: x9vy, type: truefalse, statement: "Bram har hittat nyckeln.", answer: false, tip: "Lees de derde alinea.", correction: { answers: ["{Bram|Han} har inte hittat {nyckeln|den}[ till huset][ än].", "{Bram|Han} har inte hittat {nyckeln|den}[ till huset] ännu.", "{Bram|Han} har tappat {nyckeln|den}[ till huset]."] } }
           - { id: y4at, type: truefalse, statement: "I natt sov Fleur och Bram hemma.", answer: false, tip: "Waar sliepen ze afgelopen nacht?", correction: { answers: ["I natt sov {de|Fleur och Bram|Bram och Fleur} hos {Ingrid och Olle|Olle och Ingrid|grannarna}.", "{De|Fleur och Bram|Bram och Fleur} sov hos {Ingrid och Olle|Olle och Ingrid|grannarna}[ i natt].", "I natt sov {de|Fleur och Bram|Bram och Fleur} inte hemma.", "{De|Fleur och Bram|Bram och Fleur} sov inte hemma[ i natt].", "{De|Fleur och Bram|Bram och Fleur} har sovit hos {Ingrid och Olle|Olle och Ingrid|grannarna}[ i natt]."], feedback: [{ contains: ["sover hos", "sover inte"], tip: "Het gaat over afgelopen nacht (i natt sov vi): gebruik de verleden tijd, sov." }] } }
           - { id: rqr8, type: truefalse, statement: "Ingrid och Olle har ett större hus än Fleur och Bram.", answer: true }
+
+      - id: makkelijk-1
+        title: "Makkelijk lezen: Har du sett norrsken?"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Har du sett norrsken?"
+        text: |
+          Fleur har bott i Sverige i ett år. Hon har sett mycket. Hon har varit i Stockholm och i Göteborg, men hon har aldrig varit i Kiruna. Bram har redan sett norrsken. Fleur vill också se det. Hon och Bram vill resa dit.
+        items:
+          - { id: x7v9, type: truefalse, statement: "Fleur har varit i Kiruna.", answer: false }
+          - { id: 5htm, type: truefalse, statement: "Bram har sett norrsken.", answer: true }
+
+      - id: makkelijk-2
+        title: "Makkelijk lezen: Nils är hemma"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Nils är hemma"
+        text: |
+          Det är lördag, så Nils är hemma. Han har lekt med katten och läst en bok. Nu vill han gå ut. Han tar cykeln och cyklar till sjön. Klockan fem cyklar han hem.
+        items:
+          - { id: ebah, type: truefalse, statement: "Nils har lekt med katten.", answer: true }
+          - { id: pd4d, type: truefalse, statement: "Nils cyklar till skolan.", answer: false }
 
       - id: dialoog-kiruna
         title: Ben je er ooit geweest?

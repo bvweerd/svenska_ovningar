@@ -339,6 +339,16 @@ sections:
           - { id: yzj8, type: translate, prompt: "Mijn broertje wil een rode fiets voor kerst.", answers: ["{Min lillebror|Min lilla bror|Min lille bror} vill ha en röd cykel {till jul|i julklapp}."], feedback: [{ contains: "en röda", tip: "Onbepaald enkelvoud (en cykel): röd, zonder -a." }, { contains: "min liten bror", tip: "Na min krijgt liten de vorm lilla: min lilla bror (of lillebror)." }] }
           - { id: 5gjh, type: translate, topic: komparation, prompt: "Glühwein is lekkerder dan koffie als het buiten koud is.", answers: ["Glögg är {godare|bättre} än kaffe {när|om} det är kallt {ute|utomhus}."], feedback: [{ contains: ["mer god", "gottare"], tip: "god – godare – godast." }, { contains: "det är kall ", tip: "Bij det: kallt (ett-vorm)." }] }
 
+      - id: wat-zeg-je
+        title: Wat zeg je?
+        instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
+        kind: situatie
+        items:
+          - { id: vqzn, type: translate, topic: adjektiv-obestamd, prompt: "Je krijgt een cadeau. Zeg dat het een mooi cadeau is.", answers: ["Det är en {fin|vacker} present.", "Vilken {fin|vacker} present."], feedback: [{ contains: "en fint present", tip: "present is een en-woord: en fin present." }] }
+          - { id: 6ff2, type: translate, topic: jul, prompt: "Wens iemand prettige kerstdagen.", answers: ["God jul."] }
+          - { id: 9a82, type: translate, topic: komparation, prompt: "Zeg dat jullie kerstboom groter is dan die van vorig jaar.", answers: ["{Vår gran|Granen} är större än förra årets[ gran].", "{Vår gran|Granen} är större i år än förra året."], feedback: [{ contains: "mer stor", tip: "Kort woord: stor – större – störst." }] }
+          - { id: nwus, type: translate, topic: adjektiv-bestamd, prompt: "Zeg dat je het kleine pakje wilt.", answers: ["Jag vill ha det lilla paketet."], feedback: [{ contains: "det litet paketet", tip: "Na det … -et: lilla (onregelmatig)." }, { contains: "det liten paketet", tip: "Na det … -et: lilla (onregelmatig)." }] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
@@ -373,6 +383,30 @@ sections:
           - { id: bkja, type: truefalse, statement: "Nils ville prova sin nya cykel.", answer: true }
           - { id: 4vpd, type: truefalse, statement: "Fleur och Bram bor i ett stort hus.", answer: false, tip: "Waar wonen Fleur en Bram?", correction: { answers: ["{Fleur och Bram|De} bor i en [ny ]lägenhet.", "{Fleur och Bram|De} har en [ny ]lägenhet."] } }
           - { id: u93x, type: truefalse, statement: "Fleur tyckte att julen i Nederländerna var mysigare.", answer: false, tip: "Welke kerst vond Fleur gezelliger?", correction: { answers: ["{Fleur|Hon} tyckte att julen i Sverige var mysigare[ än julen i Nederländerna].", "Julen i Sverige var mysigare[ än julen i Nederländerna]."] } }
+
+      - id: makkelijk-1
+        title: "Makkelijk lezen: Den lilla granen"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Den lilla granen"
+        text: |
+          Familjen Ek ska köpa en gran. Wilma vill ha en stor gran, men Nils vill ha en liten. De köper en liten gran, eftersom vardagsrummet inte är så stort. De pyntar granen med röda kulor och vita ljus. Den lilla granen är vackrare än förra årets gran, tycker Ingrid.
+        items:
+          - { id: xvdd, type: truefalse, statement: "De köper en stor gran.", answer: false }
+          - { id: chtw, type: truefalse, statement: "Granen har röda kulor.", answer: true }
+
+      - id: makkelijk-2
+        title: "Makkelijk lezen: Julklapparna"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Julklapparna"
+        text: |
+          Bram har köpt julklappar till alla. Fleur får ett par varma vantar, Wilma får en ny bok och Nils får det största paketet. I paketet finns en fotboll. Nils är gladast av alla.
+        items:
+          - { id: sxcm, type: truefalse, statement: "Nils får en fotboll.", answer: true }
+          - { id: zgsc, type: truefalse, statement: "Wilma får vantar.", answer: false }
 
       - id: dialoog-cadeau
         title: Een kerstcadeau

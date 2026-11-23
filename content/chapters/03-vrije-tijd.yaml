@@ -241,6 +241,31 @@ sections:
           - { id: q3ey, type: truefalse, statement: "På söndagar cyklar Wilma till skogen.", answer: true }
           - { id: 7vb9, type: truefalse, statement: "Wilma tycker inte om att cykla till skogen.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["{Wilma|Hon} {tycker om|gillar} att cykla[ till skogen][ med mamma].", "{Wilma|Hon} tycker [att ]det är {kul|roligt}[ att cykla till skogen][ med mamma]."] } }
 
+      - id: makkelijk-1
+        title: "Makkelijk lezen: Olle och hans hobbyer"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Olle och hans hobbyer"
+        text: |
+          Olle har många hobbyer. Han spelar ofta gitarr. På lördagar fiskar han i sjön. Ibland tar han Nils med. Nils tycker om att fiska, men han får sällan någon fisk. Olle sjunger också i en kör. Han tycker inte om att dansa.
+        items:
+          - { id: 2f8p, type: truefalse, statement: "Olle spelar piano.", answer: false }
+          - { id: qx6n, type: truefalse, statement: "Nils tycker om att fiska.", answer: true }
+          - { id: gbkc, type: truefalse, statement: "Olle dansar ofta.", answer: false }
+
+      - id: makkelijk-2
+        title: "Makkelijk lezen: Fleur på biblioteket"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Fleur på biblioteket"
+        text: |
+          Fleur går ofta till biblioteket. Hon läser gärna böcker på svenska. Ibland läser hon en bok för Nils. Han gillar den! Bram går aldrig till biblioteket. Han tycker om att titta på serier.
+        items:
+          - { id: zwv2, type: truefalse, statement: "Fleur går sällan till biblioteket.", answer: false }
+          - { id: q7da, type: truefalse, statement: "Bram tycker om att titta på serier.", answer: true }
+
       - id: dialoog-bio
         title: Zullen we naar de film?
         instruction: Zet het gesprek tussen Wilma en haar vriendin Elin in de goede volgorde.

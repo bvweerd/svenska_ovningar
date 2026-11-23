@@ -352,6 +352,16 @@ sections:
           - { id: 53k2, type: order, topic: reflexiv, start: "Barnen", tokens: ["klär på sig", "och", "skyndar sig", "till skolan"], answers: ["Barnen klär på sig och skyndar sig till skolan."] }
           - { id: hwnd, type: order, start: "Igår", tokens: ["stod", "Ingrid", "i trädgården", "och", "pratade", "med grannen"], answers: ["Igår stod Ingrid i trädgården och pratade med grannen.", "Igår stod Ingrid och pratade med grannen i trädgården."] }
 
+      - id: wat-zeg-je
+        title: Wat zeg je?
+        instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
+        kind: situatie
+        items:
+          - { id: d2hr, type: translate, topic: kroppen, prompt: "Bij de dokter: zeg dat je hoofdpijn hebt.", answers: ["Jag har ont i huvudet.", "Jag har huvudvärk."] }
+          - { id: 4y9j, type: translate, topic: reflexiv, prompt: "Zeg dat je je niet lekker voelt.", answers: ["Jag mår inte bra.", "Jag känner mig {sjuk|inte bra}."], feedback: [{ contains: "Jag känner inte bra", tip: "Je voelen is wederkerend: jag känner mig." }] }
+          - { id: 8w4n, type: translate, topic: reflexiv, prompt: "Er staat een vriend in je kamer. Zeg dat hij moet gaan zitten.", answers: ["Sätt dig[, är du snäll].", "Du kan sätta dig."], feedback: [{ contains: "Sitt dig", tip: "Gaan zitten is sätta sig: Sätt dig!" }] }
+          - { id: axzb, type: translate, topic: placera, prompt: "Je komt binnen bij iemand. Vraag waar je je jas kunt ophangen.", answers: ["Var kan jag hänga {jackan|min jacka}?"] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
@@ -386,6 +396,30 @@ sections:
           - { id: u86b, type: truefalse, statement: "Olle tycker att det är roligt att ligga i soffan.", answer: false, tip: "Lees het begin van de laatste alinea.", correction: { answers: ["{Olle|Han} tycker [att ]det är tråkigt[ att ligga i soffan]."] } }
           - { id: vcam, type: truefalse, statement: "Varje morgon ställer Ingrid en kopp kaffe bredvid soffan.", answer: true }
           - { id: 9xdh, type: truefalse, statement: "Ingrid diskar efter middagen.", answer: false, tip: "Wie wast er af?", correction: { answers: ["{Nils och Wilma|De} diskar[ efter middagen].", "{Nils och Wilma|De} hjälper {Ingrid|henne} och diskar[ efter middagen]."] } }
+
+      - id: makkelijk-1
+        title: "Makkelijk lezen: Hos läkaren"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Hos läkaren"
+        text: |
+          Olle har haft ont i ryggen i en vecka. Idag går han till vårdcentralen. Han sätter sig och väntar. Sedan undersöker läkaren honom. Hon säger att han ska vila sig och ta en tablett på kvällen.
+        items:
+          - { id: hkde, type: truefalse, statement: "Olle har ont i magen.", answer: false }
+          - { id: 6pcu, type: truefalse, statement: "Läkaren undersöker Olle.", answer: true }
+
+      - id: makkelijk-2
+        title: "Makkelijk lezen: Var ligger nycklarna?"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Var ligger nycklarna?"
+        text: |
+          Fleur letar efter nycklarna. De ligger inte på bordet och de hänger inte i hallen. Bram sitter i soffan. – Har du sett mina nycklar? frågar Fleur. – De ligger i din väska, säger Bram. Fleur skrattar.
+        items:
+          - { id: arte, type: truefalse, statement: "Nycklarna hänger i hallen.", answer: false }
+          - { id: upzz, type: truefalse, statement: "Nycklarna ligger i Fleurs väska.", answer: true }
 
       - id: dialoog-dokter
         title: Bij de dokter

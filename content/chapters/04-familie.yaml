@@ -369,6 +369,31 @@ sections:
           - { id: hpa4, type: truefalse, statement: "Wilma spelade fotboll med Pers barn.", answer: false, tip: "Wie speelde er voetbal, en wat deed Wilma?", correction: { answers: ["Nils spelade fotboll med Pers barn.", "Nils spelade fotboll.", "{Wilma|Hon} tog [många ]foton.", "{Wilma|Hon} spelade inte fotboll.", "{Wilma|Hon} fotograferade."] } }
           - { id: mkgw, type: truefalse, statement: "Mormor vill ha en fest varje år.", answer: true }
 
+      - id: makkelijk-1
+        title: "Makkelijk lezen: Farmor fyller år"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Farmor fyller år"
+        text: |
+          Förra veckan fyllde Olles mamma åttio år. Hela familjen besökte henne. Nils ritade ett kort och Wilma köpte en present. De åt och drack kaffe i trädgården. Farmor skrattade mycket. Hon var glad hela dagen.
+        items:
+          - { id: sv9y, type: truefalse, statement: "Olles mamma fyllde sextio år.", answer: false }
+          - { id: un95, type: truefalse, statement: "Nils ritade ett kort.", answer: true }
+          - { id: zzgs, type: truefalse, statement: "De åt i köket.", answer: false }
+
+      - id: makkelijk-2
+        title: "Makkelijk lezen: Brams familj"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Brams familj"
+        text: |
+          Bram har en bror och en syster. Hans bror heter Tim och bor i Amsterdam. Hans syster heter Eva. Hon är gift och har två barn, en son och en dotter. Förut bodde hela familjen i Utrecht. Förra året besökte Eva och barnen Bram i Västerås.
+        items:
+          - { id: ayy4, type: truefalse, statement: "Bram har två bröder.", answer: false }
+          - { id: npqg, type: truefalse, statement: "Eva har en son och en dotter.", answer: true }
+
       - id: schrijven-familie
         title: "Schrijven: jouw familie"
         instruction: "Bouw eerst je tekst op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, over je eigen familie."

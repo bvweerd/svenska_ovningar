@@ -303,6 +303,16 @@ sections:
           - { id: zvk3, type: gap, prompt: "Ga je met lijn 2 of met lijn 5?", text: "Åker du med ___ (2) eller med ___ (5)?", gaps: [{ answers: ["tvåan"], feedback: [{ match: "två", tip: "Bij een lijn: tvåa, bepaald tvåan." }, { match: "tvån", tip: "Bij een lijn: tvåa, bepaald tvåan." }, { match: "andra", tip: "Dat is het rangtelwoord. Voor een lijn zeg je tvåan." }] }, { answers: ["femman"], feedback: [{ match: "fem", tip: "Bij een lijn: femma, bepaald femman." }, { match: "femte", tip: "Dat is het rangtelwoord. Voor een lijn zeg je femman." }] }] }
           - { id: ppnr, type: gap, prompt: "Neem lijn 3 en stap uit bij het station.", text: "Ta ___ och stig av vid stationen. (3)", gaps: [{ answers: ["trean"], feedback: [{ match: "tre", tip: "Bij een lijn: trea, bepaald trean." }, { match: "tredje", tip: "Dat is het rangtelwoord. Voor een lijn zeg je trean." }] }] }
 
+      - id: wat-zeg-je
+        title: Wat zeg je?
+        instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
+        kind: situatie
+        items:
+          - { id: tf5y, type: translate, topic: pengar, prompt: "Je staat bij het loket. Vraag hoeveel een kaartje naar Uppsala kost.", answers: ["Hur mycket kostar en biljett till Uppsala?", "Vad kostar en biljett till Uppsala?"] }
+          - { id: 5mhk, type: translate, topic: transport, prompt: "Je staat bij de bushalte. Vraag wanneer de bus gaat.", answers: ["När går bussen?", "När kommer bussen?"] }
+          - { id: suhe, type: translate, topic: tidsprep, prompt: "Zeg dat je over een uur komt.", answers: ["Jag kommer om en timme."], feedback: [{ contains: "i en timme", tip: "Over een uur (in de toekomst): om en timme." }] }
+          - { id: mgqg, type: translate, topic: pengar, prompt: "Vraag of je met je pinpas kunt betalen.", answers: ["Kan jag betala med kort?", "Går det att betala med kort?"] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
@@ -336,6 +346,32 @@ sections:
           - { id: uchq, type: truefalse, statement: "Färjan kommer fram till Visby klockan två.", answer: true }
           - { id: edyy, type: truefalse, statement: "De tar en taxi till vandrarhemmet.", answer: false, tip: "Hoe komen ze bij de jeugdherberg?", correction: { answers: ["De {går|promenerar} {dit|till vandrarhemmet}.", "De tar inte [en ]taxi[ till vandrarhemmet].", "De tar ingen taxi[ till vandrarhemmet].", "Vandrarhemmet ligger nära, och de går dit."] } }
           - { id: qnn4, type: truefalse, statement: "En cykel kostar 200 kronor om dagen.", answer: false, tip: "Hoeveel kost een fiets per dag?", correction: { answers: ["{En cykel|Att hyra en cykel} kostar {120|hundratjugo|etthundratjugo} {kronor|kr}[ {om dagen|per dag}].", "Det kostar {120|hundratjugo|etthundratjugo} {kronor|kr}[ {om dagen|per dag}] att hyra en cykel."] } }
+
+      - id: makkelijk-1
+        title: "Makkelijk lezen: En biljett till Uppsala"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "En biljett till Uppsala"
+        text: |
+          Bram ska åka tåg till Uppsala. Han köper en biljett på stationen. Biljetten kostar 150 kronor. Tåget går om tio minuter från spår tre. Bram betalar med kort och får ett kvitto. Han kommer fram klockan elva.
+        items:
+          - { id: 8ext, type: truefalse, statement: "Biljetten kostar 150 kronor.", answer: true }
+          - { id: aqa8, type: truefalse, statement: "Bram betalar med kort.", answer: true }
+          - { id: ezgf, type: truefalse, statement: "Tåget går från spår fem.", answer: false }
+
+      - id: makkelijk-2
+        title: "Makkelijk lezen: Nils tar fyran"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Nils tar fyran"
+        text: |
+          Nils ska till simhallen. Han tar fyran från hållplatsen vid skolan. Bussen är försenad. Nils väntar i en kvart. Sedan kommer bussen och han stiger på. Han stiger av vid den tredje hållplatsen.
+        items:
+          - { id: 3vtx, type: truefalse, statement: "Nils tar sjuan.", answer: false }
+          - { id: wgjt, type: truefalse, statement: "Bussen är försenad.", answer: true }
+          - { id: zn6v, type: truefalse, statement: "Nils stiger av vid den tredje hållplatsen.", answer: true }
 
       - id: dialoog-station
         title: Een kaartje kopen

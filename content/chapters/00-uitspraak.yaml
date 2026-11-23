@@ -3,7 +3,7 @@ chapter: 0
 # grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
 canDo:
   - { text: "Ik hoor het verschil tussen de sje- en de tje-klank, en weet wanneer k, g en sk zacht klinken", topics: [sje-tje, hard-zacht] }
-  - { text: "Ik hoor of een klinker lang of kort is en waar de klemtoon ligt", topics: [klinkerlengte, klemtoon] }
+  - { text: "Ik herken of een klinker lang of kort is, waar de klemtoon ligt en welk woordaccent een woord heeft", topics: [klinkerlengte, klemtoon, ordaccent] }
   - { text: "Ik herken gewone spreektaalvormen en weet hoe je ze schrijft", topics: [spreektaal] }
 
 grammar:
@@ -79,6 +79,25 @@ grammar:
       - Veel **leenwoorden** hebben de klemtoon op de **laatste lettergreep**: *station*, *banan*, *telefon*, *choklad*.
       - Werkwoorden op **-era** hebben de klemtoon op de *e* van *-era*: *promenera*, *studera*, *reparera*.
       - De voorvoegsels **be-** en **för-** krijgen in werkwoorden geen klemtoon: *betala*, *förstå*, *berätta*. In zelfstandige naamwoorden krijgt *för-* vaak wél klemtoon: *FÖRmiddag*, *FÖRnamn*.
+
+  - id: ordaccent
+    title: "Woordaccent: accent 1 en accent 2"
+    summary: "Het Zweeds heeft twee woordaccenten. **Accent 1**: één toon, zoals in het Nederlands (*bilen, huset, läser*). **Accent 2**: een „zingende” dubbele toon (*flicka, gata, läsa, bilar*)."
+    body: |
+      In de meeste delen van Zweden krijgt een woord met de klemtoon vooraan een van twee **woordaccenten**. Ze maken het Zweeds „zingend”.
+
+      | | Hoe klinkt het? | Voorbeelden |
+      |---|---|---|
+      | **accent 1** | één toon, zoals in het Nederlands | *bilen, huset, katten, läser, boken* |
+      | **accent 2** | twee tonen: omlaag en weer omhoog | *flicka, gata, pojke, läsa, talar, bilar, sjukhus* |
+
+      ### Vuistregels
+      - Een woord van **één lettergreep** met een uitgang als **-en** of **-et** (de bepaalde vorm) heeft **accent 1**: *bil → bilen, hus → huset*.
+      - De presensvorm op **-er** van zo'n kort werkwoord heeft ook **accent 1**: *läser, köper*.
+      - De meeste gewone woorden van **twee lettergrepen** hebben **accent 2**: *flicka, gata, läsa, talar*. Ook een **meervoud** op *-ar, -or* heeft accent 2: *bilar, stolar, flickor*.
+      - **Samenstellingen** hebben bijna altijd **accent 2**: *sjukhus, morgonrock*.
+
+      Soms is het accent het enige verschil: *anden* met accent 1 is *de eend*, met accent 2 *de geest*. Zulke paren zijn zeldzaam; uit de zin blijkt meestal wat bedoeld is. De computerstem kan ze niet altijd goed uitspreken, daarom oefen je hier met woorden waarvan het accent vastligt.
 
   - id: spreektaal
     title: Spreektaal
@@ -203,6 +222,21 @@ sections:
           - { id: 69nd, type: mc, prompt: "**morgon** (ochtend)", options: ["MOR-gon", "mor-GON"], answer: 0, shuffle: false, tip: "Een gewoon Zweeds woord: klemtoon vooraan." }
           - { id: u3be, type: mc, prompt: "**telefon** (telefoon)", options: ["TE-le-fon", "te-le-FON"], answer: 1, shuffle: false, tip: "Een leenwoord: klemtoon achteraan." }
 
+      - id: ordaccent-kiezen
+        title: Accent 1 of accent 2?
+        instruction: Welk woordaccent heeft het vetgedrukte woord? Gebruik de vuistregels.
+        topic: ordaccent
+        shuffle: true
+        items:
+          - { id: 6mdz, type: mc, prompt: "**bilen** (de auto)", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "Eén lettergreep (bil) met -en erachter: accent 1." }
+          - { id: 5gbh, type: mc, prompt: "**flicka** (meisje)", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een gewoon woord van twee lettergrepen: accent 2." }
+          - { id: ut83, type: mc, prompt: "**huset** (het huis)", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "Eén lettergreep (hus) met -et erachter: accent 1." }
+          - { id: jzu2, type: mc, prompt: "**bilar** (auto's)", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een meervoud op -ar: accent 2." }
+          - { id: s7tm, type: mc, prompt: "**läser** (leest)", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "De presensvorm op -er van een kort werkwoord: accent 1." }
+          - { id: 5t3k, type: mc, prompt: "**läsa** (lezen)", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een infinitief op -a: twee lettergrepen, accent 2." }
+          - { id: 36t9, type: mc, prompt: "**katten** (de kat)", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "Eén lettergreep (katt) met -en erachter: accent 1." }
+          - { id: 9p48, type: mc, prompt: "**sjukhus** (ziekenhuis)", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een samenstelling (sjuk + hus): accent 2." }
+
       - id: spreektaal
         title: Zo zeg je het
         instruction: Hoe wordt het vetgedrukte woord in gewone spreektaal meestal uitgesproken?
@@ -248,6 +282,19 @@ sections:
           - { id: zpf3, type: listen, say: "full", options: ["full", "ful"], answer: 0 }
           - { id: dhzb, type: listen, say: "vitt", options: ["vitt", "vit"], answer: 0 }
           - { id: swrs, type: listen, say: "mat", options: ["mat", "matt"], answer: 0 }
+
+      - id: luisteren-accent
+        title: "Luisteren: accent 1 of accent 2?"
+        instruction: Luister. Hoor je één toon (accent 1) of een „zingende” dubbele toon (accent 2)? Let op, het is een computerstem.
+        topic: ordaccent
+        shuffle: true
+        items:
+          - { id: qwms, type: listen, say: "boken", options: ["accent 1", "accent 2"], answer: 0, shuffle: false }
+          - { id: yfqg, type: listen, say: "gata", options: ["accent 1", "accent 2"], answer: 1, shuffle: false }
+          - { id: w89x, type: listen, say: "huset", options: ["accent 1", "accent 2"], answer: 0, shuffle: false }
+          - { id: s5jy, type: listen, say: "pojke", options: ["accent 1", "accent 2"], answer: 1, shuffle: false }
+          - { id: 2tb4, type: listen, say: "köper", options: ["accent 1", "accent 2"], answer: 0, shuffle: false }
+          - { id: cbh9, type: listen, say: "stolar", options: ["accent 1", "accent 2"], answer: 1, shuffle: false }
 
       - id: luisteren-sje-tje
         title: "Luisteren: sje-ljud of tje-ljud?"

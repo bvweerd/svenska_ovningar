@@ -232,6 +232,16 @@ sections:
           - { id: rxgc, type: truefalse, statement: "Du får lämna skräp i naturen.", answer: false, tip: "Je neemt je afval altijd mee." }
           - { id: 6jsr, type: truefalse, statement: "Du får plocka svamp i skogen.", answer: true }
 
+      - id: wat-zeg-je
+        title: Wat zeg je?
+        instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
+        kind: situatie
+        items:
+          - { id: bnnn, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag gillar inte regn.” Zeg dat jij het ook niet leuk vindt.", answers: ["{Inte jag heller|Det gör inte jag heller|Det gör jag inte heller}."], feedback: [{ contains: "Jag också", tip: "Bij een ontkenning: inte jag heller." }] }
+          - { id: xgrr, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag gillar sommaren.” Zeg dat jij dat ook doet.", answers: ["{Jag också|Det gör jag också}."], feedback: [{ contains: "Inte jag heller", tip: "Bij een bevestigende zin: jag också." }] }
+          - { id: sh3k, type: translate, topic: konjunktioner, prompt: "Een vriend vraagt hoe het weer is. Zeg dat het regent, maar dat het warm is.", answers: ["Det regnar, men det är varmt."] }
+          - { id: jmcf, type: translate, topic: konjunktioner, prompt: "Zeg dat je thuisblijft, want het sneeuwt.", answers: ["Jag stannar hemma, för det snöar."], feedback: [{ contains: "för snöar det", tip: "Na för blijft de gewone volgorde: för det snöar." }] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
@@ -268,6 +278,30 @@ sections:
           - { id: 8yta, type: truefalse, statement: "Fleur ville åka hem på måndagen.", answer: false, tip: "Lees de laatste alinea.", correction: { answers: ["{Fleur|Hon} ville inte åka hem[ till Västerås][ på måndagen].", "{Fleur|Hon} ville stanna[ i stugan]."] } }
           - { id: zb6e, type: truefalse, statement: "Bram ville inte heller åka hem.", answer: true }
           - { id: f7w7, type: truefalse, statement: "Nästa sommar vill de bo på hotell i fjällen.", answer: false, tip: "Waar willen ze slapen?", correction: { answers: ["Nästa sommar vill de {tälta|bo i tält|sova i tält}[ i fjällen].", "De vill {tälta|bo i tält|sova i tält}[ i fjällen].", "Nästa sommar vill de inte bo på hotell[ i fjällen].", "De vill inte bo på hotell[ i fjällen]."] } }
+
+      - id: makkelijk-1
+        title: "Makkelijk lezen: Regn i stugan"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Regn i stugan"
+        text: |
+          Familjen Ek har en stuga vid havet. I juli var de där i två veckor. Det regnade mycket, men de hade ändå roligt. De spelade spel och läste böcker. En dag sken solen, så de badade och plockade blåbär. Nils gillar inte regn, och det gör inte Wilma heller.
+        items:
+          - { id: t6y5, type: truefalse, statement: "Det regnade mycket.", answer: true }
+          - { id: frqb, type: truefalse, statement: "Wilma gillar regn.", answer: false }
+
+      - id: makkelijk-2
+        title: "Makkelijk lezen: Tält i fjällen"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Tält i fjällen"
+        text: |
+          Bram och Fleur vandrade i fjällen. De sov i tält, för de ville vara ute i naturen. Det var kallt på natten, men de frös inte. På morgonen var det soligt. De såg en älg vid en sjö. Fleur ville ta ett foto, men älgen sprang in i skogen.
+        items:
+          - { id: 8dmd, type: truefalse, statement: "De sov på ett hotell.", answer: false }
+          - { id: ptaa, type: truefalse, statement: "De såg en älg.", answer: true }
 
       - id: dialoog-zomerdag
         title: Wat gaan we doen?

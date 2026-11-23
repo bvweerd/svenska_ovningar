@@ -211,6 +211,16 @@ sections:
           - { id: wq9w, type: translate, prompt: "Kun je het nummer herhalen? Ik hoor je heel slecht.", answers: ["Kan du upprepa numret[, tack]? Jag hör dig {väldigt|mycket} dåligt.", "Kan du säga numret igen[, tack]? Jag hör dig {väldigt|mycket} dåligt."], feedback: [{ contains: ["nummeret", "nummret"], tip: "ett nummer – numret (de e valt weg)." }] }
           - { id: vk46, type: translate, topic: indirekt-tal, prompt: "Fleur zegt dat ze haar wachtwoord vergeten is.", answers: ["Fleur säger att hon {har glömt|glömt|glömde} {lösenordet|sitt lösenord}."], feedback: [{ contains: "hennes lösenord", tip: "Bedoel je haar eigen wachtwoord? Zeg dan lösenordet (in hoofdstuk 10 leer je ook sitt lösenord)." }] }
 
+      - id: wat-zeg-je
+        title: Wat zeg je?
+        instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
+        kind: situatie
+        items:
+          - { id: vry3, type: translate, topic: telefon, prompt: "Je belt een bedrijf. Zeg dat je Anna wilt spreken.", answers: ["{Kan jag få prata med|Jag vill prata med|Får jag prata med} Anna[, tack]?", "{Jag vill prata med} Anna[, tack]."] }
+          - { id: 428b, type: translate, topic: telefon, prompt: "Je verstaat de ander slecht. Vraag of hij langzaam wil praten.", answers: ["Kan du prata långsamt[, tack]?"] }
+          - { id: jcqb, type: translate, topic: indirekt-tal, prompt: "Je collega vraagt wat de chef zei. Zeg dat ze zei dat de vergadering om tien uur begint.", answers: ["{Hon|Chefen} {sa|sade} att mötet börjar klockan tio."], feedback: [{ contains: "att börjar mötet", tip: "Na att: onderwerp, dan werkwoord (att mötet börjar)." }] }
+          - { id: jy3c, type: translate, topic: telefon, prompt: "Je collega Bram belt, maar je hebt geen tijd. Zeg dat je hem later terugbelt.", answers: ["Jag ringer {tillbaka|dig} senare.", "Jag ringer dig tillbaka senare."] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
@@ -250,6 +260,31 @@ sections:
           - { id: 5kjn, type: truefalse, statement: "När Fleur kom fram hade konserten redan börjat.", answer: true }
           - { id: hdex, type: truefalse, statement: "Efter konserten drack de kaffe.", answer: true }
           - { id: pf5c, type: truefalse, statement: "Fleur var hemma klockan tio.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["{Fleur|Hon} var hemma [klockan ]elva.", "Klockan elva var {Fleur|hon} hemma."] } }
+
+      - id: makkelijk-1
+        title: "Makkelijk lezen: Tre missade samtal"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Tre missade samtal"
+        text: |
+          Bram hade glömt mobilen hemma. När han kom hem hade han tre missade samtal. Det var hans chef. Hon frågade om han kunde komma till ett möte imorgon. Bram ringde tillbaka och sa att han kunde komma.
+        items:
+          - { id: j2e4, type: truefalse, statement: "Bram hade glömt mobilen hemma.", answer: true }
+          - { id: m2u4, type: truefalse, statement: "Chefen frågade om Bram kunde komma till ett möte.", answer: true }
+          - { id: fez2, type: truefalse, statement: "Bram kunde inte komma.", answer: false }
+
+      - id: makkelijk-2
+        title: "Makkelijk lezen: Lösenordet"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Lösenordet"
+        text: |
+          Wilma har glömt lösenordet till datorn. Hon ringer kundtjänst. En kvinna svarar. Wilma säger att hon inte vet lösenordet. Kvinnan frågar vad Wilma heter och skickar ett nytt lösenord i ett sms. Wilma tackar och lägger på.
+        items:
+          - { id: kbay, type: truefalse, statement: "Wilma har glömt lösenordet.", answer: true }
+          - { id: b6w5, type: truefalse, statement: "Kvinnan skickar ett mejl.", answer: false }
 
       - id: dialoog-afspraak
         title: Een afspraak maken
