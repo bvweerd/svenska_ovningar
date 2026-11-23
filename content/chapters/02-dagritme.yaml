@@ -126,14 +126,14 @@ sections:
         instruction: Maak een zin die begint met het gegeven woord. Klik de woorden in de goede volgorde aan.
         topic: tidsuttryck
         items:
-          - { id: w2yc, type: order, start: "På morgonen", tokens: ["dricker", "Bram", "kaffe"], answers: ["På morgonen dricker Bram kaffe."] }
-          - { id: zfbv, type: order, start: "Klockan sju", tokens: ["Fleur", "vaknar"], answers: ["Klockan sju vaknar Fleur."] }
-          - { id: n3jf, type: order, start: "På tisdagar", tokens: ["Nils", "spelar", "fotboll"], answers: ["På tisdagar spelar Nils fotboll."] }
-          - { id: a79y, type: order, start: "Efter jobbet", tokens: ["handlar", "Fleur", "mat"], answers: ["Efter jobbet handlar Fleur mat."] }
-          - { id: py28, type: order, start: "Ikväll", tokens: ["vi", "tittar", "på film"], answers: ["Ikväll tittar vi på film."] }
-          - { id: rupg, type: order, start: "Varje dag", tokens: ["tar", "bussen", "Wilma"], answers: ["Varje dag tar Wilma bussen."] }
-          - { id: yhgc, type: order, start: "Klockan åtta", tokens: ["skolan", "börjar"], answers: ["Klockan åtta börjar skolan."] }
-          - { id: chxd, type: order, start: "På söndagar", tokens: ["bakar", "Ingrid", "bullar"], answers: ["På söndagar bakar Ingrid bullar."] }
+          - { id: w2yc, type: order, start: "På morgonen", tokens: ["dricker", "Bram", "kaffe"], answers: ["På morgonen dricker Bram kaffe."], feedback: [{ match: "På morgonen Bram dricker kaffe", tip: "På morgonen staat op plaats 1. Het werkwoord blijft op plaats 2: dricker Bram." }] }
+          - { id: zfbv, type: order, start: "Klockan sju", tokens: ["Fleur", "vaknar"], answers: ["Klockan sju vaknar Fleur."], feedback: [{ match: "Klockan sju Fleur vaknar", tip: "Klockan sju is samen plaats 1. Daarna komt het werkwoord: vaknar Fleur." }] }
+          - { id: n3jf, type: order, start: "På tisdagar", tokens: ["Nils", "spelar", "fotboll"], answers: ["På tisdagar spelar Nils fotboll."], feedback: [{ match: "På tisdagar Nils spelar fotboll", tip: "Na de tijd vooraan komt eerst het werkwoord, dan het onderwerp: spelar Nils." }] }
+          - { id: a79y, type: order, start: "Efter jobbet", tokens: ["handlar", "Fleur", "mat"], answers: ["Efter jobbet handlar Fleur mat."], feedback: [{ match: "Efter jobbet Fleur handlar mat", tip: "Efter jobbet is plaats 1. Het werkwoord komt op plaats 2: handlar Fleur." }] }
+          - { id: py28, type: order, start: "Ikväll", tokens: ["vi", "tittar", "på film"], answers: ["Ikväll tittar vi på film."], feedback: [{ match: "Ikväll vi tittar på film", tip: "Na Ikväll komt eerst het werkwoord: Ikväll tittar vi." }] }
+          - { id: rupg, type: order, start: "Varje dag", tokens: ["tar", "bussen", "Wilma"], answers: ["Varje dag tar Wilma bussen."], feedback: [{ match: "Varje dag Wilma tar bussen", tip: "Varje dag is samen plaats 1. Daarna het werkwoord: tar Wilma." }] }
+          - { id: yhgc, type: order, start: "Klockan åtta", tokens: ["skolan", "börjar"], answers: ["Klockan åtta börjar skolan."], feedback: [{ match: "Klockan åtta skolan börjar", tip: "Het werkwoord op plaats 2, ook als het onderwerp geen persoon is: börjar skolan." }] }
+          - { id: chxd, type: order, start: "På söndagar", tokens: ["bakar", "Ingrid", "bullar"], answers: ["På söndagar bakar Ingrid bullar."], feedback: [{ match: "På söndagar Ingrid bakar bullar", tip: "Na de tijd vooraan komt eerst het werkwoord: bakar Ingrid." }] }
 
       - id: tijd-vertalen
         title: Vertaal met de tijd vooraan
@@ -275,14 +275,14 @@ sections:
         instruction: Vul het meervoud in van het woord tussen haakjes.
         topic: plural
         items:
-          - { id: 8ah6, type: gap, text: "Ingrid och Olle har två ___ (barn).", gaps: [{ answers: ["barn"] }] }
-          - { id: mq5z, type: gap, text: "Olle köper tre ___ (tidning).", gaps: [{ answers: ["tidningar"] }] }
-          - { id: 3gre, type: gap, text: "Det finns många ___ (bil) på gatan.", gaps: [{ answers: ["bilar"] }] }
+          - { id: 8ah6, type: gap, text: "Ingrid och Olle har två ___ (barn).", gaps: [{ answers: ["barn"], feedback: [{ match: ["barnar", "barnen", "barner"], tip: "barn is een ett-woord op een medeklinker: het meervoud krijgt geen uitgang (ett barn – två barn)." }] }] }
+          - { id: mq5z, type: gap, text: "Olle köper tre ___ (tidning).", gaps: [{ answers: ["tidningar"], feedback: [{ match: ["tidningor", "tidninger", "tidningen"], tip: "tidning is een en-woord op een medeklinker: meervoud op -ar." }] }] }
+          - { id: 3gre, type: gap, text: "Det finns många ___ (bil) på gatan.", gaps: [{ answers: ["bilar"], feedback: [{ match: ["bilor", "biler", "bils"], tip: "bil is een en-woord op een medeklinker: meervoud op -ar." }] }] }
           - { id: u7n8, type: gap, text: "Det finns två ___ (katt) i trädgården.", gaps: [{ answers: ["katter"], feedback: [{ match: "kattar", tip: "katt is een uitzondering: katter." }] }] }
-          - { id: dtkt, type: gap, text: "En vecka har sju ___ (dag).", gaps: [{ answers: ["dagar"] }] }
+          - { id: dtkt, type: gap, text: "En vecka har sju ___ (dag).", gaps: [{ answers: ["dagar"], feedback: [{ match: ["dager", "dagor", "dagen"], tip: "dag is een en-woord op een medeklinker: meervoud op -ar." }] }] }
           - { id: wgak, type: gap, text: "Wilma har fem ___ (lektion) idag.", gaps: [{ answers: ["lektioner"], feedback: [{ match: "lektionar", tip: "Woorden op -tion krijgen -er: lektioner." }] }] }
-          - { id: 2qu9, type: gap, text: "Vi har fyra ___ (stol) i köket.", gaps: [{ answers: ["stolar"] }] }
-          - { id: p7ct, type: gap, text: "Bram dricker två ___ (kopp) kaffe.", gaps: [{ answers: ["koppar"] }] }
+          - { id: 2qu9, type: gap, text: "Vi har fyra ___ (stol) i köket.", gaps: [{ answers: ["stolar"], feedback: [{ match: ["stoler", "stolor", "stolen"], tip: "stol is een en-woord op een medeklinker: meervoud op -ar." }] }] }
+          - { id: p7ct, type: gap, text: "Bram dricker två ___ (kopp) kaffe.", gaps: [{ answers: ["koppar"], feedback: [{ match: ["koppor", "kopper", "koppen"], tip: "kopp is een en-woord op een medeklinker: meervoud op -ar." }] }] }
 
       - id: imperativ-invullen
         title: Gebiedende wijs
@@ -348,14 +348,14 @@ sections:
         instruction: Maak een zin die begint met het gegeven woord.
         topic: modala
         items:
-          - { id: ccbs, type: order, start: "Idag", tokens: ["kan", "jag", "inte", "komma"], answers: ["Idag kan jag inte komma."] }
-          - { id: mwc8, type: order, start: "Ikväll", tokens: ["ska", "titta på tv", "vi"], answers: ["Ikväll ska vi titta på tv."] }
-          - { id: jh6c, type: order, start: "På lördag", tokens: ["vill", "Bram", "sova länge"], answers: ["På lördag vill Bram sova länge."] }
-          - { id: cza5, type: order, start: "Imorgon", tokens: ["måste", "stiga upp", "Wilma", "tidigt"], answers: ["Imorgon måste Wilma stiga upp tidigt."] }
-          - { id: mhp8, type: order, start: "Nu", tokens: ["äta", "vill", "Nils"], answers: ["Nu vill Nils äta."] }
-          - { id: bh3f, type: order, start: "På fredag", tokens: ["vi", "ska", "bada"], answers: ["På fredag ska vi bada."] }
-          - { id: 623u, type: order, start: "Här", tokens: ["får", "inte", "man", "röka"], answers: ["Här får man inte röka."] }
-          - { id: 3yg2, type: order, start: "Ikväll", tokens: ["laga mat", "jag", "måste"], answers: ["Ikväll måste jag laga mat."] }
+          - { id: ccbs, type: order, start: "Idag", tokens: ["kan", "jag", "inte", "komma"], answers: ["Idag kan jag inte komma."], feedback: [{ match: ["Idag jag kan inte komma", "Idag kan jag komma inte"], tip: "Volgorde: tijd – modaal werkwoord – onderwerp – inte – infinitief: Idag kan jag inte komma." }] }
+          - { id: mwc8, type: order, start: "Ikväll", tokens: ["ska", "titta på tv", "vi"], answers: ["Ikväll ska vi titta på tv."], feedback: [{ match: "Ikväll vi ska titta på tv", tip: "Het modale werkwoord (ska) staat op plaats 2, direct na Ikväll." }] }
+          - { id: jh6c, type: order, start: "På lördag", tokens: ["vill", "Bram", "sova länge"], answers: ["På lördag vill Bram sova länge."], feedback: [{ match: "På lördag Bram vill sova länge", tip: "Het modale werkwoord (vill) staat op plaats 2, direct na På lördag." }] }
+          - { id: cza5, type: order, start: "Imorgon", tokens: ["måste", "stiga upp", "Wilma", "tidigt"], answers: ["Imorgon måste Wilma stiga upp tidigt."], feedback: [{ match: ["Imorgon Wilma måste stiga upp tidigt", "Imorgon måste Wilma tidigt stiga upp"], tip: "Volgorde: Imorgon – måste – Wilma – stiga upp – tidigt. Het modale werkwoord op plaats 2, de infinitief na het onderwerp." }] }
+          - { id: mhp8, type: order, start: "Nu", tokens: ["äta", "vill", "Nils"], answers: ["Nu vill Nils äta."], feedback: [{ match: ["Nu Nils vill äta", "Nu vill äta Nils"], tip: "Na Nu komt het modale werkwoord, dan het onderwerp, en de infinitief helemaal achteraan: Nu vill Nils äta." }] }
+          - { id: bh3f, type: order, start: "På fredag", tokens: ["vi", "ska", "bada"], answers: ["På fredag ska vi bada."], feedback: [{ match: "På fredag vi ska bada", tip: "Het modale werkwoord (ska) staat op plaats 2, direct na På fredag." }] }
+          - { id: 623u, type: order, start: "Här", tokens: ["får", "inte", "man", "röka"], answers: ["Här får man inte röka."], feedback: [{ match: ["Här man får inte röka", "Här får man röka inte"], tip: "Volgorde: Här – får – man – inte – röka. Inte staat na het onderwerp en vóór de infinitief." }] }
+          - { id: 3yg2, type: order, start: "Ikväll", tokens: ["laga mat", "jag", "måste"], answers: ["Ikväll måste jag laga mat."], feedback: [{ match: "Ikväll jag måste laga mat", tip: "Het modale werkwoord (måste) staat op plaats 2, direct na Ikväll." }] }
 
       - id: modaal-vertalen
         title: Vertaal met een modaal werkwoord
@@ -427,9 +427,9 @@ sections:
         kind: makkelijk
         textTitle: "En lapp till Nils"
         text: |
-          Hej Nils! Jag jobbar idag. Ät frukost och borsta tänderna. Stäng fönstret och ta bussen klockan halv nio. Du måste ta med boken till skolan. Efter skolan kan du titta på tv en timme. Hej då! Mamma
+          Hej Nils! Jag jobbar idag. Ät frukost och borsta tänderna. Stäng fönstret och ta bussen klockan halv åtta. Du måste ta med boken till skolan. Efter skolan kan du titta på tv en timme. Hej då! Mamma
         items:
-          - { id: e5yk, type: truefalse, statement: "Nils måste ta bussen klockan halv nio.", answer: true }
+          - { id: e5yk, type: truefalse, statement: "Nils måste ta bussen klockan halv åtta.", answer: true }
           - { id: hktw, type: truefalse, statement: "Nils kan titta på tv efter skolan.", answer: true }
           - { id: xynj, type: truefalse, statement: "Ingrid jobbar inte idag.", answer: false }
 
@@ -593,7 +593,7 @@ sections:
           - { id: 3z47, type: order, topic: tidsuttryck, start: "På fredag", tokens: ["ska", "Olle och Ingrid", "äta ute"], answers: ["På fredag ska Olle och Ingrid äta ute."] }
           - { id: qedq, type: gap, topic: substantiv, text: "Fleur och Bram har en katt. ___ (katt) heter Pluto.", gaps: [{ answers: ["Katten"] }] }
           - { id: ftuh, type: gap, topic: plural, text: "Olle köper tre tidningar. ___ (tidningar, bepaald) ligger på bordet.", gaps: [{ answers: ["Tidningarna"] }] }
-          - { id: wb5r, type: clock, time: "05:45" }
+          - { id: wb5r, type: clock, topic: klockan, time: "05:45" }
           - { id: hmg2, type: mc, topic: modala, prompt: "Welke zin is goed?", options: ["Idag måste jag jobba.", "Idag jag måste jobba.", "Idag måste jobba jag."], answer: 0, tip: "Werkwoord op plaats 2, dan het onderwerp, de infinitief achteraan." }
           - { id: m7b3, type: translate, topic: inte, prompt: "Ik spreek niet zo goed Zweeds.", answers: ["Jag {talar|pratar|kan} inte så bra svenska.", "Jag {talar|pratar|kan} inte svenska så bra."] }
           - { id: zqhy, type: gap, topic: pronomen, text: "Fleur och Bram har ett hus. ___ ligger i Västerås.", gaps: [{ answers: ["Det"], options: ["Det", "Den", "De"] }] }
@@ -608,6 +608,18 @@ sections:
           - { id: mghs, type: translate, topic: imperativ, prompt: "Doe de deur dicht!", answers: ["Stäng dörren!", "Stäng dörren, tack!", "Stäng dörren, är du snäll!"] }
           - { id: ncmn, type: translate, topic: vragen, prompt: "Hoe laat begint de film?", answers: ["{När|Hur dags|Vilken tid} börjar filmen?"], feedback: [{ match: "Vad är klockan börjar filmen", tip: "Hoe laat (wanneer) = När? of Hur dags?" }] }
           - { id: ej7n, type: translate, topic: plural, prompt: "Wij hebben twee auto's.", answers: ["Vi har två bilar."] }
+
+      - id: herhaling-uitspraak
+        title: Uitspraak herhalen
+        instruction: Uitspraak uit hoofdstuk 0. Bij de luistervraag spreekt de computerstem het woord uit; die klinkt niet altijd helemaal natuurlijk.
+        shuffle: true
+        items:
+          - { id: m9ep, type: mc, topic: sje-tje, prompt: "Met welke klank begint **sjukhus** (ziekenhuis)?", options: ["sje-ljud", "tje-ljud"], answer: 0, shuffle: false, tip: "sj is altijd een sje-ljud." }
+          - { id: xbc5, type: mc, topic: sje-tje, prompt: "Met welke klank begint **kök** (keuken)?", options: ["sje-ljud", "tje-ljud"], answer: 1, shuffle: false, tip: "k vóór een zachte klinker (ö) wordt een tje-ljud." }
+          - { id: udnv, type: listen, topic: sje-tje, say: "tjej", prompt: "Welke klank hoor je aan het begin?", options: ["tje-ljud", "sje-ljud"], answer: 0 }
+          - { id: b8tg, type: mc, topic: hard-zacht, prompt: "Hoe spreek je de eerste klank van **kopp** (kopje) uit?", options: ["[k], zoals in kat", "tje-ljud"], answer: 0, shuffle: false, tip: "o is een harde klinker: de k blijft [k]." }
+          - { id: bcqq, type: mc, topic: hard-zacht, prompt: "Hoe spreek je de eerste klank van **gärna** (graag) uit?", options: ["[g], zoals in het Engelse *go*", "[j], zoals in jas"], answer: 1, shuffle: false, tip: "ä is een zachte klinker: de g klinkt als [j]." }
+          - { id: chcu, type: mc, topic: hard-zacht, prompt: "Hoe spreek je de eerste klank van **gå** (gaan, lopen) uit?", options: ["[g], zoals in het Engelse *go*", "[j], zoals in jas"], answer: 0, shuffle: false, tip: "å is een harde klinker: de g blijft [g]." }
 
 vocab:
   - { sv: "en morgon", nl: "een ochtend", def: "morgonen", pl: "morgnar", plDef: "morgnarna", ex: "Jag dricker kaffe på **{morgonen|morgnarna}**.", exNl: "Ik drink 's ochtends koffie." }

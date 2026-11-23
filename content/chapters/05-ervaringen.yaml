@@ -470,7 +470,10 @@ sections:
           - { id: 6k2g, type: order, topic: modala, start: "I vinter", tokens: ["vill", "vi", "åka", "till Kiruna"], answers: ["I vinter vill vi åka till Kiruna."] }
           - { id: du6t, type: gap, topic: objekt, text: "Jag har inte sett ___ på länge. (hen, meervoud)", gaps: [{ answers: ["dem"], options: ["de", "dem", "deras"] }] }
           - { id: r5tz, type: mc, topic: perfekt-preteritum, prompt: "Welke zin is goed?", options: ["Förra året reste vi till Italien.", "Förra året har vi rest till Italien.", "Förra året vi reste till Italien."], answer: 0, tip: "Bepaald moment in het verleden: preteritum. En de V2-regel!" }
-          - { id: fqme, type: clock, time: "12:35" }
+          - { id: fqme, type: clock, topic: klockan, time: "12:35" }
+          - { id: s7m2, type: gap, topic: familj, text: "Min mammas pappa är min ___.", gaps: [{ answers: ["morfar"], feedback: [{ match: "farfar", tip: "Van moederskant: mor-." }, { match: "mormor", tip: "Bijna: het gaat om een opa (far, vader), van moederskant (mor-)." }] }] }
+          - { id: rkwc, type: gap, topic: familj, text: "Min pappas syster är min ___.", gaps: [{ answers: ["faster"], feedback: [{ match: "moster", tip: "Van vaderskant: far- wordt fa-: faster." }] }] }
+          - { id: dtqf, type: mc, topic: familj, prompt: "Wie is je **morbror**?", options: ["de broer van je moeder", "de broer van je vader", "de vader van je moeder"], answer: 0, tip: "mor = moeder, bror = broer: de broer van je moeder." }
 
 vocab:
   - { sv: "en resa", nl: "een reis", def: "resan", pl: "resor", plDef: "resorna", ex: "Vi har gjort en lång **resa**.", exNl: "We hebben een lange reis gemaakt." }

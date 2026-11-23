@@ -258,14 +258,14 @@ sections:
         topic: spreektaal
         shuffle: true
         items:
-          - { id: 2xe6, type: gap, text: "Je hoort *ja* → je schrijft ___", gaps: [{ answers: ["jag"] }] }
-          - { id: 6drk, type: gap, text: "Je hoort *dom* (zij) → je schrijft ___", gaps: [{ answers: ["de"] }] }
+          - { id: 2xe6, type: gap, text: "Je hoort *ja* → je schrijft ___", gaps: [{ answers: ["jag"], feedback: [{ match: "ja", tip: "Zo spreek je het uit. Geschreven staat er een g aan het eind, ook al hoor je die meestal niet." }] }] }
+          - { id: 6drk, type: gap, text: "Je hoort *dom* (zij) → je schrijft ___", gaps: [{ answers: ["de"], feedback: [{ match: ["dom", "dem"], tip: "dom is de spreektaalvorm. Als onderwerp (zij) schrijf je de; dem is de vorm na een werkwoord of voorzetsel (hen)." }] }] }
           - { id: 37hx, type: gap, text: "Je hoort *mej* → je schrijft ___", gaps: [{ answers: ["mig"], feedback: [{ match: "mej", tip: "Zo spreek je het uit. In informele berichtjes zie je ook mej, maar de gewone schrijfwijze is met een g aan het eind." }] }] }
-          - { id: r6ny, type: gap, text: "Je hoort *nåt* → je schrijft ___", gaps: [{ answers: ["något"] }] }
+          - { id: r6ny, type: gap, text: "Je hoort *nåt* → je schrijft ___", gaps: [{ answers: ["något"], feedback: [{ match: "nåt", tip: "nåt zie je alleen in informele berichtjes. De gewone schrijfwijze is langer en eindigt op -got." }] }] }
           - { id: tbg8, type: gap, text: "Je hoort *sen* (daarna) → je schrijft ___", gaps: [{ answers: ["sedan"], feedback: [{ match: "sen", tip: "sen mag je ook schrijven, maar hier zoeken we de volledige vorm." }] }] }
-          - { id: yv7a, type: gap, text: "Je hoort *de* (het) → je schrijft ___", gaps: [{ answers: ["det"] }] }
+          - { id: yv7a, type: gap, text: "Je hoort *de* (het) → je schrijft ___", gaps: [{ answers: ["det"], feedback: [{ match: "de", tip: "Zo klinkt het, maar geschreven staat er een t aan het eind. de (zonder t) betekent zij (meervoud)." }] }] }
           - { id: v4s7, type: gap, text: "Je hoort *dej* → je schrijft ___", gaps: [{ answers: ["dig"], feedback: [{ match: "dej", tip: "Zo spreek je het uit. De gewone schrijfwijze is met een g aan het eind." }] }] }
-          - { id: qkq8, type: gap, text: "Je hoort *säjer* → je schrijft ___", gaps: [{ answers: ["säger"] }] }
+          - { id: qkq8, type: gap, text: "Je hoort *säjer* → je schrijft ___", gaps: [{ answers: ["säger"], feedback: [{ match: "säjer", tip: "Zo spreek je het uit. Geschreven staat er een g: de g klinkt hier als j." }] }] }
 
   - id: luisteren
     title: Luisteren

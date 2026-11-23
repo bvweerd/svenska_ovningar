@@ -124,6 +124,8 @@ sections:
           - { id: wjk9, type: gap, text: "Telefonen ___ på golvet.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
           - { id: k529, type: gap, text: "Jackan ___ i hallen.", gaps: [{ answers: ["hänger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
           - { id: gexx, type: gap, text: "Katten ___ i soffan och sover.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false }] }
+          - { id: yetv, type: gap, text: "Gaffeln ___ bredvid tallriken.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false, feedback: [{ match: "står", tip: "Een vork ligt plat op tafel: ligger." }] }] }
+          - { id: tuds, type: gap, text: "En flaska vin ___ på bordet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "hänger", "sitter"], shuffle: false, feedback: [{ match: "ligger", tip: "Een fles staat rechtop: står." }] }] }
 
       - id: zit-te
         title: Zitten te …
@@ -604,6 +606,9 @@ sections:
           - { id: g6hz, type: translate, topic: tycka-tro-tanka, prompt: "Ik denk dat het griep is.", answers: ["Jag tror [att ]det är {influensa|en influensa|influensan}."], feedback: [{ contains: "tycker att", tip: "Een vermoeden: tror." }] }
           - { id: ht6f, type: gap, topic: plural, text: "Wilma har ont i båda ___ (öra, bepaald meervoud).", gaps: [{ answers: ["öronen"] }] }
           - { id: zwaw, type: mc, topic: det-finns, prompt: "Welke zin is goed?", options: ["Finns det ett apotek här i närheten?", "Är det ett apotek här i närheten?", "Har det ett apotek här i närheten?"], answer: 0, tip: "Is er …? = Finns det …?" }
+          - { id: ku6j, type: gap, topic: prep-plats, text: "Lampan hänger ___ soffan. (boven)", gaps: [{ answers: ["över", "ovanför"], feedback: [{ match: "på", tip: "på is op (met contact). Boven = över." }] }] }
+          - { id: yycz, type: translate, topic: prep-plats, prompt: "De fiets staat achter het huis.", answers: ["Cykeln står bakom huset."], feedback: [{ contains: "efter huset", tip: "Achter (een plaats) = bakom. efter betekent na." }, { contains: "ligger bakom", tip: "Een fiets staat rechtop: står." }] }
+          - { id: 4xq6, type: gap, topic: prep-plats, text: "Ingrid och Olle bor ___ sjön. (aan)", gaps: [{ answers: ["vid"], feedback: [{ match: "på", tip: "Aan het meer (aan de oever) = vid sjön." }] }] }
 
 vocab:
   - { sv: "en kropp", nl: "een lichaam", def: "kroppen", pl: "kroppar", plDef: "kropparna", ex: "Jag har ont i hela **kroppen**.", exNl: "Mijn hele lichaam doet pijn." }

@@ -150,25 +150,27 @@ sections:
         instruction: Maak de bijzin af. Denk aan BIFF.
         topic: bisats-ordfoljd
         items:
-          - { id: y5be, type: order, start: "Jag stannar hemma eftersom", tokens: ["jag", "inte", "mår", "bra"], answers: ["Jag stannar hemma eftersom jag inte mår bra."] }
-          - { id: 5cjc, type: order, start: "Han säger att", tokens: ["han", "kommer", "aldrig", "i tid"], answers: ["Han säger att han aldrig kommer i tid."] }
+          - { id: y5be, type: order, start: "Jag stannar hemma eftersom", tokens: ["jag", "inte", "mår", "bra"], answers: ["Jag stannar hemma eftersom jag inte mår bra."], feedback: [{ match: "Jag stannar hemma eftersom jag mår inte bra.", tip: "In een bijzin staat inte vóór het werkwoord." }] }
+          - { id: 5cjc, type: order, start: "Han säger att", tokens: ["han", "kommer", "aldrig", "i tid"], answers: ["Han säger att han aldrig kommer i tid."], feedback: [{ match: "Han säger att han kommer aldrig i tid.", tip: "In een bijzin staat aldrig vóór het werkwoord." }] }
           - { id: ds2s, type: order, start: "Vi vet att", tokens: ["ofta", "Olle", "fiskar"], answers: ["Vi vet att Olle ofta fiskar."] }
-          - { id: tucr, type: order, start: "Jag undrar om", tokens: ["har", "inte", "de", "tid"], answers: ["Jag undrar om de inte har tid."] }
-          - { id: q897, type: order, start: "Hon säger att", tokens: ["inte", "hon", "kan", "komma"], answers: ["Hon säger att hon inte kan komma."] }
+          - { id: tucr, type: order, start: "Jag undrar om", tokens: ["har", "inte", "de", "tid"], answers: ["Jag undrar om de inte har tid."], feedback: [{ match: "Jag undrar om de har inte tid.", tip: "In een bijzin staat inte vóór het werkwoord." }] }
+          - { id: q897, type: order, start: "Hon säger att", tokens: ["inte", "hon", "kan", "komma"], answers: ["Hon säger att hon inte kan komma."], feedback: [{ match: "Hon säger att hon kan inte komma.", tip: "In een bijzin staat inte vóór het (eerste) werkwoord: att hon inte kan komma." }] }
           - { id: sdnw, type: order, start: "Jag vet att", tokens: ["cyklar", "Bram", "alltid"], answers: ["Jag vet att Bram alltid cyklar."] }
           - { id: hw4h, type: order, start: "Vi stannar hemma eftersom", tokens: ["regnar", "det", "fortfarande"], answers: ["Vi stannar hemma eftersom det fortfarande regnar."] }
-          - { id: e4xu, type: order, start: "Det är synd att", tokens: ["stannar", "ni", "inte"], answers: ["Det är synd att ni inte stannar."] }
+          - { id: e4xu, type: order, start: "Det är synd att", tokens: ["stannar", "ni", "inte"], answers: ["Det är synd att ni inte stannar."], feedback: [{ match: "Det är synd att ni stannar inte.", tip: "In een bijzin staat inte vóór het werkwoord." }] }
+          - { id: qnnp, type: order, start: "Jag skickar ett mejl eftersom", tokens: ["du", "inte", "svarar", "i telefon"], answers: ["Jag skickar ett mejl eftersom du inte svarar i telefon."], feedback: [{ match: "Jag skickar ett mejl eftersom du svarar inte i telefon.", tip: "In een bijzin staat inte vóór het werkwoord." }] }
+          - { id: e2bd, type: order, start: "Bram säger att", tokens: ["han", "inte", "förstår", "frågan"], answers: ["Bram säger att han inte förstår frågan."], feedback: [{ match: "Bram säger att han förstår inte frågan.", tip: "In een bijzin staat inte vóór het werkwoord." }] }
 
       - id: bijzin-vooraan
         title: Begin met de bijzin
         instruction: Maak de hoofdzin af. Het werkwoord komt direct na de bijzin.
         topic: bisats-ordfoljd
         items:
-          - { id: j35f, type: order, start: "När jag kommer hem", tokens: ["middag", "jag", "äter"], answers: ["När jag kommer hem äter jag middag."] }
-          - { id: fs5w, type: order, start: "Om det regnar", tokens: ["vi", "inne", "stannar"], answers: ["Om det regnar stannar vi inne."] }
-          - { id: mhnj, type: order, start: "Eftersom Nils är sjuk", tokens: ["stannar", "han", "hemma"], answers: ["Eftersom Nils är sjuk stannar han hemma."] }
+          - { id: j35f, type: order, start: "När jag kommer hem", tokens: ["middag", "jag", "äter"], answers: ["När jag kommer hem äter jag middag."], feedback: [{ match: "När jag kommer hem jag äter middag.", tip: "De bijzin staat op plaats 1, dus komt het werkwoord van de hoofdzin er direct achter." }] }
+          - { id: fs5w, type: order, start: "Om det regnar", tokens: ["vi", "inne", "stannar"], answers: ["Om det regnar stannar vi inne."], feedback: [{ match: "Om det regnar vi stannar inne.", tip: "De bijzin staat op plaats 1, dus komt het werkwoord van de hoofdzin er direct achter." }] }
+          - { id: mhnj, type: order, start: "Eftersom Nils är sjuk", tokens: ["stannar", "han", "hemma"], answers: ["Eftersom Nils är sjuk stannar han hemma."], feedback: [{ match: "Eftersom Nils är sjuk han stannar hemma.", tip: "De bijzin staat op plaats 1, dus komt het werkwoord van de hoofdzin er direct achter." }] }
           - { id: gfcr, type: order, start: "Innan vi flyttar", tokens: ["vi", "måste", "städa"], answers: ["Innan vi flyttar måste vi städa."] }
-          - { id: c727, type: order, start: "När filmen är slut", tokens: ["vi", "hem", "går"], answers: ["När filmen är slut går vi hem."] }
+          - { id: c727, type: order, start: "När filmen är slut", tokens: ["vi", "hem", "går"], answers: ["När filmen är slut går vi hem."], feedback: [{ match: "När filmen är slut vi går hem.", tip: "De bijzin staat op plaats 1, dus komt het werkwoord van de hoofdzin er direct achter." }] }
           - { id: t9xj, type: order, start: "Om du vill", tokens: ["du", "stanna", "kan"], answers: ["Om du vill kan du stanna."] }
           - { id: de4y, type: order, start: "Medan Bram diskar", tokens: ["läser", "Fleur", "en bok"], answers: ["Medan Bram diskar läser Fleur en bok."] }
           - { id: vg77, type: order, start: "Fastän det är kallt", tokens: ["Olle", "badar"], answers: ["Fastän det är kallt badar Olle."] }
@@ -269,6 +271,11 @@ sections:
           - { id: 9sy5, type: gap, text: "Tavlan hänger ___ väggen. (aan)", gaps: [{ answers: ["på"], feedback: [{ match: "i", tip: "Aan de muur: på väggen." }] }] }
           - { id: add6, type: gap, text: "Bokhyllan står ___ skrivbordet. (naast)", gaps: [{ answers: ["bredvid"] }] }
           - { id: 36gr, type: gap, text: "Ikväll äter vi ___ Ingrid och Olle. (bij, thuis)", gaps: [{ answers: ["hos"], feedback: [{ match: ["vid", "med"], tip: "Bij iemand thuis: hos." }] }] }
+          - { id: bf5k, type: gap, text: "Kniven ligger ___ tallriken. (naast)", gaps: [{ answers: ["bredvid"], feedback: [{ match: "vid", tip: "Naast = bredvid. vid betekent bij of aan." }] }] }
+          - { id: 4w3d, type: gap, text: "Laddaren ligger ___ soffan. (onder)", gaps: [{ answers: ["under"] }] }
+          - { id: fjwq, type: gap, text: "Ryggsäcken står ___ dörren. (achter)", gaps: [{ answers: ["bakom"], feedback: [{ match: ["efter", "achter"], tip: "Achter (een plaats) = bakom. efter betekent na." }] }] }
+          - { id: 8d2s, type: gap, text: "Två fåglar sitter ___ taket. (op)", gaps: [{ answers: ["på"], feedback: [{ match: "över", tip: "Op het dak, er bovenop: på. över is boven, zonder het aan te raken." }] }] }
+          - { id: 68gy, type: gap, text: "Osten ligger ___ kylskåpet. (in)", gaps: [{ answers: ["i"], feedback: [{ match: "in", tip: "Waar iets is: i (in). in gebruik je bij een beweging naar binnen." }] }] }
 
       - id: kamers
         title: De kamers in huis
@@ -440,6 +447,9 @@ sections:
           - { id: tmm9, type: gap, topic: tidsprep, text: "Vi har bott här ___ fem år.", gaps: [{ answers: ["i"], options: ["om", "i", "på", "för"], shuffle: false }] }
           - { id: qaua, type: order, topic: subjunktioner, start: "Medan Bram lagar mat", tokens: ["Fleur", "dukar", "bordet"], answers: ["Medan Bram lagar mat dukar Fleur bordet."] }
           - { id: ug9b, type: mc, topic: perfekt-preteritum, prompt: "Welke zin is goed?", options: ["Vi flyttade hit för två år sedan.", "Vi har flyttat hit för två år sedan.", "Vi flyttar hit för två år sedan."], answer: 0, tip: "för två år sedan is een bepaald moment: preteritum." }
+          - { id: n2ug, type: gap, topic: telefon, text: "Förlåt, du har ringt ___ nummer. (verkeerd)", gaps: [{ answers: ["fel"], feedback: [{ match: ["felt", "fela", "verkeerd"], tip: "Een verkeerd nummer = fel nummer. fel krijgt geen uitgang." }] }] }
+          - { id: fdh9, type: translate, topic: telefon, prompt: "Ik bel later terug, want ik ben nu bezig.", answers: ["Jag ringer tillbaka senare[,] {för|för att|eftersom} jag är upptagen[ just] nu."] }
+          - { id: r33g, type: mc, topic: telefon, prompt: "Iemand belt voor Ingrid, maar ze is er niet. Wat zeg je?", options: ["Hon är inte här just nu. Vill du lämna ett meddelande?", "Du har ringt fel nummer.", "Jag skulle vilja boka en tid."], answer: 0, tip: "Ze is er nu niet: Hon är inte här just nu." }
 
 vocab:
   - { sv: "en lägenhet", nl: "een appartement", def: "lägenheten", pl: "lägenheter", plDef: "lägenheterna", ex: "Vi bor i en **lägenhet** i centrum.", exNl: "We wonen in een appartement in het centrum." }

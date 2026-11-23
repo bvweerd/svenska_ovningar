@@ -170,14 +170,14 @@ sections:
         instruction: Maak de zin af. In de bijzin komt het onderwerp vóór het werkwoord.
         topic: indirekt-tal
         items:
-          - { id: xp56, type: order, start: "Kan du säga", tokens: ["var", "ligger", "stationen"], answers: ["Kan du säga var stationen ligger?"] }
+          - { id: xp56, type: order, start: "Kan du säga", tokens: ["var", "ligger", "stationen"], answers: ["Kan du säga var stationen ligger?"], feedback: [{ match: "Kan du säga var ligger stationen?", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
           - { id: hupg, type: order, start: "Jag vet inte", tokens: ["om", "kommer", "han"], answers: ["Jag vet inte om han kommer."] }
-          - { id: 6pz3, type: order, start: "Hon undrar", tokens: ["vad", "heter", "jag"], answers: ["Hon undrar vad jag heter."] }
-          - { id: 7mmv, type: order, start: "Vet du", tokens: ["när", "går", "tåget"], answers: ["Vet du när tåget går?"] }
-          - { id: hjfc, type: order, start: "Jag undrar", tokens: ["när", "börjar", "filmen"], answers: ["Jag undrar när filmen börjar."] }
+          - { id: 6pz3, type: order, start: "Hon undrar", tokens: ["vad", "heter", "jag"], answers: ["Hon undrar vad jag heter."], feedback: [{ match: "Hon undrar vad heter jag.", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
+          - { id: 7mmv, type: order, start: "Vet du", tokens: ["när", "går", "tåget"], answers: ["Vet du när tåget går?"], feedback: [{ match: "Vet du när går tåget?", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
+          - { id: hjfc, type: order, start: "Jag undrar", tokens: ["när", "börjar", "filmen"], answers: ["Jag undrar när filmen börjar."], feedback: [{ match: "Jag undrar när börjar filmen.", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
           - { id: h3hs, type: order, start: "Vet du", tokens: ["vad", "kostar", "biljetten"], answers: ["Vet du vad biljetten kostar?"] }
           - { id: fbc5, type: order, start: "Hon frågar", tokens: ["om", "vill", "jag", "komma"], answers: ["Hon frågar om jag vill komma."] }
-          - { id: 9djc, type: order, start: "Jag vet inte", tokens: ["var", "bor", "Olle"], answers: ["Jag vet inte var Olle bor."] }
+          - { id: 9djc, type: order, start: "Jag vet inte", tokens: ["var", "bor", "Olle"], answers: ["Jag vet inte var Olle bor."], feedback: [{ match: "Jag vet inte var bor Olle.", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
 
       - id: telefoon-koppelen
         title: Aan de telefoon
@@ -368,6 +368,11 @@ sections:
           - { id: etaf, type: order, topic: konjunktioner, start: "Jag ringde, men", tokens: ["ingen", "svarade"], answers: ["Jag ringde, men ingen svarade."] }
           - { id: b8qg, type: gap, topic: ordningstal, text: "Hon bor på ___ våningen. (3)", gaps: [{ answers: ["tredje"] }] }
           - { id: 9cd3, type: mc, topic: ocksa-heller, prompt: "– Jag har ingen mobil. – (Jij ook niet.)", options: ["Inte jag heller.", "Det har jag också.", "Men det har jag."], answer: 0, tip: "Ook niet: Inte jag heller." }
+          - { id: x8r7, type: gap, topic: berattande, text: "Den dagen ___ (vara) det kallt, så vi ___ (stanna) inne.", gaps: [{ answers: ["var"] }, { answers: ["stannade"], feedback: [{ match: "stannar", tip: "In een verhaal over toen gebruik je de preteritum: stannade." }] }] }
+          - { id: gsp6, type: order, topic: berattande, start: "Efter maten", tokens: ["drack", "vi", "kaffe", "och", "åt", "tårta"], answers: ["Efter maten drack vi kaffe och åt tårta.", "Efter maten åt vi tårta och drack kaffe."], feedback: [{ match: ["Efter maten vi drack kaffe och åt tårta.", "Efter maten vi åt tårta och drack kaffe."], tip: "Efter maten staat op plaats 1, dus komt het werkwoord er direct achter." }] }
+          - { id: r5e4, type: gap, topic: berattande, text: "Först ___ (steka) Bram fisk, och sedan ___ (koka) han potatis.", gaps: [{ answers: ["stekte"], feedback: [{ match: "stekade", tip: "steka is een -er-werkwoord (steker): stekte." }] }, { answers: ["kokade"], feedback: [{ match: "kokte", tip: "koka is een -ar-werkwoord (kokar): kokade." }] }] }
+          - { id: d6hd, type: gap, topic: mat-fraser, text: "Maten är klar. ”___ måltid!” säger Ingrid. (Eet smakelijk!)", gaps: [{ answers: ["Smaklig"], feedback: [{ match: ["Smakelijk", "Smakelig", "Smaklik"], tip: "Eet smakelijk! = Smaklig måltid! (zonder e)." }] }] }
+          - { id: qmh2, type: mc, topic: mat-fraser, prompt: "Je wilt in het restaurant betalen. Wat zeg je tegen de ober?", options: ["Kan vi få notan?", "Kan vi få menyn?", "Smaklig måltid!"], answer: 0, tip: "De rekening heet in het restaurant notan." }
 
 vocab:
   - { sv: "en mobil", nl: "een mobiele telefoon", def: "mobilen", pl: "mobiler", plDef: "mobilerna", alt: ["en mobiltelefon"], ex: "Nils hittar inte **mobilen**.", exNl: "Nils kan de mobiel niet vinden." }

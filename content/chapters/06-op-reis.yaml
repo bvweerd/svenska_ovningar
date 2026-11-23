@@ -256,6 +256,16 @@ sections:
           - { id: u6ns, type: gap, topic: raknord, text: "Hotellet kostar ___ kronor per natt. (900)", gaps: [{ answers: ["niohundra"], feedback: [{ contains: "nio hundra", tip: "Getallen schrijf je in het Zweeds aan elkaar: niohundra." }] }] }
           - { id: 52vg, type: gap, topic: raknord, text: "Cykeln kostar ___ kronor. (1000)", gaps: [{ answers: ["[ett]tusen"], feedback: [{ contains: "ett tusen", tip: "Getallen schrijf je in het Zweeds aan elkaar: (ett)tusen." }] }] }
 
+      - id: betalen
+        title: Betalen
+        instruction: Kies of vul in wat je zegt of hoort bij het betalen.
+        topic: pengar
+        items:
+          - { id: v475, type: mc, prompt: "Je wilt weten wat een kaartje kost. Wat vraag je?", options: ["Vad kostar biljetten?", "Vad är klockan?", "Var är biljetten?"], answer: 0, tip: "Wat kost …? is Vad kostar …?" }
+          - { id: mmzn, type: gap, text: "Kan jag betala med ___? (kaart)", gaps: [{ answers: ["kort", "kortet"], feedback: [{ match: ["karta", "kartan"], tip: "en karta is een landkaart. Een bankpas of creditcard is ett kort." }, { match: "kaart", tip: "Dat is Nederlands. Een bankpas of creditcard is ett kort." }] }] }
+          - { id: wsv4, type: gap, text: "Tack! Kan jag få ___? (het bonnetje)", gaps: [{ answers: ["kvittot", "kvitto"] }] }
+          - { id: rc5c, type: mc, prompt: "Je koopt een kop koffie van 30 kronor en betaalt met **en femtiolapp**. Hoeveel krijg je terug?", options: ["20 kronor", "50 kronor", "30 kronor"], answer: 0, tip: "En femtiolapp is een briefje van 50. 50 − 30 = 20." }
+
       - id: rangtelwoorden
         title: Rangtelwoorden
         instruction: Schrijf het rangtelwoord.
@@ -545,9 +555,12 @@ sections:
           - { id: 4aqn, type: gap, topic: plural, text: "Jag köpte två ___ (biljett).", gaps: [{ answers: ["biljetter"] }] }
           - { id: vkug, type: order, topic: tidsuttryck, start: "Om en vecka", tokens: ["Bram", "börjar", "på ett nytt jobb"], answers: ["Om en vecka börjar Bram på ett nytt jobb."] }
           - { id: vt2a, type: mc, topic: frekvens, prompt: "Welke zin is goed?", options: ["Vi åker ofta tåg.", "Vi ofta åker tåg.", "Ofta vi åker tåg."], answer: 0, tip: "ofta staat ná het werkwoord." }
-          - { id: tq9n, type: clock, time: "08:25" }
+          - { id: tq9n, type: clock, topic: klockan, time: "08:25" }
           - { id: danc, type: gap, topic: imperativ, text: "___ (stiga) av vid nästa hållplats!", gaps: [{ answers: ["Stig"], feedback: [{ match: ["Stiga", "Stiger"], tip: "stiga – stiger: haal de -a weg." }] }] }
           - { id: hymq, type: gap, topic: objekt, text: "Kan du hämta ___ på stationen? (ons)", gaps: [{ answers: ["oss"], options: ["vi", "oss", "vår"] }] }
+          - { id: 3me8, type: gap, topic: an, text: "Tåget är snabbare ___ bussen.", gaps: [{ answers: ["än"], options: ["än", "som"], shuffle: false, feedback: [{ match: "som", tip: "Na een vergelijkende vorm (snabbare, äldre …) komt än. som hoort bij lika … som." }] }] }
+          - { id: sqb9, type: gap, topic: an, text: "Min syster är äldre än ___. (ik)", gaps: [{ answers: ["jag", "mig"], feedback: [{ match: ["min", "mitt"], tip: "min is bezittelijk (mijn). Na än: jag of mig." }] }] }
+          - { id: yc3u, type: gap, topic: an, text: "Nils är lika lång som ___. (zij, enkelvoud)", gaps: [{ answers: ["hon", "henne"], feedback: [{ match: "hennes", tip: "hennes is bezittelijk (haar). Na som: hon of henne." }] }] }
 
 vocab:
   - { sv: "en biljett", nl: "een kaartje", def: "biljetten", pl: "biljetter", plDef: "biljetterna", ex: "Jag köper en **biljett** till Uppsala.", exNl: "Ik koop een kaartje naar Uppsala." }

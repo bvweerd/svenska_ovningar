@@ -172,7 +172,7 @@ sections:
           - id: wdrb
             type: gap
             text: "Fleur ___ (jobba) på ett sjukhus."
-            gaps: [{ answers: ["jobbar"] }]
+            gaps: [{ answers: ["jobbar"], feedback: [{ match: ["jobber", "jobba"], tip: "jobba eindigt op -a: dan komt er alleen -r achter: jobbar." }] }]
           - id: 89ae
             type: gap
             text: "Bram ___ (läsa) en tidning."
@@ -184,7 +184,7 @@ sections:
           - id: 5m7x
             type: gap
             text: "Wilma ___ (tala) engelska och lite tyska."
-            gaps: [{ answers: ["talar"] }]
+            gaps: [{ answers: ["talar"], feedback: [{ match: ["taler", "tala"], tip: "tala eindigt op -a: dan komt er alleen -r achter: talar." }] }]
           - id: nj49
             type: gap
             text: "Olle ___ (köpa) bröd varje morgon."
@@ -196,11 +196,11 @@ sections:
           - id: 9mhm
             type: gap
             text: "De ___ (ha) en katt."
-            gaps: [{ answers: ["har"] }]
+            gaps: [{ answers: ["har"], feedback: [{ match: ["ha", "haar", "hebben"], tip: "ha is een kort werkwoord: er komt alleen -r achter: har. Voor alle personen dezelfde vorm." }] }]
           - id: e3aa
             type: gap
             text: "Nils ___ (gå) till skolan."
-            gaps: [{ answers: ["går"] }]
+            gaps: [{ answers: ["går"], feedback: [{ match: ["gåar", "gå", "gåer"], tip: "gå is een kort werkwoord: er komt alleen -r achter: går." }] }]
           - id: npzu
             type: gap
             text: "Du ___ (heta) Ingrid, eller hur?"
@@ -274,14 +274,14 @@ sections:
         instruction: Maak een zin die begint met het gegeven woord. Klik de woorden in de goede volgorde aan.
         topic: v2
         items:
-          - { id: 2wvz, type: order, start: "På måndag", tokens: ["börjar", "kursen"], answers: ["På måndag börjar kursen."] }
-          - { id: awbj, type: order, start: "I Västerås", tokens: ["bor", "Fleur och Bram", "nu"], answers: ["I Västerås bor Fleur och Bram nu.", "I Västerås bor nu Fleur och Bram."] }
-          - { id: wzdd, type: order, start: "Svenska", tokens: ["Bram", "talar", "lite"], answers: ["Svenska talar Bram lite."] }
-          - { id: e9uj, type: order, start: "Varje morgon", tokens: ["kaffe", "dricker", "Olle"], answers: ["Varje morgon dricker Olle kaffe."] }
-          - { id: 7nzt, type: order, start: "Där", tokens: ["Wilma", "går"], answers: ["Där går Wilma."] }
-          - { id: ak53, type: order, start: "Idag", tokens: ["hemma", "Fleur", "jobbar"], answers: ["Idag jobbar Fleur hemma."] }
-          - { id: 9wg9, type: order, start: "Nu", tokens: ["fotboll", "Nils", "spelar"], answers: ["Nu spelar Nils fotboll."] }
-          - { id: ncsb, type: order, start: "I Sverige", tokens: ["svenska", "vi", "talar"], answers: ["I Sverige talar vi svenska."] }
+          - { id: 2wvz, type: order, start: "På måndag", tokens: ["börjar", "kursen"], answers: ["På måndag börjar kursen."], feedback: [{ match: "På måndag kursen börjar", tip: "Het werkwoord staat op plaats 2, direct na På måndag: börjar kursen." }] }
+          - { id: awbj, type: order, start: "I Västerås", tokens: ["bor", "Fleur och Bram", "nu"], answers: ["I Västerås bor Fleur och Bram nu.", "I Västerås bor nu Fleur och Bram."], feedback: [{ match: ["I Västerås Fleur och Bram bor nu", "I Västerås nu Fleur och Bram bor"], tip: "I Västerås staat op plaats 1. Het werkwoord (bor) komt op plaats 2, het onderwerp erachter." }] }
+          - { id: wzdd, type: order, start: "Svenska", tokens: ["Bram", "talar", "lite"], answers: ["Svenska talar Bram lite."], feedback: [{ match: "Svenska Bram talar lite", tip: "Ook als het lijdend voorwerp vooraan staat, blijft het werkwoord op plaats 2: Svenska talar Bram." }] }
+          - { id: e9uj, type: order, start: "Varje morgon", tokens: ["kaffe", "dricker", "Olle"], answers: ["Varje morgon dricker Olle kaffe."], feedback: [{ match: "Varje morgon Olle dricker kaffe", tip: "Varje morgon is samen plaats 1. Daarna eerst het werkwoord: dricker Olle." }] }
+          - { id: 7nzt, type: order, start: "Där", tokens: ["Wilma", "går"], answers: ["Där går Wilma."], feedback: [{ match: "Där Wilma går", tip: "Het werkwoord op plaats 2, net als in het Nederlands: Daar loopt Wilma." }] }
+          - { id: ak53, type: order, start: "Idag", tokens: ["hemma", "Fleur", "jobbar"], answers: ["Idag jobbar Fleur hemma."], feedback: [{ match: ["Idag Fleur jobbar hemma", "Idag Fleur hemma jobbar"], tip: "Na Idag komt eerst het werkwoord: Idag jobbar Fleur." }] }
+          - { id: 9wg9, type: order, start: "Nu", tokens: ["fotboll", "Nils", "spelar"], answers: ["Nu spelar Nils fotboll."], feedback: [{ match: "Nu Nils spelar fotboll", tip: "Na Nu komt eerst het werkwoord: Nu spelar Nils." }] }
+          - { id: ncsb, type: order, start: "I Sverige", tokens: ["svenska", "vi", "talar"], answers: ["I Sverige talar vi svenska."], feedback: [{ match: "I Sverige vi talar svenska", tip: "I Sverige is plaats 1. Het werkwoord komt op plaats 2: talar vi." }] }
 
       - id: v2-kiezen-maken
         title: Inversie of niet? Kies en schrijf
@@ -345,7 +345,7 @@ sections:
           - id: v9ax
             type: gap
             text: "Wilma är femton år. ___ går i nian."
-            gaps: [{ answers: ["Hon"], options: ["Hon", "Han", "Den", "Det"] }]
+            gaps: [{ answers: ["Hon"], options: ["Hon", "Han", "Den", "Det"], feedback: [{ match: ["Den", "Det"], tip: "Wilma is een persoon: dan gebruik je han of hon, niet den of det." }] }]
           - id: f8jg
             type: gap
             text: "Bram och jag kommer från Utrecht. ___ bor i Sverige nu."
@@ -365,7 +365,7 @@ sections:
           - id: srw5
             type: gap
             text: "Olle är lärare. ___ jobbar på en skola."
-            gaps: [{ answers: ["Han"], options: ["Han", "Hon", "Den"] }]
+            gaps: [{ answers: ["Han"], options: ["Han", "Hon", "Den"], feedback: [{ match: "Den", tip: "Olle is een persoon: dan gebruik je han, niet den." }] }]
           - id: 8cfk
             type: gap
             text: "– Vad heter du? – ___ heter Fleur."
@@ -410,14 +410,14 @@ sections:
         instruction: Maak van de zin een ja/nee-vraag.
         topic: vragen
         items:
-          - { id: qcy3, type: translate, prompt: "Olle har en bil.", answers: ["Har Olle en bil?"] }
-          - { id: 9py6, type: translate, prompt: "Ni bor i Göteborg.", answers: ["Bor ni i Göteborg?"] }
-          - { id: vzgh, type: translate, prompt: "Wilma är femton år.", answers: ["Är Wilma femton år[ gammal]?"] }
-          - { id: jqdf, type: translate, prompt: "Du gillar kaffe.", answers: ["Gillar du kaffe?"] }
-          - { id: dkem, type: translate, prompt: "De kommer från Danmark.", answers: ["Kommer de från Danmark?"] }
-          - { id: hhxc, type: translate, prompt: "Fleur jobbar hemma idag.", answers: ["Jobbar Fleur hemma {idag|i dag}?"] }
-          - { id: tgx9, type: translate, prompt: "Nils spelar fotboll.", answers: ["Spelar Nils fotboll?"] }
-          - { id: t5mz, type: translate, prompt: "Ni talar svenska.", answers: ["Talar ni svenska?"] }
+          - { id: qcy3, type: translate, prompt: "Olle har en bil.", answers: ["Har Olle en bil?"], feedback: [{ match: "Olle har en bil", tip: "Alleen een vraagteken is niet genoeg: zet het werkwoord vooraan, net als in het Nederlands (Heeft Olle …?)." }] }
+          - { id: 9py6, type: translate, prompt: "Ni bor i Göteborg.", answers: ["Bor ni i Göteborg?"], feedback: [{ match: "Ni bor i Göteborg", tip: "In een ja/nee-vraag komt het werkwoord vooraan: Bor ni …?" }] }
+          - { id: vzgh, type: translate, prompt: "Wilma är femton år.", answers: ["Är Wilma femton år[ gammal]?"], feedback: [{ match: "Wilma är femton år[ gammal]", tip: "In een ja/nee-vraag komt het werkwoord vooraan: Är Wilma …?" }] }
+          - { id: jqdf, type: translate, prompt: "Du gillar kaffe.", answers: ["Gillar du kaffe?"], feedback: [{ match: "Du gillar kaffe", tip: "In een ja/nee-vraag komt het werkwoord vooraan: Gillar du …?" }] }
+          - { id: dkem, type: translate, prompt: "De kommer från Danmark.", answers: ["Kommer de från Danmark?"], feedback: [{ match: "De kommer från Danmark", tip: "In een ja/nee-vraag komt het werkwoord vooraan: Kommer de …?" }] }
+          - { id: hhxc, type: translate, prompt: "Fleur jobbar hemma idag.", answers: ["Jobbar Fleur hemma {idag|i dag}?"], feedback: [{ match: ["Fleur jobbar hemma idag", "Idag jobbar Fleur hemma"], tip: "In een ja/nee-vraag komt het werkwoord helemaal vooraan: Jobbar Fleur …?" }] }
+          - { id: tgx9, type: translate, prompt: "Nils spelar fotboll.", answers: ["Spelar Nils fotboll?"], feedback: [{ match: "Nils spelar fotboll", tip: "In een ja/nee-vraag komt het werkwoord vooraan: Spelar Nils …?" }] }
+          - { id: t5mz, type: translate, prompt: "Ni talar svenska.", answers: ["Talar ni svenska?"], feedback: [{ match: "Ni talar svenska", tip: "In een ja/nee-vraag komt het werkwoord vooraan: Talar ni …?" }] }
 
       - id: ontkennen
         title: Nej, …
@@ -505,14 +505,14 @@ sections:
         instruction: Vul de bepaalde vorm in van het woord tussen haakjes.
         topic: substantiv
         items:
-          - { id: fz49, type: gap, text: "Nils har en hund. ___ (hund) heter Sigge.", gaps: [{ answers: ["Hunden"] }] }
-          - { id: wny2, type: gap, text: "Ingrid och Olle har ett hus. ___ (hus) ligger i Västerås.", gaps: [{ answers: ["Huset"] }] }
+          - { id: fz49, type: gap, text: "Nils har en hund. ___ (hund) heter Sigge.", gaps: [{ answers: ["Hunden"], feedback: [{ match: ["Hundet", "Den hund"], tip: "hund is een en-woord: de bepaalde vorm krijgt -en achteraan, zonder los lidwoord." }] }] }
+          - { id: wny2, type: gap, text: "Ingrid och Olle har ett hus. ___ (hus) ligger i Västerås.", gaps: [{ answers: ["Huset"], feedback: [{ match: ["Husen", "Det hus"], tip: "hus is een ett-woord: de bepaalde vorm krijgt -et achteraan, zonder los lidwoord." }] }] }
           - { id: ggx6, type: gap, text: "Fleur köper en tidning. Hon läser ___ (tidning) på bussen.", gaps: [{ answers: ["tidningen"] }] }
           - { id: jrbd, type: gap, text: "Där står en stol. ___ (stol) är gammal.", gaps: [{ answers: ["Stolen"] }] }
-          - { id: pb5f, type: gap, text: "Nils äter ett äpple. ___ (äpple) är grönt.", gaps: [{ answers: ["Äpplet"] }] }
+          - { id: pb5f, type: gap, text: "Nils äter ett äpple. ___ (äpple) är grönt.", gaps: [{ answers: ["Äpplet"], feedback: [{ match: ["Äppleet", "Äpplen"], tip: "äpple is een ett-woord dat op een klinker eindigt: er komt alleen -t achter." }] }] }
           - { id: n24e, type: gap, text: "Var står ___ (lampa)? – På bordet.", gaps: [{ answers: ["lampan"] }] }
           - { id: 9bw4, type: gap, text: "Bram har en bil. ___ (bil) är röd.", gaps: [{ answers: ["Bilen"] }] }
-          - { id: ty42, type: gap, text: "Fleur och Bram har ett bord. ___ (bord) står i köket.", gaps: [{ answers: ["Bordet"] }] }
+          - { id: ty42, type: gap, text: "Fleur och Bram har ett bord. ___ (bord) står i köket.", gaps: [{ answers: ["Bordet"], feedback: [{ match: ["Borden", "Det bord"], tip: "bord is een ett-woord: de bepaalde vorm krijgt -et achteraan." }] }] }
 
       - id: getallen
         title: Getallen
