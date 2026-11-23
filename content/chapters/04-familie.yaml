@@ -101,12 +101,12 @@ sections:
           - id: esgu
             type: steps
             steps:
-              - { type: mc, prompt: "Kijk: *jobbar – jobbade*, *lagar – lagade*, *städar – städade*. Wat valt op?", options: ["Werkwoorden op -ar krijgen -ade.", "Alle werkwoorden krijgen -te.", "De -ar valt weg en er komt -de achter."], answer: 0, shuffle: false, tip: "jobbar, lagar en städar eindigen op -ar, en in de verleden tijd op -ade." }
+              - { type: mc, prompt: "Kijk: *jobbar – jobbade*, *lagar – lagade*, *städar – städade*. Wat valt op?", options: ["Werkwoorden op -ar krijgen -ade.", "Alle werkwoorden krijgen -te.", "De -ar valt weg en er komt -de achter."], answer: 0, tip: "jobbar, lagar en städar eindigen op -ar, en in de verleden tijd op -ade." }
               - { type: gap, text: "Igår ___ (titta) vi på film.", gaps: [{ answers: ["tittade"], feedback: [{ match: ["tittde", "tittte", "tittar"], tip: "titta – tittar is een -ar-werkwoord: -ade, tittade." }] }] }
           - id: 6pn7
             type: steps
             steps:
-              - { type: mc, prompt: "Kijk: *ringer – ringde*, *hör – hörde*, maar *köper – köpte*, *läser – läste*. Wanneer -te?", options: ["Als de stam op k, p, s, t of x eindigt.", "Als het werkwoord lang is.", "Bij alle werkwoorden op -er."], answer: 0, shuffle: false, tip: "köp- en läs- eindigen op p en s: dan -te. ring- en hör- niet: dan -de." }
+              - { type: mc, prompt: "Kijk: *ringer – ringde*, *hör – hörde*, maar *köper – köpte*, *läser – läste*. Wanneer -te?", options: ["Als de stam op k, p, s, t of x eindigt.", "Als het werkwoord lang is.", "Bij alle werkwoorden op -er."], answer: 0, tip: "köp- en läs- eindigen op p en s: dan -te. ring- en hör- niet: dan -de." }
               - { type: gap, text: "I lördags ___ (åka) vi till Uppsala.", gaps: [{ answers: ["åkte"], feedback: [{ match: ["åkde", "åkade"], tip: "De stam åk- eindigt op k: -te, åkte." }] }] }
 
       - id: pret-regelmatig
