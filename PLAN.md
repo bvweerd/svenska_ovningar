@@ -78,6 +78,36 @@ Zweeds wordt voorgelezen met de spraakfunctie van de browser.
 - Op B1/B2 vooral opdrachten met een vast antwoord; vrij schrijven als laatste, vrijblijvende stap.
 - **Voortgang hangt aan id's**: nooit een vraag-id, oefening-id of hoofdstuknummer veranderen.
 
+## Onderwijskundige lijn (altijd volgen)
+
+Elke nieuwe oefening, oefenvorm of functie past in deze lijn. Wat meetbaar is, controleert `npm test` of
+`npm run difficulty-report`; de rest hoort in de taalreview en de code-review. Onderbouwing:
+`REVIEW-DIDACTIEK.md`.
+
+1. **Vier strands in balans** (Nation): naast vormgerichte oefening ook
+   - *input met aandacht voor betekenis*: de leestekst van het hoofdstuk plus **minstens 2 makkelijke
+     teksten** per hoofdstuk (`kind: makkelijk`, vanaf H1): bijna alleen bekende woorden, 2–3 nagekeken
+     begripsvragen; A1 40–80, A2 60–120, B1 100–180, B2 150–250 woorden;
+   - *output met aandacht voor betekenis*: geleid schrijven en, vanaf H5, **„Wat zeg je?”**
+     (`kind: situatie`, minstens 4 vragen): een situatie in het Nederlands, de leerling zegt het in het
+     Zweeds; meer goede antwoorden toestaan;
+   - *vloeiendheid*: de vloeiendheidsronde (snelle ronde met alleen al gekende stof) en de snelle rondes.
+2. **Ophalen, spreiden en afwisselen**: elke nagekeken vraag komt in de dagelijkse herhaling; nieuwe
+   oefenvormen gebruiken de Leitner-dozen, niet hun eigen geheugen.
+3. **Feedback in lagen**: tip (foutregel of diagnose) → regel met link naar de uitleg → antwoord. Bij een
+   nieuwe vraag horen foutregels voor de te verwachten fouten.
+4. **De app kijkt na**: geen zelfbeoordeling; wat niet na te kijken is, is oefenen zonder oordeel.
+5. **Van vorm naar gebruik**: per onderwerp herkennen → maken → kiezen → gemengd → gebruik (lezen, taak,
+   situatie, schrijven); vertalen is één van de vormen, niet de hoofdvorm (vanaf A2 gaat er een deel naar
+   situatieopdrachten en Zweeds → Zweeds).
+6. **Kan-doen-uitspraken beloven wat de app meet**: formuleer ze als wat de vragen erover toetsen.
+7. **Instap op niveau**: de plaatsingstoets per hoofdstuk zet wat je al kunt meteen hoger in de herhaling.
+8. **Uitspraak**: luisteren met de computerstem (en dat melden); onderscheid horen (sj/tj, lang/kort,
+   woordaccent 1/2) komt in H0 en in de herhaling terug. Geen spreken nakijken.
+9. **Woordenschat**: per hoofdstuk thematisch én frequent; op B1–B2 gericht op de meest gebruikte woorden.
+10. **Eigen werk**: alle stof zelf geschreven; methoden (ook hun antwoordmodellen) worden niet ingelezen of
+    gemined.
+
 ## Moeilijkheidslijn en volgorde
 
 Zaagtand: binnen een hoofdstuk oplopend; oudere stof komt in de herhaling terug op het niveau van toen.
@@ -92,10 +122,10 @@ De getallen zijn een eigen richtlijn; de A1/A2-grens bij H6/H7 is een aanname.
 | H25–H30 | B2 | 350–500 | 10–15 | ≥ 70 |
 
 Vaste volgorde per hoofdstuk (`npm test` controleert hem; details in README, „Volgorde in een hoofdstuk”):
-- A-site: woorden → per onderwerp herkennen → vorm → kiezen → gemengd (vertalen, zoek de fout) → lezen →
-  dialoog en taak → schrijven → luisteren → herhaling → overige woordenschat.
-- B-site: Läsa → Ord → Grammatik (herkennen → maken → kiezen) → Zoek de fout → Lyssna → Praktiskt →
-  Skriva → Herhaling → overige woordenschat.
+- A-site: woorden → per onderwerp herkennen → vorm → kiezen → gemengd (vertalen, „Wat zeg je?”, zoek de
+  fout) → lezen (ook makkelijk lezen) → dialoog en taak → schrijven → luisteren → herhaling → overige woordenschat.
+- B-site: Läsa (ook makkelijk lezen) → Ord → Grammatik (herkennen → maken → kiezen) → Zoek de fout → Lyssna →
+  Praktiskt (ook „Wat zeg je?”) → Skriva → Herhaling → overige woordenschat.
 
 Geen grammatica uit een later hoofdstuk (ook getest).
 
