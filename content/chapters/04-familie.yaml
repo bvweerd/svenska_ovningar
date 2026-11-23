@@ -347,6 +347,12 @@ sections:
           - { id: 9zsh, type: translate, topic: possessiv, prompt: "Iemand vraagt naar je familie. Zeg dat je broer in Utrecht woont.", answers: ["Min bror bor i Utrecht.", "I Utrecht bor min bror."], feedback: [{ contains: ["mitt bror", "mina bror"], tip: "bror is een en-woord: min bror." }, { contains: "min broer", tip: "Broer = bror." }] }
           - { id: 8b7k, type: translate, topic: possessiv, prompt: "Je laat een foto zien. Zeg dat dit je ouders zijn.", answers: ["{Det här|Det|Här} är mina föräldrar."], feedback: [{ contains: ["min föräldrar", "mitt föräldrar"], tip: "föräldrar is meervoud: mina föräldrar." }, { contains: ["mina förälder ", "mina föräldrarna"], tip: "Na mina: het meervoud zonder lidwoord, föräldrar." }] }
           - { id: nhax, type: translate, topic: starka-verb, prompt: "Een vriendin vraagt wat je voor je verjaardag kreeg. Zeg dat je een jas kreeg.", answers: ["Jag fick en [ny ]jacka[ i present]."], feedback: [{ contains: ["fådde", "fåde", "jag får"], tip: "få is onregelmatig: få – fick." }, { contains: "ett jacka", tip: "jacka is een en-woord: en jacka." }] }
+          - { id: znzj, type: translate, topic: preteritum, prompt: "Een vriend vraagt wat je vorige week deed. Zeg dat je elke dag werkte.", answers: ["Jag {jobbade|arbetade} varje dag[ förra veckan].", "Förra veckan {jobbade|arbetade} jag varje dag."], feedback: [{ contains: ["jobbde", "arbetde"], tip: "Werkwoorden op *-ar* krijgen *-ade*: *jobbar → jobbade*." }, { contains: "veckan jag", tip: "Begin je met *förra veckan*, dan komt het werkwoord op plaats 2: *förra veckan **jobbade jag** …*" }, { contains: ["jag jobbar", "jag arbetar"], tip: "Vorige week: verleden tijd (*jobbade*)." }] }
+          - { id: by2x, type: translate, topic: starka-verb, prompt: "Een collega vraagt wat je gisteravond deed. Zeg dat je een film zag.", answers: ["Jag {såg {en film|på en film|film}|tittade på en film}[ igår[ kväll]].", "Igår[ kväll] {såg jag {en film|på en film|film}|tittade jag på en film}."], feedback: [{ contains: ["sågde", "seede", "sedde"], tip: "*se* is onregelmatig: *se – såg*." }, { contains: ["jag ser", "ser jag"], tip: "Gisteravond: verleden tijd. *se – såg*." }, { contains: ["igår jag", "kväll jag"], tip: "Begin je met *igår*, dan komt het werkwoord op plaats 2: *igår **såg jag** …*" }] }
+          - { id: sh6f, type: translate, topic: possessiv, prompt: "Vertel dat je zus en haar man in Göteborg wonen.", answers: ["Min syster och hennes man bor i Göteborg.", "I Göteborg bor min syster och hennes man."], feedback: [{ contains: ["mitt syster", "mina syster"], tip: "*syster* is een en-woord: *min syster*." }, { contains: ["hans man", "sin man", "hon man"], tip: "Haar (van je zus) = *hennes*: *hennes man*." }, { contains: "hennes mannen", tip: "Na *hennes* komt de onbepaalde vorm: *hennes man*." }] }
+          - { id: t2tm, type: translate, topic: familj, prompt: "Iemand vraagt of je broers of zussen hebt. Zeg dat je één broer en twee zussen hebt.", answers: ["[Ja, ]jag har en bror och två systrar.", "[Ja, ]en bror och två systrar."], feedback: [{ contains: ["två syster ", "två syster."], tip: "Meervoud van *syster*: *systrar*." }, { contains: "systrarna", tip: "Na *två* komt het meervoud zonder lidwoord: *två systrar*." }, { contains: ["ett bror", "en broer"], tip: "Broer = *bror*, een en-woord: *en bror*." }] }
+          - { id: gwnm, type: translate, topic: preteritum, prompt: "Vertel dat je vroeger in Amsterdam woonde. Gebruik *förut*.", answers: ["Jag bodde i Amsterdam förut.", "Förut bodde jag i Amsterdam."], feedback: [{ contains: ["bodade", "bode "], tip: "Korte werkwoorden krijgen *-dde*: *bo → bodde*." }, { contains: "förut jag", tip: "Begin je met *förut*, dan komt het werkwoord op plaats 2: *förut **bodde jag** …*" }, { contains: "jag bor", tip: "Vroeger: verleden tijd (*bodde*)." }] }
+          - { id: ehwp, type: translate, topic: possessiv, prompt: "Een vriend vraagt van wie de auto voor het huis is. Zeg dat het de auto van jou en je gezin is.", answers: ["Det är vår bil.", "{Den|Det} är vår."], feedback: [{ match: "{Den|Det} är vårt", tip: "*vår* hoort bij *bil*, een en-woord: *Den är vår* of *Det är vår bil*." }, { contains: "vårt bil", tip: "*bil* is een en-woord: *vår bil*." }, { contains: "vår bilen", tip: "Na *vår* komt de onbepaalde vorm: *vår bil*." }, { contains: ["er bil", "ert bil"], tip: "*er* is jullie: van de mensen tegen wie je praat. Van jou en je gezin = *vår*: *vår bil*." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -404,6 +410,75 @@ sections:
         items:
           - { id: ayy4, type: truefalse, statement: "Bram har två bröder.", answer: false }
           - { id: npqg, type: truefalse, statement: "Eva har en son och en dotter.", answer: true }
+
+      - id: taak-mormor
+        title: "Taak: het feest van oma"
+        kind: taak
+        instruction: "Het is maandag. Je collega Jonas vraagt naar je weekend. Zaterdag was je bij je oma (moeders moeder), die tachtig werd. Je ouders, je broer en je neef (*kusin*) waren er ook. Je gaf haar een foto van de hele familie, en jullie hebben in de tuin gegrild. Je oma woont bij je oom (moeders broer) en zijn vrouw. **Doel:** vertel Jonas over het feest. Kies of schrijf bij elke stap wat jij zegt."
+        topic: preteritum
+        items:
+          - id: hk9s
+            type: steps
+            explain: "Gelukt: Jonas weet nu wie er op het feest was, wat je je oma gaf en wat jullie deden."
+            steps:
+              - type: mc
+                topic: starka-verb
+                prompt: "**Jonas:** Hej! Vad gjorde du i helgen? — *Zeg dat je bij je oma was en dat ze tachtig werd.*"
+                options:
+                  - "Jag var hos min mormor. Hon fyllde åttio år."
+                  - "Jag är hos min mormor. Hon fyller åttio år."
+                  - "Jag var hos min farmor. Hon fyllde åttio år."
+                  - "Jag var hos mitt mormor. Hon fyllde åttio år."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Het was zaterdag: verleden tijd (*var*, *fyllde*)."
+                  - "*farmor* is de moeder van je vader. De moeder van je moeder is *mormor*."
+                  - "*mormor* is een en-woord: *min mormor*."
+              - type: translate
+                topic: possessiv
+                prompt: "**Jonas:** Grattis till henne! Vem var där? — *Zeg: mijn ouders, mijn broer en mijn neef.*"
+                answers:
+                  - "Mina föräldrar, min bror och min kusin[ {var {också där|där[ också]}|kom[ också]}]."
+                feedback:
+                  - { contains: ["min föräldrar", "mitt föräldrar"], tip: "*föräldrar* is meervoud: *mina föräldrar*." }
+                  - { contains: ["mitt bror", "mina bror", "mitt kusin"], tip: "*bror* en *kusin* zijn en-woorden: *min bror*, *min kusin*." }
+                  - { contains: "är där", tip: "Het feest was zaterdag: verleden tijd, *var där*." }
+              - type: gap
+                topic: starka-verb
+                prompt: "**Jonas:** Vad gav du henne? — *Je gaf haar een foto van de hele familie.*"
+                text: "Jag ___ henne ett foto av hela familjen."
+                gaps:
+                  - answers: ["gav"]
+                    options: ["gav", "gade", "ger", "fick"]
+                    feedback:
+                      - { match: "gade", tip: "*ge* is onregelmatig: *ge – gav*." }
+                      - { match: "ger", tip: "Het was zaterdag: verleden tijd, *gav*." }
+                      - { match: "fick", tip: "*fick* is kreeg. Jij gaf de foto: *gav*." }
+              - type: translate
+                topic: preteritum
+                prompt: "**Jonas:** Vad fint! Vad gjorde ni på festen? — *Zeg dat jullie in de tuin grilden en veel lachten.*"
+                answers:
+                  - "Vi grillade i trädgården[,] och [vi ]skrattade mycket."
+                  - "Vi grillade och skrattade mycket i trädgården."
+                feedback:
+                  - { contains: ["grillde", "skrattde"], tip: "Werkwoorden op *-ar* krijgen *-ade*: *grillade*, *skrattade*." }
+                  - { contains: ["vi grillar", "skrattar"], tip: "Het feest was zaterdag: verleden tijd (*grillade*, *skrattade*)." }
+                  - { contains: ["i trädgård ", "i trädgård."], tip: "In de tuin = *i trädgården*." }
+              - type: mc
+                topic: possessiv
+                prompt: "**Jonas:** Bor din mormor ensam? — *Nee: ze woont bij je oom (moeders broer) en zijn vrouw.*"
+                options:
+                  - "Nej, hon bor hos min morbror och hans fru."
+                  - "Nej, hon bor hos min farbror och hans fru."
+                  - "Nej, hon bor hos min morbror och hennes fru."
+                  - "Nej, hon bor hos min morbror och hans frun."
+                answer: 0
+                optionTips:
+                  - null
+                  - "*farbror* is de broer van je vader. De broer van je moeder is *morbror*."
+                  - "*hennes* is haar. De vrouw van je oom is *hans fru* (zijn vrouw)."
+                  - "Na *hans* komt de onbepaalde vorm: *hans fru*."
 
       - id: schrijven-familie
         title: "Schrijven: jouw familie"

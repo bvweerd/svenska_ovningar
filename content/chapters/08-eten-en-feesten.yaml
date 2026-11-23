@@ -278,6 +278,10 @@ sections:
           - { id: w7tk, type: translate, topic: mat-fraser, prompt: "Je zit in een restaurant. Vraag de ober om de menukaart.", answers: ["Kan {vi|jag} få [se ]menyn[, tack]?", "Får {vi|jag} [se ]menyn[, tack]?"], feedback: [{ contains: ["få meny", "få en meny", "se meny"], tip: "De menukaart van dit restaurant: bepaalde vorm, menyn." }] }
           - { id: yty4, type: translate, topic: mat-fraser, prompt: "De ober vraagt: „Vad får det vara?” Zeg dat je graag een kaneelbroodje en een kop thee wilt.", answers: ["{Jag skulle vilja ha|Jag skulle gärna vilja ha|Jag skulle gärna ha|Jag vill ha|Jag vill gärna ha|Jag tar|Kan jag få} en kanelbulle och {en kopp te|ett te}[, tack].", "En kanelbulle och {en kopp te|ett te}[, tack]."], feedback: [{ contains: "ett kanelbulle", tip: "kanelbulle is een en-woord: en kanelbulle." }, { contains: "vilja att ha", tip: "Na vilja komt de infinitief zonder att: Jag skulle vilja ha …" }] }
           - { id: z4tw, type: translate, topic: mat-fraser, prompt: "Je hebt bij Ingrid gegeten. Zeg dat het heel lekker was.", answers: ["{Tack, |Tack för maten, |}det var {jättegott|väldigt gott|mycket gott}.", "{Tack, |Tack för maten, |}maten var {jättegod|väldigt god|mycket god}.", "{Tack, |Tack för maten, |}det smakade {jättegott|väldigt gott|mycket gott}."], feedback: [{ match: ["Det var jättegod.", "Det var god.", "Det var väldigt god.", "Det var mycket god."], tip: "Na det var zeg je gott, met -tt: Det var jättegott!" }, { contains: ["maten var gott", "maten var jättegott"], tip: "mat is een en-woord: maten var god (of: det var gott)." }] }
+          - { id: 7sj8, type: translate, topic: tycka-tro-tanka, prompt: "Een collega vraagt wat je dit weekend doet. Zeg dat je van plan bent een taart te bakken.", answers: ["Jag tänker baka en tårta[ i helgen].", "I helgen tänker jag baka en tårta."], feedback: [{ contains: "tänker att baka", tip: "Na *tänker* (van plan zijn) komt de infinitief zonder *att*: *jag tänker baka*." }, { contains: ["jag tror", "jag tycker"], tip: "Van plan zijn = *tänka*: *jag tänker baka en tårta*." }, { contains: "ett tårta", tip: "*tårta* is een en-woord: *en tårta*." }, { contains: "helgen jag", tip: "Begin je met *I helgen*, dan komt het werkwoord op plaats 2: *I helgen **tänker jag** …*" }] }
+          - { id: 36ew, type: translate, topic: berattande, prompt: "Vertel wat je gisteravond deed: eerst kookte je, daarna aten jullie samen. Begin de tweede zin met *Sedan*.", answers: ["{Först lagade jag {mat|middag}|Jag lagade {mat|middag} först}. {Sedan|Sen} åt vi [middag ]tillsammans."], feedback: [{ contains: ["sedan vi", "sen vi"], tip: "Begin je met *Sedan*, dan komt het werkwoord op plaats 2: *Sedan **åt vi** …*" }, { contains: "först jag", tip: "Begin je met *Först*, dan komt het werkwoord op plaats 2: *Först **lagade jag** mat*." }, { contains: ["kokade", "kokte"], tip: "Koken (eten maken) = *laga mat*: *jag lagade mat*." }, { contains: ["sedan äter", "sedan ätit", "jag lagar"], tip: "Gisteravond: verleden tijd (*lagade*, *åt*)." }] }
+          - { id: qrz6, type: translate, topic: det-finns, prompt: "Een vriend vraagt om een boterham. Zeg dat er geen brood meer is.", answers: ["{Det finns|Tyvärr finns det} inget {bröd[ kvar]|mer bröd}.", "{Det finns|Tyvärr finns det} inte {mer bröd|något bröd[ kvar]}.", "{Vi|Jag} har inget bröd[ kvar]."], feedback: [{ contains: "tyvärr det finns", tip: "*Tyvärr* staat op plaats 1: het werkwoord komt direct erna, *Tyvärr finns det …*" }, { contains: ["ingen bröd", "inga bröd"], tip: "*bröd* is een ett-woord: *inget bröd*." }, { contains: ["det är inget", "det har inget"], tip: "Er is (geen) = *det finns* (*inget*)." }, { contains: "finns inte bröd", tip: "Geen (+ zelfstandig naamwoord) = *inget*: *det finns inget bröd*." }] }
+          - { id: yswh, type: translate, topic: tycka-tro-tanka, prompt: "Een vriend vraagt of het morgen gaat regenen. Zeg dat je denkt van niet.", answers: ["[Nej, ]{jag tror inte {det|att det {regnar|ska regna}[ i morgon]}|det tror jag inte}."], feedback: [{ contains: ["tycker inte", "tycker jag inte"], tip: "Iets wat je niet zeker weet: *tro*. *Jag tror inte det.*" }, { contains: ["tänker inte", "tänker jag inte"], tip: "Iets wat je niet zeker weet: *tro*. *Jag tror inte det.*" }, { contains: "tror inte så", tip: "Denk van niet = *jag tror inte det* (niet *så*)." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -351,6 +355,85 @@ sections:
               - "Fleur: Ja, lite mjölk, tack. Vad kostar det?"
               - "Expediten: Det blir 65 kronor. Äter du här eller tar du med?"
               - "Fleur: Jag äter här. Tack!"
+
+      - id: taak-restaurang
+        title: "Taak: in het restaurant"
+        kind: taak
+        instruction: "Je eet alleen in een restaurant. Je eet geen vlees. Je wilt water drinken, en na het eten wil je geen toetje, alleen de rekening. Je betaalt met je pinpas. **Doel:** bestel een vegetarisch gerecht en iets te drinken, en reken af. Kies of schrijf bij elke stap wat jij zegt."
+        topic: mat-fraser
+        items:
+          - id: qgxf
+            type: steps
+            explain: "Gelukt: je hebt vegetarische soep gegeten, water gedronken en met je pinpas betaald."
+            steps:
+              - type: mc
+                topic: det-finns
+                prompt: "**Servitören:** Hej och välkommen! Vad får det vara? — *Je eet geen vlees. Vraag of er vegetarisch eten is.*"
+                options:
+                  - "Finns det vegetarisk mat?"
+                  - "Är det vegetarisk mat?"
+                  - "Det finns vegetarisk mat?"
+                  - "Finns det kyckling?"
+                answer: 0
+                optionTips:
+                  - null
+                  - "Of iets er is (er is / er zijn): *Finns det …?*"
+                  - "In een ja/nee-vraag komt het werkwoord vooraan: *Finns det …?*"
+                  - "*kyckling* is kip, en dat is vlees."
+              - type: translate
+                topic: tycka-tro-tanka
+                prompt: "**Servitören:** Ja, vi har en soppa med grönsaker. — *Zeg dat je denkt dat je de soep neemt.*"
+                answers:
+                  - "{Jag tror [att ]jag tar soppan|Då tar jag soppan|Jag tar soppan}[, tack]."
+                feedback:
+                  - { contains: ["tycker att jag", "tycker jag tar"], tip: "Iets wat je (nog) niet zeker weet: *tro*. *Jag tror att jag tar soppan.*" }
+                  - { contains: "tänker att jag", tip: "Denken (niet zeker) = *tro*: *Jag tror att jag tar soppan.*" }
+                  - { contains: "tar en soppa", tip: "De soep (die de ober net noemt) = *soppan*." }
+              - type: translate
+                topic: mat-fraser
+                prompt: "**Servitören:** Och vad vill du dricka? — *Bestel een glas water.*"
+                answers:
+                  - "{Jag skulle vilja ha|Jag vill ha|Kan jag få|Jag tar} ett glas vatten[, tack]."
+                  - "Ett glas vatten, tack."
+                feedback:
+                  - { contains: "en glas", tip: "*glas* is een ett-woord: *ett glas*." }
+                  - { contains: ["glas vattnet", "glas med vatten"], tip: "Een glas water = *ett glas vatten*." }
+                  - { contains: "vilja att", tip: "Na *skulle vilja* komt geen *att*: *jag skulle vilja ha …*" }
+              - type: gap
+                topic: tycka-tro-tanka
+                prompt: "**Servitören:** Hur smakar soppan? — *Je vindt hem heel lekker.*"
+                text: "Jag ___ att den är jättegod!"
+                gaps:
+                  - answers: ["tycker"]
+                    options: ["tycker", "tror", "tänker", "smakar"]
+                    feedback:
+                      - { match: "tror", tip: "Je proeft de soep zelf: dat is je mening. Een mening = *tycker*." }
+                      - { match: "tänker", tip: "*tänka* is nadenken of van plan zijn. Een mening = *tycker*." }
+                      - { match: "smakar", tip: "*smaka* is smaken (de soep smaakt). Wat jij vindt = *tycker*." }
+              - type: translate
+                topic: mat-fraser
+                prompt: "**Servitören:** Vill du ha någon efterrätt? — *Zeg: nee dank je, je zit vol. Vraag om de rekening.*"
+                answers:
+                  - "Nej tack, jag är [jätte]mätt. {Kan jag få|Får jag} {notan|räkningen}[, tack]?"
+                  - "Nej tack, jag är [jätte]mätt. Får jag be om {notan|räkningen}[, tack]?"
+                feedback:
+                  - { contains: ["jag är full", "jag är vol"], tip: "Vol (na het eten) = *mätt*. *full* betekent dronken." }
+                  - { contains: ["få nota", "få en nota", "få räkning"], tip: "De rekening = *notan* (of *räkningen*): *Kan jag få notan?*" }
+                  - { contains: ["kan jag att", "kan jag får"], tip: "Na *kan* komt de infinitief zonder *att*: *kan jag få …*" }
+              - type: mc
+                topic: mat-fraser
+                prompt: "**Servitören:** Varsågod. Det blir 245 kronor. — *Zeg dat het lekker was en vraag of je met je pinpas kunt betalen.*"
+                options:
+                  - "Tack, det var jättegott! Kan jag betala med kort?"
+                  - "Tack, det var jättegod! Kan jag betala med kort?"
+                  - "Tack, det var jättegott! Kan jag betalar med kort?"
+                  - "Tack, det var äckligt! Kan jag betala med kort?"
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *det var* krijgt het bijvoeglijk naamwoord een -t: *det var jättegott*."
+                  - "Na *kan* komt de infinitief: *betala*, niet *betalar*."
+                  - "*äcklig* is vies. Je vond het juist lekker: *jättegott*."
 
       - id: schrijven-feest
         title: "Schrijven: een feest"

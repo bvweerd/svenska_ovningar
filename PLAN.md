@@ -182,7 +182,8 @@ Alles in november 2026.
   gebruikers, met grafieken en tabellen; bij elke build berekend (`scripts/verantwoording.mjs`).
 - **Meer output A1–A2** (gestuurde situaties + doeltaken, na te kijken): H1 4→8% (taak nieuwe buurvrouw),
   H2 8→12%, H10 5→11% (taak vaatwasser kapot). Tips en vertaalopdrachten tonen nu *cursief*/**vet**.
-  Met taalreview. Volgende: andere A2-hoofdstukken op dezelfde manier.
+  Daarna (#19) H3–H9, H11, H12: 4–6 situaties per hoofdstuk en een taak waar die ontbrak; nu elk hoofdstuk
+  vanaf H1 ≥ 8%, H3–H12 ≥ 11%. Met taalreview.
 
 ## Open / volgende stappen
 

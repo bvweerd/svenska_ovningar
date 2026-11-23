@@ -443,7 +443,7 @@ sections:
         kind: makkelijk
         textTitle: "En lapp till Nils"
         text: |
-          Hej Nils! Jag jobbar idag. Ät frukost och borsta tänderna. Stäng fönstret och ta bussen klockan halv åtta. Du måste ta med boken till skolan. Efter skolan kan du titta på tv en timme. Hej då! Mamma
+          Hej Nils! Mamma jobbar idag. Ät frukost och borsta tänderna. Stäng fönstret och ta bussen klockan halv åtta. Du måste ta med boken till skolan. Efter skolan kan du titta på tv en timme. Hej då!
         items:
           - { id: e5yk, type: truefalse, statement: "Nils måste ta bussen klockan halv åtta.", answer: true }
           - { id: hktw, type: truefalse, statement: "Nils kan titta på tv efter skolan.", answer: true }

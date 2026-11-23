@@ -328,6 +328,12 @@ sections:
           - { id: aqsc, type: translate, topic: hem-hemma, prompt: "Een vriend belt. Zeg dat je thuis bent.", answers: ["Jag är hemma[ nu]."], feedback: [{ contains: "är hem", tip: "Waar je bent: hemma. Hem is de richting (naar huis)." }] }
           - { id: shun, type: translate, topic: hem-hemma, prompt: "Je gaat weg van een feest. Zeg dat je nu naar huis gaat.", answers: ["Jag {går|åker} hem[ nu].", "Nu {går|åker} jag hem."], feedback: [{ contains: "hemma", tip: "Naar huis is een richting: hem." }] }
           - { id: nbr6, type: translate, topic: supinum, prompt: "Iemand vraagt of je je huiswerk al hebt gemaakt. Zeg dat je het al gedaan hebt.", answers: ["[Ja, ]jag har redan gjort {det|den|läxan|läxorna}.", "[Ja, ]jag har gjort {det|den|läxan|läxorna} redan.", "[Ja, ]det har jag redan gjort."], feedback: [{ contains: "har redan gör", tip: "Na har komt het supinum: gjort." }, { contains: "har redan gjorde", tip: "Na har komt het supinum: gjort." }] }
+          - { id: njcc, type: translate, topic: perfekt-preteritum, prompt: "Een vriend vraagt wanneer je in Noorwegen was. Zeg dat je er twee jaar geleden was.", answers: ["Jag var {där|i Norge} för två år {sedan|sen}.", "För två år {sedan|sen} var jag {där|i Norge}."], feedback: [{ contains: ["har varit där för", "har varit i norge för"], tip: "Met een bepaald moment (*för två år sedan*) gebruik je preteritum: *jag var där*." }, { contains: ["sedan jag var", "sen jag var"], tip: "Begin je met *för två år sedan*, dan komt het werkwoord op plaats 2: *… **var jag** där*." }, { contains: ["två år geleden", "två år tillbaka"], tip: "Twee jaar geleden = *för två år sedan*." }] }
+          - { id: 849f, type: translate, topic: supinum, prompt: "Een collega vraagt of je de nieuwe film al hebt gezien. Zeg dat je hem nog niet hebt gezien.", answers: ["[Nej, ]jag har inte sett {den|filmen} {än|ännu}.", "[Nej, ]jag har ännu inte sett {den|filmen}.", "Nej, inte {än|ännu}."], feedback: [{ contains: ["har inte set ", "har inte sätt", "har inte sedd", "har inte såg"], tip: "Het supinum van *se* is *sett*: *jag har inte sett den*." }, { contains: ["jag såg inte", "jag ser inte"], tip: "Nog niet (tot nu toe): perfekt, *jag har inte sett den än*." }, { contains: "har sett inte", tip: "*inte* staat na *har*: *jag har inte sett …*" }] }
+          - { id: jdbz, type: translate, topic: hem-hemma, prompt: "Je ziet je buurman met een grote koffer. Vraag waar hij heen gaat.", answers: ["Vart {ska du[ {åka|resa}]|åker du|reser du|går du}?"], feedback: [{ contains: ["var ska", "var åker", "var reser", "var går"], tip: "Waarheen (richting) = *vart*: *Vart ska du?*" }, { match: ["Vart du {ska|åker|reser|går}"], tip: "In een vraag komt het werkwoord direct na het vraagwoord: *Vart ska du?*" }] }
+          - { id: ek4w, type: translate, topic: an, prompt: "Iemand vraagt naar je broer. Zeg dat hij ouder is dan jij.", answers: ["{Han|Min bror} är äldre än {jag|mig}."], feedback: [{ contains: ["äldre dan", "äldre som"], tip: "Dan (bij een vergelijking) = *än*: *äldre än jag*." }, { contains: ["mer gammal", "gammalare", "oldre"], tip: "Ouder = *äldre*." }] }
+          - { id: 9km4, type: translate, topic: perfekt-preteritum, prompt: "Een collega vraagt of je weleens het noorderlicht hebt gezien. Zeg ja, één keer, in Kiruna.", answers: ["Ja, {jag har sett {det|norrskenet|norrsken}|jag såg {det|norrskenet|norrsken}} {en gång[,] i Kiruna|i Kiruna[,] en gång}.", "Ja, en gång[,] i Kiruna."], feedback: [{ contains: ["har set ", "har sätt", "har såg"], tip: "Het supinum van *se* is *sett*: *jag har sett det*." }] }
+          - { id: 7a3b, type: translate, topic: hem-hemma, prompt: "Het regent hard. Je zoon wil naar buiten. Zeg dat jullie vandaag binnen blijven.", answers: ["[Nej, ]{idag stannar vi inne|vi stannar inne idag}.", "[Nej, ]{vi ska stanna inne idag|idag ska vi stanna inne}."], feedback: [{ contains: ["stannar hemma", "stanna hemma"], tip: "Goed Zweeds, maar de opdracht vraagt binnen: *inne*. *Vi stannar inne idag.*" }, { contains: ["stannar in ", "stanna in "], tip: "Binnen (waar je bent) = *inne*. *in* is de richting (naar binnen)." }, { contains: "idag vi", tip: "Begin je met *idag*, dan komt het werkwoord op plaats 2: *idag **stannar vi** inne*." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -404,6 +410,74 @@ sections:
               - "Bram: Såg du norrsken?"
               - "Olle: Ja, flera gånger! Du måste åka dit i vinter."
               - "Bram: Det låter fantastiskt. Jag ska prata med Fleur."
+
+      - id: taak-nyckeln
+        title: "Taak: de sleutel kwijt"
+        kind: taak
+        instruction: "Je komt na je werk thuis, maar je kunt niet naar binnen: je bent je sleutel kwijt. Op je werk had je hem nog. Je vriendin (*sambo*) komt om zes uur thuis, met haar sleutel. Je buurvrouw Ingrid komt naar buiten. **Doel:** leg uit wat er is gebeurd en regel een plek om te wachten. Kies of schrijf bij elke stap wat jij zegt."
+        topic: perfekt-preteritum
+        items:
+          - id: 76xf
+            type: steps
+            explain: "Gelukt: je wacht binnen bij Ingrid tot je vriendin om zes uur thuiskomt met haar sleutel."
+            steps:
+              - type: mc
+                topic: supinum
+                prompt: "**Ingrid:** Hej! Vad gör du här ute? — *Zeg dat je je sleutel kwijt bent.*"
+                options:
+                  - "Jag har tappat min nyckel."
+                  - "Jag har tappa min nyckel."
+                  - "Jag har tappat mitt nyckel."
+                  - "Jag har hittat min nyckel."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *har* komt het supinum: *tappa → har tappat*."
+                  - "*nyckel* is een en-woord: *min nyckel*."
+                  - "*hitta* is vinden. Je bent hem juist kwijt: *tappat*."
+              - type: translate
+                topic: perfekt-preteritum
+                prompt: "**Ingrid:** Åh nej! Var hade du den senast (het laatst)? — *Zeg dat je hem op je werk nog had.*"
+                answers:
+                  - "{Jag hade den på {jobbet|arbetet}|På {jobbet|arbetet} hade jag den}."
+                  - "På {jobbet|arbetet}."
+                feedback:
+                  - { contains: "har haft den", tip: "Het gaat om een bepaald moment (vandaag op je werk): preteritum, *jag hade den*." }
+                  - { contains: ["jobbet jag hade", "arbetet jag hade"], tip: "Begin je met *på jobbet*, dan komt het werkwoord op plaats 2: *på jobbet **hade jag** den*." }
+                  - { contains: ["jag hadde", "jag hadd "], tip: "*ha* in de verleden tijd: *hade*." }
+              - type: gap
+                topic: hem-hemma
+                prompt: "**Ingrid:** Är din sambo hemma? — *Nee: ze komt om zes uur thuis.*"
+                text: "Nej, hon kommer ___ klockan sex."
+                gaps:
+                  - answers: ["hem"]
+                    options: ["hem", "hemma", "ute", "inne"]
+                    feedback:
+                      - { match: "hemma", tip: "*komma* is een beweging: naar huis = *hem*. *hemma* is waar je bent." }
+                      - { match: "ute", tip: "*ute* is buiten (waar je bent). Ze komt naar huis: *hem*." }
+                      - { match: "inne", tip: "*inne* is binnen (waar je bent). Ze komt naar huis: *hem*." }
+              - type: translate
+                topic: hem-hemma
+                prompt: "**Ingrid:** Det är kallt ute. Vill du komma in och vänta hos mig? — *Zeg dat je graag binnenkomt.*"
+                answers:
+                  - "[{Ja|Ja tack|Tack}, ]jag kommer gärna in."
+                  - "Ja, jag kommer gärna in[,] tack."
+                  - "[Ja, ]det vill jag gärna[, tack]."
+                  - "{Ja|Ja tack}, gärna[ tack]."
+                feedback:
+                  - { contains: "gärna inne", tip: "*komma in* is een beweging: naar binnen = *in*. *inne* is waar je bent." }
+                  - { contains: "jag gärna kommer", tip: "*gärna* staat ná het werkwoord: *jag kommer gärna in*." }
+              - type: translate
+                topic: supinum
+                prompt: "**Ingrid:** Har du tappat en nyckel förut? — *Zeg dat je nog nooit een sleutel kwijt bent geweest.*"
+                answers:
+                  - "[Nej, ]jag har aldrig tappat {en|någon} nyckel[ {förut|tidigare}]."
+                  - "Nej, aldrig[ {förut|tidigare}]."
+                  - "Nej, det har jag aldrig gjort[ {förut|tidigare}]."
+                feedback:
+                  - { contains: ["jag tappade aldrig", "jag tappar aldrig"], tip: "Een ervaring zonder tijdstip (ooit, nooit): perfekt, *jag har aldrig tappat …*" }
+                  - { contains: ["har aldrig tappa ", "har aldrig tappade"], tip: "Na *har* komt het supinum: *har tappat*." }
+                  - { contains: "har tappat aldrig", tip: "*aldrig* staat na *har*: *jag har aldrig tappat …*" }
 
       - id: schrijven-ervaringen
         title: "Schrijven: waar ben je geweest?"
