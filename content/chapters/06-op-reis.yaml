@@ -254,7 +254,7 @@ sections:
           - { id: y4ej, type: gap, topic: raknord, text: "Glassen kostar ___ kronor. (58)", gaps: [{ answers: ["femtioåtta"], feedback: [{ match: "åttafemtio", tip: "Het tiental eerst: femtio + åtta." }] }] }
           - { id: 7ggy, type: gap, topic: raknord, text: "Pizzan kostar ___ kronor. (72)", gaps: [{ answers: ["sjuttiotvå"] }] }
           - { id: u6ns, type: gap, topic: raknord, text: "Hotellet kostar ___ kronor per natt. (900)", gaps: [{ answers: ["niohundra"], feedback: [{ contains: "nio hundra", tip: "Getallen schrijf je in het Zweeds aan elkaar: niohundra." }] }] }
-          - { id: 52vg, type: gap, topic: raknord, text: "Cykeln kostar ___ kronor. (1000)", gaps: [{ answers: ["[ett]tusen"], feedback: [{ contains: "ett tusen", tip: "Getallen schrijf je in het Zweeds aan elkaar: (ett)tusen." }] }] }
+          - { id: 52vg, type: gap, topic: raknord, text: "Cykeln kostar ___ kronor. (1000)", gaps: [{ answers: ["{tusen|ettusen}"], feedback: [{ contains: "ett tusen", tip: "Schrijf getallen aan elkaar: tusen of ettusen (twee t's)." }, { match: "etttusen", tip: "Aan elkaar geschreven blijven er twee t's over: ettusen (of gewoon tusen)." }] }] }
 
       - id: betalen
         title: Betalen
