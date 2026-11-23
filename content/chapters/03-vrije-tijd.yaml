@@ -281,6 +281,32 @@ sections:
           - { id: zwv2, type: truefalse, statement: "Fleur går sällan till biblioteket.", answer: false }
           - { id: q7da, type: truefalse, statement: "Bram tycker om att titta på serier.", answer: true }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: Ingrid simmar"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Ingrid simmar"
+        text: |
+          Ingrid simmar tre gånger i veckan. Hon simmar alltid på morgonen, innan hon går till jobbet. Ibland simmar Fleur med henne. Fleur simmar inte så ofta, men hon tycker om det. Sedan dricker de kaffe. Olle simmar aldrig. Han tycker inte om att simma.
+        items:
+          - { id: fxp7, type: mc, prompt: "Hur ofta simmar Ingrid?", options: ["En gång i veckan.", "Tre gånger i veckan.", "Varje dag."], answer: 1 }
+          - { id: d868, type: truefalse, statement: "Fleur simmar ofta.", answer: false }
+          - { id: 8hyp, type: truefalse, statement: "Olle tycker inte om att simma.", answer: true }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: Wilma och Elin"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Wilma och Elin"
+        text: |
+          Wilma och Elin är kompisar. De träffas ofta efter skolan. Elin tycker om musik, och hon spelar gitarr. Wilma lyssnar gärna på henne. Ibland går de på bio, eller så tittar de på en film hemma hos Wilma. Elin vill alltid se en gammal film.
+        items:
+          - { id: 948n, type: mc, prompt: "Vad spelar Elin?", options: ["Gitarr.", "Piano.", "Fotboll."], answer: 0 }
+          - { id: uewy, type: truefalse, statement: "Wilma lyssnar gärna på Elin.", answer: true }
+          - { id: 8m57, type: truefalse, statement: "Wilma och Elin träffas sällan.", answer: false }
+
       - id: dialoog-bio
         title: Zullen we naar de film?
         instruction: Zet het gesprek tussen Wilma en haar vriendin Elin in de goede volgorde.

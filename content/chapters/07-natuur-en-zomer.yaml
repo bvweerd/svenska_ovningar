@@ -309,6 +309,32 @@ sections:
           - { id: 8dmd, type: truefalse, statement: "De sov på ett hotell.", answer: false }
           - { id: ptaa, type: truefalse, statement: "De såg en älg.", answer: true }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: Svamp i skogen"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Svamp i skogen"
+        text: |
+          I september gick Ingrid och Fleur till skogen. De ville plocka svamp. Det var molnigt, men det regnade inte. I Sverige får alla vara i skogen och plocka svamp och blåbär. Ingrid hittade mycket svamp. Fleur hittade inte så mycket, men hon plockade blåbär. På kvällen lagade de mat med svampen.
+        items:
+          - { id: 44ky, type: truefalse, statement: "Det regnade i skogen.", answer: false }
+          - { id: v52g, type: mc, prompt: "Vad plockade Fleur?", options: ["Bara svamp.", "Blåbär.", "Ingenting."], answer: 1 }
+          - { id: 8nmn, type: truefalse, statement: "I Sverige får man plocka blåbär i skogen.", answer: true }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: Vädret i veckan"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Vädret i veckan"
+        text: |
+          Nils lyssnar på väderprognosen på radion. På måndag blir det sol och tjugo grader. På tisdag blir det varmt också, men på onsdag kommer regnet. På torsdag blir det blåsigt. Nils vill bada på måndag, och det vill Wilma också. Olle vill inte bada, och det vill inte Ingrid heller. De vill hellre fiska.
+        items:
+          - { id: yd25, type: mc, prompt: "När kommer regnet?", options: ["På måndag.", "På tisdag.", "På onsdag."], answer: 2 }
+          - { id: ag7f, type: truefalse, statement: "Ingrid vill bada.", answer: false }
+          - { id: hbwe, type: truefalse, statement: "Wilma vill bada på måndag.", answer: true }
+
       - id: dialoog-zomerdag
         title: Wat gaan we doen?
         instruction: Zet het gesprek tussen Wilma en Nils in de goede volgorde.

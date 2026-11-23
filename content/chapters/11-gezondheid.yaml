@@ -435,6 +435,32 @@ sections:
           - { id: arte, type: truefalse, statement: "Nycklarna hänger i hallen.", answer: false }
           - { id: upzz, type: truefalse, statement: "Nycklarna ligger i Fleurs väska.", answer: true }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: Förkyld"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Förkyld"
+        text: |
+          Wilma vaknar och känner sig sjuk. Hon har ont i halsen och i huvudet. Hon stannar hemma från skolan och lägger sig i soffan. Mamma ställer en kopp te på bordet och lägger en filt över henne. Wilma vilar sig hela dagen. På kvällen mår hon lite bättre.
+        items:
+          - { id: nd5n, type: mc, prompt: "Var har Wilma ont?", options: ["I magen och i ryggen.", "I halsen och i huvudet.", "I benet."], answer: 1 }
+          - { id: cna9, type: truefalse, statement: "Wilma går till skolan.", answer: false }
+          - { id: s73k, type: truefalse, statement: "På kvällen mår hon lite bättre.", answer: true }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: På gymmet"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "På gymmet"
+        text: |
+          Fleur tränar på gymmet två gånger i veckan. Först värmer hon upp i tio minuter. Sedan lägger hon sig på en matta och tränar magen. Efteråt duschar hon och klär på sig. Ibland har hon ont i armarna dagen efter, men hon känner sig ändå pigg.
+        items:
+          - { id: vp4c, type: truefalse, statement: "Fleur tränar varje dag.", answer: false }
+          - { id: d5ne, type: truefalse, statement: "Hon lägger sig på en matta.", answer: true }
+          - { id: qsqy, type: mc, prompt: "Vad gör Fleur efter träningen?", options: ["Hon duschar.", "Hon springer.", "Hon äter."], answer: 0 }
+
       - id: dialoog-dokter
         title: Bij de dokter
         instruction: Zet het gesprek in de goede volgorde.

@@ -85,8 +85,8 @@ Elke nieuwe oefening, oefenvorm of functie past in deze lijn. Wat meetbaar is, c
 `REVIEW-DIDACTIEK.md`.
 
 1. **Vier strands in balans** (Nation): naast vormgerichte oefening ook
-   - *input met aandacht voor betekenis*: de leestekst van het hoofdstuk plus **minstens 2 makkelijke
-     teksten** per hoofdstuk (`kind: makkelijk`, vanaf H1): bijna alleen bekende woorden, 2–3 nagekeken
+   - *input met aandacht voor betekenis*: de leestekst van het hoofdstuk plus **minstens 4 makkelijke
+     teksten** per hoofdstuk op A1–A2 en 2 op B1–B2 (`kind: makkelijk`, vanaf H1): bijna alleen bekende woorden, 2–3 nagekeken
      begripsvragen; korter dan de leestekst (A1 30–80, A2 40–120, B1 60–180, B2 80–250 woorden, `LINE` in `difficulty-report`);
    - *output met aandacht voor betekenis*: geleid schrijven en, vanaf H1, **„Wat zeg je?”**
      (`kind: situatie`, minstens 4 vragen): een situatie in het Nederlands, de leerling zegt het in het
@@ -177,13 +177,16 @@ Alles in november 2026.
   antwoord verruimd op beide sites (A: H6, H7; B: H13, H19, H23, H25). Met taalreview.
 - **Testdekking**: Zweedse spelling met hunspell (`content/stavning.txt`), interactietest in de rooktest, UI-tests
   in happy-dom (elke vraag en pagina); dekking van `src/` van 34% naar 85% van de regels, met een minimum in CI.
-- **H19-woordenschat** (B #5): alle 69 woorden in een zin of tekst (was 22), met taalreview.
+- **B-woordenschat in zinnen** (B #5): H19 alle 69 woorden in een zin of tekst (was 22); daarna H13, H14, H16 en
+  H18 (37–43 woorden alleen in de lijst → 0) met invuloefeningen in Ord, elk met een tip. Met taalreview.
 - **Pagina Verantwoording** (`#/verantwoording`, via Over): het rapport inhoud en didactiek leesbaar voor
   gebruikers, met grafieken en tabellen; bij elke build berekend (`scripts/verantwoording.mjs`).
 - **Meer output A1–A2** (gestuurde situaties + doeltaken, na te kijken): H1 4→8% (taak nieuwe buurvrouw),
   H2 8→12%, H10 5→11% (taak vaatwasser kapot). Tips en vertaalopdrachten tonen nu *cursief*/**vet**.
   Daarna (#19) H3–H9, H11, H12: 4–6 situaties per hoofdstuk en een taak waar die ontbrak; nu elk hoofdstuk
   vanaf H1 ≥ 8%, H3–H12 ≥ 11%. Met taalreview.
+- **Meer makkelijk lezen A1–A2** (review didactiek: 3–5 per hoofdstuk): H1–H12 van 2 naar 4 makkelijke teksten
+  (24 nieuw, 95–100% bekende woorden, ook keuzevragen); `easyCount` in `LINE` (A 4, B 2). Met taalreview.
 
 ## Open / volgende stappen
 

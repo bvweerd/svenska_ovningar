@@ -388,6 +388,32 @@ sections:
           - { id: wgjt, type: truefalse, statement: "Bussen är försenad.", answer: true }
           - { id: zn6v, type: truefalse, statement: "Nils stiger av vid den tredje hållplatsen.", answer: true }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: Till Stockholm"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Till Stockholm"
+        text: |
+          Fleur och Bram ska åka till Stockholm på lördag. De åker tåg, för det går snabbt. Tåget går klockan nio och resan tar en timme. En biljett kostar 200 kronor. I Stockholm vill de gå på ett museum. De ska åka hem på söndag kväll.
+        items:
+          - { id: bvsr, type: mc, prompt: "Hur mycket kostar en biljett?", options: ["150 kronor.", "200 kronor.", "250 kronor."], answer: 1 }
+          - { id: tw9e, type: truefalse, statement: "Resan tar två timmar.", answer: false }
+          - { id: zfr7, type: truefalse, statement: "De åker hem på söndag.", answer: true }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: Olles maj"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Olles maj"
+        text: |
+          Olle har mycket att göra i maj. Den första maj är han ledig. Den femte maj fyller Ingrid år. Den tolfte maj åker han till Malmö och hälsar på Lena. Den tjugonde maj har Nils en fotbollsmatch med skolan. Olle vill se matchen.
+        items:
+          - { id: 34xy, type: mc, prompt: "När fyller Ingrid år?", options: ["Den första maj.", "Den femte maj.", "Den tolfte maj."], answer: 1 }
+          - { id: a7yv, type: truefalse, statement: "Olle åker till Malmö den tolfte maj.", answer: true }
+          - { id: 7a8k, type: truefalse, statement: "Wilma spelar fotboll den tjugonde maj.", answer: false }
+
       - id: dialoog-station
         title: Een kaartje kopen
         instruction: Zet het gesprek aan het loket in de goede volgorde.

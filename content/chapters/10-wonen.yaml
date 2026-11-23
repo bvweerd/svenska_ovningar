@@ -369,6 +369,32 @@ sections:
           - { id: 9swb, type: truefalse, statement: "Ingrid hittar en smörgås under sängen.", answer: true }
           - { id: 3eru, type: truefalse, statement: "Nils städar gärna sitt rum.", answer: false }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: Ali flyttar"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Ali flyttar"
+        text: |
+          Nils kompis Ali har flyttat till ett hus på samma gata. Nils hjälper Ali med flyttkartongerna, eftersom Alis pappa jobbar. Böckerna ska in i bokhyllan och kläderna in i garderoben. När de är klara, äter de glass i köket. Ali säger att han trivs i sitt nya rum, men att det är litet.
+        items:
+          - { id: 23c3, type: truefalse, statement: "Ali bor på samma gata som Nils.", answer: true }
+          - { id: v2xf, type: mc, prompt: "Varför hjälper Nils Ali?", options: ["Alis pappa jobbar.", "Ali är sjuk.", "Nils har tråkigt."], answer: 0 }
+          - { id: 9g8j, type: truefalse, statement: "Ali trivs inte i sitt nya rum.", answer: false }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: Grannarna ovanför"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Grannarna ovanför"
+        text: |
+          Ovanför Sara bor en familj med två barn. Sara tycker om dem, men barnen springer på golvet när hon vill sova. En dag går Sara upp och pratar med mamman. Mamman säger förlåt. Hon säger att barnen inte ska springa efter klockan nio. Nu sover Sara bättre, eftersom barnen sover när hon lägger sig.
+        items:
+          - { id: cyx7, type: mc, prompt: "Vem bor ovanför Sara?", options: ["En familj med två barn.", "En gammal man.", "En student."], answer: 0 }
+          - { id: f6mt, type: truefalse, statement: "Barnen springer på golvet.", answer: true }
+          - { id: 8xm3, type: truefalse, statement: "Sara sover sämre nu.", answer: false }
+
       - id: dialoog-bezichtiging
         title: Een appartement bekijken
         instruction: Zet het gesprek in de goede volgorde.

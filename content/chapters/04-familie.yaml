@@ -411,6 +411,32 @@ sections:
           - { id: ayy4, type: truefalse, statement: "Bram har två bröder.", answer: false }
           - { id: npqg, type: truefalse, statement: "Eva har en son och en dotter.", answer: true }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: En ledig dag"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "En ledig dag"
+        text: |
+          Igår var Fleur ledig. Hon sov länge och åt frukost i sängen. Sedan ringde hennes mamma från Nederländerna. De pratade i en timme. På eftermiddagen gick Fleur till stan och köpte en ny jacka. På kvällen lagade Bram middag.
+        items:
+          - { id: f3ya, type: truefalse, statement: "Fleur jobbade igår.", answer: false }
+          - { id: yqn2, type: truefalse, statement: "Fleurs mamma ringde.", answer: true }
+          - { id: henh, type: mc, prompt: "Vad köpte Fleur?", options: ["En jacka.", "En bok.", "En present."], answer: 0 }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: Olles syster"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Olles syster"
+        text: |
+          Olle har en syster. Hon heter Lena och bor i Malmö. Hennes man heter Lars. De har tre barn. Förra sommaren kom de till Västerås. Barnen badade i sjön med Wilma och Nils. Lena och Olle pratade i trädgården. Det var en bra vecka.
+        items:
+          - { id: nmb4, type: truefalse, statement: "Lena bor i Malmö.", answer: true }
+          - { id: 9dxj, type: mc, prompt: "Hur många barn har Lena?", options: ["Två.", "Tre.", "Fyra."], answer: 1 }
+          - { id: uzpm, type: truefalse, statement: "Barnen badade i havet.", answer: false }
+
       - id: taak-mormor
         title: "Taak: het feest van oma"
         kind: taak
