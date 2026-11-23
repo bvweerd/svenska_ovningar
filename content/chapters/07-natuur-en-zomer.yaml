@@ -90,7 +90,7 @@ grammar:
       | Du får … | Du får inte … |
       |---|---|
       | gå, cykla och åka skidor i naturen | gå genom någons trädgård |
-      | tälta en natt (en bit från hus) | köra bil i terrängen |
+      | tälta en natt (inte för nära ett hus) | köra bil i terrängen |
       | plocka bär, svamp och blommor (de meeste) | elda när det är eldningsförbud |
       | bada i sjöar och i havet | lämna skräp i naturen |
 
@@ -224,7 +224,7 @@ sections:
         shuffle: true
         items:
           - { id: g3y8, type: truefalse, statement: "Du får plocka blåbär i skogen.", answer: true }
-          - { id: wber, type: truefalse, statement: "Du får tälta en natt i skogen, en bit från hus.", answer: true }
+          - { id: wber, type: truefalse, statement: "Du får tälta en natt i skogen, men inte för nära ett hus.", answer: true }
           - { id: st7g, type: truefalse, statement: "Du får göra upp eld när det är eldningsförbud.", answer: false, tip: "Bij een stookverbod mag je geen vuur maken." }
           - { id: ws7p, type: truefalse, statement: "Du får gå genom någons trädgård.", answer: false, tip: "Een tuin bij iemands huis is privé." }
           - { id: 9vfn, type: truefalse, statement: "Du får bada i sjön.", answer: true }
