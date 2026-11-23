@@ -151,4 +151,7 @@ Alles in november 2026.
 3. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem. De oordelen op „Luisteren instellen”
    (`/b/luisteren/oordeel/…`) en de status (`/b/luisteren/status/…`) laten zien of de browserstemmen
    goed genoeg zijn.
+5. **Didactisch review** (`REVIEW-DIDACTIEK.md`, november 2026): voorstellen om af te wegen, o.a. meer
+   betekenisgerichte input en vloeiendheid, kan-doen-uitspraken die meten wat ze beloven, minder vertalen,
+   flitskaarten nakijken, plaatsingstoets, afdrukbaar voortgangsoverzicht en huiswerkpagina voor leraren.
 4. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.
