@@ -666,6 +666,38 @@ sections:
           - { id: 22zk, type: truefalse, statement: "Bram läser svenska på en kurs.", answer: true }
           - { id: vkk6, type: truefalse, statement: "Läraren heter Ingrid.", answer: false }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: Wilma"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Wilma"
+        text: |
+          Det här är Wilma. Hon är femton år. Hon bor i ett hus i Västerås med Ingrid, Olle och Nils. Familjen har en hund. Hunden heter Sigge. Wilma går i skolan. Hon talar svenska och engelska. Hon talar inte nederländska.
+        items:
+          - { id: 2pnm, type: truefalse, statement: "Wilma är tio år.", answer: false }
+          - { id: ab8x, type: mc, prompt: "Vad heter hunden?", options: ["Misse", "Sigge", "Nils"], answer: 1 }
+          - { id: 3vhy, type: truefalse, statement: "Wilma talar nederländska.", answer: false }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: I köket"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "I köket"
+        text: |
+          Klockan är sju. Fleur och Bram är i köket. Bram dricker kaffe och Fleur läser en tidning.
+
+          – Vad gör du i dag? frågar Bram.
+
+          – Jag jobbar till klockan fem, säger Fleur. Och du?
+
+          – Jag har en kurs klockan tio, säger Bram.
+        items:
+          - { id: n5mr, type: mc, prompt: "Vad gör Fleur i köket?", options: ["Hon dricker kaffe.", "Hon läser en tidning.", "Hon jobbar."], answer: 1 }
+          - { id: 7ywx, type: truefalse, statement: "Fleur jobbar till klockan fem.", answer: true }
+          - { id: 63ha, type: truefalse, statement: "Bram har en kurs klockan sju.", answer: false }
+
       - id: dialoog-kennismaken
         title: Een kennismaking
         instruction: Zet de zinnen van het gesprek tussen Olle en Bram in de goede volgorde.

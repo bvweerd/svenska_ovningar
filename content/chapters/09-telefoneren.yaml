@@ -291,6 +291,38 @@ sections:
           - { id: kbay, type: truefalse, statement: "Wilma har glömt lösenordet.", answer: true }
           - { id: b6w5, type: truefalse, statement: "Kvinnan skickar ett mejl.", answer: false }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: En lapp på bordet"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "En lapp på bordet"
+        text: |
+          Wilma kommer hem från skolan. På bordet finns en lapp från mamma. Där står det att Ingrid jobbar till klockan sex. Hon skriver att Wilma ska handla mjölk och bröd. Wilma ringer pappa. Olle säger att han redan har handlat. Då skickar Wilma ett sms till mamma: ”Pappa har redan handlat!”
+        items:
+          - { id: nwrh, type: truefalse, statement: "Ingrid jobbar till klockan sex.", answer: true }
+          - { id: c5d8, type: mc, prompt: "Vad skulle Wilma handla?", options: ["Mjölk och bröd.", "Ost och smör.", "Kaffe och te."], answer: 0 }
+          - { id: p77t, type: truefalse, statement: "Olle har inte handlat.", answer: false }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: Fel nummer"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Fel nummer"
+        text: |
+          Fleur ringer till tandläkaren. En man svarar.
+
+          – Hej, jag vill boka en tid, säger Fleur.
+
+          – Tyvärr, du har ringt fel nummer, säger mannen. Det här är en pizzeria.
+
+          Fleur skrattar och säger förlåt. Sedan ringer hon rätt nummer. Hon får en tid på torsdag klockan tio.
+        items:
+          - { id: pabq, type: truefalse, statement: "Först ringer Fleur till en pizzeria.", answer: true }
+          - { id: z22e, type: mc, prompt: "När får Fleur en tid?", options: ["På tisdag.", "På torsdag.", "På fredag."], answer: 1 }
+          - { id: 8nvx, type: truefalse, statement: "Mannen är tandläkare.", answer: false }
+
       - id: dialoog-afspraak
         title: Een afspraak maken
         instruction: Fleur belt de tandarts. Zet het gesprek in de goede volgorde.

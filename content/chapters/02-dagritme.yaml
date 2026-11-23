@@ -449,6 +449,38 @@ sections:
           - { id: hktw, type: truefalse, statement: "Nils kan titta på tv efter skolan.", answer: true }
           - { id: xynj, type: truefalse, statement: "Nils mamma jobbar inte idag.", answer: false }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: Brams dag"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Brams dag"
+        text: |
+          Bram vaknar klockan sex. Han duschar och äter frukost. Klockan sju cyklar han till jobbet. Han jobbar till klockan fyra. På måndagar och onsdagar går han till kursen på kvällen. På tisdagar tränar han. På söndagar vill han inte jobba. Då läser han och sover länge.
+        items:
+          - { id: zw35, type: truefalse, statement: "Bram tar bussen till jobbet.", answer: false }
+          - { id: tp2m, type: mc, prompt: "När tränar Bram?", options: ["På måndagar.", "På tisdagar.", "På söndagar."], answer: 1 }
+          - { id: tbw9, type: truefalse, statement: "På söndagar sover Bram länge.", answer: true }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: I parken"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "I parken"
+        text: |
+          Det är lördag. Fleur och Nils går till parken. Där finns många barn och tre hundar. Två pojkar spelar fotboll. Nils vill spela med dem.
+
+          – Får jag spela? frågar han.
+
+          – Ja, kom! säger pojkarna.
+
+          Fleur läser en bok. Klockan tolv går de hem och äter lunch.
+        items:
+          - { id: x5t7, type: truefalse, statement: "Det är söndag.", answer: false }
+          - { id: u34r, type: truefalse, statement: "Nils spelar fotboll med pojkarna.", answer: true }
+          - { id: x7vg, type: mc, prompt: "Vad gör Fleur?", options: ["Hon spelar fotboll.", "Hon läser en bok.", "Hon sover."], answer: 1 }
+
       - id: dialoog-afspraak
         title: Een afspraak maken
         instruction: Zet het gesprek tussen Ingrid en Fleur in de goede volgorde.

@@ -341,6 +341,32 @@ sections:
           - { id: rvrn, type: truefalse, statement: "Bram stekte kyckling.", answer: false }
           - { id: n3qj, type: truefalse, statement: "Fleur dukade bordet.", answer: true }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: Fika på jobbet"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Fika på jobbet"
+        text: |
+          På Brams jobb fikar alla klockan tre. Det finns alltid kaffe och te, och på fredagar finns det kanelbullar. Bram tycker att det är trevligt att fika, för då pratar alla med varandra. Idag har Lisa från jobbet bakat en tårta. Bram tycker att den ser god ut, så han tar en stor bit. Han tror att Lisa har köpt tårtan, men det har hon inte.
+        items:
+          - { id: mctk, type: truefalse, statement: "Det finns kanelbullar varje dag.", answer: false }
+          - { id: k4t5, type: mc, prompt: "Vem har bakat tårtan?", options: ["Bram.", "Lisa.", "Fleur."], answer: 1 }
+          - { id: dgv8, type: truefalse, statement: "Lisa har köpt tårtan.", answer: false }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: En ny restaurang"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "En ny restaurang"
+        text: |
+          I fredags åt Fleur och Bram på en ny restaurang i stan. Först fick de bröd och vatten. Fleur beställde fisk med potatis, och Bram tog köttbullar. Maten var god, men det tog lång tid. Till efterrätt delade de på en glass. Notan blev sexhundra kronor. Fleur tänker gå dit igen med Ingrid.
+        items:
+          - { id: se8w, type: truefalse, statement: "Bram tog fisk.", answer: false }
+          - { id: g3wb, type: mc, prompt: "Hur mycket kostade maten?", options: ["400 kronor.", "600 kronor.", "800 kronor."], answer: 1 }
+          - { id: drgr, type: truefalse, statement: "De delade på en glass.", answer: true }
+
       - id: dialoog-fika
         title: Fika
         instruction: Zet het gesprek in het café in de goede volgorde.

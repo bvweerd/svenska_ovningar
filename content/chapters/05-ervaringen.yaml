@@ -396,6 +396,46 @@ sections:
           - { id: ebah, type: truefalse, statement: "Nils har lekt med hunden.", answer: true }
           - { id: pd4d, type: truefalse, statement: "Nils cyklar till skolan.", answer: false }
 
+      - id: makkelijk-3
+        title: "Makkelijk lezen: Ett mejl från Tim"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Ett mejl från Tim"
+        text: |
+          Hej Bram!
+
+          Jag har aldrig varit i Sverige, men nu vill jag komma. Har du lärt dig svenska? Jag har köpt en bok om Stockholm. I går läste jag om Gamla stan. Har du varit där? Jag kan komma i maj.
+
+          Hälsningar, Tim
+        items:
+          - { id: 98fs, type: truefalse, statement: "Tim har varit i Sverige.", answer: false }
+          - { id: m94v, type: truefalse, statement: "Tim har köpt en bok om Stockholm.", answer: true }
+          - { id: u4fw, type: mc, prompt: "När kan Tim komma?", options: ["I maj.", "I juni.", "I december."], answer: 0 }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: Är Ingrid hemma?"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Är Ingrid hemma?"
+        text: |
+          Fleur ringer på hos grannarna. Nils öppnar.
+
+          – Är din mamma hemma? frågar Fleur.
+
+          – Nej, hon har gått till jobbet, säger Nils. Hon kommer hem klockan fem.
+
+          – Okej. Har du sett vår katt?
+
+          – Nej, men Wilma har sett en katt i trädgården.
+
+          Fleur går ut i trädgården. Där är katten!
+        items:
+          - { id: 2jwj, type: truefalse, statement: "Ingrid är hemma.", answer: false }
+          - { id: zcaf, type: mc, prompt: "När kommer Ingrid hem?", options: ["Klockan tre.", "Klockan fem.", "Klockan sju."], answer: 1 }
+          - { id: e7k3, type: truefalse, statement: "Katten är i trädgården.", answer: true }
+
       - id: dialoog-kiruna
         title: Ben je er ooit geweest?
         instruction: Zet het gesprek tussen Olle en Bram in de goede volgorde.

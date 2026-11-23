@@ -85,8 +85,8 @@ Elke nieuwe oefening, oefenvorm of functie past in deze lijn. Wat meetbaar is, c
 `REVIEW-DIDACTIEK.md`.
 
 1. **Vier strands in balans** (Nation): naast vormgerichte oefening ook
-   - *input met aandacht voor betekenis*: de leestekst van het hoofdstuk plus **minstens 2 makkelijke
-     teksten** per hoofdstuk (`kind: makkelijk`, vanaf H1): bijna alleen bekende woorden, 2–3 nagekeken
+   - *input met aandacht voor betekenis*: de leestekst van het hoofdstuk plus **minstens 4 makkelijke
+     teksten** per hoofdstuk op A1–A2 en 2 op B1–B2 (`kind: makkelijk`, vanaf H1): bijna alleen bekende woorden, 2–3 nagekeken
      begripsvragen; korter dan de leestekst (A1 30–80, A2 40–120, B1 60–180, B2 80–250 woorden, `LINE` in `difficulty-report`);
    - *output met aandacht voor betekenis*: geleid schrijven en, vanaf H1, **„Wat zeg je?”**
      (`kind: situatie`, minstens 4 vragen): een situatie in het Nederlands, de leerling zegt het in het
