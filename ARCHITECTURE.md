@@ -85,7 +85,7 @@ lezen. „Fout gezien?” is vooral een formulier en staat daarom in `ui/compone
 
 ```js
 const store = createStore({ storage, key: `${STORAGE_PREFIX}:progress:v2`, oldKey: '…:v1' });
-store.get();                                   // huidige toestand (leest opnieuw als een ander tabblad schreef)
+store.get();                                   // toestand in het geheugen; opnieuw lezen na het storage-event van een ander tabblad
 store.update((s) => recordItem(s, 13, ex, idx, 'good'));   // pure functie uit core/progress
 store.subscribe((s, { reason, prev }) => …);   // reason: 'local' | 'sync' | 'import' | 'reset'
 ```
@@ -129,6 +129,8 @@ export const routes = [
 - `refresh: true`: de router tekent de pagina opnieuw als de store meldt dat er voortgang van buiten
   binnenkwam (`sync`, `import`, `reset`). Alleen voor pagina's zonder invoer.
 - De router zet `wide`, menu, `trackPage`, scroll en focus: één plek.
+- Hoe een ronde begint (alles, een ronde uit een woordenlijst, alleen nieuwe vragen) beslist
+  `prepareRun` in `core/progress/record.js`; deelpunten komen uit het nakijken (`share`).
 - Pagina's halen de inhoud (`app/content.js`) en de voortgang (`app/progress.js`) zelf op. Dat mag
   volgens de laagregel (ui staat boven app). Een volledig meegegeven `ctx` (om pagina's met nep-voortgang
   te testen) is bewust niet gebouwd: de pure regels zijn los getest en `npm run smoke` opent elke pagina.
@@ -215,8 +217,8 @@ publicatie en URL's. **Beslissing van de eigenaar**; niet nodig voor de rest van
 - `localStorage` alleen in `platform/storage.js`;
 - geen bestand in `src/` boven 400 regels (behalve `styles.css`).
 
-`tests/items.test.js` eist dat elk vraagtype in beide registers staat. De test heeft een lijst `KNOWN`
-voor uitzonderingen; die is leeg en mag niet meer groeien. `npm run smoke` (ook in de workflow) opent
+`tests/items.test.js` eist dat elk vraagtype in beide registers staat. Uitzonderingen zijn er niet
+meer: elke regel van de architectuurtest moet leeg blijven. `npm run smoke` (ook in de workflow) opent
 elke pagina in een browser. Types met `// @ts-check` + JSDoc zijn nog niet ingevoerd (eventueel later,
 met `tsc --noEmit`, zonder bouwstap).
 
