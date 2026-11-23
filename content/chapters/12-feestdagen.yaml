@@ -360,6 +360,11 @@ sections:
           - { id: 6ff2, type: translate, topic: jul, prompt: "Wens iemand prettige kerstdagen.", answers: ["{God|Trevlig} jul[ och gott nytt år]."] }
           - { id: 9a82, type: translate, topic: komparation, prompt: "Zeg dat jullie kerstboom groter is dan die van vorig jaar.", answers: ["{Vår gran|Vår julgran|Granen|Julgranen|Årets gran} är större än förra årets[ gran].", "{Vår gran|Vår julgran|Granen|Julgranen|Årets gran} är större än förra årets julgran.", "{Vår gran|Vår julgran|Granen|Julgranen|Årets gran} är större än förra året.", "{Vår gran|Granen} är större i år än förra året."], feedback: [{ contains: "mer stor", tip: "Kort woord: stor – större – störst." }] }
           - { id: nwus, type: translate, topic: adjektiv-bestamd, prompt: "Zeg dat je het kleine pakje wilt.", answers: ["Jag {vill ha|tar} det lilla paketet."], feedback: [{ contains: "det litet paketet", tip: "Na det … -et: lilla (onregelmatig)." }, { contains: "det liten paketet", tip: "Na det … -et: lilla (onregelmatig)." }, { contains: "den lilla paketet", tip: "paket is een ett-woord: det lilla paketet." }] }
+          - { id: ee47, type: translate, topic: adjektiv-obestamd, prompt: "Je bent voor het eerst bij vrienden in hun nieuwe huis. Zeg dat ze een mooi huis hebben.", answers: ["Ni har ett {fint|vackert} hus.", "Vilket {fint|vackert} hus[ ni har]!"], feedback: [{ contains: ["ett fin hus", "ett vacker hus"], tip: "*hus* is een ett-woord: het bijvoeglijk naamwoord krijgt een -t, *ett fint hus*." }, { contains: ["en fint", "en fin hus", "en vacker"], tip: "*hus* is een ett-woord: *ett fint hus*." }, { contains: ["fina hus", "vackra hus"], tip: "Eén huis, onbepaald: *ett fint hus*." }] }
+          - { id: nty3, type: translate, topic: adjektiv-bestamd, prompt: "In een winkel hangen een rode en een zwarte jas. Zeg dat je de rode jas wilt.", answers: ["{Jag vill ha|Jag tar|Kan jag få|Jag skulle vilja ha} den röda[ jackan]."], feedback: [{ contains: ["den röd ", "den rött", "den röd."], tip: "Na *den* krijgt het bijvoeglijk naamwoord -a: *den röda jackan*." }, { contains: "röda jacka.", tip: "Na *den röda* komt de bepaalde vorm: *jackan*." }, { contains: "det röda", tip: "*jacka* is een en-woord: *den röda jackan*." }] }
+          - { id: yyt9, type: translate, topic: komparation, prompt: "Een Zweedse collega vraagt naar het weer in Nederland. Zeg dat het in Zweden kouder is dan in Nederland.", answers: ["Det är kallare i Sverige än i {Nederländerna|Holland}.", "I Sverige är det kallare än i {Nederländerna|Holland}."], feedback: [{ contains: ["mer kallt", "mer kall"], tip: "Kouder = *kallare* (-are)." }, { contains: ["kallare dan", "kallare som"], tip: "Dan (bij een vergelijking) = *än*." }, { contains: "sverige det är", tip: "Begin je met *I Sverige*, dan komt het werkwoord op plaats 2: *I Sverige **är det** kallare …*" }] }
+          - { id: dpfe, type: translate, topic: komparation, prompt: "Iemand vraagt welke feestdag je het leukst vindt. Zeg dat je kerstavond het leukst vindt.", answers: ["[Jag tycker [att ]]julafton är {roligast|bäst|mysigast}.", "Jag {gillar|tycker om} julafton bäst."], feedback: [{ contains: "mest rolig", tip: "Het leukst = *roligast* (-ast)." }, { match: ["[Jag tycker [att ]]julafton är {roligaste|bästa|mysigaste}"], tip: "Na *är* zonder *den* krijgt de overtreffende trap geen -e: *julafton är roligast*." }, { contains: ["jul afton", "julaftonen är"], tip: "Kerstavond = *julafton*, één woord, zonder lidwoord." }] }
+          - { id: jqdh, type: translate, topic: jul, prompt: "Een collega vraagt wat je met kerstavond doet. Zeg dat je met je familie kerst viert.", answers: ["Jag firar {jul|julafton} med {min familj|familjen}.", "På julafton firar jag [jul ]med {min familj|familjen}."], feedback: [{ contains: "min familjen", tip: "Na *min* komt de onbepaalde vorm: *min familj*." }, { contains: "mitt familj", tip: "*familj* is een en-woord: *min familj*." }, { contains: "julafton jag", tip: "Begin je met *På julafton*, dan komt het werkwoord op plaats 2: *På julafton **firar jag** …*" }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -434,6 +439,83 @@ sections:
               - "Fleur: Åh, vilka fina vantar! Har du stickat dem själv?"
               - "Ingrid: Ja, det har jag. Tycker du om färgen?"
               - "Fleur: Jag älskar den! Nu blir jag aldrig kall om händerna."
+
+      - id: taak-julklapp
+        title: "Taak: een kerstcadeau kopen"
+        kind: taak
+        instruction: "Je zoekt in een winkel een kerstcadeau voor je oma (moeders moeder): warme wanten. Je wilt rode, je oma heeft kleine handen, en je wilt niet te veel betalen. Het cadeau moet ingepakt worden. **Doel:** koop het goede paar wanten. Kies of schrijf bij elke stap wat jij zegt."
+        topic: adjektiv-bestamd
+        items:
+          - id: vjgf
+            type: steps
+            explain: "Gelukt: je hebt kleine, rode wanten gekocht voor je oma, goedkoper dan de grote, en ze zijn ingepakt."
+            steps:
+              - type: mc
+                topic: adjektiv-obestamd
+                prompt: "**Expediten:** Hej! Kan jag hjälpa dig? — *Zeg dat je warme wanten voor je oma wilt kopen.*"
+                options:
+                  - "Ja, jag vill köpa varma vantar till min mormor."
+                  - "Ja, jag vill köpa varm vantar till min mormor."
+                  - "Ja, jag vill köpa varmt vantar till min mormor."
+                  - "Ja, jag vill köpa varma vantar till min morfar."
+                answer: 0
+                optionTips:
+                  - null
+                  - "*vantar* is meervoud: het bijvoeglijk naamwoord krijgt -a, *varma vantar*."
+                  - "*vantar* is meervoud: *varma vantar*. De -t is voor ett-woorden."
+                  - "*morfar* is de vader van je moeder. Het cadeau is voor je oma: *mormor*."
+              - type: gap
+                topic: adjektiv-bestamd
+                prompt: "**Expediten:** Vi har röda och vita vantar. Vilka vill du ha? — *Je wilt de rode.*"
+                text: "Jag tar de ___ vantarna."
+                gaps:
+                  - answers: ["röda"]
+                    options: ["röda", "röd", "rött", "rödare"]
+                    feedback:
+                      - { match: "röd", tip: "Na *de* (bepaald) krijgt het bijvoeglijk naamwoord -a: *de röda vantarna*." }
+                      - { match: "rött", tip: "Na *de* (bepaald) krijgt het bijvoeglijk naamwoord -a: *de röda vantarna*." }
+                      - { match: "rödare", tip: "*rödare* is roder (een vergelijking). Je wilt gewoon de rode: *de röda vantarna*." }
+              - type: translate
+                topic: komparation
+                prompt: "**Expediten:** Här är de. Passar de? — *Ze zijn te groot: je oma heeft kleine handen. Vraag of ze kleinere hebben.*"
+                answers:
+                  - "[De är för stora. ]{Har ni|Finns det} [några ]mindre[ vantar]?"
+                  - "[De är för stora. ]{Har ni|Finns det} {dem|de röda} i en mindre storlek?"
+                feedback:
+                  - { contains: ["mer små", "mer liten", "litare", "smålare", "minder"], tip: "*liten* is onregelmatig: kleiner = *mindre*." }
+                  - { contains: ["för stor.", "för stort"], tip: "*vantar* is meervoud: *de är för stora*." }
+                  - { match: ["[De är för stora. ]{Ni har|Det finns} [några ]mindre[ vantar]"], tip: "In een vraag komt het werkwoord vooraan: *Har ni mindre?*" }
+              - type: translate
+                topic: adjektiv-bestamd
+                prompt: "**Expediten:** Ja, här är ett par mindre. — *Zeg dat de kleine wanten mooi zijn.*"
+                answers:
+                  - "De små[ vantarna] är {fina|vackra|jättefina}[!]"
+                feedback:
+                  - { contains: ["de lilla", "de litet", "de liten"], tip: "Meervoud van *liten*: *små*. *De små vantarna*." }
+                  - { contains: "små vantar är", tip: "Na *de små* komt de bepaalde vorm: *vantarna*." }
+                  - { contains: ["är fin.", "är fint", "är vacker."], tip: "*vantarna* is meervoud: *de är fina*." }
+              - type: mc
+                topic: komparation
+                prompt: "**Expediten:** De här kostar 199 kronor. De stora kostar 249. — *Zeg dat deze goedkoper zijn en dat je ze neemt.*"
+                options:
+                  - "Bra, de är billigare. Då tar jag dem."
+                  - "Bra, de är mer billiga. Då tar jag dem."
+                  - "Bra, de är dyrare. Då tar jag dem."
+                  - "Bra, de är billigare. Då tar jag de."
+                answer: 0
+                optionTips:
+                  - null
+                  - "*billig* is een gewoon woord: goedkoper = *billigare*."
+                  - "*dyrare* is duurder. 199 kronor is minder dan 249: *billigare*."
+                  - "Ze (lijdend voorwerp) = *dem*: *då tar jag dem*."
+              - type: translate
+                topic: jul
+                prompt: "**Expediten:** Ska jag slå in dem? — *Zeg: ja graag, het is een kerstcadeau.*"
+                answers:
+                  - "{Ja tack|Ja, gärna}, det är en julklapp[ till min mormor]."
+                feedback:
+                  - { contains: "ett julklapp", tip: "*julklapp* is een en-woord: *en julklapp*." }
+                  - { contains: ["julpresent", "jul present", "kerst"], tip: "Een kerstcadeau = *en julklapp*." }
 
       - id: schrijven-feestdag
         title: "Schrijven: jouw favoriete feestdag"
