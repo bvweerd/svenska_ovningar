@@ -185,6 +185,8 @@ Alles in november 2026.
   H2 8→12%, H10 5→11% (taak vaatwasser kapot). Tips en vertaalopdrachten tonen nu *cursief*/**vet**.
   Daarna (#19) H3–H9, H11, H12: 4–6 situaties per hoofdstuk en een taak waar die ontbrak; nu elk hoofdstuk
   vanaf H1 ≥ 8%, H3–H12 ≥ 11%. Met taalreview.
+- **Meer makkelijk lezen A1–A2** (review didactiek: 3–5 per hoofdstuk): H1–H12 van 2 naar 4 makkelijke teksten
+  (24 nieuw, 95–100% bekende woorden, ook keuzevragen); `easyCount` in `LINE` (A 4, B 2). Met taalreview.
 
 ## Open / volgende stappen
 
