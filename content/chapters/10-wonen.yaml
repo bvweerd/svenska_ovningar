@@ -198,10 +198,10 @@ sections:
           - { id: 4k7e, type: translate, prompt: "Olle zoekt zijn (eigen) sleutels.", answers: ["Olle letar efter sina nycklar."], feedback: [{ contains: "hans nycklar", tip: "Olles eigen sleutels, en Olle is het onderwerp: sina." }, { contains: "sin nycklar", tip: "nycklar is meervoud: sina." }] }
           - { id: 7v8b, type: translate, prompt: "Wilma belt haar (eigen) vriendin.", answers: ["Wilma ringer [till ]{sin kompis|sin vän|sin väninna}."], feedback: [{ contains: "hennes", tip: "Haar eigen vriendin, en Wilma is het onderwerp: sin." }] }
           - { id: nr59, type: translate, prompt: "Ze verkopen hun (eigen) huis.", answers: ["De säljer sitt hus."], feedback: [{ contains: "deras hus", tip: "Hun eigen huis, en zij zijn het onderwerp: sitt." }, { contains: "sin hus", tip: "hus is een ett-woord: sitt." }] }
-          - { id: 5znh, type: translate, prompt: "Olle en zijn vrouw wonen in Västerås.", answers: ["Olle och hans fru bor i Västerås."], feedback: [{ contains: "sin fru", tip: "Hier hoort de vrouw bij het onderwerp zelf. Dan geen sin: Olle och hans fru." }] }
+          - { id: 5znh, type: translate, prompt: "Olle en zijn vrouw wonen in Västerås.", answers: ["Olle och hans {fru|hustru} bor i Västerås."], feedback: [{ contains: ["sin fru", "sin hustru"], tip: "Hier hoort de vrouw bij het onderwerp zelf. Dan geen sin: Olle och hans fru." }] }
           - { id: jvdc, type: translate, prompt: "Nils leest zijn (eigen) boek.", answers: ["Nils läser sin bok."], feedback: [{ contains: "hans bok", tip: "Nils' eigen boek, en Nils is het onderwerp: sin." }] }
           - { id: skpu, type: translate, prompt: "Fleur zoekt haar (eigen) telefoon.", answers: ["Fleur letar efter sin {mobil|telefon}."], feedback: [{ contains: "hennes", tip: "Fleurs eigen telefoon, en Fleur is het onderwerp: sin." }] }
-          - { id: rg5t, type: translate, prompt: "Bram kent Olle en zijn vrouw.", answers: ["Bram känner Olle och hans fru."], feedback: [{ contains: "sin fru", tip: "Bram is het onderwerp, maar de vrouw hoort bij Olle: hans." }] }
+          - { id: rg5t, type: translate, prompt: "Bram kent Olle en zijn vrouw.", answers: ["Bram känner Olle och hans {fru|hustru}."], feedback: [{ contains: ["sin fru", "sin hustru"], tip: "Bram is het onderwerp, maar de vrouw hoort bij Olle: hans." }] }
           - { id: kdd8, type: translate, prompt: "De kinderen spelen met hun (eigen) hond.", answers: ["Barnen leker med sin hund."], feedback: [{ contains: "deras hund", tip: "Hun eigen hond, en de kinderen zijn het onderwerp: sin." }, { contains: "spelar", tip: "Spelen van kinderen (zonder spel) is leka." }] }
 
       - id: sin-kiezen-maken
@@ -292,6 +292,20 @@ sections:
               - ["en hall", "een hal"]
               - ["en balkong", "een balkon"]
               - ["en källare", "een kelder"]
+
+      - id: bijzin-omvormen
+        title: Maak er één zin van
+        instruction: Maak één zin met het voegwoord tussen haakjes. In de bijzin staat *inte* vóór het werkwoord (BIFF).
+        topic: subjunktioner
+        items:
+          - { id: 7sf5, type: transform, prompt: "Jag stannar hemma. Jag mår inte bra. (eftersom)", answers: ["Jag stannar hemma[,] eftersom jag inte mår bra.", "Eftersom jag inte mår bra[,] stannar jag hemma."], feedback: [{ contains: "jag mår inte", tip: "In de bijzin staat *inte* vóór het werkwoord: eftersom jag inte mår." }] }
+          - { id: tgw9, type: transform, prompt: "Vi äter middag. Bram kommer hem. (när)", answers: ["Vi äter middag när Bram kommer hem.", "När Bram kommer hem[,] äter vi middag."], feedback: [{ contains: "hem vi äter", tip: "Staat de bijzin vooraan, dan komt het werkwoord direct daarna: När Bram kommer hem äter vi." }, { contains: "när kommer Bram", tip: "In de bijzin staat het onderwerp vóór het werkwoord: när Bram kommer." }] }
+          - { id: e94n, type: transform, prompt: "Fleur dricker kaffe. Hon går till jobbet. (innan)", answers: ["Fleur dricker kaffe innan hon går till jobbet.", "Innan Fleur går till jobbet[,] dricker hon kaffe.", "Innan hon går till jobbet[,] dricker Fleur kaffe."], feedback: [{ contains: "innan går hon", tip: "In de bijzin staat het onderwerp vóór het werkwoord: innan hon går." }] }
+          - { id: bm74, type: transform, prompt: "Vi grillar på balkongen. Det regnar inte. (om)", answers: ["Vi grillar på balkongen om det inte regnar.", "Om det inte regnar[,] grillar vi på balkongen."], feedback: [{ contains: "det regnar inte", tip: "In de bijzin staat *inte* vóór het werkwoord: om det inte regnar." }] }
+          - { id: 4e5b, type: transform, prompt: "Olle säger något. Han kan inte komma. (att)", answers: ["Olle säger att han inte kan komma."], feedback: [{ contains: "han kan inte", tip: "In de bijzin staat *inte* vóór het werkwoord: att han inte kan." }] }
+          - { id: b7f7, type: transform, prompt: "Lägenheten är bra. Den ligger nära stationen. (eftersom)", answers: ["Lägenheten är bra[,] eftersom den ligger nära stationen."] }
+          - { id: psg2, type: transform, prompt: "Wilma läser. Nils spelar spel. (medan)", answers: ["Wilma läser[,] medan Nils spelar spel.", "Medan Nils spelar spel[,] läser Wilma."], feedback: [{ contains: "medan spelar Nils", tip: "In de bijzin staat het onderwerp vóór het werkwoord: medan Nils spelar." }] }
+          - { id: yajr, type: transform, prompt: "Jag väntar här. Du kommer tillbaka. (tills)", answers: ["Jag väntar här tills du kommer tillbaka.", "Tills du kommer tillbaka[,] väntar jag här."], feedback: [{ contains: "tills kommer du", tip: "In de bijzin staat het onderwerp vóór het werkwoord: tills du kommer." }] }
 
       - id: wat-zeg-je
         title: Wat zeg je?
@@ -520,6 +534,31 @@ sections:
           - { id: v2sv, type: listen, say: "Katten ligger under sängen.", prompt: "Waar ligt de kat?", options: ["onder het bed", "op het bed", "naast het bed"], answer: 0, topic: prep-plats }
           - { id: tug4, type: listen, say: "Lampan står bredvid soffan.", prompt: "Waar staat de lamp?", options: ["naast de bank", "achter de bank", "voor de bank"], answer: 0, topic: prep-plats }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: de nieuwe flat"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: prep-plats
+        listen: true
+        textTitle: "Vi har flyttat"
+        text: |
+          Fleur: Vi har flyttat! Lägenheten har tre rum och ett stort kök.
+
+          Ingrid: Vad roligt! Var ligger den?
+
+          Fleur: Den ligger nära stationen, så Bram kan gå till tåget.
+
+          Ingrid: Har ni balkong?
+
+          Fleur: Ja, balkongen ligger bredvid vardagsrummet. Där vill vi äta frukost när det är varmt.
+
+          Ingrid: Och var har ni era cyklar?
+
+          Fleur: I källaren, under trappan.
+        items:
+          - { id: shwf, type: truefalse, statement: "Lägenheten ligger nära stationen.", answer: true }
+          - { id: rtes, type: truefalse, statement: "Balkongen ligger bredvid köket.", answer: false }
+          - { id: mh9h, type: truefalse, statement: "Cyklarna är i källaren.", answer: true }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -554,6 +593,9 @@ sections:
           - { id: n2ug, type: gap, topic: telefon, text: "Förlåt, du har ringt ___ nummer. (verkeerd)", gaps: [{ answers: ["fel"], feedback: [{ match: ["felt", "fela", "verkeerd"], tip: "Een verkeerd nummer = fel nummer. fel krijgt geen uitgang." }] }] }
           - { id: fdh9, type: translate, topic: telefon, prompt: "Ik bel later terug, want ik ben nu bezig.", answers: ["Jag ringer tillbaka senare[,] {för|för att|eftersom} jag är upptagen[ just] nu."] }
           - { id: r33g, type: mc, topic: telefon, prompt: "Iemand belt voor Ingrid, maar ze is er niet. Wat zeg je?", options: ["Hon är inte här just nu. Vill du lämna ett meddelande?", "Du har ringt fel nummer.", "Jag skulle vilja boka en tid."], answer: 0, tip: "Ze is er nu niet: Hon är inte här just nu." }
+          - { id: 8xqg, type: gap, topic: presens, text: "Vi ___ (städa) lägenheten varje lördag.", gaps: [{ answers: ["städar"], feedback: [{ match: "städer", tip: "städa eindigt op -a: städar." }] }] }
+          - { id: 9p45, type: gap, topic: starka-verb, text: "Förra veckan ___ (sälja) vi soffan.", gaps: [{ answers: ["sålde"], feedback: [{ match: ["säljde", "säljade"], tip: "sälja is onregelmatig: sälja – säljer – sålde." }] }] }
+          - { id: nyva, type: translate, topic: vader, prompt: "Morgen wordt het zonnig.", answers: ["{Imorgon|I morgon} blir det {soligt|sol}.", "Det blir {soligt|sol} {imorgon|i morgon}."], feedback: [{ contains: "imorgon det blir", tip: "Na imorgon vooraan komt eerst het werkwoord: Imorgon blir det." }, { contains: "i morgon det blir", tip: "Na i morgon vooraan komt eerst het werkwoord: I morgon blir det." }] }
 
 vocab:
   - { sv: "en lägenhet", nl: "een appartement", def: "lägenheten", pl: "lägenheter", plDef: "lägenheterna", ex: "Vi bor i en **lägenhet** i centrum.", exNl: "We wonen in een appartement in het centrum." }

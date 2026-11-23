@@ -2,7 +2,7 @@ chapter: 1
 # Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
 # grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
 canDo:
-  - { text: "Ik kan mezelf voorstellen en vertellen waar ik vandaan kom en welke talen ik spreek", topics: [presens, pronomen] }
+  - { text: "Ik kan mezelf en anderen voorstellen in korte zinnen in de tegenwoordige tijd (jag heter, hon bor, vi talar …)", topics: [presens, pronomen] }
   - { text: "Ik kan eenvoudige vragen stellen en een zin ontkennen", topics: [vragen, v2, inte] }
   - { text: "Ik weet of een woord en of ett is en kan de bepaalde vorm maken", topics: [substantiv] }
   - { text: "Ik kan getallen gebruiken en zeggen hoe laat het is", topics: [raknord, klockan] }

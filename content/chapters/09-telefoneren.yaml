@@ -211,6 +211,20 @@ sections:
           - { id: wq9w, type: translate, prompt: "Kun je het nummer herhalen? Ik hoor je heel slecht.", answers: ["Kan du upprepa numret[, tack]? Jag hör dig {väldigt|mycket} dåligt.", "Kan du säga numret igen[, tack]? Jag hör dig {väldigt|mycket} dåligt."], feedback: [{ contains: ["nummeret", "nummret"], tip: "ett nummer – numret (de e valt weg)." }] }
           - { id: vk46, type: translate, topic: indirekt-tal, prompt: "Fleur zegt dat ze haar wachtwoord vergeten is.", answers: ["Fleur säger att hon {har glömt|glömt|glömde} {lösenordet|sitt lösenord}."], feedback: [{ contains: "hennes lösenord", tip: "Bedoel je haar eigen wachtwoord? Zeg dan lösenordet (in hoofdstuk 10 leer je ook sitt lösenord)." }] }
 
+      - id: perfekt-omvormen
+        title: Het is al gebeurd
+        instruction: Zet de zin in de voltooide tijd (*har* + supinum). In het Zweeds is het altijd *har*, ook waar het Nederlands *zijn* gebruikt.
+        topic: tempus
+        items:
+          - { id: z4wb, type: transform, prompt: "Jag ringer till Olle.", answers: ["Jag har ringt [till ]Olle."], feedback: [{ contains: ["har ringde", "har ringer"], tip: "Na *har* komt het supinum: ringt." }] }
+          - { id: d3hg, type: transform, prompt: "Bram skriver ett sms.", answers: ["Bram har skrivit ett sms."], feedback: [{ contains: "skrivt", tip: "skriva is een sterk werkwoord: skrivit." }] }
+          - { id: tgf7, type: transform, prompt: "Tåget går.", answers: ["Tåget har gått."], feedback: [{ contains: "är gått", tip: "In het Zweeds altijd *har*: Tåget har gått (de trein is vertrokken)." }, { contains: "har gåt.", tip: "gå – gått, met dubbele t." }] }
+          - { id: s95r, type: transform, prompt: "Fleur kommer hem.", answers: ["Fleur har kommit hem."], feedback: [{ contains: "är kommit", tip: "In het Zweeds altijd *har*: Fleur har kommit hem." }, { contains: "kommt", tip: "komma is een sterk werkwoord: kommit." }] }
+          - { id: vwuc, type: transform, prompt: "Vi åker till Göteborg.", answers: ["Vi har åkt till Göteborg."], feedback: [{ contains: "är åkt", tip: "In het Zweeds altijd *har*: Vi har åkt." }] }
+          - { id: ds44, type: transform, prompt: "Wilma glömmer mobilen.", answers: ["Wilma har glömt mobilen."], feedback: [{ contains: "glömmt", tip: "Dubbele m wordt enkel voor -t: glömt." }] }
+          - { id: sb37, type: transform, prompt: "Jag förstår meddelandet.", answers: ["Jag har förstått meddelandet."], feedback: [{ contains: "förståt ", tip: "förstå – förstått, met dubbele t." }] }
+          - { id: 9tbg, type: transform, prompt: "Ingrid är sjuk.", answers: ["Ingrid har varit sjuk."], feedback: [{ contains: "är varit", tip: "In het Zweeds altijd *har*: Ingrid har varit sjuk (is ziek geweest)." }] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -455,6 +469,31 @@ sections:
           - { id: tgbh, type: listen, say: "Hej, det är Ingrid. Kan jag få prata med Olle?", prompt: "Wie belt er, en voor wie?", options: ["Ingrid, ze wil Olle spreken", "Olle, hij wil Ingrid spreken", "Ingrid, ze wil Bram spreken"], answer: 0, topic: telefon }
           - { id: 4af2, type: listen, say: "Han är inte här just nu. Vill du lämna ett meddelande?", prompt: "Wat wordt er gevraagd?", options: ["of je een bericht wilt achterlaten", "of je later terugbelt", "wat je telefoonnummer is"], answer: 0, topic: telefon }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: een bericht achterlaten"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: telefon
+        listen: true
+        textTitle: "Ett meddelande"
+        text: |
+          Ingrid: Hallå, det är Ingrid.
+
+          Bram: Hej, det är Bram. Kan jag få prata med Olle?
+
+          Ingrid: Han är inte hemma just nu. Han är på jobbet.
+
+          Bram: Okej. Kan jag lämna ett meddelande?
+
+          Ingrid: Ja, visst.
+
+          Bram: Kan du säga att vi spelar fotboll klockan sju ikväll, inte klockan sex?
+
+          Ingrid: Klockan sju, inte sex. Jag ska säga det till honom.
+        items:
+          - { id: zssk, type: truefalse, statement: "Olle är på jobbet.", answer: true }
+          - { id: 2gqh, type: truefalse, statement: "Bram lämnar ett meddelande.", answer: true }
+          - { id: 5aj9, type: truefalse, statement: "Fotbollen börjar klockan sex.", answer: false }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -491,6 +530,9 @@ sections:
           - { id: r5e4, type: gap, topic: berattande, text: "Först ___ (steka) Bram fisk, och sedan ___ (koka) han potatis.", gaps: [{ answers: ["stekte"], feedback: [{ match: "stekade", tip: "steka is een -er-werkwoord (steker): stekte." }] }, { answers: ["kokade"], feedback: [{ match: "kokte", tip: "koka is een -ar-werkwoord (kokar): kokade." }] }] }
           - { id: d6hd, type: gap, topic: mat-fraser, text: "Maten är klar. ”___ måltid!” säger Ingrid. (Eet smakelijk!)", gaps: [{ answers: ["Smaklig"], feedback: [{ match: ["Smakelijk", "Smakelig", "Smaklik"], tip: "Eet smakelijk! = Smaklig måltid! (zonder e)." }] }] }
           - { id: qmh2, type: mc, topic: mat-fraser, prompt: "Je wilt in het restaurant betalen. Wat zeg je tegen de ober?", options: ["Kan vi få notan?", "Kan vi få menyn?", "Smaklig måltid!"], answer: 0, tip: "De rekening heet in het restaurant notan." }
+          - { id: k5vp, type: translate, topic: inte, prompt: "Ik vind de (land)kaart niet.", answers: ["Jag hittar inte kartan.", "Jag kan inte hitta kartan."], feedback: [{ contains: "inte hittar", tip: "inte staat ná het werkwoord: hittar inte." }, { contains: "tycker", tip: "Iets (terug)vinden = hitta." }] }
+          - { id: jugp, type: gap, topic: tycka-om, text: "Wilma ___ om att prata i telefon. (vindt leuk)", gaps: [{ answers: ["tycker"], feedback: [{ match: "gillar", tip: "gilla gaat zonder om. Hier staat om: tycker om." }] }] }
+          - { id: tbsu, type: mc, topic: allemansratten, prompt: "Je wandelt in Zweden door het bos. Wat mag volgens de allemansrätten?", options: ["Een nacht je tent opzetten, niet te dicht bij een huis.", "Met de auto het bos in rijden.", "Door iemands tuin lopen."], answer: 0, tip: "Tälta en natt mag; met de auto de natuur in en door een tuin lopen niet." }
 
 vocab:
   - { sv: "en mobil", nl: "een mobiele telefoon", def: "mobilen", pl: "mobiler", plDef: "mobilerna", alt: ["en mobiltelefon"], ex: "Nils hittar inte **mobilen**.", exNl: "Nils kan de mobiel niet vinden." }

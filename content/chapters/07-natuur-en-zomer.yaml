@@ -156,7 +156,7 @@ sections:
           - { id: wez3, type: translate, prompt: "Nils is moe, maar hij speelt toch voetbal.", answers: ["Nils är trött, men han spelar {fotboll ändå|ändå fotboll}."], feedback: [{ contains: "men spelar han", tip: "Na het voegwoord men blijft de gewone volgorde: men han spelar …" }] }
           - { id: ce9x, type: translate, prompt: "We gaan niet met de bus, maar we fietsen.", answers: ["Vi {åker inte buss|åker inte med bussen|tar inte bussen}, utan [vi ]cyklar."], feedback: [{ contains: "men vi cyklar", tip: "Na een ontkenning, als je iets vervangt door iets anders: utan." }] }
           - { id: yyvj, type: translate, prompt: "Het is warm. Daarom zwemmen we in het meer.", answers: ["Det är varmt. Därför {badar|simmar} vi i sjön."], feedback: [{ contains: "därför vi", tip: "därför is een bijwoord: daarna komt eerst het werkwoord." }] }
-          - { id: b5q8, type: translate, prompt: "Wilma heeft honger, dus ze eet een appel.", answers: ["Wilma är hungrig, så hon äter ett äpple."], feedback: [{ contains: "så äter hon", tip: "Na het voegwoord så blijft de gewone volgorde: så hon äter …" }, { contains: "har hunger", tip: "Honger hebben = vara hungrig." }] }
+          - { id: b5q8, type: translate, prompt: "Wilma heeft honger, dus ze eet een appel.", answers: ["Wilma är hungrig[,] så hon äter ett äpple."], feedback: [{ contains: "så äter hon", tip: "Na het voegwoord så blijft de gewone volgorde: så hon äter …" }, { contains: "har hunger", tip: "Honger hebben = vara hungrig." }] }
 
       - id: ik-ook
         title: Ik ook!
@@ -231,6 +231,20 @@ sections:
           - { id: 5erf, type: truefalse, statement: "Du får köra bil i skogen där det inte finns någon väg.", answer: false, tip: "Met een auto mag je niet de natuur in (terrängen)." }
           - { id: rxgc, type: truefalse, statement: "Du får lämna skräp i naturen.", answer: false, tip: "Je neemt je afval altijd mee." }
           - { id: 6jsr, type: truefalse, statement: "Du får plocka svamp i skogen.", answer: true }
+
+      - id: verbind-omvormen
+        title: Maak er één zin van
+        instruction: Maak één zin van de twee zinnen, met het woord tussen haakjes. Na *och, men, eller, för, så* en *utan* blijft de gewone volgorde.
+        topic: konjunktioner
+        items:
+          - { id: uv2g, type: transform, prompt: "Det regnar. Vi stannar inne. (så)", answers: ["Det regnar[,] så vi stannar inne."], feedback: [{ contains: "så stannar vi", tip: "In verzorgd Zweeds blijft na *så* (dus) de gewone volgorde: så vi stannar." }] }
+          - { id: ku2w, type: transform, prompt: "Jag vill bada. Vattnet är för kallt. (men)", answers: ["Jag vill bada[,] men vattnet är för kallt."], feedback: [{ contains: "men är vattnet", tip: "Na *men* blijft de gewone volgorde: men vattnet är." }] }
+          - { id: tqe8, type: transform, prompt: "Vi går hem. Det blir mörkt. (för)", answers: ["Vi går hem[,] för det blir mörkt."], feedback: [{ contains: "för blir det", tip: "Na *för* (want) blijft de gewone volgorde: för det blir." }] }
+          - { id: bvxc, type: transform, prompt: "Olle fiskar. Wilma läser en bok. (och)", answers: ["Olle fiskar[,] och Wilma läser en bok."] }
+          - { id: vekm, type: transform, prompt: "Ska vi grilla? Ska vi äta inne? (eller)", answers: ["Ska vi grilla[,] eller ska vi äta inne?", "Ska vi grilla eller äta inne?"] }
+          - { id: 5q5a, type: transform, prompt: "Vi åker inte buss. Vi cyklar. (utan)", answers: ["Vi åker inte buss[,] utan vi cyklar.", "Vi åker inte buss[,] utan cyklar."], feedback: [{ contains: "men vi cyklar", tip: "Na een ontkenning (*inte*) gebruik je *utan* (maar wel)." }] }
+          - { id: vfc9, type: transform, prompt: "Det är varmt. Vi äter ute. (så)", answers: ["Det är varmt[,] så vi äter ute."], feedback: [{ contains: "så äter vi", tip: "In verzorgd Zweeds blijft na *så* (dus) de gewone volgorde: så vi äter." }] }
+          - { id: 8n7b, type: transform, prompt: "Fleur är trött. Hon har vandrat hela dagen. (för)", answers: ["Fleur är trött[,] för hon har vandrat hela dagen."], feedback: [{ contains: "för har hon", tip: "Na *för* (want) blijft de gewone volgorde: för hon har." }] }
 
       - id: wat-zeg-je
         title: Wat zeg je?
@@ -456,6 +470,29 @@ sections:
           - { id: 2np2, type: listen, say: "Det gör jag också.", prompt: "Wat betekent het?", options: ["Ik ook.", "Ik ook niet.", "Ik niet."], answer: 0, topic: ocksa-heller }
           - { id: fndm, type: listen, say: "Det blåser och regnar idag.", prompt: "Hoe is het weer?", options: ["winderig en regenachtig", "zonnig en warm", "koud, en het sneeuwt"], answer: 0, topic: vader }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: grillen bij het meer"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: vader
+        listen: true
+        textTitle: "Vid sjön"
+        text: |
+          Olle: Ska vi grilla vid sjön imorgon?
+
+          Fleur: Gärna, men det ska regna imorgon.
+
+          Olle: Bara på förmiddagen. På eftermiddagen blir det sol och tjugofem grader.
+
+          Fleur: Vad bra! Jag tycker om när det är varmt.
+
+          Olle: Det gör jag också. Ska vi bada?
+
+          Fleur: Nej, inte jag. Vattnet är för kallt för mig!
+        items:
+          - { id: fupm, type: truefalse, statement: "Det ska regna på eftermiddagen.", answer: false }
+          - { id: wj3q, type: truefalse, statement: "Det blir tjugofem grader.", answer: true }
+          - { id: 2gqk, type: truefalse, statement: "Fleur vill bada.", answer: false }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -493,6 +530,8 @@ sections:
           - { id: bta6, type: translate, topic: pengar, prompt: "Hoeveel kost de tent?", answers: ["{Hur mycket|Vad} kostar tältet?"], feedback: [{ contains: ["kostar tält", "kostar den tält"], tip: "De tent: bepaalde vorm, tältet (ett-woord)." }, { contains: "hur många kostar", tip: "Bij een prijs vraag je hur mycket, niet hur många." }] }
           - { id: 37qj, type: mc, topic: pengar, prompt: "Je betaalt met een briefje van 100 kronor. Wat heb je in je hand?", options: ["en hundralapp", "en tia", "en hundrabiljett"], answer: 0, shuffle: false, tip: "Een briefje is en lapp: en hundralapp. En biljett is een kaartje." }
           - { id: 9ffb, type: translate, topic: pengar, prompt: "Mag ik het bonnetje?", answers: ["Kan jag få {kvittot|kvitto}[, tack]?", "Får jag {kvittot|kvitto}[, tack]?", "Kvittot, tack."] }
+          - { id: twma, type: gap, topic: presens, text: "Det ___ (blåsa) mycket på ön idag.", gaps: [{ answers: ["blåser"], feedback: [{ match: "blåsar", tip: "blåsa is een -er-werkwoord: blåser." }] }] }
+          - { id: xnm2, type: gap, topic: starka-verb, text: "Igår ___ (gå) vi upp på berget.", gaps: [{ answers: ["gick"], feedback: [{ match: ["gådde", "gådd"], tip: "gå is onregelmatig: gå – går – gick." }] }] }
 
 vocab:
   - { sv: "ett väder", nl: "het weer", def: "vädret", mass: true, ex: "Hur är **vädret** idag?", exNl: "Hoe is het weer vandaag?" }

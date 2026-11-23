@@ -266,6 +266,21 @@ sections:
           - { id: tczs, type: order, start: "Klockan elva", tokens: ["hem", "åkte", "Fleur och Bram"], answers: ["Klockan elva åkte Fleur och Bram hem."] }
           - { id: khaw, type: order, start: "Till slut", tokens: ["somnade", "vi"], answers: ["Till slut somnade vi."], feedback: [{ match: "Till slut vi somnade.", tip: "Till slut staat op plaats 1, dus komt het werkwoord er direct achter." }] }
 
+      - id: igar-omvormen
+        title: Gisteren
+        instruction: Vertel het als iets van gisteren. Begin met *Igår* en zet het werkwoord in de verleden tijd. Denk aan de V2-regel.
+        topic: berattande
+        fixedOrder: true
+        items:
+          - { id: 684p, type: transform, prompt: "Vi äter middag hos Ingrid.", answers: ["{Igår|I går} åt vi middag hos Ingrid."], feedback: [{ contains: ["igår vi åt", "igår vi äter"], tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår åt vi." }, { contains: "äter", tip: "Zet het werkwoord in de verleden tijd: äta – åt." }] }
+          - { id: ny3v, type: transform, prompt: "Bram bakar en tårta.", answers: ["{Igår|I går} bakade Bram en tårta."], feedback: [{ contains: "igår Bram bakade", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår bakade Bram." }] }
+          - { id: geam, type: transform, prompt: "Jag dricker kaffe med Olle.", answers: ["{Igår|I går} drack jag kaffe med Olle."], feedback: [{ contains: "igår jag drack", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår drack jag." }, { contains: "drickte", tip: "dricka is een sterk werkwoord: drack." }] }
+          - { id: b2sw, type: transform, prompt: "Fleur lagar köttbullar.", answers: ["{Igår|I går} lagade Fleur köttbullar."], feedback: [{ contains: "igår Fleur lagade", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår lagade Fleur." }] }
+          - { id: hmk3, type: transform, prompt: "Vi sjunger och dansar hela kvällen.", answers: ["{Igår|I går} sjöng vi och dansade hela kvällen.", "{Igår|I går} sjöng och dansade vi hela kvällen."], feedback: [{ contains: "igår vi sjöng", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår sjöng vi." }, { contains: "sjungde", tip: "sjunga is een sterk werkwoord: sjöng." }] }
+          - { id: qvvw, type: transform, prompt: "Wilma kommer hem sent.", answers: ["{Igår|I går} kom Wilma hem sent."], feedback: [{ contains: "igår Wilma kom", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår kom Wilma." }] }
+          - { id: kwmt, type: transform, prompt: "Barnen äter tre kanelbullar.", answers: ["{Igår|I går} åt barnen tre kanelbullar."], feedback: [{ contains: "igår barnen åt", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår åt barnen." }] }
+          - { id: ae6e, type: transform, prompt: "Olle ger Ingrid blommor.", answers: ["{Igår|I går} gav Olle Ingrid blommor."], feedback: [{ contains: "igår Olle gav", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår gav Olle." }] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -496,6 +511,31 @@ sections:
           - { id: ctxn, type: listen, say: "Det finns inga ägg i kylen.", prompt: "Wat betekent het?", options: ["Er zijn geen eieren.", "Er zijn nog eieren.", "Er is geen melk."], answer: 0, topic: det-finns }
           - { id: hd97, type: listen, say: "Jag skulle vilja ha en kopp kaffe.", prompt: "Wat wil de spreker hebben?", options: ["een kop koffie", "een kop thee", "een glas water"], answer: 0, topic: mat-fraser }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: in het restaurant"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: mat-fraser
+        listen: true
+        textTitle: "På restaurangen"
+        text: |
+          Servitören: Hej! Vad vill ni ha?
+
+          Bram: Jag tar köttbullar med potatis, tack.
+
+          Fleur: Och jag skulle vilja ha fisk, tack.
+
+          Servitören: Vad vill ni dricka?
+
+          Bram: Två glas vatten, tack. Vad finns det till efterrätt?
+
+          Servitören: Det finns glass och kaka.
+
+          Bram: Då tar vi glass, tack!
+        items:
+          - { id: c6d8, type: truefalse, statement: "Bram äter köttbullar.", answer: true }
+          - { id: 46w3, type: truefalse, statement: "Fleur vill ha ett glas vin.", answer: false }
+          - { id: g9a9, type: truefalse, statement: "De vill ha efterrätt.", answer: true }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -531,6 +571,7 @@ sections:
           - { id: ja2q, type: translate, topic: vader, prompt: "Het is bewolkt, maar het regent niet.", answers: ["Det är {molnigt|mulet}[,] men det regnar inte."], feedback: [{ contains: "det är molnig", tip: "Na det är krijgt het weerwoord een -t: molnigt." }, { contains: "men regnar det", tip: "Na het voegwoord men blijft de gewone volgorde: men det regnar inte." }] }
           - { id: cwbm, type: mc, topic: allemansratten, prompt: "Jullie willen in het bos kamperen. Wat zegt het allemansrecht?", options: ["Ni får tälta en natt, men inte för nära ett hus.", "Ni får tälta i någons trädgård.", "Ni får inte tälta i skogen."], answer: 0, tip: "Eén nacht kamperen mag, als je niet te dicht bij een huis staat." }
           - { id: xhvn, type: translate, topic: allemansratten, prompt: "Je mag bessen plukken, maar je mag geen afval achterlaten.", answers: ["{Du|Man} får plocka bär[,] men {du|man} får inte lämna [kvar ][något ]skräp[ i naturen].", "{Du|Man} får plocka bär[,] men inte lämna [kvar ][något ]skräp[ i naturen]."], feedback: [{ contains: "får lämna inte", tip: "inte staat direct na het modale werkwoord: får inte lämna." }] }
+          - { id: u8r6, type: gap, topic: pronomen, text: "Var är resväskan? – ___ är i bilen.", gaps: [{ answers: ["Den"], options: ["Den", "Det", "Han"], feedback: [{ match: "Det", tip: "resväska is een en-woord: den." }, { match: "Han", tip: "Voor een ding gebruik je den of det, niet han." }] }] }
 
 vocab:
   - { sv: "en kräfta", nl: "een rivierkreeft", def: "kräftan", pl: "kräftor", plDef: "kräftorna", ex: "I augusti äter vi **kräftor**.", exNl: "In augustus eten we rivierkreeften." }

@@ -319,6 +319,17 @@ sections:
           - { id: yt9c, type: gap, text: "Olle är lika lång ___ Bram.", gaps: [{ answers: ["som"], options: ["som", "än"], shuffle: false, feedback: [{ match: "än", tip: "Even … als is lika … som." }] }] }
           - { id: y366, type: gap, text: "Ingrid är äldre än ___. (zij, enkelvoud)", gaps: [{ answers: ["hon", "henne"], feedback: [{ match: "hennes", tip: "hennes is bezittelijk (haar). Na än: hon of henne." }] }] }
 
+      - id: zinsbouw-perfekt
+        title: Zinsbouw – ooit en nooit
+        instruction: Maak de zin af. Let op de plaats van *aldrig*, *redan* en *inte*.
+        topic: supinum
+        items:
+          - { id: 59ce, type: order, start: "Jag", tokens: ["har", "aldrig", "varit", "i", "Kiruna"], answers: ["Jag har aldrig varit i Kiruna."], feedback: [{ match: "Jag aldrig har varit i Kiruna.", tip: "aldrig staat ná het eerste werkwoord: har aldrig varit." }] }
+          - { id: pu3m, type: order, start: "Har", tokens: ["du", "någonsin", "sett", "norrsken"], answers: ["Har du någonsin sett norrsken?"], feedback: [{ match: "Har någonsin du sett norrsken?", tip: "In een vraag staat het onderwerp direct na het werkwoord: Har du någonsin …" }] }
+          - { id: pg84, type: order, start: "Vi", tokens: ["har", "redan", "ätit", "frukost"], answers: ["Vi har redan ätit frukost."], feedback: [{ match: "Vi redan har ätit frukost.", tip: "redan staat ná het eerste werkwoord: har redan ätit." }] }
+          - { id: x2q3, type: order, start: "Bram", tokens: ["har", "inte", "hittat", "nyckeln", "än"], answers: ["Bram har inte hittat nyckeln än."], feedback: [{ match: "Bram inte har hittat nyckeln än.", tip: "inte staat ná het eerste werkwoord: har inte hittat." }] }
+          - { id: abxn, type: order, start: "Nu", tokens: ["har", "vi", "bott", "här", "i", "två", "år"], answers: ["Nu har vi bott här i två år."], feedback: [{ match: "Nu vi har bott här i två år.", tip: "Na Nu komt eerst het werkwoord: Nu har vi." }] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -554,6 +565,29 @@ sections:
           - { id: hdee, type: listen, say: "Hon ska gå hem nu.", prompt: "Wat gaat ze doen?", options: ["naar huis", "thuis blijven", "naar haar werk"], answer: 0, topic: hem-hemma }
           - { id: xph9, type: listen, say: "Han är hemma idag.", prompt: "Waar is hij?", options: ["thuis", "onderweg naar huis", "op zijn werk"], answer: 0, topic: hem-hemma }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: ben je er al geweest?"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: perfekt-preteritum
+        listen: true
+        textTitle: "Stockholm"
+        text: |
+          Wilma: Fleur, har du varit i Stockholm?
+
+          Fleur: Ja, jag har varit där två gånger. Förra året åkte jag dit med Bram.
+
+          Wilma: Vad gjorde ni där?
+
+          Fleur: Vi gick på museum och åt middag i Gamla stan. Och du, har du varit i Stockholm?
+
+          Wilma: Nej, aldrig. Men jag vill gärna åka dit.
+
+          Fleur: Då kan du följa med oss nästa gång!
+        items:
+          - { id: wphw, type: truefalse, statement: "Fleur har varit i Stockholm två gånger.", answer: true }
+          - { id: r6ez, type: truefalse, statement: "Fleur åkte till Stockholm med Wilma.", answer: false }
+          - { id: zwv9, type: truefalse, statement: "Wilma har aldrig varit i Stockholm.", answer: true }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -588,6 +622,7 @@ sections:
           - { id: s7m2, type: gap, topic: familj, text: "Min mammas pappa är min ___.", gaps: [{ answers: ["morfar"], feedback: [{ match: "farfar", tip: "Van moederskant: mor-." }, { match: "mormor", tip: "Bijna: het gaat om een opa (far, vader), van moederskant (mor-)." }] }] }
           - { id: rkwc, type: gap, topic: familj, text: "Min pappas syster är min ___.", gaps: [{ answers: ["faster"], feedback: [{ match: "moster", tip: "Van vaderskant: far- wordt fa-: faster." }] }] }
           - { id: dtqf, type: mc, topic: familj, prompt: "Wie is je **morbror**?", options: ["de broer van je moeder", "de broer van je vader", "de vader van je moeder"], answer: 0, tip: "mor = moeder, bror = broer: de broer van je moeder." }
+          - { id: uyq6, type: gap, topic: pronomen, text: "Nils och Wilma är hemma. ___ tittar på film.", gaps: [{ answers: ["De"], options: ["De", "Dem", "Den"], feedback: [{ match: "Dem", tip: "Als onderwerp (zij) gebruik je de; dem is het lijdend voorwerp (hen)." }] }] }
 
 vocab:
   - { sv: "en resa", nl: "een reis", def: "resan", pl: "resor", plDef: "resorna", ex: "Vi har gjort en lång **resa**.", exNl: "We hebben een lange reis gemaakt." }
