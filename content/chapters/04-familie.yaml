@@ -468,9 +468,9 @@ sections:
         instruction: Uitspraak uit hoofdstuk 0. Bij de luistervraag spreekt de computerstem het woord uit; die klinkt niet altijd helemaal natuurlijk.
         shuffle: true
         items:
-          - { id: wgsy, type: mc, topic: ordaccent, prompt: "Welk woordaccent heeft **bussen** (de bus)?", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "Eén lettergreep (buss) met -en erachter: accent 1." }
-          - { id: uq3m, type: mc, topic: ordaccent, prompt: "Welk woordaccent heeft **dagar** (dagen)?", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een meervoud op -ar: accent 2." }
-          - { id: rv8r, type: listen, topic: ordaccent, say: "flickor", prompt: "Hoor je één toon (accent 1) of een „zingende” dubbele toon (accent 2)?", options: ["accent 1", "accent 2"], answer: 1, shuffle: false }
+          - { id: wgsy, type: mc, topic: ordaccent, prompt: "Welk woordaccent heeft **bussen** (de bus)?", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 0, shuffle: false, tip: "Eén lettergreep (buss) met -en erachter: accent 1." }
+          - { id: uq3m, type: mc, topic: ordaccent, prompt: "Welk woordaccent heeft **dagar** (dagen)?", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 1, shuffle: false, tip: "Een meervoud op -ar: accent 2." }
+          - { id: rv8r, type: listen, topic: ordaccent, say: "flickor", prompt: "Welk woordaccent hoor je?", options: ["één toon, zoals in het Nederlands (accent 1)", "twee tonen, „zingend”: omlaag en weer omhoog (accent 2)"], answer: 1, shuffle: false }
           - { id: nkh4, type: mc, topic: spreektaal, prompt: "Hoe wordt **dem** (hen) in gewone spreektaal meestal uitgesproken?", options: ["dom", "dem, met duidelijke e", "deem"], answer: 0, tip: "In spreektaal klinken de en dem allebei als dom." }
           - { id: fz3h, type: mc, topic: spreektaal, prompt: "Hoe klinkt **att** in *Jag gillar att läsa*?", options: ["als een korte o (informeel geschreven als *å*)", "att, met duidelijke t", "at, met een lange a"], answer: 0, tip: "Vóór een infinitief klinkt att in spreektaal als een korte o. Het voegwoord att (dat) spreek je wel met t uit." }
           - { id: cvkt, type: gap, topic: spreektaal, text: "Je hoort *sej* → je schrijft ___", gaps: [{ answers: ["sig"], feedback: [{ match: "sej", tip: "Zo spreek je het uit. De gewone schrijfwijze is met een g aan het eind, net als mig en dig." }] }] }
