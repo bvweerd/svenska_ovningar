@@ -216,10 +216,10 @@ sections:
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
         kind: situatie
         items:
-          - { id: vry3, type: translate, topic: telefon, prompt: "Je belt een bedrijf. Zeg dat je Anna wilt spreken.", answers: ["{Kan jag få prata med|Jag vill prata med|Får jag prata med} Anna[, tack]?", "{Jag vill prata med} Anna[, tack]."] }
-          - { id: 428b, type: translate, topic: telefon, prompt: "Je verstaat de ander slecht. Vraag of hij langzaam wil praten.", answers: ["Kan du prata långsamt[, tack]?"] }
-          - { id: jcqb, type: translate, topic: indirekt-tal, prompt: "Je collega vraagt wat de chef zei. Zeg dat ze zei dat de vergadering om tien uur begint.", answers: ["{Hon|Chefen} {sa|sade} att mötet börjar klockan tio."], feedback: [{ contains: "att börjar mötet", tip: "Na att: onderwerp, dan werkwoord (att mötet börjar)." }] }
-          - { id: jy3c, type: translate, topic: telefon, prompt: "Je collega Bram belt, maar je hebt geen tijd. Zeg dat je hem later terugbelt.", answers: ["Jag ringer {tillbaka|dig} senare.", "Jag ringer dig tillbaka senare."] }
+          - { id: vry3, type: translate, topic: telefon, prompt: "Je belt een bedrijf. Zeg dat je Anna wilt spreken.", answers: ["{Kan jag få|Får jag} {prata|tala} med Anna[, tack]?", "Jag {vill|skulle vilja} {prata|tala} med Anna[, tack]."] }
+          - { id: 428b, type: translate, topic: telefon, prompt: "Je verstaat de ander slecht. Vraag of hij langzaam wil praten.", answers: ["Kan du prata långsamt[, tack]?", "Kan du prata [lite ]långsammare[, tack]?"] }
+          - { id: jcqb, type: translate, topic: indirekt-tal, prompt: "Je collega vraagt wat de chef zei. Zeg dat ze zei dat de vergadering om tien uur begint.", answers: ["{Hon|Chefen} {sa|sade} att mötet {börjar|skulle börja} [klockan ]tio."], feedback: [{ contains: "att börjar mötet", tip: "Na att: onderwerp, dan werkwoord (att mötet börjar)." }] }
+          - { id: jy3c, type: translate, topic: telefon, prompt: "Je collega Bram belt, maar je hebt geen tijd. Zeg tegen Bram dat je hem later terugbelt.", answers: ["Jag ringer {tillbaka|dig} senare.", "Jag ringer dig tillbaka senare.", "Jag ringer tillbaka [till dig ]senare."], feedback: [{ contains: "honom", tip: "Je praat tegen Bram zelf: dig." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -268,7 +268,7 @@ sections:
         kind: makkelijk
         textTitle: "Tre missade samtal"
         text: |
-          Bram hade glömt mobilen hemma. När han kom hem hade han tre missade samtal. Det var hans chef. Hon frågade om han kunde komma till ett möte imorgon. Bram ringde tillbaka och sa att han kunde komma.
+          Bram hade glömt mobilen hemma. När han kom hem hade han tre missade samtal. Det var hans chef. I ett sms frågade hon om han kunde komma till ett möte nästa dag. Bram ringde tillbaka och sa att han kunde komma.
         items:
           - { id: j2e4, type: truefalse, statement: "Bram hade glömt mobilen hemma.", answer: true }
           - { id: m2u4, type: truefalse, statement: "Chefen frågade om Bram kunde komma till ett möte.", answer: true }
@@ -281,7 +281,7 @@ sections:
         kind: makkelijk
         textTitle: "Lösenordet"
         text: |
-          Wilma har glömt lösenordet till datorn. Hon ringer kundtjänst. En kvinna svarar. Wilma säger att hon inte vet lösenordet. Kvinnan frågar vad Wilma heter och skickar ett nytt lösenord i ett sms. Wilma tackar och lägger på.
+          Wilma har glömt lösenordet till mejlen. Hon ringer kundtjänst. En kvinna svarar. Wilma säger att hon inte vet lösenordet. Kvinnan frågar vad Wilma heter och skickar ett sms med ett nytt lösenord. Wilma säger tack och hej då. Nu kan hon läsa mejlen igen.
         items:
           - { id: kbay, type: truefalse, statement: "Wilma har glömt lösenordet.", answer: true }
           - { id: b6w5, type: truefalse, statement: "Kvinnan skickar ett mejl.", answer: false }

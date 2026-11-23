@@ -414,7 +414,7 @@ sections:
         kind: makkelijk
         textTitle: "Wilmas vecka"
         text: |
-          På måndagar börjar skolan klockan åtta. Wilma vaknar klockan sju. Hon duschar och äter frukost. Sedan tar hon bussen till skolan. På eftermiddagen tränar hon. På kvällen läser hon. På fredagar slutar skolan klockan tolv. På lördagar vill Wilma sova.
+          På måndagar börjar skolan klockan åtta. Wilma vaknar klockan sju. Hon duschar och äter frukost. Sedan tar hon bussen till skolan. På eftermiddagen tränar hon. På kvällen läser hon. På fredagar slutar skolan klockan tolv. På lördagar vill Wilma sova länge.
         items:
           - { id: kauu, type: truefalse, statement: "Wilma tar bussen till skolan.", answer: true }
           - { id: 4yc3, type: truefalse, statement: "På fredagar slutar skolan klockan tre.", answer: false }
@@ -427,7 +427,7 @@ sections:
         kind: makkelijk
         textTitle: "En lapp till Nils"
         text: |
-          Hej Nils! Jag jobbar idag. Ät frukost och borsta tänderna. Stäng fönstret och ta bussen klockan halv nio. Du måste ta med boken till skolan. Efter skolan kan du titta på tv en timme. Hej då! Ingrid
+          Hej Nils! Jag jobbar idag. Ät frukost och borsta tänderna. Stäng fönstret och ta bussen klockan halv nio. Du måste ta med boken till skolan. Efter skolan kan du titta på tv en timme. Hej då! Mamma
         items:
           - { id: e5yk, type: truefalse, statement: "Nils måste ta bussen klockan halv nio.", answer: true }
           - { id: hktw, type: truefalse, statement: "Nils kan titta på tv efter skolan.", answer: true }

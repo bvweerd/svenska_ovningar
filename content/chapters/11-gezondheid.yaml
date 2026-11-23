@@ -358,9 +358,9 @@ sections:
         kind: situatie
         items:
           - { id: d2hr, type: translate, topic: kroppen, prompt: "Bij de dokter: zeg dat je hoofdpijn hebt.", answers: ["Jag har ont i huvudet.", "Jag har huvudvärk."] }
-          - { id: 4y9j, type: translate, topic: reflexiv, prompt: "Zeg dat je je niet lekker voelt.", answers: ["Jag mår inte bra.", "Jag känner mig {sjuk|inte bra}."], feedback: [{ contains: "Jag känner inte bra", tip: "Je voelen is wederkerend: jag känner mig." }] }
-          - { id: 8w4n, type: translate, topic: reflexiv, prompt: "Er staat een vriend in je kamer. Zeg dat hij moet gaan zitten.", answers: ["Sätt dig[, är du snäll].", "Du kan sätta dig."], feedback: [{ contains: "Sitt dig", tip: "Gaan zitten is sätta sig: Sätt dig!" }] }
-          - { id: axzb, type: translate, topic: placera, prompt: "Je komt binnen bij iemand. Vraag waar je je jas kunt ophangen.", answers: ["Var kan jag hänga {jackan|min jacka}?"] }
+          - { id: 4y9j, type: translate, topic: reflexiv, prompt: "Zeg dat je je niet lekker voelt.", answers: ["Jag mår {inte bra|dåligt|inte så bra}.", "Jag känner mig {sjuk|dålig|inte bra|inte så bra|inte riktigt bra}."], feedback: [{ contains: "Jag känner inte bra", tip: "Je voelen is wederkerend: jag känner mig." }] }
+          - { id: 8w4n, type: translate, topic: reflexiv, prompt: "Er staat een vriend in je kamer. Zeg dat hij moet gaan zitten.", answers: ["[Varsågod och ]sätt dig[, är du snäll].", "Du kan sätta dig.", "Sitt ner[, är du snäll]."], feedback: [{ contains: "Sitt dig", tip: "Gaan zitten is sätta sig: Sätt dig!" }] }
+          - { id: axzb, type: translate, topic: placera, prompt: "Je komt binnen bij iemand. Vraag waar je je jas kunt ophangen.", answers: ["Var kan jag hänga {jackan|min jacka}?", "Var kan jag hänga {upp|av mig} {jackan|min jacka}?", "Var kan jag hänga av mig?"] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -404,7 +404,7 @@ sections:
         kind: makkelijk
         textTitle: "Hos läkaren"
         text: |
-          Olle har haft ont i ryggen i en vecka. Idag går han till vårdcentralen. Han sätter sig och väntar. Sedan undersöker läkaren honom. Hon säger att han ska vila sig och ta en tablett på kvällen.
+          Olle har haft ont i ryggen i en vecka. Idag går han till vårdcentralen. Han sätter sig och väntar. Sedan undersöker läkaren honom. Hon säger att han ska vila sig och ta en tablett på kvällen. Olle tackar och går hem.
         items:
           - { id: hkde, type: truefalse, statement: "Olle har ont i magen.", answer: false }
           - { id: 6pcu, type: truefalse, statement: "Läkaren undersöker Olle.", answer: true }
@@ -416,7 +416,13 @@ sections:
         kind: makkelijk
         textTitle: "Var ligger nycklarna?"
         text: |
-          Fleur letar efter nycklarna. De ligger inte på bordet och de hänger inte i hallen. Bram sitter i soffan. – Har du sett mina nycklar? frågar Fleur. – De ligger i din väska, säger Bram. Fleur skrattar.
+          Fleur letar efter nycklarna. De ligger inte på bordet och de hänger inte i hallen. Bram sitter i soffan och läser.
+
+          – Har du sett mina nycklar? frågar Fleur.
+
+          – De ligger i din väska, säger Bram.
+
+          Fleur tittar i väskan. Där ligger de! Hon skrattar.
         items:
           - { id: arte, type: truefalse, statement: "Nycklarna hänger i hallen.", answer: false }
           - { id: upzz, type: truefalse, statement: "Nycklarna ligger i Fleurs väska.", answer: true }

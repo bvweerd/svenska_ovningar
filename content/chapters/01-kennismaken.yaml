@@ -632,10 +632,10 @@ sections:
         kind: makkelijk
         textTitle: "Grannen"
         text: |
-          Jag heter Ingrid. Jag bor i Västerås. Jag har ett hus och en katt. Katten heter Sigge. Jag jobbar på en skola. Jag är lärare. Grannen heter Fleur. Hon kommer från Nederländerna. Hon talar svenska och lite engelska.
+          Jag heter Olle. Jag bor i Västerås. Jag har ett hus och en hund. Hunden heter Sigge. Jag jobbar på en skola. Jag är lärare. Grannen heter Fleur. Hon kommer från Nederländerna. Hon talar svenska och lite engelska.
         items:
-          - { id: 6bx2, type: truefalse, statement: "Ingrid har en hund.", answer: false }
-          - { id: kkzt, type: truefalse, statement: "Ingrid är lärare.", answer: true }
+          - { id: 6bx2, type: truefalse, statement: "Olle har en katt.", answer: false }
+          - { id: kkzt, type: truefalse, statement: "Olle är lärare.", answer: true }
           - { id: au44, type: truefalse, statement: "Fleur talar inte svenska.", answer: false }
 
       - id: makkelijk-2
@@ -645,11 +645,11 @@ sections:
         kind: makkelijk
         textTitle: "Bram"
         text: |
-          Det här är Bram. Han kommer från Utrecht. Han bor i Västerås nu. Bram jobbar på ett företag. Han läser också svenska på en kurs. Läraren heter Olle. Bram gillar kursen. Klockan är sju. Bram läser en tidning i köket.
+          Det här är Bram. Han kommer från Utrecht. Han bor i Västerås nu. Bram jobbar på ett företag. Han läser också svenska på en kurs. Läraren heter Anna. Bram gillar kursen. Klockan är sju. Bram läser en tidning i köket.
         items:
           - { id: q3ua, type: truefalse, statement: "Bram kommer från Utrecht.", answer: true }
           - { id: 22zk, type: truefalse, statement: "Bram läser svenska på en kurs.", answer: true }
-          - { id: vkk6, type: truefalse, statement: "Läraren heter Nils.", answer: false }
+          - { id: vkk6, type: truefalse, statement: "Läraren heter Ingrid.", answer: false }
 
       - id: dialoog-kennismaken
         title: Een kennismaking

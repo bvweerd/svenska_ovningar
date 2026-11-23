@@ -376,7 +376,7 @@ sections:
         kind: makkelijk
         textTitle: "Farmor fyller år"
         text: |
-          Förra veckan fyllde Olles mamma åttio år. Hela familjen besökte henne. Nils ritade ett kort och Wilma köpte en present. De åt och drack kaffe i trädgården. Farmor skrattade mycket. Hon var glad hela dagen.
+          Förra veckan fyllde Olles mamma åttio år. Hela familjen besökte henne. Nils ritade ett kort och Wilma köpte en present. De åt tårta och drack kaffe i trädgården. Farmor skrattade mycket. Hon var glad hela dagen.
         items:
           - { id: sv9y, type: truefalse, statement: "Olles mamma fyllde sextio år.", answer: false }
           - { id: un95, type: truefalse, statement: "Nils ritade ett kort.", answer: true }

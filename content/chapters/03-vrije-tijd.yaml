@@ -248,11 +248,11 @@ sections:
         kind: makkelijk
         textTitle: "Olle och hans hobbyer"
         text: |
-          Olle har många hobbyer. Han spelar ofta gitarr. På lördagar fiskar han i sjön. Ibland tar han Nils med. Nils tycker om att fiska, men han får sällan någon fisk. Olle sjunger också i en kör. Han tycker inte om att dansa.
+          Olle har många hobbyer. Han spelar ofta gitarr. På lördagar fiskar han i sjön. Ibland fiskar han med Nils. Nils tycker om att fiska, men han får sällan någon fisk. Olle sjunger också i en kör. Han tycker inte om att dansa.
         items:
-          - { id: 2f8p, type: truefalse, statement: "Olle spelar piano.", answer: false }
+          - { id: 2f8p, type: truefalse, statement: "Olle spelar sällan gitarr.", answer: false }
           - { id: qx6n, type: truefalse, statement: "Nils tycker om att fiska.", answer: true }
-          - { id: gbkc, type: truefalse, statement: "Olle dansar ofta.", answer: false }
+          - { id: gbkc, type: truefalse, statement: "Olle tycker om att dansa.", answer: false }
 
       - id: makkelijk-2
         title: "Makkelijk lezen: Fleur på biblioteket"

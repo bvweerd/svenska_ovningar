@@ -271,10 +271,10 @@ sections:
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
         kind: situatie
         items:
-          - { id: k65x, type: translate, topic: mat-fraser, prompt: "In een café: bestel een kop koffie.", answers: ["{Jag vill ha|Kan jag få|Jag tar} en kopp kaffe[, tack].", "En kopp kaffe, tack."] }
-          - { id: jvpj, type: translate, topic: mat-fraser, prompt: "Je hebt bij vrienden gegeten. Bedank voor het eten.", answers: ["Tack för maten."] }
-          - { id: henp, type: translate, topic: tycka-tro-tanka, prompt: "Iemand vraagt wat je van de soep vindt. Zeg dat je hem lekker vindt.", answers: ["Jag tycker att {den|soppan} är god."], feedback: [{ contains: "tror att", tip: "Een mening over iets wat je proeft: tycker att." }] }
-          - { id: 2hbk, type: translate, topic: det-finns, prompt: "Vraag of er melk in de koelkast is.", answers: ["Finns det mjölk i kylskåpet?"], feedback: [{ contains: "Är det mjölk", tip: "Of iets er is: finns det …?" }] }
+          - { id: k65x, type: translate, topic: mat-fraser, prompt: "In een café: bestel een kop koffie.", answers: ["{Jag vill ha|Kan jag få|Får jag|Jag tar|Jag skulle vilja ha} en kopp kaffe[, tack].", "En {kopp kaffe|kaffe}, tack."] }
+          - { id: jvpj, type: translate, topic: mat-fraser, prompt: "Je hebt bij vrienden gegeten. Bedank voor het eten.", answers: ["Tack[ så mycket] för {maten|middagen}."] }
+          - { id: henp, type: translate, topic: tycka-tro-tanka, prompt: "Iemand vraagt wat je van de soep vindt. Zeg dat je hem lekker vindt.", answers: ["Jag tycker[ att] {den|soppan} är god.", "Den är {väldigt |mycket |}god."], feedback: [{ contains: "tror att", tip: "Een mening over iets wat je proeft: tycker att." }] }
+          - { id: 2hbk, type: translate, topic: det-finns, prompt: "Vraag of er melk in de koelkast is.", answers: ["Finns det [någon ]mjölk i {kylskåpet|kylen}?"], feedback: [{ contains: "Är det mjölk", tip: "Of iets er is: finns det …?" }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -311,16 +311,16 @@ sections:
           - { id: vns9, type: truefalse, statement: "Fleur tror att Bram vill gå på kräftskiva igen.", answer: true }
 
       - id: makkelijk-1
-        title: "Makkelijk lezen: På kafét"
+        title: "Makkelijk lezen: På kaféet"
         instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
         topic: woordenschat
         kind: makkelijk
-        textTitle: "På kafét"
+        textTitle: "På kaféet"
         text: |
-          Ingrid och Fleur fikar på ett kafé. Det finns kanelbullar och tårta. Ingrid tar en kanelbulle och en kopp kaffe. Fleur tycker att tårtan ser god ut, så hon beställer den. Ingrid tror att den kostar mycket, men det gör den inte.
+          Ingrid och Fleur är på ett kafé. Det finns kanelbullar och tårta. Ingrid tar en kanelbulle och en kopp kaffe. Fleur tycker att tårtan ser god ut, så hon tar den. Ingrid tror att den kostar mycket, men det gör den inte.
         items:
-          - { id: 56zb, type: truefalse, statement: "Fleur beställer en kanelbulle.", answer: false }
-          - { id: gh3k, type: truefalse, statement: "Det finns tårta på kafét.", answer: true }
+          - { id: 56zb, type: truefalse, statement: "Fleur tar en kanelbulle.", answer: false }
+          - { id: gh3k, type: truefalse, statement: "Det finns tårta på kaféet.", answer: true }
 
       - id: makkelijk-2
         title: "Makkelijk lezen: Middagen"
@@ -329,7 +329,7 @@ sections:
         kind: makkelijk
         textTitle: "Middagen"
         text: |
-          Förra lördagen lagade Bram middag. Först skar han potatis och grönsaker. Sedan stekte han fisk. Fleur dukade bordet. Gästerna kom klockan sju. Alla åt mycket och var mätta. Bram tänker laga fisk igen nästa helg.
+          Förra lördagen lagade Bram middag. Först skar han potatis och grönsaker. Sedan stekte han fisk. Fleur dukade bordet. Gästerna kom klockan sju. Alla åt mycket och blev mätta. Efter maten drack de kaffe och åt kaka. Bram tänker laga fisk igen nästa helg.
         items:
           - { id: rvrn, type: truefalse, statement: "Bram stekte kyckling.", answer: false }
           - { id: n3qj, type: truefalse, statement: "Fleur dukade bordet.", answer: true }

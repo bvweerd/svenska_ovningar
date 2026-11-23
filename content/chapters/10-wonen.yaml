@@ -291,10 +291,10 @@ sections:
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
         kind: situatie
         items:
-          - { id: h5km, type: translate, topic: subjunktioner, prompt: "Je bent te laat. Zeg dat je te laat bent omdat de bus vertraging had.", answers: ["Jag {är sen|kommer för sent} eftersom bussen var försenad."], feedback: [{ contains: "eftersom var bussen", tip: "In een bijzin: onderwerp, dan werkwoord (eftersom bussen var …)." }] }
-          - { id: qajs, type: translate, topic: bisats-ordfoljd, prompt: "Zeg dat je altijd koffie drinkt voordat je naar je werk gaat.", answers: ["Jag dricker alltid kaffe innan jag går till jobbet.", "Innan jag går till jobbet dricker jag alltid kaffe."], feedback: [{ contains: "innan går jag", tip: "In een bijzin: onderwerp, dan werkwoord (innan jag går)." }] }
-          - { id: 4s2u, type: translate, topic: sin-sitt-sina, prompt: "Vertel dat je buurvrouw haar (eigen) fiets heeft verkocht.", answers: ["{Min granne|Grannen} har sålt sin cykel."], feedback: [{ contains: "hennes cykel", tip: "Haar eigen fiets, van het onderwerp zelf: sin cykel." }] }
-          - { id: eqb6, type: translate, topic: prep-plats, prompt: "Je bent bij iemand thuis. Vraag waar de badkamer is.", answers: ["Var {är|ligger} badrummet?"] }
+          - { id: h5km, type: translate, topic: subjunktioner, prompt: "Je bent te laat. Zeg dat je te laat bent omdat de bus vertraging had.", answers: ["[Förlåt, ]jag {är sen|är försenad|kommer för sent|kom för sent} {eftersom|för att} bussen {var|är} försenad.", "Eftersom bussen var försenad {är jag sen|kommer jag för sent}."], feedback: [{ contains: "eftersom var bussen", tip: "In een bijzin: onderwerp, dan werkwoord (eftersom bussen var …)." }] }
+          - { id: qajs, type: translate, topic: bisats-ordfoljd, prompt: "Zeg dat je altijd koffie drinkt voordat je naar je werk gaat.", answers: ["Jag dricker alltid kaffe innan jag {går|åker} till {jobbet|arbetet}.", "Innan jag {går|åker} till {jobbet|arbetet} dricker jag alltid kaffe."], feedback: [{ contains: "innan går jag", tip: "In een bijzin: onderwerp, dan werkwoord (innan jag går)." }] }
+          - { id: 4s2u, type: translate, topic: sin-sitt-sina, prompt: "Vertel dat je buurvrouw haar (eigen) fiets verkoopt.", answers: ["{Min granne|Grannen} säljer sin cykel."], feedback: [{ contains: "hennes cykel", tip: "Haar eigen fiets, van het onderwerp zelf: sin cykel." }] }
+          - { id: eqb6, type: translate, topic: prep-plats, prompt: "Je bent bij iemand thuis. Vraag waar de badkamer is.", answers: ["[Ursäkta, ]var {är|ligger|finns} badrummet?"] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -352,7 +352,7 @@ sections:
         kind: makkelijk
         textTitle: "Städdag"
         text: |
-          Varje lördag städar familjen Ek. Olle dammsuger medan Ingrid tvättar. Wilma städar sitt rum, men Nils vill inte städa sitt rum. Han säger att det redan är rent. Ingrid tittar under sängen och hittar en smörgås från förra veckan.
+          Varje lördag städar familjen Ek. Olle dammsuger medan Ingrid tvättar. Wilma städar sitt rum, men Nils vill inte städa sitt rum. Han säger att han redan har städat. Ingrid tittar under sängen och hittar en smörgås från förra veckan. Sedan städar Nils sitt rum.
         items:
           - { id: rbcv, type: truefalse, statement: "Olle dammsuger.", answer: true }
           - { id: 9swb, type: truefalse, statement: "Ingrid hittar en smörgås under sängen.", answer: true }

@@ -309,9 +309,9 @@ sections:
         kind: situatie
         items:
           - { id: tf5y, type: translate, topic: pengar, prompt: "Je staat bij het loket. Vraag hoeveel een kaartje naar Uppsala kost.", answers: ["Hur mycket kostar en biljett till Uppsala?", "Vad kostar en biljett till Uppsala?"] }
-          - { id: 5mhk, type: translate, topic: transport, prompt: "Je staat bij de bushalte. Vraag wanneer de bus gaat.", answers: ["När går bussen?", "När kommer bussen?"] }
-          - { id: suhe, type: translate, topic: tidsprep, prompt: "Zeg dat je over een uur komt.", answers: ["Jag kommer om en timme."], feedback: [{ contains: "i en timme", tip: "Over een uur (in de toekomst): om en timme." }] }
-          - { id: mgqg, type: translate, topic: pengar, prompt: "Vraag of je met je pinpas kunt betalen.", answers: ["Kan jag betala med kort?", "Går det att betala med kort?"] }
+          - { id: 5mhk, type: translate, topic: transport, prompt: "Je staat bij de bushalte. Vraag wanneer de bus gaat.", answers: ["När {går|kommer} [nästa ]buss[en]?"] }
+          - { id: suhe, type: translate, topic: tidsprep, prompt: "Zeg dat je over een uur komt.", answers: ["Jag kommer om en timme.", "Om en timme kommer jag."], feedback: [{ contains: "i en timme", tip: "Over een uur (in de toekomst): om en timme." }] }
+          - { id: mgqg, type: translate, topic: pengar, prompt: "Vraag of je met je pinpas kunt betalen.", answers: ["{Kan|Får} {jag|man} betala med kort?", "Går det [bra ]att betala med kort?", "Tar ni kort?"] }
 
       - id: zoek-de-fout
         title: Zoek de fout

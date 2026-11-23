@@ -324,10 +324,10 @@ sections:
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
         kind: situatie
         items:
-          - { id: d94a, type: translate, topic: supinum, prompt: "Een collega vraagt of je weleens in Stockholm bent geweest. Zeg dat je er nog nooit bent geweest.", answers: ["[Nej, ]jag har aldrig varit {där|i Stockholm}."], feedback: [{ contains: "var aldrig", tip: "Je ervaring tot nu toe: har + supinum (har aldrig varit)." }] }
+          - { id: d94a, type: translate, topic: supinum, prompt: "Een collega vraagt of je weleens in Stockholm bent geweest. Zeg dat je er nog nooit bent geweest.", answers: ["[Nej, ]jag har aldrig varit {där|i Stockholm}.", "[Nej, ]{där|i Stockholm} har jag aldrig varit."], feedback: [{ contains: "var aldrig", tip: "Je ervaring tot nu toe: har + supinum (har aldrig varit)." }] }
           - { id: aqsc, type: translate, topic: hem-hemma, prompt: "Een vriend belt. Zeg dat je thuis bent.", answers: ["Jag är hemma[ nu]."], feedback: [{ contains: "är hem", tip: "Waar je bent: hemma. Hem is de richting (naar huis)." }] }
           - { id: shun, type: translate, topic: hem-hemma, prompt: "Je gaat weg van een feest. Zeg dat je nu naar huis gaat.", answers: ["Jag {går|åker} hem[ nu].", "Nu {går|åker} jag hem."], feedback: [{ contains: "hemma", tip: "Naar huis is een richting: hem." }] }
-          - { id: nbr6, type: translate, topic: supinum, prompt: "Iemand vraagt of je je huiswerk al hebt gemaakt. Zeg dat je het al gedaan hebt.", answers: ["[Ja, ]jag har redan gjort {den|läxan}."], feedback: [{ contains: "har redan gör", tip: "Na har komt het supinum: gjort." }] }
+          - { id: nbr6, type: translate, topic: supinum, prompt: "Iemand vraagt of je je huiswerk al hebt gemaakt. Zeg dat je het al gedaan hebt.", answers: ["[Ja, ]jag har redan gjort {det|den|läxan|läxorna}.", "[Ja, ]jag har gjort {det|den|läxan|läxorna} redan.", "[Ja, ]det har jag redan gjort."], feedback: [{ contains: "har redan gör", tip: "Na har komt het supinum: gjort." }, { contains: "har redan gjorde", tip: "Na har komt het supinum: gjort." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -373,10 +373,10 @@ sections:
         kind: makkelijk
         textTitle: "Har du sett norrsken?"
         text: |
-          Fleur har bott i Sverige i ett år. Hon har sett mycket. Hon har varit i Stockholm och i Göteborg, men hon har aldrig varit i Kiruna. Bram har redan sett norrsken. Fleur vill också se det. Hon och Bram vill resa dit.
+          Fleur har bott i Sverige i ett år. Hon har sett mycket. Hon har varit i Stockholm och i Göteborg. För fem år sedan såg hon norrsken i Kiruna. Bram har aldrig varit i Kiruna, och han har aldrig sett norrsken. Han vill gärna se det. Nästa vinter vill Fleur och Bram resa dit.
         items:
-          - { id: x7v9, type: truefalse, statement: "Fleur har varit i Kiruna.", answer: false }
-          - { id: 5htm, type: truefalse, statement: "Bram har sett norrsken.", answer: true }
+          - { id: x7v9, type: truefalse, statement: "Bram har varit i Kiruna.", answer: false }
+          - { id: 5htm, type: truefalse, statement: "Fleur har sett norrsken.", answer: true }
 
       - id: makkelijk-2
         title: "Makkelijk lezen: Nils är hemma"
@@ -385,9 +385,9 @@ sections:
         kind: makkelijk
         textTitle: "Nils är hemma"
         text: |
-          Det är lördag, så Nils är hemma. Han har lekt med katten och läst en bok. Nu vill han gå ut. Han tar cykeln och cyklar till sjön. Klockan fem cyklar han hem.
+          Det är lördag, så Nils är hemma. Han har lekt med hunden och läst en bok. Nu vill han gå ut. Han tar cykeln och cyklar till sjön. Klockan fem cyklar han hem.
         items:
-          - { id: ebah, type: truefalse, statement: "Nils har lekt med katten.", answer: true }
+          - { id: ebah, type: truefalse, statement: "Nils har lekt med hunden.", answer: true }
           - { id: pd4d, type: truefalse, statement: "Nils cyklar till skolan.", answer: false }
 
       - id: dialoog-kiruna

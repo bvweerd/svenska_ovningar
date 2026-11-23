@@ -87,7 +87,7 @@ Elke nieuwe oefening, oefenvorm of functie past in deze lijn. Wat meetbaar is, c
 1. **Vier strands in balans** (Nation): naast vormgerichte oefening ook
    - *input met aandacht voor betekenis*: de leestekst van het hoofdstuk plus **minstens 2 makkelijke
      teksten** per hoofdstuk (`kind: makkelijk`, vanaf H1): bijna alleen bekende woorden, 2–3 nagekeken
-     begripsvragen; A1 40–80, A2 60–120, B1 100–180, B2 150–250 woorden;
+     begripsvragen; korter dan de leestekst (A1 30–80, A2 40–120, B1 60–180, B2 80–250 woorden, `LINE` in `difficulty-report`);
    - *output met aandacht voor betekenis*: geleid schrijven en, vanaf H5, **„Wat zeg je?”**
      (`kind: situatie`, minstens 4 vragen): een situatie in het Nederlands, de leerling zegt het in het
      Zweeds; meer goede antwoorden toestaan;
@@ -157,6 +157,9 @@ Alles in november 2026.
   via de Worker en Cloudflare D1 (opt-in, besloten door de eigenaar). Nog te doen: D1 aanmaken, Worker
   deployen, `SYNC_URL` zetten (`worker/README.md`, „Synchronisatie”).
 
+- **Onderwijskundige lijn** (branch `didactiek`): lijn in PLAN en CLAUDE.md, door `npm test` afgedwongen;
+  makkelijke teksten (2 per hoofdstuk H1–H30), „Wat zeg je?” (H5–H30), woordaccent (H0), vlot herhalen,
+  instaptoets, B-woordenschat +183. Alles na taalreview.
 - **Architectuur** (`ARCHITECTURE.md`, stap 1–5, branch `dev`): code in lagen (core, platform, app, ui)
   met bewakingstest, register van vraagtypen, routetabel, pure voortgangsregels met store, rooktest in
   de browser (`npm run smoke`, ook in CI). Gedrag, opslag en antwoordhashes ongewijzigd.

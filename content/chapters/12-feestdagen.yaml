@@ -344,10 +344,10 @@ sections:
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
         kind: situatie
         items:
-          - { id: vqzn, type: translate, topic: adjektiv-obestamd, prompt: "Je krijgt een cadeau. Zeg dat het een mooi cadeau is.", answers: ["Det är en {fin|vacker} present.", "Vilken {fin|vacker} present."], feedback: [{ contains: "en fint present", tip: "present is een en-woord: en fin present." }] }
-          - { id: 6ff2, type: translate, topic: jul, prompt: "Wens iemand prettige kerstdagen.", answers: ["God jul."] }
-          - { id: 9a82, type: translate, topic: komparation, prompt: "Zeg dat jullie kerstboom groter is dan die van vorig jaar.", answers: ["{Vår gran|Granen} är större än förra årets[ gran].", "{Vår gran|Granen} är större i år än förra året."], feedback: [{ contains: "mer stor", tip: "Kort woord: stor – större – störst." }] }
-          - { id: nwus, type: translate, topic: adjektiv-bestamd, prompt: "Zeg dat je het kleine pakje wilt.", answers: ["Jag vill ha det lilla paketet."], feedback: [{ contains: "det litet paketet", tip: "Na det … -et: lilla (onregelmatig)." }, { contains: "det liten paketet", tip: "Na det … -et: lilla (onregelmatig)." }] }
+          - { id: vqzn, type: translate, topic: adjektiv-obestamd, prompt: "Je krijgt een cadeau. Zeg dat het een mooi cadeau is.", answers: ["[Tack, ]det är en {fin|vacker} {present|julklapp}.", "[Tack, ]vilken {fin|vacker} {present|julklapp}."], feedback: [{ contains: "en fint present", tip: "present is een en-woord: en fin present." }] }
+          - { id: 6ff2, type: translate, topic: jul, prompt: "Wens iemand prettige kerstdagen.", answers: ["{God|Trevlig} jul[ och gott nytt år]."] }
+          - { id: 9a82, type: translate, topic: komparation, prompt: "Zeg dat jullie kerstboom groter is dan die van vorig jaar.", answers: ["{Vår gran|Vår julgran|Granen|Julgranen|Årets gran} är större än förra årets[ gran].", "{Vår gran|Vår julgran|Granen|Julgranen|Årets gran} är större än förra årets julgran.", "{Vår gran|Vår julgran|Granen|Julgranen|Årets gran} är större än förra året.", "{Vår gran|Granen} är större i år än förra året."], feedback: [{ contains: "mer stor", tip: "Kort woord: stor – större – störst." }] }
+          - { id: nwus, type: translate, topic: adjektiv-bestamd, prompt: "Zeg dat je het kleine pakje wilt.", answers: ["Jag {vill ha|tar} det lilla paketet."], feedback: [{ contains: "det litet paketet", tip: "Na det … -et: lilla (onregelmatig)." }, { contains: "det liten paketet", tip: "Na det … -et: lilla (onregelmatig)." }, { contains: "den lilla paketet", tip: "paket is een ett-woord: det lilla paketet." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -403,7 +403,7 @@ sections:
         kind: makkelijk
         textTitle: "Julklapparna"
         text: |
-          Bram har köpt julklappar till alla. Fleur får ett par varma vantar, Wilma får en ny bok och Nils får det största paketet. I paketet finns en fotboll. Nils är gladast av alla.
+          Bram har köpt julklappar till alla. Fleur får ett par varma vantar, Wilma får en ny bok och Nils får det största paketet. I paketet finns en fotboll. Nils är gladast av alla. Han vill spela fotboll nu, men ute är det mörkt och kallt.
         items:
           - { id: sxcm, type: truefalse, statement: "Nils får en fotboll.", answer: true }
           - { id: zgsc, type: truefalse, statement: "Wilma får vantar.", answer: false }

@@ -238,9 +238,9 @@ sections:
         kind: situatie
         items:
           - { id: bnnn, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag gillar inte regn.” Zeg dat jij het ook niet leuk vindt.", answers: ["{Inte jag heller|Det gör inte jag heller|Det gör jag inte heller}."], feedback: [{ contains: "Jag också", tip: "Bij een ontkenning: inte jag heller." }] }
-          - { id: xgrr, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag gillar sommaren.” Zeg dat jij dat ook doet.", answers: ["{Jag också|Det gör jag också}."], feedback: [{ contains: "Inte jag heller", tip: "Bij een bevestigende zin: jag också." }] }
+          - { id: xgrr, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag gillar sommaren.” Zeg dat jij dat ook doet.", answers: ["{Jag också|Det gör jag också|Jag med|Det gör jag med}.", "Jag gillar {också sommaren|den också}."], feedback: [{ contains: "Inte jag heller", tip: "Bij een bevestigende zin: jag också." }] }
           - { id: sh3k, type: translate, topic: konjunktioner, prompt: "Een vriend vraagt hoe het weer is. Zeg dat het regent, maar dat het warm is.", answers: ["Det regnar, men det är varmt."] }
-          - { id: jmcf, type: translate, topic: konjunktioner, prompt: "Zeg dat je thuisblijft, want het sneeuwt.", answers: ["Jag stannar hemma, för det snöar."], feedback: [{ contains: "för snöar det", tip: "Na för blijft de gewone volgorde: för det snöar." }] }
+          - { id: jmcf, type: translate, topic: konjunktioner, prompt: "Zeg dat je thuisblijft, want het sneeuwt.", answers: ["Jag stannar hemma, {för|för att|eftersom} det snöar."], feedback: [{ contains: "för snöar det", tip: "Na för blijft de gewone volgorde: för det snöar." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -286,7 +286,7 @@ sections:
         kind: makkelijk
         textTitle: "Regn i stugan"
         text: |
-          Familjen Ek har en stuga vid havet. I juli var de där i två veckor. Det regnade mycket, men de hade ändå roligt. De spelade spel och läste böcker. En dag sken solen, så de badade och plockade blåbär. Nils gillar inte regn, och det gör inte Wilma heller.
+          Familjen Ek har en stuga vid en sjö. I juli var de där i två veckor. Det regnade mycket, men de hade ändå roligt. De spelade spel och läste böcker. En dag sken solen, så de badade och plockade blåbär. Nils gillar inte regn, och det gör inte Wilma heller.
         items:
           - { id: t6y5, type: truefalse, statement: "Det regnade mycket.", answer: true }
           - { id: frqb, type: truefalse, statement: "Wilma gillar regn.", answer: false }
@@ -298,7 +298,7 @@ sections:
         kind: makkelijk
         textTitle: "Tält i fjällen"
         text: |
-          Bram och Fleur vandrade i fjällen. De sov i tält, för de ville vara ute i naturen. Det var kallt på natten, men de frös inte. På morgonen var det soligt. De såg en älg vid en sjö. Fleur ville ta ett foto, men älgen sprang in i skogen.
+          Olle och Wilma vandrade i fjällen. De sov i tält, för de ville vara ute i naturen. Det var kallt på natten, men de frös inte. På morgonen var det soligt. De såg en älg vid en sjö. Wilma ville ta ett foto, men älgen sprang in i skogen.
         items:
           - { id: 8dmd, type: truefalse, statement: "De sov på ett hotell.", answer: false }
           - { id: ptaa, type: truefalse, statement: "De såg en älg.", answer: true }
