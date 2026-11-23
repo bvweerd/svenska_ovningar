@@ -431,7 +431,7 @@ sections:
         items:
           - { id: e5yk, type: truefalse, statement: "Nils måste ta bussen klockan halv åtta.", answer: true }
           - { id: hktw, type: truefalse, statement: "Nils kan titta på tv efter skolan.", answer: true }
-          - { id: xynj, type: truefalse, statement: "Ingrid jobbar inte idag.", answer: false }
+          - { id: xynj, type: truefalse, statement: "Nils mamma jobbar inte idag.", answer: false }
 
       - id: dialoog-afspraak
         title: Een afspraak maken
