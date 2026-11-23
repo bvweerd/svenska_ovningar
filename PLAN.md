@@ -177,7 +177,8 @@ Alles in november 2026.
   antwoord verruimd op beide sites (A: H6, H7; B: H13, H19, H23, H25). Met taalreview.
 - **Testdekking**: Zweedse spelling met hunspell (`content/stavning.txt`), interactietest in de rooktest, UI-tests
   in happy-dom (elke vraag en pagina); dekking van `src/` van 34% naar 85% van de regels, met een minimum in CI.
-- **H19-woordenschat** (B #5): alle 69 woorden in een zin of tekst (was 22), met taalreview.
+- **B-woordenschat in zinnen** (B #5): H19 alle 69 woorden in een zin of tekst (was 22); daarna H13, H14, H16 en
+  H18 (37–43 woorden alleen in de lijst → 0) met invuloefeningen in Ord, elk met een tip. Met taalreview.
 - **Pagina Verantwoording** (`#/verantwoording`, via Over): het rapport inhoud en didactiek leesbaar voor
   gebruikers, met grafieken en tabellen; bij elke build berekend (`scripts/verantwoording.mjs`).
 - **Meer output A1–A2** (gestuurde situaties + doeltaken, na te kijken): H1 4→8% (taak nieuwe buurvrouw),
