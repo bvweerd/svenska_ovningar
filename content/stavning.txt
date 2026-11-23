@@ -8,6 +8,7 @@ bram
 brams
 brorn
 delft
+duck
 fleur
 fleurs
 imorse

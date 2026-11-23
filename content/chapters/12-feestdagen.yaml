@@ -124,6 +124,23 @@ sections:
   - id: oefeningen
     title: Oefeningen
     exercises:
+      - id: ontdek-adjectief
+        title: Ontdek de regel – bijvoeglijk naamwoord
+        instruction: Bekijk de voorbeelden en ontdek zelf de regel. Pas hem daarna toe. De uitleg staat ook op de kaarten over het bijvoeglijk naamwoord.
+        topic: adjektiv-obestamd
+        items:
+          - id: 57ux
+            type: steps
+            steps:
+              - { type: mc, prompt: "Kijk: *en stor bil – ett stort hus – två stora bilar*. Wat valt op?", options: ["Bij een ett-woord komt er -t achter, in het meervoud -a.", "Bij een en-woord komt er -t achter.", "Het bijvoeglijk naamwoord verandert nooit."], answer: 0, shuffle: false, tip: "en stor, ett stor**t**, två stor**a**." }
+              - { type: gap, text: "ett ___ rum (varm)", gaps: [{ answers: ["varmt"], feedback: [{ match: ["varm", "varma"], tip: "rum is een ett-woord: varm + t, ett varmt rum." }] }] }
+          - id: 89nx
+            type: steps
+            topic: adjektiv-bestamd
+            steps:
+              - { type: mc, prompt: "Kijk: *den stora bilen – det stora huset – de stora bilarna*. Wat valt op?", options: ["In de bepaalde vorm komt er den/det/de vóór, en het bijvoeglijk naamwoord krijgt -a (ook bij een ett-woord en in het meervoud).", "In de bepaalde vorm krijgt het bijvoeglijk naamwoord -t.", "In de bepaalde vorm valt den/det/de weg."], answer: 0, shuffle: false, tip: "den stor**a**, det stor**a**, de stor**a**: -a, en het zelfstandig naamwoord is ook bepaald." }
+              - { type: gap, text: "den ___ tröjan (gul)", gaps: [{ answers: ["gula"], feedback: [{ match: ["gul", "gult"], tip: "Na den krijgt het bijvoeglijk naamwoord -a: den gula tröjan." }] }] }
+
       - id: adjectief-vormen
         title: Drie vormen
         instruction: Vul de ett-vorm en de meervoudsvorm in.
@@ -350,6 +367,31 @@ sections:
           - { id: 8ysx, type: translate, topic: komparation, prompt: "Ik vind Lucia de gezelligste dag van december.", answers: ["Jag tycker [att ]{Lucia|luciadagen} är den mysigaste dagen i december."], feedback: [{ contains: "den mysigast dagen", tip: "Bepaald: den + overtreffende trap op -e: den mysigaste dagen." }, { contains: "mysigaste dag i", tip: "Dubbel bepaald: den mysigaste dagen." }, { contains: "mest mysig", tip: "mysig is een gewoon bijvoeglijk naamwoord: mysigast, bepaald mysigaste." }] }
           - { id: yzj8, type: translate, prompt: "Mijn broertje wil een rode fiets voor kerst.", answers: ["{Min lillebror|Min lilla bror|Min lille bror} vill ha en röd cykel {till jul|i julklapp}."], feedback: [{ contains: "en röda", tip: "Onbepaald enkelvoud (en cykel): röd, zonder -a." }, { contains: "min liten bror", tip: "Na min krijgt liten de vorm lilla: min lilla bror (of lillebror)." }] }
           - { id: 5gjh, type: translate, topic: komparation, prompt: "Glühwein is lekkerder dan koffie als het buiten koud is.", answers: ["Glögg är {godare|bättre} än kaffe {när|om} det är kallt {ute|utomhus}."], feedback: [{ contains: ["mer god", "gottare"], tip: "god – godare – godast." }, { contains: "det är kall ", tip: "Bij det: kallt (ett-vorm)." }] }
+
+      - id: bepaald-omvormen
+        title: Den röda tröjan
+        instruction: Maak één zin. Zet het bijvoeglijk naamwoord vóór het zelfstandig naamwoord, in de bepaalde vorm (*den/det/de* + bijvoeglijk naamwoord op *-a*).
+        topic: adjektiv-bestamd
+        items:
+          - { id: kcp7, type: transform, prompt: "Huset är stort. Vi bor i huset.", answers: ["Vi bor i det stora huset."], feedback: [{ contains: "stort huset", tip: "Na *det* krijgt het bijvoeglijk naamwoord *-a*: det stora huset." }, { contains: "i stora huset", tip: "In de bepaalde vorm komt er *det* vóór: i det stora huset." }] }
+          - { id: 8f2h, type: transform, prompt: "Tröjan är röd. Jag köper tröjan.", answers: ["Jag köper den röda tröjan."], feedback: [{ contains: "röd tröjan", tip: "Na *den* krijgt het bijvoeglijk naamwoord *-a*: den röda tröjan." }, { contains: "röda tröja.", tip: "Het zelfstandig naamwoord blijft ook bepaald: den röda tröjan." }] }
+          - { id: zu8x, type: transform, prompt: "Granen är fin. Vi tittar på granen.", answers: ["Vi tittar på den fina granen."], feedback: [{ contains: "fin granen", tip: "Na *den* krijgt het bijvoeglijk naamwoord *-a*: den fina granen." }] }
+          - { id: kbgg, type: transform, prompt: "Ljusen är vita. Wilma tänder ljusen.", answers: ["Wilma tänder de vita ljusen."], feedback: [{ contains: ["det vita ljusen", "den vita ljusen"], tip: "Meervoud: *de* vita ljusen." }] }
+          - { id: tx8j, type: transform, prompt: "Bilen är gammal. Olle säljer bilen.", answers: ["Olle säljer den gamla bilen."], feedback: [{ contains: ["gammal bilen", "gammala"], tip: "gammal wordt in de bepaalde vorm *gamla*: den gamla bilen." }] }
+          - { id: c82n, type: transform, prompt: "Barnen är små. Ingrid läser för barnen.", answers: ["Ingrid läser för de små barnen."], feedback: [{ contains: "lilla barnen", tip: "Meervoud van liten is altijd *små*: de små barnen." }] }
+          - { id: j3w7, type: transform, prompt: "Huset är litet. Nils bor i huset.", answers: ["Nils bor i det lilla huset."], feedback: [{ contains: ["litet huset", "liten huset", "lita huset"], tip: "liten wordt in de bepaalde vorm *lilla*: det lilla huset." }] }
+          - { id: ua54, type: transform, prompt: "Kakorna är goda. Vem bakade kakorna?", answers: ["Vem bakade de goda kakorna?"], feedback: [{ contains: ["den goda kakorna", "det goda kakorna"], tip: "Meervoud: *de* goda kakorna." }] }
+
+      - id: zinsbouw-adjectief
+        title: Zinsbouw – mooi, groot en nieuw
+        instruction: Maak de zin af. Het bijvoeglijk naamwoord staat vóór het zelfstandig naamwoord.
+        topic: adjektiv-obestamd
+        items:
+          - { id: sfjm, type: order, start: "I år", tokens: ["köpte", "vi", "en", "stor", "gran"], answers: ["I år köpte vi en stor gran."], feedback: [{ match: "I år köpte vi en gran stor.", tip: "Het bijvoeglijk naamwoord staat vóór het zelfstandig naamwoord: en stor gran." }] }
+          - { id: ebs5, type: order, start: "Wilma", tokens: ["har", "fått", "ett", "nytt", "armband"], answers: ["Wilma har fått ett nytt armband."] }
+          - { id: hd2e, type: order, start: "Vi", tokens: ["bor", "i", "det", "gula", "huset"], answers: ["Vi bor i det gula huset."], topic: adjektiv-bestamd, feedback: [{ match: "Vi bor i gula det huset.", tip: "Eerst det, dan het bijvoeglijk naamwoord: det gula huset." }] }
+          - { id: pwpa, type: order, start: "De", tokens: ["små", "barnen", "sjunger", "i", "kyrkan"], answers: ["De små barnen sjunger i kyrkan."], topic: adjektiv-bestamd }
+          - { id: p8hf, type: order, start: "Det", tokens: ["var", "den", "kallaste", "dagen", "i år"], answers: ["Det var den kallaste dagen i år."], topic: komparation }
 
       - id: wat-zeg-je
         title: Wat zeg je?
@@ -579,6 +621,29 @@ sections:
           - { id: grgy, type: listen, say: "God jul och gott nytt år!", prompt: "Wat wensen ze?", options: ["Vrolijk kerstfeest en gelukkig nieuwjaar!", "Fijne Pasen!", "Gefeliciteerd met je verjaardag!"], answer: 0, topic: jul }
           - { id: aenj, type: listen, say: "Det här är den bästa julen någonsin.", prompt: "Welke vorm hoor je?", options: ["bästa", "bättre", "bra"], answer: 0, topic: komparation }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: kerst in Zweden"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: jul
+        listen: true
+        textTitle: "Julafton"
+        text: |
+          Wilma: Vad gör ni på julafton, Fleur?
+
+          Fleur: I år stannar vi i Västerås. I Nederländerna firar vi jul den tjugofemte december.
+
+          Wilma: Inte på julafton? Vi äter julbord och tittar på Kalle Anka klockan tre.
+
+          Fleur: Kalle Anka? Vem är det?
+
+          Wilma: Det är Donald Duck! Alla i Sverige tittar på Kalle Anka på tv på julafton.
+
+          Fleur: Då ska vi också titta i år.
+        items:
+          - { id: rk46, type: truefalse, statement: "Fleur firar jul i Västerås i år.", answer: true }
+          - { id: qhhe, type: truefalse, statement: "I Nederländerna firar man jul den tjugofemte december.", answer: true }
+          - { id: 4q3w, type: truefalse, statement: "Wilmas familj tittar på Kalle Anka på kvällen.", answer: false }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -602,7 +667,7 @@ sections:
         items:
           - { id: a223, type: gap, topic: adjektiv-bestamd, text: "Har du sett den ___ filmen? (ny)", gaps: [{ answers: ["nya"] }] }
           - { id: qmcm, type: gap, topic: komparation, text: "Wilma är ___ än Nils. (gammal)", gaps: [{ answers: ["äldre"] }] }
-          - { id: u5q3, type: translate, topic: bisats-ordfoljd, prompt: "Ik weet dat hij nooit te laat komt.", answers: ["Jag vet att han aldrig kommer för sent."], feedback: [{ contains: "kommer aldrig", tip: "In de bijzin staat aldrig vóór het werkwoord." }] }
+          - { id: u5q3, type: translate, topic: bisats-ordfoljd, prompt: "Ik weet dat hij nooit te laat komt.", answers: ["Jag vet att han aldrig kommer {för sent|försent}."], feedback: [{ contains: "kommer aldrig", tip: "In de bijzin staat aldrig vóór het werkwoord." }] }
           - { id: f8cn, type: gap, topic: sin-sitt-sina, text: "Nils öppnar ___ julklappar.", gaps: [{ answers: ["sina"], options: ["sin", "sitt", "sina", "hans"], shuffle: false }] }
           - { id: 3ntd, type: gap, topic: perfekt-preteritum, text: "Förra julen ___ (vara) vi i Nederländerna.", gaps: [{ answers: ["var"] }] }
           - { id: k6t2, type: gap, topic: positionsverb, text: "Granen ___ i vardagsrummet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "sitter"], shuffle: false }] }
@@ -615,6 +680,13 @@ sections:
           - { id: yhns, type: gap, topic: placera, text: "___ dig här och vänta lite!", gaps: [{ answers: ["Sätt"], options: ["Sätt", "Sitt", "Ställ"], shuffle: false, feedback: [{ match: "Sitt", tip: "Gaan zitten is een beweging: Sätt dig!" }] }] }
           - { id: 9kb6, type: gap, topic: placera, text: "Bram har lagt boken på bordet. Nu ___ den där.", gaps: [{ answers: ["ligger"], options: ["ligger", "lägger", "står"], shuffle: false, feedback: [{ match: "lägger", tip: "Waar iets nu is (het resultaat): ligger." }] }] }
           - { id: 5mws, type: gap, topic: kroppen, text: "Nils har gått länge och har ont i ___. (zijn voeten)", gaps: [{ answers: ["fötterna"], feedback: [{ match: ["fotarna", "foterna", "fötter"], tip: "fot – fötter, en na ont i de bepaalde vorm: fötterna." }, { match: "hans fötter", tip: "Na ont i: de bepaalde vorm, zonder hans: fötterna." }] }] }
+          - { id: kget, type: gap, topic: vader, text: "På julafton ___ (snöa) det hela dagen.", gaps: [{ answers: ["snöade"], feedback: [{ match: ["snödde", "snöde"], tip: "snöa is een gewoon -ar-werkwoord: snöade." }] }] }
+          - { id: b2cc, type: mc, topic: mat-fraser, prompt: "Je hebt bij vrienden gegeten en staat op van tafel. Wat zeg je?", options: ["Tack för maten!", "Smaklig måltid!", "Varsågod!"], answer: 0, tip: "Na het eten bedank je: Tack för maten!" }
+          - { id: wtn8, type: gap, topic: tempus, text: "Vi hade redan ___ (köpa) alla julklappar i november.", gaps: [{ answers: ["köpt"], feedback: [{ match: ["köpat", "köpte"], tip: "Na hade komt het supinum: köpa – köpte – köpt." }] }] }
+          - { id: 3uwb, type: gap, topic: positionsverb, text: "Katten ___ under granen och sover.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "sitter"], shuffle: false, feedback: [{ match: "står", tip: "Wie slaapt, ligt: ligger." }] }] }
+          - { id: ytt5, type: translate, topic: kroppen, prompt: "Ik heb pijn in mijn rug.", answers: ["Jag har {ont i ryggen|ryggont}."], feedback: [{ contains: "min rygg", tip: "Bij lichaamsdelen gebruik je de bepaalde vorm, zonder min: ont i ryggen." }, { contains: "smärta", tip: "Pijn hebben in = ha ont i." }] }
+          - { id: hcr6, type: gap, topic: adjektiv-obestamd, text: "Vi har köpt en ___ gran i år. (stor)", gaps: [{ answers: ["stor"], feedback: [{ match: ["stort", "stora"], tip: "gran is een en-woord, onbepaald: en stor gran." }] }] }
+          - { id: dedh, type: gap, topic: adjektiv-obestamd, text: "Det var ett ___ julbord. (fin)", gaps: [{ answers: ["fint"], feedback: [{ match: ["fin", "fina"], tip: "julbord is een ett-woord: ett fint julbord." }] }] }
 
       - id: eindherhaling-2
         title: Eindherhaling (2)
@@ -622,12 +694,19 @@ sections:
         items:
           - { id: n5sr, type: translate, topic: v2, prompt: "Morgen gaan we naar oma.", answers: ["Imorgon {ska vi åka|åker vi|ska vi|går vi} till {mormor|farmor}.", "Vi {ska åka|åker|ska|går} till {mormor|farmor} imorgon."], feedback: [{ contains: "imorgon vi", tip: "Na een tijdsbepaling vooraan komt eerst het werkwoord." }] }
           - { id: aqek, type: translate, topic: perfekt-preteritum, prompt: "Ik heb nog nooit een eland gezien.", answers: ["Jag har aldrig sett {någon|en} älg."], feedback: [{ contains: "aldrig har", tip: "aldrig staat na har." }] }
-          - { id: 2q95, type: translate, topic: adjektiv-obestamd, prompt: "Ze hebben een groot rood huis.", answers: ["De har ett stort rött hus."], feedback: [{ contains: "stor röd hus", tip: "hus is een ett-woord: stort rött." }] }
+          - { id: 2q95, type: translate, topic: adjektiv-obestamd, prompt: "Ze hebben een groot rood huis.", answers: ["De har ett stort[,] rött hus."], feedback: [{ contains: "stor röd hus", tip: "hus is een ett-woord: stort rött." }] }
           - { id: 5hmr, type: translate, topic: indirekt-tal, prompt: "Ze vraagt of je komt.", answers: ["Hon frågar om du kommer."], feedback: [{ contains: "om kommer du", tip: "In de bijzin: eerst het onderwerp, dan het werkwoord." }] }
           - { id: v3d3, type: translate, topic: modala, prompt: "Je mag het cadeau nog niet openen.", answers: ["Du får inte öppna {julklappen|presenten|paketet} {än|ännu}."], feedback: [{ contains: "får öppna inte", tip: "inte staat direct na het modale werkwoord." }] }
           - { id: 9cbq, type: translate, topic: komparation, prompt: "Dit is de mooiste dag van het jaar.", answers: ["{Det här|Detta} är den {vackraste|finaste|bästa} dagen på året."], feedback: [{ contains: "i året", tip: "Van het jaar: på året." }] }
           - { id: 7qtq, type: translate, topic: placera, prompt: "Ik heb de sleutels op tafel gelegd.", answers: ["Jag har lagt nycklarna på bordet."], feedback: [{ contains: "har legat", tip: "legat hoort bij ligga (liggen). Iets neerleggen is lägga: har lagt." }, { contains: ["har lagd", "har läggt"], tip: "De supinum van lägga is lagt." }] }
           - { id: sud7, type: translate, topic: kroppen, prompt: "Ik heb pijn in mijn buik.", answers: ["Jag har {ont i magen|magont}.", "Det gör ont i magen."], feedback: [{ contains: ["ont i min mage", "ont i mage"], tip: "Na ont i: de bepaalde vorm, zonder min: ont i magen." }] }
+          - { id: jqxm, type: gap, topic: subjunktioner, text: "Wilma läser ___ Nils bakar pepparkakor. (terwijl)", gaps: [{ answers: ["medan"], feedback: [{ match: ["när", "eftersom"], tip: "Terwijl = medan." }] }] }
+          - { id: 4rjt, type: gap, topic: subjunktioner, text: "Vi öppnar julklapparna ___ vi har ätit. (als, wanneer)", gaps: [{ answers: ["när"], options: ["när", "eftersom", "fastän"], shuffle: false }] }
+          - { id: 5sd3, type: gap, topic: reflexiv, text: "Det är kallt ute. Barnen klär på ___ och går ut i snön.", gaps: [{ answers: ["sig"], options: ["sig", "dem", "mig"], shuffle: false, feedback: [{ match: "dem", tip: "De kinderen kleden zichzelf aan: sig." }] }] }
+          - { id: pjqa, type: gap, topic: reflexiv, text: "Varsågoda, sätt ___ vid bordet!", gaps: [{ answers: ["er"], options: ["oss", "er", "sig"], shuffle: false, feedback: [{ match: "sig", tip: "Je spreekt meer mensen aan (ni): sätt er." }] }] }
+          - { id: p4m3, type: gap, topic: adjektiv-bestamd, text: "Den ___ stjärnan hänger i fönstret. (gul)", gaps: [{ answers: ["gula"], feedback: [{ match: "gul", tip: "Na den krijgt het bijvoeglijk naamwoord -a: den gula stjärnan." }] }] }
+          - { id: sawe, type: gap, topic: adjektiv-bestamd, text: "Det ___ huset bredvid kyrkan är vårt. (gammal)", gaps: [{ answers: ["gamla"], feedback: [{ match: ["gammala", "gammalt", "gammal"], tip: "gammal wordt in de bepaalde vorm gamla: det gamla huset." }] }] }
+          - { id: qra8, type: gap, topic: komparation, text: "Det var den ___ julen i mitt liv. (bra, overtreffende trap)", gaps: [{ answers: ["bästa"], feedback: [{ match: "bäst", tip: "In de bepaalde vorm (den …) krijgt de overtreffende trap -a: den bästa." }, { match: "godaste", tip: "bra – bättre – bäst." }] }] }
 
 vocab:
   - { sv: "en jul", nl: "de kerst", def: "julen", mass: true, pl: "jular", ex: "Vad gör ni i **jul**?", exNl: "Wat doen jullie met kerst?" }

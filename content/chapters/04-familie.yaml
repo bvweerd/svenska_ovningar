@@ -3,7 +3,7 @@ chapter: 4
 # grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
 canDo:
   - { text: "Ik kan vertellen wat ik vorige week heb gedaan", topics: [preteritum, starka-verb] }
-  - { text: "Ik kan over mijn familie vertellen", topics: [possessiv, familj] }
+  - { text: "Ik kan over mijn familie vertellen met min, din, hans, hennes …", topics: [possessiv, familj] }
 
 grammar:
   - id: preteritum
@@ -93,6 +93,22 @@ sections:
   - id: oefeningen
     title: Oefeningen
     exercises:
+      - id: ontdek-preteritum
+        title: Ontdek de regel – verleden tijd
+        instruction: Bekijk de voorbeelden en ontdek zelf de regel. Pas hem daarna toe. De uitleg staat ook op de kaart *De verleden tijd*.
+        topic: preteritum
+        items:
+          - id: esgu
+            type: steps
+            steps:
+              - { type: mc, prompt: "Kijk: *jobbar – jobbade*, *lagar – lagade*, *städar – städade*. Wat valt op?", options: ["Werkwoorden op -ar krijgen -ade.", "Alle werkwoorden krijgen -te.", "De -ar valt weg en er komt -de achter."], answer: 0, shuffle: false, tip: "jobbar, lagar en städar eindigen op -ar, en in de verleden tijd op -ade." }
+              - { type: gap, text: "Igår ___ (titta) vi på film.", gaps: [{ answers: ["tittade"], feedback: [{ match: ["tittde", "tittte", "tittar"], tip: "titta – tittar is een -ar-werkwoord: -ade, tittade." }] }] }
+          - id: 6pn7
+            type: steps
+            steps:
+              - { type: mc, prompt: "Kijk: *ringer – ringde*, *hör – hörde*, maar *köper – köpte*, *läser – läste*. Wanneer -te?", options: ["Als de stam op k, p, s, t of x eindigt.", "Als het werkwoord lang is.", "Bij alle werkwoorden op -er."], answer: 0, shuffle: false, tip: "köp- en läs- eindigen op p en s: dan -te. ring- en hör- niet: dan -de." }
+              - { type: gap, text: "I lördags ___ (åka) vi till Uppsala.", gaps: [{ answers: ["åkte"], feedback: [{ match: ["åkde", "åkade"], tip: "De stam åk- eindigt op k: -te, åkte." }] }] }
+
       - id: pret-regelmatig
         title: Verleden tijd – regelmatig
         instruction: Vul de preteritum in van het werkwoord tussen haakjes.
@@ -337,6 +353,17 @@ sections:
           - { id: z37r, type: translate, prompt: "Gisteren schreef Wilma een brief.", answers: ["{Igår|I går} skrev Wilma ett brev.", "Wilma skrev ett brev {igår|i går}."], feedback: [{ contains: "skrivde", tip: "skriva is sterk: skrev." }] }
           - { id: uekt, type: translate, prompt: "Zijn zus belde gisteren.", answers: ["Hans syster ringde {igår|i går}.", "{Igår|I går} ringde hans syster."], topic: possessiv, feedback: [{ contains: "honom syster", tip: "Zijn (bezit) = hans." }] }
 
+      - id: zinsbouw-verleden
+        title: Zinsbouw – vorige week
+        instruction: Maak de zin af. Het werkwoord staat op plaats 2.
+        topic: preteritum
+        items:
+          - { id: ugt9, type: order, start: "Förra veckan", tokens: ["hälsade", "vi", "på", "mormor"], answers: ["Förra veckan hälsade vi på mormor."], feedback: [{ match: "Förra veckan vi hälsade på mormor.", tip: "Na de tijdsbepaling vooraan komt eerst het werkwoord: Förra veckan hälsade vi." }] }
+          - { id: v2qw, type: order, start: "Igår", tokens: ["ringde", "min", "bror", "mig"], answers: ["Igår ringde min bror mig."], feedback: [{ match: "Igår min bror ringde mig.", tip: "Na Igår komt eerst het werkwoord: Igår ringde min bror." }] }
+          - { id: c5v4, type: order, start: "I söndags", tokens: ["åt", "hela", "familjen", "middag", "tillsammans"], answers: ["I söndags åt hela familjen middag tillsammans.", "I söndags åt hela familjen tillsammans middag."], feedback: [{ match: "I söndags hela familjen åt middag tillsammans.", tip: "Na I söndags komt eerst het werkwoord: I söndags åt hela familjen." }] }
+          - { id: efcq, type: order, start: "Min syster", tokens: ["bodde", "inte", "i", "Sverige", "då"], answers: ["Min syster bodde inte i Sverige då.", "Min syster bodde då inte i Sverige."], feedback: [{ match: "Min syster inte bodde i Sverige då.", tip: "inte staat ná het werkwoord: bodde inte." }] }
+          - { id: 4sjg, type: order, start: "Förra året", tokens: ["fick", "Ingrid", "ett", "barnbarn"], answers: ["Förra året fick Ingrid ett barnbarn."], feedback: [{ match: "Förra året Ingrid fick ett barnbarn.", tip: "Na Förra året komt eerst het werkwoord: Förra året fick Ingrid." }] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -541,6 +568,29 @@ sections:
           - { id: h8f7, type: listen, say: "Nils går till skolan.", prompt: "Welke tijd hoor je?", options: ["tegenwoordige tijd (presens)", "verleden tijd (preteritum)"], answer: 0 }
           - { id: 3phx, type: listen, say: "Det är min mormor.", prompt: "Wie is het?", options: ["de moeder van mijn moeder", "de moeder van mijn vader", "de zus van mijn moeder"], answer: 0, topic: familj }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: het weekend van Ingrid"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: preteritum
+        listen: true
+        textTitle: "I helgen"
+        text: |
+          Fleur: Hej Ingrid! Vad gjorde du i helgen?
+
+          Ingrid: Min syster och hennes barn kom till oss. Vi lagade mat och spelade spel.
+
+          Fleur: Vad trevligt! Hur gamla är hennes barn?
+
+          Ingrid: Hennes son är sex och hennes dotter är nio. De sov hos oss på lördagen.
+
+          Fleur: Var det jobbigt?
+
+          Ingrid: Lite. Nils och hans kusin pratade hela natten!
+        items:
+          - { id: 95g4, type: truefalse, statement: "Ingrids syster kom på besök.", answer: true }
+          - { id: zyjz, type: truefalse, statement: "Systerns son är nio år.", answer: false }
+          - { id: saft, type: truefalse, statement: "Barnen sov hos Ingrid.", answer: true }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -574,6 +624,7 @@ sections:
           - { id: pz5t, type: translate, topic: possessiv, prompt: "Hoe heet je zus?", answers: ["Vad heter din syster?"] }
           - { id: ahmm, type: gap, topic: preteritum, text: "Förra året ___ (resa) vi till Norge.", gaps: [{ answers: ["reste"] }] }
           - { id: 7rhm, type: mc, topic: tycka-om, prompt: "Welke zin is goed?", options: ["Mormor tycker om att baka.", "Mormor tycker om baka.", "Mormor tycker att om baka."], answer: 0, tip: "Bij een activiteit: tycker om att + infinitief." }
+          - { id: urkh, type: gap, topic: presens, text: "Olle ___ (bo) i ett hus i Västerås.", gaps: [{ answers: ["bor"], feedback: [{ match: "boar", tip: "bo eindigt op een lange klinker: alleen -r erachter, bor." }] }] }
 
       - id: herhaling-uitspraak
         title: Uitspraak herhalen

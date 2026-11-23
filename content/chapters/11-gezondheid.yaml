@@ -3,7 +3,7 @@ chapter: 11
 # grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
 canDo:
   - { text: "Ik kan zeggen waar iets ligt, staat of zit, en iets ergens neerleggen of neerzetten", topics: [positionsverb, placera] }
-  - { text: "Ik kan bij de dokter vertellen waar ik last van heb", topics: [kroppen, reflexiv] }
+  - { text: "Ik kan bij de dokter zeggen waar ik pijn heb (ont i …), en wederkerende werkwoorden gebruiken (känna sig, lägga sig, skynda sig …)", topics: [kroppen, reflexiv] }
 
 grammar:
   - id: positionsverb
@@ -354,6 +354,20 @@ sections:
           - { id: 53k2, type: order, topic: reflexiv, start: "Barnen", tokens: ["klär på sig", "och", "skyndar sig", "till skolan"], answers: ["Barnen klär på sig och skyndar sig till skolan."] }
           - { id: hwnd, type: order, start: "Igår", tokens: ["stod", "Ingrid", "i trädgården", "och", "pratade", "med grannen"], answers: ["Igår stod Ingrid i trädgården och pratade med grannen.", "Igår stod Ingrid och pratade med grannen i trädgården."] }
 
+      - id: wederkerend-omvormen
+        title: Mig wordt sig
+        instruction: Vertel hetzelfde over de persoon tussen haakjes. Let op het wederkerend voornaamwoord.
+        topic: reflexiv
+        items:
+          - { id: tet2, type: transform, prompt: "Jag känner mig väldigt trött idag. (Bram)", answers: ["Bram känner sig väldigt trött {idag|i dag}.", "{Idag|I dag} känner {sig Bram|Bram sig} väldigt trött."], feedback: [{ contains: ["känner honom", "känner mig"], tip: "Bij *han/hon* (Bram) hoort *sig*: Bram känner sig." }] }
+          - { id: yac5, type: transform, prompt: "Jag lägger mig tidigt på söndagar. (vi)", answers: ["Vi lägger oss tidigt på söndagar."], feedback: [{ contains: "lägger sig", tip: "Bij *vi* hoort *oss*: vi lägger oss." }] }
+          - { id: r299, type: transform, prompt: "Jag klär på mig innan jag äter frukost. (barnen)", answers: ["Barnen klär på sig innan de äter frukost."], feedback: [{ contains: "innan jag", tip: "Ook in de bijzin gaat het nu over de kinderen: innan de äter." }, { contains: ["på dem", "på mig"], tip: "Bij *de* (barnen) hoort *sig*: barnen klär på sig." }] }
+          - { id: es3f, type: transform, prompt: "Jag sätter mig i soffan och läser. (Ingrid)", answers: ["Ingrid sätter sig {i|på} soffan och läser."], feedback: [{ contains: ["sätter henne", "sätter mig"], tip: "Bij *han/hon* (Ingrid) hoort *sig*: Ingrid sätter sig." }] }
+          - { id: 23uz, type: transform, prompt: "Jag måste skynda mig till bussen. (du)", answers: ["Du måste skynda dig till bussen."], feedback: [{ contains: ["skynda sig", "skynda mig"], tip: "Bij *du* hoort *dig*: du måste skynda dig." }] }
+          - { id: n73n, type: transform, prompt: "Jag vilar mig alltid efter jobbet. (vi)", answers: ["Vi vilar oss alltid efter jobbet."], feedback: [{ contains: "vilar sig", tip: "Bij *vi* hoort *oss*: vi vilar oss." }] }
+          - { id: wcsx, type: transform, prompt: "Jag sätter mig vid bordet i köket. (ni)", answers: ["Ni sätter er vid bordet i köket."], feedback: [{ contains: ["sätter sig", "sätter mig"], tip: "Bij *ni* hoort *er*: ni sätter er." }] }
+          - { id: 7td6, type: transform, prompt: "Jag känner mig mycket bättre idag. (Olle)", answers: ["Olle känner sig mycket bättre {idag|i dag}.", "{Idag|I dag} känner {sig Olle|Olle sig} mycket bättre."], feedback: [{ contains: ["känner honom", "känner mig"], tip: "Bij *han/hon* (Olle) hoort *sig*: Olle känner sig." }] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -610,6 +624,29 @@ sections:
           - { id: 429b, type: listen, say: "Jag har ont i halsen.", prompt: "Waar heeft de spreker pijn?", options: ["in de keel", "in het oor", "in de voet"], answer: 0, topic: kroppen }
           - { id: y7bq, type: listen, say: "Skynda dig, bussen går snart!", prompt: "Welk woord hoor je?", options: ["dig", "mig", "sig"], answer: 0, topic: reflexiv }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: de huisarts bellen"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: kroppen
+        listen: true
+        textTitle: "Samtal till vårdcentralen"
+        text: |
+          Sjuksköterskan: Vårdcentralen, hej. Hur kan jag hjälpa dig?
+
+          Ingrid: Hej. Min son Nils har haft ont i halsen och feber sedan igår.
+
+          Sjuksköterskan: Hur hög feber har han?
+
+          Ingrid: Trettionio grader. Han känner sig väldigt trött.
+
+          Sjuksköterskan: Låt honom vila och dricka mycket. Om han inte mår bättre på fredag kan ni komma hit.
+
+          Ingrid: Tack så mycket.
+        items:
+          - { id: gpmq, type: truefalse, statement: "Nils har ont i magen.", answer: false }
+          - { id: e9tm, type: truefalse, statement: "Nils har feber.", answer: true }
+          - { id: hk2f, type: truefalse, statement: "Ingrid och Nils ska komma till vårdcentralen idag.", answer: false }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -644,6 +681,9 @@ sections:
           - { id: ku6j, type: gap, topic: prep-plats, text: "Lampan hänger ___ soffan. (boven)", gaps: [{ answers: ["över", "ovanför"], feedback: [{ match: "på", tip: "på is op (met contact). Boven = över." }] }] }
           - { id: yycz, type: translate, topic: prep-plats, prompt: "De fiets staat achter het huis.", answers: ["Cykeln står bakom huset."], feedback: [{ contains: "efter huset", tip: "Achter (een plaats) = bakom. efter betekent na." }, { contains: "ligger bakom", tip: "Een fiets staat rechtop: står." }] }
           - { id: 4xq6, type: gap, topic: prep-plats, text: "Ingrid och Olle bor ___ sjön. (aan)", gaps: [{ answers: ["vid"], feedback: [{ match: "på", tip: "Aan het meer (aan de oever) = vid sjön." }] }] }
+          - { id: tghm, type: gap, topic: tempus, text: "När vi kom till vårdcentralen hade läkaren redan ___ (gå) hem.", gaps: [{ answers: ["gått"], feedback: [{ match: ["gåt", "gick"], tip: "Na hade komt het supinum: gått." }] }] }
+          - { id: u4fp, type: order, topic: subjunktioner, start: "Jag tar en tablett", tokens: ["eftersom", "jag", "har", "ont i huvudet"], answers: ["Jag tar en tablett eftersom jag har ont i huvudet."], feedback: [{ match: "Jag tar en tablett eftersom har jag ont i huvudet.", tip: "In de bijzin staat het onderwerp vóór het werkwoord: eftersom jag har." }] }
+          - { id: wu2g, type: translate, topic: mat-fraser, prompt: "Je zit in een café. Vraag om een glas water.", answers: ["Kan jag få ett glas vatten[, tack]?", "Får jag [be om ]ett glas vatten[, tack]?", "Ett glas vatten, tack.", "Jag skulle vilja ha ett glas vatten[, tack]."] }
 
 vocab:
   - { sv: "en kropp", nl: "een lichaam", def: "kroppen", pl: "kroppar", plDef: "kropparna", ex: "Jag har ont i hela **kroppen**.", exNl: "Mijn hele lichaam doet pijn." }

@@ -35,7 +35,7 @@ Elke push naar `main` wordt via GitHub Actions getest, gebouwd en op GitHub Page
 
 Naast de oefeningen per hoofdstuk zijn er onder **Oefenen**: dagelijkse herhaling met
 intervallen (Leitner-dozen), een werkwoordtrainer (`content/verbs.yaml`), toetsen per
-hoofdstuk, flitskaarten en snelle rondes van 60 seconden. Alle voortgang staat in de browser.
+hoofdstuk, flitskaarten (kies de goede betekenis; de app kijkt na) en snelle rondes van 60 seconden. Alle voortgang staat in de browser.
 
 **Dagelijkse herhaling**: een dagdoel van 20 vragen (`DAILY_GOAL`), om en om uit verschillende onderwerpen
 (`pickReview`); wie meer wil, gaat door met „extra herhaling”. Een vraag die de eerste keer in één keer goed
@@ -156,6 +156,7 @@ hoofdstuk + oefening-`id` + vraag-`id`, niet aan de plek van de vraag.
 | `multi` | meerkeuze (meerdere goed) |
 | `gap` | invullen, met `___`; per gat open veld of keuzelijst (`options`) |
 | `translate` | vrije zin (vertalen, omzetten) |
+| `transform` | Zweeds → Zweeds omvormen (twee zinnen verbinden, andere tijd of persoon); de opdracht staat in `instruction` |
 | `order` | woorden in de goede volgorde klikken (optioneel vast begin `start`) |
 | `match` | paren koppelen |
 | `table` | tabel invullen |
@@ -216,6 +217,15 @@ daar, maar is niet nodig. Geef een taak geen `text`: dan blijven de stappen in d
 hoofdstuk (`easyCount`), direct na de leestekst; lengte per niveau in `LINE` (`scripts/difficulty-report.mjs`). Ze tellen
 niet mee voor de leestekstlijn. `npm test` controleert aantal, lengte, `text` zonder `listen` en alleen
 nagekeken vragen.
+
+**Luisterteksten (`listen: true`).** Een oefening met `text` en `listen: true` toont eerst alleen de knop om te
+luisteren (computerstem); de tekst staat ingeklapt. Op de A-site staat vanaf H3 per hoofdstuk een kort gesprek
+(`luisteren-gesprek`) met rätt/fel-vragen in het onderdeel `luisteren`. Luisterteksten tellen niet mee voor de
+leestekstlijn; `content-report` toont wel hun aandeel bekende woorden.
+
+**Ontdek de regel.** Bij een paar regelmatige patronen (meervoud H2, verleden tijd H4, bijvoeglijk naamwoord
+H12) staat vóór de eerste oefening van dat onderwerp een `steps`-vraag: eerst voorbeelden met „Wat valt op?”,
+dan de regel toepassen (inductief, als aanvulling op de uitleg op de kaart).
 
 **„Wat zeg je?” (`kind: situatie`).** Een situatie in het Nederlands; de leerling zegt het zelf in het Zweeds
 (`translate`, meestal meer goede antwoorden en foutregels). Geen `text`. Vanaf H1 minstens 4 vragen per

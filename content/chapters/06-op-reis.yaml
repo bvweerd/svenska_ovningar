@@ -313,6 +313,17 @@ sections:
           - { id: zvk3, type: gap, prompt: "Ga je met lijn 2 of met lijn 5?", text: "Åker du med ___ (2) eller med ___ (5)?", gaps: [{ answers: ["tvåan"], feedback: [{ match: "två", tip: "Bij een lijn: tvåa, bepaald tvåan." }, { match: "tvån", tip: "Bij een lijn: tvåa, bepaald tvåan." }, { match: "andra", tip: "Dat is het rangtelwoord. Voor een lijn zeg je tvåan." }] }, { answers: ["femman"], feedback: [{ match: "fem", tip: "Bij een lijn: femma, bepaald femman." }, { match: "femte", tip: "Dat is het rangtelwoord. Voor een lijn zeg je femman." }] }] }
           - { id: ppnr, type: gap, prompt: "Neem lijn 3 en stap uit bij het station.", text: "Ta ___ och stig av vid stationen. (3)", gaps: [{ answers: ["trean"], feedback: [{ match: "tre", tip: "Bij een lijn: trea, bepaald trean." }, { match: "tredje", tip: "Dat is het rangtelwoord. Voor een lijn zeg je trean." }] }] }
 
+      - id: zinsbouw-tijd
+        title: Zinsbouw – wanneer?
+        instruction: Maak de zin af. Het werkwoord staat op plaats 2.
+        topic: tidsprep
+        items:
+          - { id: 9s4v, type: order, start: "För två år sedan", tokens: ["flyttade", "vi", "till", "Sverige"], answers: ["För två år sedan flyttade vi till Sverige."], feedback: [{ match: "För två år sedan vi flyttade till Sverige.", tip: "Na de tijdsbepaling vooraan komt eerst het werkwoord: … flyttade vi." }] }
+          - { id: djh9, type: order, start: "Om tio minuter", tokens: ["går", "nästa", "buss"], answers: ["Om tio minuter går nästa buss."], feedback: [{ match: "Om tio minuter nästa buss går.", tip: "Na de tijdsbepaling vooraan komt eerst het werkwoord: … går nästa buss." }] }
+          - { id: 6zgg, type: order, start: "På sommaren", tokens: ["tar", "vi", "ofta", "färjan", "till Gotland"], answers: ["På sommaren tar vi ofta färjan till Gotland."], feedback: [{ match: "På sommaren tar ofta vi färjan till Gotland.", tip: "ofta staat ná het onderwerp als dat achter het werkwoord staat: tar vi ofta." }] }
+          - { id: fwpu, type: order, start: "Tåget", tokens: ["var", "en", "timme", "försenat"], answers: ["Tåget var en timme försenat."] }
+          - { id: vuh3, type: order, start: "I morgon", tokens: ["måste", "Bram", "vara", "på flygplatsen", "klockan sex"], answers: ["I morgon måste Bram vara på flygplatsen klockan sex.", "I morgon måste Bram vara klockan sex på flygplatsen."], feedback: [{ match: "I morgon Bram måste vara på flygplatsen klockan sex.", tip: "Na de tijdsbepaling vooraan komt eerst het werkwoord: I morgon måste Bram." }] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -558,6 +569,31 @@ sections:
           - { id: 65fz, type: listen, say: "I somras var vi på Gotland.", prompt: "Wanneer waren ze op Gotland?", options: ["vorige zomer", "deze zomer", "elke zomer"], answer: 0, topic: tidsprep }
           - { id: fux3, type: listen, say: "Bussen går om tio minuter.", prompt: "Wanneer vertrekt de bus?", options: ["over tien minuten", "tien minuten geleden", "tien minuten lang"], answer: 0, topic: tidsprep }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: een kaartje kopen"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: transport
+        listen: true
+        textTitle: "På stationen"
+        text: |
+          Bram: Hej! Jag vill åka till Uppsala. När går nästa tåg?
+
+          Expediten: Nästa tåg går om tjugo minuter, från spår tre.
+
+          Bram: Hur mycket kostar en biljett?
+
+          Expediten: En enkel biljett kostar 120 kronor. Tur och retur kostar 220 kronor.
+
+          Bram: Jag tar en enkel, tack. Kan jag betala med kort?
+
+          Expediten: Ja, det går bra.
+
+          Bram: Bra, då betalar jag med kort.
+        items:
+          - { id: s578, type: truefalse, statement: "Tåget går om tjugo minuter.", answer: true }
+          - { id: agmx, type: truefalse, statement: "Bram köper en biljett tur och retur.", answer: false }
+          - { id: xuca, type: truefalse, statement: "Bram betalar med kort.", answer: true }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -592,6 +628,9 @@ sections:
           - { id: 3me8, type: gap, topic: an, text: "Tåget är snabbare ___ bussen.", gaps: [{ answers: ["än"], options: ["än", "som"], shuffle: false, feedback: [{ match: "som", tip: "Na een vergelijkende vorm (snabbare, äldre …) komt än. som hoort bij lika … som." }] }] }
           - { id: sqb9, type: gap, topic: an, text: "Min syster är äldre än ___. (ik)", gaps: [{ answers: ["jag", "mig"], feedback: [{ match: ["min", "mitt"], tip: "min is bezittelijk (mijn). Na än: jag of mig." }] }] }
           - { id: yc3u, type: gap, topic: an, text: "Nils är lika lång som ___. (zij, enkelvoud)", gaps: [{ answers: ["hon", "henne"], feedback: [{ match: "hennes", tip: "hennes is bezittelijk (haar). Na som: hon of henne." }] }] }
+          - { id: gugz, type: order, topic: inte, start: "Idag", tokens: ["åker", "vi", "inte", "till flygplatsen"], answers: ["Idag åker vi inte till flygplatsen."], feedback: [{ match: "Idag åker inte vi till flygplatsen.", tip: "Staat het onderwerp na het werkwoord, dan komt inte na het onderwerp: åker vi inte." }] }
+          - { id: nrt3, type: gap, topic: starka-verb, text: "I fredags ___ (ta) Fleur en taxi till flygplatsen.", gaps: [{ answers: ["tog"], feedback: [{ match: ["tade", "tar"], tip: "ta is een sterk werkwoord: ta – tar – tog." }] }] }
+          - { id: xt3p, type: translate, topic: tycka-om, prompt: "Bram houdt niet van vliegen.", answers: ["Bram tycker inte om att flyga.", "Bram gillar inte att flyga."], feedback: [{ contains: "tycker om inte", tip: "inte staat direct na het werkwoord: tycker inte om." }, { contains: "inte flyga", tip: "Na tycka om en gilla komt att + infinitief: att flyga." }] }
 
 vocab:
   - { sv: "en biljett", nl: "een kaartje", def: "biljetten", pl: "biljetter", plDef: "biljetterna", ex: "Jag köper en **biljett** till Uppsala.", exNl: "Ik koop een kaartje naar Uppsala." }

@@ -2,7 +2,7 @@ chapter: 3
 # Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
 # grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
 canDo:
-  - { text: "Ik kan vertellen wat ik in mijn vrije tijd doe en hoe vaak", topics: [frekvens] }
+  - { text: "Ik kan zeggen hoe vaak ik iets doe (alltid, ofta, ibland, aldrig) en waar dat woord in de zin staat", topics: [frekvens] }
   - { text: "Ik kan zeggen wat ik leuk vind en wat niet", topics: [tycka-om] }
   - { text: "Ik kies de goede vorm van een persoonlijk voornaamwoord (jag of mig, han of honom)", topics: [objekt] }
 
@@ -429,6 +429,31 @@ sections:
           - { id: 2aar, type: listen, say: "Jag ser henne på bion.", prompt: "Welk woord hoor je?", options: ["henne", "hon", "hennes"], answer: 0, topic: objekt }
           - { id: vck7, type: listen, say: "Nils tycker om att spela fotboll.", prompt: "Waar houdt Nils van?", options: ["voetballen", "tennissen", "zwemmen"], answer: 0, topic: tycka-om }
 
+      - id: luisteren-gesprek
+        title: "Luisteren: wat doe je in het weekend?"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: frekvens
+        listen: true
+        textTitle: "På helgen"
+        text: |
+          Olle: Hej Bram! Vad gör du på helgen?
+
+          Bram: Jag spelar fotboll. Jag spelar nästan alltid på lördagar. Och du?
+
+          Olle: Jag fiskar ofta. Jag tycker om att vara vid sjön.
+
+          Bram: Fiskar du på vintern också?
+
+          Olle: Nej, sällan. Då läser jag. Vill du följa med mig på söndag?
+
+          Bram: Ja, gärna! Men jag kan inte fiska.
+
+          Olle: Jag kan hjälpa dig.
+        items:
+          - { id: tpe5, type: truefalse, statement: "Bram spelar fotboll på lördagar.", answer: true }
+          - { id: vsfg, type: truefalse, statement: "Olle fiskar ofta på vintern.", answer: false }
+          - { id: dqm8, type: truefalse, statement: "Bram kan inte fiska.", answer: true }
+
       - id: luisteren-dictee
         title: "Dictee"
         instruction: Luister en maak de zin die je hoort.
@@ -463,6 +488,7 @@ sections:
           - { id: xv9b, type: mc, topic: dagar, prompt: "Welke zin is goed geschreven?", options: ["Vi ses på fredag.", "Vi ses på Fredag."], answer: 0, shuffle: false, tip: "De dagen van de week krijgen in het Zweeds geen hoofdletter." }
           - { id: vvpb, type: gap, topic: dagar, text: "Idag är det onsdag. Imorgon är det ___.", gaps: [{ answers: ["torsdag"], feedback: [{ match: "tisdag", tip: "tisdag is de dag vóór onsdag. Welke dag komt erna?" }, { match: "donderdag", tip: "Dat is Nederlands. Donderdag is in het Zweeds torsdag." }] }] }
           - { id: hbu6, type: gap, topic: dagar, text: "Fleur jobbar på ___, från klockan ett till fem.", gaps: [{ answers: ["eftermiddagen"], options: ["morgonen", "eftermiddagen", "natten"], feedback: [{ match: "morgonen", tip: "Van één tot vijf uur is het 's middags: på eftermiddagen." }] }] }
+          - { id: dpvz, type: translate, topic: inte, prompt: "Wilma speelt vandaag geen gitaar.", answers: ["Wilma spelar inte gitarr {idag|i dag}.", "{Idag|I dag} spelar Wilma inte gitarr."], feedback: [{ contains: "inte spelar", tip: "inte staat ná het werkwoord: spelar inte." }, { contains: "spelar Wilma gitarr inte", tip: "inte staat direct na het onderwerp (Wilma): spelar Wilma inte gitarr." }] }
 
       - id: herhaling-uitspraak
         title: Uitspraak herhalen
