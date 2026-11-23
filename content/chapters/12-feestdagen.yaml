@@ -667,7 +667,7 @@ sections:
         items:
           - { id: a223, type: gap, topic: adjektiv-bestamd, text: "Har du sett den ___ filmen? (ny)", gaps: [{ answers: ["nya"] }] }
           - { id: qmcm, type: gap, topic: komparation, text: "Wilma är ___ än Nils. (gammal)", gaps: [{ answers: ["äldre"] }] }
-          - { id: u5q3, type: translate, topic: bisats-ordfoljd, prompt: "Ik weet dat hij nooit te laat komt.", answers: ["Jag vet att han aldrig kommer {för sent|försent}."], feedback: [{ contains: "kommer aldrig", tip: "In de bijzin staat aldrig vóór het werkwoord." }] }
+          - { id: u5q3, type: translate, topic: bisats-ordfoljd, prompt: "Ik weet dat hij nooit te laat komt.", answers: ["Jag vet att han aldrig kommer för sent."], feedback: [{ contains: "försent", retry: true, tip: "Bijna: schrijf *för sent* in twee woorden." }, { contains: "kommer aldrig", tip: "In de bijzin staat aldrig vóór het werkwoord." }] }
           - { id: f8cn, type: gap, topic: sin-sitt-sina, text: "Nils öppnar ___ julklappar.", gaps: [{ answers: ["sina"], options: ["sin", "sitt", "sina", "hans"], shuffle: false }] }
           - { id: 3ntd, type: gap, topic: perfekt-preteritum, text: "Förra julen ___ (vara) vi i Nederländerna.", gaps: [{ answers: ["var"] }] }
           - { id: k6t2, type: gap, topic: positionsverb, text: "Granen ___ i vardagsrummet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "sitter"], shuffle: false }] }

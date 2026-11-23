@@ -34,9 +34,10 @@ gebruikers waren niet beschikbaar.
    antwoordruimte verruimd.
 
 Alle nieuwe Zweedse zinnen zijn vóór publicatie door een aparte taalreview gegaan (drie rondes); de
-bevindingen zijn verwerkt. Voor de eigenaar open: *vila sig* (H11) is correct maar minder gangbaar dan *vila*;
-*så* met inversie (spreektaal) wordt fout gerekend met de tip „in verzorgd Zweeds …”; *försent* naast *för sent*
-toegestaan (H12).
+bevindingen zijn verwerkt. De twijfels zijn daarna uitgezocht: *vila sig* (H11) is vervangen door het
+gangbaardere *tvätta sig*; *så* met inversie (spreektaal) en *försent* (Språkrådet raadt *för sent* aan) zijn
+goed Zweeds maar niet wat geoefend wordt. Daarvoor is er nu een foutregel met `retry: true`: geen fout, wel
+een tip en nog een poging. Echte foutregels gaan altijd voor.
 
 De nieuwe rapportregel (kan-doen-onderwerp minder dan 3 keer later terug) gold ook voor de B-site; die
 krijgt aparte aanvullingen.
