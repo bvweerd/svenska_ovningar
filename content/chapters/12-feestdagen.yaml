@@ -156,6 +156,13 @@ sections:
           - { id: gxrf, type: gap, text: "Barnen är ___. (glad)", gaps: [{ answers: ["glada"] }] }
           - { id: acuq, type: gap, text: "Kaffet är ___. (god)", gaps: [{ answers: ["gott"], feedback: [{ match: ["godt", "got"], tip: "Klinker + d wordt -tt: gott." }] }] }
           - { id: 4yjn, type: gap, text: "Vi har två ___ katter. (svart)", gaps: [{ answers: ["svarta"] }] }
+          - { id: vm85, type: gap, text: "Gräset är ___ efter regnet. (blöt)", gaps: [{ answers: ["blött"], feedback: [{ match: "blöt", tip: "gräs is een ett-woord: blöt + t wordt blött." }, { match: "blöta", tip: "gräset is enkelvoud: blött." }] }] }
+          - { id: ehqk, type: gap, text: "Vi hade ___ väder hela veckan. (solig)", gaps: [{ answers: ["soligt"], feedback: [{ match: "solig", tip: "väder is een ett-woord: soligt väder." }] }] }
+          - { id: dm7g, type: gap, text: "Kaffet är för ___. (stark)", gaps: [{ answers: ["starkt"], feedback: [{ match: "stark", tip: "kaffe is een ett-woord: kaffet är starkt." }] }] }
+          - { id: 285k, type: gap, text: "Kanelbullarna är väldigt ___. (söt)", gaps: [{ answers: ["söta"], feedback: [{ match: ["söt", "sött"], tip: "kanelbullarna is meervoud: söta." }] }] }
+          - { id: mmyg, type: gap, text: "Vi lagar en ___ soppa. (vegetarisk)", gaps: [{ answers: ["vegetarisk"], feedback: [{ match: "vegetariskt", tip: "soppa is een en-woord: geen -t." }] }] }
+          - { id: 6qqy, type: gap, text: "Vi köper ___ frukt på torget. (färsk)", gaps: [{ answers: ["färsk"], feedback: [{ match: "färskt", tip: "frukt is een en-woord: färsk frukt." }] }] }
+          - { id: wgnf, type: gap, text: "Det är så ___ i skogen på morgonen. (tyst)", gaps: [{ answers: ["tyst"], feedback: [{ match: "tystt", tip: "tyst eindigt al op -t: er komt niets bij." }] }] }
 
       - id: bepaald-tabel
         title: Onbepaald en bepaald
@@ -188,6 +195,8 @@ sections:
           - { id: mdnz, type: gap, text: "Vi bor i det ___ huset vid sjön. (liten)", gaps: [{ answers: ["lilla"], feedback: [{ match: ["litet", "små"], tip: "Bepaald enkelvoud van liten: lilla." }] }] }
           - { id: p87f, type: gap, text: "Den ___ katten sover i soffan. (svart)", gaps: [{ answers: ["svarta"], feedback: [{ match: "svart", tip: "Na den (bepaald) krijgt het bijvoeglijk naamwoord -a: den svarta katten." }] }] }
           - { id: 7pfj, type: gap, text: "Jag tar de ___ skorna idag. (blå)", gaps: [{ answers: ["blå", "blåa"] }] }
+          - { id: e27d, type: gap, text: "Den ___ tårtan står på bordet. (stor)", gaps: [{ answers: ["stora"], feedback: [{ match: "stor", tip: "Na den (bepaald) krijgt het bijvoeglijk naamwoord -a: den stora tårtan." }] }] }
+          - { id: d3fj, type: gap, text: "Vår ___ chef heter Karin. (ny)", gaps: [{ answers: ["nya"], feedback: [{ match: "ny", tip: "Na vår, min, din … krijgt het adjectief -a: vår nya chef." }] }] }
 
       - id: adjectief-kiezen-maken
         title: Welke vorm? Kies en vertaal
@@ -292,6 +301,9 @@ sections:
           - { id: qdmv, type: translate, prompt: "Nils is kleiner dan Wilma.", answers: ["Nils är {mindre|kortare} än Wilma."], feedback: [{ contains: "litenare", tip: "liten is onregelmatig: mindre." }] }
           - { id: zhh9, type: translate, prompt: "Dit is de mooiste kerk van Zweden.", answers: ["{Det här|Detta} är den {vackraste|finaste} kyrkan i Sverige.", "{Det här|Detta} är Sveriges {vackraste|finaste} kyrka."], feedback: [{ contains: ["den vackrast kyrkan", "den finast kyrkan"], tip: "Bepaald: den vackraste kyrkan." }] }
           - { id: env4, type: translate, prompt: "Wilma loopt sneller dan Nils.", answers: ["Wilma {springer|går} {snabbare|fortare} än Nils."], feedback: [{ contains: "mer snabb", tip: "snabb is een gewoon bijvoeglijk naamwoord: snabbare." }] }
+          - { id: 3dyd, type: translate, prompt: "Kip is goedkoper dan vlees.", answers: ["Kyckling är billigare än kött."], feedback: [{ contains: "mer billig", tip: "billig is een gewoon bijvoeglijk naamwoord: billigare." }] }
+          - { id: 8xyz, type: translate, prompt: "Het water in de zee is kouder dan in het meer.", answers: ["Vattnet i havet är kallare än [vattnet ]i sjön."], feedback: [{ contains: "mer kall", tip: "kall is een gewoon bijvoeglijk naamwoord: kallare." }, { contains: ["vatten i havet", "i hav är", "i sjö"], tip: "Het water, de zee, het meer: allemaal de bepaalde vorm (vattnet, havet, sjön)." }] }
+          - { id: 96c2, type: translate, prompt: "Mijn nieuwe telefoon heeft een groter scherm.", answers: ["Min nya {telefon|mobil|mobiltelefon} har en större skärm."], feedback: [{ contains: ["mer stor", "storare"], tip: "stor is onregelmatig: större." }, { contains: "min ny", tip: "Na min krijgt het adjectief -a: min nya telefon." }] }
 
       - id: feestdagen-quiz
         title: Wanneer is het feest?
@@ -491,6 +503,9 @@ sections:
           - { id: ncr8, type: gap, topic: ordningstal, text: "Lucia firas den ___ december. (13)", gaps: [{ answers: ["trettonde"] }] }
           - { id: 85gu, type: translate, topic: det-finns, prompt: "Er zijn geen peperkoekjes meer.", answers: ["Det finns {inga|inte några} pepparkakor kvar."], feedback: [{ contains: "inte pepparkakor", tip: "Geen + meervoud: inga." }] }
           - { id: g5gr, type: order, topic: tidsuttryck, start: "På julafton", tokens: ["tittar", "många svenskar", "på Kalle Anka"], answers: ["På julafton tittar många svenskar på Kalle Anka."] }
+          - { id: yhns, type: gap, topic: placera, text: "___ dig här och vänta lite!", gaps: [{ answers: ["Sätt"], options: ["Sätt", "Sitt", "Ställ"], shuffle: false, feedback: [{ match: "Sitt", tip: "Gaan zitten is een beweging: Sätt dig!" }] }] }
+          - { id: 9kb6, type: gap, topic: placera, text: "Bram har lagt boken på bordet. Nu ___ den där.", gaps: [{ answers: ["ligger"], options: ["ligger", "lägger", "står"], shuffle: false, feedback: [{ match: "lägger", tip: "Waar iets nu is (het resultaat): ligger." }] }] }
+          - { id: 5mws, type: gap, topic: kroppen, text: "Nils har gått länge och har ont i ___. (zijn voeten)", gaps: [{ answers: ["fötterna"], feedback: [{ match: ["fotarna", "foterna", "fötter"], tip: "fot – fötter, en na ont i de bepaalde vorm: fötterna." }, { match: "hans fötter", tip: "Na ont i: de bepaalde vorm, zonder hans: fötterna." }] }] }
 
       - id: eindherhaling-2
         title: Eindherhaling (2)
@@ -502,6 +517,8 @@ sections:
           - { id: 5hmr, type: translate, topic: indirekt-tal, prompt: "Ze vraagt of je komt.", answers: ["Hon frågar om du kommer."], feedback: [{ contains: "om kommer du", tip: "In de bijzin: eerst het onderwerp, dan het werkwoord." }] }
           - { id: v3d3, type: translate, topic: modala, prompt: "Je mag het cadeau nog niet openen.", answers: ["Du får inte öppna {julklappen|presenten|paketet} {än|ännu}."], feedback: [{ contains: "får öppna inte", tip: "inte staat direct na het modale werkwoord." }] }
           - { id: 9cbq, type: translate, topic: komparation, prompt: "Dit is de mooiste dag van het jaar.", answers: ["{Det här|Detta} är den {vackraste|finaste|bästa} dagen på året."], feedback: [{ contains: "i året", tip: "Van het jaar: på året." }] }
+          - { id: 7qtq, type: translate, topic: placera, prompt: "Ik heb de sleutels op tafel gelegd.", answers: ["Jag har lagt nycklarna på bordet."], feedback: [{ contains: "har legat", tip: "legat hoort bij ligga (liggen). Iets neerleggen is lägga: har lagt." }, { contains: ["har lagd", "har läggt"], tip: "De supinum van lägga is lagt." }] }
+          - { id: sud7, type: translate, topic: kroppen, prompt: "Ik heb pijn in mijn buik.", answers: ["Jag har {ont i magen|magont}.", "Det gör ont i magen."], feedback: [{ contains: ["ont i min mage", "ont i mage"], tip: "Na ont i: de bepaalde vorm, zonder min: ont i magen." }] }
 
 vocab:
   - { sv: "en jul", nl: "de kerst", def: "julen", mass: true, pl: "jular", ex: "Vad gör ni i **jul**?", exNl: "Wat doen jullie met kerst?" }

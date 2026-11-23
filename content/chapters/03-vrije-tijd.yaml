@@ -345,9 +345,24 @@ sections:
           - { id: qg3a, type: gap, topic: imperativ, text: "___ (lyssna) på mig!", gaps: [{ answers: ["Lyssna"] }] }
           - { id: akmn, type: gap, topic: substantiv, text: "Jag har en cykel. ___ (cykel) är röd.", gaps: [{ answers: ["Cykeln"], feedback: [{ match: "Cykelen", tip: "Woorden op -el krijgen alleen -n: cykeln." }] }] }
           - { id: d9d6, type: mc, topic: tycka-om, prompt: "Welke zin is goed?", options: ["Jag tycker inte om kaffe.", "Jag inte tycker om kaffe.", "Jag tycker om inte kaffe."], answer: 0, tip: "inte staat tussen tycker en om." }
-          - { id: 77vs, type: clock, time: "10:20" }
+          - { id: 77vs, type: clock, topic: klockan, time: "10:20" }
           - { id: dcc3, type: translate, topic: vragen, prompt: "Waarom woon je in Zweden?", answers: ["Varför bor du i Sverige?"] }
           - { id: 3deu, type: gap, topic: tidsuttryck, text: "På lördag ___ (åka) vi till Stockholm.", gaps: [{ answers: ["åker"] }] }
+          - { id: xv9b, type: mc, topic: dagar, prompt: "Welke zin is goed geschreven?", options: ["Vi ses på fredag.", "Vi ses på Fredag."], answer: 0, shuffle: false, tip: "De dagen van de week krijgen in het Zweeds geen hoofdletter." }
+          - { id: vvpb, type: gap, topic: dagar, text: "Idag är det onsdag. Imorgon är det ___.", gaps: [{ answers: ["torsdag"], feedback: [{ match: "tisdag", tip: "tisdag is de dag vóór onsdag. Welke dag komt erna?" }, { match: "donderdag", tip: "Dat is Nederlands. Donderdag is in het Zweeds torsdag." }] }] }
+          - { id: hbu6, type: gap, topic: dagar, text: "Fleur jobbar på ___, från klockan ett till fem.", gaps: [{ answers: ["eftermiddagen"], options: ["morgonen", "eftermiddagen", "natten"], feedback: [{ match: "morgonen", tip: "Van één tot vijf uur is het 's middags: på eftermiddagen." }] }] }
+
+      - id: herhaling-uitspraak
+        title: Uitspraak herhalen
+        instruction: Uitspraak uit hoofdstuk 0. Bij de luistervraag spreekt de computerstem het woord uit; die klinkt niet altijd helemaal natuurlijk.
+        shuffle: true
+        items:
+          - { id: ekqe, type: mc, topic: klinkerlengte, prompt: "Is de o in **bok** (boek) lang of kort?", options: ["lang", "kort"], answer: 0, shuffle: false, tip: "Na de o staat maar één medeklinker." }
+          - { id: udvk, type: mc, topic: klinkerlengte, prompt: "Is de u in **buss** (bus) lang of kort?", options: ["lang", "kort"], answer: 1, shuffle: false, tip: "Na de u staan twee medeklinkers (ss)." }
+          - { id: u5yf, type: listen, topic: klinkerlengte, say: "tack", prompt: "Welk woord hoor je?", options: ["tak", "tack"], answer: 1, shuffle: false }
+          - { id: dvvx, type: mc, topic: klemtoon, prompt: "Waar ligt de klemtoon in **studera** (studeren)?", options: ["STU-de-ra", "stu-DE-ra", "stu-de-RA"], answer: 1, shuffle: false, tip: "Werkwoorden op -era: klemtoon op de e van -era." }
+          - { id: gndu, type: mc, topic: klemtoon, prompt: "Waar ligt de klemtoon in **kafé** (café)?", options: ["KA-fé", "ka-FÉ"], answer: 1, shuffle: false, tip: "Een leenwoord: klemtoon achteraan, net als in het Nederlands." }
+          - { id: zcvb, type: mc, topic: klemtoon, prompt: "Waar ligt de klemtoon in **lärare** (leraar)?", options: ["LÄ-ra-re", "lä-RA-re", "lä-ra-RE"], answer: 0, shuffle: false, tip: "Een gewoon Zweeds woord: klemtoon vooraan." }
 
 vocab:
   - { sv: "en hobby", nl: "een hobby", def: "hobbyn", pl: "hobbyer", plDef: "hobbyerna", ex: "Vad har du för **hobbyer**?", exNl: "Wat voor hobby's heb jij?" }

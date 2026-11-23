@@ -135,14 +135,14 @@ sections:
         instruction: Maak de zin af. Let op het verschil tussen een voegwoord en een bijwoord.
         topic: konjunktioner
         items:
-          - { id: et78, type: order, start: "Det regnar, så", tokens: ["jag", "stannar", "hemma"], answers: ["Det regnar, så jag stannar hemma."] }
-          - { id: 79a2, type: order, start: "Det regnar. Därför", tokens: ["stannar", "jag", "hemma"], answers: ["Det regnar. Därför stannar jag hemma."] }
-          - { id: exnq, type: order, start: "Olle är trött, men", tokens: ["han", "jobbar", "ändå"], answers: ["Olle är trött, men han jobbar ändå."] }
-          - { id: z5vk, type: order, start: "Olle är trött. Ändå", tokens: ["han", "jobbar"], answers: ["Olle är trött. Ändå jobbar han."] }
-          - { id: 6ehb, type: order, start: "Jag tar inte bussen, utan", tokens: ["jag", "cyklar"], answers: ["Jag tar inte bussen, utan jag cyklar."] }
-          - { id: bcv4, type: order, start: "Jag är hungrig, så", tokens: ["äter", "jag", "en smörgås"], answers: ["Jag är hungrig, så jag äter en smörgås."] }
-          - { id: qfwk, type: order, start: "Jag är hungrig. Därför", tokens: ["jag", "äter", "en smörgås"], answers: ["Jag är hungrig. Därför äter jag en smörgås."] }
-          - { id: zfzr, type: order, start: "Det är kallt, men", tokens: ["badar", "vi", "ändå"], answers: ["Det är kallt, men vi badar ändå."] }
+          - { id: et78, type: order, start: "Det regnar, så", tokens: ["jag", "stannar", "hemma"], answers: ["Det regnar, så jag stannar hemma."], feedback: [{ match: "Det regnar, så stannar jag hemma.", tip: "så is hier een voegwoord (dus): daarna blijft de gewone volgorde, eerst het onderwerp en dan het werkwoord." }] }
+          - { id: 79a2, type: order, start: "Det regnar. Därför", tokens: ["stannar", "jag", "hemma"], answers: ["Det regnar. Därför stannar jag hemma."], feedback: [{ match: "Det regnar. Därför jag stannar hemma.", tip: "Därför is een bijwoord op plaats 1: het werkwoord komt er direct achter." }] }
+          - { id: exnq, type: order, start: "Olle är trött, men", tokens: ["han", "jobbar", "ändå"], answers: ["Olle är trött, men han jobbar ändå."], feedback: [{ match: "Olle är trött, men jobbar han ändå.", tip: "men is een voegwoord: daarna blijft de gewone volgorde, men han jobbar …" }] }
+          - { id: z5vk, type: order, start: "Olle är trött. Ändå", tokens: ["han", "jobbar"], answers: ["Olle är trött. Ändå jobbar han."], feedback: [{ match: "Olle är trött. Ändå han jobbar.", tip: "Ändå is een bijwoord op plaats 1: het werkwoord komt er direct achter." }] }
+          - { id: 6ehb, type: order, start: "Jag tar inte bussen, utan", tokens: ["jag", "cyklar"], answers: ["Jag tar inte bussen, utan jag cyklar."], feedback: [{ match: "Jag tar inte bussen, utan cyklar jag.", tip: "utan is een voegwoord: daarna blijft de gewone volgorde, utan jag cyklar." }] }
+          - { id: bcv4, type: order, start: "Jag är hungrig, så", tokens: ["äter", "jag", "en smörgås"], answers: ["Jag är hungrig, så jag äter en smörgås."], feedback: [{ match: "Jag är hungrig, så äter jag en smörgås.", tip: "så is hier een voegwoord (dus): daarna blijft de gewone volgorde, eerst het onderwerp en dan het werkwoord." }] }
+          - { id: qfwk, type: order, start: "Jag är hungrig. Därför", tokens: ["jag", "äter", "en smörgås"], answers: ["Jag är hungrig. Därför äter jag en smörgås."], feedback: [{ match: "Jag är hungrig. Därför jag äter en smörgås.", tip: "Därför is een bijwoord op plaats 1: het werkwoord komt er direct achter." }] }
+          - { id: zfzr, type: order, start: "Det är kallt, men", tokens: ["badar", "vi", "ändå"], answers: ["Det är kallt, men vi badar ändå."], feedback: [{ match: "Det är kallt, men badar vi ändå.", tip: "men is een voegwoord: daarna blijft de gewone volgorde, men vi badar …" }] }
 
       - id: zinnen-verbinden
         title: Verbind de zinnen
@@ -180,12 +180,12 @@ sections:
         items:
           - { id: h5t5, type: translate, prompt: "– Jag bor i Västerås. – Ik ook.", answers: ["Det gör jag också."], feedback: [{ match: ["Jag också", "Jag bor också i Västerås"], tip: "Dat kan in spreektaal, maar oefen hier de korte vorm: Det gör jag också." }, { match: "Det bor jag också", tip: "Bij een gewoon werkwoord (bor) gebruik je gör." }] }
           - { id: ex9t, type: translate, prompt: "– Jag har två barn. – Ik ook.", answers: ["Det har jag också."], feedback: [{ match: "Det gör jag också", tip: "Bij har herhaal je har." }] }
-          - { id: 4w37, type: translate, prompt: "– Jag ska åka till Gotland. – Ik ook.", answers: ["Det ska jag också."] }
+          - { id: 4w37, type: translate, prompt: "– Jag ska åka till Gotland. – Ik ook.", answers: ["Det ska jag också."], feedback: [{ match: "Det gör jag också.", tip: "Bij ska herhaal je ska: Det ska jag också." }] }
           - { id: yapn, type: translate, prompt: "– Jag förstår inte. – Ik ook niet.", answers: ["Inte jag heller.", "Det gör inte jag heller."], feedback: [{ contains: "också", tip: "Bij een ontkenning: heller in plaats van också." }] }
           - { id: kdcd, type: translate, prompt: "– Jag jobbar hemma idag. – Ik niet.", answers: ["Det gör inte jag.", "Inte jag."] }
           - { id: qvbs, type: translate, prompt: "– Jag är hungrig. – Ik ook.", answers: ["Det är jag också."], feedback: [{ match: "Det gör jag också", tip: "Bij är herhaal je är." }, { match: ["Jag också", "Jag är också hungrig"], tip: "Dat kan in spreektaal, maar oefen hier de korte vorm: Det är jag också." }] }
           - { id: g443, type: translate, prompt: "– Jag kan inte simma. – Ik ook niet.", answers: ["Inte jag heller.", "Det kan {inte jag|jag inte} heller."], feedback: [{ contains: "också", tip: "Bij een ontkenning: heller in plaats van också." }] }
-          - { id: hyu8, type: translate, prompt: "– Jag gillar inte regn. – Ik wel.", answers: ["Men det gör jag.", "Det gör jag."] }
+          - { id: hyu8, type: translate, prompt: "– Jag gillar inte regn. – Ik wel.", answers: ["Men det gör jag.", "Det gör jag."], feedback: [{ match: ["Det gör jag också.","Inte jag heller."], tip: "De ander houdt níet van regen en jij wel: Men det gör jag." }] }
 
       - id: weer-koppelen
         title: Het weer
@@ -239,7 +239,7 @@ sections:
         items:
           - { id: bnnn, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag gillar inte regn.” Zeg dat jij het ook niet leuk vindt.", answers: ["{Inte jag heller|Det gör inte jag heller|Det gör jag inte heller}."], feedback: [{ contains: "Jag också", tip: "Bij een ontkenning: inte jag heller." }] }
           - { id: xgrr, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag gillar sommaren.” Zeg dat jij dat ook doet.", answers: ["{Jag också|Det gör jag också|Jag med|Det gör jag med}.", "Jag gillar {också sommaren|den också}."], feedback: [{ contains: "Inte jag heller", tip: "Bij een bevestigende zin: jag också." }] }
-          - { id: sh3k, type: translate, topic: konjunktioner, prompt: "Een vriend vraagt hoe het weer is. Zeg dat het regent, maar dat het warm is.", answers: ["Det regnar, men det är varmt."] }
+          - { id: sh3k, type: translate, topic: konjunktioner, prompt: "Een vriend vraagt hoe het weer is. Zeg dat het regent, maar dat het warm is.", answers: ["Det regnar, men det är varmt."], feedback: [{ contains: "men är det", tip: "men is een voegwoord: daarna blijft de gewone volgorde, men det är …" }, { match: "Det regnar, men det är varm.", tip: "Na det är krijgt het weerwoord een -t: varmt." }] }
           - { id: jmcf, type: translate, topic: konjunktioner, prompt: "Zeg dat je thuisblijft, want het sneeuwt.", answers: ["Jag stannar hemma, {för|för att|eftersom} det snöar."], feedback: [{ contains: "för snöar det", tip: "Na för blijft de gewone volgorde: för det snöar." }] }
 
       - id: zoek-de-fout
@@ -384,6 +384,12 @@ sections:
           - { id: 35sr, type: gap, topic: ordningstal, text: "Nyårsafton är den ___ december. (31)", gaps: [{ answers: ["trettioförsta"] }] }
           - { id: tnqy, type: gap, topic: possessiv, text: "Ingrid och Olle har en stuga. ___ stuga ligger i Dalarna.", gaps: [{ answers: ["Deras"], options: ["Deras", "Dem", "Sin"] }] }
           - { id: hahu, type: mc, topic: modala, prompt: "Welke zin is goed?", options: ["Du får inte elda här.", "Du inte får elda här.", "Du får elda inte här."], answer: 0, tip: "inte staat direct na het modale werkwoord." }
+          - { id: kdm2, type: gap, topic: transport, text: "Vi ___ buss till stranden.", gaps: [{ answers: ["åker"], options: ["åker", "går", "kör"], shuffle: false, feedback: [{ match: "går", tip: "Met de bus (een voertuig) reis je: åka buss. gå is lopen." }, { match: "kör", tip: "köra is zelf rijden. Als passagier: åka buss." }] }] }
+          - { id: jbdu, type: translate, topic: transport, prompt: "We nemen de trein naar het zomerhuisje.", answers: ["Vi {tar tåget|åker tåg|åker tåget|åker med tåget|åker med tåg} till {stugan|sommarstugan}."], feedback: [{ contains: "tar tåg", tip: "Na ta komt de bepaalde vorm: ta tåget." }, { contains: ["går med tåget", "går tåg"], tip: "Met een voertuig: åka of ta (Vi tar tåget)." }] }
+          - { id: d5p2, type: gap, topic: transport, text: "Olle ___ (köra) bil till Dalarna.", gaps: [{ answers: ["kör"], feedback: [{ match: ["körer", "körar"], tip: "De stam van köra eindigt al op r: kör, zonder extra -er." }] }] }
+          - { id: bta6, type: translate, topic: pengar, prompt: "Hoeveel kost de tent?", answers: ["{Hur mycket|Vad} kostar tältet?"], feedback: [{ contains: ["kostar tält", "kostar den tält"], tip: "De tent: bepaalde vorm, tältet (ett-woord)." }, { contains: "hur många kostar", tip: "Bij een prijs vraag je hur mycket, niet hur många." }] }
+          - { id: 37qj, type: mc, topic: pengar, prompt: "Je betaalt met een briefje van 100 kronor. Wat heb je in je hand?", options: ["en hundralapp", "en tia", "en hundrabiljett"], answer: 0, shuffle: false, tip: "Een briefje is en lapp: en hundralapp. En biljett is een kaartje." }
+          - { id: 9ffb, type: translate, topic: pengar, prompt: "Mag ik het bonnetje?", answers: ["Kan jag få {kvittot|kvitto}[, tack]?", "Får jag {kvittot|kvitto}[, tack]?", "Kvittot, tack."] }
 
 vocab:
   - { sv: "ett väder", nl: "het weer", def: "vädret", mass: true, ex: "Hur är **vädret** idag?", exNl: "Hoe is het weer vandaag?" }

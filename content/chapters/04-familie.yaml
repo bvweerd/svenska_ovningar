@@ -454,12 +454,26 @@ sections:
           - { id: 7zrj, type: order, topic: objekt, start: "Igår", tokens: ["träffade", "jag", "henne", "på stan"], answers: ["Igår träffade jag henne på stan."] }
           - { id: 4zrh, type: translate, topic: modala, prompt: "Mijn zoon kan al zwemmen.", answers: ["Min son kan redan simma."] }
           - { id: qsfv, type: gap, topic: frekvens, text: "Vi ___ (äta) sällan ute.", gaps: [{ answers: ["äter"] }] }
-          - { id: d6sv, type: clock, time: "03:50" }
+          - { id: d6sv, type: clock, topic: klockan, time: "03:50" }
+          - { id: qb5v, type: mc, topic: klockan, prompt: "**kvart i tre**", options: ["2.45", "3.15", "3.45"], answer: 0, shuffle: false, tip: "i = voor: een kwartier vóór drie." }
+          - { id: d9hx, type: gap, topic: klockan, text: "Het is 10.30. Klockan är ___.", gaps: [{ answers: ["halv elva"], feedback: [{ match: "halv tio", tip: "halv + het volgende uur, net als in het Nederlands: half elf is halv elva." }] }] }
           - { id: mxax, type: translate, topic: imperativ, prompt: "Bel me morgen!", answers: ["Ring[ till] mig {imorgon|i morgon}!"] }
           - { id: 8q7k, type: gap, topic: substantiv, text: "Nils har en hund. ___ (hund) heter Sigge.", gaps: [{ answers: ["Hunden"], feedback: [{ match: "Hundet", tip: "hund is een en-woord: hunden." }] }] }
           - { id: pz5t, type: translate, topic: possessiv, prompt: "Hoe heet je zus?", answers: ["Vad heter din syster?"] }
           - { id: ahmm, type: gap, topic: preteritum, text: "Förra året ___ (resa) vi till Norge.", gaps: [{ answers: ["reste"] }] }
           - { id: 7rhm, type: mc, topic: tycka-om, prompt: "Welke zin is goed?", options: ["Mormor tycker om att baka.", "Mormor tycker om baka.", "Mormor tycker att om baka."], answer: 0, tip: "Bij een activiteit: tycker om att + infinitief." }
+
+      - id: herhaling-uitspraak
+        title: Uitspraak herhalen
+        instruction: Uitspraak uit hoofdstuk 0. Bij de luistervraag spreekt de computerstem het woord uit; die klinkt niet altijd helemaal natuurlijk.
+        shuffle: true
+        items:
+          - { id: wgsy, type: mc, topic: ordaccent, prompt: "Welk woordaccent heeft **bussen** (de bus)?", options: ["accent 1", "accent 2"], answer: 0, shuffle: false, tip: "Eén lettergreep (buss) met -en erachter: accent 1." }
+          - { id: uq3m, type: mc, topic: ordaccent, prompt: "Welk woordaccent heeft **dagar** (dagen)?", options: ["accent 1", "accent 2"], answer: 1, shuffle: false, tip: "Een meervoud op -ar: accent 2." }
+          - { id: rv8r, type: listen, topic: ordaccent, say: "flickor", prompt: "Hoor je één toon (accent 1) of een „zingende” dubbele toon (accent 2)?", options: ["accent 1", "accent 2"], answer: 1, shuffle: false }
+          - { id: nkh4, type: mc, topic: spreektaal, prompt: "Hoe wordt **dem** (hen) in gewone spreektaal meestal uitgesproken?", options: ["dom", "dem, met duidelijke e", "deem"], answer: 0, tip: "In spreektaal klinken de en dem allebei als dom." }
+          - { id: fz3h, type: mc, topic: spreektaal, prompt: "Hoe klinkt **att** in *Jag gillar att läsa*?", options: ["als een korte o (informeel geschreven als *å*)", "att, met duidelijke t", "at, met een lange a"], answer: 0, tip: "Vóór een infinitief klinkt att in spreektaal als een korte o. Het voegwoord att (dat) spreek je wel met t uit." }
+          - { id: cvkt, type: gap, topic: spreektaal, text: "Je hoort *sej* → je schrijft ___", gaps: [{ answers: ["sig"], feedback: [{ match: "sej", tip: "Zo spreek je het uit. De gewone schrijfwijze is met een g aan het eind, net als mig en dig." }] }] }
 
 vocab:
   - { sv: "en familj", nl: "een gezin, een familie", def: "familjen", pl: "familjer", plDef: "familjerna", ex: "Min **familj** bor i Nederländerna.", exNl: "Mijn familie woont in Nederland." }

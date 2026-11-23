@@ -169,6 +169,9 @@ Alles in november 2026.
   uitlegkaart; #6 gebruikersfeedback (overslaan, slepen, deelpunten, dagdoel herhaling, statistieken,
   getallen als woord in H6, groepen in H2/H4, met taalreview); #9 UX-analyse (`UX-REVIEW.md`); afgesloten met een
   code-review (10 bevindingen, alle verwerkt).
+- **Rapport inhoud en didactiek** (`npm run content-report`, ook in CI): A-site bijgewerkt tot 0 aandachtspunten:
+  foutregels H0–H2 en H7–H10 ≥ 50%, uitspraak- en themakaarten terug in latere herhalingen, `pengar` en
+  `mat-fraser` aangevuld, woordenschat H7–H9 vaker terug, makkelijke tekst H2. Met taalreview.
 
 ## Open / volgende stappen
 
