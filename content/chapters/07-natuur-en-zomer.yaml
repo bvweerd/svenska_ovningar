@@ -355,7 +355,7 @@ sections:
 
       - id: luisteren-dictee
         title: "Dictee"
-        instruction: Luister en schrijf de zin op.
+        instruction: Luister en maak de zin die je hoort.
         topic: konjunktioner
         shuffle: true
         items:
