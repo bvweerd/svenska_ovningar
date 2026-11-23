@@ -173,6 +173,8 @@ Alles in november 2026.
   foutregels H0–H2 en H7–H10 ≥ 50%, uitspraak- en themakaarten terug in latere herhalingen, `pengar` en
   `mat-fraser` aangevuld, woordenschat H7–H9 vaker terug, makkelijke tekst H2. B-site ook op 0: makkelijke
   teksten ≥ 95% bekend, langere zinnen, foutregels, woordenschat H21/H26/H27 vaker terug. Met taalreview.
+- **„Wat zeg je?” ook in H1–H4** (output op A1 omhoog, 4–5 situaties per hoofdstuk) en lange zinnen met één
+  antwoord verruimd op beide sites (A: H6, H7; B: H13, H19, H23, H25). Met taalreview.
 
 ## Open / volgende stappen
 
