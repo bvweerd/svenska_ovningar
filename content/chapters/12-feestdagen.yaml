@@ -132,13 +132,13 @@ sections:
           - id: 57ux
             type: steps
             steps:
-              - { type: mc, prompt: "Kijk: *en stor bil – ett stort hus – två stora bilar*. Wat valt op?", options: ["Bij een ett-woord komt er -t achter, in het meervoud -a.", "Bij een en-woord komt er -t achter.", "Het bijvoeglijk naamwoord verandert nooit."], answer: 0, shuffle: false, tip: "en stor, ett stor**t**, två stor**a**." }
+              - { type: mc, prompt: "Kijk: *en stor bil – ett stort hus – två stora bilar*. Wat valt op?", options: ["Bij een ett-woord komt er -t achter, in het meervoud -a.", "Bij een en-woord komt er -t achter.", "Het bijvoeglijk naamwoord verandert nooit."], answer: 0, tip: "en stor, ett stor**t**, två stor**a**." }
               - { type: gap, text: "ett ___ rum (varm)", gaps: [{ answers: ["varmt"], feedback: [{ match: ["varm", "varma"], tip: "rum is een ett-woord: varm + t, ett varmt rum." }] }] }
           - id: 89nx
             type: steps
             topic: adjektiv-bestamd
             steps:
-              - { type: mc, prompt: "Kijk: *den stora bilen – det stora huset – de stora bilarna*. Wat valt op?", options: ["In de bepaalde vorm komt er den/det/de vóór, en het bijvoeglijk naamwoord krijgt -a (ook bij een ett-woord en in het meervoud).", "In de bepaalde vorm krijgt het bijvoeglijk naamwoord -t.", "In de bepaalde vorm valt den/det/de weg."], answer: 0, shuffle: false, tip: "den stor**a**, det stor**a**, de stor**a**: -a, en het zelfstandig naamwoord is ook bepaald." }
+              - { type: mc, prompt: "Kijk: *den stora bilen – det stora huset – de stora bilarna*. Wat valt op?", options: ["In de bepaalde vorm komt er den/det/de vóór, en het bijvoeglijk naamwoord krijgt -a (ook bij een ett-woord en in het meervoud).", "In de bepaalde vorm krijgt het bijvoeglijk naamwoord -t.", "In de bepaalde vorm valt den/det/de weg."], answer: 0, tip: "den stor**a**, det stor**a**, de stor**a**: -a, en het zelfstandig naamwoord is ook bepaald." }
               - { type: gap, text: "den ___ tröjan (gul)", gaps: [{ answers: ["gula"], feedback: [{ match: ["gul", "gult"], tip: "Na den krijgt het bijvoeglijk naamwoord -a: den gula tröjan." }] }] }
 
       - id: adjectief-vormen
@@ -667,7 +667,7 @@ sections:
         items:
           - { id: a223, type: gap, topic: adjektiv-bestamd, text: "Har du sett den ___ filmen? (ny)", gaps: [{ answers: ["nya"] }] }
           - { id: qmcm, type: gap, topic: komparation, text: "Wilma är ___ än Nils. (gammal)", gaps: [{ answers: ["äldre"] }] }
-          - { id: u5q3, type: translate, topic: bisats-ordfoljd, prompt: "Ik weet dat hij nooit te laat komt.", answers: ["Jag vet att han aldrig kommer {för sent|försent}."], feedback: [{ contains: "kommer aldrig", tip: "In de bijzin staat aldrig vóór het werkwoord." }] }
+          - { id: u5q3, type: translate, topic: bisats-ordfoljd, prompt: "Ik weet dat hij nooit te laat komt.", answers: ["Jag vet att han aldrig kommer för sent."], feedback: [{ contains: "försent", retry: true, tip: "Bijna: schrijf *för sent* in twee woorden." }, { contains: "kommer aldrig", tip: "In de bijzin staat aldrig vóór het werkwoord." }] }
           - { id: f8cn, type: gap, topic: sin-sitt-sina, text: "Nils öppnar ___ julklappar.", gaps: [{ answers: ["sina"], options: ["sin", "sitt", "sina", "hans"], shuffle: false }] }
           - { id: 3ntd, type: gap, topic: perfekt-preteritum, text: "Förra julen ___ (vara) vi i Nederländerna.", gaps: [{ answers: ["var"] }] }
           - { id: k6t2, type: gap, topic: positionsverb, text: "Granen ___ i vardagsrummet.", gaps: [{ answers: ["står"], options: ["ligger", "står", "sitter"], shuffle: false }] }

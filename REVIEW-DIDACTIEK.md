@@ -34,9 +34,22 @@ gebruikers waren niet beschikbaar.
    antwoordruimte verruimd.
 
 Alle nieuwe Zweedse zinnen zijn vóór publicatie door een aparte taalreview gegaan (drie rondes); de
-bevindingen zijn verwerkt. Voor de eigenaar open: *vila sig* (H11) is correct maar minder gangbaar dan *vila*;
-*så* met inversie (spreektaal) wordt fout gerekend met de tip „in verzorgd Zweeds …”; *försent* naast *för sent*
-toegestaan (H12).
+bevindingen zijn verwerkt. De twijfels zijn daarna uitgezocht: *vila sig* (H11) is vervangen door het
+gangbaardere *tvätta sig*; *så* met inversie (spreektaal) en *försent* (Språkrådet raadt *för sent* aan) zijn
+goed Zweeds maar niet wat geoefend wordt. Daarvoor is er nu een foutregel met `retry: true`: geen fout, wel
+een tip en nog een poging. Echte foutregels gaan altijd voor.
 
-De nieuwe rapportregel (kan-doen-onderwerp minder dan 3 keer later terug) gold ook voor de B-site; die
-krijgt aparte aanvullingen.
+## B-site (zelfde ronde)
+
+Metingen: output met aandacht voor betekenis op B1 laag (8–12% in H14–H16, H18–H21; 4 situaties per
+hoofdstuk), 26–38 woorden per hoofdstuk alleen in de lijst (H15, H17, H20–H24), geen inductieve oefeningen,
+kan-doen H13 beloofde „vacature begrijpen” maar mat de lijdende vorm, en 8 kan-doen-onderwerpen kwamen later
+te weinig terug. Gedaan:
+- „Wat zeg je?” in H13–H18 en H20–H24 van 4 naar 8 situaties (44 nieuw, ruime antwoordsets, `retry` waar
+  goed Zweeds niet de geoefende vorm is);
+- per hoofdstuk H15, H17, H20–H24 „Woorden in een zin” (139 zinnen): op een paar onregelmatige vormen na staat
+  elk woord nu in een zin;
+- ontdek de regel bij de lijdende vorm met -s (H13), deelwoorden (H14) en woordvorming (H23);
+- kan-doen H13 herschreven, de leesvragen bij de vacature tellen niet meer mee voor de lijdende vorm;
+- 11 herhalingsvragen voor de 8 onderwerpen die te weinig terugkwamen.
+Alles na taalreview. Open voor de eigenaar: *läss* naast *läses* (nu: geen fout, wel „schrijf läses”).

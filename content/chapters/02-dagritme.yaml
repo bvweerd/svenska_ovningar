@@ -202,12 +202,12 @@ sections:
           - id: gtgr
             type: steps
             steps:
-              - { type: mc, prompt: "Kijk: *en flicka – två flickor*, *en klocka – två klockor*, *en gata – två gator*. Wat valt op?", options: ["En-woorden op -a: de -a wordt -or.", "Alle woorden krijgen -ar.", "Ett-woorden krijgen -or."], answer: 0, shuffle: false, tip: "Alle drie zijn en-woorden op -a, en alle drie eindigen op -or." }
+              - { type: mc, prompt: "Kijk: *en flicka – två flickor*, *en klocka – två klockor*, *en gata – två gator*. Wat valt op?", options: ["En-woorden op -a: de -a wordt -or.", "Alle woorden krijgen -ar.", "Ett-woorden krijgen -or."], answer: 0, tip: "Alle drie zijn en-woorden op -a, en alle drie eindigen op -or." }
               - { type: gap, text: "en vecka – två ___", gaps: [{ answers: ["veckor"], feedback: [{ match: ["veckar", "vecker"], tip: "vecka is een en-woord op -a: de -a wordt -or." }] }] }
           - id: ftcp
             type: steps
             steps:
-              - { type: mc, prompt: "Kijk: *ett hus – två hus*, *ett barn – två barn*, *ett bord – två bord*. Wat valt op?", options: ["Ett-woorden op een medeklinker krijgen geen uitgang.", "Ett-woorden krijgen -er.", "Alle woorden blijven in het meervoud gelijk."], answer: 0, shuffle: false, tip: "Alle drie zijn ett-woorden die op een medeklinker eindigen, en ze veranderen niet." }
+              - { type: mc, prompt: "Kijk: *ett hus – två hus*, *ett barn – två barn*, *ett bord – två bord*. Wat valt op?", options: ["Ett-woorden op een medeklinker krijgen geen uitgang.", "Ett-woorden krijgen -er.", "Alle woorden blijven in het meervoud gelijk."], answer: 0, tip: "Alle drie zijn ett-woorden die op een medeklinker eindigen, en ze veranderen niet." }
               - { type: gap, text: "ett år – två ___", gaps: [{ answers: ["år"], feedback: [{ match: ["åren", "årar", "årer"], tip: "år is een ett-woord op een medeklinker: geen uitgang, två år." }] }] }
 
       - id: meervoud-tabel-1
