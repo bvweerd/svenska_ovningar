@@ -319,7 +319,7 @@ sections:
 
           Fleur skrattar och säger förlåt. Sedan ringer hon rätt nummer. Hon får en tid på torsdag klockan tio.
         items:
-          - { id: pabq, type: truefalse, statement: "Först ringer Fleur till en pizzeria.", answer: true }
+          - { id: pabq, type: truefalse, statement: "Först ringer Fleur fel nummer.", answer: true }
           - { id: z22e, type: mc, prompt: "När får Fleur en tid?", options: ["På tisdag.", "På torsdag.", "På fredag."], answer: 1 }
           - { id: 8nvx, type: truefalse, statement: "Mannen är tandläkare.", answer: false }
 

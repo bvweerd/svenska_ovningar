@@ -432,10 +432,10 @@ sections:
         kind: makkelijk
         textTitle: "Lucia"
         text: |
-          I december är det lucia. Wilma är lucia i skolan. Hon har en lång vit klänning och ljus i håret. Nils sjunger också. Kören sjunger vackert, och alla föräldrar lyssnar. Efteråt äter de lussekatter och pepparkakor. Nils tycker att lussekatterna är godare än pepparkakorna.
+          I december är det Lucia. Wilma är Lucia i skolan. Hon har ett långt vitt linne och ljus i håret. Nils sjunger också. Kören sjunger vackert, och alla föräldrar lyssnar. Efteråt äter de lussekatter och pepparkakor. Nils tycker att lussekatterna är godare än pepparkakorna.
         items:
           - { id: ydcy, type: mc, prompt: "Vad har Wilma i håret?", options: ["Blommor.", "Ljus.", "En mössa."], answer: 1 }
-          - { id: y2z9, type: truefalse, statement: "Wilma har en svart klänning.", answer: false }
+          - { id: y2z9, type: truefalse, statement: "Wilma har ett svart linne.", answer: false }
           - { id: he66, type: truefalse, statement: "Nils tycker att pepparkakorna är godare.", answer: false }
 
       - id: makkelijk-4
@@ -445,7 +445,7 @@ sections:
         kind: makkelijk
         textTitle: "Vinter vid sjön"
         text: |
-          I januari är det kallt, och det ligger mycket snö. Olle och Nils åker skidor i skogen. Wilma åker hellre skridskor på sjön. Det är det roligaste hon vet. Efteråt dricker alla varmt te i det lilla köket. Nils är tröttast av alla.
+          I januari är det kallt, och det ligger mycket snö. Olle och Nils åker skidor i skogen. Wilma åker hellre skridskor på sjön. Det är det roligaste hon vet. Efteråt dricker alla varmt te i köket hemma. Nils är tröttast av alla.
         items:
           - { id: uj6z, type: truefalse, statement: "Det ligger mycket snö.", answer: true }
           - { id: vm4e, type: mc, prompt: "Vad gör Wilma hellre?", options: ["Hon åker skidor.", "Hon åker skridskor.", "Hon dricker te."], answer: 1 }

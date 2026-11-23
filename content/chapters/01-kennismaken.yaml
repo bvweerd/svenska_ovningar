@@ -688,11 +688,11 @@ sections:
         text: |
           Klockan är sju. Fleur och Bram är i köket. Bram dricker kaffe och Fleur läser en tidning.
 
-          – Vad gör du i dag? frågar Bram.
+          – Vad gör du idag? frågar Bram.
 
           – Jag jobbar till klockan fem, säger Fleur. Och du?
 
-          – Jag har en kurs klockan tio, säger Bram.
+          – Jag har en kurs klockan sex, säger Bram.
         items:
           - { id: n5mr, type: mc, prompt: "Vad gör Fleur i köket?", options: ["Hon dricker kaffe.", "Hon läser en tidning.", "Hon jobbar."], answer: 1 }
           - { id: 7ywx, type: truefalse, statement: "Fleur jobbar till klockan fem.", answer: true }

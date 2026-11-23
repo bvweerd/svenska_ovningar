@@ -431,10 +431,10 @@ sections:
         kind: makkelijk
         textTitle: "Olles syster"
         text: |
-          Olle har en syster. Hon heter Karin och bor i Malmö. Hennes man heter Lars. De har tre barn. Förra sommaren kom de till Västerås. Barnen badade i sjön med Wilma och Nils. Karin och Olle pratade i trädgården. Det var en bra vecka.
+          Olle har en syster. Hon heter Lena och bor i Malmö. Hennes man heter Lars. De har tre barn. Förra sommaren kom de till Västerås. Barnen badade i sjön med Wilma och Nils. Lena och Olle pratade i trädgården. Det var en bra vecka.
         items:
-          - { id: nmb4, type: truefalse, statement: "Karin bor i Malmö.", answer: true }
-          - { id: 9dxj, type: mc, prompt: "Hur många barn har Karin?", options: ["Två.", "Tre.", "Fyra."], answer: 1 }
+          - { id: nmb4, type: truefalse, statement: "Lena bor i Malmö.", answer: true }
+          - { id: 9dxj, type: mc, prompt: "Hur många barn har Lena?", options: ["Två.", "Tre.", "Fyra."], answer: 1 }
           - { id: uzpm, type: truefalse, statement: "Barnen badade i havet.", answer: false }
 
       - id: taak-mormor

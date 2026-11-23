@@ -389,9 +389,9 @@ sections:
         kind: makkelijk
         textTitle: "Grannarna ovanför"
         text: |
-          Ovanför Sara bor en familj med två små barn. Sara tycker om dem, men barnen springer på golvet när hon vill sova. En dag går Sara upp och pratar med mamman. Mamman säger förlåt. Hon säger att barnen ska vara tysta efter klockan nio. Nu sover Sara bättre, eftersom barnen sover när hon lägger sig.
+          Ovanför Sara bor en familj med två barn. Sara tycker om dem, men barnen springer på golvet när hon vill sova. En dag går Sara upp och pratar med mamman. Mamman säger förlåt. Hon säger att barnen inte ska springa efter klockan nio. Nu sover Sara bättre, eftersom barnen sover när hon lägger sig.
         items:
-          - { id: cyx7, type: mc, prompt: "Vem bor ovanför Sara?", options: ["En familj med två barn.", "En gammal man.", "Fleurs kollega."], answer: 0 }
+          - { id: cyx7, type: mc, prompt: "Vem bor ovanför Sara?", options: ["En familj med två barn.", "En gammal man.", "En student."], answer: 0 }
           - { id: f6mt, type: truefalse, statement: "Barnen springer på golvet.", answer: true }
           - { id: 8xm3, type: truefalse, statement: "Sara sover sämre nu.", answer: false }
 

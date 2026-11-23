@@ -408,7 +408,7 @@ sections:
         kind: makkelijk
         textTitle: "Olles maj"
         text: |
-          Olle har mycket att göra i maj. Den första maj är han ledig. Den femte maj fyller Ingrid år. Den tolfte maj åker han till Malmö och hälsar på Karin. Den tjugonde maj spelar Nils fotboll med skolan. Olle vill se det.
+          Olle har mycket att göra i maj. Den första maj är han ledig. Den femte maj fyller Ingrid år. Den tolfte maj åker han till Malmö och hälsar på Lena. Den tjugonde maj har Nils en fotbollsmatch med skolan. Olle vill se matchen.
         items:
           - { id: 34xy, type: mc, prompt: "När fyller Ingrid år?", options: ["Den första maj.", "Den femte maj.", "Den tolfte maj."], answer: 1 }
           - { id: a7yv, type: truefalse, statement: "Olle åker till Malmö den tolfte maj.", answer: true }

@@ -456,9 +456,9 @@ sections:
         kind: makkelijk
         textTitle: "Brams dag"
         text: |
-          Bram vaknar klockan sex. Han duschar och äter frukost. Klockan sju cyklar han till jobbet. Han jobbar till klockan fyra. På måndagar och onsdagar går han till kursen på kvällen. På tisdagar tränar han. På söndagar vill han inte jobba. Då läser han och sover länge.
+          Bram vaknar klockan halv sju. Han duschar och äter frukost. Klockan halv åtta tar han bussen till jobbet. Han jobbar till klockan fem. På måndagar och onsdagar går han till kursen på kvällen. På tisdagar tränar han. På söndagar jobbar han inte. Då läser han och sover länge.
         items:
-          - { id: zw35, type: truefalse, statement: "Bram tar bussen till jobbet.", answer: false }
+          - { id: zw35, type: truefalse, statement: "Bram cyklar till jobbet.", answer: false }
           - { id: tp2m, type: mc, prompt: "När tränar Bram?", options: ["På måndagar.", "På tisdagar.", "På söndagar."], answer: 1 }
           - { id: tbw9, type: truefalse, statement: "På söndagar sover Bram länge.", answer: true }
 
@@ -469,11 +469,13 @@ sections:
         kind: makkelijk
         textTitle: "I parken"
         text: |
-          Det är lördag. Fleur och Nils går till parken. Där finns många barn och tre hundar. Två pojkar spelar fotboll. Nils vill spela med dem.
+          Det är lördag. Fleur och Nils går till parken. Där finns många barn och tre hundar. Två pojkar spelar fotboll. Nils vill också spela.
 
           – Får jag spela? frågar han.
 
           – Ja, kom! säger pojkarna.
+
+          Nils spelar med pojkarna.
 
           Fleur läser en bok. Klockan tolv går de hem och äter lunch.
         items:
