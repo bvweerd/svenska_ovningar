@@ -170,7 +170,7 @@ sections:
             type: steps
             steps:
               - { type: mc, prompt: "Nils ontbeet in vijf minuten. Welke uitdrukking?", options: ["om", "för … sedan", "i", "på"], answer: 3, shuffle: false, tip: "Hoe lang je erover doet: på." }
-              - { type: translate, prompt: "Vertaal: Nils ontbeet in vijf minuten.", answers: ["Nils åt frukost på fem minuter."], feedback: [{ contains: "i fem minuter", tip: "Hoe lang hij erover deed: på fem minuter." }] }
+              - { type: translate, prompt: "Vertaal: Nils ontbeet in vijf minuten.", answers: ["Nils åt [sin ]frukost på fem minuter."], feedback: [{ contains: "i fem minuter", tip: "Hoe lang hij erover deed: på fem minuter." }] }
           - id: nm7x
             type: steps
             steps:

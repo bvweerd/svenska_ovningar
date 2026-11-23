@@ -337,6 +337,17 @@ sections:
           - { id: z37r, type: translate, prompt: "Gisteren schreef Wilma een brief.", answers: ["{Igår|I går} skrev Wilma ett brev.", "Wilma skrev ett brev {igår|i går}."], feedback: [{ contains: "skrivde", tip: "skriva is sterk: skrev." }] }
           - { id: uekt, type: translate, prompt: "Zijn zus belde gisteren.", answers: ["Hans syster ringde {igår|i går}.", "{Igår|I går} ringde hans syster."], topic: possessiv, feedback: [{ contains: "honom syster", tip: "Zijn (bezit) = hans." }] }
 
+      - id: wat-zeg-je
+        title: Wat zeg je?
+        instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
+        kind: situatie
+        items:
+          - { id: mvvx, type: translate, topic: preteritum, prompt: "Een collega vraagt wat je gisteren deed. Zeg dat je je zus bezocht.", answers: ["Jag {besökte|hälsade på} min syster[ igår].", "Igår {besökte jag|hälsade jag på} min syster."], feedback: [{ contains: "besökade", tip: "De stam besök- eindigt op een k: dan wordt het -te (besökte)." }, { contains: "igår jag", tip: "Begin je met igår, dan komt het werkwoord op plaats 2: igår besökte jag …" }, { contains: ["mitt syster", "mina syster"], tip: "syster is een en-woord: min syster." }, { contains: ["besöker", "hälsar på"], tip: "Gisteren: verleden tijd (besökte)." }] }
+          - { id: m4wn, type: translate, topic: starka-verb, prompt: "Een vriend vraagt waar je gisteren was. Zeg dat je thuis was.", answers: ["Jag var hemma[ igår].", "Igår var jag hemma."], feedback: [{ contains: ["jag är hemma", "är jag hemma"], tip: "Gisteren: verleden tijd. vara – var." }, { contains: "igår jag", tip: "Begin je met igår, dan komt het werkwoord op plaats 2: igår var jag hemma." }] }
+          - { id: 9zsh, type: translate, topic: possessiv, prompt: "Iemand vraagt naar je familie. Zeg dat je broer in Utrecht woont.", answers: ["Min bror bor i Utrecht."], feedback: [{ contains: ["mitt bror", "mina bror"], tip: "bror is een en-woord: min bror." }, { contains: "min broer", tip: "Broer = bror." }] }
+          - { id: 8b7k, type: translate, topic: possessiv, prompt: "Je laat een foto zien. Zeg dat dit je ouders zijn.", answers: ["{Det här|Här} är mina föräldrar."], feedback: [{ contains: ["min föräldrar", "mitt föräldrar"], tip: "föräldrar is meervoud: mina föräldrar." }, { contains: ["mina förälder ", "mina föräldrarna"], tip: "Na mina: het meervoud zonder lidwoord, föräldrar." }] }
+          - { id: nhax, type: translate, topic: starka-verb, prompt: "Een vriendin vraagt wat je voor je verjaardag kreeg. Zeg dat je een jas kreeg.", answers: ["Jag fick en jacka[ i present]."], feedback: [{ contains: ["fådde", "fåde", "jag får"], tip: "få is onregelmatig: få – fick." }, { contains: "ett jacka", tip: "jacka is een en-woord: en jacka." }] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.

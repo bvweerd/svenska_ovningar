@@ -590,6 +590,17 @@ sections:
           - { id: 93zb, type: translate, prompt: "Nils spreekt geen Fins.", answers: ["Nils {talar|pratar|kan} inte finska."], topic: inte }
           - { id: dtqg, type: translate, prompt: "Waar woont Ingrid?", answers: ["Var bor Ingrid?"], topic: vragen }
 
+      - id: wat-zeg-je
+        title: Wat zeg je?
+        instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
+        kind: situatie
+        items:
+          - { id: ns8z, type: translate, topic: presens, prompt: "Iemand vraagt hoe je heet. Zeg dat je Bram heet.", answers: ["[Hej, ]jag {heter|är} Bram."], feedback: [{ contains: "heter jag", tip: "In een gewone zin staat het onderwerp vooraan: jag heter …" }] }
+          - { id: qqkf, type: translate, topic: presens, prompt: "Een nieuwe collega vraagt waar je vandaan komt. Zeg dat je uit Nederland komt.", answers: ["Jag kommer från {Nederländerna|Holland}."], feedback: [{ contains: ["kommer ut ", "kommer uit "], tip: "Uit (een land) = från: Jag kommer från …" }, { contains: "nederland ", tip: "Nederland = Nederländerna." }] }
+          - { id: xtqg, type: translate, topic: presens, prompt: "Je buurvrouw vraagt of je Zweeds spreekt. Zeg dat je een beetje Zweeds spreekt.", answers: ["[Ja, ]jag {talar|pratar|kan} lite svenska."], feedback: [{ contains: ["jag lite talar", "jag lite pratar"], tip: "Het werkwoord staat op plaats 2, lite komt erna: jag talar lite svenska." }, { contains: "svensk ", tip: "De taal is svenska; svensk is de persoon." }] }
+          - { id: 2cug, type: translate, topic: inte, prompt: "Iemand vraagt of je Fins spreekt. Zeg dat je geen Fins spreekt.", answers: ["[Nej, ]jag {talar|pratar|kan} inte finska."], feedback: [{ contains: ["finska inte", "jag inte talar", "jag inte pratar", "jag inte kan"], tip: "inte staat direct na het werkwoord: jag talar inte finska." }, { contains: ["ingen finska", "inga finska"], tip: "Geen + taal: werkwoord + inte (jag talar inte finska)." }] }
+          - { id: get2, type: translate, topic: klockan, prompt: "Je wilt weten hoe laat het is. Vraag het aan een voorbijganger.", answers: ["[Ursäkta, ]{vad|hur mycket} är klockan?"], feedback: [{ contains: ["hur laat", "hur sent"], tip: "Hoe laat is het? = Vad är klockan?" }, { contains: "klockan är", tip: "In een vraag staat het werkwoord vóór het onderwerp: vad är klockan?" }] }
+
       - id: zoek-de-fout
         title: Zoek de fout
         instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
