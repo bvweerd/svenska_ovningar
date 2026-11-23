@@ -171,7 +171,8 @@ Alles in november 2026.
   code-review (10 bevindingen, alle verwerkt).
 - **Rapport inhoud en didactiek** (`npm run content-report`, ook in CI): A-site bijgewerkt tot 0 aandachtspunten:
   foutregels H0–H2 en H7–H10 ≥ 50%, uitspraak- en themakaarten terug in latere herhalingen, `pengar` en
-  `mat-fraser` aangevuld, woordenschat H7–H9 vaker terug, makkelijke tekst H2. Met taalreview.
+  `mat-fraser` aangevuld, woordenschat H7–H9 vaker terug, makkelijke tekst H2. B-site ook op 0: makkelijke
+  teksten ≥ 95% bekend, langere zinnen, foutregels, woordenschat H21/H26/H27 vaker terug. Met taalreview.
 
 ## Open / volgende stappen
 
