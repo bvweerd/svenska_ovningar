@@ -154,8 +154,9 @@ Alles in november 2026.
 - **Twijfelronde**: open taalreview-twijfels in H1–H30 opgelost (meer goede antwoorden, zachtere tips,
   geen stof uit later hoofdstuk); doeltaken met `kind: taak` op vaste plek.
 - **Voortgang op meer apparaten**: importeren voegt samen (`mergeStates`); synchroniseren met een synccode
-  via de Worker en Cloudflare D1 (opt-in, besloten door de eigenaar). Nog te doen: D1 aanmaken, Worker
-  deployen, `SYNC_URL` zetten (`worker/README.md`, „Synchronisatie”).
+  via de Worker en Cloudflare D1 (opt-in, besloten door de eigenaar). Eén Worker (`svensk-ovningar-b`, code in
+  `worker/` van de B-repo) bedient beide sites; D1 staat in `worker/wrangler.toml`, `SYNC_URL` is een
+  repo-variabele voor de Pages-build (`worker/README.md`, „Synchronisatie”).
 
 - **Onderwijskundige lijn** (branch `didactiek`): lijn in PLAN en CLAUDE.md, door `npm test` afgedwongen;
   makkelijke teksten (2 per hoofdstuk H1–H30), „Wat zeg je?” (H5–H30), woordaccent (H0), vlot herhalen,
