@@ -220,6 +220,11 @@ sections:
           - { id: 428b, type: translate, topic: telefon, prompt: "Je verstaat de ander slecht. Vraag of hij langzaam wil praten.", answers: ["Kan du prata långsamt[, tack]?", "Kan du prata [lite ]långsammare[, tack]?"] }
           - { id: jcqb, type: translate, topic: indirekt-tal, prompt: "Je collega vraagt wat de chef zei. Zeg dat ze zei dat de vergadering om tien uur begint.", answers: ["{Hon|Chefen} {sa|sade} att mötet {börjar|skulle börja} [klockan ]tio."], feedback: [{ contains: "att börjar mötet", tip: "Na att: onderwerp, dan werkwoord (att mötet börjar)." }] }
           - { id: jy3c, type: translate, topic: telefon, prompt: "Je collega Bram belt, maar je hebt geen tijd. Zeg tegen Bram dat je hem later terugbelt.", answers: ["Jag ringer {tillbaka|dig} senare.", "Jag ringer dig tillbaka senare.", "Jag ringer tillbaka [till dig ]senare."], feedback: [{ contains: "honom", tip: "Je praat tegen Bram zelf: dig." }] }
+          - { id: xk9g, type: translate, topic: indirekt-tal, prompt: "Olle belt en vraagt: „Kan du komma i morgon?” Je vriendin vraagt wat Olle wil. Vertel het haar.", answers: ["{Olle|Han} {frågar|undrar} om jag kan komma[ i morgon]."], feedback: [{ contains: "om kan jag", tip: "Na *om* komt een bijzin: eerst het onderwerp, dan het werkwoord (*om jag kan*)." }, { contains: ["frågar att", "frågar if", "frågar of"], tip: "Een ja/nee-vraag doorgeven: *frågar om* …" }, { contains: ["om du kan", "om han kan"], tip: "Olle vraagt of jíj kunt komen. Vanuit jou gezegd: *om jag kan komma*." }] }
+          - { id: vzfy, type: translate, topic: indirekt-tal, prompt: "Een collega vraagt waar de chef is. Zeg dat je niet weet waar ze is.", answers: ["Jag vet inte var {hon|chefen} är."], feedback: [{ contains: ["var är hon", "var är chefen"], tip: "In een bijzin staat het onderwerp vóór het werkwoord: *var hon är*." }, { contains: "vart", tip: "Waar (plaats) = *var*. *vart* is waarheen." }, { contains: ["jag inte vet", "jag vet ikke"], tip: "*inte* staat na het werkwoord: *jag vet inte …*" }] }
+          - { id: crt6, type: translate, topic: tempus, prompt: "Vertel dat de trein al vertrokken was toen je op het station kwam.", answers: ["Tåget hade redan gått när jag kom[ fram] till stationen.", "När jag kom[ fram] till stationen hade tåget redan gått."], feedback: [{ contains: ["har redan gått", "har gått"], tip: "Al eerder gebeurd, vóór een ander moment in het verleden: *hade* + supinum (*hade gått*)." }, { contains: ["hade redan gick", "hade gick", "hade redan gåt "], tip: "Na *hade* komt het supinum: *gått*." }, { contains: "stationen tåget", tip: "Begint de zin met een bijzin (*När jag kom …*), dan komt daarna eerst het werkwoord: *… **hade tåget** redan gått*." }] }
+          - { id: 4y6p, type: translate, topic: telefon, prompt: "Iemand belt jou en vraagt naar „Lisa”, maar je kent geen Lisa. Zeg dat hij het verkeerde nummer heeft gebeld.", answers: ["[Tyvärr, ]du har ringt fel[ nummer]."], feedback: [{ contains: ["fel numret", "verkeerd"], tip: "Het verkeerde nummer = *fel nummer*, zonder lidwoord." }, { contains: ["har ringd", "har ringde", "har ring "], tip: "Het supinum van *ringa* is *ringt*: *du har ringt*." }, { contains: ["ringde fel", "ringer fel"], tip: "Gebruik perfekt: *du har ringt fel nummer*." }] }
+          - { id: 3dzt, type: translate, topic: tempus, prompt: "Een collega vraagt of je de mail al hebt gestuurd. Zeg dat je hem gisteren al hebt gestuurd.", answers: ["[Ja, ]{jag skickade {det|mejlet} [redan ]igår|igår skickade jag {det|mejlet}}."], feedback: [{ contains: ["har skickat det igår", "har skickat mejlet igår", "har redan skickat"], tip: "Met een bepaald moment (*igår*) gebruik je preteritum: *jag skickade det igår*." }, { contains: ["skickde", "skickte"], tip: "*skicka* in de verleden tijd: *skickade*." }, { contains: "skickade den", tip: "*mejl* is een ett-woord: *jag skickade det*." }, { contains: "igår jag", tip: "Begin je met *igår*, dan komt het werkwoord op plaats 2: *igår **skickade jag** det*." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -301,6 +306,85 @@ sections:
               - "Receptionisten: Ja, vi har en tid klockan fyra."
               - "Fleur: Perfekt, då tar jag den. Tack så mycket!"
               - "Receptionisten: Välkommen. Hej då!"
+
+      - id: taak-meddelande
+        title: "Taak: een bericht achterlaten"
+        kind: taak
+        instruction: "Je belt je collega Ingrid: de vergadering van morgen begint niet om tien uur, maar om elf uur. Haar collega Olle neemt op. Ingrid is er niet: ze is al naar huis. Je wilt dat ze je terugbelt. Daarna vraagt je chef ernaar. **Doel:** laat een bericht achter voor Ingrid en vertel je chef hoe het zit. Kies of schrijf bij elke stap wat jij zegt."
+        topic: telefon
+        items:
+          - id: g3ar
+            type: steps
+            explain: "Gelukt: Olle geeft je bericht door, Ingrid belt je terug, en je chef weet hoe het zit."
+            steps:
+              - type: mc
+                topic: telefon
+                prompt: "**Olle:** Hallå, det är Olle. — *Zeg wie je bent en vraag of je Ingrid kunt spreken.*"
+                options:
+                  - "Hej, det är Fleur. Kan jag få prata med Ingrid?"
+                  - "Hej, det är Fleur. Kan jag få pratar med Ingrid?"
+                  - "Hej, det är Fleur. Kan jag få prata till Ingrid?"
+                  - "Hej, det är Fleur. Får jag att prata med Ingrid?"
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *få* komt de infinitief: *prata*, niet *pratar*."
+                  - "Met iemand praten = *prata med*: *prata med Ingrid*."
+                  - "Na *får* komt geen *att*: *Får jag prata med …?*"
+              - type: translate
+                topic: telefon
+                prompt: "**Olle:** Tyvärr, hon är inte här just nu. — *Vraag of je een bericht kunt achterlaten.*"
+                answers:
+                  - "{Kan|Får} jag lämna ett meddelande[ till henne]?"
+                feedback:
+                  - { contains: "en meddelande", tip: "*meddelande* is een ett-woord: *ett meddelande*." }
+                  - { contains: ["kan jag lämnar", "får jag lämnar"], tip: "Na *kan* of *får* komt de infinitief: *lämna*." }
+                  - { contains: ["kan jag att", "får jag att"], tip: "Na *kan* of *får* komt geen *att*: *Kan jag lämna …?*" }
+                  - { match: ["Jag {kan|får} lämna ett meddelande[ till henne]"], tip: "In een vraag komt het werkwoord vooraan: *Kan jag lämna …?*" }
+              - type: translate
+                topic: konjunktioner
+                prompt: "**Olle:** Javisst. Vad ska jag säga till henne? — *Zeg: de vergadering morgen begint niet om tien uur, maar om elf uur.*"
+                answers:
+                  - "Mötet i morgon börjar inte [klockan ]tio[,] utan [klockan ]elva."
+                  - "I morgon börjar mötet inte [klockan ]tio[,] utan [klockan ]elva."
+                feedback:
+                  - { contains: ["men klockan elva", "men elva"], tip: "Niet A maar B: na een ontkenning gebruik je *utan*." }
+                  - { contains: "i morgon mötet", tip: "Begin je met *I morgon*, dan komt het werkwoord op plaats 2: *I morgon **börjar mötet** …*" }
+                  - { contains: ["börjar mötet inte", "mötet inte börjar"], tip: "Gewone volgorde: *Mötet börjar inte …* (of begin met *I morgon*)." }
+              - type: gap
+                topic: telefon
+                prompt: "**Olle:** Okej, jag säger det till henne. — *Vraag of hij haar wil vragen jou terug te bellen.*"
+                text: "Kan du be henne ___ mig?"
+                gaps:
+                  - answers: ["ringa"]
+                    options: ["ringa", "ringer", "ringde", "ringt"]
+                    feedback:
+                      - { match: "ringer", tip: "Na *be henne* komt de infinitief: *ringa*." }
+                      - { match: "ringde", tip: "*ringde* is de verleden tijd. Na *be henne* komt de infinitief: *ringa*." }
+                      - { match: "ringt", tip: "*ringt* is het supinum (na *har*). Na *be henne* komt de infinitief: *ringa*." }
+              - type: translate
+                topic: indirekt-tal
+                prompt: "**Chefen** (later): Har du pratat med Ingrid? — *Zeg: nee, Olle zei dat ze er niet was.*"
+                answers:
+                  - "[Nej, ]{Olle|han} {sa|sade} att hon inte var {där|på kontoret|på jobbet}."
+                feedback:
+                  - { contains: ["att hon var inte", "att hon är inte"], tip: "In een bijzin (na *att*) staat *inte* vóór het werkwoord: *att hon inte var där*." }
+                  - { contains: ["att var hon", "att är hon"], tip: "Na *att* komt eerst het onderwerp, dan het werkwoord: *att hon inte var …*" }
+                  - { contains: ["olle sägde", "olle sagt"], tip: "*säga* in de verleden tijd: *sa* (of *sade*)." }
+              - type: mc
+                topic: tempus
+                prompt: "**Chefen:** Var hon inte på kontoret? — *Nee: toen je belde, was ze al naar huis gegaan.*"
+                options:
+                  - "Nej, när jag ringde hade hon redan gått hem."
+                  - "Nej, när jag ringde har hon redan gått hem."
+                  - "Nej, när jag ringde hade hon redan gick hem."
+                  - "Nej, när jag ringde hon hade redan gått hem."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Al eerder gebeurd, vóór een moment in het verleden: *hade* + supinum (*hade gått*)."
+                  - "Na *hade* komt het supinum: *gått*."
+                  - "Na de bijzin vooraan (*när jag ringde*) komt eerst het werkwoord: *… **hade hon** redan gått hem*."
 
       - id: schrijven-bericht
         title: "Schrijven: een voicemail"
