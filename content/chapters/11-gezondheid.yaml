@@ -363,6 +363,12 @@ sections:
           - { id: 4y9j, type: translate, topic: reflexiv, prompt: "Zeg dat je je niet lekker voelt.", answers: ["Jag mår {inte bra|dåligt|inte så bra}.", "Jag känner mig {sjuk|dålig|inte bra|inte så bra|inte riktigt bra}."], feedback: [{ contains: "Jag känner inte bra", tip: "Je voelen is wederkerend: jag känner mig." }] }
           - { id: 8w4n, type: translate, topic: reflexiv, prompt: "Er staat een vriend in je kamer. Zeg dat hij moet gaan zitten.", answers: ["[Varsågod och ]sätt dig[, är du snäll].", "Du kan sätta dig.", "Sitt ner[, är du snäll]."], feedback: [{ contains: "Sitt dig", tip: "Gaan zitten is sätta sig: Sätt dig!" }] }
           - { id: axzb, type: translate, topic: placera, prompt: "Je komt binnen bij iemand. Vraag waar je je jas kunt ophangen.", answers: ["Var kan jag hänga {jackan|min jacka}?", "Var kan jag hänga {upp|av mig} {jackan|min jacka}?", "Var kan jag hänga av mig?"] }
+          - { id: k24z, type: translate, topic: positionsverb, prompt: "Een vriend belt en vraagt wat je aan het doen bent. Zeg dat je op de bank zit te lezen.", answers: ["[Jag ]sitter {i|på} soffan och läser.", "[Jag ]sitter och läser {i|på} soffan."], feedback: [{ contains: ["och läsa", "och läste"], tip: "Beide werkwoorden in dezelfde tijd: *jag sitter och läser*." }, { contains: ["sitter att läsa", "sitter te"], tip: "Zitten te lezen = *sitter och läser*." }, { contains: ["ligger", "står"], tip: "Je zit op de bank: *sitter*." }] }
+          - { id: xv72, type: translate, topic: placera, prompt: "Je huisgenoot zoekt de sleutels. Zeg dat je ze op de tafel hebt gelegd.", answers: ["Jag {har lagt|lade|la} dem på bordet."], feedback: [{ contains: ["har legat", "har ligat"], tip: "*legat* hoort bij *ligga* (liggen). Iets neerleggen = *lägga*: *jag har lagt dem*." }, { contains: ["har ställt", "har satt"], tip: "Sleutels leg je neer: *lägga → har lagt*." }, { contains: ["lagt de ", "lagt dom", "lade de ", "la de "], tip: "Ze (lijdend voorwerp) = *dem*." }, { contains: ["har lägt", "har läggt"], tip: "Het supinum van *lägga* is *lagt*." }] }
+          - { id: 59ks, type: translate, topic: kroppen, prompt: "Bij de huisarts: zeg dat je knie pijn doet als je loopt.", answers: ["{Det gör ont|Jag har ont} i knät när jag går."], feedback: [{ contains: ["när går jag", "när jag går inte"], tip: "Na *när* komt een bijzin: eerst het onderwerp, dan het werkwoord (*när jag går*)." }, { contains: ["i knä ", "i min knä", "i mitt knä"], tip: "Bij een lichaamsdeel gebruik je de bepaalde vorm: *i knät*." }, { contains: ["har ont på", "gör ont på"], tip: "Pijn in een lichaamsdeel: *ont **i** knät*." }] }
+          - { id: tg49, type: translate, topic: reflexiv, prompt: "Je vriend staat nog te praten, maar de bus komt eraan. Zeg dat hij moet opschieten.", answers: ["{Skynda dig|Du måste skynda dig}[! Bussen kommer]!"], feedback: [{ contains: ["skynda sig", "skynda mig"], tip: "Je praat tegen je vriend (*du*): *skynda **dig***." }, { contains: ["skynda på", "skynder"], tip: "Opschieten = *skynda sig*; tegen jou: *Skynda dig!*" }, { match: "Skynda!", tip: "*skynda sig* is wederkerend: *Skynda dig!*" }] }
+          - { id: sd7d, type: translate, topic: reflexiv, prompt: "Je collega was ziek en is weer op het werk. Vraag hoe ze zich nu voelt.", answers: ["Hur {mår du|känner du dig}[ nu][ idag]?"], feedback: [{ match: ["Hur känner du[ nu][ idag]"], tip: "*känna sig* is wederkerend: *Hur känner du **dig**?* Of: *Hur mår du?*" }, { contains: "mår du dig", tip: "*må* is niet wederkerend: *Hur mår du?*" }, { contains: ["känner du sig", "känner du mig"], tip: "Tegen jou (*du*): *Hur känner du **dig**?*" }, { match: ["Hur du mår[ nu][ idag]", "Hur du känner dig[ nu][ idag]"], tip: "In een vraag komt het werkwoord direct na het vraagwoord: *Hur mår du?*" }] }
+          - { id: zxqx, type: translate, topic: kroppen, prompt: "Je collega is verkouden en gaat naar huis. Wens haar beterschap.", answers: ["[Hej då, ]krya på dig[!]"], feedback: [{ contains: ["krya på sig", "krya på mig", "krya dig"], tip: "Beterschap = *Krya på dig!*" }, { contains: ["god bättring", "bättre"], tip: "Beterschap wensen doe je in het Zweeds met *Krya på dig!*" }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -477,6 +483,7 @@ sections:
                   - "Vi är på Storgatan {12|tolv} i Västerås, i trädgården."
                   - "Vi är [ute ]i trädgården[,] [på ]Storgatan {12|tolv}[,] Västerås."
                   - "Vi är ute i trädgården[,] [på ]Storgatan {12|tolv}[,] i Västerås."
+                  - "{I|Ute i} trädgården[,] [på ]Storgatan {12|tolv}[,] [i ]Västerås."
                 feedback:
                   - { contains: "i trädgård ", tip: "*De* tuin: de bepaalde vorm, *i trädgården*." }
               - type: gap
@@ -534,7 +541,7 @@ sections:
                 answers:
                   - "Han fryser och [han ]är trött."
                   - "Han är trött och [han ]fryser."
-                  - "Han fryser och känner sig trött."
+                  - "Han fryser och [han ]känner sig trött."
                 feedback:
                   - { contains: "är kall", tip: "Het koud hebben is *frysa*: *han fryser*. *Han är kall* betekent dat hij koud aanvoelt." }
                   - { contains: "har kallt", tip: "Het koud hebben is *frysa*: *han fryser*." }
