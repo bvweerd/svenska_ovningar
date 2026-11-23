@@ -600,6 +600,10 @@ sections:
           - { id: xtqg, type: translate, topic: presens, prompt: "Je buurvrouw vraagt of je Zweeds spreekt. Zeg dat je een beetje Zweeds spreekt.", answers: ["[Ja, ]jag {talar|pratar|kan} lite svenska."], feedback: [{ contains: ["jag lite talar", "jag lite pratar"], tip: "Het werkwoord staat op plaats 2, lite komt erna: jag talar lite svenska." }, { contains: "svensk ", tip: "De taal is svenska; svensk is de persoon." }] }
           - { id: 2cug, type: translate, topic: inte, prompt: "Iemand vraagt of je Fins spreekt. Zeg dat je geen Fins spreekt.", answers: ["[Nej, ]jag {talar|pratar|kan} inte finska."], feedback: [{ contains: ["finska inte", "jag inte talar", "jag inte pratar", "jag inte kan"], tip: "inte staat direct na het werkwoord: jag talar inte finska." }, { contains: ["ingen finska", "inga finska"], tip: "Geen + taal: werkwoord + inte (jag talar inte finska)." }] }
           - { id: get2, type: translate, topic: klockan, prompt: "Je wilt weten hoe laat het is. Vraag het aan een voorbijganger.", answers: ["[Ursäkta, ]{vad|hur mycket} är klockan?"], feedback: [{ contains: ["hur laat", "hur sent"], tip: "Hoe laat is het? = Vad är klockan?" }, { match: ["{vad|hur mycket} klockan är", "Ursäkta, {vad|hur mycket} klockan är", "Klockan är"], tip: "In een vraag staat het werkwoord vóór het onderwerp: vad är klockan?" }] }
+          - { id: s1vr, type: translate, topic: vragen, prompt: "Je collega praat Zweeds met je. Vraag of hij **ook** Engels spreekt. Gebruik *också*.", answers: ["[Ursäkta, ]{talar|pratar|kan} du också engelska?", "[Ursäkta, ]{talar|pratar|kan} du engelska också?"], feedback: [{ match: ["[Ursäkta, ]du {talar|pratar|kan} också engelska", "[Ursäkta, ]du också {talar|pratar|kan} engelska"], tip: "In een ja/nee-vraag komt het werkwoord vooraan: *Talar du också engelska?*" }, { contains: ["talar också du", "pratar också du", "kan också du"], tip: "Eerst het werkwoord, dan het onderwerp, dan *också*: *Talar du också …?*" }, { contains: "engelsk", tip: "De taal is *engelska*." }] }
+          - { id: s1mx, type: translate, topic: v2, prompt: "Een collega vraagt waar je vandaag werkt. Begin met *Idag*: je werkt thuis.", answers: ["Idag {jobbar|arbetar} jag hemma."], feedback: [{ contains: "idag jag", tip: "Na *Idag* vooraan komt het werkwoord op plaats 2: *Idag **jobbar jag** hemma.*" }] }
+          - { id: s1kt, type: translate, topic: pronomen, prompt: "Vertel je buurvrouw in twee zinnen dat jullie een kat hebben en dat die Pluto heet.", answers: ["Vi har en katt[ och] {den|hon|han|katten} heter Pluto."], feedback: [{ contains: "det heter", tip: "*katt* is een en-woord: dan gebruik je *den*, niet *det*." }, { contains: "ett katt", tip: "*katt* is een en-woord: *en katt*." }] }
+          - { id: s1ar, type: translate, topic: raknord, prompt: "Een nieuwe collega vraagt hoe oud je bent. Zeg dat je 34 bent. Schrijf het getal voluit.", answers: ["[Jag är ]trettiofyra[ år[ gammal]]."], feedback: [{ contains: "34", tip: "Schrijf het getal voluit, in letters." }, { contains: ["fyratrettio", "fyrtiotre", "fyraochtrettio", "fyra och trettio"], tip: "34 = *trettiofyra*: eerst het tiental (30), dan de eenheid (4), anders dan in het Nederlands." }, { contains: "trettio fyra", tip: "Getallen schrijf je aan elkaar: *trettiofyra*." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -677,6 +681,74 @@ sections:
               - "Olle: Talar du svenska?"
               - "Bram: Ja, lite. Jag går en kurs i svenska."
               - "Olle: Vad bra! Välkommen till Västerås!"
+
+      - id: taak-nya-grannen
+        title: "Taak: de nieuwe buurvrouw"
+        kind: taak
+        instruction: "Jij bent Sanne. Je komt uit Nederland, woont sinds kort in Västerås en werkt in een ziekenhuis. Vandaag werk je tot vier uur; om vijf uur ben je thuis. Je nieuwe buurvrouw belt aan. **Doel:** stel je voor, vertel waar je werkt, vraag waar zij werkt en spreek een tijd af om koffie te drinken. Kies of schrijf bij elke stap wat jij zegt."
+        topic: presens
+        items:
+          - id: k1tq
+            type: steps
+            explain: "Gelukt: Ingrid weet hoe je heet, waar je vandaan komt en waar je werkt. Jij weet dat zij lerares is, en vandaag om vijf uur drink je bij haar koffie."
+            steps:
+              - type: mc
+                topic: v2
+                prompt: "**Ingrid:** Hej! Jag heter Ingrid. Jag bor där. — *Stel je voor: zeg hoe je heet en waar je vandaan komt.*"
+                options:
+                  - "Hej! Jag heter Sanne och jag kommer från Nederländerna."
+                  - "Hej! Heter jag Sanne och jag kommer från Nederländerna."
+                  - "Hej! Jag heter Sanne och jag kommer i Nederländerna."
+                  - "Hej! Jag heter Sanne och jag kommer från nederländska."
+                answer: 0
+                optionTips:
+                  - null
+                  - "*Heter jag …?* is een vraag. In een gewone zin staat het onderwerp vooraan: *Jag heter Sanne*."
+                  - "Uit een land komen = *komma **från***."
+                  - "*nederländska* is de taal. Het land is *Nederländerna*."
+              - type: translate
+                topic: substantiv
+                prompt: "**Ingrid:** Välkommen till Västerås! Var jobbar du? — *Zeg dat je in een ziekenhuis werkt.*"
+                answers:
+                  - "[Tack, ][Jag {jobbar|arbetar} ]på {ett sjukhus|sjukhuset|sjukhus}[ i Västerås]."
+                feedback:
+                  - { contains: ["en sjukhus", "sjukhusen"], tip: "*sjukhus* is een ett-woord: *ett sjukhus*." }
+                  - { contains: ["i ett sjukhus", "i sjukhuset"], tip: "Werken in een ziekenhuis = *jobba **på** ett sjukhus*." }
+              - type: gap
+                topic: vragen
+                prompt: "**Ingrid:** Vad bra! — *Vraag nu waar zij werkt.*"
+                text: "Och du? ___ jobbar du?"
+                gaps:
+                  - answers: ["Var"]
+                    options: ["Var", "Vad", "Vem", "Varifrån"]
+                    feedback:
+                      - { match: "Vad", tip: "*vad* = wat. Je vraagt **waar** ze werkt: *var*." }
+                      - { match: "Vem", tip: "*vem* = wie. Je vraagt **waar** ze werkt: *var*." }
+                      - { match: "Varifrån", tip: "*varifrån* = waarvandaan. Je vraagt **waar** ze werkt: *var*." }
+              - type: mc
+                topic: v2
+                prompt: "**Ingrid:** Jag jobbar på en skola. Jag är lärare. Vi dricker kaffe klockan tre idag. Kommer du också? — *Om drie uur werk je nog; om vijf uur ben je thuis.*"
+                options:
+                  - "Klockan tre jobbar jag. Men klockan fem är jag hemma."
+                  - "Klockan tre jag jobbar. Men klockan fem jag är hemma."
+                  - "Ja, gärna! Klockan tre är jag hemma."
+                  - "Klockan tre jobbar jag inte. Men klockan fem är jag hemma."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *Klockan tre* vooraan komt het werkwoord op plaats 2: *Klockan tre **jobbar jag***."
+                  - "Om drie uur ben je nog aan het werk, dus dan ben je niet thuis."
+                  - "Je werkt om drie uur wél. Zonder *inte*: *Klockan tre jobbar jag*."
+              - type: translate
+                topic: v2
+                prompt: "**Ingrid:** Ja, klockan fem är bra. Välkommen! — *Bedank haar en zeg dat je graag komt.*"
+                answers:
+                  - "[Ja ]tack[ så mycket] {jag kommer gärna[ klockan fem]|klockan fem kommer jag gärna|gärna}[ hej då]."
+                  - "{Jag kommer gärna|Gärna}[ klockan fem] tack[ så mycket]."
+                feedback:
+                  - { contains: "jag gärna kommer", tip: "*gärna* staat na het werkwoord: *jag kommer gärna*." }
+                  - { contains: "fem jag kommer", tip: "Begin je met de tijd, dan komt het werkwoord op plaats 2: *Klockan fem **kommer jag** gärna*." }
+                  - { match: ["{jag kommer gärna[ klockan fem]|klockan fem kommer jag gärna|gärna}[ hej då]"], tip: "Vergeet niet te bedanken: *Tack!*" }
 
       - id: schrijven-voorstellen
         title: "Schrijven: stel jezelf voor"

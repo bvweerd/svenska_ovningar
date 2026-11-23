@@ -180,6 +180,9 @@ Alles in november 2026.
 - **H19-woordenschat** (B #5): alle 69 woorden in een zin of tekst (was 22), met taalreview.
 - **Pagina Verantwoording** (`#/verantwoording`, via Over): het rapport inhoud en didactiek leesbaar voor
   gebruikers, met grafieken en tabellen; bij elke build berekend (`scripts/verantwoording.mjs`).
+- **Meer output A1–A2** (gestuurde situaties + doeltaken, na te kijken): H1 4→8% (taak nieuwe buurvrouw),
+  H2 8→12%, H10 5→11% (taak vaatwasser kapot). Tips en vertaalopdrachten tonen nu *cursief*/**vet**.
+  Met taalreview. Volgende: andere A2-hoofdstukken op dezelfde manier.
 
 ## Open / volgende stappen
 

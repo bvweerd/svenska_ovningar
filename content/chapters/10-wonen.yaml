@@ -302,6 +302,10 @@ sections:
           - { id: qajs, type: translate, topic: bisats-ordfoljd, prompt: "Zeg dat je altijd koffie drinkt voordat je naar je werk gaat.", answers: ["Jag dricker alltid kaffe innan jag {går|åker} till {jobbet|arbetet}.", "Innan jag {går|åker} till {jobbet|arbetet} dricker jag alltid kaffe."], feedback: [{ contains: "innan går jag", tip: "In een bijzin: onderwerp, dan werkwoord (innan jag går)." }] }
           - { id: 4s2u, type: translate, topic: sin-sitt-sina, prompt: "Vertel dat je buurvrouw haar (eigen) fiets verkoopt.", answers: ["{Min granne|Grannen} säljer sin cykel."], feedback: [{ contains: "hennes cykel", tip: "Haar eigen fiets, van het onderwerp zelf: sin cykel." }] }
           - { id: eqb6, type: translate, topic: prep-plats, prompt: "Je bent bij iemand thuis. Vraag waar de badkamer is.", answers: ["[Ursäkta, ]var {är|ligger|finns} badrummet?"] }
+          - { id: fymv, type: translate, topic: subjunktioner, prompt: "Een vriend vraagt waarom je gaat verhuizen. Antwoord met *eftersom*: je appartement is te klein.", answers: ["[{Jag|Vi} flyttar ]eftersom {min lägenhet|vår lägenhet|lägenheten} är för liten.", "[{Jag|Vi} ska flytta ]eftersom {min lägenhet|vår lägenhet|lägenheten} är för liten."], feedback: [{ contains: "eftersom är", tip: "Na eftersom komt een bijzin: eerst het onderwerp, dan het werkwoord (eftersom lägenheten är …)." }, { contains: "för litet", tip: "lägenhet is een en-woord: för liten." }] }
+          - { id: ev6n, type: translate, topic: bisats-ordfoljd, prompt: "Je buurvrouw vraagt of je zaterdag op haar feest komt. Zeg met *tror att* dat je denkt dat je niet kunt.", answers: ["[Tack, men ]jag tror {att jag inte kan|inte att jag kan}[ komma][ på lördag].", "Tyvärr tror jag {att jag inte kan|inte att jag kan}[ komma][ på lördag]."], feedback: [{ contains: "att jag kan inte", tip: "In een bijzin (na att) staat inte vóór het werkwoord: att jag inte kan (BIFF)." }] }
+          - { id: 26nk, type: translate, topic: prep-plats, prompt: "Een vriend zoekt zijn mobiel. Zeg dat die tussen de kussens op de bank ligt.", answers: ["{Den|Mobilen|Din mobil} {ligger|är} mellan kuddarna {i|på} soffan."], feedback: [{ contains: ["under kuddarna", "på kuddarna"], tip: "Tussen = mellan." }] }
+          - { id: d774, type: translate, topic: sin-sitt-sina, prompt: "Vertel dat je buurman zijn (eigen) appartement verkoopt, omdat hij naar Malmö verhuist.", answers: ["{Min granne|Grannen} säljer sin lägenhet[,] {eftersom|för att|för} han {flyttar|ska flytta} till Malmö."], feedback: [{ contains: "hans lägenhet", tip: "Zijn eigen appartement, van het onderwerp zelf: sin lägenhet." }, { contains: ["eftersom flyttar", "för att flyttar"], tip: "Na eftersom komt een bijzin: eerst het onderwerp, dan het werkwoord (eftersom han flyttar)." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -380,6 +384,80 @@ sections:
               - "Hyresvärden: Det ligger bredvid badrummet, längst in."
               - "Fleur: Hur mycket är hyran?"
               - "Hyresvärden: Den är 9 500 kronor i månaden."
+
+      - id: taak-diskmaskin
+        title: "Taak: de vaatwasser is kapot"
+        kind: taak
+        instruction: "Je huurt een appartement aan de Storgatan 5. Sinds gisteren is je vaatwasser kapot, en je belt de verhuurder (*hyresvärden*). Morgen werk je tot drie uur; daarna ben je thuis. **Doel:** zeg wat er kapot is, spreek een tijd af voor de reparatie en zeg waar de sleutel ligt als je niet op tijd thuis bent: onder de mat voor de deur. Kies of schrijf bij elke stap wat jij zegt."
+        topic: subjunktioner
+        items:
+          - id: e2mf
+            type: steps
+            explain: "Gelukt: morgen om vier uur wordt je vaatwasser gerepareerd, en als je er nog niet bent, ligt de sleutel onder de mat."
+            steps:
+              - type: mc
+                topic: telefon
+                prompt: "**Hyresvärden:** Hej, det är Lena Berg. — *Zeg waar je woont en wat er kapot is.*"
+                options:
+                  - "Hej! Jag bor på Storgatan 5. Min diskmaskin är trasig."
+                  - "Hej! Jag bor på Storgatan 5. Mitt diskmaskin är trasig."
+                  - "Hej! Jag bor på Storgatan 5. Min diskmaskin är trasigt."
+                  - "Hej! Jag bor på Storgatan 5. Min tvättmaskin är trasig."
+                answer: 0
+                optionTips:
+                  - null
+                  - "*diskmaskin* is een en-woord: *min diskmaskin*."
+                  - "*diskmaskin* is een en-woord, dus ook *trasig* zonder -t."
+                  - "Het is je vaatwasser (*diskmaskin*), niet je wasmachine (*tvättmaskin*)."
+              - type: translate
+                topic: perfekt-preteritum
+                prompt: "**Hyresvärden:** Okej. Hur länge har den varit trasig? — *Zeg: sinds (sedan) gisteren.*"
+                answers:
+                  - "{Den|Diskmaskinen} har varit trasig {sedan|sen} {i går|igår}."
+                  - "{Sedan|Sen} {i går|igår}."
+                feedback:
+                  - { contains: ["är trasig sedan", "är trasig sen"], tip: "Beter: *den **har varit** trasig sedan i går*. Hij is gisteren kapot gegaan en is het nog steeds: dan gebruik je *har varit*." }
+              - type: mc
+                topic: subjunktioner
+                prompt: "**Hyresvärden:** Jag kan skicka någon i morgon klockan tio. Är du hemma då? — *Je werkt morgen tot drie uur.*"
+                options:
+                  - "Nej, tyvärr. Jag jobbar till tre i morgon."
+                  - "Ja, klockan tio passar bra."
+                  - "Nej, tyvärr. Jag jobbar till tre i morgon, eftersom jag inte är hemma."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Om tien uur ben je aan het werk, dus dan ben je niet thuis."
+                  - "*eftersom* betekent *omdat*. Je werkt niet omdát je niet thuis bent; het is andersom."
+              - type: gap
+                topic: subjunktioner
+                prompt: "**Hyresvärden:** Okej, när passar det då? — *Vraag of ze kunnen komen als je thuis bent.*"
+                text: "Kan ni komma ___ jag är hemma?"
+                gaps:
+                  - answers: ["när"]
+                    options: ["när", "innan", "medan", "eftersom"]
+                    feedback:
+                      - { match: "innan", tip: "*innan* = voordat. Dan ben je nog niet thuis." }
+                      - { match: "medan", tip: "*medan* = terwijl. Je wilt dat ze komen als (*när*) je thuis bent." }
+                      - { match: "eftersom", tip: "*eftersom* = omdat. Hier gaat het om een tijdstip: *när* (als, wanneer)." }
+              - type: translate
+                topic: prep-plats
+                prompt: "**Hyresvärden:** Okej, då kommer vi klockan fyra. Och om du inte är hemma i tid, var hittar vi nyckeln? — *Zeg dat de sleutel onder de mat voor de deur ligt.*"
+                answers:
+                  - "[{Nyckeln|Den} {ligger|är} ]under {mattan|dörrmattan} {framför|utanför} dörren."
+                feedback:
+                  - { contains: "på mattan", tip: "Onder = *under*. *på* is op." }
+                  - { contains: ["bakom dörren", "bredvid dörren"], tip: "Voor de deur = *framför dörren* (of *utanför dörren*)." }
+              - type: translate
+                topic: v2
+                prompt: "**Hyresvärden:** Bra, då säger vi så. — *Herhaal de afspraak: morgen om vier uur komen jullie de vaatwasser maken.*"
+                answers:
+                  - "{I morgon|Imorgon} [klockan ]fyra {kommer ni och {lagar|reparerar}|ska ni {laga|reparera}} diskmaskinen."
+                  - "[Klockan ]fyra {i morgon|imorgon} {kommer ni och lagar|ska ni laga} diskmaskinen."
+                  - "Ni {kommer och {lagar|reparerar}|ska {laga|reparera}} diskmaskinen {i morgon|imorgon} [klockan ]fyra."
+                  - "Ni kommer {i morgon|imorgon} [klockan ]fyra och {lagar|reparerar} diskmaskinen."
+                feedback:
+                  - { contains: ["fyra ni kommer", "fyra ni ska"], tip: "Begin je met de tijd, dan komt het werkwoord op plaats 2: *i morgon klockan fyra **kommer ni** …*" }
 
       - id: schrijven-huis
         title: "Schrijven: jouw huis"
