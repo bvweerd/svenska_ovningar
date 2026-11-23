@@ -241,6 +241,12 @@ sections:
           - { id: xgrr, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag gillar sommaren.” Zeg dat jij dat ook doet.", answers: ["{Jag också|Det gör jag också|Jag med|Det gör jag med}.", "Jag gillar {också sommaren|den också}."], feedback: [{ contains: "Inte jag heller", tip: "Bij een bevestigende zin: jag också." }] }
           - { id: sh3k, type: translate, topic: konjunktioner, prompt: "Een vriend vraagt hoe het weer is. Zeg dat het regent, maar dat het warm is.", answers: ["Det regnar, men det är varmt[ ute]."], feedback: [{ contains: "men är det", tip: "men is een voegwoord: daarna blijft de gewone volgorde, men det är …" }, { match: "Det regnar, men det är varm.", tip: "Na det är krijgt het weerwoord een -t: varmt." }] }
           - { id: jmcf, type: translate, topic: konjunktioner, prompt: "Zeg dat je thuisblijft, want het sneeuwt.", answers: ["Jag stannar hemma, {för|för att|eftersom} det snöar."], feedback: [{ contains: "för snöar det", tip: "Na för blijft de gewone volgorde: för det snöar." }] }
+          - { id: st7p, type: translate, topic: konjunktioner, prompt: "Zeg in twee zinnen dat het koud is en dat je daarom thuisblijft. Begin de tweede zin met *Därför*.", answers: ["Det är kallt[ ute][ idag]. Därför stannar jag hemma[ idag]."], feedback: [{ contains: "därför jag", tip: "*därför* is een bijwoord: daarna komt het werkwoord op plaats 2, *Därför **stannar jag** hemma*." }, { contains: "är kall.", tip: "Na *det är* krijgt het weerwoord een -t: *kallt*." }, { contains: "stannar jag hem.", tip: "Thuis (waar je bent) = *hemma*." }] }
+          - { id: sbkc, type: translate, topic: konjunktioner, prompt: "Een vriend denkt dat je naar Spanje gaat. Zeg dat je niet naar Spanje gaat, maar naar Noorwegen.", answers: ["[Nej, ]jag {åker|ska åka|reser|ska resa} inte till Spanien[,] utan till Norge."], feedback: [{ contains: "men till norge", tip: "Niet A maar B: na een ontkenning gebruik je *utan*." }, { contains: ["jag inte åker", "jag inte ska", "jag inte reser"], tip: "*inte* staat na het werkwoord: *jag åker inte …*" }] }
+          - { id: aeeq, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag kan inte åka skidor.” Zeg dat jij het ook niet kunt.", answers: ["{Inte jag heller|Det kan inte jag heller|Det kan jag inte heller}."], feedback: [{ contains: "det gör", tip: "Bij *kan* herhaal je *kan*, niet *gör*: *Det kan inte jag heller*, of kort: *Inte jag heller*." }, { contains: ["också", "med"], tip: "Bij een ontkenning: *inte jag heller*." }] }
+          - { id: 8u6f, type: translate, topic: ocksa-heller, prompt: "Iemand zegt: „Jag tycker inte om att tälta.” Zeg dat jij het wél leuk vindt.", answers: ["[Men ]det gör jag[!]"], feedback: [{ contains: ["också", "med", "heller"], tip: "Je bent het níét eens: *Men det gör jag!*" }, { contains: ["det tycker jag", "det är jag"], tip: "Bij *tycker om* gebruik je *gör*: *Men det gör jag!*" }] }
+          - { id: 2sb8, type: translate, topic: vader, prompt: "Een collega in Nederland belt. Zeg dat het hier vijf graden vriest en dat het sneeuwt.", answers: ["{Det är|Här är det} {fem minusgrader|minus fem[ grader]|fem grader kallt}[ här][,] och det snöar."], feedback: [{ contains: ["det är snö", "det sneeuwt", "det snöer"], tip: "Het sneeuwt = *det snöar*." }, { contains: ["och snöar det", "och snöar"], tip: "Na *och* blijft de gewone volgorde: *och det snöar*." }, { contains: ["fem grader.", "fem grader och", "fem grader, och"], tip: "Vriezen: *fem minusgrader* (of *minus fem grader*)." }] }
+          - { id: 53b8, type: translate, topic: allemansratten, prompt: "Je ziet iemand afval achterlaten in het bos. Zeg vriendelijk dat je geen afval in de natuur mag achterlaten.", answers: ["[Ursäkta, ]{man|du} får inte lämna skräp i {naturen|skogen}."], feedback: [{ contains: ["måste inte", "behöver inte"], tip: "Niet mogen = *får inte*." }, { contains: "får inte att", tip: "Na *får* komt geen *att*: *man får inte lämna …*" }, { contains: ["får inte lämnar", "får inte lämnade"], tip: "Na *får* komt de infinitief: *lämna*." }] }
 
       - id: zoek-de-fout
         title: Zoek de fout
@@ -317,6 +323,76 @@ sections:
               - "Nils: Men vi kan cykla till skogen och plocka svamp."
               - "Wilma: Okej, men det ska regna i eftermiddag, så vi måste vara hemma klockan tre."
               - "Nils: Det är lugnt. Vi tar med regnjackor."
+
+      - id: taak-till-sjon
+        title: "Taak: naar het meer"
+        kind: taak
+        instruction: "Je vriendin Wilma belt. Ze wil dit weekend met je naar het meer. Het weerbericht: zaterdag regent het, zondag wordt het zonnig en vijfentwintig graden. Je zwemt graag, net als Wilma, en je wilt ook niet fietsen: het is te ver. Het is stookverbod (*eldningsförbud*). **Doel:** spreek een dag af en wat jullie meenemen. Kies of schrijf bij elke stap wat jij zegt."
+        topic: konjunktioner
+        items:
+          - id: vmct
+            type: steps
+            explain: "Gelukt: jullie gaan zondag met de bus naar het meer, met broodjes en salade, en jullie maken geen vuur."
+            steps:
+              - type: mc
+                topic: konjunktioner
+                prompt: "**Wilma:** Ska vi åka till sjön på lördag? — *Zaterdag regent het. Stel zondag voor.*"
+                options:
+                  - "På lördag regnar det, men på söndag blir det soligt."
+                  - "På lördag det regnar, men på söndag blir det soligt."
+                  - "På lördag regnar det, utan på söndag blir det soligt."
+                  - "På lördag regnar det, men på söndag blir det molnigt."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *På lördag* vooraan komt het werkwoord op plaats 2: *på lördag **regnar det***."
+                  - "*utan* gebruik je alleen na een ontkenning (*inte A utan B*). Hier: *men*."
+                  - "*molnigt* is bewolkt. Zondag wordt het zonnig: *soligt*."
+              - type: translate
+                topic: vader
+                prompt: "**Wilma:** Söndag, okej! Hur varmt blir det? — *Zeg: vijfentwintig graden.*"
+                answers:
+                  - "[Det blir ]tjugofem grader[ varmt]."
+                feedback:
+                  - { contains: "25", tip: "Schrijf het getal voluit: *tjugofem*." }
+                  - { contains: ["femtjugo", "fem och tjugo", "femochtjugo"], tip: "25 = *tjugofem*: eerst het tiental, dan de eenheid." }
+                  - { contains: "tjugo fem", tip: "Getallen schrijf je aan elkaar: *tjugofem*." }
+              - type: translate
+                topic: ocksa-heller
+                prompt: "**Wilma:** Härligt! Jag älskar att bada. — *Zeg dat jij dat ook doet.*"
+                answers:
+                  - "{Det gör jag också|Jag också|Det gör jag med|Jag med}[!]"
+                feedback:
+                  - { contains: ["det är jag", "det älskar jag"], tip: "Bij een gewoon werkwoord (*älskar*) gebruik je *gör*: *Det gör jag också.*" }
+                  - { contains: "heller", tip: "*heller* is alleen bij een ontkenning. Hier: *Det gör jag också.*" }
+              - type: gap
+                topic: konjunktioner
+                prompt: "**Wilma:** Ska vi grilla korv vid sjön? — *Het is stookverbod.*"
+                text: "Nej, det är eldningsförbud, ___ vi kan inte grilla."
+                gaps:
+                  - answers: ["så"]
+                    options: ["så", "för", "men", "utan"]
+                    feedback:
+                      - { match: "för", tip: "*för* = want (een reden). Niet kunnen grillen is het gevolg van het stookverbod: *så* (dus)." }
+                      - { match: "men", tip: "*men* = maar. Niet kunnen grillen is het gevolg: *så* (dus)." }
+                      - { match: "utan", tip: "*utan* komt alleen na een ontkenning (*inte A utan B*). Hier: *så* (dus)." }
+              - type: translate
+                topic: konjunktioner
+                prompt: "**Wilma:** Synd. Vad tar vi med då? — *Zeg: broodjes of salade.*"
+                answers:
+                  - "[Vi {tar med|kan ta med} ]{smörgåsar eller sallad|sallad eller smörgåsar}."
+                feedback:
+                  - { contains: [" och "], tip: "Of = *eller*: *smörgåsar eller sallad*." }
+                  - { contains: ["kan tar", "kan att"], tip: "Na *kan* komt de infinitief zonder *att*: *vi kan ta med …*" }
+                  - { contains: ["smörgåser", "smörgåsor"], tip: "Meervoud van *smörgås*: *smörgåsar*." }
+              - type: translate
+                topic: ocksa-heller
+                prompt: "**Wilma:** Jag vill inte cykla dit. Det är för långt. — *Zeg dat jij het ook niet wilt.*"
+                answers:
+                  - "{Inte jag heller|Det vill inte jag heller|Det vill jag inte heller}[. {Vi tar bussen|Vi kan ta bussen}]."
+                feedback:
+                  - { contains: ["också", " med"], tip: "Bij een ontkenning: *Inte jag heller*." }
+                  - { contains: "det gör", tip: "Bij *vill* herhaal je *vill*: *Det vill inte jag heller*, of kort: *Inte jag heller*." }
 
       - id: schrijven-weer
         title: "Schrijven: zomer of winter?"
