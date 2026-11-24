@@ -253,7 +253,7 @@ sections:
           - { id: mptx, type: gap, text: "Min telefon ringde, men jag ___ samtalet, för jag var i duschen.", gaps: [{ answers: ["missade"], options: ["missade", "använde", "ändrade", "valde"] }] }
           - { id: jyu9, type: gap, text: "Jag ___ ringa dig igår kväll, men du svarade inte.", gaps: [{ answers: ["försökte"], options: ["försökte", "hände", "sparade", "raderade"] }] }
           - { id: k5er, type: gap, text: "Vad har ___? Varför ringer du så sent?", gaps: [{ answers: ["hänt"], options: ["hänt", "sökt", "valt", "hjälpt"] }] }
-          - { id: m4zc, type: gap, text: "Bram är bra på datorer, så han ___ alltid mormor med mobilen.", gaps: [{ answers: ["hjälper"], options: ["hjälper", "missar", "raderar", "väljer"] }] }
+          - { id: m4zc, type: gap, text: "Bram kan mycket om datorer, så han ___ alltid mormor med mobilen.", gaps: [{ answers: ["hjälper"], options: ["hjälper", "missar", "raderar", "väljer"] }] }
           - { id: p58d, type: gap, text: "Vi måste ___ tiden, för jag kan inte komma klockan tre.", gaps: [{ answers: ["ändra"], options: ["ändra", "missa", "söka", "installera"] }] }
           - { id: 38ea, type: gap, text: "Banken skickar en ___ till din mobil, och du skriver in den i appen.", gaps: [{ answers: ["kod"], options: ["kod", "kamera", "signal", "kontakt"] }] }
           - { id: ufwx, type: gap, text: "Jag hörde en ___ från mobilen: ett nytt sms!", gaps: [{ answers: ["signal"], options: ["signal", "kod", "bild", "fil"] }] }
@@ -261,7 +261,7 @@ sections:
           - { id: vycr, type: gap, text: "Det var ___ att installera programmet, det tog bara en minut.", gaps: [{ answers: ["enkelt"], options: ["enkelt", "trasigt", "sent", "dåligt"] }] }
           - { id: wekx, type: gap, text: "Kameran är ___, så jag kan inte ta bilder.", gaps: [{ answers: ["trasig"], options: ["trasig", "enkel", "viktig", "noga"] }] }
           - { id: c9gc, type: gap, text: "Ingrid svarar inte. Hon sover ___, det är sent.", gaps: [{ answers: ["nog"], options: ["nog", "noga", "möjligt", "viktigt"] }] }
-          - { id: 592j, type: gap, text: "Hon läste mejlet ___ två gånger.", gaps: [{ answers: ["noga"], options: ["noga", "nog", "trasigt", "enkelt"] }] }
+          - { id: 592j, type: gap, text: "Hon läste mejlet väldigt ___.", gaps: [{ answers: ["noga"], options: ["noga", "nog", "trasigt", "enkelt"] }] }
           - { id: 7kzq, type: gap, text: "Jag ___ en laddare, för jag har glömt min hemma.", gaps: [{ answers: ["behöver"], options: ["behöver", "missar", "raderar", "händer"] }] }
 
       - id: wat-zeg-je
@@ -643,7 +643,7 @@ vocab:
   - { sv: "att spara", nl: "opslaan; sparen", ex: "Glöm inte att **spara** filen!", exNl: "Vergeet niet het bestand op te slaan!" }
   - { sv: "att radera", nl: "wissen, verwijderen", ex: "Jag **raderade** mejlet, så jag kan inte läsa det igen.", exNl: "Ik heb de e-mail verwijderd, dus ik kan hem niet meer lezen." }
   - { sv: "att installera", nl: "installeren", ex: "Du måste **installera** appen först.", exNl: "Je moet eerst de app installeren." }
-  - { sv: "ett papper", nl: "papier; een papiertje", def: "pappret", pl: "papper", plDef: "pappren", ex: "Skriv numret på ett **papper**.", exNl: "Schrijf het nummer op een papiertje." }
+  - { sv: "ett papper", nl: "een (vel) papier, een papiertje", def: "pappret", pl: "papper", plDef: "pappren", ex: "Skriv numret på ett **papper**.", exNl: "Schrijf het nummer op een papiertje." }
   - { sv: "att ändra", nl: "veranderen, wijzigen", ex: "Jag vill **ändra** mitt lösenord.", exNl: "Ik wil mijn wachtwoord wijzigen." }
   - { sv: "att skriva ut", nl: "printen, afdrukken", ex: "Jag **skriver ut** biljetten hemma.", exNl: "Ik print het kaartje thuis." }
   - { sv: "internet", nl: "internet", alt: ["nätet"], ex: "Utan **internet** kan jag inte jobba hemma.", exNl: "Zonder internet kan ik niet thuiswerken." }

@@ -313,18 +313,18 @@ sections:
         topic: woordenschat
         shuffle: true
         items:
-          - { id: 363s, type: gap, text: "Innan jag går ut tittar jag alltid i ___ i hallen.", gaps: [{ answers: ["spegeln"], options: ["spegeln", "frysen", "porten", "låset"] }] }
+          - { id: 363s, type: gap, text: "I badrummet finns det en stor ___ över handfatet.", gaps: [{ answers: ["spegel"], options: ["spegel", "frys", "port", "låda"] }] }
           - { id: zzj5, type: gap, text: "Köp mer glass, för det finns ingen kvar i ___.", gaps: [{ answers: ["frysen"], options: ["frysen", "byrån", "spegeln", "brevlådan"] }] }
-          - { id: mssu, type: gap, text: "Det är mörkt i hallen, men jag hittar inte ___.", gaps: [{ answers: ["strömbrytaren"], options: ["strömbrytaren", "dammsugaren", "utsikten", "disken"] }] }
-          - { id: drg5, type: gap, text: "Golvet är smutsigt, så jag tar fram ___ ur garderoben.", gaps: [{ answers: ["dammsugaren"], options: ["dammsugaren", "strömbrytaren", "brevlådan", "gräsmattan"] }] }
-          - { id: f8fs, type: gap, text: "Kläderna hänger inte i garderoben, de är i ___.", gaps: [{ answers: ["byrån"], options: ["byrån", "frysen", "porten", "duschen"] }] }
+          - { id: mssu, type: gap, text: "Var är ___? Jag vill släcka lampan.", gaps: [{ answers: ["strömbrytaren"], options: ["strömbrytaren", "dammsugaren", "utsikten", "disken"] }] }
+          - { id: drg5, type: gap, text: "Jag ska städa, så jag tar fram ___.", gaps: [{ answers: ["dammsugaren"], options: ["dammsugaren", "strömbrytaren", "brevlådan", "gräsmattan"] }] }
+          - { id: f8fs, type: gap, text: "I sovrummet har vi en säng, en garderob och en ___ med fyra lådor.", gaps: [{ answers: ["byrå"], options: ["byrå", "frys", "port", "dusch"] }] }
           - { id: uscz, type: gap, text: "Vi har fortfarande trettio ___ som vi inte har packat upp.", gaps: [{ answers: ["kartonger"], options: ["kartonger", "speglar", "växter", "portar"] }] }
           - { id: z35k, type: gap, text: "Jag behöver ett ___ så att jag kan arbeta hemma.", gaps: [{ answers: ["skrivbord"], options: ["skrivbord", "handfat", "badkar", "lås"] }] }
           - { id: 4j2y, type: gap, text: "På morgonen duschar jag, men på kvällen tar jag ett bad i ___.", gaps: [{ answers: ["badkaret"], options: ["badkaret", "frysen", "hyllan", "porten"] }] }
-          - { id: 6k58, type: gap, text: "Nyckeln fungerar inte, eftersom ___ är trasigt.", gaps: [{ answers: ["låset"], options: ["låset", "handfatet", "kontraktet", "området"] }] }
-          - { id: 9cuh, type: gap, text: "Jag sätter böckerna på ___ ovanför sängen.", gaps: [{ answers: ["hyllan"], options: ["hyllan", "frysen", "duschen", "porten"] }] }
-          - { id: uv9d, type: gap, text: "Du lagade maten, så jag tar ___ ikväll.", gaps: [{ answers: ["disken"], options: ["disken", "elen", "utsikten", "porten"] }] }
-          - { id: k2ys, type: gap, text: "Tvättmaskinen är klar, så nu kan jag hänga ___.", gaps: [{ answers: ["tvätten"], options: ["tvätten", "disken", "elen", "utsikten"] }] }
+          - { id: 6k58, type: gap, text: "Jag kan inte öppna dörren, för det är något fel på ___.", gaps: [{ answers: ["låset"], options: ["låset", "handfatet", "badkaret", "området"] }] }
+          - { id: 9cuh, type: gap, text: "Vi har en ___ med böcker och foton ovanför sängen.", gaps: [{ answers: ["hylla"], options: ["hylla", "frys", "dusch", "port"] }] }
+          - { id: uv9d, type: gap, text: "Jag lagade maten, så du får ta ___.", gaps: [{ answers: ["disken"], options: ["disken", "elen", "utsikten", "porten"] }] }
+          - { id: k2ys, type: gap, text: "Tvättmaskinen är klar, så nu kan jag hänga upp ___.", gaps: [{ answers: ["tvätten"], options: ["tvätten", "disken", "elen", "utsikten"] }] }
           - { id: z7ek, type: gap, text: "Blommorna och ___ i fönstret behöver vatten varje vecka.", gaps: [{ answers: ["växterna"], options: ["växterna", "låsen", "kartongerna", "portarna"] }] }
 
       - id: woorden-wonen-buurt
@@ -333,20 +333,20 @@ sections:
         topic: woordenschat
         shuffle: true
         items:
-          - { id: smty, type: gap, text: "Studenterna söker en billig ___ nära skolan.", gaps: [{ answers: ["bostad"], options: ["bostad", "spegel", "frys", "disk"] }] }
-          - { id: cy52, type: gap, text: "Du måste skriva på ___ innan du får nyckeln.", gaps: [{ answers: ["kontraktet"], options: ["kontraktet", "låset", "handfatet", "området"] }] }
+          - { id: smty, type: gap, text: "Många studenter söker en billig ___ i Uppsala.", gaps: [{ answers: ["bostad"], options: ["bostad", "spegel", "frys", "disk"] }] }
+          - { id: cy52, type: gap, text: "Har du skrivit på ___ ännu?", gaps: [{ answers: ["kontraktet"], options: ["kontraktet", "låset", "handfatet", "området"] }] }
           - { id: ybsz, type: gap, text: "Vi bor inte i centrum utan i en ___ tjugo minuter från stan.", gaps: [{ answers: ["förort"], options: ["förort", "frys", "byrå", "låda"] }] }
-          - { id: tvt8, type: gap, text: "Efter regnet är ___ alldeles blöt.", gaps: [{ answers: ["gräsmattan"], options: ["gräsmattan", "frysen", "spegeln", "porten"] }] }
-          - { id: mjex, type: gap, text: "Från vårt fönster har vi en fin ___ över staden.", gaps: [{ answers: ["utsikt"], options: ["utsikt", "port", "låda", "kartong"] }] }
+          - { id: tvt8, type: gap, text: "Efter regnet är ___ alldeles blöt.", gaps: [{ answers: ["gräsmattan"], options: ["gräsmattan", "frysen", "spegeln", "byrån"] }] }
+          - { id: mjex, type: gap, text: "Lägenheten ligger högt upp, så ___ är fantastisk.", gaps: [{ answers: ["utsikten"], options: ["utsikten", "porten", "lådan", "kartongen"] }] }
           - { id: 9pag, type: gap, text: "Det är din tur att gå ut med ___ idag.", gaps: [{ answers: ["soporna"], options: ["soporna", "utsikten", "elen", "kontraktet"] }] }
-          - { id: kw9u, type: gap, text: "Han tycker inte om gamla hus, han vill bo i ett ___ hus.", gaps: [{ answers: ["modernt"], options: ["modernt", "smutsigt", "rörigt", "trångt"] }] }
-          - { id: w5pq, type: gap, text: "Soffan är gammal, men den är väldigt ___ att sitta i.", gaps: [{ answers: ["bekväm"], options: ["bekväm", "smutsig", "trång", "rörig"] }] }
-          - { id: xbn4, type: gap, text: "Vi är fem i en lägenhet med två rum, så det är lite ___.", gaps: [{ answers: ["trångt"], options: ["trångt", "modernt", "bekvämt", "praktiskt"] }] }
+          - { id: kw9u, type: gap, text: "Han vill inte bo i ett gammalt hus, han vill bo i ett ___ hus.", gaps: [{ answers: ["modernt"], options: ["modernt", "smutsigt", "rörigt", "trångt"] }] }
+          - { id: w5pq, type: gap, text: "Jag sitter gärna i den här fåtöljen, den är så ___.", gaps: [{ answers: ["bekväm"], options: ["bekväm", "rörig", "smutsig", "trasig"] }] }
+          - { id: xbn4, type: gap, text: "Vi är fem i en lägenhet med två rum, så det är ___.", gaps: [{ answers: ["trångt"], options: ["trångt", "modernt", "bekvämt", "praktiskt"] }] }
           - { id: c35a, type: gap, text: "Städa ditt rum! Det är så ___ här!", gaps: [{ answers: ["rörigt"], options: ["rörigt", "modernt", "bekvämt", "praktiskt"] }] }
           - { id: 8kdr, type: gap, text: "Ta av dig skorna så att golvet inte blir ___.", gaps: [{ answers: ["smutsigt"], options: ["smutsigt", "trångt", "modernt", "praktiskt"] }] }
-          - { id: 58kq, type: gap, text: "Kan du hjälpa mig? Jag kan inte ___ alla kartonger själv.", gaps: [{ answers: ["bära"], options: ["bära", "bygga", "torka", "vattna"] }] }
+          - { id: 58kq, type: gap, text: "Hissen är trasig, så vi måste ___ alla kartonger till femte våningen.", gaps: [{ answers: ["bära"], options: ["bära", "bygga", "torka", "vattna"] }] }
           - { id: bnu6, type: gap, text: "Stolen är trasig, så vi ___ den.", gaps: [{ answers: ["slänger"], options: ["slänger", "bygger", "vattnar", "torkar"] }] }
-          - { id: hygd, type: gap, text: "Jag stannar hemma ___ du kommer tillbaka från jobbet.", gaps: [{ answers: ["tills"], options: ["tills", "så att", "fastän", "eftersom"] }] }
+          - { id: hygd, type: gap, text: "Barnen får leka ute ___ det blir mörkt.", gaps: [{ answers: ["tills"], options: ["tills", "så att", "fastän", "medan"] }] }
           - { id: ec74, type: gap, text: "Jag skriver koden till porten på en lapp ___ jag inte glömmer den.", gaps: [{ answers: ["så att"], options: ["så att", "tills", "fastän", "medan"] }] }
 
       - id: wat-zeg-je
@@ -381,7 +381,7 @@ sections:
         topic: subjunktioner
         textTitle: Ny lägenhet
         text: |
-          Fleur och Bram har hittat en ny lägenhet. Den ligger på tredje våningen i ett gammalt hus nära centrum. Lägenheten har tre rum och kök. Vardagsrummet är stort och ljust eftersom det har två stora fönster. Sovrummet ligger bredvid badrummet, och i badrummet finns det både dusch och badkar.
+          Fleur och Bram har hittat en ny lägenhet. Den ligger på tredje våningen i ett gammalt hus nära centrum. Lägenheten har tre rum och kök. Vardagsrummet är stort och ljust eftersom det har två stora fönster. Sovrummet ligger bredvid badrummet, och där finns det både dusch och badkar.
 
           Bram tycker att köket är för litet, men Fleur säger att det inte gör något, eftersom de ändå ofta äter ute. De flyttar den första mars.
 
@@ -697,19 +697,19 @@ vocab:
   - { sv: "ren", nl: "schoon", ex: "Nu är mattan **ren** igen.", exNl: "Nu is het kleed weer schoon." }
   - { sv: "en dusch", nl: "een douche", def: "duschen", pl: "duschar", plDef: "duscharna", ex: "Lägenheten har en **dusch** men inget badkar.", exNl: "Het appartement heeft een douche maar geen bad." }
   - { sv: "ett badkar", nl: "een bad(kuip)", def: "badkaret", pl: "badkar", plDef: "badkaren", ex: "Barnen leker med båtar i **badkaret**.", exNl: "De kinderen spelen met bootjes in het bad." }
-  - { sv: "ett handfat", nl: "een wastafel", def: "handfatet", pl: "handfat", plDef: "handfaten", ex: "Tandborsten är vid **handfatet**.", exNl: "De tandenborstel is bij de wastafel." }
+  - { sv: "ett handfat", nl: "een wastafel", def: "handfatet", pl: "handfat", plDef: "handfaten", ex: "Det finns en tandborste vid **handfatet**.", exNl: "Er is een tandenborstel bij de wastafel." }
   - { sv: "en spegel", nl: "een spiegel", def: "spegeln", pl: "speglar", plDef: "speglarna", ex: "Hon tittar sig i **spegeln** innan hon går ut.", exNl: "Ze kijkt in de spiegel voordat ze naar buiten gaat." }
   - { sv: "en hylla", nl: "een plank (aan de muur), een rek", def: "hyllan", pl: "hyllor", plDef: "hyllorna", ex: "Jag sätter upp en **hylla** i köket.", exNl: "Ik hang een plank op in de keuken." }
   - { sv: "en byrå", nl: "een ladekast", def: "byrån", pl: "byråer", plDef: "byråerna", ex: "Jag har mina kläder i **byrån**.", exNl: "Ik heb mijn kleren in de ladekast." }
   - { sv: "ett skrivbord", nl: "een bureau", def: "skrivbordet", pl: "skrivbord", plDef: "skrivborden", ex: "Wilma gör läxorna vid sitt **skrivbord**.", exNl: "Wilma maakt haar huiswerk aan haar bureau." }
   - { sv: "en fåtölj", nl: "een fauteuil, een leunstoel", def: "fåtöljen", pl: "fåtöljer", plDef: "fåtöljerna", ex: "Morfar sitter i sin **fåtölj** och läser.", exNl: "Opa zit in zijn fauteuil te lezen." }
-  - { sv: "en låda", nl: "een la; een doos", def: "lådan", pl: "lådor", plDef: "lådorna", ex: "Jag letar efter nyckeln i alla **lådor**.", exNl: "Ik zoek de sleutel in alle laden." }
+  - { sv: "en låda", nl: "een la (ook: een doos)", def: "lådan", pl: "lådor", plDef: "lådorna", ex: "Jag letar efter nyckeln i alla **lådor**.", exNl: "Ik zoek de sleutel in alle laden." }
   - { sv: "en kartong", nl: "een (kartonnen) doos", def: "kartongen", pl: "kartonger", plDef: "kartongerna", ex: "Vi packade böckerna i **kartonger** innan vi flyttade.", exNl: "We pakten de boeken in dozen voordat we verhuisden." }
-  - { sv: "en frys", nl: "een vriezer", def: "frysen", pl: "frysar", plDef: "frysarna", ex: "Glassen är i **frysen**.", exNl: "Het ijs is in de vriezer." }
-  - { sv: "en dammsugare", nl: "een stofzuiger", def: "dammsugaren", pl: "dammsugare", plDef: "dammsugarna", ex: "**Dammsugaren** är i garderoben i hallen.", exNl: "De stofzuiger is in de kast in de gang." }
+  - { sv: "en frys", nl: "een vriezer", def: "frysen", pl: "frysar", plDef: "frysarna", ex: "Det finns glass i **frysen**.", exNl: "Er is ijs in de vriezer." }
+  - { sv: "en dammsugare", nl: "een stofzuiger", def: "dammsugaren", pl: "dammsugare", plDef: "dammsugarna", ex: "**Dammsugaren** finns i källaren.", exNl: "De stofzuiger staat in de kelder." }
   - { sv: "en strömbrytare", nl: "een lichtknopje, een schakelaar", def: "strömbrytaren", pl: "strömbrytare", plDef: "strömbrytarna", ex: "Var är **strömbrytaren**? Det är så mörkt här.", exNl: "Waar is het lichtknopje? Het is zo donker hier." }
-  - { sv: "ett lås", nl: "een slot", def: "låset", pl: "lås", plDef: "låsen", ex: "**Låset** på dörren är trasigt.", exNl: "Het slot van de deur is kapot." }
-  - { sv: "sopor", nl: "vuilnis, huisvuil (meervoud; soporna = het vuilnis)", ex: "Kan du gå ut med **soporna**?", exNl: "Kun jij het vuilnis buiten zetten?" }
+  - { sv: "ett lås", nl: "een slot", def: "låset", pl: "lås", plDef: "låsen", ex: "Vi har två **lås** på dörren.", exNl: "We hebben twee sloten op de deur." }
+  - { sv: "sopor", nl: "vuilnis, huisvuil (meervoud; soporna = het vuilnis)", ex: "Vi slänger **soporna** varje dag.", exNl: "We gooien elke dag het vuilnis weg." }
   - { sv: "en tvätt", nl: "de was", def: "tvätten", mass: true, ex: "Jag hänger **tvätten** på balkongen.", exNl: "Ik hang de was op het balkon." }
   - { sv: "en disk", nl: "de afwas", def: "disken", mass: true, ex: "Vem tar **disken** ikväll?", exNl: "Wie doet vanavond de afwas?" }
   - { sv: "en el", nl: "elektriciteit, stroom", def: "elen", mass: true, ex: "Vi betalar **el** och hyra varje månad.", exNl: "We betalen elke maand stroom en huur." }
@@ -722,17 +722,17 @@ vocab:
   - { sv: "ett kontrakt", nl: "een contract", def: "kontraktet", pl: "kontrakt", plDef: "kontrakten", ex: "Läs **kontraktet** noga innan du skriver på.", exNl: "Lees het contract goed voordat je tekent." }
   - { sv: "en gård", nl: "een binnenplaats, een erf; een boerderij", def: "gården", pl: "gårdar", plDef: "gårdarna", ex: "Barnen leker på **gården** efter skolan.", exNl: "De kinderen spelen na school op de binnenplaats." }
   - { sv: "en gräsmatta", nl: "een gazon, een grasveld", def: "gräsmattan", pl: "gräsmattor", plDef: "gräsmattorna", ex: "Barnen spelar fotboll på **gräsmattan**.", exNl: "De kinderen voetballen op het gazon." }
-  - { sv: "ett område", nl: "een gebied, een wijk", def: "området", pl: "områden", plDef: "områdena", ex: "Det är tyst och fint i vårt **område**.", exNl: "Het is rustig en mooi in onze wijk." }
-  - { sv: "ett kvarter", nl: "een (stads)wijk, een blok", def: "kvarteret", pl: "kvarter", plDef: "kvarteren", ex: "Det finns en bra pizzeria i **kvarteret**.", exNl: "Er is een goede pizzeria in de buurt." }
-  - { sv: "en förort", nl: "een voorstad, een buitenwijk", def: "förorten", pl: "förorter", plDef: "förorterna", ex: "Vi bor i en **förort** till Göteborg.", exNl: "We wonen in een voorstad van Göteborg." }
+  - { sv: "ett område", nl: "een gebied, een buurt", def: "området", pl: "områden", plDef: "områdena", ex: "Det är tyst och fint i vårt **område**.", exNl: "Het is rustig en mooi in onze wijk." }
+  - { sv: "ett kvarter", nl: "een (huizen)blok, de buurt", def: "kvarteret", pl: "kvarter", plDef: "kvarteren", ex: "Det finns en bra pizzeria i **kvarteret**.", exNl: "Er is een goede pizzeria in de buurt." }
+  - { sv: "en förort", nl: "een voorstad, een buitenwijk", def: "förorten", pl: "förorter", plDef: "förorterna", ex: "Många familjer flyttar till en **förort**.", exNl: "Veel gezinnen verhuizen naar een voorstad." }
   - { sv: "att släcka", nl: "uitdoen (licht), blussen", ex: "Glöm inte att **släcka** lampan när du går och lägger dig.", exNl: "Vergeet niet het licht uit te doen als je gaat slapen." }
   - { sv: "att bygga", nl: "bouwen", ex: "De **byggde** huset själva för tjugo år sedan.", exNl: "Ze hebben het huis twintig jaar geleden zelf gebouwd." }
   - { sv: "att bära", nl: "dragen", ex: "Kan du hjälpa mig att **bära** soffan?", exNl: "Kun je me helpen de bank te dragen?" }
   - { sv: "att slänga", nl: "weggooien", ex: "Vi **slängde** mycket när vi flyttade.", exNl: "We gooiden veel weg toen we verhuisden." }
   - { sv: "att torka", nl: "afdrogen, afvegen; drogen", ex: "Jag diskar och du **torkar**.", exNl: "Ik was af en jij droogt af." }
   - { sv: "att vattna", nl: "water geven (aan planten)", ex: "Kan du **vattna** blommorna medan vi är i Spanien?", exNl: "Kun jij de bloemen water geven terwijl wij in Spanje zijn?" }
-  - { sv: "att fixa", nl: "regelen, maken (informeel)", ex: "Pappa **fixade** lampan i hallen.", exNl: "Papa heeft de lamp in de gang gemaakt." }
-  - { sv: "smutsig", nl: "vies, vuil", ex: "Golvet är **smutsigt**, vi måste städa.", exNl: "De vloer is vies, we moeten schoonmaken." }
+  - { sv: "att fixa", nl: "regelen, fiksen (informeel)", ex: "Pappa **fixade** lampan i hallen.", exNl: "Papa heeft de lamp in de gang gemaakt." }
+  - { sv: "smutsig", nl: "vies, vuil", ex: "Golvet är **smutsigt**, så vi måste städa.", exNl: "De vloer is vies, we moeten schoonmaken." }
   - { sv: "rörig", nl: "rommelig", ex: "Mitt rum är alltid **rörigt**.", exNl: "Mijn kamer is altijd rommelig." }
   - { sv: "trång", nl: "krap, klein (weinig ruimte)", ex: "Lägenheten är lite **trång** för en familj med tre barn.", exNl: "Het appartement is wat krap voor een gezin met drie kinderen." }
   - { sv: "modern", nl: "modern", ex: "Köket är nytt och **modernt**.", exNl: "De keuken is nieuw en modern." }

@@ -368,6 +368,44 @@ sections:
           - { id: wcsx, type: transform, prompt: "Jag sätter mig vid bordet i köket. (ni)", answers: ["Ni sätter er vid bordet i köket."], feedback: [{ contains: ["sätter sig", "sätter mig"], tip: "Bij *ni* hoort *er*: ni sätter er." }] }
           - { id: 7td6, type: transform, prompt: "Jag känner mig mycket bättre idag. (Olle)", answers: ["Olle känner sig mycket bättre {idag|i dag}.", "{Idag|I dag} känner {sig Olle|Olle sig} mycket bättre."], feedback: [{ contains: ["känner honom", "känner mig"], tip: "Bij *han/hon* (Olle) hoort *sig*: Olle känner sig." }] }
 
+      - id: woorden-lichaam
+        title: "Woorden in een zin: het lichaam"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: sxe3, type: gap, text: "Jag bär en tung väska på ___ hela dagen.", gaps: [{ answers: ["axeln"], options: ["axeln", "tån", "läppen", "huden"] }] }
+          - { id: jrvc, type: gap, text: "Jag har ont i ___, så jag kan inte titta åt sidan.", gaps: [{ answers: ["nacken"], options: ["nacken", "tån", "läppen", "håret"] }] }
+          - { id: xnkc, type: gap, text: "Wilma tvättar ___ varje morgon i duschen.", gaps: [{ answers: ["håret"], options: ["håret", "blodet", "gipset", "plåstret"] }] }
+          - { id: fbma, type: gap, text: "Skon är för liten, och det gör ont i ___.", gaps: [{ answers: ["tårna"], options: ["tårna", "axlarna", "läpparna", "tungorna"], feedback: [{ match: "axlarna", tip: "Een schoen zit om je voet: dan doen je tenen pijn (tårna)." }] }] }
+          - { id: d4gh, type: gap, text: "På bilden ser man bara hans ___, inte hela kroppen.", gaps: [{ answers: ["ansikte"], options: ["ansikte", "blod", "gips", "värk"] }] }
+          - { id: jyp6, type: gap, text: "Det kom ___ från näsan, så hon satte sig ner.", gaps: [{ answers: ["blod"], options: ["blod", "hår", "gips", "motion"] }] }
+          - { id: uyvv, type: gap, text: "Efter en dag på stranden var ___ på armarna alldeles röd.", gaps: [{ answers: ["huden"], options: ["huden", "blodet", "gipset", "kryckan"] }] }
+          - { id: x7mm, type: gap, text: "Jag tror att jag har feber. Var är ___?", gaps: [{ answers: ["termometern"], options: ["termometern", "kryckan", "ambulansen", "motionen"], feedback: [{ match: "kryckan", tip: "Koorts meet je met een thermometer: termometern." }] }] }
+          - { id: fyxc, type: gap, text: "Läkaren vill se ___, så jag öppnar munnen.", gaps: [{ answers: ["tungan"], options: ["tungan", "nacken", "axeln", "tån"], feedback: [{ match: "nacken", tip: "Als je je mond opendoet, ziet de dokter je tong: tungan." }] }] }
+          - { id: g3dn, type: gap, text: "Han andas tungt och har ont i ___.", gaps: [{ answers: ["bröstet"], options: ["bröstet", "håret", "tån", "gipset"] }] }
+
+      - id: woorden-ziek-gezond
+        title: "Woorden in een zin: ziek en gezond"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: h8hx, type: gap, text: "Han ramlade av cykeln, och nu har han ett ___ på knät.", gaps: [{ answers: ["sår"], options: ["sår", "hår", "ansikte", "bröst"] }] }
+          - { id: pg8v, type: gap, text: "Jag sätter ett ___ på såret.", gaps: [{ answers: ["plåster"], options: ["plåster", "ansikte", "bröst", "hår"] }] }
+          - { id: 3s5x, type: gap, text: "Hon bröt benet och måste gå med ___ i sex veckor.", gaps: [{ answers: ["kryckor"], options: ["kryckor", "ambulanser", "termometrar", "patienter"], feedback: [{ match: "ambulanser", tip: "Met een gebroken been loop je met krukken: kryckor." }] }] }
+          - { id: 74af, type: gap, text: "Ring 112! Vi behöver en ___ direkt.", gaps: [{ answers: ["ambulans"], options: ["ambulans", "termometer", "krycka", "hud"], feedback: [{ match: "termometer", tip: "Bij een noodgeval (112) komt er een ambulance: ambulans." }] }] }
+          - { id: f6bk, type: gap, text: "Många på jobbet är sjuka, för det är ___ i stan just nu.", gaps: [{ answers: ["influensa"], options: ["influensa", "motion", "hälsa", "hud"] }] }
+          - { id: fmeg, type: gap, text: "Jag cyklar till jobbet varje dag, för jag behöver ___.", gaps: [{ answers: ["motion"], options: ["motion", "influensa", "värk", "gips"], feedback: [{ match: "influensa", tip: "Fietsen is beweging: motion. Influensa is griep." }] }] }
+          - { id: rg9w, type: gap, text: "Det sitter tio ___ och väntar hos läkaren.", gaps: [{ answers: ["patienter"], options: ["patienter", "kryckor", "termometrar", "ambulanser"] }] }
+          - { id: t6pt, type: gap, text: "Det har regnat och golvet är blött, så jag ___.", gaps: [{ answers: ["halkade"], options: ["halkade", "svalde", "nös", "läkte"], feedback: [{ match: "nös", tip: "Att nysa = niezen. Op een natte vloer glijd je uit: halka (halkade)." }] }] }
+          - { id: j5ey, type: gap, text: "Tabletten är stor, så det är svårt att ___ den.", gaps: [{ answers: ["svälja"], options: ["svälja", "nysa", "läka", "halka"], feedback: [{ match: "nysa", tip: "Een tablet moet je doorslikken: svälja." }] }] }
+          - { id: d8b8, type: gap, text: "Jag är allergisk mot katter och ___ hela tiden hos Anna.", gaps: [{ answers: ["nyser"], options: ["nyser", "sväljer", "läker", "avbokar"], feedback: [{ match: "sväljer", tip: "Bij een allergie nies je: nysa (jag nyser)." }] }] }
+          - { id: fp2b, type: gap, text: "Jag är förkyld, så jag måste ___ tiden hos läkaren imorgon.", gaps: [{ answers: ["avboka"], options: ["avboka", "svälja", "läka", "halka"], feedback: [{ match: "läka", tip: "Läka = genezen. Een afspraak afzeggen is avboka." }] }] }
+          - { id: 89um, type: gap, text: "Var ___! Det är inget farligt.", gaps: [{ answers: ["lugn"], options: ["lugn", "stressad", "skadad", "allvarlig"], feedback: [{ match: "stressad", tip: "Er is niets ergs aan de hand: dan blijf je rustig (lugn)." }] }] }
+          - { id: v5pp, type: gap, text: "Jag har så mycket att göra på jobbet att jag är ___ hela tiden.", gaps: [{ answers: ["stressad"], options: ["stressad", "lugn", "pigg", "utomhus"], feedback: [{ match: "lugn", tip: "Veel werk maakt je eerder gestrest (stressad) dan rustig." }] }] }
+          - { id: kjhc, type: gap, text: "Det är fint väder, så vi äter ___ idag.", gaps: [{ answers: ["utomhus"], options: ["utomhus", "lugn", "pigg", "farligt"], feedback: [{ match: "lugn", tip: "Bij mooi weer eet je buiten: utomhus." }] }] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -406,7 +444,7 @@ sections:
 
           I fredags kände sig Olle lite bättre. Han satte sig vid bordet i köket och åt frukost med familjen. Sedan ville han gå ut och arbeta i trädgården, men Ingrid sa nej. ”Lägg dig i soffan igen”, sa hon. ”Du ska vila i två veckor!”
 
-          Nu ligger Olle i soffan och läser, men han tycker att det är tråkigt! Ingrid måste göra allt arbete i trädgården. Varje morgon ställer hon en kopp kaffe på bordet bredvid soffan och lägger tidningen där. Nils och Wilma hjälper henne och diskar efter middagen.
+          Nu ligger Olle i soffan och läser, men han tycker att det är tråkigt! Han hoppas att ryggen blir bra snart. Ingrid måste göra allt arbete i trädgården. Varje morgon ställer hon en kopp kaffe på bordet bredvid soffan och lägger tidningen där. Nils och Wilma hjälper henne och diskar efter middagen.
         items:
           - { id: 2zvb, type: truefalse, statement: "Olle har ont i huvudet.", answer: false, tip: "Waar heeft hij pijn?", correction: { answers: ["{Olle|Han} har ont i ryggen."] } }
           - { id: gb85, type: truefalse, statement: "Olle fick en tid på onsdagen.", answer: true }
@@ -747,3 +785,42 @@ vocab:
   - { sv: "svag", nl: "zwak", ex: "Jag känner mig **svag** efter febern.", exNl: "Ik voel me zwak na de koorts." }
   - { sv: "gravid", nl: "zwanger", ex: "Min syster är **gravid**.", exNl: "Mijn zus is zwanger." }
   - { sv: "allergisk", nl: "allergisch", ex: "Jag är **allergisk** mot katter.", exNl: "Ik ben allergisch voor katten." }
+  - { sv: "en axel", nl: "een schouder", def: "axeln", pl: "axlar", plDef: "axlarna", ex: "Han bär barnet på **axlarna**.", exNl: "Hij draagt het kind op zijn schouders." }
+  - { sv: "en nacke", nl: "een nek", def: "nacken", pl: "nackar", plDef: "nackarna", ex: "Jag sitter vid datorn hela dagen och får ont i **nacken**.", exNl: "Ik zit de hele dag achter de computer en krijg pijn in mijn nek." }
+  - { sv: "ett bröst", nl: "een borst", def: "bröstet", pl: "bröst", plDef: "brösten", ex: "Han har ont i **bröstet** och ringer 112.", exNl: "Hij heeft pijn op de borst en belt 112." }
+  - { sv: "en tå", nl: "een teen", def: "tån", pl: "tår", plDef: "tårna", ex: "Jag fryser om **tårna**.", exNl: "Ik heb koude tenen." }
+  - { sv: "ett hår", nl: "haar", def: "håret", mass: true, ex: "Hon har långt **hår**.", exNl: "Zij heeft lang haar." }
+  - { sv: "ett ansikte", nl: "een gezicht", def: "ansiktet", pl: "ansikten", plDef: "ansiktena", ex: "Tvätta **ansiktet** med kallt vatten.", exNl: "Was je gezicht met koud water." }
+  - { sv: "en läpp", nl: "een lip", def: "läppen", pl: "läppar", plDef: "läpparna", ex: "Han har ett sår på **läppen**.", exNl: "Hij heeft een wondje op zijn lip." }
+  - { sv: "en tunga", nl: "een tong", def: "tungan", pl: "tungor", plDef: "tungorna", ex: "Katten dricker vatten med **tungan**.", exNl: "De kat drinkt water met zijn tong." }
+  - { sv: "ett blod", nl: "bloed", def: "blodet", mass: true, ex: "Sjuksköterskan tar lite **blod** från armen.", exNl: "De verpleegkundige neemt wat bloed af uit je arm." }
+  - { sv: "en hud", nl: "de huid", def: "huden", mass: true, ex: "Solen är farlig för **huden**.", exNl: "De zon is gevaarlijk voor de huid." }
+  - { sv: "ett sår", nl: "een wond(je)", def: "såret", pl: "sår", plDef: "såren", ex: "Tvätta **såret** och sätt på ett plåster.", exNl: "Was het wondje en doe er een pleister op." }
+  - { sv: "ett plåster", nl: "een pleister", def: "plåstret", pl: "plåster", plDef: "plåstren", ex: "Har du ett **plåster**? Jag blöder.", exNl: "Heb je een pleister? Ik bloed." }
+  - { sv: "ett gips", nl: "gips", def: "gipset", mass: true, ex: "Han har **gips** på armen i sex veckor.", exNl: "Hij heeft zes weken gips om zijn arm." }
+  - { sv: "en krycka", nl: "een kruk (om mee te lopen)", def: "kryckan", pl: "kryckor", plDef: "kryckorna", ex: "Hon går med **kryckor** efter olyckan.", exNl: "Ze loopt met krukken na het ongeluk." }
+  - { sv: "en ambulans", nl: "een ambulance", def: "ambulansen", pl: "ambulanser", plDef: "ambulanserna", ex: "**Ambulansen** kom efter tio minuter.", exNl: "De ambulance kwam na tien minuten." }
+  - { sv: "en termometer", nl: "een thermometer", def: "termometern", pl: "termometrar", plDef: "termometrarna", ex: "**Termometern** visar trettionio grader.", exNl: "De thermometer geeft negenendertig graden aan." }
+  - { sv: "en patient", nl: "een patiënt", def: "patienten", pl: "patienter", plDef: "patienterna", ex: "Läkaren har många **patienter** idag.", exNl: "De arts heeft vandaag veel patiënten." }
+  - { sv: "en influensa", nl: "griep", def: "influensan", mass: true, ex: "Hela familjen har **influensa**.", exNl: "Het hele gezin heeft griep." }
+  - { sv: "en värk", nl: "(aanhoudende) pijn", def: "värken", mass: true, ex: "Jag har **värk** i ryggen varje morgon.", exNl: "Ik heb elke ochtend pijn in mijn rug." }
+  - { sv: "en motion", nl: "beweging (sport)", def: "motionen", mass: true, ex: "Läkaren säger att jag behöver mer **motion**.", exNl: "De dokter zegt dat ik meer beweging nodig heb." }
+  - { sv: "en hälsa", nl: "de gezondheid", def: "hälsan", mass: true, ex: "Motion är bra för **hälsan**.", exNl: "Beweging is goed voor je gezondheid." }
+  - { sv: "att sätta", nl: "zetten, doen (op een plek)", ex: "Kan du **sätta** blommorna i vatten?", exNl: "Kun je de bloemen in het water zetten?" }
+  - { sv: "att hoppas", nl: "hopen", ex: "Jag **hoppas** att du blir frisk snart.", exNl: "Ik hoop dat je snel beter wordt." }
+  - { sv: "att lyfta", nl: "tillen, optillen", ex: "Jag kan inte **lyfta** armen, det gör ont.", exNl: "Ik kan mijn arm niet optillen, het doet pijn." }
+  - { sv: "att hoppa", nl: "springen (omhoog), huppelen", ex: "Barnen **hoppar** i sängen.", exNl: "De kinderen springen op het bed." }
+  - { sv: "att röra", nl: "aanraken; bewegen", ex: "**Rör** inte såret!", exNl: "Raak het wondje niet aan!" }
+  - { sv: "att ramla", nl: "vallen", ex: "Morfar **ramlade** i trappan och bröt armen.", exNl: "Opa viel van de trap en brak zijn arm." }
+  - { sv: "att halka", nl: "uitglijden", ex: "Jag **halkade** på isen och skadade knät.", exNl: "Ik gleed uit op het ijs en bezeerde mijn knie." }
+  - { sv: "att svälja", nl: "slikken", ex: "Det gör ont när jag **sväljer**.", exNl: "Het doet pijn als ik slik." }
+  - { sv: "att nysa", nl: "niezen", ex: "Jag **nyser** hela tiden, jag tror att jag är allergisk.", exNl: "Ik nies de hele tijd, ik denk dat ik allergisch ben." }
+  - { sv: "att läka", nl: "genezen (van een wond)", ex: "Såret **läker** snabbt.", exNl: "Het wondje geneest snel." }
+  - { sv: "att avboka", nl: "afzeggen, annuleren", ex: "Jag måste **avboka** min tid hos tandläkaren.", exNl: "Ik moet mijn afspraak bij de tandarts afzeggen." }
+  - { sv: "pigg", nl: "fit, uitgerust", ex: "Jag sov bra och är **pigg** idag.", exNl: "Ik heb goed geslapen en ben vandaag fit." }
+  - { sv: "farlig", nl: "gevaarlijk", ex: "Den här sjukdomen är inte **farlig**.", exNl: "Deze ziekte is niet gevaarlijk." }
+  - { sv: "allvarlig", nl: "ernstig", ex: "Är det **allvarligt**, doktorn?", exNl: "Is het ernstig, dokter?" }
+  - { sv: "skadad", nl: "gewond; beschadigd", ex: "Han blev **skadad** i en olycka.", exNl: "Hij raakte gewond bij een ongeluk." }
+  - { sv: "stressad", nl: "gestrest", ex: "Jag är **stressad** och sover dåligt.", exNl: "Ik ben gestrest en slaap slecht." }
+  - { sv: "lugn", nl: "rustig, kalm", ex: "Var **lugn**, ambulansen kommer snart.", exNl: "Blijf rustig, de ambulance komt zo." }
+  - { sv: "utomhus", nl: "buiten (in de open lucht)", ex: "Barnen leker **utomhus** hela dagen.", exNl: "De kinderen spelen de hele dag buiten." }

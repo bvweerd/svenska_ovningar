@@ -220,7 +220,7 @@ Alles in november 2026.
      het hoofdstuk; eerst inhoudswoorden die al in de stof staan (o.a. *storlek, julgran, trasig, influensa, utomhus, kyl*).
    - *Schrijven*: per woord vormen, `ex`/`exNl`; de nieuwe woorden ook in invulzinnen „Woorden in een zin” (topic
      `woordenschat`, niet in de kan-doen-tellingen). `content-report` blijft op 0 (`recur` ≥ 40% tot H9).
-   - *Volgorde*: één hoofdstuk per ronde, elk met taalreview vóór commit. Gedaan: H7 (64 → 100), H8 (63 → 100), H9 (56 → 100), H10 (55 → 100). Volgende: H11–H12.
+   - *Volgorde*: één hoofdstuk per ronde, elk met taalreview vóór commit. Gedaan: H7 (64 → 100), H8 (63 → 100), H9 (56 → 100), H10 (55 → 100), H11 (61 → 100). Volgende: H12.
    - *Leesteksten*: geen lengtedoel (alle teksten zitten binnen de lijn; begrip hangt vooral af van bekende woorden). Waar
      een nieuw woord natuurlijk in de leestekst past, komt er een zin bij. Na publicatie met `stats` kijken of de
      leesvragen te makkelijk zijn.
