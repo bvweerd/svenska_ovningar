@@ -195,6 +195,10 @@ Alles in november 2026.
   Met taalreview. B-site daarna: „Wat zeg je?” 4 → 8 in B1, woorden in zinnen (H15, H17, H20–H24), ontdek de regel
   (H13, H14, H23), foutregels met `retry` (goed Zweeds, andere vorm: geen fout); daarna antwoordruimte, woorden van
   eerder in de herhaling (H16–H28), omvormen in H17, leesvragen niet meer bij grammatica-kan-doen. Met taalreview.
+- **Meer prestaties**: 21 nieuwe badges (43), per strand (makkelijke teksten, luisteren, „Wat zeg je?”,
+  schrijven, doeltaken), dagdoel herhaling (`goalDays`, synchroniseert mee), hoofdstuk beheerst, per snelle ronde
+  en alle hoofdstukken; niveaus die een site niet kan halen verschijnen niet; pagina ingedeeld per strand; tien
+  nieuwe Zweedse plaatjes (o.a. köttbullar, falukorv, kräfta, hembränt).
 
 ## Open / volgende stappen
 
