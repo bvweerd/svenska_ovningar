@@ -211,9 +211,26 @@ Alles in november 2026.
    - afgemaakte geleide schrijfstappen, vrije teksten, leesteksten en doeltaken.
    De eerste meting (19 november, ±200 antwoorden, vooral uit tests) wees op de sje-/tje-klank en
    zachte klinkers (H0) en de correctievraag in lasa-annons; die zijn aangepast.
-2. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview; nieuwe stof op de
+2. **Woordenschat A2 (H7–H12) uitbreiden.** Gangbare schattingen (geen ERK-norm): A1 600–1.000, A2 1.300–2.000
+   woorden. Telling november 2026 (basisvormen via hunspell, ruw): tot en met H6 ±710 in de stof, ±360 in de lijsten (A1
+   oké); tot en met H12 ±1.160 in de stof, 718 in de lijsten (A2 eronder). De stof is strak aan de lijsten gebonden:
+   buiten de lijsten staan vooral functiewoorden, getallen en dagen; maar ±40 inhoudswoorden uit H7–H12 zijn
+   „promoveerbaar” (o.a. *skräp, minusgrad, storlek, julgran, trasig, influensa, utomhus, sommarstuga, kyl, flaska*).
+   **Doel**: tot en met H12 ≥ 1.300 basisvormen in de stof en ±1.000 in de lijsten; H7–H12 van ±60 naar ±100 woorden per
+   hoofdstuk (+±250: ±40 gepromoveerd, ±210 nieuw). H1–H6 blijft zoals het is.
+   - *Meten eerst*: `vocab-report` telt ook basisvormen in de stof (cumulatief per hoofdstuk); dat is de maat voor
+     het doel en voor de Verantwoording.
+   - *Kiezen*: per hoofdstuk thematisch én frequent (lijn 9), alleen woorden die bij A2 horen en in eerdere
+     grammatica passen. Bron: eigen oordeel, kandidaten uit de eigen stof (H7–H12 en wat de B-site als bekend
+     veronderstelt). Een openbare frequentielijst als controle alleen na akkoord van de eigenaar (licentie).
+   - *Schrijven*: per woord `def`/`pl`/`plDef`, `ex`/`exNl`; elk nieuw woord ook in een oefening (invulzinnen in een
+     woordenoefening, zoals B #5) en, voor H7–H9, terug in een later hoofdstuk (`content-report`: `onlyList`,
+     `recur`). Makkelijke teksten blijven ≥ 95% bekend; nieuwe woorden niet in de kan-doen-tellingen forceren.
+   - *Volgorde*: één hoofdstuk per ronde (H7 eerst), elk met taalreview vóór commit; `npm test`, `difficulty-report`
+     en `content-report` op 0. Overlap met de B-lijsten (nu 62) mag; de B-site hoeft niet mee te veranderen.
+3. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview; nieuwe stof op de
    moeilijkheidslijn en op de plek die de vaste volgorde voorschrijft.
-3. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem. De oordelen op „Luisteren instellen”
+4. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem. De oordelen op „Luisteren instellen”
    (`/b/luisteren/oordeel/…`) en de status (`/b/luisteren/status/…`) laten zien of de browserstemmen
    goed genoeg zijn.
-4. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.
+5. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.
