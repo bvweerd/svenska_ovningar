@@ -225,6 +225,45 @@ sections:
           - { id: sb37, type: transform, prompt: "Jag förstår meddelandet.", answers: ["Jag har förstått meddelandet."], feedback: [{ contains: "förståt ", tip: "förstå – förstått, met dubbele t." }] }
           - { id: 9tbg, type: transform, prompt: "Ingrid är sjuk.", answers: ["Ingrid har varit sjuk."], feedback: [{ contains: "är varit", tip: "In het Zweeds altijd *har*: Ingrid har varit sjuk (is ziek geweest)." }] }
 
+      - id: woorden-internet
+        title: "Woorden in een zin: computer en internet"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: s94b, type: gap, text: "Jag kan inte läsa mejlet, för vi har inget ___ i stugan.", gaps: [{ answers: ["internet"], options: ["internet", "kamera", "nyhet", "uppgift"] }] }
+          - { id: ggfg, type: gap, text: "Jag hittar inte konserten på hemsidan. Kan du skicka ___?", gaps: [{ answers: ["länken"], options: ["länken", "kameran", "posten", "signalen"] }] }
+          - { id: dg84, type: gap, text: "Bram tog en ___ på katten och skickade den till mamma.", gaps: [{ answers: ["bild"], options: ["bild", "kod", "sida", "post"] }] }
+          - { id: 6jwp, type: gap, text: "Först måste du ___ appen, sedan kan du logga in.", gaps: [{ answers: ["installera"], options: ["installera", "radera", "missa", "hända"] }] }
+          - { id: c4ge, type: gap, text: "Jag har glömt mitt lösenord, så jag kan inte ___.", gaps: [{ answers: ["logga in"], options: ["logga in", "skriva ut", "klicka", "hända"] }] }
+          - { id: b7qp, type: gap, text: "Jag skrev ett mejl i en timme, men jag glömde att ___ det, och nu finns det inte kvar.", gaps: [{ answers: ["spara"], options: ["spara", "söka", "välja", "hjälpa"] }] }
+          - { id: zm44, type: gap, text: "Han ___ alla sms från henne, så nu kan han inte läsa dem igen.", gaps: [{ answers: ["raderade"], options: ["raderade", "installerade", "sökte", "hjälpte"] }] }
+          - { id: j54q, type: gap, text: "Jag ___ biljetten på kontoret, för jag vill ha den på papper.", gaps: [{ answers: ["skriver ut"], options: ["skriver ut", "loggar in", "raderar", "ändrar"] }] }
+          - { id: r7nb, type: gap, text: "Mitt ___ är fleur88, men jag har glömt lösenordet.", gaps: [{ answers: ["användarnamn"], options: ["användarnamn", "tangentbord", "program", "nät"] }] }
+          - { id: 88h8, type: gap, text: "Jag kan inte skriva, för ___ på datorn är trasigt.", gaps: [{ answers: ["tangentbordet"], options: ["tangentbordet", "användarnamnet", "nätet", "kontot"] }] }
+          - { id: c9px, type: gap, text: "Jag läser ___ på mobilen varje morgon till frukost.", gaps: [{ answers: ["nyheterna"], options: ["nyheterna", "koderna", "kontakterna", "kamerorna"] }] }
+          - { id: g4jy, type: gap, text: "Öppna boken och läs ___ fyrtio, tack.", gaps: [{ answers: ["sidan"], options: ["sidan", "koden", "filen", "länken"] }] }
+
+      - id: woorden-telefon-hjalp
+        title: "Woorden in een zin: telefoon en hulp"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: mptx, type: gap, text: "Min telefon ringde, men jag ___ samtalet, för jag var i duschen.", gaps: [{ answers: ["missade"], options: ["missade", "använde", "ändrade", "valde"] }] }
+          - { id: jyu9, type: gap, text: "Jag ___ ringa dig igår kväll, men det var upptaget.", gaps: [{ answers: ["försökte"], options: ["försökte", "hände", "sparade", "raderade"] }] }
+          - { id: k5er, type: gap, text: "Vad har ___? Varför ringer du så sent?", gaps: [{ answers: ["hänt"], options: ["hänt", "sökt", "valt", "hjälpt"] }] }
+          - { id: m4zc, type: gap, text: "Datorn är trasig. Kan du ___ mig med den?", gaps: [{ answers: ["hjälpa"], options: ["hjälpa", "missa", "radera", "välja"] }] }
+          - { id: p58d, type: gap, text: "Vi måste ___ tiden, för jag kan inte komma klockan tre.", gaps: [{ answers: ["ändra"], options: ["ändra", "missa", "söka", "installera"] }] }
+          - { id: 38ea, type: gap, text: "Banken skickar en ___ till din mobil, och du skriver den i appen.", gaps: [{ answers: ["kod"], options: ["kod", "kamera", "signal", "kontakt"] }] }
+          - { id: ufwx, type: gap, text: "Mitt i skogen hade vi ingen ___ och kunde inte ringa.", gaps: [{ answers: ["signal"], options: ["signal", "kod", "bild", "fil"] }] }
+          - { id: mcnk, type: gap, text: "Det är ___ att du svarar på mejlet idag, inte imorgon.", gaps: [{ answers: ["viktigt"], options: ["viktigt", "trasigt", "snabbt", "enkelt"] }] }
+          - { id: vycr, type: gap, text: "Appen är inte svår att använda, den är väldigt ___.", gaps: [{ answers: ["enkel"], options: ["enkel", "trasig", "viktig", "möjlig"] }] }
+          - { id: wekx, type: gap, text: "Jag kan inte ringa dig, för min mobil är ___.", gaps: [{ answers: ["trasig"], options: ["trasig", "enkel", "viktig", "noga"] }] }
+          - { id: c9gc, type: gap, text: "Ingrid svarar inte. Hon sover ___, det är ju sent.", gaps: [{ answers: ["nog"], options: ["nog", "noga", "möjligt", "viktigt"] }] }
+          - { id: 592j, type: gap, text: "Lyssna ___ nu, jag säger det bara en gång!", gaps: [{ answers: ["noga"], options: ["noga", "nog", "trasig", "snabb"] }] }
+          - { id: 7kzq, type: gap, text: "Jag ___ en laddare, för batteriet är nästan slut.", gaps: [{ answers: ["behöver"], options: ["behöver", "missar", "raderar", "händer"] }] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -261,11 +300,11 @@ sections:
         topic: indirekt-tal
         textTitle: Ett missat samtal
         text: |
-          I tisdags ringde Ingrid till Fleur, men Fleur svarade inte. Hon hade glömt mobilen hemma. Ingrid lämnade ett meddelande. Hon sa att hon hade två biljetter till en konsert på fredagen och frågade om Fleur ville följa med.
+          I tisdags ringde Ingrid till Fleur, men Fleur svarade inte. Hon hade glömt mobilen hemma. Ingrid lämnade ett meddelande. Hon sa att hon hade två biljetter till en konsert på fredagen och frågade om Fleur ville följa med. I ett sms skickade hon också en länk till konserthusets hemsida.
 
           När Fleur kom hem lyssnade hon på meddelandet och ringde tillbaka direkt. Hon sa att hon gärna ville följa med. Ingrid frågade om de kunde träffas utanför konserthuset klockan sju.
 
-          På fredagen tog Fleur bussen till centrum, men bussen var försenad. Hon skickade ett sms till Ingrid och skrev att hon var på väg. När Fleur kom fram hade konserten redan börjat. Ingrid väntade utanför, och de gick in tillsammans.
+          På fredagen tog Fleur bussen till centrum, men bussen var försenad. Hon försökte ringa Ingrid, men hon hade ingen signal. Hon skickade ett sms till Ingrid och skrev att hon var på väg. När Fleur kom fram hade konserten redan börjat. Ingrid väntade utanför, och de gick in tillsammans.
 
           Konserten var fantastisk! Efteråt drack de en kopp kaffe på ett café och pratade om musiken. Fleur var hemma klockan elva.
         items:
@@ -591,3 +630,47 @@ vocab:
   - { sv: "igen", nl: "opnieuw, weer", ex: "Kan du ringa **igen** imorgon?", exNl: "Kun je morgen opnieuw bellen?" }
   - { sv: "direkt", nl: "meteen, direct", ex: "Jag ringer dig **direkt**.", exNl: "Ik bel je meteen." }
   - { sv: "dåligt", nl: "slecht", ex: "Jag hör dig väldigt **dåligt**.", exNl: "Ik hoor je heel slecht." }
+  - { sv: "att använda", nl: "gebruiken", ex: "Jag **använder** datorn varje dag på jobbet.", exNl: "Ik gebruik de computer elke dag op mijn werk." }
+  - { sv: "att försöka", nl: "proberen", ex: "Jag **försökte** ringa dig tre gånger igår.", exNl: "Ik heb gisteren drie keer geprobeerd je te bellen." }
+  - { sv: "att hända", nl: "gebeuren", ex: "Vad **hände** sedan?", exNl: "Wat gebeurde er toen?" }
+  - { sv: "att hjälpa", nl: "helpen", ex: "Kan du **hjälpa** mig med datorn?", exNl: "Kun je me helpen met de computer?" }
+  - { sv: "att behöva", nl: "nodig hebben, moeten", ex: "Jag **behöver** ladda telefonen.", exNl: "Ik moet mijn telefoon opladen." }
+  - { sv: "att välja", nl: "kiezen", ex: "Vilken app ska jag **välja**?", exNl: "Welke app moet ik kiezen?" }
+  - { sv: "att söka", nl: "zoeken", ex: "Jag **söker** information på internet.", exNl: "Ik zoek informatie op internet." }
+  - { sv: "att klicka", nl: "klikken", ex: "**Klicka** på länken i mejlet.", exNl: "Klik op de link in de e-mail." }
+  - { sv: "att kolla", nl: "checken, (even) kijken", ex: "Jag ska bara **kolla** mejlen.", exNl: "Ik ga even mijn e-mail checken." }
+  - { sv: "att logga in", nl: "inloggen", ex: "Jag kan inte **logga in**, jag har glömt lösenordet.", exNl: "Ik kan niet inloggen, ik ben mijn wachtwoord vergeten." }
+  - { sv: "att spara", nl: "opslaan; sparen", ex: "Glöm inte att **spara** filen!", exNl: "Vergeet niet het bestand op te slaan!" }
+  - { sv: "att radera", nl: "wissen, verwijderen", ex: "Jag **raderade** mejlet, så jag kan inte läsa det igen.", exNl: "Ik heb de e-mail verwijderd, dus ik kan hem niet meer lezen." }
+  - { sv: "att installera", nl: "installeren", ex: "Du måste **installera** appen först.", exNl: "Je moet eerst de app installeren." }
+  - { sv: "att missa", nl: "missen", ex: "Jag **missade** ditt samtal, jag var på jobbet.", exNl: "Ik heb je oproep gemist, ik was op mijn werk." }
+  - { sv: "att ändra", nl: "veranderen, wijzigen", ex: "Kan vi **ändra** tiden till klockan tre?", exNl: "Kunnen we de tijd veranderen in drie uur?" }
+  - { sv: "att skriva ut", nl: "printen, afdrukken", ex: "Jag **skriver ut** biljetten hemma.", exNl: "Ik print het kaartje thuis." }
+  - { sv: "internet", nl: "internet", ex: "Vi har inget **internet** i stugan.", exNl: "We hebben geen internet in het huisje." }
+  - { sv: "en länk", nl: "een link", def: "länken", pl: "länkar", plDef: "länkarna", ex: "Jag skickar **länken** till dig på sms.", exNl: "Ik stuur je de link per sms." }
+  - { sv: "en bild", nl: "een afbeelding, een foto", def: "bilden", pl: "bilder", plDef: "bilderna", ex: "Wilma skickade en **bild** från stranden.", exNl: "Wilma stuurde een foto van het strand." }
+  - { sv: "ett program", nl: "een programma", def: "programmet", pl: "program", plDef: "programmen", ex: "Vilket **program** använder du för mejl?", exNl: "Welk programma gebruik je voor e-mail?" }
+  - { sv: "ett nät", nl: "een net; het internet", def: "nätet", pl: "nät", plDef: "näten", ex: "Jag läste om det på **nätet**.", exNl: "Ik heb erover gelezen op internet." }
+  - { sv: "en sida", nl: "een pagina; een kant", def: "sidan", pl: "sidor", plDef: "sidorna", ex: "Läs **sidan** tolv i boken.", exNl: "Lees bladzijde twaalf in het boek." }
+  - { sv: "en fil", nl: "een bestand (op de computer)", def: "filen", pl: "filer", plDef: "filerna", ex: "Kan du skicka **filen** igen? Jag kan inte öppna den.", exNl: "Kun je het bestand nog eens sturen? Ik kan het niet openen." }
+  - { sv: "en kod", nl: "een code", def: "koden", pl: "koder", plDef: "koderna", ex: "Du får en **kod** i ett sms.", exNl: "Je krijgt een code in een sms." }
+  - { sv: "en kontakt", nl: "een contact(persoon)", def: "kontakten", pl: "kontakter", plDef: "kontakterna", ex: "Jag har tvåhundra **kontakter** i telefonen.", exNl: "Ik heb tweehonderd contacten in mijn telefoon." }
+  - { sv: "en signal", nl: "een signaal; bereik", def: "signalen", pl: "signaler", plDef: "signalerna", ex: "Jag har ingen **signal** här uppe i fjällen.", exNl: "Ik heb hier boven in de fjells geen bereik." }
+  - { sv: "en kamera", nl: "een camera", def: "kameran", pl: "kameror", plDef: "kamerorna", ex: "**Kameran** i min mobil är jättebra.", exNl: "De camera van mijn mobiel is heel goed." }
+  - { sv: "ett konto", nl: "een (bank)rekening; een account", def: "kontot", pl: "konton", plDef: "kontona", ex: "Jag har ett **konto** på banken.", exNl: "Ik heb een rekening bij de bank." }
+  - { sv: "ett användarnamn", nl: "een gebruikersnaam", def: "användarnamnet", pl: "användarnamn", plDef: "användarnamnen", ex: "Skriv ditt **användarnamn** och ditt lösenord.", exNl: "Typ je gebruikersnaam en je wachtwoord." }
+  - { sv: "ett tangentbord", nl: "een toetsenbord", def: "tangentbordet", pl: "tangentbord", plDef: "tangentborden", ex: "**Tangentbordet** på datorn fungerar inte.", exNl: "Het toetsenbord van de computer werkt niet." }
+  - { sv: "en surfplatta", nl: "een tablet", def: "surfplattan", pl: "surfplattor", plDef: "surfplattorna", ex: "Barnen tittar på film på **surfplattan**.", exNl: "De kinderen kijken een film op de tablet." }
+  - { sv: "en video", nl: "een video, een filmpje", def: "videon", pl: "videor", plDef: "videorna", ex: "Bram skickade en rolig **video** till mig.", exNl: "Bram stuurde me een grappig filmpje." }
+  - { sv: "en information", nl: "informatie", def: "informationen", mass: true, ex: "Du hittar mer **information** på hemsidan.", exNl: "Je vindt meer informatie op de website." }
+  - { sv: "en nyhet", nl: "een nieuwtje; nyheter = het nieuws", def: "nyheten", pl: "nyheter", plDef: "nyheterna", ex: "Jag har en stor **nyhet**: vi ska gifta oss!", exNl: "Ik heb groot nieuws: we gaan trouwen!" }
+  - { sv: "en uppgift", nl: "een opdracht, een taak", def: "uppgiften", pl: "uppgifter", plDef: "uppgifterna", ex: "Läraren gav oss en svår **uppgift**.", exNl: "De leraar gaf ons een moeilijke opdracht." }
+  - { sv: "en post", nl: "de post", def: "posten", mass: true, ex: "Kom det någon **post** idag?", exNl: "Is er vandaag post gekomen?" }
+  - { sv: "viktig", nl: "belangrijk", ex: "Det är **viktigt** att du ringer mig.", exNl: "Het is belangrijk dat je me belt." }
+  - { sv: "möjlig", nl: "mogelijk", ex: "Är det **möjligt** att ringa dig ikväll?", exNl: "Is het mogelijk om je vanavond te bellen?" }
+  - { sv: "svår", nl: "moeilijk", ex: "Det är **svårt** att förstå honom i telefon.", exNl: "Het is moeilijk om hem aan de telefoon te verstaan." }
+  - { sv: "enkel", nl: "eenvoudig, makkelijk", ex: "Appen är väldigt **enkel**.", exNl: "De app is heel eenvoudig." }
+  - { sv: "snabb", nl: "snel", ex: "Datorn är gammal men **snabb**.", exNl: "De computer is oud maar snel." }
+  - { sv: "trasig", nl: "kapot", ex: "Min mobil är **trasig**, så jag kan inte ringa.", exNl: "Mijn mobiel is kapot, dus ik kan niet bellen." }
+  - { sv: "nog", nl: "wel, waarschijnlijk; genoeg", ex: "Hon kommer **nog** snart.", exNl: "Ze komt waarschijnlijk wel snel." }
+  - { sv: "noga", nl: "zorgvuldig, goed", ex: "Lyssna **noga**!", exNl: "Luister goed!" }
