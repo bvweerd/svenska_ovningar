@@ -454,7 +454,7 @@ sections:
         instruction: Zet de woorden in de goede volgorde.
         topic: adjektiv-bestamd
         items:
-          - { id: 5dyy, type: order, topic: komparation, start: "Fleur tycker att", tokens: ["julen", "i Sverige", "är", "mysigare", "än", "i Nederländerna"], answers: ["Fleur tycker att julen är mysigare i Sverige än i Nederländerna.", "Fleur tycker att julen i Nederländerna är mysigare än i Sverige.", "Fleur tycker att julen i Sverige är mysigare än i Nederländerna."] }
+          - { id: 5dyy, type: order, topic: komparation, start: "Fleur tycker att", tokens: ["julen", "i Sverige", "är", "mysigare", "än", "i Nederländerna"], answers: ["Fleur tycker att julen är mysigare i Sverige än i Nederländerna.", "Fleur tycker att julen är mysigare i Nederländerna än i Sverige.", "Fleur tycker att julen i Nederländerna är mysigare än i Sverige.", "Fleur tycker att julen i Sverige är mysigare än i Nederländerna."] }
           - { id: yx66, type: order, start: "Kan du", tokens: ["ge", "mig", "den", "röda", "kulan", "som", "ligger", "på", "bordet"], answers: ["Kan du ge mig den röda kulan som ligger på bordet?"] }
           - { id: qcx3, type: order, start: "Ingrid har", tokens: ["köpt", "nya", "vita", "ljus", "till", "den", "gamla", "ljusstaken"], answers: ["Ingrid har köpt nya vita ljus till den gamla ljusstaken."] }
           - { id: hfwe, type: order, topic: komparation, start: "Stockholm är", tokens: ["större", "än", "Göteborg", "men", "inte", "lika", "stort", "som", "London"], answers: ["Stockholm är inte lika stort som London men större än Göteborg.", "Stockholm är större än Göteborg men inte lika stort som London."] }
@@ -462,7 +462,7 @@ sections:
           - { id: 9shs, type: order, topic: komparation, start: "Barnen sjöng", tokens: ["de", "vackraste", "julsångerna", "som", "de", "kunde"], answers: ["Barnen sjöng de vackraste julsångerna som de kunde."] }
           - { id: 9krv, type: order, topic: adjektiv-obestamd, start: "Efter julbordet", tokens: ["var", "alla", "så", "mätta", "att", "de", "inte", "kunde", "äta", "någon", "efterrätt"], answers: ["Efter julbordet var alla så mätta att de inte kunde äta någon efterrätt."], feedback: [{ contains: "de kunde inte", tip: "In een bijzin staat inte vóór het werkwoord. Att de inte kunde …" }] }
           - { id: k552, type: order, start: "Nästa år", tokens: ["vill", "vi", "fira", "jul", "hos", "mormor", "i", "hennes", "stora", "hus"], answers: ["Nästa år vill vi fira jul hos mormor i hennes stora hus."] }
-          - { id: y3sy, type: order, topic: komparation, start: "Det är kallt ute, så det är", tokens: ["mycket", "varmare", "inne", "än", "ute"], answers: ["Det är kallt ute, så det är mycket varmare inne än ute."] }
+          - { id: y3sy, type: order, topic: komparation, start: "Det är minus tio grader idag, så det är", tokens: ["mycket", "varmare", "inne", "än", "ute"], answers: ["Det är minus tio grader {idag|i dag}, så det är mycket varmare inne än ute."] }
           - { id: vx2s, type: order, topic: komparation, start: "Den gamla kyrkan", tokens: ["är", "det", "vackraste", "huset", "i", "vår", "lilla", "stad"], answers: ["Den gamla kyrkan är det vackraste huset i vår lilla stad."] }
 
       - id: wat-zeg-je
