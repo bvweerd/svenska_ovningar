@@ -404,7 +404,7 @@ sections:
           - { id: 9swt, type: gap, text: "Morfar är sjuttio år och har ___ hår.", gaps: [{ answers: ["grått"], options: ["grått", "grönt", "blått", "rosa"] }] }
           - { id: 6n68, type: gap, text: "Kaffe utan mjölk är ___.", gaps: [{ answers: ["svart"], options: ["svart", "gul", "rosa", "grön"] }] }
           - { id: sh3b, type: gap, text: "Byxorna är för små. Har ni en större ___?", gaps: [{ answers: ["storlek"], options: ["storlek", "färg", "ljusstake", "kula"] }] }
-          - { id: z82m, type: gap, text: "Mormor gav mig en ___ som hon har stickat själv.", gaps: [{ answers: ["tröja"], options: ["tröja", "kula", "färg", "storlek"] }] }
+          - { id: z82m, type: gap, text: "Mormor gav mig en ___ som hon hade stickat själv.", gaps: [{ answers: ["tröja"], options: ["tröja", "kula", "färg", "storlek"] }] }
           - { id: vpar, type: gap, text: "Till bröllopet köpte hon en ny ___.", gaps: [{ answers: ["klänning"], options: ["klänning", "kula", "ljusstake", "färg"] }] }
           - { id: 6mn7, type: gap, text: "Olle har på sig en blå ___ och svarta byxor.", gaps: [{ answers: ["skjorta"], options: ["skjorta", "strumpa", "sko", "storlek"] }] }
           - { id: 22x2, type: gap, text: "Mina fötter är kalla. Har du ett par varma ___?", gaps: [{ answers: ["strumpor"], options: ["strumpor", "kulor", "ljusstakar", "färger"] }] }
@@ -420,7 +420,7 @@ sections:
         shuffle: true
         items:
           - { id: ujhs, type: gap, text: "Jag fryser i den här ___ jackan.", gaps: [{ answers: ["tunna"], options: ["tunna", "tjocka", "tomma", "rika"] }] }
-          - { id: u5qm, type: gap, text: "Mormors gamla kokbok är väldigt ___, den har femhundra sidor.", gaps: [{ answers: ["tjock"], options: ["tjock", "tunn", "tom", "rik"] }] }
+          - { id: u5qm, type: gap, text: "Mormors gamla bok är väldigt ___, den har femhundra sidor.", gaps: [{ answers: ["tjock"], options: ["tjock", "tunn", "tom", "rik"] }] }
           - { id: y9sz, type: gap, text: "Kylskåpet är ___. Vi måste handla!", gaps: [{ answers: ["tomt"], options: ["tomt", "fullt", "högt", "rikt"] }] }
           - { id: at3e, type: gap, text: "Bussen var så ___ att vi fick stå hela vägen.", gaps: [{ answers: ["full"], options: ["full", "tom", "smal", "låg"] }] }
           - { id: qdyw, type: gap, text: "Mount Everest är det ___ berget i världen.", gaps: [{ answers: ["högsta"], options: ["högsta", "lägsta", "bredaste", "tunnaste"] }] }
@@ -760,7 +760,7 @@ vocab:
   - { sv: "en skinka", nl: "een ham", def: "skinkan", pl: "skinkor", plDef: "skinkorna", ex: "**Skinkan** står på julbordet.", exNl: "De ham staat op het kerstbuffet." }
   - { sv: "ett nyår", nl: "het nieuwjaar", def: "nyåret", mass: true, pl: "nyår", ex: "Vi firar **nyår** hos mina föräldrar.", exNl: "We vieren oud en nieuw bij mijn ouders." }
   - { sv: "att önska", nl: "wensen", ex: "Vad **önskar** du dig i julklapp?", exNl: "Wat wens jij je als kerstcadeau?" }
-  - { sv: "att sticka", nl: "breien", ex: "Mormor **stickar** en tröja till mig.", exNl: "Oma breit een trui voor mij." }
+  - { sv: "att sticka", nl: "breien", ex: "Jag **stickar** vantar till hela familjen.", exNl: "Ik brei wanten voor de hele familie." }
   - { sv: "att pynta", nl: "versieren", ex: "Vi **pyntar** huset till jul.", exNl: "We versieren het huis voor kerst." }
   - { sv: "att tända", nl: "aansteken", ex: "Vi **tänder** ett ljus varje söndag i advent.", exNl: "In de advent steken we elke zondag een kaars aan." }
   - { sv: "vacker", nl: "mooi", ex: "Granen är så **vacker**!", exNl: "De kerstboom is zo mooi!" }
@@ -805,7 +805,7 @@ vocab:
   - { sv: "lång", nl: "lang", ex: "I december är nätterna **längre** än dagarna.", exNl: "In december zijn de nachten langer dan de dagen." }
   - { sv: "tung", nl: "zwaar", ex: "Paketet är ganska **tungt**.", exNl: "Het pakje is vrij zwaar." }
   - { sv: "lätt", nl: "makkelijk, licht (van gewicht)", ex: "Det är **lätt** att baka pepparkakor.", exNl: "Het is makkelijk om gemberkoekjes te bakken." }
-  - { sv: "en julgran", nl: "een kerstboom", alt: ["en gran"], def: "julgranen", pl: "julgranar", plDef: "julgranarna", ex: "**Julgranen** står i vardagsrummet.", exNl: "De kerstboom staat in de woonkamer." }
+  - { sv: "en julgran", nl: "een kerstboom", alt: ["en gran"], def: "julgranen", pl: "julgranar", plDef: "julgranarna", ex: "**{Julgranen|Granen}** står i vardagsrummet.", exNl: "De kerstboom staat in de woonkamer." }
   - { sv: "en kula", nl: "een (kerst)bal, een bolletje", def: "kulan", pl: "kulor", plDef: "kulorna", ex: "Vi hänger röda **kulor** i granen.", exNl: "We hangen rode ballen in de boom." }
   - { sv: "en ljusstake", nl: "een kandelaar", def: "ljusstaken", pl: "ljusstakar", plDef: "ljusstakarna", ex: "I fönstret står en **ljusstake** med sju ljus.", exNl: "In het raam staat een kandelaar met zeven kaarsen." }
   - { sv: "en saffran", nl: "saffraan", def: "saffranen", mass: true, ex: "Lussekatter bakar man med **saffran**.", exNl: "Saffraanbroodjes bak je met saffraan." }
@@ -840,7 +840,7 @@ vocab:
   - { sv: "nöjd", nl: "tevreden", ex: "Är du **nöjd** med din nya cykel?", exNl: "Ben je tevreden met je nieuwe fiets?" }
   - { sv: "elak", nl: "gemeen", ex: "Var inte **elak** mot din lillebror!", exNl: "Doe niet gemeen tegen je broertje!" }
   - { sv: "fattig", nl: "arm", ex: "För länge sedan var många familjer **fattiga**.", exNl: "Lang geleden waren veel gezinnen arm." }
-  - { sv: "rik", nl: "rijk", ex: "Han är **rik** och har tre hus.", exNl: "Hij is rijk en heeft drie huizen." }
+  - { sv: "rik", nl: "rijk", ex: "Hon blev **rik** på sitt företag.", exNl: "Ze werd rijk met haar bedrijf." }
   - { sv: "konstig", nl: "raar, vreemd", ex: "Glöggen smakar **konstigt**.", exNl: "De glühwein smaakt raar." }
   - { sv: "underbar", nl: "geweldig, prachtig", ex: "Maten var **underbar**.", exNl: "Het eten was geweldig." }
   - { sv: "perfekt", nl: "perfect", ex: "Tröjan passar **perfekt**.", exNl: "De trui past perfect." }
@@ -848,4 +848,4 @@ vocab:
   - { sv: "hel", nl: "heel (compleet)", ex: "Vi var hemma **hela** julen.", exNl: "We waren de hele kerst thuis." }
   - { sv: "tom", nl: "leeg", ex: "Flaskan är redan **tom**!", exNl: "De fles is al leeg!" }
   - { sv: "full", nl: "vol", ex: "Kyrkan var **full** på julafton.", exNl: "De kerk was vol op kerstavond." }
-  - { sv: "tidig", nl: "vroeg (bijv. nw.: ett tidigt tåg)", ex: "Vi tar ett **tidigt** tåg till mormor.", exNl: "We nemen een vroege trein naar oma." }
+  - { sv: "tidig", nl: "vroeg (bijv. nw., zoals in: een vroege trein)", ex: "Vi tar ett **tidigt** tåg till mormor.", exNl: "We nemen een vroege trein naar oma." }
