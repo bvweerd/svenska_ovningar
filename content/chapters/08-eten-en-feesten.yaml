@@ -359,7 +359,7 @@ sections:
           Dagen efter var Bram trött. Han åt bara en smörgås till frukost. ”Jag tänker aldrig äta kräftor igen!” sa han. Fleur skrattar bara. Hon tror att han vill gå på kräftskiva igen redan nästa år.
         items:
           - { id: pztz, type: truefalse, statement: "Kräftskivan var i augusti.", answer: true }
-          - { id: g3w5, type: truefalse, statement: "Gästerna fick inbjudan i augusti.", answer: false, tip: "Wanneer kregen de vrienden de uitnodiging?", correction: { answers: ["{Gästerna|De|Vännerna} fick {inbjudan|en inbjudan} [redan ]i juli."] } }
+          - { id: g3w5, type: truefalse, statement: "Gästerna fick inbjudan i augusti.", answer: false, tip: "Wanneer kregen de vrienden de uitnodiging?", correction: { answers: ["[Alla ]{gästerna|vännerna|deras vänner|de} fick {inbjudan|en inbjudan} [redan ]i juli.", "{Gästerna|Vännerna|De} fick {inbjudan|en inbjudan} [redan ]i juli."] } }
           - { id: ysqa, type: truefalse, statement: "Gästerna hade roliga hattar.", answer: true }
           - { id: qdtm, type: truefalse, statement: "Fleur hade ätit kräftor många gånger.", answer: false, tip: "Had ze ze al eens gegeten?", correction: { answers: ["{Fleur|Hon} hade aldrig ätit kräftor[ förut]."] } }
           - { id: nfdc, type: truefalse, statement: "Fleur tyckte att kräftorna var äckliga.", answer: false, tip: "Wat vond ze ervan?", correction: { answers: ["{Fleur|Hon} tyckte att {kräftorna|de} var goda."] } }
