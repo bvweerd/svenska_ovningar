@@ -240,7 +240,7 @@ sections:
             type: steps
             steps:
               - { type: mc, prompt: "**läsa** (lezen): Fleur ___ en bok.", options: ["läser", "läsar", "läsa"], answer: 0, tip: "Bij läsa wordt de -a een -er: läser." }
-              - { type: translate, prompt: "Maak de zin ontkennend: Fleur läser en bok.", answers: ["Fleur läser {inte någon|ingen} bok."], feedback: [{ match: "Fleur läser inte en bok", tip: "Geen + en-woord: ingen (of inte någon). „Inte en” klinkt onnatuurlijk." }], topic: inte }
+              - { type: translate, prompt: "Maak de zin ontkennend: Fleur läser en bok.", answers: ["Fleur läser {inte någon|ingen} bok."], feedback: [{ match: "Fleur läser inte en bok", retry: true, tip: "Dat kan (bijvoorbeeld als tegenstelling: *inte en bok, utan en tidning*), maar gewoon „geen boek” is in het Zweeds *ingen bok* (of *inte någon bok*). Probeer het nog eens." }], topic: inte }
           - id: kvzv
             type: steps
             steps:
@@ -440,7 +440,7 @@ sections:
                 tip: "Bij inversie staat het onderwerp na het werkwoord; inte komt ná het onderwerp."
               - { type: translate, prompt: "Vertaal: Nu woont hij niet in Nederland.", answers: ["Nu bor han inte i {Nederländerna|Holland}."] }
           - { id: xarn, type: translate, prompt: "Heter hon Wilma?", answers: ["[Nej, ]hon heter inte Wilma.", "[Nej, ]det gör hon inte."] }
-          - { id: crfg, type: translate, prompt: "Har du en katt?", answers: ["[Nej, ]jag har {ingen katt|inte någon katt}.", "[Nej, ]det har jag inte."], feedback: [{ contains: "du har", tip: "Je antwoordt over jezelf: du wordt jag." }, { contains: "inte en katt", tip: "Geen + en-woord: ingen (of inte någon). „Inte en” klinkt onnatuurlijk." }] }
+          - { id: crfg, type: translate, prompt: "Har du en katt?", answers: ["[Nej, ]jag har {ingen katt|inte någon katt}.", "[Nej, ]det har jag inte."], feedback: [{ contains: "du har", tip: "Je antwoordt over jezelf: du wordt jag." }, { contains: "inte en katt", retry: true, tip: "Dat kan als tegenstelling (*inte en katt, utan två*), maar gewoon „geen kat” is in het Zweeds *ingen katt* (of *inte någon katt*). Probeer het nog eens." }] }
 
       - id: en-ett-bepaald
         title: En of ett? En de bepaalde vorm
