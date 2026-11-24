@@ -383,7 +383,7 @@ sections:
           - { id: uyvv, type: gap, text: "Efter en dag på stranden var ___ på armarna alldeles röd.", gaps: [{ answers: ["huden"], options: ["huden", "tungan", "kryckan", "nacken"] }] }
           - { id: x7mm, type: gap, text: "Jag tror att jag har feber. Var är ___?", gaps: [{ answers: ["termometern"], options: ["termometern", "kryckan", "ambulansen", "motionen"], feedback: [{ match: "kryckan", tip: "Koorts meet je met een thermometer: termometern." }] }] }
           - { id: fyxc, type: gap, text: "Läkaren vill titta på ___, så jag öppnar munnen.", gaps: [{ answers: ["tungan"], options: ["tungan", "nacken", "axeln", "tån"], feedback: [{ match: "nacken", tip: "Als je je mond opendoet, ziet de dokter je tong: tungan." }] }] }
-          - { id: g3dn, type: gap, text: "Läkaren lyssnar på hjärtat och lägger handen på ___.", gaps: [{ answers: ["bröstet"], options: ["bröstet", "håret", "tån", "gipset"] }] }
+          - { id: g3dn, type: gap, text: "Läkaren lägger handen på ___ och lyssnar på hjärtat.", gaps: [{ answers: ["bröstet"], options: ["bröstet", "håret", "tån", "läppen"] }] }
 
       - id: woorden-ziek-gezond
         title: "Woorden in een zin: ziek en gezond"
@@ -396,15 +396,15 @@ sections:
           - { id: 3s5x, type: gap, text: "Hon bröt benet och måste gå med ___ i sex veckor.", gaps: [{ answers: ["kryckor"], options: ["kryckor", "ambulanser", "termometrar", "patienter"], feedback: [{ match: "ambulanser", tip: "Met een gebroken been loop je met krukken: kryckor." }] }] }
           - { id: 74af, type: gap, text: "Ring 112! Vi behöver en ___ direkt.", gaps: [{ answers: ["ambulans"], options: ["ambulans", "termometer", "krycka", "hud"], feedback: [{ match: "termometer", tip: "Bij een noodgeval (112) komt er een ambulance: ambulans." }] }] }
           - { id: f6bk, type: gap, text: "Många på jobbet är sjuka, för det går ___ just nu.", gaps: [{ answers: ["influensa"], options: ["influensa", "motion", "hälsa", "hud"] }] }
-          - { id: fmeg, type: gap, text: "Jag cyklar varje dag och får mycket ___.", gaps: [{ answers: ["motion"], options: ["motion", "influensa", "värk", "gips"], feedback: [{ match: "influensa", tip: "Fietsen is beweging: motion. Influensa is griep." }] }] }
+          - { id: fmeg, type: gap, text: "Jag cyklar varje dag och får mycket ___.", gaps: [{ answers: ["motion"], options: ["motion", "influensa", "hud", "gips"], feedback: [{ match: "influensa", tip: "Fietsen is beweging: motion. Influensa is griep." }] }] }
           - { id: rg9w, type: gap, text: "Läkaren träffar tjugo ___ varje dag.", gaps: [{ answers: ["patienter"], options: ["patienter", "kryckor", "termometrar", "ambulanser"] }] }
-          - { id: t6pt, type: gap, text: "Gatan var blöt efter regnet, så jag ___.", gaps: [{ answers: ["halkade"], options: ["halkade", "svalde", "nös", "läkte"], feedback: [{ match: "nös", tip: "Att nysa = niezen. Op een natte vloer glijd je uit: halka (halkade)." }] }] }
+          - { id: t6pt, type: gap, text: "Gatan var blöt efter regnet, så jag ___.", gaps: [{ answers: ["halkade"], options: ["halkade", "svalde", "nös", "läkte"], feedback: [{ match: "nös", tip: "Att nysa = niezen. Op een natte straat glijd je uit: halka (halkade)." }] }] }
           - { id: j5ey, type: gap, text: "Tabletten är stor, så det är svårt att ___ den.", gaps: [{ answers: ["svälja"], options: ["svälja", "nysa", "läka", "halka"], feedback: [{ match: "nysa", tip: "Een tablet moet je doorslikken: svälja." }] }] }
-          - { id: d8b8, type: gap, text: "Hon är förkyld och ___ hela morgonen.", gaps: [{ answers: ["nyser"], options: ["nyser", "sväljer", "läker", "avbokar"], feedback: [{ match: "sväljer", tip: "Bij een allergie nies je: nysa (jag nyser)." }] }] }
-          - { id: fp2b, type: gap, text: "Vi är sjuka och måste ___ resan.", gaps: [{ answers: ["avboka"], options: ["avboka", "svälja", "läka", "halka"], feedback: [{ match: "läka", tip: "Läka = genezen. Een afspraak afzeggen is avboka." }] }] }
+          - { id: d8b8, type: gap, text: "Hon är förkyld och ___ hela dagen.", gaps: [{ answers: ["nyser"], options: ["nyser", "sväljer", "läker", "avbokar"], feedback: [{ match: "sväljer", tip: "Als je verkouden bent, nies je: nysa (hon nyser)." }] }] }
+          - { id: fp2b, type: gap, text: "Vi är sjuka och måste ___ resan.", gaps: [{ answers: ["avboka"], options: ["avboka", "svälja", "läka", "halka"], feedback: [{ match: "läka", tip: "Läka = genezen. Een reis (of afspraak) afzeggen is avboka." }] }] }
           - { id: 89um, type: gap, text: "Var ___! Det är inget farligt.", gaps: [{ answers: ["lugn"], options: ["lugn", "stressad", "skadad", "allvarlig"], feedback: [{ match: "stressad", tip: "Er is niets ergs aan de hand: dan blijf je rustig (lugn)." }] }] }
           - { id: v5pp, type: gap, text: "Jag har så mycket att göra på jobbet att jag är ___ hela tiden.", gaps: [{ answers: ["stressad"], options: ["stressad", "lugn", "pigg", "utomhus"], feedback: [{ match: "lugn", tip: "Veel werk maakt je eerder gestrest (stressad) dan rustig." }] }] }
-          - { id: kjhc, type: gap, text: "På sommaren tränar jag ___, inte på gymmet.", gaps: [{ answers: ["utomhus"], options: ["utomhus", "lugn", "pigg", "farligt"], feedback: [{ match: "lugn", tip: "Bij mooi weer eet je buiten: utomhus." }] }] }
+          - { id: kjhc, type: gap, text: "På sommaren tränar jag ___, inte på gymmet.", gaps: [{ answers: ["utomhus"], options: ["utomhus", "lugn", "pigg", "farligt"], feedback: [{ match: "lugn", tip: "Je traint in de open lucht, niet in de sportschool: utomhus." }] }] }
 
       - id: wat-zeg-je
         title: Wat zeg je?
@@ -797,7 +797,7 @@ vocab:
   - { sv: "en hud", nl: "de huid", def: "huden", mass: true, ex: "Solen är farlig för **huden**.", exNl: "De zon is gevaarlijk voor de huid." }
   - { sv: "ett sår", nl: "een wond(je)", def: "såret", pl: "sår", plDef: "såren", ex: "Tvätta **såret** och sätt på ett plåster.", exNl: "Was het wondje en doe er een pleister op." }
   - { sv: "ett plåster", nl: "een pleister", def: "plåstret", pl: "plåster", plDef: "plåstren", ex: "Har du ett **plåster**? Jag blöder.", exNl: "Heb je een pleister? Ik bloed." }
-  - { sv: "ett gips", nl: "gips", def: "gipset", mass: true, ex: "Läkaren tar bort **gipset** efter sex veckor.", exNl: "De dokter haalt het gips er na zes weken af." }
+  - { sv: "ett gips", nl: "gips", def: "gipset", mass: true, ex: "Han har haft **gips** på benet i sex veckor.", exNl: "Hij heeft zes weken gips om zijn been gehad." }
   - { sv: "en krycka", nl: "een kruk (om mee te lopen)", def: "kryckan", pl: "kryckor", plDef: "kryckorna", ex: "Var är mina **kryckor**? Jag kan inte gå utan dem.", exNl: "Waar zijn mijn krukken? Ik kan niet lopen zonder." }
   - { sv: "en ambulans", nl: "een ambulance", def: "ambulansen", pl: "ambulanser", plDef: "ambulanserna", ex: "**Ambulansen** kom efter tio minuter.", exNl: "De ambulance kwam na tien minuten." }
   - { sv: "en termometer", nl: "een thermometer", def: "termometern", pl: "termometrar", plDef: "termometrarna", ex: "**Termometern** visar trettionio grader.", exNl: "De thermometer geeft negenendertig graden aan." }
@@ -817,7 +817,7 @@ vocab:
   - { sv: "att nysa", nl: "niezen", ex: "Jag **nyser** hela tiden, jag tror att jag är allergisk.", exNl: "Ik nies de hele tijd, ik denk dat ik allergisch ben." }
   - { sv: "att läka", nl: "genezen (van een wond)", ex: "Såret **läker** snabbt.", exNl: "Het wondje geneest snel." }
   - { sv: "att avboka", nl: "afzeggen, annuleren", ex: "Jag måste **avboka** min tid hos tandläkaren.", exNl: "Ik moet mijn afspraak bij de tandarts afzeggen." }
-  - { sv: "pigg", nl: "uitgerust, fris en wakker", ex: "Jag sov bra och är **pigg** idag.", exNl: "Ik heb goed geslapen en ben vandaag fit." }
+  - { sv: "pigg", nl: "uitgerust, fris en wakker", ex: "Jag sov bra och är **pigg** idag.", exNl: "Ik heb goed geslapen en ben vandaag fris en uitgerust." }
   - { sv: "farlig", nl: "gevaarlijk", ex: "Den här sjukdomen är inte **farlig**.", exNl: "Deze ziekte is niet gevaarlijk." }
   - { sv: "allvarlig", nl: "ernstig", ex: "Är det **allvarligt**, doktorn?", exNl: "Is het ernstig, dokter?" }
   - { sv: "skadad", nl: "gewond; beschadigd", ex: "Han blev **skadad** i en olycka.", exNl: "Hij raakte gewond bij een ongeluk." }
