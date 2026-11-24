@@ -64,7 +64,8 @@ Zweeds wordt voorgelezen met de spraakfunctie van de browser.
 ## Spelregels (vastgesteld met de eigenaar)
 
 - **Geen AI en geen externe diensten.** Alles werkt offline in de browser; er gaan geen teksten of opnames
-  naar een server. Alleen de anonieme tellingen via GoatCounter blijven.
+  naar een server. Uitzonderingen: anonieme tellingen (GoatCounter), „Fout gezien?” en opt-in synchroniseren
+  via de eigen Worker.
 - **De app kijkt na, niet de leerling.** Geen zelfbeoordeling; wat de app niet kan nakijken (vrije tekst),
   is oefenen zonder oordeel, met hulp en voorbeeldantwoord.
 - **Geen spreken en uitspraak nakijken.** Spraakherkenning is daarvoor niet goed genoeg en werkt in de
@@ -74,15 +75,14 @@ Zweeds wordt voorgelezen met de spraakfunctie van de browser.
   sessie) die het werk van de schrijver niet kent: spelling, en/ett, vormen, woordvolgorde, eenduidige
   Nederlandse vertaling, niveau en idiomatisch Zweeds, alle goede antwoorden goedgekeurd en foutregels
   terecht, alleen stof uit dit en eerdere hoofdstukken, passend in de moeilijkheidslijn. Bevindingen
-  verwerken of met reden afwijzen; twijfel → eigenaar, die steekproefsgewijs meeleest.
+  verwerken of met reden afwijzen. Twijfel → eigenaar; kan die het niet beoordelen, dan weglaten.
 - Op B1/B2 vooral opdrachten met een vast antwoord; vrij schrijven als laatste, vrijblijvende stap.
 - **Voortgang hangt aan id's**: nooit een vraag-id, oefening-id of hoofdstuknummer veranderen.
 
 ## Onderwijskundige lijn (altijd volgen)
 
-Elke nieuwe oefening, oefenvorm of functie past in deze lijn. Wat meetbaar is, controleert `npm test` of
-`npm run difficulty-report`; de rest hoort in de taalreview en de code-review. Onderbouwing:
-`REVIEW-DIDACTIEK.md`.
+Elke nieuwe oefening, oefenvorm of functie past in deze lijn. Wat meetbaar is, controleert `npm test`,
+`npm run difficulty-report` of `npm run content-report`; de rest hoort in de taalreview en de code-review.
 
 1. **Vier strands in balans** (Nation): naast vormgerichte oefening ook
    - *input met aandacht voor betekenis*: de leestekst van het hoofdstuk plus **minstens 4 makkelijke
@@ -112,7 +112,7 @@ Elke nieuwe oefening, oefenvorm of functie past in deze lijn. Wat meetbaar is, c
 
 Zaagtand: binnen een hoofdstuk oplopend; oudere stof komt in de herhaling terug op het niveau van toen.
 De getallen zijn een eigen richtlijn; de A1/A2-grens bij H6/H7 is een aanname.
-`npm run difficulty-report` bewaakt de lijn (`!` = eronder; hoe er gemeten wordt: `CLAUDE.md`).
+`npm run difficulty-report` bewaakt de lijn (`!` = eronder; hoe er gemeten wordt: bovenaan het script).
 
 | Hoofdstuk | Niveau | Leestekst (woorden) | Antwoordzin (woorden) | Vragen |
 |---|---|---|---|---|
@@ -129,100 +129,33 @@ Vaste volgorde per hoofdstuk (`npm test` controleert hem; details in README, „
 
 Geen grammatica uit een later hoofdstuk (ook getest).
 
-## Gedaan
+## Gedaan (november 2026)
 
-Alles in november 2026.
-- **Opbouw A-site**: fundament (Vite, vanilla JS, YAML-inhoud, Pages-workflow), nakijkmotor met
-  foutanalyse en oplopende hulp, hoofdstuk 0–12 met herhaling, voortgang, dagelijkse herhaling,
-  werkwoordtrainer, toetsen, flitskaarten, snelle rondes, PWA.
-- **Opbouw B-site**: niveaus, luisteren met browserstem, `sort`/`transform`, hoofdstuk 13–30 met
-  eindherhalingen; werkwoordtrainer met 45 partikelwerkwoorden.
-- **Uitbreiding woorden en oefeningen**: rondes van 15 woorden, meervoud en voorbeeldzin per woord,
-  `npm run vocab-report`; woordenlijsten naar ±60 per hoofdstuk (H1–H12: 715, H13–H30: 1083);
-  82 werkwoorden erbij (146); kernoefeningen naar ≥ 8 vragen (±420 erbij); Luisteren in H0–H12
-  (130 vragen); `npm run stats`. Alles na taalreview en goedkeuring door de eigenaar.
-- **Didactiek fase 1**: kan-doen-uitspraken (2–4 per hoofdstuk, door de app afgevinkt bij 80% in doos 3+),
-  eindtoetsen H24/H30 eerlijk benoemd als „Herhaling B1-/B2-grammatica”, melding computerstem.
-- **Fase 1b**: vaste volgorde per hoofdstuk (17 oefeningen verplaatst), moeilijkheidslijn,
-  `npm run difficulty-report`, B-herhalingssets naar 10 vragen.
-- **Fase 2**: 12 keuzeoefeningen „Kies en vertaal/maak” (108 vragen) met een „Waarom?”-stap.
-- **Fase 3**: geleid schrijven (124 nagekeken stappen vóór de 30 schrijfopdrachten), langere leesteksten
-  tot op de lijn in alle hoofdstukken (`difficulty-report`: 0 eronder), vijf doeltaken (H2, H6, H11,
-  H17, H22), betoog in stappen in H25–H30.
-- **Nakijker-fix**: een tijdsbepaling wordt alleen binnen een enkelvoudige hoofdzin verplaatst, ook bij
-  samengestelde onderwerpen (*Fleur och Bram*); de tip bij `fixedOrder` volgt de opdracht.
-- **Twijfelronde**: open taalreview-twijfels in H1–H30 opgelost (meer goede antwoorden, zachtere tips,
-  geen stof uit later hoofdstuk); doeltaken met `kind: taak` op vaste plek.
-- **Voortgang op meer apparaten**: importeren voegt samen (`mergeStates`); synchroniseren met een synccode
-  via de Worker en Cloudflare D1 (opt-in, besloten door de eigenaar). Eén Worker (`svensk-ovningar-b`, code in
-  `worker/` van de B-repo) bedient beide sites; D1 staat in `worker/wrangler.toml`, `SYNC_URL` is een
-  repo-variabele voor de Pages-build (`worker/README.md`, „Synchronisatie”).
+- **Opbouw**: A-site H0–H12 en B-site H13–H30 (Vite, vanilla JS, YAML, PWA, GitHub Pages); nakijker met
+  foutanalyse, oplopende hulp en `retry`-regels; dagelijkse herhaling (Leitner), toetsen, flitskaarten (nagekeken),
+  snelle rondes, werkwoordtrainer, hand-outs, prestaties, statistieken, pagina Verantwoording.
+- **Didactiek**: kan-doen-uitspraken (afgevinkt bij 80% in doos 3+), vaste volgorde en moeilijkheidslijn met
+  rapporten (`difficulty-report`, `content-report`, beide op 0), keuzeoefeningen met „Waarom?”, geleid schrijven,
+  doeltaken, 4 makkelijke teksten en „Wat zeg je?” per hoofdstuk, luisterdialogen, Zweeds → Zweeds, ontdek de
+  regel, woorden en onderwerpen komen terug in latere herhalingen, instaptoets, woordaccent.
+- **Woordenschat**: A H1–H6 ±60, H7–H12 100 woorden per hoofdstuk (963 in totaal, ±1.530 verschillende woorden
+  in de stof); B ±60–70 per hoofdstuk; elk woord met vormen en een voorbeeldzin, „Woorden in een zin”;
+  `vocab-report` met Kelly-lijst (`scripts/data/kelly-sv.tsv`, CC BY 4.0).
+- **Antwoordzinnen A2**: 50 lange zinsbouw- en omvormvragen in H10–H12.
+- **Techniek**: code in lagen met register van vraagtypen (`ARCHITECTURE.md`), store, rooktest in de browser,
+  UI-tests (dekking ±85%), spellingtest (hunspell); voortgang samenvoegen en synchroniseren via de Worker en
+  Cloudflare D1 (`worker/README.md` in de B-repo).
 
-- **Onderwijskundige lijn** (branch `didactiek`): lijn in PLAN en CLAUDE.md, door `npm test` afgedwongen;
-  makkelijke teksten (2 per hoofdstuk H1–H30), „Wat zeg je?” (H5–H30), woordaccent (H0), vlot herhalen,
-  instaptoets, B-woordenschat +183. Alles na taalreview.
-- **Architectuur** (`ARCHITECTURE.md`, stap 1–5, branch `dev`): code in lagen (core, platform, app, ui)
-  met bewakingstest, register van vraagtypen, routetabel, pure voortgangsregels met store, rooktest in
-  de browser (`npm run smoke`, ook in CI). Gedrag, opslag en antwoordhashes ongewijzigd.
-
-- **Issues november 2026** (branch `dev`): #11/#12 hoofdletters bij tegels en hints die het antwoord
-  verklapten (knop Hint); #10 code alle rechten voorbehouden; #7 prestaties (badges); #8 hand-outs A4 per
-  uitlegkaart; #6 gebruikersfeedback (overslaan, slepen, deelpunten, dagdoel herhaling, statistieken,
-  getallen als woord in H6, groepen in H2/H4, met taalreview); #9 UX-analyse (`UX-REVIEW.md`); afgesloten met een
-  code-review (10 bevindingen, alle verwerkt).
-- **Rapport inhoud en didactiek** (`npm run content-report`, ook in CI): A-site bijgewerkt tot 0 aandachtspunten:
-  foutregels H0–H2 en H7–H10 ≥ 50%, uitspraak- en themakaarten terug in latere herhalingen, `pengar` en
-  `mat-fraser` aangevuld, woordenschat H7–H9 vaker terug, makkelijke tekst H2. B-site ook op 0: makkelijke
-  teksten ≥ 95% bekend, langere zinnen, foutregels, woordenschat H21/H26/H27 vaker terug. Met taalreview.
-- **„Wat zeg je?” ook in H1–H4** (output op A1 omhoog, 4–5 situaties per hoofdstuk) en lange zinnen met één
-  antwoord verruimd op beide sites (A: H6, H7; B: H13, H19, H23, H25). Met taalreview.
-- **Testdekking**: Zweedse spelling met hunspell (`content/stavning.txt`), interactietest in de rooktest, UI-tests
-  in happy-dom (elke vraag en pagina); dekking van `src/` van 34% naar 85% van de regels, met een minimum in CI.
-- **B-woordenschat in zinnen** (B #5): H19 alle 69 woorden in een zin of tekst (was 22); daarna H13, H14, H16 en
-  H18 (37–43 woorden alleen in de lijst → 0) met invuloefeningen in Ord, elk met een tip. Met taalreview.
-- **Pagina Verantwoording** (`#/verantwoording`, via Over): het rapport inhoud en didactiek leesbaar voor
-  gebruikers, met grafieken en tabellen; bij elke build berekend (`scripts/verantwoording.mjs`).
-- **Meer output A1–A2** (gestuurde situaties + doeltaken, na te kijken): H1 4→8% (taak nieuwe buurvrouw),
-  H2 8→12%, H10 5→11% (taak vaatwasser kapot). Tips en vertaalopdrachten tonen nu *cursief*/**vet**.
-  Daarna (#19) H3–H9, H11, H12: 4–6 situaties per hoofdstuk en een taak waar die ontbrak; nu elk hoofdstuk
-  vanaf H1 ≥ 8%, H3–H12 ≥ 11%. Met taalreview.
-- **Meer makkelijk lezen A1–A2** (review didactiek: 3–5 per hoofdstuk): H1–H12 van 2 naar 4 makkelijke teksten
-  (24 nieuw, 95–100% bekende woorden, ook keuzevragen); `easyCount` in `LINE` (A 4, B 2). Met taalreview.
-  Daarna B-site H13–H30 ook van 2 naar 4 (36 nieuw), `easyCount` overal 4. Met taalreview.
-
-- **Didactisch review A-site, tweede ronde** (`REVIEW-DIDACTIEK.md`): Zweeds → Zweeds en luisterdialogen in A2,
-  diagnose *är* + supinum, kernonderwerpen en woorden vaker terug, kan-doen herschreven, flitskaarten nagekeken.
-  Met taalreview. B-site daarna: „Wat zeg je?” 4 → 8 in B1, woorden in zinnen (H15, H17, H20–H24), ontdek de regel
-  (H13, H14, H23), foutregels met `retry` (goed Zweeds, andere vorm: geen fout); daarna antwoordruimte, woorden van
-  eerder in de herhaling (H16–H28), omvormen in H17, leesvragen niet meer bij grammatica-kan-doen. Met taalreview.
-- **Meer prestaties**: 21 nieuwe badges (43), per strand (makkelijke teksten, luisteren, „Wat zeg je?”,
-  schrijven, doeltaken), dagdoel herhaling (`goalDays`, synchroniseert mee), hoofdstuk beheerst, per snelle ronde
-  en alle hoofdstukken; niveaus die een site niet kan halen verschijnen niet; pagina ingedeeld per strand; tien
-  nieuwe Zweedse plaatjes (o.a. köttbullar, falukorv, kräfta, hembränt).
-- **#32 vragen in stappen**: „Toon antwoord” toont alleen de huidige stap (de rest doe je zelf); de score telt
-  per stap mee (deelpunten), ook als een stap bekeken is. De vraag blijft „bekeken” voor de herhaling.
-
-- **Woordenschat A2** (H7–H12 van ±60 naar 100 woorden per hoofdstuk, +245): lijsten H1–H12 van 718 naar 963, stof van
-  1.333 naar ±1.530 verschillende woorden; per hoofdstuk invulzinnen „Woorden in een zin” en waar het past een zin in de
-  leestekst. `vocab-report` telt de stof (hunspell) en vergelijkt met de Kelly-lijst (`scripts/data/kelly-sv.tsv`, CC BY 4.0).
-  Met taalreview (twee rondes per hoofdstuk, plus een controle van de getypte invulzinnen).
+Alles met taalreview.
 
 ## Open / volgende stappen
 
-1. **Meten na publicatie** met `npm run stats -- --min 5` (README, „Statistieken”). Er is geen
-   testgroep (besloten november 2026); meten gaat alleen via de tellingen. Kijk naar:
-   - fout/bekeken per oefening en per hoofdstuk, vooral bij de keuzeoefeningen;
-   - aandeel vragen in doos 4+ en behaalde kan-doen-doelen (`kandoen/…/behaald`);
-   - afgemaakte geleide schrijfstappen, vrije teksten, leesteksten en doeltaken.
-   De eerste meting (19 november, ±200 antwoorden, vooral uit tests) wees op de sje-/tje-klank en
-   zachte klinkers (H0) en de correctievraag in lasa-annons; die zijn aangepast.
-2. **Antwoordzinnen A2.** Gemiddelde antwoordzin (`difficulty-report`) H7–H12 nu 7,4 · 7,5 · 7,7 · 7,5 · 7,2 · 7,3
-   (was 7,4 tot 6,2), na 50 lange zinsbouw- en omvormvragen in H10–H12 („Langere zinnen”, „Maak er één zin van”, 10–14
-   woorden). H11 en H12 blijven lager door de korte vormoefeningen (positie, bijvoeglijk naamwoord); een echte stijging
-   naar ±8 vraagt nog ±30 lange vragen per hoofdstuk. Eerst meten of de lange vragen werken (`stats`), dan beslissen.
-3. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview; nieuwe stof op de
-   moeilijkheidslijn en op de plek die de vaste volgorde voorschrijft.
-4. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem. De oordelen op „Luisteren instellen”
-   (`/b/luisteren/oordeel/…`) en de status (`/b/luisteren/status/…`) laten zien of de browserstemmen
-   goed genoeg zijn.
-5. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.
+1. **Meten na publicatie** met `npm run stats -- --min 5` (README, „Statistieken”); er is geen testgroep.
+   Kijk naar fout/bekeken per oefening (vooral keuzevragen en de nieuwe lange zinnen), doos 4+, behaalde
+   kan-doen-doelen, afgemaakte schrijfstappen, leesteksten en doeltaken.
+2. **Antwoordzinnen A2** (`difficulty-report`): H7–H12 nu 7,4 · 7,5 · 7,7 · 7,5 · 7,2 · 7,3. H11 en H12 blijven
+   lager door de korte vormoefeningen; naar ±8 vraagt nog ±30 lange vragen per hoofdstuk. Eerst meten.
+3. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview, op de lijn en in de vaste volgorde.
+4. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem; de oordelen op „Luisteren instellen”
+   (`/b/luisteren/oordeel/…`, `/b/luisteren/status/…`) laten zien of de browserstemmen goed genoeg zijn.
+5. **Spreken** blijft buiten de site; de handleiding kan een docent of taalpartner aanraden.
