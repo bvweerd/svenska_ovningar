@@ -433,6 +433,38 @@ sections:
           - { id: mphu, type: gap, text: "Den ___ bussen går klockan fem.", gaps: [{ answers: ["tidiga"], options: ["tidiga", "låga", "breda", "smala"] }] }
           - { id: h6x9, type: gap, text: "Hunden är snäll, du behöver inte vara ___.", gaps: [{ answers: ["rädd"], options: ["rädd", "stolt", "nöjd", "rik"] }] }
 
+      - id: langere-zinnen
+        title: "Langere zinnen bouwen"
+        instruction: Zet de woorden in de goede volgorde.
+        topic: adjektiv-bestamd
+        items:
+          - { id: hnnq, type: order, start: "På julafton", tokens: ["satt", "hela", "familjen", "runt", "den stora granen", "i vardagsrummet"], answers: ["På julafton satt hela familjen runt den stora granen i vardagsrummet."] }
+          - { id: a9w9, type: order, topic: komparation, start: "Wilma tycker att", tokens: ["den röda klänningen", "är", "finare", "än", "den blå"], answers: ["Wilma tycker att den röda klänningen är finare än den blå."] }
+          - { id: dwt6, type: order, topic: adjektiv-obestamd, start: "Vi bor i", tokens: ["ett", "litet", "gult", "hus", "som", "ligger", "nära", "sjön"], answers: ["Vi bor i ett litet gult hus som ligger nära sjön."] }
+          - { id: gdxp, type: order, topic: komparation, start: "Mitt nya rum", tokens: ["är", "större", "och", "ljusare", "än", "det gamla"], answers: ["Mitt nya rum är större och ljusare än det gamla.", "Mitt nya rum är ljusare och större än det gamla."] }
+          - { id: y86y, type: order, topic: komparation, start: "Eftersom det var kallt", tokens: ["tog", "Nils", "på sig", "sin", "tjockaste", "tröja"], answers: ["Eftersom det var kallt tog Nils på sig sin tjockaste tröja.", "Eftersom det var kallt tog Nils sin tjockaste tröja på sig."] }
+          - { id: 8nnb, type: order, topic: adjektiv-obestamd, start: "Lilla Nils", tokens: ["fick", "en", "ny", "cykel", "och", "två", "små", "böcker"], answers: ["Lilla Nils fick en ny cykel och två små böcker.", "Lilla Nils fick två små böcker och en ny cykel."] }
+          - { id: qa36, type: order, topic: komparation, start: "Mormor bakar", tokens: ["de", "godaste", "lussekatterna", "i", "hela", "stan"], answers: ["Mormor bakar de godaste lussekatterna i hela stan."] }
+          - { id: hdhm, type: order, topic: komparation, start: "I december", tokens: ["är", "dagarna", "kortare", "och", "nätterna", "längre", "än", "på sommaren"], answers: ["I december är dagarna kortare och nätterna längre än på sommaren.", "I december är nätterna längre och dagarna kortare än på sommaren."] }
+          - { id: uy55, type: order, topic: komparation, start: "Olle köpte", tokens: ["den", "billigaste", "granen", "eftersom", "de", "andra", "var", "för", "dyra"], answers: ["Olle köpte den billigaste granen eftersom de andra var för dyra."] }
+          - { id: x2qp, type: order, start: "Den lilla flickan", tokens: ["hade", "en", "lång", "vit", "klänning", "och", "ljus", "i håret"], answers: ["Den lilla flickan hade en lång vit klänning och ljus i håret."] }
+
+      - id: nog-langere-zinnen
+        title: "Nog meer lange zinnen"
+        instruction: Zet de woorden in de goede volgorde.
+        topic: adjektiv-bestamd
+        items:
+          - { id: 5dyy, type: order, topic: komparation, start: "Fleur tycker att", tokens: ["julen", "i", "Sverige", "är", "mysigare", "än", "i Nederländerna"], answers: ["Fleur tycker att julen i Sverige är mysigare än i Nederländerna."] }
+          - { id: yx66, type: order, start: "Kan du", tokens: ["ge", "mig", "den", "röda", "kulan", "som", "ligger", "på", "bordet"], answers: ["Kan du ge mig den röda kulan som ligger på bordet?"] }
+          - { id: qcx3, type: order, start: "Ingrid har", tokens: ["köpt", "nya", "vita", "ljus", "till", "den", "gamla", "ljusstaken"], answers: ["Ingrid har köpt nya vita ljus till den gamla ljusstaken."] }
+          - { id: hfwe, type: order, topic: komparation, start: "Stockholm är", tokens: ["större", "än", "Göteborg", "men", "inte", "lika", "stort", "som", "London"], answers: ["Stockholm är större än Göteborg men inte lika stort som London."] }
+          - { id: twbj, type: order, topic: adjektiv-obestamd, start: "Bram letade", tokens: ["länge", "efter", "en", "fin", "julklapp", "till", "Fleur"], answers: ["Bram letade länge efter en fin julklapp till Fleur."] }
+          - { id: 9shs, type: order, topic: komparation, start: "Barnen sjöng", tokens: ["de", "vackraste", "julsångerna", "som", "de", "kunde"], answers: ["Barnen sjöng de vackraste julsångerna som de kunde."] }
+          - { id: 9krv, type: order, topic: adjektiv-obestamd, start: "Efter julbordet", tokens: ["var", "alla", "så", "mätta", "att", "de", "inte", "kunde", "äta", "någon", "efterrätt"], answers: ["Efter julbordet var alla så mätta att de inte kunde äta någon efterrätt."], feedback: [{ contains: "de kunde inte", tip: "In een bijzin staat inte vóór het werkwoord. Att de inte kunde …" }] }
+          - { id: k552, type: order, start: "Nästa år", tokens: ["vill", "vi", "fira", "jul", "hos", "mormor", "i", "hennes", "stora", "hus"], answers: ["Nästa år vill vi fira jul hos mormor i hennes stora hus."] }
+          - { id: y3sy, type: order, topic: komparation, start: "Det är", tokens: ["mycket", "varmare", "inne", "än", "ute", "idag"], answers: ["Det är mycket varmare inne än ute idag.", "Det är mycket varmare inne idag än ute."] }
+          - { id: vx2s, type: order, topic: komparation, start: "Den gamla kyrkan", tokens: ["är", "det", "vackraste", "huset", "i", "vår", "lilla", "stad"], answers: ["Den gamla kyrkan är det vackraste huset i vår lilla stad."] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -808,7 +840,7 @@ vocab:
   - { sv: "en julgran", nl: "een kerstboom", alt: ["en gran"], def: "julgranen", pl: "julgranar", plDef: "julgranarna", ex: "**{Julgranen|Granen}** står i vardagsrummet.", exNl: "De kerstboom staat in de woonkamer." }
   - { sv: "en kula", nl: "een (kerst)bal, een bolletje", def: "kulan", pl: "kulor", plDef: "kulorna", ex: "Vi hänger röda **kulor** i granen.", exNl: "We hangen rode ballen in de boom." }
   - { sv: "en ljusstake", nl: "een kandelaar", def: "ljusstaken", pl: "ljusstakar", plDef: "ljusstakarna", ex: "I fönstret står en **ljusstake** med sju ljus.", exNl: "In het raam staat een kandelaar met zeven kaarsen." }
-  - { sv: "en halsduk", nl: "een sjaal", def: "halsduken", pl: "halsdukar", plDef: "halsdukarna", ex: "Ta på dig mössa och **halsduk**, det snöar!", exNl: "Zet je muts op en doe je sjaal om, het sneeuwt!" }
+  - { sv: "en halsduk", nl: "een sjaal", def: "halsduken", pl: "halsdukar", plDef: "halsdukarna", ex: "Hon stickade en lång **halsduk** till sin bror.", exNl: "Ze breide een lange sjaal voor haar broer." }
   - { sv: "ett presentkort", nl: "een cadeaubon", def: "presentkortet", pl: "presentkort", plDef: "presentkorten", ex: "Jag vet inte vad hon vill ha, så jag köper ett **presentkort**.", exNl: "Ik weet niet wat ze wil hebben, dus ik koop een cadeaubon." }
   - { sv: "en storlek", nl: "een maat (van kleding)", def: "storleken", pl: "storlekar", plDef: "storlekarna", ex: "Vilken **storlek** har du i skor?", exNl: "Welke schoenmaat heb je?" }
   - { sv: "en färg", nl: "een kleur", def: "färgen", pl: "färger", plDef: "färgerna", ex: "Vilken **färg** vill du ha, röd eller blå?", exNl: "Welke kleur wil je, rood of blauw?" }

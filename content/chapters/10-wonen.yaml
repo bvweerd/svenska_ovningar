@@ -349,6 +349,22 @@ sections:
           - { id: hygd, type: gap, text: "Barnen får leka ute ___ det blir mörkt.", gaps: [{ answers: ["tills"], options: ["tills", "så att", "eftersom", "medan"] }] }
           - { id: ec74, type: gap, text: "Jag skriver koden till porten på en lapp ___ jag inte glömmer den.", gaps: [{ answers: ["så att"], options: ["så att", "tills", "fastän", "medan"] }] }
 
+      - id: langere-zinnen
+        title: "Langere zinnen bouwen"
+        instruction: Zet de woorden in de goede volgorde.
+        topic: bisats-ordfoljd
+        items:
+          - { id: s93a, type: order, start: "När vi hade packat alla kartonger", tokens: ["åkte", "vi", "till", "lägenheten", "i centrum"], answers: ["När vi hade packat alla kartonger åkte vi till lägenheten i centrum."], feedback: [{ contains: "kartonger vi åkte", tip: "Na een bijzin vooraan komt meteen het werkwoord: åkte vi." }] }
+          - { id: r4ke, type: order, topic: subjunktioner, start: "Fleur vill bo i Göteborg", tokens: ["eftersom", "hon", "har", "fått", "ett nytt jobb", "där"], answers: ["Fleur vill bo i Göteborg eftersom hon har fått ett nytt jobb där."] }
+          - { id: fgc8, type: order, topic: subjunktioner, start: "Olle lagar diskmaskinen", tokens: ["medan", "Ingrid", "dammsuger", "i", "vardagsrummet"], answers: ["Olle lagar diskmaskinen medan Ingrid dammsuger i vardagsrummet."] }
+          - { id: jxme, type: order, start: "Om du inte hittar nyckeln", tokens: ["kan", "du", "ringa", "på", "hos", "grannen"], answers: ["Om du inte hittar nyckeln kan du ringa på hos grannen."], feedback: [{ contains: "nyckeln du kan", tip: "Na een bijzin vooraan komt meteen het werkwoord: kan du." }] }
+          - { id: 52qy, type: order, start: "Bram säger att", tokens: ["han", "inte", "vill", "bo", "i", "en", "förort"], answers: ["Bram säger att han inte vill bo i en förort."], feedback: [{ contains: "han vill inte", tip: "In een bijzin staat inte vóór het werkwoord. Att han inte vill …" }] }
+          - { id: pzp5, type: order, topic: subjunktioner, start: "Wilma städar sitt rum", tokens: ["innan", "gästerna", "kommer", "på", "lördag"], answers: ["Wilma städar sitt rum innan gästerna kommer på lördag."] }
+          - { id: 5qkq, type: order, topic: subjunktioner, start: "Lägenheten är billig", tokens: ["fastän", "den", "ligger", "mitt i", "stan"], answers: ["Lägenheten är billig fastän den ligger mitt i stan."] }
+          - { id: ag8y, type: order, topic: sin-sitt-sina, start: "Olle och Ingrid sitter i sin trädgård", tokens: ["och", "dricker", "kaffe", "när", "solen", "skiner"], answers: ["Olle och Ingrid sitter i sin trädgård och dricker kaffe när solen skiner."] }
+          - { id: agn8, type: order, topic: sin-sitt-sina, start: "Nils frågar om", tokens: ["han", "får", "ha", "en", "tv", "i", "sitt rum"], answers: ["Nils frågar om han får ha en tv i sitt rum."], feedback: [{ contains: "om får han", tip: "In de bijzin met om: eerst het onderwerp, dan het werkwoord: om han får." }] }
+          - { id: y56t, type: order, topic: subjunktioner, start: "Vi stannar i stugan", tokens: ["tills", "det", "slutar", "regna"], answers: ["Vi stannar i stugan tills det slutar regna."] }
+
       - id: wat-zeg-je
         title: Wat zeg je?
         instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
@@ -712,7 +728,7 @@ vocab:
   - { sv: "sopor", nl: "vuilnis, huisvuil (meervoud; soporna = het vuilnis)", ex: "Vi slänger **soporna** varje dag.", exNl: "We gooien elke dag het vuilnis weg." }
   - { sv: "en tvätt", nl: "de was", def: "tvätten", mass: true, ex: "Jag hänger **tvätten** på balkongen.", exNl: "Ik hang de was op het balkon." }
   - { sv: "en disk", nl: "de afwas", def: "disken", mass: true, ex: "Vem tar **disken** ikväll?", exNl: "Wie doet vanavond de afwas?" }
-  - { sv: "en kran", nl: "een kraan", def: "kranen", pl: "kranar", plDef: "kranarna", ex: "Jag tar vatten ur **kranen**.", exNl: "Ik neem water uit de kraan." }
+  - { sv: "en kran", nl: "een kraan", def: "kranen", pl: "kranar", plDef: "kranarna", ex: "Jag tar vatten från **kranen**.", exNl: "Ik neem water uit de kraan." }
   - { sv: "en växt", nl: "een (kamer)plant", def: "växten", pl: "växter", plDef: "växterna", ex: "Vi har många **växter** i vardagsrummet.", exNl: "We hebben veel planten in de woonkamer." }
   - { sv: "en utsikt", nl: "een uitzicht", def: "utsikten", pl: "utsikter", plDef: "utsikterna", ex: "Från balkongen har vi **utsikt** över sjön.", exNl: "Vanaf het balkon hebben we uitzicht over het meer." }
   - { sv: "en bostad", nl: "een woning", def: "bostaden", pl: "bostäder", plDef: "bostäderna", ex: "Det är svårt att hitta en **bostad** i Stockholm.", exNl: "Het is moeilijk om een woning te vinden in Stockholm." }

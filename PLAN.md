@@ -216,10 +216,10 @@ Alles in november 2026.
    - afgemaakte geleide schrijfstappen, vrije teksten, leesteksten en doeltaken.
    De eerste meting (19 november, ±200 antwoorden, vooral uit tests) wees op de sje-/tje-klank en
    zachte klinkers (H0) en de correctievraag in lasa-annons; die zijn aangepast.
-2. **Antwoordzinnen A2 laten oplopen.** De gemiddelde antwoordzin daalt van 7,4 woorden (H7) naar 6,2 (H12), terwijl
-   de lijn voor A2 6–9 is en B1 met 8–12 begint. Doel: oplopend van ±7 (H7) naar ±8 (H12). Nieuwe vragen in H8–H12
-   (ook invulzinnen) iets langer schrijven; daarna per hoofdstuk een paar vertaal-, omvorm- en zinsbouwvragen met
-   een langere variant aanvullen (nieuwe vragen, bestaande id's niet veranderen). Meten met `difficulty-report`.
+2. **Antwoordzinnen A2.** Gemiddelde antwoordzin (`difficulty-report`) H7–H12 nu 7,4 · 7,5 · 7,7 · 7,5 · 7,2 · 7,3
+   (was 7,4 tot 6,2), na 50 lange zinsbouw- en omvormvragen in H10–H12 („Langere zinnen”, „Maak er één zin van”, 10–14
+   woorden). H11 en H12 blijven lager door de korte vormoefeningen (positie, bijvoeglijk naamwoord); een echte stijging
+   naar ±8 vraagt nog ±30 lange vragen per hoofdstuk. Eerst meten of de lange vragen werken (`stats`), dan beslissen.
 3. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview; nieuwe stof op de
    moeilijkheidslijn en op de plek die de vaste volgorde voorschrijft.
 4. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem. De oordelen op „Luisteren instellen”
