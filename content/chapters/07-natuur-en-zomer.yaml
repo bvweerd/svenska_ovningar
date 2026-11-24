@@ -244,13 +244,13 @@ sections:
           - { id: wmkg, type: gap, text: "Det är tio ___ ute, så ta på dig mössan!", gaps: [{ answers: ["minusgrader"], options: ["minusgrader", "grenar", "vågor", "skuggor"] }] }
           - { id: r4sw, type: gap, text: "Vi kan inte åka båt idag, för det är ___.", gaps: [{ answers: ["storm"], options: ["storm", "sand", "skugga", "mark"] }] }
           - { id: 4qbh, type: gap, text: "På vintern är det ___ på sjön, så vi kan gå på den.", gaps: [{ answers: ["is"], options: ["is", "sand", "skräp", "mark"] }] }
-          - { id: eq6q, type: gap, text: "Mjölken blir varm i solen. Ta den till ___!", gaps: [{ answers: ["skuggan"], options: ["skuggan", "stormen", "isen", "viken"] }] }
+          - { id: eq6q, type: gap, text: "Mjölken blir varm i solen. Flytta den till ___!", gaps: [{ answers: ["skuggan"], options: ["skuggan", "stormen", "stranden", "viken"] }] }
           - { id: tusu, type: gap, text: "Det är ___ idag, så vi behöver inga jackor.", gaps: [{ answers: ["milt"], options: ["milt", "kallt", "blött", "tyst"], feedback: [{ match: "kallt", tip: "Als het koud is, heb je juist wel een jas nodig. Zacht weer: milt." }] }] }
           - { id: 2vew, type: gap, text: "Klockan är fem i sju. Det är ___ sju.", gaps: [{ answers: ["nästan"], options: ["nästan", "plötsligt", "väldigt", "ändå"] }] }
           - { id: hzvg, type: gap, text: "Vi satt i solen, men ___ kom ett moln och det började regna.", gaps: [{ answers: ["plötsligt"], options: ["plötsligt", "nästan", "väldigt", "därför"], feedback: [{ match: "därför", tip: "Därför (daarom) geeft een gevolg. Hier gebeurt iets onverwachts: plötsligt (opeens)." }] }] }
           - { id: 4neh, type: gap, text: "Vi har en sommarstuga på en ö i ___.", gaps: [{ answers: ["skärgården"], options: ["skärgården", "ängen", "skuggan", "sanden"] }] }
           - { id: xwew, type: gap, text: "Vi paddlade kanot till en liten ___ på andra sidan sjön.", gaps: [{ answers: ["vik"], options: ["vik", "gren", "skylt", "storm"] }] }
-          - { id: ed34, type: gap, text: "Från ___ kan vi se havet och båtarna.", gaps: [{ answers: ["kusten"], options: ["kusten", "ängen", "skuggan", "grenen"] }] }
+          - { id: ed34, type: gap, text: "Vi åker till ___ och badar i havet.", gaps: [{ answers: ["kusten"], options: ["kusten", "ängen", "skuggan", "grenen"] }] }
           - { id: mdgs, type: gap, text: "Båten åker upp och ner på ___.", gaps: [{ answers: ["vågorna"], options: ["vågorna", "grenarna", "skyltarna", "ängarna"] }] }
           - { id: cvjf, type: gap, text: "Det växer gräs och blommor på ___ bakom huset.", gaps: [{ answers: ["ängen"], options: ["ängen", "isen", "viken", "kusten"] }] }
           - { id: mwt3, type: gap, text: "Barnen klättrar upp på en ___ i trädet.", gaps: [{ answers: ["gren"], options: ["gren", "våg", "orm", "äng"] }] }
@@ -651,7 +651,7 @@ vocab:
   - { sv: "torr", nl: "droog", ex: "Det har inte regnat i maj, så gräset är **torrt**.", exNl: "Het heeft in mei niet geregend, dus het gras is droog." }
   - { sv: "mild", nl: "zacht (van het weer), mild", ex: "Vintern i Skåne är ofta **mild**.", exNl: "De winter in Skåne is vaak zacht." }
   - { sv: "ett landskap", nl: "een landschap; ook: een (historische) provincie", def: "landskapet", pl: "landskap", plDef: "landskapen", ex: "**Landskapet** i fjällen är så fint!", exNl: "Het landschap in de fjells is zo mooi!" }
-  - { sv: "en äng", nl: "een (bloemen)weide", def: "ängen", pl: "ängar", plDef: "ängarna", ex: "Barnen plockar blommor på **ängen**.", exNl: "De kinderen plukken bloemen in de wei." }
+  - { sv: "en äng", nl: "een (bloemen)weide", def: "ängen", pl: "ängar", plDef: "ängarna", ex: "Barnen plockar blommor på **ängen**.", exNl: "De kinderen plukken bloemen in de weide." }
   - { sv: "en våg", nl: "een golf (in het water)", def: "vågen", pl: "vågor", plDef: "vågorna", ex: "Barnen leker i **vågorna**.", exNl: "De kinderen spelen in de golven." }
   - { sv: "en kust", nl: "een kust", def: "kusten", pl: "kuster", plDef: "kusterna", ex: "Vi bor i en liten stad vid **kusten**.", exNl: "We wonen in een stadje aan de kust." }
   - { sv: "en sand", nl: "het zand", def: "sanden", mass: true, ex: "Barnen leker i **sanden** hela dagen.", exNl: "De kinderen spelen de hele dag in het zand." }
