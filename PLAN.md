@@ -220,10 +220,17 @@ Alles in november 2026.
      het hoofdstuk; eerst inhoudswoorden die al in de stof staan (o.a. *storlek, julgran, trasig, influensa, utomhus, kyl*).
    - *Schrijven*: per woord vormen, `ex`/`exNl`; de nieuwe woorden ook in invulzinnen „Woorden in een zin” (topic
      `woordenschat`, niet in de kan-doen-tellingen). `content-report` blijft op 0 (`recur` ≥ 40% tot H9).
-   - *Volgorde*: één hoofdstuk per ronde, elk met taalreview vóór commit. Gedaan: H7 (64 → 100). Volgende: H8–H12.
-3. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview; nieuwe stof op de
+   - *Volgorde*: één hoofdstuk per ronde, elk met taalreview vóór commit. Gedaan: H7 (64 → 100), H8 (63 → 100). Volgende: H9–H12.
+   - *Leesteksten*: geen lengtedoel (alle teksten zitten binnen de lijn; begrip hangt vooral af van bekende woorden). Waar
+     een nieuw woord natuurlijk in de leestekst past, komt er een zin bij. Na publicatie met `stats` kijken of de
+     leesvragen te makkelijk zijn.
+3. **Antwoordzinnen A2 laten oplopen.** De gemiddelde antwoordzin daalt van 7,4 woorden (H7) naar 6,2 (H12), terwijl
+   de lijn voor A2 6–9 is en B1 met 8–12 begint. Doel: oplopend van ±7 (H7) naar ±8 (H12). Nieuwe vragen in H8–H12
+   (ook invulzinnen) iets langer schrijven; daarna per hoofdstuk een paar vertaal-, omvorm- en zinsbouwvragen met
+   een langere variant aanvullen (nieuwe vragen, bestaande id's niet veranderen). Meten met `difficulty-report`.
+4. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview; nieuwe stof op de
    moeilijkheidslijn en op de plek die de vaste volgorde voorschrijft.
-4. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem. De oordelen op „Luisteren instellen”
+5. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem. De oordelen op „Luisteren instellen”
    (`/b/luisteren/oordeel/…`) en de status (`/b/luisteren/status/…`) laten zien of de browserstemmen
    goed genoeg zijn.
-5. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.
+6. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.
