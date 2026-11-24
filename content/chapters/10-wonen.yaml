@@ -315,7 +315,7 @@ sections:
         items:
           - { id: 363s, type: gap, text: "I badrummet finns det en stor ___ över handfatet.", gaps: [{ answers: ["spegel"], options: ["spegel", "frys", "port", "låda"] }] }
           - { id: zzj5, type: gap, text: "Köp mer glass, för det finns ingen kvar i ___.", gaps: [{ answers: ["frysen"], options: ["frysen", "byrån", "spegeln", "brevlådan"] }] }
-          - { id: mssu, type: gap, text: "Var är ___? Jag vill släcka lampan.", gaps: [{ answers: ["strömbrytaren"], options: ["strömbrytaren", "dammsugaren", "utsikten", "disken"] }] }
+          - { id: mssu, type: gap, text: "Jag hittar inte ___, så jag kan inte släcka lampan.", gaps: [{ answers: ["strömbrytaren"], options: ["strömbrytaren", "dammsugaren", "utsikten", "disken"] }] }
           - { id: drg5, type: gap, text: "Jag ska städa, så jag tar fram ___.", gaps: [{ answers: ["dammsugaren"], options: ["dammsugaren", "strömbrytaren", "brevlådan", "gräsmattan"] }] }
           - { id: f8fs, type: gap, text: "I sovrummet har vi en säng, en garderob och en ___ med fyra lådor.", gaps: [{ answers: ["byrå"], options: ["byrå", "frys", "port", "dusch"] }] }
           - { id: uscz, type: gap, text: "Vi har fortfarande trettio ___ som vi inte har packat upp.", gaps: [{ answers: ["kartonger"], options: ["kartonger", "speglar", "växter", "portar"] }] }
@@ -344,9 +344,9 @@ sections:
           - { id: xbn4, type: gap, text: "Vi är fem i en lägenhet med två rum, så det är ___.", gaps: [{ answers: ["trångt"], options: ["trångt", "modernt", "bekvämt", "praktiskt"] }] }
           - { id: c35a, type: gap, text: "Städa ditt rum! Det är så ___ här!", gaps: [{ answers: ["rörigt"], options: ["rörigt", "modernt", "bekvämt", "praktiskt"] }] }
           - { id: 8kdr, type: gap, text: "Ta av dig skorna så att golvet inte blir ___.", gaps: [{ answers: ["smutsigt"], options: ["smutsigt", "trångt", "modernt", "praktiskt"] }] }
-          - { id: 58kq, type: gap, text: "Hissen är trasig, så vi måste ___ alla kartonger till femte våningen.", gaps: [{ answers: ["bära"], options: ["bära", "bygga", "torka", "vattna"] }] }
+          - { id: 58kq, type: gap, text: "Hissen är trasig, så vi måste ___ alla kartonger upp till femte våningen.", gaps: [{ answers: ["bära"], options: ["bära", "bygga", "torka", "vattna"] }] }
           - { id: bnu6, type: gap, text: "Stolen är trasig, så vi ___ den.", gaps: [{ answers: ["slänger"], options: ["slänger", "bygger", "vattnar", "torkar"] }] }
-          - { id: hygd, type: gap, text: "Barnen får leka ute ___ det blir mörkt.", gaps: [{ answers: ["tills"], options: ["tills", "så att", "fastän", "medan"] }] }
+          - { id: hygd, type: gap, text: "Barnen får leka ute ___ det blir mörkt.", gaps: [{ answers: ["tills"], options: ["tills", "så att", "eftersom", "medan"] }] }
           - { id: ec74, type: gap, text: "Jag skriver koden till porten på en lapp ___ jag inte glömmer den.", gaps: [{ answers: ["så att"], options: ["så att", "tills", "fastän", "medan"] }] }
 
       - id: wat-zeg-je
@@ -722,7 +722,7 @@ vocab:
   - { sv: "ett kontrakt", nl: "een contract", def: "kontraktet", pl: "kontrakt", plDef: "kontrakten", ex: "Läs **kontraktet** noga innan du skriver på.", exNl: "Lees het contract goed voordat je tekent." }
   - { sv: "en gård", nl: "een binnenplaats, een erf; een boerderij", def: "gården", pl: "gårdar", plDef: "gårdarna", ex: "Barnen leker på **gården** efter skolan.", exNl: "De kinderen spelen na school op de binnenplaats." }
   - { sv: "en gräsmatta", nl: "een gazon, een grasveld", def: "gräsmattan", pl: "gräsmattor", plDef: "gräsmattorna", ex: "Barnen spelar fotboll på **gräsmattan**.", exNl: "De kinderen voetballen op het gazon." }
-  - { sv: "ett område", nl: "een gebied, een buurt", def: "området", pl: "områden", plDef: "områdena", ex: "Det är tyst och fint i vårt **område**.", exNl: "Het is rustig en mooi in onze wijk." }
+  - { sv: "ett område", nl: "een gebied, een buurt", def: "området", pl: "områden", plDef: "områdena", ex: "Det är tyst och fint i vårt **område**.", exNl: "Het is rustig en mooi in onze buurt." }
   - { sv: "ett kvarter", nl: "een (huizen)blok, de buurt", def: "kvarteret", pl: "kvarter", plDef: "kvarteren", ex: "Det finns en bra pizzeria i **kvarteret**.", exNl: "Er is een goede pizzeria in de buurt." }
   - { sv: "en förort", nl: "een voorstad, een buitenwijk", def: "förorten", pl: "förorter", plDef: "förorterna", ex: "Många familjer flyttar till en **förort**.", exNl: "Veel gezinnen verhuizen naar een voorstad." }
   - { sv: "att släcka", nl: "uitdoen (licht), blussen", ex: "Glöm inte att **släcka** lampan när du går och lägger dig.", exNl: "Vergeet niet het licht uit te doen als je gaat slapen." }
@@ -731,8 +731,8 @@ vocab:
   - { sv: "att slänga", nl: "weggooien", ex: "Vi **slängde** mycket när vi flyttade.", exNl: "We gooiden veel weg toen we verhuisden." }
   - { sv: "att torka", nl: "afdrogen, afvegen; drogen", ex: "Jag diskar och du **torkar**.", exNl: "Ik was af en jij droogt af." }
   - { sv: "att vattna", nl: "water geven (aan planten)", ex: "Kan du **vattna** blommorna medan vi är i Spanien?", exNl: "Kun jij de bloemen water geven terwijl wij in Spanje zijn?" }
-  - { sv: "att fixa", nl: "regelen, fiksen (informeel)", ex: "Pappa **fixade** lampan i hallen.", exNl: "Papa heeft de lamp in de gang gemaakt." }
-  - { sv: "smutsig", nl: "vies, vuil", ex: "Golvet är **smutsigt**, så vi måste städa.", exNl: "De vloer is vies, we moeten schoonmaken." }
+  - { sv: "att fixa", nl: "regelen, fiksen (informeel)", ex: "Pappa **fixade** lampan i hallen.", exNl: "Papa heeft de lamp in de gang gefikst." }
+  - { sv: "smutsig", nl: "vies, vuil", ex: "Golvet är **smutsigt**, så vi måste städa.", exNl: "De vloer is vies, dus we moeten schoonmaken." }
   - { sv: "rörig", nl: "rommelig", ex: "Mitt rum är alltid **rörigt**.", exNl: "Mijn kamer is altijd rommelig." }
   - { sv: "trång", nl: "krap, klein (weinig ruimte)", ex: "Lägenheten är lite **trång** för en familj med tre barn.", exNl: "Het appartement is wat krap voor een gezin met drie kinderen." }
   - { sv: "modern", nl: "modern", ex: "Köket är nytt och **modernt**.", exNl: "De keuken is nieuw en modern." }
