@@ -1,0 +1,19 @@
+# Zweedse woorden die het woordenboek (hunspell sv_SE) niet kent, maar die gecontroleerd en goed zijn.
+# Eén per regel, kleine letters. Zie scripts/spelling.mjs; npm test faalt bij een onbekend woord dat hier niet staat.
+adventen
+arnhem
+bior
+biorna
+bram
+brams
+brorn
+delft
+duck
+fleur
+fleurs
+imorse
+kees
+mail
+mailadress
+mailet
+zwolle

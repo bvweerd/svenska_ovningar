@@ -1,0 +1,593 @@
+chapter: 9
+# Kan-doen-uitspraken: de app vinkt ze zelf af als de vragen over deze onderwerpen
+# grotendeels in doos 3 of hoger staan (src/progress.js, canDoStatus).
+canDo:
+  - { text: "Ik ken de stamtijden van werkwoorden en kan ze gebruiken", topics: [tempus] }
+  - { text: "Ik kan doorgeven wat iemand anders zei", topics: [indirekt-tal] }
+  - { text: "Ik ken de woorden en vaste zinnen rond telefoneren en internet", topics: [telefon, woordenschat] }
+
+grammar:
+  - id: tempus
+    title: Alle tijden op een rij
+    summary: "Van elk werkwoord leer je vier vormen: **infinitief – presens – preteritum – supinum**. Nieuw: de **pluskvamperfekt** = **hade + supinum** (had gedaan)."
+    body: |
+      | Infinitief | Presens | Preteritum | Supinum |
+      |---|---|---|---|
+      | svara | svarar | svarade | svarat |
+      | ringa | ringer | ringde | ringt |
+      | skicka | skickar | skickade | skickat |
+      | förstå | förstår | förstod | förstått |
+      | skriva | skriver | skrev | skrivit |
+      | veta | vet | visste | vetat |
+
+      ### De tijden
+      | Tijd | Vorm | Voorbeeld |
+      |---|---|---|
+      | presens | ringer | Jag **ringer** dig. |
+      | preteritum | ringde | Jag **ringde** igår. |
+      | perfekt | har + supinum | Jag **har ringt** tre gånger. |
+      | pluskvamperfekt | hade + supinum | Jag **hade** redan **ringt**. |
+      | toekomst | ska + infinitief | Jag **ska ringa** imorgon. |
+
+      ### Pluskvamperfekt
+      Hiermee vertel je wat er **al eerder** gebeurd was, vóór een ander moment in het verleden:
+
+      - När Fleur kom hem **hade** Bram redan **lagat** middag.
+      - Tåget **hade** redan **gått** när vi kom till stationen.
+
+  - id: indirekt-tal
+    title: Indirecte rede – Han säger att …
+    summary: "**säger att** + bewering, **frågar om** + ja/nee-vraag, **frågar var/när/vad** + vraagwoordvraag. Daarna: **onderwerp vóór het werkwoord**. Is *vem/vad* zelf het onderwerp, dan komt er **som** bij: *Hon frågar vem som ringde*."
+    body: |
+      Vertel je na wat iemand zegt of vraagt, dan maak je er een **bijzin** van:
+
+      | Direct | Indirect |
+      |---|---|
+      | Olle: "Jag är sjuk." | Olle säger **att han är** sjuk. |
+      | Fleur: "Kommer du?" | Fleur frågar **om jag kommer**. |
+      | Bram: "När börjar filmen?" | Bram frågar **när filmen börjar**. |
+      | Nils: "Var är mobilen?" | Nils undrar **var mobilen är**. |
+
+      ### Twee dingen om op te letten
+      1. Een ja/nee-vraag wordt een zin met **om** (of). Een vraag met een vraagwoord houdt dat vraagwoord.
+      2. In de bijzin staat het **onderwerp vóór het werkwoord**, ook na een vraagwoord: *Bram frågar när **filmen börjar*** (niet *~~när börjar filmen~~*).
+
+      3. Is het vraagwoord (*vem, vad, vilken*) zelf het **onderwerp**, dan zet je er **som** achter: *Vem ringde?* → *Hon frågar vem **som** ringde.* *Vad hände?* → *Jag vet inte vad **som** hände.* Is het vraagwoord niet het onderwerp, dan komt er géén *som*: *Hon frågar vem **du** ringde.*
+
+      Ook na *Vet du …?*, *Jag vet inte …* en *Kan du säga …?* krijg je zo'n bijzin: *Vet du **när tåget går**?*
+
+      Staat er *inte* in de bijzin, dan komt dat vóór het werkwoord: *Han säger att han **inte kommer***. Daar gaat hoofdstuk 10 verder op in.
+
+  - id: telefon
+    title: Aan de telefoon
+    summary: "Opnemen met je naam (*Det är Fleur*). Iemand vragen: *Kan jag få prata med …?* Een bericht: *Kan jag lämna ett meddelande?*"
+    body: |
+      | Zweeds | Nederlands |
+      |---|---|
+      | Hallå? / Det är Fleur. | Hallo? / Met Fleur. |
+      | Kan jag få prata med Ingrid? | Mag ik Ingrid spreken? |
+      | Ett ögonblick. | Een ogenblik. |
+      | Hon är inte här just nu. | Ze is er nu niet. |
+      | Kan jag lämna ett meddelande? | Kan ik een bericht achterlaten? |
+      | Kan du be henne ringa mig? | Kun je haar vragen mij te bellen? |
+      | Jag ringer tillbaka senare. | Ik bel later terug. |
+      | Du har ringt fel nummer. | Je hebt het verkeerde nummer gebeld. |
+      | Jag skulle vilja boka en tid. | Ik wil graag een afspraak maken. |
+
+      Een **tid** is hier een afspraak, bijvoorbeeld bij de dokter of de kapper.
+
+sections:
+  - id: oefeningen
+    title: Oefeningen
+    exercises:
+      - id: stamtijden-1
+        title: Stamtijden (1)
+        instruction: Vul de ontbrekende vormen in.
+        topic: tempus
+        items:
+          - id: yuwf
+            type: table
+            columns: ["Infinitief", "Presens", "Preteritum", "Supinum"]
+            rows:
+              - ["svara", { answers: ["svarar"] }, { answers: ["svarade"] }, { answers: ["svarat"] }]
+              - ["skicka", { answers: ["skickar"] }, { answers: ["skickade"] }, { answers: ["skickat"] }]
+              - ["höra", { answers: ["hör"] }, { answers: ["hörde"] }, { answers: ["hört"] }]
+              - ["glömma", { answers: ["glömmer"] }, { answers: ["glömde"], feedback: [{ match: "glömmde", tip: "Dubbele m wordt enkel voor -de: glömde." }] }, { answers: ["glömt"], feedback: [{ match: "glömmt", tip: "Dubbele m wordt enkel voor -t: glömt." }] }]
+              - ["lämna", { answers: ["lämnar"] }, { answers: ["lämnade"] }, { answers: ["lämnat"] }]
+
+      - id: stamtijden-2
+        title: Stamtijden (2) – sterk en onregelmatig
+        instruction: Vul de ontbrekende vormen in.
+        topic: tempus
+        items:
+          - id: jgr6
+            type: table
+            columns: ["Infinitief", "Presens", "Preteritum", "Supinum"]
+            rows:
+              - ["förstå", "förstår", { answers: ["förstod"], feedback: [{ match: "förstådde", tip: "förstå volgt stå: stod – förstod." }] }, { answers: ["förstått"] }]
+              - ["sitta", "sitter", { answers: ["satt"] }, { answers: ["suttit"], feedback: [{ match: ["sittit", "sattit"], tip: "sitta – satt – suttit: de klinker wordt u." }] }]
+              - ["ligga", "ligger", { answers: ["låg"] }, { answers: ["legat"], feedback: [{ match: ["liggit", "lågit"], tip: "ligga – låg – legat: onregelmatig." }] }]
+              - ["veta", "vet", { answers: ["visste"], feedback: [{ match: ["vetade", "vete"], tip: "veta is onregelmatig: visste." }] }, { answers: ["vetat"] }]
+              - ["ge", "ger", { answers: ["gav"] }, { answers: ["gett", "givit"] }]
+              - ["bli", "blir", { answers: ["blev"] }, { answers: ["blivit"] }]
+
+      - id: pluskvamperfekt
+        title: Was al gebeurd
+        instruction: Vul de supinum in. Samen met *hade* maak je de pluskvamperfekt.
+        topic: tempus
+        shuffle: true
+        items:
+          - { id: ux35, type: gap, text: "När Fleur kom hem hade Bram redan ___ (laga) middag.", gaps: [{ answers: ["lagat"] }] }
+          - { id: uc2c, type: gap, text: "Jag hade aldrig ___ (se) en älg innan jag flyttade till Sverige.", gaps: [{ answers: ["sett"] }] }
+          - { id: 3qzu, type: gap, text: "Tåget hade redan ___ (gå) när vi kom till stationen.", gaps: [{ answers: ["gått"] }] }
+          - { id: g639, type: gap, text: "Wilma var trött, för hon hade ___ (sova) dåligt.", gaps: [{ answers: ["sovit"] }] }
+          - { id: 4chk, type: gap, text: "Olle var arg, för någon hade ___ (ta) hans cykel.", gaps: [{ answers: ["tagit"] }] }
+          - id: hjgv
+            type: mc
+            prompt: "Welke zin betekent: *Ik had het al gelezen.*"
+            options: ["Jag hade redan läst den.", "Jag har redan läst den.", "Jag läste den redan."]
+            answer: 0
+            shuffle: false
+            tip: "Had gelezen = hade + supinum."
+          - { id: w9bf, type: gap, text: "Vi hade redan ___ (äta) när gästerna kom.", gaps: [{ answers: ["ätit"], feedback: [{ match: ["ätat", "ätt"], tip: "äta is sterk: åt – ätit." }] }] }
+          - { id: hfg3, type: gap, text: "Bram hade ___ (glömma) nyckeln hemma.", gaps: [{ answers: ["glömt"], feedback: [{ match: ["glömmt", "glömmat"], tip: "glömma – glömde – glömt: met één m vóór de -t." }] }] }
+
+      - id: att-of-om
+        title: Att of om?
+        instruction: Kies *att* of *om*.
+        topic: indirekt-tal
+        shuffle: true
+        items:
+          - { id: zye2, type: gap, text: "Hon frågar ___ du vill ha kaffe.", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false, feedback: [{ match: "att", tip: "Een ja/nee-vraag wordt een bijzin met om." }] }] }
+          - { id: d755, type: gap, text: "Han säger ___ han är trött.", gaps: [{ answers: ["att"], options: ["att", "om"], shuffle: false, feedback: [{ match: "om", tip: "Een bewering wordt een bijzin met att." }] }] }
+          - { id: fye7, type: gap, text: "Jag undrar ___ det regnar i Stockholm.", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false }] }
+          - { id: kexa, type: gap, text: "Vi tror ___ det blir bra.", gaps: [{ answers: ["att"], options: ["att", "om"], shuffle: false }] }
+          - { id: ebqf, type: gap, text: "Vet du ___ affären är öppen?", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false }] }
+          - { id: wqjn, type: gap, text: "Kan du kolla ___ tåget är försenat?", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false }] }
+          - { id: 2rp9, type: gap, text: "Mamma säger ___ maten är klar.", gaps: [{ answers: ["att"], options: ["att", "om"], shuffle: false }] }
+          - { id: ptzm, type: gap, text: "Jag vet inte ___ hon är hemma.", gaps: [{ answers: ["om"], options: ["att", "om"], shuffle: false, feedback: [{ match: "att", tip: "Je weet het antwoord op een ja/nee-vraag niet: om (of)." }] }] }
+
+      - id: indirect-maken
+        title: Vertel het na
+        instruction: "Maak er indirecte rede van. Jij vertelt na wat een ander zei: *jag* en *vi* van de spreker worden dus *han/hon* en *de*. Let ook op de woordvolgorde."
+        topic: indirekt-tal
+        items:
+          - { id: kkqq, type: translate, prompt: "Olle säger: ”Jag är sjuk.”", answers: ["Olle säger att han är sjuk."], feedback: [{ match: "Olle säger att jag är sjuk", tip: "Olle praat over zichzelf: in de indirecte rede wordt dat han." }] }
+          - { id: sr3a, type: translate, prompt: "Fleur frågar Bram: ”Kommer du ikväll?”", answers: ["Fleur frågar [Bram ]om {han|Bram} kommer {ikväll|i kväll}."], feedback: [{ contains: "om kommer", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om han kommer." }, { contains: "att han kommer", tip: "Een ja/nee-vraag wordt een bijzin met om." }] }
+          - { id: byx4, type: translate, prompt: "Nils undrar: ”Var är mobilen?”", answers: ["Nils undrar var mobilen är."], feedback: [{ match: "Nils undrar var är mobilen", tip: "In de bijzin: eerst het onderwerp (mobilen), dan het werkwoord (är)." }] }
+          - { id: qfqv, type: translate, prompt: "Ingrid säger: ”Vi ska åka till Göteborg.”", answers: ["Ingrid säger att de ska åka till Göteborg."], feedback: [{ match: "Ingrid säger att vi ska åka till Göteborg", tip: "Ingrid bedoelt zichzelf en haar gezin: in de indirecte rede wordt vi dan de." }] }
+          - { id: dce5, type: translate, prompt: "Ingrid frågar: ”Vem ringde?”", answers: ["Ingrid frågar vem som ringde."], feedback: [{ match: "Ingrid frågar vem ringde", tip: "vem is hier het onderwerp: in de bijzin komt er som bij (vem som ringde)." }] }
+          - { id: rcc6, type: translate, prompt: "Bram frågar: ”När börjar filmen?”", answers: ["Bram frågar när filmen börjar."], feedback: [{ match: "Bram frågar när börjar filmen", tip: "In de bijzin: eerst het onderwerp (filmen), dan het werkwoord (börjar)." }] }
+          - { id: vhmm, type: translate, prompt: "Wilma säger: ”Jag har ont i magen.”", answers: ["Wilma säger att hon har ont i magen."], feedback: [{ match: "Wilma säger att jag har ont i magen", tip: "Wilma praat over zichzelf: in de indirecte rede wordt dat hon." }] }
+          - { id: 3zq7, type: translate, prompt: "Olle frågar oss: ”Har ni tid imorgon?”", answers: ["Olle frågar [oss ]om vi har tid {imorgon|i morgon}."], feedback: [{ contains: "om har", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om vi har." }, { contains: "om ni har", tip: "Olle vraagt het aan ons: ni wordt vi." }] }
+          - { id: gpzz, type: translate, prompt: "Ingrid frågar Fleur: ”Kan du komma på fredag?”", answers: ["Ingrid frågar [Fleur ]om {hon|Fleur} kan komma på fredag."], feedback: [{ contains: "om kan", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om hon kan." }, { contains: "att hon kan", tip: "Een ja/nee-vraag wordt een bijzin met om." }, { contains: "om du kan", tip: "Ingrid praat tegen Fleur: in de indirecte rede wordt du dan hon." }] }
+          - { id: gqvj, type: translate, prompt: "Bram säger: ”Jag har ringt kundtjänst tre gånger.”", answers: ["Bram säger att han har ringt [till ]{kundtjänst|kundtjänsten} tre gånger."], feedback: [{ contains: "att jag har", tip: "Bram praat over zichzelf: in de indirecte rede wordt dat han." }] }
+          - { id: g7fs, type: translate, prompt: "Wilma frågar: ”Varför svarar ingen i telefon?”", answers: ["Wilma frågar varför ingen svarar i telefon."], feedback: [{ contains: "varför svarar ingen", tip: "In de bijzin: eerst het onderwerp (ingen), dan het werkwoord (svarar)." }] }
+          - { id: v7ub, type: translate, prompt: "Fleur frågar: ”Vad hände på jobbet idag?”", answers: ["Fleur frågar vad som hände på jobbet {idag|i dag}."], feedback: [{ contains: "frågar vad hände", tip: "vad is hier het onderwerp: in de bijzin komt er som bij (vad som hände)." }] }
+
+      - id: indirect-zinsbouw
+        title: Vraag het beleefd
+        instruction: Maak de zin af. In de bijzin komt het onderwerp vóór het werkwoord.
+        topic: indirekt-tal
+        items:
+          - { id: xp56, type: order, start: "Kan du säga", tokens: ["var", "ligger", "stationen"], answers: ["Kan du säga var stationen ligger?"], feedback: [{ match: "Kan du säga var ligger stationen?", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
+          - { id: hupg, type: order, start: "Jag vet inte", tokens: ["om", "kommer", "han"], answers: ["Jag vet inte om han kommer."] }
+          - { id: 6pz3, type: order, start: "Hon undrar", tokens: ["vad", "heter", "jag"], answers: ["Hon undrar vad jag heter."], feedback: [{ match: "Hon undrar vad heter jag.", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
+          - { id: 7mmv, type: order, start: "Vet du", tokens: ["när", "går", "tåget"], answers: ["Vet du när tåget går?"], feedback: [{ match: "Vet du när går tåget?", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
+          - { id: hjfc, type: order, start: "Jag undrar", tokens: ["när", "börjar", "filmen"], answers: ["Jag undrar när filmen börjar."], feedback: [{ match: "Jag undrar när börjar filmen.", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
+          - { id: h3hs, type: order, start: "Vet du", tokens: ["vad", "kostar", "biljetten"], answers: ["Vet du vad biljetten kostar?"] }
+          - { id: fbc5, type: order, start: "Hon frågar", tokens: ["om", "vill", "jag", "komma"], answers: ["Hon frågar om jag vill komma."] }
+          - { id: 9djc, type: order, start: "Jag vet inte", tokens: ["var", "bor", "Olle"], answers: ["Jag vet inte var Olle bor."], feedback: [{ match: "Jag vet inte var bor Olle.", tip: "In een indirecte vraag blijft de gewone volgorde: eerst het onderwerp, dan het werkwoord." }] }
+
+      - id: telefoon-koppelen
+        title: Aan de telefoon
+        instruction: Koppel de Zweedse zin aan de betekenis.
+        topic: telefon
+        items:
+          - id: 36jn
+            type: match
+            pairs:
+              - ["Det är Bram.", "Met Bram."]
+              - ["Kan jag få prata med Ingrid?", "Mag ik Ingrid spreken?"]
+              - ["Ett ögonblick.", "Een ogenblik."]
+              - ["Hon är inte här just nu.", "Ze is er nu niet."]
+              - ["Kan jag lämna ett meddelande?", "Kan ik een bericht achterlaten?"]
+              - ["Jag ringer tillbaka senare.", "Ik bel later terug."]
+              - ["Du har ringt fel nummer.", "Je hebt het verkeerde nummer gebeld."]
+
+      - id: gemengd-vertalen
+        title: "Vertalen: bellen en berichten"
+        instruction: Vertaal naar het Zweeds.
+        topic: telefon
+        items:
+          - { id: c4yc, type: translate, topic: tempus, prompt: "Ik had mijn mobiel thuis vergeten, dus ik kon niet opnemen.", answers: ["Jag hade glömt {mobilen|min mobil|telefonen|min telefon} hemma[,] så jag kunde inte svara.", "Jag hade glömt {mobilen|min mobil|telefonen|min telefon} hemma[,] och därför kunde jag inte svara."], feedback: [{ contains: "hade glömde", tip: "Na hade komt de supinum: hade glömt." }, { contains: "så kunde jag", retry: true, tip: "Dat hoor je in spreektaal vaak, maar hier oefen je *så* als voegwoord (dus): daarna de gewone volgorde, eerst het onderwerp. Probeer het nog eens." }] }
+          - { id: 53q7, type: translate, prompt: "Ze is er nu niet. Kun je later terugbellen?", answers: ["Hon är inte {här|hemma} [just ]nu. Kan du ringa [mig ]tillbaka senare?"], feedback: [{ contains: "du kan ringa", tip: "In een ja/nee-vraag staat het werkwoord vooraan: Kan du …?" }] }
+          - { id: pv3m, type: translate, prompt: "Mijn batterij is bijna leeg, dus ik bel je later terug.", answers: ["{Batteriet|Mitt batteri} är nästan {slut|tomt}[,] så jag ringer {dig tillbaka|tillbaka|dig} senare.", "{Batteriet|Mitt batteri} är nästan {slut|tomt}[,] och därför ringer jag {dig tillbaka|tillbaka|dig} senare."], feedback: [{ contains: "min batteri", tip: "batteri is een ett-woord: mitt batteri (of batteriet)." }, { contains: "nästan tom", tip: "batteri is een ett-woord: tomt (of: slut)." }] }
+          - { id: vd2h, type: translate, topic: indirekt-tal, prompt: "Ingrid vraagt of Fleur vrijdag mee wil naar het concert.", answers: ["Ingrid frågar om Fleur vill följa med [henne ]{på|till} konserten på fredag."], feedback: [{ contains: "om vill", tip: "In de bijzin staat het onderwerp vóór het werkwoord: om Fleur vill." }, { contains: "att Fleur vill", tip: "Een ja/nee-vraag wordt een bijzin met om." }] }
+          - { id: qbdv, type: translate, topic: indirekt-tal, prompt: "Weet je wanneer de winkel zaterdag dichtgaat?", answers: ["Vet du när {affären|butiken} stänger på lördag?"], feedback: [{ contains: "när stänger", tip: "In de bijzin: eerst het onderwerp (affären), dan het werkwoord (stänger)." }] }
+          - { id: 32gz, type: translate, topic: tempus, prompt: "Toen ik thuiskwam, had Bram al gebeld.", answers: ["När jag kom hem hade Bram redan ringt.", "Bram hade redan ringt när jag kom hem."], feedback: [{ contains: "hem Bram hade", tip: "De bijzin staat vooraan: dan komt direct het werkwoord (hade Bram)." }, { contains: ["hade ringde", "hade ringa"], tip: "Na hade komt de supinum: hade ringt." }] }
+          - { id: xftt, type: translate, topic: tempus, prompt: "Ik heb haar drie keer gebeld, maar ze nam niet op.", answers: ["Jag {har ringt|ringde} [till ]henne tre gånger[,] men hon svarade inte."], feedback: [{ contains: "hon inte svarade", tip: "Na men volgt een hoofdzin: hon svarade inte." }] }
+          - { id: sbed, type: translate, topic: indirekt-tal, prompt: "Wilma vroeg wie er gisteren had gebeld.", answers: ["Wilma frågade vem som {hade ringt|ringde} {igår|i går}."], feedback: [{ contains: ["vem hade ringt", "vem ringde"], tip: "vem is hier het onderwerp: in de bijzin komt er som bij (vem som hade ringt)." }] }
+          - { id: wq9w, type: translate, prompt: "Kun je het nummer herhalen? Ik hoor je heel slecht.", answers: ["Kan du upprepa numret[, tack]? Jag hör dig {väldigt|mycket} dåligt.", "Kan du säga numret igen[, tack]? Jag hör dig {väldigt|mycket} dåligt."], feedback: [{ contains: ["nummeret", "nummret"], tip: "ett nummer – numret (de e valt weg)." }] }
+          - { id: vk46, type: translate, topic: indirekt-tal, prompt: "Fleur zegt dat ze haar wachtwoord vergeten is.", answers: ["Fleur säger att hon {har glömt|glömt|glömde} {lösenordet|sitt lösenord}."], feedback: [{ contains: "hennes lösenord", tip: "Bedoel je haar eigen wachtwoord? Zeg dan lösenordet (in hoofdstuk 10 leer je ook sitt lösenord)." }] }
+
+      - id: perfekt-omvormen
+        title: Het is al gebeurd
+        instruction: Zet de zin in de voltooide tijd (*har* + supinum). In het Zweeds is het altijd *har*, ook waar het Nederlands *zijn* gebruikt.
+        topic: tempus
+        items:
+          - { id: z4wb, type: transform, prompt: "Jag ringer till Olle.", answers: ["Jag har ringt [till ]Olle."], feedback: [{ contains: ["har ringde", "har ringer"], tip: "Na *har* komt het supinum: ringt." }] }
+          - { id: d3hg, type: transform, prompt: "Bram skriver ett sms.", answers: ["Bram har skrivit ett sms."], feedback: [{ contains: "skrivt", tip: "skriva is een sterk werkwoord: skrivit." }] }
+          - { id: tgf7, type: transform, prompt: "Tåget går.", answers: ["Tåget har gått."], feedback: [{ contains: "är gått", tip: "In het Zweeds altijd *har*: Tåget har gått (de trein is vertrokken)." }, { contains: "har gåt.", tip: "gå – gått, met dubbele t." }] }
+          - { id: s95r, type: transform, prompt: "Fleur kommer hem.", answers: ["Fleur har kommit hem."], feedback: [{ contains: "är kommit", tip: "In het Zweeds altijd *har*: Fleur har kommit hem." }, { contains: "kommt", tip: "komma is een sterk werkwoord: kommit." }] }
+          - { id: vwuc, type: transform, prompt: "Vi åker till Göteborg.", answers: ["Vi har åkt till Göteborg."], feedback: [{ contains: "är åkt", tip: "In het Zweeds altijd *har*: Vi har åkt." }] }
+          - { id: ds44, type: transform, prompt: "Wilma glömmer mobilen.", answers: ["Wilma har glömt mobilen."], feedback: [{ contains: "glömmt", tip: "Dubbele m wordt enkel voor -t: glömt." }] }
+          - { id: sb37, type: transform, prompt: "Jag förstår meddelandet.", answers: ["Jag har förstått meddelandet."], feedback: [{ contains: "förståt ", tip: "förstå – förstått, met dubbele t." }] }
+          - { id: 9tbg, type: transform, prompt: "Ingrid är sjuk.", answers: ["Ingrid har varit sjuk."], feedback: [{ contains: "är varit", tip: "In het Zweeds altijd *har*: Ingrid har varit sjuk (is ziek geweest)." }] }
+
+      - id: wat-zeg-je
+        title: Wat zeg je?
+        instruction: Wat zeg je in het Zweeds? Er is vaak meer dan één goed antwoord.
+        kind: situatie
+        items:
+          - { id: vry3, type: translate, topic: telefon, prompt: "Je belt een bedrijf. Zeg dat je Anna wilt spreken.", answers: ["{Kan jag få|Får jag} {prata|tala} med Anna[, tack]?", "Jag {vill|skulle vilja} {prata|tala} med Anna[, tack]."] }
+          - { id: 428b, type: translate, topic: telefon, prompt: "Je verstaat de ander slecht. Vraag of hij langzaam wil praten.", answers: ["Kan du prata långsamt[, tack]?", "Kan du prata [lite ]långsammare[, tack]?"] }
+          - { id: jcqb, type: translate, topic: indirekt-tal, prompt: "Je collega vraagt wat de chef zei. Zeg dat ze zei dat de vergadering om tien uur begint.", answers: ["{Hon|Chefen} {sa|sade} att mötet {börjar|skulle börja} [klockan ]tio."], feedback: [{ contains: "att börjar mötet", tip: "Na att: onderwerp, dan werkwoord (att mötet börjar)." }] }
+          - { id: jy3c, type: translate, topic: telefon, prompt: "Je collega Bram belt, maar je hebt geen tijd. Zeg tegen Bram dat je hem later terugbelt.", answers: ["Jag ringer {tillbaka|dig} senare.", "Jag ringer dig tillbaka senare.", "Jag ringer tillbaka [till dig ]senare."], feedback: [{ contains: "honom", tip: "Je praat tegen Bram zelf: dig." }] }
+          - { id: xk9g, type: translate, topic: indirekt-tal, prompt: "Olle belt en vraagt: „Kan du komma i morgon?” Je vriendin vraagt wat Olle wil. Vertel het haar.", answers: ["{Olle|Han} {frågar[ mig]|undrar} om jag kan komma[ i morgon].", "{Olle|Han} {frågade[ mig]|undrade} om jag {kan|kunde} komma[ i morgon]."], feedback: [{ contains: "om kan jag", tip: "Na *om* komt een bijzin: eerst het onderwerp, dan het werkwoord (*om jag kan*)." }, { contains: ["frågar att", "frågar if", "frågar of"], tip: "Een ja/nee-vraag doorgeven: *frågar om* …" }, { contains: ["om du kan", "om han kan"], tip: "Olle vraagt of jíj kunt komen. Vanuit jou gezegd: *om jag kan komma*." }] }
+          - { id: vzfy, type: translate, topic: indirekt-tal, prompt: "Een collega vraagt waar de chef is. Zeg dat je niet weet waar ze is.", answers: ["Jag vet inte var {hon|chefen} är[ någonstans][ just nu]."], feedback: [{ contains: ["var är hon", "var är chefen"], tip: "In een bijzin staat het onderwerp vóór het werkwoord: *var hon är*." }, { contains: "vart", tip: "Waar (plaats) = *var*. *vart* is waarheen." }, { contains: ["jag inte vet", "jag vet ikke"], tip: "*inte* staat na het werkwoord: *jag vet inte …*" }] }
+          - { id: crt6, type: translate, topic: tempus, prompt: "Vertel dat de trein al vertrokken was toen je op het station kwam.", answers: ["Tåget hade redan {gått|åkt} när jag kom[ fram] till stationen.", "När jag kom[ fram] till stationen hade tåget redan {gått|åkt}."], feedback: [{ contains: ["var redan gått", "var gått", "var redan åkt"], tip: "Zweeds gebruikt *hade* + supinum, nooit *var*: *tåget hade redan gått*." }, { contains: "då jag kom", tip: "Toen (in een bijzin) = *när*: *när jag kom …*" }, { contains: ["har redan gått", "har gått"], tip: "Al eerder gebeurd, vóór een ander moment in het verleden: *hade* + supinum (*hade gått*)." }, { contains: ["hade redan gick", "hade gick", "hade redan gåt "], tip: "Na *hade* komt het supinum: *gått*." }, { contains: "stationen tåget", tip: "Begint de zin met een bijzin (*När jag kom …*), dan komt daarna eerst het werkwoord: *… **hade tåget** redan gått*." }] }
+          - { id: 4y6p, type: translate, topic: telefon, prompt: "Iemand belt jou en vraagt naar „Lisa”, maar je kent geen Lisa. Zeg dat hij het verkeerde nummer heeft gebeld.", answers: ["{Du har|Tyvärr har du} [nog ]ringt fel[ nummer].", "Jag tror [att ]du har ringt fel[ nummer]."], feedback: [{ contains: "tyvärr du har", tip: "*Tyvärr* staat op plaats 1: het werkwoord komt direct erna, *Tyvärr har du …*" }, { contains: ["fel numret", "verkeerd"], tip: "Het verkeerde nummer = *fel nummer*, zonder lidwoord." }, { contains: ["har ringd", "har ringde", "har ring "], tip: "Het supinum van *ringa* is *ringt*: *du har ringt*." }, { contains: ["ringde fel", "ringer fel"], tip: "Gebruik perfekt: *du har ringt fel nummer*." }] }
+          - { id: 3dzt, type: translate, topic: tempus, prompt: "Een collega vraagt of je de mail al hebt gestuurd. Zeg dat je hem gisteren al hebt gestuurd.", answers: ["[Ja, ]{jag skickade {det|mejlet|mailet} [redan ]igår|igår skickade jag {det|mejlet|mailet}|det skickade jag [redan ]igår}."], feedback: [{ contains: "har skickat", tip: "Met een bepaald moment (*igår*) gebruik je preteritum: *jag skickade det igår*." }, { contains: ["skickde", "skickte"], tip: "*skicka* in de verleden tijd: *skickade*." }, { contains: "skickade den", tip: "*mejl* is een ett-woord: *jag skickade det*." }, { contains: "igår jag", tip: "Begin je met *igår*, dan komt het werkwoord op plaats 2: *igår **skickade jag** det*." }] }
+
+      - id: zoek-de-fout
+        title: Zoek de fout
+        instruction: In elke zin staat één fout. Klik op het foute woord en verbeter daarna de zin.
+        topic: indirekt-tal
+        shuffle: true
+        items:
+          - { id: 47mc, type: findError, topic: indirekt-tal, sentence: "Bram frågar när börjar filmen.", wrong: [3, 4], answers: ["Bram frågar när filmen börjar."], tip: "Kijk naar de woordvolgorde in de bijzin." }
+          - { id: c59j, type: findError, topic: indirekt-tal, sentence: "Hon frågar att du vill ha kaffe.", wrong: [2], answers: ["Hon frågar om du vill ha kaffe."], tip: "Is het een vraag of een bewering?" }
+          - { id: egbq, type: findError, topic: tempus, sentence: "När vi kom hade tåget redan gick.", wrong: [6], answers: ["När vi kom hade tåget redan gått."], tip: "Na hade komt de supinum." }
+          - { id: k4n4, type: findError, topic: indirekt-tal, sentence: "Kan du säga var ligger stationen?", wrong: [4, 5], answers: ["Kan du säga var stationen ligger?"], tip: "Kijk naar de woordvolgorde in de bijzin." }
+          - { id: q9xm, type: findError, topic: indirekt-tal, sentence: "Jag vet inte om kommer hon ikväll.", wrong: [4, 5], answers: ["Jag vet inte om hon kommer {ikväll|i kväll}."], tip: "Kijk naar de woordvolgorde in de bijzin." }
+          - { id: cqt4, type: findError, topic: tempus, sentence: "Jag hade redan skrev ett mejl till chefen.", wrong: [3], answers: ["Jag hade redan skrivit ett {mejl|mail} till chefen."], tip: "Welke vorm komt er na hade?" }
+          - { id: y6vx, type: findError, topic: indirekt-tal, sentence: "Bram undrar att Fleur kan komma imorgon.", wrong: [2], answers: ["Bram undrar om Fleur kan komma {imorgon|i morgon}."], tip: "Is het een vraag of een bewering?" }
+          - { id: zv6e, type: findError, topic: indirekt-tal, sentence: "Bram undrar när slutar konserten.", wrong: [3, 4], answers: ["Bram undrar när konserten slutar."], tip: "Kijk naar de woordvolgorde in de bijzin." }
+
+      - id: lezen-gemist
+        title: "Lezen: een gemiste oproep"
+        instruction: Lees de tekst. Is de bewering **rätt** of **fel**? Is hij fout, schrijf dan de juiste zin op.
+        topic: indirekt-tal
+        textTitle: Ett missat samtal
+        text: |
+          I tisdags ringde Ingrid till Fleur, men Fleur svarade inte. Hon hade glömt mobilen hemma. Ingrid lämnade ett meddelande. Hon sa att hon hade två biljetter till en konsert på fredagen och frågade om Fleur ville följa med.
+
+          När Fleur kom hem lyssnade hon på meddelandet och ringde tillbaka direkt. Hon sa att hon gärna ville följa med. Ingrid frågade om de kunde träffas utanför konserthuset klockan sju.
+
+          På fredagen tog Fleur bussen till centrum, men bussen var försenad. Hon skickade ett sms till Ingrid och skrev att hon var på väg. När Fleur kom fram hade konserten redan börjat. Ingrid väntade utanför, och de gick in tillsammans.
+
+          Konserten var fantastisk! Efteråt drack de en kopp kaffe på ett café och pratade om musiken. Fleur var hemma klockan elva.
+        items:
+          - { id: 3u8c, type: truefalse, statement: "Ingrid ringde i tisdags.", answer: true }
+          - { id: sbmz, type: truefalse, statement: "Fleur svarade i telefon.", answer: false, tip: "Waarom niet?", correction: { answers: ["{Fleur|Hon} svarade inte[ i telefon].", "{Fleur|Hon} hade glömt mobilen hemma."] } }
+          - { id: d3vq, type: truefalse, statement: "Ingrid lämnade ett meddelande.", answer: true }
+          - { id: 4upp, type: truefalse, statement: "Ingrid hade tre biljetter.", answer: false, tip: "Hoeveel kaartjes had ze?", correction: { answers: ["{Ingrid|Hon} hade två biljetter."] } }
+          - { id: 7qh7, type: truefalse, statement: "Konserten var på lördagen.", answer: false, tip: "Op welke dag was het concert?", correction: { answers: ["Konserten var {på fredagen|i fredags}."] } }
+          - { id: peca, type: truefalse, statement: "Fleur ville inte följa med.", answer: false, tip: "Wat zei Fleur toen ze terugbelde?", correction: { answers: ["{Fleur|Hon} ville [gärna ]följa med."] } }
+          - { id: yyg8, type: truefalse, statement: "Fleur tog bilen till centrum.", answer: false, tip: "Hoe ging Fleur naar het centrum?", correction: { answers: ["{Fleur|Hon} tog bussen[ till centrum].", "På fredagen tog {Fleur|hon} bussen[ till centrum]."] } }
+          - { id: 5kjn, type: truefalse, statement: "När Fleur kom fram hade konserten redan börjat.", answer: true }
+          - { id: hdex, type: truefalse, statement: "Efter konserten drack de kaffe.", answer: true }
+          - { id: pf5c, type: truefalse, statement: "Fleur var hemma klockan tio.", answer: false, tip: "Lees de laatste zin.", correction: { answers: ["{Fleur|Hon} var hemma [klockan ]elva.", "Klockan elva var {Fleur|hon} hemma."] } }
+
+      - id: makkelijk-1
+        title: "Makkelijk lezen: Tre missade samtal"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Tre missade samtal"
+        text: |
+          Bram hade glömt mobilen hemma. När han kom hem hade han tre missade samtal. Det var hans chef. I ett sms frågade hon om han kunde komma till ett möte nästa dag. Bram ringde tillbaka och sa att han kunde komma.
+        items:
+          - { id: j2e4, type: truefalse, statement: "Bram hade glömt mobilen hemma.", answer: true }
+          - { id: m2u4, type: truefalse, statement: "Chefen frågade om Bram kunde komma till ett möte.", answer: true }
+          - { id: fez2, type: truefalse, statement: "Bram kunde inte komma.", answer: false }
+
+      - id: makkelijk-2
+        title: "Makkelijk lezen: Lösenordet"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en kies rätt of fel.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Lösenordet"
+        text: |
+          Wilma har glömt lösenordet till mejlen. Hon ringer kundtjänst. En kvinna svarar. Wilma säger att hon inte vet lösenordet. Kvinnan frågar vad Wilma heter och skickar ett sms med ett nytt lösenord. Wilma säger tack och hej då. Nu kan hon läsa mejlen igen.
+        items:
+          - { id: kbay, type: truefalse, statement: "Wilma har glömt lösenordet.", answer: true }
+          - { id: b6w5, type: truefalse, statement: "Kvinnan skickar ett mejl.", answer: false }
+
+      - id: makkelijk-3
+        title: "Makkelijk lezen: En lapp på bordet"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "En lapp på bordet"
+        text: |
+          Wilma kommer hem från skolan. På bordet finns en lapp från mamma. Där står det att Ingrid jobbar till klockan sex. Hon skriver att Wilma ska handla mjölk och bröd. Wilma ringer pappa. Olle säger att han redan har handlat. Då skickar Wilma ett sms till mamma: ”Pappa har redan handlat!”
+        items:
+          - { id: nwrh, type: truefalse, statement: "Ingrid jobbar till klockan sex.", answer: true }
+          - { id: c5d8, type: mc, prompt: "Vad skulle Wilma handla?", options: ["Mjölk och bröd.", "Ost och smör.", "Kaffe och te."], answer: 0 }
+          - { id: p77t, type: truefalse, statement: "Olle har inte handlat.", answer: false }
+
+      - id: makkelijk-4
+        title: "Makkelijk lezen: Fel nummer"
+        instruction: Een korte tekst met woorden die je al kent. Lees hem vlot door en beantwoord de vragen.
+        topic: woordenschat
+        kind: makkelijk
+        textTitle: "Fel nummer"
+        text: |
+          Fleur ringer till tandläkaren. En man svarar.
+
+          – Hej, jag vill boka en tid, säger Fleur.
+
+          – Tyvärr, du har ringt fel nummer, säger mannen. Det här är en pizzeria.
+
+          Fleur skrattar och säger förlåt. Sedan ringer hon rätt nummer. Hon får en tid på torsdag klockan tio.
+        items:
+          - { id: pabq, type: truefalse, statement: "Först ringer Fleur fel nummer.", answer: true }
+          - { id: z22e, type: mc, prompt: "När får Fleur en tid?", options: ["På tisdag.", "På torsdag.", "På fredag."], answer: 1 }
+          - { id: 8nvx, type: truefalse, statement: "Mannen är tandläkare.", answer: false }
+
+      - id: dialoog-afspraak
+        title: Een afspraak maken
+        instruction: Fleur belt de tandarts. Zet het gesprek in de goede volgorde.
+        topic: telefon
+        items:
+          - id: c9p7
+            type: dialogue
+            lines:
+              - "Receptionisten: Västerås tandvård, det är Maja."
+              - "Fleur: Hej, det är Fleur van Dijk. Jag skulle vilja boka en tid."
+              - "Receptionisten: Javisst. Passar det på torsdag klockan nio?"
+              - "Fleur: Tyvärr inte, då jobbar jag. Har ni något på eftermiddagen?"
+              - "Receptionisten: Ja, vi har en tid klockan fyra."
+              - "Fleur: Perfekt, då tar jag den. Tack så mycket!"
+              - "Receptionisten: Välkommen. Hej då!"
+
+      - id: taak-meddelande
+        title: "Taak: een bericht achterlaten"
+        kind: taak
+        instruction: "Je belt je collega Ingrid: de vergadering van morgen begint niet om tien uur, maar om elf uur. Haar collega Olle neemt op. Ingrid is er niet: ze is al naar huis. Je wilt dat ze je terugbelt. Daarna vraagt je chef ernaar. **Doel:** laat een bericht achter voor Ingrid en vertel je chef hoe het zit. Kies of schrijf bij elke stap wat jij zegt."
+        topic: telefon
+        items:
+          - id: g3ar
+            type: steps
+            explain: "Gelukt: Olle geeft je bericht door, Ingrid belt je terug, en je chef weet hoe het zit."
+            steps:
+              - type: mc
+                topic: telefon
+                prompt: "**Olle:** Hallå, det är Olle. — *Zeg wie je bent en vraag of je Ingrid kunt spreken.*"
+                options:
+                  - "Hej, det är Fleur. Kan jag få prata med Ingrid?"
+                  - "Hej, det är Fleur. Kan jag få pratar med Ingrid?"
+                  - "Hej, det är Fleur. Kan jag få prata till Ingrid?"
+                  - "Hej, det är Fleur. Får jag att prata med Ingrid?"
+                answer: 0
+                optionTips:
+                  - null
+                  - "Na *få* komt de infinitief: *prata*, niet *pratar*."
+                  - "Met iemand praten = *prata med*: *prata med Ingrid*."
+                  - "Na *får* komt geen *att*: *Får jag prata med …?*"
+              - type: translate
+                topic: telefon
+                prompt: "**Olle:** Tyvärr, hon är inte här just nu. — *Vraag of je een bericht kunt achterlaten.*"
+                answers:
+                  - "{Kan jag[ få]|Får jag} lämna ett meddelande[ till henne]?"
+                feedback:
+                  - { contains: "en meddelande", tip: "*meddelande* is een ett-woord: *ett meddelande*." }
+                  - { contains: ["kan jag lämnar", "får jag lämnar"], tip: "Na *kan* of *får* komt de infinitief: *lämna*." }
+                  - { contains: ["kan jag att", "får jag att"], tip: "Na *kan* of *får* komt geen *att*: *Kan jag lämna …?*" }
+                  - { match: ["Jag {kan|får} lämna ett meddelande[ till henne]"], tip: "In een vraag komt het werkwoord vooraan: *Kan jag lämna …?*" }
+              - type: translate
+                topic: konjunktioner
+                prompt: "**Olle:** Javisst. Vad ska jag säga till henne? — *Zeg: de vergadering morgen begint niet om tien uur, maar om elf uur.*"
+                answers:
+                  - "Mötet i morgon börjar inte [klockan ]tio[,] utan [klockan ]elva."
+                  - "I morgon börjar mötet inte [klockan ]tio[,] utan [klockan ]elva."
+                feedback:
+                  - { contains: ["men klockan elva", "men elva"], tip: "Niet A maar B: na een ontkenning gebruik je *utan*." }
+                  - { contains: "i morgon mötet", tip: "Begin je met *I morgon*, dan komt het werkwoord op plaats 2: *I morgon **börjar mötet** …*" }
+                  - { match: ["Börjar mötet [i morgon ]inte [klockan ]tio[,] utan [klockan ]elva[ i morgon]"], tip: "Gewone volgorde: *Mötet börjar inte …* (of begin met *I morgon*)." }
+                  - { contains: "mötet inte börjar", tip: "Gewone volgorde: *Mötet börjar inte …* (of begin met *I morgon*)." }
+              - type: gap
+                topic: telefon
+                prompt: "**Olle:** Okej, jag säger det till henne. — *Vraag of hij haar wil vragen jou te bellen.*"
+                text: "Kan du be henne ___ mig?"
+                gaps:
+                  - answers: ["ringa"]
+                    options: ["ringa", "ringer", "ringde", "ringt"]
+                    feedback:
+                      - { match: "ringer", tip: "Na *be henne* komt de infinitief: *ringa*." }
+                      - { match: "ringde", tip: "*ringde* is de verleden tijd. Na *be henne* komt de infinitief: *ringa*." }
+                      - { match: "ringt", tip: "*ringt* is het supinum (na *har*). Na *be henne* komt de infinitief: *ringa*." }
+              - type: translate
+                topic: indirekt-tal
+                prompt: "**Chefen** (later): Har du pratat med Ingrid? — *Zeg: nee, Olle zei dat ze er niet was.*"
+                answers:
+                  - "[Nej, ]{Olle|han} {sa|berättade} att hon inte var {där|här|inne|på kontoret|på jobbet}."
+                feedback:
+                  - { contains: ["att hon var inte", "att hon är inte"], tip: "In een bijzin (na *att*) staat *inte* vóór het werkwoord: *att hon inte var där*." }
+                  - { contains: ["att var hon", "att är hon"], tip: "Na *att* komt eerst het onderwerp, dan het werkwoord: *att hon inte var …*" }
+                  - { contains: "att hon inte är", tip: "Je vertelt over toen: *att hon inte var där*." }
+                  - { contains: ["sägde", "sagde", "olle sagt"], tip: "*säga* in de verleden tijd: *sa* (of *sade*)." }
+              - type: mc
+                topic: tempus
+                prompt: "**Chefen:** Var hon inte på kontoret? — *Nee: toen je belde, was ze al naar huis gegaan.*"
+                options:
+                  - "Nej, när jag ringde hade hon redan gått hem."
+                  - "Nej, när jag ringde har hon redan gått hem."
+                  - "Nej, när jag ringde hade hon redan gick hem."
+                  - "Nej, när jag ringde hon hade redan gått hem."
+                answer: 0
+                optionTips:
+                  - null
+                  - "Al eerder gebeurd, vóór een moment in het verleden: *hade* + supinum (*hade gått*)."
+                  - "Na *hade* komt het supinum: *gått*."
+                  - "Na de bijzin vooraan (*när jag ringde*) komt eerst het werkwoord: *… **hade hon** redan gått hem*."
+
+      - id: schrijven-bericht
+        title: "Schrijven: een voicemail"
+        instruction: "Je belt je vriendin Anna en krijgt haar voicemail. Schrijf op wat je inspreekt. Bouw de tekst eerst op in vier stappen die de app nakijkt. Daarna schrijf je, als je wilt, het hele bericht op."
+        topic: telefon
+        items:
+          - { id: d2j2, type: mc, prompt: "Je belt je vriendin Anna. Hoe begin je het bericht?", options: ["Hej Anna, det är Sanne.", "Hej Anna, jag är Sanne.", "God dag, mitt namn är Sanne."], answer: 0, tip: "Aan de telefoon zeg je wie je bent met Det är … God dag … is te formeel voor een vriendin." }
+          - { id: yumb, type: gap, prompt: "Kies het woord dat past.", text: "Jag ringer ___ jag har två biljetter till teatern.", gaps: [{ answers: ["för att"], options: ["för att", "så att", "men"], tip: "Je geeft de reden: för att (omdat)." }] }
+          - { id: z48w, type: translate, prompt: "Kun je me vanavond terugbellen?", answers: ["Kan du ringa {tillbaka|mig tillbaka|tillbaka till mig|upp mig|mig} {ikväll|i kväll}?"], feedback: [{ contains: "du kan ringa", tip: "In een ja/nee-vraag staat het werkwoord vooraan: Kan du …?" }] }
+          - { id: xjjn, type: gap, topic: indirekt-tal, prompt: "Anna zegt: „Jag kan inte komma.” Vertel het verder.", text: "Anna säger att hon ___ komma.", gaps: [{ answers: ["inte kan"], options: ["inte kan", "kan inte"], shuffle: false, tip: "In een bijzin met att staat inte vóór het werkwoord: att hon inte kan." }] }
+          - id: jzpv
+            type: free
+            prompt: "Schrijf op wat je op de voicemail inspreekt: zeg wie je bent, waarom je belt (bijvoorbeeld een uitnodiging) en vraag of ze terugbelt."
+            minWords: 25
+            require:
+              - { any: ["det är", "jag heter"], label: "Je zegt wie je bent (Det är …)" }
+              - { any: ["ringer", "ringa"], label: "Je vraagt om terug te bellen (ringa / ringer)" }
+              - { any: ["vill du", "kan du", "skulle du"], label: "Je stelt een vraag (Vill du / Kan du …)" }
+            model: "Hej Anna, det är Sanne. Jag ringer för att jag har två biljetter till teatern på lördag. Vill du följa med? Det börjar klockan sju. Kan du ringa mig ikväll eller imorgon? Mitt nummer är 070-123 45 67. Hej då!"
+
+  - id: luisteren
+    title: Luisteren
+    intro: Deze oefeningen gebruiken de voorleesfunctie van je browser. Werkt dat niet goed, kijk dan bij „Luisteren instellen”.
+    exercises:
+      - id: luisteren-kiezen
+        title: "Luisteren: wat hoor je?"
+        instruction: Luister en kies het goede antwoord.
+        topic: indirekt-tal
+        shuffle: true
+        items:
+          - { id: 8z3g, type: listen, say: "Fleur frågar om Bram kommer i kväll.", prompt: "Wat vraagt Fleur?", options: ["of Bram vanavond komt", "wanneer Bram komt", "waarom Bram niet komt"], answer: 0 }
+          - { id: kspu, type: listen, say: "Olle säger att han är sjuk.", prompt: "Wat zegt Olle?", options: ["dat hij ziek is", "dat hij moe is", "dat hij later komt"], answer: 0 }
+          - { id: cyhp, type: listen, say: "Tåget hade redan gått.", prompt: "Welke vorm hoor je?", options: ["hade gått", "har gått", "gick"], answer: 0, topic: tempus }
+          - { id: tgbh, type: listen, say: "Hej, det är Ingrid. Kan jag få prata med Olle?", prompt: "Wie belt er, en voor wie?", options: ["Ingrid, ze wil Olle spreken", "Olle, hij wil Ingrid spreken", "Ingrid, ze wil Bram spreken"], answer: 0, topic: telefon }
+          - { id: 4af2, type: listen, say: "Han är inte här just nu. Vill du lämna ett meddelande?", prompt: "Wat wordt er gevraagd?", options: ["of je een bericht wilt achterlaten", "of je later terugbelt", "wat je telefoonnummer is"], answer: 0, topic: telefon }
+
+      - id: luisteren-gesprek
+        title: "Luisteren: een bericht achterlaten"
+        instruction: Luister naar het gesprek. Is de bewering **rätt** of **fel**? Lees de tekst pas als je klaar bent.
+        topic: telefon
+        listen: true
+        textTitle: "Ett meddelande"
+        text: |
+          Ingrid: Hallå, det är Ingrid.
+
+          Bram: Hej, det är Bram. Kan jag få prata med Olle?
+
+          Ingrid: Han är inte hemma just nu. Han är på jobbet.
+
+          Bram: Okej. Kan jag lämna ett meddelande?
+
+          Ingrid: Ja, visst.
+
+          Bram: Kan du säga att vi spelar fotboll klockan sju ikväll, inte klockan sex?
+
+          Ingrid: Klockan sju, inte sex. Jag ska säga det till honom.
+        items:
+          - { id: zssk, type: truefalse, statement: "Olle är på jobbet.", answer: true }
+          - { id: 2gqh, type: truefalse, statement: "Bram lämnar ett meddelande.", answer: true }
+          - { id: 5aj9, type: truefalse, statement: "Fotbollen börjar klockan sex.", answer: false }
+
+      - id: luisteren-dictee
+        title: "Dictee"
+        instruction: Luister en maak de zin die je hoort.
+        topic: indirekt-tal
+        shuffle: true
+        items:
+          - { id: vgxc, type: listen, say: "Hon undrar var mobilen är." }
+          - { id: x2gb, type: listen, say: "Vet du när filmen börjar?" }
+          - { id: vfcg, type: listen, say: "Jag ringer tillbaka senare." }
+          - { id: t5q5, type: listen, say: "Han hade glömt nyckeln." }
+          - { id: 2e2f, type: listen, say: "Kan du säga var stationen ligger?" }
+
+  - id: herhaling
+    title: Herhaling
+    intro: Gemengde oefeningen met stof uit hoofdstuk 1 tot en met 9.
+    exercises:
+      - id: herhaling-gemengd
+        title: Gemengde herhaling
+        instruction: Beantwoord de vragen. Ze gaan over hoofdstuk 1 tot en met 9 door elkaar.
+        shuffle: true
+        items:
+          - { id: 62xp, type: gap, topic: indirekt-tal, text: "Kan du säga hur mycket klockan ___?", gaps: [{ answers: ["är"] }] }
+          - { id: qnep, type: gap, topic: perfekt-preteritum, text: "Jag ___ (ringa) dig tre gånger igår!", gaps: [{ answers: ["ringde"], feedback: [{ match: "har ringt", tip: "igår is een bepaald moment: preteritum." }] }] }
+          - { id: 2fva, type: gap, topic: tempus, text: "Bram hade redan ___ (äta) när Fleur kom hem.", gaps: [{ answers: ["ätit"] }] }
+          - { id: 2ac8, type: gap, topic: det-finns, text: "Det finns ___ meddelanden i röstbrevlådan. (geen)", gaps: [{ answers: ["inga"], options: ["ingen", "inget", "inga"], shuffle: false }] }
+          - { id: ucj7, type: translate, topic: tycka-tro-tanka, prompt: "Ik denk dat ze niet thuis is.", answers: ["Jag tror {inte att hon är hemma|att hon inte är hemma|inte hon är hemma|hon inte är hemma}."], feedback: [{ contains: "tycker att", tip: "Een vermoeden: tror." }, { contains: "hon är inte hemma", tip: "In een bijzin staat inte vóór het werkwoord: att hon inte är hemma." }] }
+          - { id: fe8p, type: gap, topic: possessiv, text: "Har du sett ___ mobil? (mijn)", gaps: [{ answers: ["min"], options: ["min", "mitt", "mina"] }] }
+          - { id: w5qf, type: gap, topic: hem-hemma, text: "Ring mig när du kommer ___!", gaps: [{ answers: ["hem"], options: ["hem", "hemma"], shuffle: false }] }
+          - { id: etaf, type: order, topic: konjunktioner, start: "Jag ringde, men", tokens: ["ingen", "svarade"], answers: ["Jag ringde, men ingen svarade."] }
+          - { id: b8qg, type: gap, topic: ordningstal, text: "Hon bor på ___ våningen. (3)", gaps: [{ answers: ["tredje"] }] }
+          - { id: 9cd3, type: mc, topic: ocksa-heller, prompt: "– Jag har ingen mobil. – (Jij ook niet.)", options: ["Inte jag heller.", "Det har jag också.", "Men det har jag."], answer: 0, tip: "Ook niet: Inte jag heller." }
+          - { id: x8r7, type: gap, topic: berattande, text: "Den dagen ___ (vara) det kallt, så vi ___ (stanna) inne.", gaps: [{ answers: ["var"] }, { answers: ["stannade"], feedback: [{ match: "stannar", tip: "In een verhaal over toen gebruik je de preteritum: stannade." }] }] }
+          - { id: gsp6, type: order, topic: berattande, start: "Efter maten", tokens: ["drack", "vi", "kaffe", "och", "åt", "tårta"], answers: ["Efter maten drack vi kaffe och åt tårta.", "Efter maten åt vi tårta och drack kaffe."], feedback: [{ match: ["Efter maten vi drack kaffe och åt tårta.", "Efter maten vi åt tårta och drack kaffe."], tip: "Efter maten staat op plaats 1, dus komt het werkwoord er direct achter." }] }
+          - { id: r5e4, type: gap, topic: berattande, text: "Först ___ (steka) Bram fisk, och sedan ___ (koka) han potatis.", gaps: [{ answers: ["stekte"], feedback: [{ match: "stekade", tip: "steka is een -er-werkwoord (steker): stekte." }] }, { answers: ["kokade"], feedback: [{ match: "kokte", tip: "koka is een -ar-werkwoord (kokar): kokade." }] }] }
+          - { id: d6hd, type: gap, topic: mat-fraser, text: "Maten är klar. ”___ måltid!” säger Ingrid. (Eet smakelijk!)", gaps: [{ answers: ["Smaklig"], feedback: [{ match: ["Smakelijk", "Smakelig", "Smaklik"], tip: "Eet smakelijk! = Smaklig måltid! (zonder e)." }] }] }
+          - { id: qmh2, type: mc, topic: mat-fraser, prompt: "Je wilt in het restaurant betalen. Wat zeg je tegen de ober?", options: ["Kan vi få notan?", "Kan vi få menyn?", "Smaklig måltid!"], answer: 0, tip: "De rekening heet in het restaurant notan." }
+          - { id: k5vp, type: translate, topic: inte, prompt: "Ik vind de (land)kaart niet.", answers: ["Jag hittar inte kartan.", "Jag kan inte hitta kartan."], feedback: [{ contains: "inte hittar", tip: "inte staat ná het werkwoord: hittar inte." }, { contains: "tycker", tip: "Iets (terug)vinden = hitta." }] }
+          - { id: jugp, type: gap, topic: tycka-om, text: "Wilma ___ om att prata i telefon. (vindt leuk)", gaps: [{ answers: ["tycker"], feedback: [{ match: "gillar", tip: "gilla gaat zonder om. Hier staat om: tycker om." }] }] }
+          - { id: tbsu, type: mc, topic: allemansratten, prompt: "Je wandelt in Zweden door het bos. Wat mag volgens de allemansrätten?", options: ["Een nacht je tent opzetten, niet te dicht bij een huis.", "Met de auto het bos in rijden.", "Door iemands tuin lopen."], answer: 0, tip: "Tälta en natt mag; met de auto de natuur in en door een tuin lopen niet." }
+
+vocab:
+  - { sv: "en mobil", nl: "een mobiele telefoon", def: "mobilen", pl: "mobiler", plDef: "mobilerna", alt: ["en mobiltelefon"], ex: "Nils hittar inte **mobilen**.", exNl: "Nils kan de mobiel niet vinden." }
+  - { sv: "ett samtal", nl: "een (telefoon)gesprek", def: "samtalet", pl: "samtal", plDef: "samtalen", ex: "Jag har tre missade **samtal**.", exNl: "Ik heb drie gemiste gesprekken." }
+  - { sv: "ett meddelande", nl: "een bericht", def: "meddelandet", pl: "meddelanden", plDef: "meddelandena", ex: "Jag fick ett **meddelande** från Bram.", exNl: "Ik kreeg een bericht van Bram." }
+  - { sv: "ett nummer", nl: "een nummer", def: "numret", pl: "nummer", plDef: "numren", ex: "Du har ringt fel **nummer**.", exNl: "Je hebt het verkeerde nummer gebeld." }
+  - { sv: "en dator", nl: "een computer", def: "datorn", pl: "datorer", plDef: "datorerna", ex: "Jag skriver mejl på **datorn**.", exNl: "Ik schrijf e-mails op de computer." }
+  - { sv: "ett lösenord", nl: "een wachtwoord", def: "lösenordet", pl: "lösenord", plDef: "lösenorden", ex: "Jag har glömt **lösenordet**.", exNl: "Ik ben het wachtwoord vergeten." }
+  - { sv: "en app", nl: "een app", def: "appen", pl: "appar", plDef: "apparna", ex: "Jag betalar med en **app** på mobilen.", exNl: "Ik betaal met een app op mijn mobiel." }
+  - { sv: "ett mejl", nl: "een e-mail", def: "mejlet", pl: "mejl", plDef: "mejlen", alt: ["ett mail"], ex: "Jag skickade ett **{mejl|mail}** till chefen.", exNl: "Ik stuurde een e-mail naar de baas." }
+  - { sv: "en tid", nl: "een afspraak (bij dokter e.d.), een tijd", def: "tiden", pl: "tider", plDef: "tiderna", ex: "Jag vill boka en **tid** hos tandläkaren.", exNl: "Ik wil een afspraak maken bij de tandarts." }
+  - { sv: "att ringa", nl: "bellen", ex: "Jag **ringde** dig tre gånger igår.", exNl: "Ik belde je gisteren drie keer." }
+  - { sv: "att svara", nl: "antwoorden, opnemen", ex: "Varför **svarar** du inte?", exNl: "Waarom neem je niet op?" }
+  - { sv: "att skicka", nl: "sturen", ex: "Kan du **skicka** adressen till mig?", exNl: "Kun je mij het adres sturen?" }
+  - { sv: "att glömma", nl: "vergeten", ex: "Jag har **glömt** hans nummer.", exNl: "Ik ben zijn nummer vergeten." }
+  - { sv: "att undra", nl: "zich afvragen", ex: "Jag **undrar** om du kan komma imorgon.", exNl: "Ik vraag me af of je morgen kunt komen." }
+  - { sv: "att fråga", nl: "vragen", ex: "Hon **frågar** när tåget går.", exNl: "Zij vraagt wanneer de trein vertrekt." }
+  - { sv: "att säga", nl: "zeggen", ex: "Han **{sa|sade}** att han var sjuk.", exNl: "Hij zei dat hij ziek was." }
+  - { sv: "att veta", nl: "weten", ex: "Jag **vet** inte var hon bor.", exNl: "Ik weet niet waar ze woont." }
+  - { sv: "att förstå", nl: "begrijpen", ex: "Jag **förstår** inte vad du säger.", exNl: "Ik begrijp niet wat je zegt." }
+  - { sv: "just nu", nl: "op dit moment", ex: "Hon är inte här **just nu**.", exNl: "Ze is er op dit moment niet." }
+  - { sv: "senare", nl: "later", ex: "Jag ringer dig **senare**.", exNl: "Ik bel je later." }
+  - { sv: "tillbaka", nl: "terug", ex: "Kan du ringa **tillbaka** imorgon?", exNl: "Kun je morgen terugbellen?" }
+  - { sv: "en telefon", nl: "een telefoon", def: "telefonen", pl: "telefoner", ex: "**Telefonen** ringer!", exNl: "De telefoon gaat!" }
+  - { sv: "en röst", nl: "een stem", def: "rösten", pl: "röster", ex: "Jag känner igen din **röst**.", exNl: "Ik herken je stem." }
+  - { sv: "ett sms", nl: "een sms(je)", def: "sms:et", pl: "sms", ex: "Jag skickar ett **sms** när jag är framme.", exNl: "Ik stuur een sms'je als ik er ben." }
+  - { sv: "en laddare", nl: "een oplader", def: "laddaren", pl: "laddare", ex: "Har du en **laddare** till min mobil?", exNl: "Heb je een oplader voor mijn mobiel?" }
+  - { sv: "ett batteri", nl: "een batterij, een accu", def: "batteriet", pl: "batterier", plDef: "batterierna", ex: "**Batteriet** är nästan slut.", exNl: "De batterij is bijna leeg." }
+  - { sv: "en skärm", nl: "een scherm", def: "skärmen", pl: "skärmar", ex: "**Skärmen** på min mobil är trasig.", exNl: "Het scherm van mijn mobiel is kapot." }
+  - { sv: "en mejladress", nl: "een e-mailadres", def: "mejladressen", pl: "mejladresser", alt: ["en e-postadress", "en mailadress"], ex: "Vad är din **{mejladress|e-postadress|mailadress}**?", exNl: "Wat is je e-mailadres?" }
+  - { sv: "en hemsida", nl: "een website", def: "hemsidan", pl: "hemsidor", alt: ["en webbplats"], ex: "Titta på vår **{hemsida|webbplats}**!", exNl: "Kijk op onze website!" }
+  - { sv: "en kund", nl: "een klant", def: "kunden", pl: "kunder", ex: "Affären har många **kunder**.", exNl: "De winkel heeft veel klanten." }
+  - { sv: "en kundtjänst", nl: "een klantenservice", def: "kundtjänsten", ex: "Jag ringde **{kundtjänst|kundtjänsten}** igår.", exNl: "Ik belde gisteren de klantenservice." }
+  - { sv: "ett fel", nl: "een fout", def: "felet", pl: "fel", ex: "Det finns ett **fel** i mejlet.", exNl: "Er zit een fout in de e-mail." }
+  - { sv: "ett svar", nl: "een antwoord", def: "svaret", pl: "svar", ex: "Jag väntar fortfarande på ett **svar**.", exNl: "Ik wacht nog steeds op een antwoord." }
+  - { sv: "en kollega", nl: "een collega", def: "kollegan", pl: ["kollegor", "kolleger"], plDef: ["kollegorna", "kollegerna"], ex: "Min **kollega** är sjuk idag.", exNl: "Mijn collega is vandaag ziek." }
+  - { sv: "en chef", nl: "een baas, een leidinggevende", def: "chefen", pl: "chefer", plDef: "cheferna", ex: "**Chefen** sitter i ett möte.", exNl: "De baas zit in een vergadering." }
+  - { sv: "ett kontor", nl: "een kantoor", def: "kontoret", pl: "kontor", ex: "Hon jobbar på ett **kontor**.", exNl: "Zij werkt op een kantoor." }
+  - { sv: "ett brev", nl: "een brief", def: "brevet", pl: "brev", ex: "Jag skrev ett **brev** till mormor.", exNl: "Ik schreef een brief aan oma." }
+  - { sv: "ett videosamtal", nl: "een videogesprek", def: "videosamtalet", pl: "videosamtal", ex: "Vi har ett **videosamtal** varje söndag.", exNl: "We hebben elke zondag een videogesprek." }
+  - { sv: "en täckning", nl: "bereik (van het mobiele netwerk)", def: "täckningen", ex: "Jag har ingen **täckning** här.", exNl: "Ik heb hier geen bereik." }
+  - { sv: "ett ögonblick", nl: "een ogenblik, een moment", def: "ögonblicket", pl: "ögonblick", ex: "Vänta ett **ögonblick**, jag hämtar henne.", exNl: "Wacht een ogenblik, ik haal haar even." }
+  - { sv: "att prata", nl: "praten", ex: "Kan jag få **prata** med Ingrid?", exNl: "Mag ik Ingrid spreken?" }
+  - { sv: "att ladda", nl: "opladen", ex: "Jag måste **ladda** mobilen.", exNl: "Ik moet mijn mobiel opladen." }
+  - { sv: "att lägga på", nl: "ophangen (de telefoon)", ex: "Hon blev arg och **{lade på|la på}**.", exNl: "Ze werd boos en hing op." }
+  - { sv: "att upprepa", nl: "herhalen", ex: "Kan du **upprepa** numret, tack?", exNl: "Kun je het nummer herhalen, alsjeblieft?" }
+  - { sv: "att berätta", nl: "vertellen", ex: "Hon **berättade** att hon skulle flytta.", exNl: "Zij vertelde dat ze ging verhuizen." }
+  - { sv: "att hälsa", nl: "groeten (de groeten doen)", ex: "**Hälsa** till Anna från mig!", exNl: "Doe Anna de groeten van mij!" }
+  - { sv: "att be", nl: "verzoeken, vragen (om iets)", ex: "Kan du **be** henne ringa mig?", exNl: "Kun je haar vragen mij te bellen?" }
+  - { sv: "upptagen", nl: "bezet, bezig (niet beschikbaar)", ex: "Chefen är **upptagen** just nu.", exNl: "De baas is op dit moment bezig." }
+  - { sv: "tyvärr", nl: "helaas", ex: "**Tyvärr** kan jag inte komma.", exNl: "Helaas kan ik niet komen." }
+  - { sv: "vi hörs", nl: "we spreken elkaar (nog)", ex: "Tack för samtalet, **vi hörs**!", exNl: "Bedankt voor het gesprek, we spreken elkaar!" }
+  - { sv: "hallå", nl: "hallo (aan de telefoon)", ex: "**Hallå**, det är Fleur.", exNl: "Hallo, met Fleur." }
+  - { sv: "tydligt", nl: "duidelijk", ex: "Han pratar alltid väldigt **tydligt**.", exNl: "Hij praat altijd heel duidelijk." }
+  - { sv: "långsamt", nl: "langzaam", ex: "Kan du prata **långsamt**? Jag förstår inte.", exNl: "Kun je langzaam praten? Ik begrijp het niet." }
+  - { sv: "igen", nl: "opnieuw, weer", ex: "Kan du ringa **igen** imorgon?", exNl: "Kun je morgen opnieuw bellen?" }
+  - { sv: "direkt", nl: "meteen, direct", ex: "Jag ringer dig **direkt**.", exNl: "Ik bel je meteen." }
+  - { sv: "dåligt", nl: "slecht", ex: "Jag hör dig väldigt **dåligt**.", exNl: "Ik hoor je heel slecht." }
