@@ -202,6 +202,11 @@ Alles in november 2026.
 - **#32 vragen in stappen**: „Toon antwoord” toont alleen de huidige stap (de rest doe je zelf); de score telt
   per stap mee (deelpunten), ook als een stap bekeken is. De vraag blijft „bekeken” voor de herhaling.
 
+- **Woordenschat A2** (H7–H12 van ±60 naar 100 woorden per hoofdstuk, +245): lijsten H1–H12 van 718 naar 963, stof van
+  1.333 naar ±1.530 verschillende woorden; per hoofdstuk invulzinnen „Woorden in een zin” en waar het past een zin in de
+  leestekst. `vocab-report` telt de stof (hunspell) en vergelijkt met de Kelly-lijst (`scripts/data/kelly-sv.tsv`, CC BY 4.0).
+  Met taalreview (twee rondes per hoofdstuk, plus een controle van de getypte invulzinnen).
+
 ## Open / volgende stappen
 
 1. **Meten na publicatie** met `npm run stats -- --min 5` (README, „Statistieken”). Er is geen
@@ -211,26 +216,13 @@ Alles in november 2026.
    - afgemaakte geleide schrijfstappen, vrije teksten, leesteksten en doeltaken.
    De eerste meting (19 november, ±200 antwoorden, vooral uit tests) wees op de sje-/tje-klank en
    zachte klinkers (H0) en de correctievraag in lasa-annons; die zijn aangepast.
-2. **Woordenschat A2 (H7–H12) uitbreiden** (besloten met de eigenaar: 100 woorden per hoofdstuk). Gangbare schattingen
-   (geen ERK-norm): A1 600–1.000, A2 1.300–2.000 woorden. `npm run vocab-report` telt de verschillende woorden in de stof
-   (basisvormen via hunspell, zonder namen, cumulatief) en vergelijkt met de Kelly-lijst (`scripts/data/kelly-sv.tsv`,
-   CC BY 4.0, frequentiebanden). Vóór de uitbreiding: tot en met H6 786 in de stof en 363 in de lijsten, tot en met H12
-   1.333 en 718; de lijsten bleven voor A2 achter.
-   - *Kiezen*: per hoofdstuk thematisch én frequent (lijn 9; Kelly als controle), alleen grammatica en woorden tot en met
-     het hoofdstuk; eerst inhoudswoorden die al in de stof staan (o.a. *storlek, julgran, trasig, influensa, utomhus, kyl*).
-   - *Schrijven*: per woord vormen, `ex`/`exNl`; de nieuwe woorden ook in invulzinnen „Woorden in een zin” (topic
-     `woordenschat`, niet in de kan-doen-tellingen). `content-report` blijft op 0 (`recur` ≥ 40% tot H9).
-   - *Volgorde*: één hoofdstuk per ronde, elk met taalreview vóór commit. Gedaan: H7 (64 → 100), H8 (63 → 100), H9 (56 → 100), H10 (55 → 100), H11 (61 → 100), H12 (56 → 100). Daarna: lijsten H1–H12 samen 963 woorden, stof 1.529.
-   - *Leesteksten*: geen lengtedoel (alle teksten zitten binnen de lijn; begrip hangt vooral af van bekende woorden). Waar
-     een nieuw woord natuurlijk in de leestekst past, komt er een zin bij. Na publicatie met `stats` kijken of de
-     leesvragen te makkelijk zijn.
-3. **Antwoordzinnen A2 laten oplopen.** De gemiddelde antwoordzin daalt van 7,4 woorden (H7) naar 6,2 (H12), terwijl
+2. **Antwoordzinnen A2 laten oplopen.** De gemiddelde antwoordzin daalt van 7,4 woorden (H7) naar 6,2 (H12), terwijl
    de lijn voor A2 6–9 is en B1 met 8–12 begint. Doel: oplopend van ±7 (H7) naar ±8 (H12). Nieuwe vragen in H8–H12
    (ook invulzinnen) iets langer schrijven; daarna per hoofdstuk een paar vertaal-, omvorm- en zinsbouwvragen met
    een langere variant aanvullen (nieuwe vragen, bestaande id's niet veranderen). Meten met `difficulty-report`.
-4. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview; nieuwe stof op de
+3. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview; nieuwe stof op de
    moeilijkheidslijn en op de plek die de vaste volgorde voorschrijft.
-5. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem. De oordelen op „Luisteren instellen”
+4. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem. De oordelen op „Luisteren instellen”
    (`/b/luisteren/oordeel/…`) en de status (`/b/luisteren/status/…`) laten zien of de browserstemmen
    goed genoeg zijn.
-6. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.
+5. **Spreken** blijft buiten de site; de handleiding kan daarvoor een docent of taalpartner aanraden.

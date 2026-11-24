@@ -704,7 +704,7 @@ vocab:
   - { sv: "ett skrivbord", nl: "een bureau", def: "skrivbordet", pl: "skrivbord", plDef: "skrivborden", ex: "Wilma gör läxorna vid sitt **skrivbord**.", exNl: "Wilma maakt haar huiswerk aan haar bureau." }
   - { sv: "en fåtölj", nl: "een fauteuil, een leunstoel", def: "fåtöljen", pl: "fåtöljer", plDef: "fåtöljerna", ex: "Morfar sitter i sin **fåtölj** och läser.", exNl: "Opa zit in zijn fauteuil te lezen." }
   - { sv: "en låda", nl: "een la (ook: een doos)", def: "lådan", pl: "lådor", plDef: "lådorna", ex: "Jag letar efter nyckeln i alla **lådor**.", exNl: "Ik zoek de sleutel in alle laden." }
-  - { sv: "en kartong", nl: "een (kartonnen) doos", def: "kartongen", pl: "kartonger", plDef: "kartongerna", ex: "Vi packade böckerna i **kartonger** innan vi flyttade.", exNl: "We pakten de boeken in dozen voordat we verhuisden." }
+  - { sv: "en kartong", nl: "een (kartonnen) doos", def: "kartongen", pl: "kartonger", plDef: "kartongerna", ex: "Vi packade böckerna i **{kartonger|lådor}** innan vi flyttade.", exNl: "We pakten de boeken in dozen voordat we verhuisden." }
   - { sv: "en frys", nl: "een vriezer", def: "frysen", pl: "frysar", plDef: "frysarna", ex: "Det finns glass i **frysen**.", exNl: "Er is ijs in de vriezer." }
   - { sv: "en dammsugare", nl: "een stofzuiger", def: "dammsugaren", pl: "dammsugare", plDef: "dammsugarna", ex: "**Dammsugaren** finns i källaren.", exNl: "De stofzuiger staat in de kelder." }
   - { sv: "en strömbrytare", nl: "een lichtknopje, een schakelaar", def: "strömbrytaren", pl: "strömbrytare", plDef: "strömbrytarna", ex: "Var är **strömbrytaren**? Det är så mörkt här.", exNl: "Waar is het lichtknopje? Het is zo donker hier." }
@@ -713,17 +713,17 @@ vocab:
   - { sv: "en tvätt", nl: "de was", def: "tvätten", mass: true, ex: "Jag hänger **tvätten** på balkongen.", exNl: "Ik hang de was op het balkon." }
   - { sv: "en disk", nl: "de afwas", def: "disken", mass: true, ex: "Vem tar **disken** ikväll?", exNl: "Wie doet vanavond de afwas?" }
   - { sv: "en el", nl: "elektriciteit, stroom", def: "elen", mass: true, ex: "Vi betalar **el** och hyra varje månad.", exNl: "We betalen elke maand stroom en huur." }
-  - { sv: "en växt", nl: "een (kamer)plant", def: "växten", pl: "växter", plDef: "växterna", ex: "Glöm inte att vattna **växterna**!", exNl: "Vergeet niet de planten water te geven!" }
+  - { sv: "en växt", nl: "een (kamer)plant", def: "växten", pl: "växter", plDef: "växterna", ex: "Vi har många **växter** i vardagsrummet.", exNl: "We hebben veel planten in de woonkamer." }
   - { sv: "en utsikt", nl: "een uitzicht", def: "utsikten", pl: "utsikter", plDef: "utsikterna", ex: "Från balkongen har vi **utsikt** över sjön.", exNl: "Vanaf het balkon hebben we uitzicht over het meer." }
   - { sv: "en bostad", nl: "een woning", def: "bostaden", pl: "bostäder", plDef: "bostäderna", ex: "Det är svårt att hitta en **bostad** i Stockholm.", exNl: "Het is moeilijk om een woning te vinden in Stockholm." }
   - { sv: "ett hyreshus", nl: "een flatgebouw (met huurwoningen)", def: "hyreshuset", pl: "hyreshus", plDef: "hyreshusen", ex: "Vi bor på tredje våningen i ett **hyreshus**.", exNl: "We wonen op de derde verdieping van een flatgebouw." }
-  - { sv: "en port", nl: "een voordeur (van een flatgebouw), een poort", def: "porten", pl: "portar", plDef: "portarna", ex: "Koden till **porten** är 1234.", exNl: "De code van de voordeur is 1234." }
+  - { sv: "en port", nl: "een voordeur (van een flatgebouw), een poort", def: "porten", pl: "portar", plDef: "portarna", ex: "Koden till **porten** är 1234.", exNl: "De code van de buitendeur van de flat is 1234." }
   - { sv: "en brevlåda", nl: "een brievenbus", def: "brevlådan", pl: "brevlådor", plDef: "brevlådorna", ex: "Jag tittar i **brevlådan** när jag kommer hem.", exNl: "Ik kijk in de brievenbus als ik thuiskom." }
   - { sv: "ett kontrakt", nl: "een contract", def: "kontraktet", pl: "kontrakt", plDef: "kontrakten", ex: "Läs **kontraktet** noga innan du skriver på.", exNl: "Lees het contract goed voordat je tekent." }
-  - { sv: "en gård", nl: "een binnenplaats, een erf; een boerderij", def: "gården", pl: "gårdar", plDef: "gårdarna", ex: "Barnen leker på **gården** efter skolan.", exNl: "De kinderen spelen na school op de binnenplaats." }
-  - { sv: "en gräsmatta", nl: "een gazon, een grasveld", def: "gräsmattan", pl: "gräsmattor", plDef: "gräsmattorna", ex: "Barnen spelar fotboll på **gräsmattan**.", exNl: "De kinderen voetballen op het gazon." }
-  - { sv: "ett område", nl: "een gebied, een buurt", def: "området", pl: "områden", plDef: "områdena", ex: "Det är tyst och fint i vårt **område**.", exNl: "Het is rustig en mooi in onze buurt." }
-  - { sv: "ett kvarter", nl: "een (huizen)blok, de buurt", def: "kvarteret", pl: "kvarter", plDef: "kvarteren", ex: "Det finns en bra pizzeria i **kvarteret**.", exNl: "Er is een goede pizzeria in de buurt." }
+  - { sv: "en gård", nl: "een binnenplaats, een erf; een boerderij", def: "gården", pl: "gårdar", plDef: "gårdarna", ex: "Vi har en grill på **gården**.", exNl: "We hebben een barbecue op de binnenplaats." }
+  - { sv: "en gräsmatta", nl: "een gazon, een grasveld", def: "gräsmattan", pl: "gräsmattor", plDef: "gräsmattorna", ex: "Barnen spelar fotboll på **{gräsmattan|gräset}**.", exNl: "De kinderen voetballen op het gazon." }
+  - { sv: "ett område", nl: "een gebied, een buurt", def: "området", pl: "områden", plDef: "områdena", ex: "Det är tyst och fint i vårt **{område|kvarter}**.", exNl: "Het is rustig en mooi in onze buurt." }
+  - { sv: "ett kvarter", nl: "een (huizen)blok, de buurt", def: "kvarteret", pl: "kvarter", plDef: "kvarteren", ex: "Det finns en bra pizzeria i **{kvarteret|området}**.", exNl: "Er is een goede pizzeria in de buurt." }
   - { sv: "en förort", nl: "een voorstad, een buitenwijk", def: "förorten", pl: "förorter", plDef: "förorterna", ex: "Många familjer flyttar till en **förort**.", exNl: "Veel gezinnen verhuizen naar een voorstad." }
   - { sv: "att släcka", nl: "uitdoen (licht), blussen", ex: "Glöm inte att **släcka** lampan när du går och lägger dig.", exNl: "Vergeet niet het licht uit te doen als je gaat slapen." }
   - { sv: "att bygga", nl: "bouwen", ex: "De **byggde** huset själva för tjugo år sedan.", exNl: "Ze hebben het huis twintig jaar geleden zelf gebouwd." }
@@ -731,12 +731,12 @@ vocab:
   - { sv: "att slänga", nl: "weggooien", ex: "Vi **slängde** mycket när vi flyttade.", exNl: "We gooiden veel weg toen we verhuisden." }
   - { sv: "att torka", nl: "afdrogen, afvegen; drogen", ex: "Jag diskar och du **torkar**.", exNl: "Ik was af en jij droogt af." }
   - { sv: "att vattna", nl: "water geven (aan planten)", ex: "Kan du **vattna** blommorna medan vi är i Spanien?", exNl: "Kun jij de bloemen water geven terwijl wij in Spanje zijn?" }
-  - { sv: "att fixa", nl: "regelen, fiksen (informeel)", ex: "Pappa **fixade** lampan i hallen.", exNl: "Papa heeft de lamp in de gang gefikst." }
+  - { sv: "att fixa", nl: "regelen, fiksen (informeel)", ex: "Pappa **{fixade|har fixat}** lampan i hallen.", exNl: "Papa heeft de lamp in de gang gefikst." }
   - { sv: "smutsig", nl: "vies, vuil", ex: "Golvet är **smutsigt**, så vi måste städa.", exNl: "De vloer is vies, dus we moeten schoonmaken." }
   - { sv: "rörig", nl: "rommelig", ex: "Mitt rum är alltid **rörigt**.", exNl: "Mijn kamer is altijd rommelig." }
-  - { sv: "trång", nl: "krap, klein (weinig ruimte)", ex: "Lägenheten är lite **trång** för en familj med tre barn.", exNl: "Het appartement is wat krap voor een gezin met drie kinderen." }
+  - { sv: "trång", nl: "krap, klein (weinig ruimte)", ex: "Lägenheten är lite **{trång|liten}** för en familj med tre barn.", exNl: "Het appartement is wat krap voor een gezin met drie kinderen." }
   - { sv: "modern", nl: "modern", ex: "Köket är nytt och **modernt**.", exNl: "De keuken is nieuw en modern." }
-  - { sv: "bekväm", nl: "comfortabel, lekker (om in te zitten)", ex: "Soffan är väldigt **bekväm**.", exNl: "De bank zit heel lekker." }
+  - { sv: "bekväm", nl: "comfortabel, lekker (om in te zitten)", ex: "Soffan är väldigt **{bekväm|skön}**.", exNl: "De bank zit heel lekker." }
   - { sv: "praktisk", nl: "praktisch, handig", ex: "En diskmaskin är väldigt **praktisk**.", exNl: "Een vaatwasser is heel handig." }
   - { sv: "tills", nl: "totdat, tot", ex: "Vi bor hos mormor **tills** vi hittar en lägenhet.", exNl: "We wonen bij oma totdat we een appartement vinden." }
-  - { sv: "så att", nl: "zodat", ex: "Prata högt **så att** alla hör dig.", exNl: "Praat hard, zodat iedereen je hoort." }
+  - { sv: "så att", nl: "zodat", ex: "Prata högt **{så att|så}** alla hör dig.", exNl: "Praat hard, zodat iedereen je hoort." }

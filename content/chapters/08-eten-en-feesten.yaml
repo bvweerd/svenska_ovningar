@@ -675,10 +675,10 @@ vocab:
   - { sv: "vegetarisk", nl: "vegetarisch", ex: "Har ni **vegetarisk** mat?", exNl: "Hebben jullie vegetarisch eten?" }
   - { sv: "lagom", nl: "precies goed, niet te veel en niet te weinig", ex: "Kaffet är **lagom** varmt.", exNl: "De koffie is precies warm genoeg." }
   - { sv: "till slut", nl: "uiteindelijk, tot slot", ex: "**Till slut** åt vi tårta.", exNl: "Tot slot aten we taart." }
-  - { sv: "ett te", nl: "thee", def: "teet", mass: true, ex: "Jag dricker alltid **te** på kvällen.", exNl: "Ik drink 's avonds altijd thee." }
+  - { sv: "ett te", nl: "thee", def: "teet", mass: true, ex: "Jag tycker inte om kaffe, jag dricker **te** i stället.", exNl: "Ik hou niet van koffie, ik drink liever thee." }
   - { sv: "ett kaffe", nl: "koffie", def: "kaffet", mass: true, ex: "**Kaffet** är för starkt för mig.", exNl: "De koffie is te sterk voor mij." }
   - { sv: "ett socker", nl: "suiker", def: "sockret", mass: true, ex: "Vill du ha **socker** i kaffet?", exNl: "Wil je suiker in je koffie?" }
-  - { sv: "ett smör", nl: "boter", def: "smöret", mass: true, ex: "Hon steker fisken i **smör**.", exNl: "Ze bakt de vis in boter." }
+  - { sv: "ett smör", nl: "boter", def: "smöret", mass: true, ex: "Jag äter bröd med **smör** och ost.", exNl: "Ik eet brood met boter en kaas." }
   - { sv: "ett salt", nl: "zout", def: "saltet", mass: true, ex: "Soppan behöver mer **salt**.", exNl: "De soep heeft meer zout nodig." }
   - { sv: "en peppar", nl: "peper", def: "pepparn", mass: true, ex: "Jag vill ha salt och **peppar** på potatisen.", exNl: "Ik wil zout en peper op mijn aardappelen." }
   - { sv: "en sås", nl: "een saus", def: "såsen", pl: "såser", plDef: "såserna", ex: "Vill du ha **sås** till köttet?", exNl: "Wil je saus bij het vlees?" }
@@ -687,7 +687,7 @@ vocab:
   - { sv: "en tomat", nl: "een tomaat", def: "tomaten", pl: "tomater", plDef: "tomaterna", ex: "Jag skär **tomater** till salladen.", exNl: "Ik snijd tomaten voor de salade." }
   - { sv: "en lök", nl: "een ui", def: "löken", pl: "lökar", plDef: "lökarna", ex: "Först steker jag **löken** i smör.", exNl: "Eerst bak ik de ui in boter." }
   - { sv: "en korv", nl: "een worst", def: "korven", pl: "korvar", plDef: "korvarna", ex: "Vi åt **korv** med bröd på fotbollsmatchen.", exNl: "We aten een broodje worst bij de voetbalwedstrijd." }
-  - { sv: "en sill", nl: "een haring", def: "sillen", pl: "sillar", plDef: "sillarna", ex: "Till frukost äter Olle **sill** på knäckebröd.", exNl: "Als ontbijt eet Olle haring op knäckebröd." }
+  - { sv: "en sill", nl: "een haring", def: "sillen", pl: "sillar", plDef: "sillarna", ex: "Vi köpte **sill** i affären.", exNl: "We kochten haring in de winkel." }
   - { sv: "ett knäckebröd", nl: "knäckebröd (knapperig roggebrood)", def: "knäckebrödet", mass: true, ex: "Till frukost äter jag **knäckebröd** med ost.", exNl: "Als ontbijt eet ik knäckebröd met kaas." }
   - { sv: "en kaka", nl: "een koekje, een cake", def: "kakan", pl: "kakor", plDef: "kakorna", ex: "Vi bakade **kakor** till fikat.", exNl: "We bakten koekjes voor bij de koffie." }
   - { sv: "en glass", nl: "een ijsje, ijs (om te eten)", def: "glassen", pl: "glassar", plDef: "glassarna", ex: "Barnen fick **glass** till efterrätt.", exNl: "De kinderen kregen ijs als toetje." }
@@ -708,7 +708,7 @@ vocab:
   - { sv: "att hälla", nl: "gieten, schenken", ex: "Hon **häller** mjölk i kaffet.", exNl: "Ze schenkt melk in haar koffie." }
   - { sv: "nyttig", nl: "gezond (om te eten)", ex: "Det är **nyttigt** att äta fisk.", exNl: "Het is gezond om vis te eten." }
   - { sv: "sur", nl: "zuur; chagrijnig", ex: "Mjölken är **sur**, vi måste köpa ny.", exNl: "De melk is zuur, we moeten nieuwe kopen." }
-  - { sv: "kvar", nl: "over, nog (aanwezig)", ex: "Det finns lite tårta **kvar**.", exNl: "Er is nog een beetje taart over." }
+  - { sv: "kvar", nl: "over, nog (aanwezig)", ex: "Det finns tre kakor **kvar**.", exNl: "Er zijn nog drie koekjes over." }
   - { sv: "själv", nl: "zelf", ex: "Har du lagat maten **själv**?", exNl: "Heb je het eten zelf gemaakt?" }
   - { sv: "ungefär", nl: "ongeveer", ex: "Det kom **ungefär** trettio gäster till festen.", exNl: "Er kwamen ongeveer dertig gasten op het feest." }
   - { sv: "egentligen", nl: "eigenlijk", ex: "Jag är **egentligen** inte hungrig, men tårtan ser god ut.", exNl: "Ik heb eigenlijk geen honger, maar de taart ziet er lekker uit." }

@@ -651,13 +651,13 @@ vocab:
   - { sv: "torr", nl: "droog", ex: "Det har inte regnat i maj, så gräset är **torrt**.", exNl: "Het heeft in mei niet geregend, dus het gras is droog." }
   - { sv: "mild", nl: "zacht (van het weer), mild", ex: "Vintern i Skåne är ofta **mild**.", exNl: "De winter in Skåne is vaak zacht." }
   - { sv: "ett landskap", nl: "een landschap; ook: een (historische) provincie", def: "landskapet", pl: "landskap", plDef: "landskapen", ex: "**Landskapet** i fjällen är så fint!", exNl: "Het landschap in de fjells is zo mooi!" }
-  - { sv: "en äng", nl: "een (bloemen)weide", def: "ängen", pl: "ängar", plDef: "ängarna", ex: "Barnen plockar blommor på **ängen**.", exNl: "De kinderen plukken bloemen in de weide." }
+  - { sv: "en äng", nl: "een (bloemen)weide", def: "ängen", pl: "ängar", plDef: "ängarna", ex: "Det växer många blommor på **ängen**.", exNl: "Er groeien veel bloemen in de weide." }
   - { sv: "en våg", nl: "een golf (in het water)", def: "vågen", pl: "vågor", plDef: "vågorna", ex: "Barnen leker i **vågorna**.", exNl: "De kinderen spelen in de golven." }
   - { sv: "en kust", nl: "een kust", def: "kusten", pl: "kuster", plDef: "kusterna", ex: "Vi bor i en liten stad vid **kusten**.", exNl: "We wonen in een stadje aan de kust." }
   - { sv: "en sand", nl: "het zand", def: "sanden", mass: true, ex: "Barnen leker i **sanden** hela dagen.", exNl: "De kinderen spelen de hele dag in het zand." }
   - { sv: "en vik", nl: "een baai, een inham", def: "viken", pl: "vikar", plDef: "vikarna", ex: "Vi badade i en liten **vik** på ön.", exNl: "We zwommen in een kleine baai op het eiland." }
   - { sv: "en skärgård", nl: "een scherenkust (gebied met veel eilandjes)", def: "skärgården", pl: "skärgårdar", plDef: "skärgårdarna", ex: "På sommaren åker vi båt i **skärgården**.", exNl: "In de zomer varen we met de boot door de scherenkust." }
-  - { sv: "ett löv", nl: "een blad (van een boom)", def: "lövet", pl: "löv", plDef: "löven", ex: "På hösten plockar barnen **löv** i skogen.", exNl: "In de herfst rapen de kinderen bladeren in het bos." }
+  - { sv: "ett löv", nl: "een blad (van een boom)", def: "lövet", pl: "löv", plDef: "löven", ex: "Trädet har inga **löv** på vintern.", exNl: "De boom heeft in de winter geen bladeren." }
   - { sv: "en gren", nl: "een tak", def: "grenen", pl: "grenar", plDef: "grenarna", ex: "En fågel sitter på en **gren** i trädet.", exNl: "Een vogel zit op een tak in de boom." }
   - { sv: "en orm", nl: "een slang", def: "ormen", pl: "ormar", plDef: "ormarna", ex: "Titta, en **orm** i gräset!", exNl: "Kijk, een slang in het gras!" }
   - { sv: "en björn", nl: "een beer", def: "björnen", pl: "björnar", plDef: "björnarna", ex: "Det finns **björnar** i skogen i norra Sverige.", exNl: "Er zijn beren in de bossen van Noord-Zweden." }
@@ -665,16 +665,16 @@ vocab:
   - { sv: "en handduk", nl: "een handdoek", def: "handduken", pl: "handdukar", plDef: "handdukarna", ex: "Ta med en **handduk** till stranden!", exNl: "Neem een handdoek mee naar het strand!" }
   - { sv: "en baddräkt", nl: "een badpak", def: "baddräkten", pl: "baddräkter", plDef: "baddräkterna", ex: "Jag har glömt min **baddräkt** hemma.", exNl: "Ik heb mijn badpak thuis vergeten." }
   - { sv: "en regel", nl: "een regel", def: "regeln", pl: "regler", plDef: "reglerna", ex: "Vi pratar med barnen om **reglerna** i naturen.", exNl: "We praten met de kinderen over de regels in de natuur." }
-  - { sv: "ett skräp", nl: "het afval, de rommel", def: "skräpet", mass: true, ex: "Ta med **skräpet** hem!", exNl: "Neem je afval mee naar huis!" }
+  - { sv: "ett skräp", nl: "het afval, de rommel", def: "skräpet", mass: true, ex: "Ta med **skräpet** hem!", exNl: "Neem het afval mee naar huis!" }
   - { sv: "förbjuden", nl: "verboden", ex: "Det är **förbjudet** att grilla på stranden.", exNl: "Het is verboden om op het strand te barbecueën." }
   - { sv: "tillåten", nl: "toegestaan", ex: "Är det **tillåtet** att tälta här?", exNl: "Is het toegestaan om hier te kamperen?" }
   - { sv: "ett eldningsförbud", nl: "een stookverbod", def: "eldningsförbudet", pl: "eldningsförbud", plDef: "eldningsförbuden", ex: "Det är **eldningsförbud**, så vi kan inte grilla i skogen.", exNl: "Er geldt een stookverbod, dus we kunnen niet barbecueën in het bos." }
   - { sv: "en skylt", nl: "een bord (met tekst)", def: "skylten", pl: "skyltar", plDef: "skyltarna", ex: "Läs **skylten**! Här får man inte bada.", exNl: "Lees het bord! Hier mag je niet zwemmen." }
-  - { sv: "en tomt", nl: "een erf, een kavel", def: "tomten", pl: "tomter", plDef: "tomterna", ex: "Huset har en stor **tomt** med många träd.", exNl: "Het huis heeft een groot erf met veel bomen." }
-  - { sv: "en mark", nl: "de grond", def: "marken", mass: true, ex: "Vi sitter på **marken** och äter.", exNl: "We zitten op de grond te eten." }
+  - { sv: "en tomt", nl: "een erf, een kavel", def: "tomten", pl: "tomter", plDef: "tomterna", ex: "Huset har en stor **tomt** med många träd.", exNl: "Het huis heeft een groot stuk grond met veel bomen." }
+  - { sv: "en mark", nl: "de grond", def: "marken", mass: true, ex: "Vi sitter på **marken** i skogen och äter.", exNl: "We zitten in het bos op de grond te eten." }
   - { sv: "att störa", nl: "storen", ex: "Var tyst, du **stör** fåglarna!", exNl: "Wees stil, je stoort de vogels!" }
   - { sv: "att skada", nl: "beschadigen, schade doen", ex: "Man får inte **skada** träden.", exNl: "Je mag de bomen niet beschadigen." }
   - { sv: "att respektera", nl: "respecteren", ex: "Vi måste **respektera** naturen och djuren.", exNl: "We moeten de natuur en de dieren respecteren." }
-  - { sv: "nästan", nl: "bijna", ex: "Det är **nästan** trettio grader idag!", exNl: "Het is vandaag bijna dertig graden!" }
-  - { sv: "väldigt", nl: "heel, erg", ex: "Vattnet är **väldigt** kallt i maj.", exNl: "Het water is erg koud in mei." }
+  - { sv: "nästan", nl: "bijna", ex: "Klockan är **nästan** sju.", exNl: "Het is bijna zeven uur." }
+  - { sv: "väldigt", nl: "heel, erg", ex: "Vattnet är **{väldigt|mycket}** kallt i maj.", exNl: "Het water is erg koud in mei." }
   - { sv: "plötsligt", nl: "plotseling, opeens", ex: "Vi var på stranden, men **plötsligt** började det regna.", exNl: "We waren op het strand, maar opeens begon het te regenen." }

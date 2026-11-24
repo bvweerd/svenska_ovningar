@@ -634,23 +634,23 @@ vocab:
   - { sv: "att försöka", nl: "proberen", ex: "Jag **försöker** lära mig svenska.", exNl: "Ik probeer Zweeds te leren." }
   - { sv: "att hända", nl: "gebeuren", ex: "Vad **hände** sedan?", exNl: "Wat gebeurde er toen?" }
   - { sv: "att hjälpa", nl: "helpen", ex: "Kan du **hjälpa** mig med datorn?", exNl: "Kun je me helpen met de computer?" }
-  - { sv: "att behöva", nl: "nodig hebben, moeten", ex: "Jag **behöver** ladda telefonen.", exNl: "Ik moet mijn telefoon opladen." }
+  - { sv: "att behöva", nl: "nodig hebben, moeten", ex: "Jag **behöver** en ny laddare.", exNl: "Ik heb een nieuwe oplader nodig." }
   - { sv: "att välja", nl: "kiezen", ex: "Vilken app ska jag **välja**?", exNl: "Welke app moet ik kiezen?" }
   - { sv: "att söka", nl: "zoeken", ex: "Jag **söker** information på internet.", exNl: "Ik zoek informatie op internet." }
   - { sv: "att klicka", nl: "klikken", ex: "**Klicka** på länken i mejlet.", exNl: "Klik op de link in de e-mail." }
   - { sv: "att kolla", nl: "checken, (even) kijken", ex: "Jag ska bara **kolla** mejlen.", exNl: "Ik ga even mijn e-mail checken." }
   - { sv: "att logga in", nl: "inloggen", ex: "Jag kan inte **logga in**, jag har glömt lösenordet.", exNl: "Ik kan niet inloggen, ik ben mijn wachtwoord vergeten." }
   - { sv: "att spara", nl: "opslaan; sparen", ex: "Glöm inte att **spara** filen!", exNl: "Vergeet niet het bestand op te slaan!" }
-  - { sv: "att radera", nl: "wissen, verwijderen", ex: "Jag **raderade** mejlet, så jag kan inte läsa det igen.", exNl: "Ik heb de e-mail verwijderd, dus ik kan hem niet meer lezen." }
+  - { sv: "att radera", nl: "wissen, verwijderen", ex: "Jag **{raderade|har raderat}** mejlet, så jag kan inte läsa det igen.", exNl: "Ik heb de e-mail verwijderd, dus ik kan hem niet meer lezen." }
   - { sv: "att installera", nl: "installeren", ex: "Du måste **installera** appen först.", exNl: "Je moet eerst de app installeren." }
   - { sv: "ett papper", nl: "een (vel) papier, een papiertje", def: "pappret", pl: "papper", plDef: "pappren", ex: "Skriv numret på ett **papper**.", exNl: "Schrijf het nummer op een papiertje." }
-  - { sv: "att ändra", nl: "veranderen, wijzigen", ex: "Jag vill **ändra** mitt lösenord.", exNl: "Ik wil mijn wachtwoord wijzigen." }
+  - { sv: "att ändra", nl: "veranderen, wijzigen", ex: "Jag vill **{ändra|byta}** mitt lösenord.", exNl: "Ik wil mijn wachtwoord wijzigen." }
   - { sv: "att skriva ut", nl: "printen, afdrukken", ex: "Jag **skriver ut** biljetten hemma.", exNl: "Ik print het kaartje thuis." }
   - { sv: "internet", nl: "internet", alt: ["nätet"], ex: "Utan **internet** kan jag inte jobba hemma.", exNl: "Zonder internet kan ik niet thuiswerken." }
   - { sv: "en länk", nl: "een link", def: "länken", pl: "länkar", plDef: "länkarna", ex: "Jag skickar **länken** till dig på sms.", exNl: "Ik stuur je de link per sms." }
   - { sv: "en bild", nl: "een afbeelding, een foto", alt: ["ett foto"], def: "bilden", pl: "bilder", plDef: "bilderna", ex: "Wilma skickade en **bild** från stranden.", exNl: "Wilma stuurde een foto van het strand." }
   - { sv: "ett program", nl: "een programma", def: "programmet", pl: "program", plDef: "programmen", ex: "Vilket **program** använder du för mejl?", exNl: "Welk programma gebruik je voor e-mail?" }
-  - { sv: "ett nät", nl: "een net (nätet = het internet)", def: "nätet", pl: "nät", plDef: "näten", ex: "Jag läste om det på **nätet**.", exNl: "Ik heb erover gelezen op internet." }
+  - { sv: "ett nät", nl: "een net (nätet = het internet)", def: "nätet", pl: "nät", plDef: "näten", ex: "Jag läste om det på **{nätet|internet}**.", exNl: "Ik heb erover gelezen op internet." }
   - { sv: "en sida", nl: "een pagina; een kant", def: "sidan", pl: "sidor", plDef: "sidorna", ex: "Boken har trehundra **sidor**.", exNl: "Het boek heeft driehonderd bladzijden." }
   - { sv: "en fil", nl: "een bestand (op de computer)", def: "filen", pl: "filer", plDef: "filerna", ex: "Kan du skicka **filen** igen? Jag kan inte öppna den.", exNl: "Kun je het bestand nog eens sturen? Ik kan het niet openen." }
   - { sv: "en kod", nl: "een code", def: "koden", pl: "koder", plDef: "koderna", ex: "Du får en **kod** i ett sms.", exNl: "Je krijgt een code in een sms." }
@@ -661,7 +661,7 @@ vocab:
   - { sv: "ett användarnamn", nl: "een gebruikersnaam", def: "användarnamnet", pl: "användarnamn", plDef: "användarnamnen", ex: "Skriv ditt **användarnamn** och ditt lösenord.", exNl: "Typ je gebruikersnaam en je wachtwoord." }
   - { sv: "ett tangentbord", nl: "een toetsenbord", def: "tangentbordet", pl: "tangentbord", plDef: "tangentborden", ex: "Jag skriver snabbt på **tangentbordet**.", exNl: "Ik typ snel op het toetsenbord." }
   - { sv: "en surfplatta", nl: "een tablet", def: "surfplattan", pl: "surfplattor", plDef: "surfplattorna", ex: "Barnen tittar på film på **surfplattan**.", exNl: "De kinderen kijken een film op de tablet." }
-  - { sv: "en video", nl: "een video, een filmpje", def: "videon", pl: "videor", plDef: "videorna", ex: "Bram skickade en rolig **video** till mig.", exNl: "Bram stuurde me een grappig filmpje." }
+  - { sv: "en video", nl: "een video, een filmpje", def: "videon", pl: "videor", plDef: "videorna", ex: "Bram skickade en rolig **video** till mig.", exNl: "Bram stuurde me een grappige video." }
   - { sv: "en information", nl: "informatie", def: "informationen", mass: true, ex: "Du hittar mer **information** på hemsidan.", exNl: "Je vindt meer informatie op de website." }
   - { sv: "en nyhet", nl: "een nieuwtje; nyheter = het nieuws", def: "nyheten", pl: "nyheter", plDef: "nyheterna", ex: "Jag har en stor **nyhet**: vi ska gifta oss!", exNl: "Ik heb groot nieuws: we gaan trouwen!" }
   - { sv: "en uppgift", nl: "een opdracht, een taak", def: "uppgiften", pl: "uppgifter", plDef: "uppgifterna", ex: "Läraren gav oss en svår **uppgift**.", exNl: "De leraar gaf ons een moeilijke opdracht." }
@@ -669,8 +669,8 @@ vocab:
   - { sv: "viktig", nl: "belangrijk", ex: "Lösenordet är **viktigt**, glöm det inte!", exNl: "Het wachtwoord is belangrijk, vergeet het niet!" }
   - { sv: "möjlig", nl: "mogelijk", ex: "Är det **möjligt** att ringa dig ikväll?", exNl: "Is het mogelijk om je vanavond te bellen?" }
   - { sv: "svår", nl: "moeilijk", ex: "Det är **svårt** att förstå honom i telefon.", exNl: "Het is moeilijk om hem aan de telefoon te verstaan." }
-  - { sv: "enkel", nl: "eenvoudig, makkelijk", ex: "Appen är väldigt **enkel**.", exNl: "De app is heel eenvoudig." }
+  - { sv: "enkel", nl: "eenvoudig, makkelijk", ex: "Appen är väldigt **{enkel|lätt}**.", exNl: "De app is heel eenvoudig." }
   - { sv: "snabb", nl: "snel", ex: "Datorn är gammal men **snabb**.", exNl: "De computer is oud maar snel." }
   - { sv: "trasig", nl: "kapot", ex: "Min mobil är **trasig**, så jag kan inte ringa.", exNl: "Mijn mobiel is kapot, dus ik kan niet bellen." }
   - { sv: "nog", nl: "wel, waarschijnlijk; genoeg", ex: "Hon kommer **nog** snart.", exNl: "Ze komt vast zo." }
-  - { sv: "noga", nl: "zorgvuldig, goed", ex: "Lyssna **noga**!", exNl: "Luister goed!" }
+  - { sv: "noga", nl: "zorgvuldig, goed", ex: "Lyssna **noga**!", exNl: "Luister aandachtig!" }
