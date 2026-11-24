@@ -234,6 +234,48 @@ sections:
           - { id: rxgc, type: truefalse, statement: "Du får lämna skräp i naturen.", answer: false, tip: "Je neemt je afval altijd mee." }
           - { id: 6jsr, type: truefalse, statement: "Du får plocka svamp i skogen.", answer: true }
 
+      - id: woorden-natuur
+        title: "Woorden in een zin: weer en natuur"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: kzmj, type: gap, text: "Det har inte regnat på en månad, så marken är väldigt ___.", gaps: [{ answers: ["torr"], options: ["torr", "blöt", "mild", "tyst"], feedback: [{ match: "blöt", tip: "Het heeft een maand niet geregend: de grond is niet nat (blöt) maar droog." }] }] }
+          - { id: wmkg, type: gap, text: "I januari var det femton ___ i Kiruna.", gaps: [{ answers: ["minusgrader"], options: ["minusgrader", "stormar", "vågor", "skuggor"] }] }
+          - { id: r4sw, type: gap, text: "Vi kan inte åka båt idag, för det är ___.", gaps: [{ answers: ["storm"], options: ["storm", "sand", "skugga", "mark"] }] }
+          - { id: 4qbh, type: gap, text: "På vintern är det ___ på sjön, så vi kan gå på den.", gaps: [{ answers: ["is"], options: ["is", "sand", "skräp", "mark"] }] }
+          - { id: eq6q, type: gap, text: "Det är för varmt i solen. Kom och sitt här i ___!", gaps: [{ answers: ["skuggan"], options: ["skuggan", "stormen", "isen", "viken"] }] }
+          - { id: tusu, type: gap, text: "Vintern i Skåne är ofta ___, med bara några minusgrader.", gaps: [{ answers: ["mild"], options: ["mild", "torr", "tyst", "trött"] }] }
+          - { id: 2vew, type: gap, text: "Klockan är fem i sju. Det är ___ sju.", gaps: [{ answers: ["nästan"], options: ["nästan", "plötsligt", "väldigt", "ändå"] }] }
+          - { id: hzvg, type: gap, text: "Vi satt i solen, men ___ kom ett moln och det började regna.", gaps: [{ answers: ["plötsligt"], options: ["plötsligt", "nästan", "väldigt", "därför"], feedback: [{ match: "därför", tip: "Därför (daarom) geeft een gevolg. Hier gebeurt iets onverwachts: plötsligt (opeens)." }] }] }
+          - { id: 4neh, type: gap, text: "Vi har en sommarstuga på en ö i ___.", gaps: [{ answers: ["skärgården"], options: ["skärgården", "ängen", "skuggan", "sanden"] }] }
+          - { id: xwew, type: gap, text: "Vi paddlade kanot till en liten ___ på andra sidan sjön.", gaps: [{ answers: ["vik"], options: ["vik", "gren", "skylt", "storm"] }] }
+          - { id: ed34, type: gap, text: "Vi bor nära havet, i en liten stad vid ___.", gaps: [{ answers: ["kusten"], options: ["kusten", "ängen", "skuggan", "grenen"] }] }
+          - { id: mdgs, type: gap, text: "Barnen badar och leker i ___ vid stranden.", gaps: [{ answers: ["vågorna"], options: ["vågorna", "grenarna", "skyltarna", "ängarna"] }] }
+          - { id: cvjf, type: gap, text: "Vi plockar blommor på ___.", gaps: [{ answers: ["ängen"], options: ["ängen", "isen", "viken", "kusten"] }] }
+          - { id: mwt3, type: gap, text: "Titta, det sitter en fågel på en ___ i trädet!", gaps: [{ answers: ["gren"], options: ["gren", "våg", "orm", "äng"] }] }
+          - { id: 5gwr, type: gap, text: "I skogen i norra Sverige finns det älgar och ___.", gaps: [{ answers: ["björnar"], options: ["björnar", "vågor", "grenar", "skyltar"] }] }
+          - { id: 3pw9, type: gap, text: "Från berget ser vi hela ___ med sjöar och skogar.", gaps: [{ answers: ["landskapet"], options: ["landskapet", "skräpet", "eldningsförbudet", "isen"] }] }
+
+      - id: woorden-regels
+        title: "Woorden in een zin: regels buiten"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: tp8e, type: gap, text: "I naturen får man göra mycket, men man måste följa ___.", gaps: [{ answers: ["reglerna"], options: ["reglerna", "landskapen", "ängarna", "tomterna"] }] }
+          - { id: 6p3w, type: gap, text: "Det är torrt och varmt, så det är ___ i hela Dalarna.", gaps: [{ answers: ["eldningsförbud"], options: ["eldningsförbud", "storm", "skugga", "skräp"] }] }
+          - { id: 93uj, type: gap, text: "Här får man inte bada. Det är ___.", gaps: [{ answers: ["förbjudet"], options: ["förbjudet", "tillåtet", "torrt", "tyst"], feedback: [{ match: "tillåtet", tip: "Je mag hier níet zwemmen: dan is het verboden (förbjudet), niet toegestaan." }] }] }
+          - { id: wmyu, type: gap, text: "– Får man tälta här? – Ja, det är ___ en natt.", gaps: [{ answers: ["tillåtet"], options: ["tillåtet", "förbjudet", "torrt", "milt"], feedback: [{ match: "förbjudet", tip: "Het antwoord is ja: dan is het toegestaan (tillåtet)." }] }] }
+          - { id: w8t6, type: gap, text: "Ta med ___ hem, lämna det inte i skogen!", gaps: [{ answers: ["skräpet"], options: ["skräpet", "regeln", "skylten", "landskapet"] }] }
+          - { id: 3yxa, type: gap, text: "Vi får inte tälta på deras ___, för där bor en familj.", gaps: [{ answers: ["tomt"], options: ["tomt", "kust", "äng", "skugga"] }] }
+          - { id: h64e, type: gap, text: "Prata inte så högt, du ___ fåglarna!", gaps: [{ answers: ["stör"], options: ["stör", "skadar", "respekterar", "njuter"] }] }
+          - { id: hjyc, type: gap, text: "Kör inte bil i skogen, du kan ___ marken.", gaps: [{ answers: ["skada"], options: ["skada", "störa", "respektera", "tälta"] }] }
+          - { id: j7fj, type: gap, text: "Djuren bor i skogen, så vi måste ___ dem.", gaps: [{ answers: ["respektera"], options: ["respektera", "skada", "störa", "plocka"] }] }
+          - { id: n7wx, type: gap, text: "Vid sjön finns en ___ med reglerna.", gaps: [{ answers: ["skylt"], options: ["skylt", "grill", "handduk", "våg"] }] }
+          - { id: jetm, type: gap, text: "Vi lagar mat på ___ i trädgården.", gaps: [{ answers: ["grillen"], options: ["grillen", "handduken", "skylten", "baddräkten"] }] }
+          - { id: sxuj, type: gap, text: "Ska vi bada? Ta med din ___ och en handduk!", gaps: [{ answers: ["baddräkt"], options: ["baddräkt", "grill", "skylt", "tomt"] }] }
+
       - id: verbind-omvormen
         title: Maak er één zin van
         instruction: Maak één zin van de twee zinnen, met het woord tussen haakjes. Na *och, men, eller, för, så* en *utan* blijft de gewone volgorde.
@@ -600,3 +642,39 @@ vocab:
   - { sv: "inte heller", nl: "ook niet", ex: "Jag kan **inte heller** simma.", exNl: "Ik kan ook niet zwemmen." }
   - { sv: "utan", nl: "maar (na een ontkenning)", ex: "Det är inte kallt **utan** varmt.", exNl: "Het is niet koud maar warm." }
   - { sv: "på landet", nl: "op het platteland", ex: "På sommaren bor vi **på landet**.", exNl: "In de zomer wonen we op het platteland." }
+  - { sv: "en vinter", nl: "een winter", def: "vintern", pl: "vintrar", plDef: "vintrarna", ex: "På **vintern** är det kallt i norra Sverige.", exNl: "In de winter is het koud in Noord-Zweden." }
+  - { sv: "en snö", nl: "de sneeuw", def: "snön", mass: true, ex: "Barnen leker i **snön**.", exNl: "De kinderen spelen in de sneeuw." }
+  - { sv: "en is", nl: "het ijs (bevroren water)", def: "isen", mass: true, ex: "På vintern är det **is** på sjön.", exNl: "In de winter ligt er ijs op het meer." }
+  - { sv: "en storm", nl: "een storm", def: "stormen", pl: "stormar", plDef: "stormarna", ex: "Vi stannar inne, för det är **storm** ute.", exNl: "We blijven binnen, want het stormt buiten." }
+  - { sv: "en minusgrad", nl: "een graad onder nul", def: "minusgraden", pl: "minusgrader", plDef: "minusgraderna", ex: "I januari var det tjugo **minusgrader** i Kiruna.", exNl: "In januari was het in Kiruna twintig graden onder nul." }
+  - { sv: "en skugga", nl: "een schaduw", def: "skuggan", pl: "skuggor", plDef: "skuggorna", ex: "Det är för varmt i solen, så vi sitter i **skuggan**.", exNl: "Het is te warm in de zon, dus we zitten in de schaduw." }
+  - { sv: "torr", nl: "droog", ex: "Det har inte regnat i maj, så gräset är **torrt**.", exNl: "Het heeft in mei niet geregend, dus het gras is droog." }
+  - { sv: "mild", nl: "zacht (van het weer), mild", ex: "Vintern i Skåne är ofta **mild**.", exNl: "De winter in Skåne is vaak zacht." }
+  - { sv: "ett landskap", nl: "een landschap", def: "landskapet", pl: "landskap", plDef: "landskapen", ex: "**Landskapet** i fjällen är så fint!", exNl: "Het landschap in de fjells is zo mooi!" }
+  - { sv: "en äng", nl: "een wei, een weide", def: "ängen", pl: "ängar", plDef: "ängarna", ex: "Barnen plockar blommor på **ängen**.", exNl: "De kinderen plukken bloemen in de wei." }
+  - { sv: "en våg", nl: "een golf (in het water)", def: "vågen", pl: "vågor", plDef: "vågorna", ex: "Barnen leker i **vågorna**.", exNl: "De kinderen spelen in de golven." }
+  - { sv: "en kust", nl: "een kust", def: "kusten", pl: "kuster", plDef: "kusterna", ex: "Vi bor i en liten stad vid **kusten**.", exNl: "We wonen in een stadje aan de kust." }
+  - { sv: "en sand", nl: "het zand", def: "sanden", mass: true, ex: "Barnen leker i **sanden** hela dagen.", exNl: "De kinderen spelen de hele dag in het zand." }
+  - { sv: "en vik", nl: "een baai, een inham", def: "viken", pl: "vikar", plDef: "vikarna", ex: "Vi badade i en liten **vik** på ön.", exNl: "We zwommen in een kleine baai op het eiland." }
+  - { sv: "en skärgård", nl: "een scherenkust (gebied met veel eilandjes)", def: "skärgården", pl: "skärgårdar", plDef: "skärgårdarna", ex: "På sommaren åker vi båt i **skärgården**.", exNl: "In de zomer varen we met de boot door de scherenkust." }
+  - { sv: "ett löv", nl: "een blad (van een boom)", def: "lövet", pl: "löv", plDef: "löven", ex: "På våren får träden nya **löv**.", exNl: "In de lente krijgen de bomen nieuwe bladeren." }
+  - { sv: "en gren", nl: "een tak", def: "grenen", pl: "grenar", plDef: "grenarna", ex: "En fågel sitter på en **gren** i trädet.", exNl: "Een vogel zit op een tak in de boom." }
+  - { sv: "en orm", nl: "een slang", def: "ormen", pl: "ormar", plDef: "ormarna", ex: "Titta, en **orm** i gräset!", exNl: "Kijk, een slang in het gras!" }
+  - { sv: "en björn", nl: "een beer", def: "björnen", pl: "björnar", plDef: "björnarna", ex: "Det finns **björnar** i skogen i norra Sverige.", exNl: "Er zijn beren in de bossen van Noord-Zweden." }
+  - { sv: "en grill", nl: "een barbecue, een grill", def: "grillen", pl: "grillar", plDef: "grillarna", ex: "Vi lagar maten på **grillen**.", exNl: "We maken het eten klaar op de barbecue." }
+  - { sv: "en handduk", nl: "een handdoek", def: "handduken", pl: "handdukar", plDef: "handdukarna", ex: "Ta med en **handduk** till stranden!", exNl: "Neem een handdoek mee naar het strand!" }
+  - { sv: "en baddräkt", nl: "een badpak", def: "baddräkten", pl: "baddräkter", plDef: "baddräkterna", ex: "Jag har glömt min **baddräkt** hemma.", exNl: "Ik heb mijn badpak thuis vergeten." }
+  - { sv: "en regel", nl: "een regel", def: "regeln", pl: "regler", plDef: "reglerna", ex: "Vi måste följa **reglerna** i naturen.", exNl: "We moeten ons in de natuur aan de regels houden." }
+  - { sv: "ett skräp", nl: "het afval, de rommel", def: "skräpet", mass: true, ex: "Ta med **skräpet** hem!", exNl: "Neem je afval mee naar huis!" }
+  - { sv: "förbjuden", nl: "verboden", ex: "Det är **förbjudet** att grilla på stranden.", exNl: "Het is verboden om op het strand te barbecueën." }
+  - { sv: "tillåten", nl: "toegestaan", ex: "Är det **tillåtet** att tälta här?", exNl: "Is het toegestaan om hier te kamperen?" }
+  - { sv: "ett eldningsförbud", nl: "een stookverbod", def: "eldningsförbudet", pl: "eldningsförbud", plDef: "eldningsförbuden", ex: "Det är **eldningsförbud**, så vi kan inte grilla i skogen.", exNl: "Er geldt een stookverbod, dus we kunnen niet barbecueën in het bos." }
+  - { sv: "en skylt", nl: "een bord (met tekst)", def: "skylten", pl: "skyltar", plDef: "skyltarna", ex: "Läs **skylten**! Här får man inte bada.", exNl: "Lees het bord! Hier mag je niet zwemmen." }
+  - { sv: "en tomt", nl: "een erf, een kavel", def: "tomten", pl: "tomter", plDef: "tomterna", ex: "Huset har en stor **tomt** med många träd.", exNl: "Het huis heeft een groot erf met veel bomen." }
+  - { sv: "en mark", nl: "de grond", def: "marken", mass: true, ex: "Vi sitter på **marken** och äter.", exNl: "We zitten op de grond te eten." }
+  - { sv: "att störa", nl: "storen", ex: "Var tyst, du **stör** fåglarna!", exNl: "Wees stil, je stoort de vogels!" }
+  - { sv: "att skada", nl: "beschadigen, schade doen", ex: "Man får inte **skada** träden.", exNl: "Je mag de bomen niet beschadigen." }
+  - { sv: "att respektera", nl: "respecteren", ex: "Vi måste **respektera** naturen och djuren.", exNl: "We moeten de natuur en de dieren respecteren." }
+  - { sv: "nästan", nl: "bijna", ex: "Det är **nästan** trettio grader idag!", exNl: "Het is vandaag bijna dertig graden!" }
+  - { sv: "väldigt", nl: "heel, erg", ex: "Vattnet är **väldigt** kallt i maj.", exNl: "Het water is erg koud in mei." }
+  - { sv: "plötsligt", nl: "plotseling, opeens", ex: "Vi var på stranden, men **plötsligt** började det regna.", exNl: "We waren op het strand, maar opeens begon het te regenen." }
