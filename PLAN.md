@@ -199,6 +199,8 @@ Alles in november 2026.
   schrijven, doeltaken), dagdoel herhaling (`goalDays`, synchroniseert mee), hoofdstuk beheerst, per snelle ronde
   en alle hoofdstukken; niveaus die een site niet kan halen verschijnen niet; pagina ingedeeld per strand; tien
   nieuwe Zweedse plaatjes (o.a. köttbullar, falukorv, kräfta, hembränt).
+- **#32 vragen in stappen**: „Toon antwoord” toont alleen de huidige stap (de rest doe je zelf); de score telt
+  per stap mee (deelpunten), ook als een stap bekeken is. De vraag blijft „bekeken” voor de herhaling.
 
 ## Open / volgende stappen
 
