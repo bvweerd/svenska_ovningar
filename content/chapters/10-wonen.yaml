@@ -323,8 +323,8 @@ sections:
           - { id: 4j2y, type: gap, text: "På morgonen duschar jag, men på kvällen tar jag ett bad i ___.", gaps: [{ answers: ["badkaret"], options: ["badkaret", "frysen", "hyllan", "porten"] }] }
           - { id: 6k58, type: gap, text: "Jag kan inte öppna dörren, för det är något fel på ___.", gaps: [{ answers: ["låset"], options: ["låset", "handfatet", "badkaret", "området"] }] }
           - { id: 9cuh, type: gap, text: "Vi har en ___ med böcker och foton ovanför sängen.", gaps: [{ answers: ["hylla"], options: ["hylla", "frys", "dusch", "port"] }] }
-          - { id: uv9d, type: gap, text: "Jag lagade maten, så du får ta ___.", gaps: [{ answers: ["disken"], options: ["disken", "elen", "utsikten", "porten"] }] }
-          - { id: k2ys, type: gap, text: "Tvättmaskinen är klar, så nu kan jag hänga upp ___.", gaps: [{ answers: ["tvätten"], options: ["tvätten", "disken", "elen", "utsikten"] }] }
+          - { id: uv9d, type: gap, text: "Jag lagade maten, så du får ta ___.", gaps: [{ answers: ["disken"], options: ["disken", "utsikten", "porten", "kranen"] }] }
+          - { id: k2ys, type: gap, text: "Tvättmaskinen är klar, så nu kan jag hänga upp ___.", gaps: [{ answers: ["tvätten"], options: ["tvätten", "disken", "utsikten", "porten"] }] }
           - { id: z7ek, type: gap, text: "Blommorna och ___ i fönstret behöver vatten varje vecka.", gaps: [{ answers: ["växterna"], options: ["växterna", "låsen", "kartongerna", "portarna"] }] }
 
       - id: woorden-wonen-buurt
@@ -338,7 +338,7 @@ sections:
           - { id: ybsz, type: gap, text: "Vi bor inte i centrum utan i en ___ tjugo minuter från stan.", gaps: [{ answers: ["förort"], options: ["förort", "frys", "byrå", "låda"] }] }
           - { id: tvt8, type: gap, text: "Efter regnet är ___ alldeles blöt.", gaps: [{ answers: ["gräsmattan"], options: ["gräsmattan", "frysen", "spegeln", "byrån"] }] }
           - { id: mjex, type: gap, text: "Lägenheten ligger högt upp, så ___ är fantastisk.", gaps: [{ answers: ["utsikten"], options: ["utsikten", "porten", "lådan", "kartongen"] }] }
-          - { id: 9pag, type: gap, text: "Det är din tur att gå ut med ___ idag.", gaps: [{ answers: ["soporna"], options: ["soporna", "utsikten", "elen", "kontraktet"] }] }
+          - { id: 9pag, type: gap, text: "Det är din tur att gå ut med ___ idag.", gaps: [{ answers: ["soporna"], options: ["soporna", "utsikten", "kranen", "kontraktet"] }] }
           - { id: kw9u, type: gap, text: "Han vill inte bo i ett gammalt hus, han vill bo i ett ___ hus.", gaps: [{ answers: ["modernt"], options: ["modernt", "smutsigt", "rörigt", "trångt"] }] }
           - { id: w5pq, type: gap, text: "Jag sitter gärna i den här fåtöljen, den är så ___.", gaps: [{ answers: ["bekväm"], options: ["bekväm", "rörig", "smutsig", "trasig"] }] }
           - { id: xbn4, type: gap, text: "Vi är fem i en lägenhet med två rum, så det är ___.", gaps: [{ answers: ["trångt"], options: ["trångt", "modernt", "bekvämt", "praktiskt"] }] }
@@ -712,7 +712,7 @@ vocab:
   - { sv: "sopor", nl: "vuilnis, huisvuil (meervoud; soporna = het vuilnis)", ex: "Vi slänger **soporna** varje dag.", exNl: "We gooien elke dag het vuilnis weg." }
   - { sv: "en tvätt", nl: "de was", def: "tvätten", mass: true, ex: "Jag hänger **tvätten** på balkongen.", exNl: "Ik hang de was op het balkon." }
   - { sv: "en disk", nl: "de afwas", def: "disken", mass: true, ex: "Vem tar **disken** ikväll?", exNl: "Wie doet vanavond de afwas?" }
-  - { sv: "en el", nl: "elektriciteit, stroom", def: "elen", mass: true, ex: "Vi betalar **el** och hyra varje månad.", exNl: "We betalen elke maand stroom en huur." }
+  - { sv: "en kran", nl: "een kraan", def: "kranen", pl: "kranar", plDef: "kranarna", ex: "Jag tar vatten ur **kranen**.", exNl: "Ik neem water uit de kraan." }
   - { sv: "en växt", nl: "een (kamer)plant", def: "växten", pl: "växter", plDef: "växterna", ex: "Vi har många **växter** i vardagsrummet.", exNl: "We hebben veel planten in de woonkamer." }
   - { sv: "en utsikt", nl: "een uitzicht", def: "utsikten", pl: "utsikter", plDef: "utsikterna", ex: "Från balkongen har vi **utsikt** över sjön.", exNl: "Vanaf het balkon hebben we uitzicht over het meer." }
   - { sv: "en bostad", nl: "een woning", def: "bostaden", pl: "bostäder", plDef: "bostäderna", ex: "Det är svårt att hitta en **bostad** i Stockholm.", exNl: "Het is moeilijk om een woning te vinden in Stockholm." }

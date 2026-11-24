@@ -808,7 +808,7 @@ vocab:
   - { sv: "en julgran", nl: "een kerstboom", alt: ["en gran"], def: "julgranen", pl: "julgranar", plDef: "julgranarna", ex: "**{Julgranen|Granen}** står i vardagsrummet.", exNl: "De kerstboom staat in de woonkamer." }
   - { sv: "en kula", nl: "een (kerst)bal, een bolletje", def: "kulan", pl: "kulor", plDef: "kulorna", ex: "Vi hänger röda **kulor** i granen.", exNl: "We hangen rode ballen in de boom." }
   - { sv: "en ljusstake", nl: "een kandelaar", def: "ljusstaken", pl: "ljusstakar", plDef: "ljusstakarna", ex: "I fönstret står en **ljusstake** med sju ljus.", exNl: "In het raam staat een kandelaar met zeven kaarsen." }
-  - { sv: "en saffran", nl: "saffraan", def: "saffranen", mass: true, ex: "Lussekatter bakar man med **saffran**.", exNl: "Saffraanbroodjes bak je met saffraan." }
+  - { sv: "en halsduk", nl: "een sjaal", def: "halsduken", pl: "halsdukar", plDef: "halsdukarna", ex: "Ta på dig mössa och **halsduk**, det snöar!", exNl: "Zet je muts op en doe je sjaal om, het sneeuwt!" }
   - { sv: "ett presentkort", nl: "een cadeaubon", def: "presentkortet", pl: "presentkort", plDef: "presentkorten", ex: "Jag vet inte vad hon vill ha, så jag köper ett **presentkort**.", exNl: "Ik weet niet wat ze wil hebben, dus ik koop een cadeaubon." }
   - { sv: "en storlek", nl: "een maat (van kleding)", def: "storleken", pl: "storlekar", plDef: "storlekarna", ex: "Vilken **storlek** har du i skor?", exNl: "Welke schoenmaat heb je?" }
   - { sv: "en färg", nl: "een kleur", def: "färgen", pl: "färger", plDef: "färgerna", ex: "Vilken **färg** vill du ha, röd eller blå?", exNl: "Welke kleur wil je, rood of blauw?" }
