@@ -193,7 +193,8 @@ Alles in november 2026.
 - **Didactisch review A-site, tweede ronde** (`REVIEW-DIDACTIEK.md`): Zweeds → Zweeds en luisterdialogen in A2,
   diagnose *är* + supinum, kernonderwerpen en woorden vaker terug, kan-doen herschreven, flitskaarten nagekeken.
   Met taalreview. B-site daarna: „Wat zeg je?” 4 → 8 in B1, woorden in zinnen (H15, H17, H20–H24), ontdek de regel
-  (H13, H14, H23), foutregels met `retry` (goed Zweeds, andere vorm: geen fout). Met taalreview.
+  (H13, H14, H23), foutregels met `retry` (goed Zweeds, andere vorm: geen fout); daarna antwoordruimte, woorden van
+  eerder in de herhaling (H16–H28), omvormen in H17, leesvragen niet meer bij grammatica-kan-doen. Met taalreview.
 
 ## Open / volgende stappen
 

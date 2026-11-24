@@ -53,3 +53,13 @@ te weinig terug. Gedaan:
 - kan-doen H13 herschreven, de leesvragen bij de vacature tellen niet meer mee voor de lijdende vorm;
 - 11 herhalingsvragen voor de 8 onderwerpen die te weinig terugkwamen.
 Alles na taalreview. Open voor de eigenaar: *läss* naast *läses* (nu: geen fout, wel „schrijf läses”).
+
+Tweede ronde B (na een vergelijking met de A-review):
+- antwoordruimte: lange vertaal- en omvormvragen met één antwoord verruimd waar meer goede antwoorden zijn
+  (*sa/sade*, getallen, synoniemen); de overige 41 zijn omvormingen met een vaste uitkomst;
+- woorden komen vaker terug: „Woorden van eerder” in de herhaling van H16–H28 (87 zinnen). Het rapport telt
+  de herhaling van latere hoofdstukken nu mee bij „komt later terug” (H15–H27: 42–62% → 62–82%);
+- H17: omvormoefening ska/kommer att/tänker (vertalen 31% → 29%, waarvan 16 situatievragen);
+- kan-doen: in 14 hoofdstukken telden de inhoudsvragen bij de leestekst mee voor een grammatica-uitspraak;
+  die leesoefeningen hebben nu het topic woordenschat (behalve H25–H27, waar de vragen wel bij de uitspraak
+  passen).
