@@ -9,8 +9,8 @@ canDo:
 grammar:
   - id: konjunktioner
     title: Zinnen verbinden – och, men, eller, för, så, utan
-    summary: "Na **och, men, eller, för, så, utan** blijft de woordvolgorde **gewoon** (geen inversie). Na een bijwoord zoals **därför** of **ändå** komt wél inversie, en ook na **så** als die een bijzin vooraan herhaalt (*Om det regnar, så stannar jag hemma*)."
-    hint: "Na **och, men, så, för, utan** blijft de volgorde **gewoon**: onderwerp – werkwoord. Na een bijwoord als **därför** of **ändå** komt **inversie**: werkwoord – onderwerp."
+    summary: "Na **och, men, eller, för, utan** blijft de woordvolgorde **gewoon** (geen inversie). Na **så** (dus) is dat ook het gewoonst, maar inversie mag. Na een bijwoord zoals **därför** of **ändå** komt wél inversie, en ook na **så** als die een bijzin vooraan herhaalt (*Om det regnar, så stannar jag hemma*)."
+    hint: "Na **och, men, för, utan** blijft de volgorde **gewoon**: onderwerp – werkwoord; na **så** (dus) mag allebei. Na een bijwoord als **därför** of **ändå** komt **inversie**: werkwoord – onderwerp."
     body: |
       Deze voegwoorden verbinden twee hoofdzinnen:
 
@@ -25,14 +25,14 @@ grammar:
 
       Na deze woorden komt de zin **gewoon**: onderwerp, dan werkwoord. Het voegwoord telt niet mee voor de V2-regel.
 
-      In spreektaal hoor je na *så* (dus) vaak ook inversie: *Det regnar, så stannar jag hemma.* Schrijf hier de gewone volgorde; de app rekent de andere niet fout, maar vraagt je het nog eens te proberen.
+      In spreektaal hoor je na *så* (dus) vaak ook inversie: *Det regnar, så stannar jag hemma.* Dat is ook goed. In geschreven Zweeds zie je vaker de gewone volgorde.
 
       ### Pas op: bijwoorden
       Woorden als **därför** (daarom), **ändå** (toch), **sedan** (daarna) en **då** (dan) zijn géén voegwoorden. Ze staan op plaats 1, dus komt het werkwoord direct erna:
 
       | Voegwoord: geen inversie | Bijwoord: inversie |
       |---|---|
-      | Det regnar, **så jag stannar** hemma. | Det regnar. **Därför stannar jag** hemma. |
+      | Det regnar, **så jag stannar** hemma. (gewoonst) | Det regnar. **Därför stannar jag** hemma. |
       | Olle är trött, **men han jobbar** ändå. | Olle är trött. **Ändå jobbar han.** |
 
       ### så na een bijzin vooraan
@@ -41,7 +41,7 @@ grammar:
       - *Om det regnar, **så stannar jag** hemma.* (= *Om det regnar stannar jag hemma.*)
       - *När vi har ätit, **så går vi** ut.*
 
-      Vergelijk: *Det regnar, **så jag stannar** hemma.* Daar betekent *så* „dus” en blijft de gewone volgorde.
+      Vergelijk: *Det regnar, **så jag stannar** hemma.* Daar betekent *så* „dus”: de gewone volgorde is het gewoonst, maar inversie mag ook.
 
   - id: ocksa-heller
     title: Ik ook! Ik ook niet!
@@ -139,12 +139,12 @@ sections:
         instruction: Maak de zin af. Let op het verschil tussen een voegwoord en een bijwoord.
         topic: konjunktioner
         items:
-          - { id: et78, type: order, start: "Det regnar, så", tokens: ["jag", "stannar", "hemma"], answers: ["Det regnar, så jag stannar hemma."], feedback: [{ match: "Det regnar, så stannar jag hemma.", retry: true, tip: "Dat hoor je in spreektaal vaak, maar hier oefen je *så* als voegwoord (dus): daarna de gewone volgorde, eerst het onderwerp. Probeer het nog eens." }] }
+          - { id: et78, type: order, start: "Det regnar, så", tokens: ["jag", "stannar", "hemma"], answers: ["Det regnar, så jag stannar hemma.", "Det regnar, så stannar jag hemma."] }
           - { id: 79a2, type: order, start: "Det regnar. Därför", tokens: ["stannar", "jag", "hemma"], answers: ["Det regnar. Därför stannar jag hemma."], feedback: [{ match: "Det regnar. Därför jag stannar hemma.", tip: "Därför is een bijwoord op plaats 1: het werkwoord komt er direct achter." }] }
           - { id: exnq, type: order, start: "Olle är trött, men", tokens: ["han", "jobbar", "ändå"], answers: ["Olle är trött, men han jobbar ändå."], feedback: [{ match: "Olle är trött, men jobbar han ändå.", tip: "men is een voegwoord: daarna blijft de gewone volgorde, men han jobbar …" }] }
           - { id: z5vk, type: order, start: "Olle är trött. Ändå", tokens: ["han", "jobbar"], answers: ["Olle är trött. Ändå jobbar han."], feedback: [{ match: "Olle är trött. Ändå han jobbar.", tip: "Ändå is een bijwoord op plaats 1: het werkwoord komt er direct achter." }] }
           - { id: 6ehb, type: order, start: "Jag tar inte bussen, utan", tokens: ["jag", "cyklar"], answers: ["Jag tar inte bussen, utan jag cyklar."], feedback: [{ match: "Jag tar inte bussen, utan cyklar jag.", tip: "utan is een voegwoord: daarna blijft de gewone volgorde, utan jag cyklar." }] }
-          - { id: bcv4, type: order, start: "Jag är hungrig, så", tokens: ["äter", "jag", "en smörgås"], answers: ["Jag är hungrig, så jag äter en smörgås."], feedback: [{ match: "Jag är hungrig, så äter jag en smörgås.", retry: true, tip: "Dat hoor je in spreektaal vaak, maar hier oefen je *så* als voegwoord (dus): daarna de gewone volgorde, eerst het onderwerp. Probeer het nog eens." }] }
+          - { id: bcv4, type: order, start: "Jag är hungrig, så", tokens: ["äter", "jag", "en smörgås"], answers: ["Jag är hungrig, så jag äter en smörgås.", "Jag är hungrig, så äter jag en smörgås."] }
           - { id: qfwk, type: order, start: "Jag är hungrig. Därför", tokens: ["jag", "äter", "en smörgås"], answers: ["Jag är hungrig. Därför äter jag en smörgås."], feedback: [{ match: "Jag är hungrig. Därför jag äter en smörgås.", tip: "Därför is een bijwoord op plaats 1: het werkwoord komt er direct achter." }] }
           - { id: zfzr, type: order, start: "Det är kallt, men", tokens: ["badar", "vi", "ändå"], answers: ["Det är kallt, men vi badar ändå."], feedback: [{ match: "Det är kallt, men badar vi ändå.", tip: "men is een voegwoord: daarna blijft de gewone volgorde, men vi badar …" }] }
 
@@ -153,14 +153,14 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: konjunktioner
         items:
-          - { id: ky8a, type: translate, prompt: "Het is koud, dus ik trek een jas aan.", answers: ["Det är kallt, så jag {tar|sätter} på mig {en jacka|en rock|en kappa|jackan|rocken|kappan}."], feedback: [{ contains: "så tar jag", retry: true, tip: "Dat hoor je in spreektaal vaak, maar hier oefen je *så* als voegwoord (dus): daarna de gewone volgorde, eerst het onderwerp. Probeer het nog eens." }] }
+          - { id: ky8a, type: translate, prompt: "Het is koud, dus ik trek een jas aan.", answers: ["Det är kallt, så jag {tar|sätter} på mig {en jacka|en rock|en kappa|jackan|rocken|kappan}.", "Det är kallt, så {tar|sätter} jag på mig {en jacka|en rock|en kappa|jackan|rocken|kappan}."] }
           - { id: 7dx6, type: translate, prompt: "Ik ga naar huis, want ik ben moe.", answers: ["Jag {går|åker} hem, för jag är trött."], feedback: [{ contains: "går hemma", tip: "Naar huis is een richting: hem." }] }
           - { id: 8b4p, type: translate, prompt: "Het regent. Daarom blijven we binnen.", answers: ["Det regnar. Därför stannar vi {inne|inomhus}."], feedback: [{ contains: "därför vi", tip: "därför is een bijwoord: daarna komt eerst het werkwoord." }] }
           - { id: g9ck, type: translate, prompt: "Wil je zwemmen of wandelen?", answers: ["Vill du {bada|simma} eller {vandra|promenera|gå en promenad|ta en promenad}?"] }
           - { id: wez3, type: translate, prompt: "Nils is moe, maar hij speelt toch voetbal.", answers: ["Nils är trött, men han spelar {fotboll ändå|ändå fotboll}."], feedback: [{ contains: "men spelar han", tip: "Na het voegwoord men blijft de gewone volgorde: men han spelar …" }] }
           - { id: ce9x, type: translate, prompt: "We gaan niet met de bus, maar we fietsen.", answers: ["Vi {åker inte buss|åker inte med bussen|tar inte bussen}, utan [vi ]cyklar."], feedback: [{ contains: "men vi cyklar", tip: "Na een ontkenning, als je iets vervangt door iets anders: utan." }] }
           - { id: yyvj, type: translate, prompt: "Het is warm. Daarom zwemmen we in het meer.", answers: ["Det är varmt. Därför {badar|simmar} vi i sjön."], feedback: [{ contains: "därför vi", tip: "därför is een bijwoord: daarna komt eerst het werkwoord." }] }
-          - { id: b5q8, type: translate, prompt: "Wilma heeft honger, dus ze eet een appel.", answers: ["Wilma är hungrig[,] så hon äter ett äpple."], feedback: [{ contains: "så äter hon", retry: true, tip: "Dat hoor je in spreektaal vaak, maar hier oefen je *så* als voegwoord (dus): daarna de gewone volgorde, eerst het onderwerp. Probeer het nog eens." }, { contains: "har hunger", tip: "Honger hebben = vara hungrig." }] }
+          - { id: b5q8, type: translate, prompt: "Wilma heeft honger, dus ze eet een appel.", answers: ["Wilma är hungrig[,] så hon äter ett äpple.", "Wilma är hungrig[,] så äter hon ett äpple."], feedback: [{ contains: "har hunger", tip: "Honger hebben = vara hungrig." }] }
 
       - id: ik-ook
         title: Ik ook!
@@ -283,13 +283,13 @@ sections:
         instruction: Maak één zin van de twee zinnen, met het woord tussen haakjes. Na *och, men, eller, för, så* en *utan* blijft de gewone volgorde.
         topic: konjunktioner
         items:
-          - { id: uv2g, type: transform, prompt: "Det regnar. Vi stannar inne. (så)", answers: ["Det regnar[,] så vi stannar inne."], feedback: [{ contains: "så stannar vi", retry: true, tip: "Dat hoor je in spreektaal vaak, maar hier oefen je *så* als voegwoord (dus): daarna de gewone volgorde, eerst het onderwerp. Probeer het nog eens." }] }
+          - { id: uv2g, type: transform, prompt: "Det regnar. Vi stannar inne. (så)", answers: ["Det regnar[,] så vi stannar inne.", "Det regnar[,] så stannar vi inne."] }
           - { id: ku2w, type: transform, prompt: "Jag vill bada. Vattnet är för kallt. (men)", answers: ["Jag vill bada[,] men vattnet är för kallt."], feedback: [{ contains: "men är vattnet", tip: "Na *men* blijft de gewone volgorde: men vattnet är." }] }
           - { id: tqe8, type: transform, prompt: "Vi går hem. Det blir mörkt. (för)", answers: ["Vi går hem[,] för det blir mörkt."], feedback: [{ contains: "för blir det", tip: "Na *för* (want) blijft de gewone volgorde: för det blir." }] }
           - { id: bvxc, type: transform, prompt: "Olle fiskar. Wilma läser en bok. (och)", answers: ["Olle fiskar[,] och Wilma läser en bok."] }
           - { id: vekm, type: transform, prompt: "Ska vi grilla? Ska vi äta inne? (eller)", answers: ["Ska vi grilla[,] eller ska vi äta inne?", "Ska vi grilla eller äta inne?"] }
           - { id: 5q5a, type: transform, prompt: "Vi åker inte buss. Vi cyklar. (utan)", answers: ["Vi åker inte buss[,] utan vi cyklar.", "Vi åker inte buss[,] utan cyklar."], feedback: [{ contains: "men vi cyklar", tip: "Na een ontkenning (*inte*) gebruik je *utan* (maar wel)." }] }
-          - { id: vfc9, type: transform, prompt: "Det är varmt. Vi äter ute. (så)", answers: ["Det är varmt[,] så vi äter ute."], feedback: [{ contains: "så äter vi", retry: true, tip: "Dat hoor je in spreektaal vaak, maar hier oefen je *så* als voegwoord (dus): daarna de gewone volgorde, eerst het onderwerp. Probeer het nog eens." }] }
+          - { id: vfc9, type: transform, prompt: "Det är varmt. Vi äter ute. (så)", answers: ["Det är varmt[,] så vi äter ute.", "Det är varmt[,] så äter vi ute."] }
           - { id: 8n7b, type: transform, prompt: "Fleur är trött. Hon har vandrat hela dagen. (för)", answers: ["Fleur är trött[,] för hon har vandrat hela dagen."], feedback: [{ contains: "för har hon", tip: "Na *för* (want) blijft de gewone volgorde: för hon har." }] }
 
       - id: wat-zeg-je
