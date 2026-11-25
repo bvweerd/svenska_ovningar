@@ -508,7 +508,7 @@ sections:
 vocab:
   - { sv: "en hobby", nl: "een hobby", def: "hobbyn", pl: "hobbyer", plDef: "hobbyerna", ex: "Vad har du för **hobbyer**?", exNl: "Wat voor hobby's heb jij?" }
   - { sv: "en bio", nl: "een bioscoop", def: "bion", pl: "bior", plDef: "biorna", ex: "Vi går på **{bio|bion}** ikväll.", exNl: "We gaan vanavond naar de bioscoop." }
-  - { sv: "en kompis", nl: "een maat, een vriend(in)", def: "kompisen", pl: "kompisar", plDef: "kompisarna", ex: "Wilma har många **kompisar**.", exNl: "Wilma heeft veel vrienden." }
+  - { sv: "en kompis", nl: "een maat, een vriend(in)", def: "kompisen", pl: "kompisar", plDef: "kompisarna", ex: "Wilma har många **{kompisar|vänner}**.", exNl: "Wilma heeft veel vrienden." }
   - { sv: "en sjö", nl: "een meer", def: "sjön", pl: "sjöar", plDef: "sjöarna", ex: "Vi simmar i **sjön**.", exNl: "We zwemmen in het meer." }
   - { sv: "en skog", nl: "een bos", def: "skogen", pl: "skogar", plDef: "skogarna", ex: "Vi promenerar i **skogen**.", exNl: "We wandelen in het bos." }
   - { sv: "en cykel", nl: "een fiets", def: "cykeln", pl: "cyklar", plDef: "cyklarna", ex: "Nils har en ny **cykel**.", exNl: "Nils heeft een nieuwe fiets." }
@@ -516,7 +516,7 @@ vocab:
   - { sv: "en kör", nl: "een koor", def: "kören", pl: "körer", plDef: "körerna", ex: "Ingrid sjunger i en **kör**.", exNl: "Ingrid zingt in een koor." }
   - { sv: "ett museum", nl: "een museum", def: "museet", pl: "museer", plDef: "museerna", ex: "Vi går på **museum** på söndag.", exNl: "We gaan zondag naar een museum." }
   - { sv: "ett kafé", nl: "een café", def: ["kaféet", "caféet"], pl: ["kaféer", "caféer"], plDef: ["kaféerna", "caféerna"], alt: ["ett café"], ex: "Vi dricker kaffe på ett **{kafé|café}**.", exNl: "We drinken koffie in een café." }
-  - { sv: "en fritid", nl: "vrije tijd", def: "fritiden", ex: "Vad gör du på **fritiden**?", exNl: "Wat doe jij in je vrije tijd?" }
+  - { sv: "en fritid", nl: "vrije tijd", def: "fritiden", mass: true, ex: "Vad gör du på **fritiden**?", exNl: "Wat doe jij in je vrije tijd?" }
   - { sv: "ett intresse", nl: "een interesse", def: "intresset", pl: "intressen", ex: "Vi har samma **intressen**.", exNl: "We hebben dezelfde interesses." }
   - { sv: "en film", nl: "een film", def: "filmen", pl: "filmer", ex: "Vi tittar på en **film** ikväll.", exNl: "We kijken vanavond een film." }
   - { sv: "en serie", nl: "een serie (op tv)", def: "serien", pl: "serier", ex: "Jag tittar på en ny **serie**.", exNl: "Ik kijk naar een nieuwe serie." }
@@ -543,7 +543,7 @@ vocab:
   - { sv: "att träffa", nl: "ontmoeten, afspreken met", ex: "Jag **träffar** Ingrid på kaféet.", exNl: "Ik spreek met Ingrid af in het café." }
   - { sv: "att sjunga", nl: "zingen", ex: "Wilma **sjunger** i duschen.", exNl: "Wilma zingt onder de douche." }
   - { sv: "att dansa", nl: "dansen", ex: "**Dansar** du tango?", exNl: "Dans jij tango?" }
-  - { sv: "att tycka om", nl: "houden van", ex: "Jag **tycker om** att läsa.", exNl: "Ik houd van lezen." }
+  - { sv: "att tycka om", nl: "houden van", alt: ["att älska", "att gilla"], ex: "Jag **{tycker om|älskar|gillar}** att läsa.", exNl: "Ik houd van lezen." }
   - { sv: "att åka skidor", nl: "skiën", ex: "Vi **åker skidor** varje vinter.", exNl: "We skiën elke winter." }
   - { sv: "att åka skridskor", nl: "schaatsen", ex: "Barnen **åker skridskor** på sjön.", exNl: "De kinderen schaatsen op het meer." }
   - { sv: "att rita", nl: "tekenen", ex: "Nils **ritar** en katt.", exNl: "Nils tekent een kat." }
@@ -562,7 +562,7 @@ vocab:
   - { sv: "rolig", nl: "grappig, leuk", ex: "Filmen är väldigt **rolig**.", exNl: "De film is heel grappig." }
   - { sv: "tråkig", nl: "saai", ex: "Matchen är **tråkig**.", exNl: "De wedstrijd is saai." }
   - { sv: "intresserad", nl: "geïnteresseerd", ex: "Bram är **intresserad** av konst.", exNl: "Bram is geïnteresseerd in kunst." }
-  - { sv: "duktig", nl: "knap, goed (in iets)", ex: "Wilma är **duktig** på att sjunga.", exNl: "Wilma kan goed zingen." }
+  - { sv: "duktig", nl: "knap, goed (in iets)", ex: "Wilma är **{duktig|bra}** på att sjunga.", exNl: "Wilma kan goed zingen." }
   - { sv: "hellre", nl: "liever", ex: "Jag vill **hellre** gå på bio.", exNl: "Ik wil liever naar de bioscoop." }
   - { sv: "helst", nl: "het liefst", ex: "Vad gör du **helst** på helgen?", exNl: "Wat doe jij in het weekend het liefst?" }
   - { sv: "tillsammans", nl: "samen", ex: "Vi spelar fotboll **tillsammans**.", exNl: "We voetballen samen." }
