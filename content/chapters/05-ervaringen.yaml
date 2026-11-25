@@ -10,6 +10,7 @@ grammar:
   - id: supinum
     title: De voltooide tijd (perfekt)
     summary: "**har + supinum**: *jobba → har jobbat*, *köpa → har köpt*, *bo → har bott*, *skriva → har skrivit*."
+    hint: "**har + supinum**: presens op -ar → **-at**; anders stam + **-t**; korte werkwoorden → **-tt**; sterke werkwoorden → **-it** (vaak met een andere klinker)."
     body: |
       De perfekt maak je met **har** + de **supinum**. De supinum lijkt op het Nederlandse voltooid deelwoord, maar is een aparte vorm die je alleen na een vorm van *ha* (*har, hade, ha*) gebruikt. Het Zweedse voltooid deelwoord als bijvoeglijk naamwoord ziet er soms anders uit: *Jag **har skrivit** en text*, maar *en **skriven** text*. *Har* is voor iedereen hetzelfde, ook waar het Nederlands *ben* gebruikt: *Jag **har** varit i Kiruna* (Ik **ben** in Kiruna geweest).
 
@@ -37,6 +38,7 @@ grammar:
   - id: perfekt-preteritum
     title: Perfekt of preteritum?
     summary: "**Preteritum** bij een **bepaald moment** in het verleden (*igår, i fredags, för två år sedan*). **Perfekt** bij ervaringen zonder tijdstip en bij iets wat **tot nu** doorloopt."
+    hint: "Een **bepaald moment** in het verleden (*igår, i fredags, för två år sedan*) → **preteritum**. Geen tijdstip, of iets wat tot nu doorloopt → **har + supinum**."
     body: |
       Het Zweeds is strenger dan het Nederlands. In het Nederlands zeg je *Gisteren heb ik een boek gekocht*, maar in het Zweeds moet dat in de **preteritum**:
 
@@ -73,6 +75,7 @@ grammar:
   - id: an
     title: Vergelijken met än
     summary: "Na **än** (dan) en **som** (als) mag de onderwerpsvorm én de objectvorm: *Nils är yngre än **jag*** of *än **mig***. *än jag* is formeler, *än mig* gewoner in spreektaal."
+    hint: "Na *än* en *som* zijn **beide vormen** goed: de onderwerpsvorm (formeler) en de objectvorm (spreektaal). Welk voornaamwoord hoort bij het Nederlandse woord tussen haakjes?"
     body: |
       Bij een vergelijking met *än* (dan) of *lika … som* (even … als) zijn **twee vormen goed**:
 
@@ -320,6 +323,7 @@ sections:
           - { id: y366, type: gap, text: "Ingrid är äldre än ___. (zij, enkelvoud)", gaps: [{ answers: ["hon", "henne"], feedback: [{ match: "hennes", tip: "hennes is bezittelijk (haar). Na än: hon of henne." }] }] }
 
       - id: zinsbouw-perfekt
+        help: "*har* is het vervoegde werkwoord: dat staat op **plaats 2** (in een ja/nee-vraag vooraan). Het supinum komt later, na het onderwerp en na woorden als *inte, aldrig, redan*."
         title: Zinsbouw – ooit en nooit
         instruction: Maak de zin af. Let op de plaats van *aldrig*, *redan* en *inte*.
         topic: supinum

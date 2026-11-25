@@ -13,6 +13,7 @@ grammar:
   - id: tidsuttryck
     title: Tijdsbepaling vooraan
     summary: "Begin je de zin met een tijd (*idag, på morgonen, klockan sju*), dan blijft het werkwoord op **plaats 2** en komt het onderwerp op **plaats 3**."
+    hint: "Begin je de zin met een tijd, dan blijft het werkwoord op **plaats 2** en komt het onderwerp **direct erna**."
     body: |
       Een tijdsbepaling staat in het Zweeds vaak vooraan in de zin. De V2-regel uit hoofdstuk 1 blijft gelden: het werkwoord staat op plaats 2. Het onderwerp schuift naar plaats 3.
 
@@ -30,6 +31,7 @@ grammar:
   - id: dagar
     title: Dagen en dagdelen
     summary: "Dagen schrijf je met een **kleine letter**. *På måndag* = (aanstaande) maandag, *på måndagar* = op maandagen. Dagdelen: *på morgonen, på kvällen* …"
+    hint: "De dagen van de week: *måndag, tisdag, onsdag* … Je schrijft ze met een **kleine letter**."
     body: |
       ### De dagen van de week
       *måndag, tisdag, onsdag, torsdag, fredag, lördag, söndag*. Ze krijgen in het Zweeds **geen hoofdletter**, net als de maanden (*januari, februari* …).
@@ -55,6 +57,7 @@ grammar:
   - id: plural
     title: Meervoud
     summary: "Het meervoud heeft vijf vormen: **-or, -ar, -er, -n** of **geen uitgang**. Bepaald meervoud: meestal **-na** erachter (*bilar → bilarna*)."
+    hint: "Vuistregels: en-woord op -a → **-or** (*flicka → flickor*); veel en-woorden, vooral op -ing, -e of een medeklinker → **-ar** (*pojke → pojkar*); klemtoon achteraan, leenwoorden en een aantal korte woorden → **-er** (*film → filmer*); ett-woord op een klinker → **-n** (*äpple → äpplen*); ett-woord op een medeklinker en en-woord op -are → **geen uitgang** (*hus → hus*). Sommige woorden veranderen van klinker."
     body: |
       Het meervoud is in het Zweeds minder voorspelbaar dan in het Nederlands. Deze vuistregels helpen:
 
@@ -82,6 +85,7 @@ grammar:
   - id: imperativ
     title: De gebiedende wijs (imperativ)
     summary: "Werkwoorden op **-ar**: de gebiedende wijs is gelijk aan de infinitief (*Vänta!*). Werkwoorden op **-er**: haal de **-a** weg (*läsa → Läs!*)."
+    hint: "Werkwoord met presens op **-ar** (*tala*): de gebiedende wijs is gelijk aan de infinitief. Andere werkwoorden: haal de **-a** weg (*köpa → köp!*). Korte werkwoorden (*bo, tro*) blijven gelijk."
     body: |
       Met de imperativ geef je een opdracht of een advies.
 
@@ -100,6 +104,7 @@ grammar:
   - id: modala
     title: Modale werkwoorden
     summary: "*kan, vill, ska, måste, får* + **infinitief zonder att**: *Jag vill äta.* *Inte* staat direct na het modale werkwoord."
+    hint: "*kan, vill, ska, måste, får* staan op **plaats 2**. Daarna (bij inversie) het onderwerp, dan *inte*, en de **infinitief zonder att** komt erachter."
     body: |
       | Infinitief | Presens | Betekenis | Voorbeeld |
       |---|---|---|---|
@@ -659,7 +664,7 @@ sections:
           - { id: x99u, type: translate, topic: vragen, prompt: "Maak er een ja/nee-vraag van: Fleur kan simma.", answers: ["Kan Fleur simma?"] }
           - { id: 3z47, type: order, topic: tidsuttryck, start: "På fredag", tokens: ["ska", "Olle och Ingrid", "äta ute"], answers: ["På fredag ska Olle och Ingrid äta ute."] }
           - { id: qedq, type: gap, topic: substantiv, text: "Fleur och Bram har en katt. ___ (katt) heter Pluto.", gaps: [{ answers: ["Katten"] }] }
-          - { id: ftuh, type: gap, topic: plural, text: "Olle köper tre tidningar. ___ (tidningar, bepaald) ligger på bordet.", gaps: [{ answers: ["Tidningarna"] }] }
+          - { id: ftuh, type: gap, help: "Bepaald meervoud: meestal **-na** achter het meervoud.", topic: plural, text: "Olle köper tre tidningar. ___ (tidningar, bepaald) ligger på bordet.", gaps: [{ answers: ["Tidningarna"] }] }
           - { id: wb5r, type: clock, topic: klockan, time: "05:45" }
           - { id: hmg2, type: mc, topic: modala, prompt: "Welke zin is goed?", options: ["Idag måste jag jobba.", "Idag jag måste jobba.", "Idag måste jobba jag."], answer: 0, tip: "Werkwoord op plaats 2, dan het onderwerp, de infinitief achteraan." }
           - { id: m7b3, type: translate, topic: inte, prompt: "Ik spreek niet zo goed Zweeds.", answers: ["Jag {talar|pratar|kan} inte så bra svenska.", "Jag {talar|pratar|kan} inte svenska så bra."] }

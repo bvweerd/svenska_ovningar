@@ -10,6 +10,7 @@ grammar:
   - id: konjunktioner
     title: Zinnen verbinden – och, men, eller, för, så, utan
     summary: "Na **och, men, eller, för, så, utan** blijft de woordvolgorde **gewoon** (geen inversie). Na een bijwoord zoals **därför** of **ändå** komt wél inversie, en ook na **så** als die een bijzin vooraan herhaalt (*Om det regnar, så stannar jag hemma*)."
+    hint: "Na **och, men, så, för, utan** blijft de volgorde **gewoon**: onderwerp – werkwoord. Na een bijwoord als **därför** of **ändå** komt **inversie**: werkwoord – onderwerp."
     body: |
       Deze voegwoorden verbinden twee hoofdzinnen:
 
@@ -68,6 +69,7 @@ grammar:
   - id: vader
     title: Het weer
     summary: "*Det regnar, det snöar, det blåser, solen skiner.* Temperatuur: *Det är 20 grader varmt*, *Det är fem minusgrader*."
+    hint: "Het weer: **det** + werkwoord in de goede tijd, of **det är** + bijvoeglijk naamwoord met **-t** (*det* telt als ett-woord)."
     body: |
       | Zweeds | Nederlands |
       |---|---|

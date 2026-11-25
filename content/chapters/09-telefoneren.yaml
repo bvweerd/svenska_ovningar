@@ -10,6 +10,7 @@ grammar:
   - id: tempus
     title: Alle tijden op een rij
     summary: "Van elk werkwoord leer je vier vormen: **infinitief – presens – preteritum – supinum**. Nieuw: de **pluskvamperfekt** = **hade + supinum** (had gedaan)."
+    hint: "**hade + supinum**: presens op -ar → **-at**; anders stam + **-t**; korte werkwoorden → **-tt**; sterke werkwoorden → **-it**."
     body: |
       | Infinitief | Presens | Preteritum | Supinum |
       |---|---|---|---|
@@ -38,6 +39,7 @@ grammar:
   - id: indirekt-tal
     title: Indirecte rede – Han säger att …
     summary: "**säger att** + bewering, **frågar om** + ja/nee-vraag, **frågar var/när/vad** + vraagwoordvraag. Daarna: **onderwerp vóór het werkwoord**. Is *vem/vad* zelf het onderwerp, dan komt er **som** bij: *Hon frågar vem som ringde*."
+    hint: "Na *om* of een vraagwoord (*var, när, vad* …) midden in de zin: **onderwerp vóór het werkwoord**, dus geen inversie."
     body: |
       Vertel je na wat iemand zegt of vraagt, dan maak je er een **bijzin** van:
 
@@ -565,7 +567,7 @@ sections:
           - { id: b8qg, type: gap, topic: ordningstal, text: "Hon bor på ___ våningen. (3)", gaps: [{ answers: ["tredje"] }] }
           - { id: 9cd3, type: mc, topic: ocksa-heller, prompt: "– Jag har ingen mobil. – (Jij ook niet.)", options: ["Inte jag heller.", "Det har jag också.", "Men det har jag."], answer: 0, tip: "Ook niet: Inte jag heller." }
           - { id: x8r7, type: gap, topic: berattande, text: "Den dagen ___ (vara) det kallt, så vi ___ (stanna) inne.", gaps: [{ answers: ["var"] }, { answers: ["stannade"], feedback: [{ match: "stannar", tip: "In een verhaal over toen gebruik je de preteritum: stannade." }] }] }
-          - { id: gsp6, type: order, topic: berattande, start: "Efter maten", tokens: ["drack", "vi", "kaffe", "och", "åt", "tårta"], answers: ["Efter maten drack vi kaffe och åt tårta.", "Efter maten åt vi tårta och drack kaffe."], feedback: [{ match: ["Efter maten vi drack kaffe och åt tårta.", "Efter maten vi åt tårta och drack kaffe."], tip: "Efter maten staat op plaats 1, dus komt het werkwoord er direct achter." }] }
+          - { id: gsp6, type: order, help: "Begint de zin met *först, sedan, efter …* of met een tijd, dan komt het werkwoord **direct daarna**, vóór het onderwerp.", topic: berattande, start: "Efter maten", tokens: ["drack", "vi", "kaffe", "och", "åt", "tårta"], answers: ["Efter maten drack vi kaffe och åt tårta.", "Efter maten åt vi tårta och drack kaffe."], feedback: [{ match: ["Efter maten vi drack kaffe och åt tårta.", "Efter maten vi åt tårta och drack kaffe."], tip: "Efter maten staat op plaats 1, dus komt het werkwoord er direct achter." }] }
           - { id: r5e4, type: gap, topic: berattande, text: "Först ___ (steka) Bram fisk, och sedan ___ (koka) han potatis.", gaps: [{ answers: ["stekte"], feedback: [{ match: "stekade", tip: "steka is een -er-werkwoord (steker): stekte." }] }, { answers: ["kokade"], feedback: [{ match: "kokte", tip: "koka is een -ar-werkwoord (kokar): kokade." }] }] }
           - { id: d6hd, type: gap, topic: mat-fraser, text: "Maten är klar. ”___ måltid!” säger Ingrid. (Eet smakelijk!)", gaps: [{ answers: ["Smaklig"], feedback: [{ match: ["Smakelijk", "Smakelig", "Smaklik"], tip: "Eet smakelijk! = Smaklig måltid! (zonder e)." }] }] }
           - { id: qmh2, type: mc, topic: mat-fraser, prompt: "Je wilt in het restaurant betalen. Wat zeg je tegen de ober?", options: ["Kan vi få notan?", "Kan vi få menyn?", "Smaklig måltid!"], answer: 0, tip: "De rekening heet in het restaurant notan." }

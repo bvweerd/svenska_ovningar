@@ -9,6 +9,7 @@ grammar:
   - id: preteritum
     title: De verleden tijd (preteritum) – regelmatig
     summary: "**-ar → -ade** (jobbade), **-er → -de/-te** (ringde, köpte), korte werkwoorden **→ -dde** (bodde). Voor alle personen dezelfde vorm."
+    hint: "Preteritum: presens op **-ar** → **-ade**; anders achter de stam (de infinitief zonder -a) **-de**, of **-te** na *k, p, s, t, x*; korte werkwoorden krijgen **-dde**."
     body: |
       De preteritum gebruik je voor iets wat op een **bepaald moment in het verleden** gebeurde: *igår, i måndags, förra veckan, förra året, för två år sedan*.
 
@@ -26,6 +27,7 @@ grammar:
   - id: starka-verb
     title: Sterke en onregelmatige werkwoorden
     summary: "Veel gewone werkwoorden veranderen van klinker en krijgen **geen uitgang**: *gå → gick, äta → åt, vara → var*. Andere zijn op hun eigen manier onregelmatig: *ha → hade, göra → gjorde, säga → sa*. Uit je hoofd leren."
+    hint: "Sterk werkwoord: de **klinker verandert** en er komt **geen uitgang** achter (*sitta → satt*). Een paar zijn op hun eigen manier onregelmatig: die staan op de kaart."
     body: |
       **Sterke** werkwoorden veranderen van klinker en krijgen in de preteritum geen uitgang (*gick, åt, drack, skrev*). Een paar andere werkwoorden zijn **onregelmatig**: ze krijgen wél een uitgang, maar de stam verandert (*hade, gjorde, sa/sade*). Samen heten ze in leerboeken **groep 4**.
 
@@ -73,6 +75,7 @@ grammar:
   - id: familj
     title: Familie
     summary: "Opa's, oma's, ooms en tantes zeg je via moeders of vaders kant: **mor**mor = moeders moeder, **far**bror = vaders broer."
+    hint: "Eerst de kant: **mor-** (van je moeder) of **far-** (van je vader), dan het familielid erachter. Bij een tante worden de woorden samengetrokken: van *mor/far* blijft alleen het begin, van *syster* het eind (zie de kaart). Voor neef/nicht (kind van een oom of tante) en voor broers en zussen samen heeft het Zweeds een eigen woord."
     body: |
       Het Zweeds zegt precies van welke kant van de familie iemand is: **mor-** (moeder) of **far-** (vader).
 
@@ -354,6 +357,7 @@ sections:
           - { id: uekt, type: translate, prompt: "Zijn zus belde gisteren.", answers: ["Hans syster ringde {igår|i går}.", "{Igår|I går} ringde hans syster."], topic: possessiv, feedback: [{ contains: "honom syster", tip: "Zijn (bezit) = hans." }] }
 
       - id: zinsbouw-verleden
+        help: "Het werkwoord staat op **plaats 2**: begin je met een tijd (*igår, förra året*), dan komt het onderwerp direct na het werkwoord. *Inte* staat na het werkwoord."
         title: Zinsbouw – vorige week
         instruction: Maak de zin af. Het werkwoord staat op plaats 2.
         topic: preteritum
@@ -540,7 +544,7 @@ sections:
         items:
           - { id: 9sjj, type: gap, topic: possessiv, prompt: "Kies het goede woord.", text: "___ föräldrar bor i Arnhem.", gaps: [{ answers: ["Mina"], options: ["Mina", "Min", "Mitt"], tip: "föräldrar is meervoud: mina." }] }
           - { id: mpd4, type: gap, text: "Förra helgen ___ (besöka) jag mina föräldrar.", gaps: [{ answers: ["besökte"], feedback: [{ match: ["besökade", "besöker"], tip: "Förra helgen is verleden tijd. besöka is een -er-werkwoord: besökte." }] }] }
-          - { id: hjdy, type: order, prompt: "Vertel wat jullie gisteren samen deden.", start: "Igår", tokens: ["åt", "vi", "middag", "tillsammans"], answers: ["Igår åt vi middag tillsammans."] }
+          - { id: hjdy, type: order, help: "Het werkwoord staat op **plaats 2**: begin je met een tijd, dan komt het onderwerp direct na het werkwoord.", prompt: "Vertel wat jullie gisteren samen deden.", start: "Igår", tokens: ["åt", "vi", "middag", "tillsammans"], answers: ["Igår åt vi middag tillsammans."] }
           - { id: u4b7, type: gap, topic: starka-verb, text: "På söndagen ___ (gå) vi en lång promenad.", gaps: [{ answers: ["gick"], feedback: [{ match: ["gådde", "gåde", "går"], tip: "gå is onregelmatig: gick." }] }] }
           - id: 9qz8
             type: free
@@ -615,7 +619,7 @@ sections:
           - { id: qxhm, type: gap, topic: plural, text: "Mina ___ (syster) bor i Malmö.", gaps: [{ answers: ["systrar"], feedback: [{ match: ["systrer", "systerar", "syster"], tip: "syster is onregelmatig: systrar." }] }] }
           - { id: 7zrj, type: order, topic: objekt, start: "Igår", tokens: ["träffade", "jag", "henne", "på stan"], answers: ["Igår träffade jag henne på stan."] }
           - { id: 4zrh, type: translate, topic: modala, prompt: "Mijn zoon kan al zwemmen.", answers: ["Min son kan redan simma."] }
-          - { id: qsfv, type: gap, topic: frekvens, text: "Vi ___ (äta) sällan ute.", gaps: [{ answers: ["äter"] }] }
+          - { id: qsfv, type: gap, help: "Presens: **-r** achter de infinitief (*tala → talar*), of de **-a** wordt **-er** (*skriva → skriver*); korte werkwoorden krijgen **-r** (*tro → tror*). *Vara, ha* en *göra* zijn onregelmatig.", topic: frekvens, text: "Vi ___ (äta) sällan ute.", gaps: [{ answers: ["äter"] }] }
           - { id: d6sv, type: clock, topic: klockan, time: "03:50" }
           - { id: qb5v, type: mc, topic: klockan, prompt: "**kvart i tre**", options: ["2.45", "3.15", "3.45"], answer: 0, shuffle: false, tip: "i = voor: een kwartier vóór drie." }
           - { id: d9hx, type: gap, topic: klockan, text: "Het is 10.30. Klockan är ___.", gaps: [{ answers: ["halv elva"], feedback: [{ match: "halv tio", tip: "halv + het volgende uur, net als in het Nederlands: half elf is halv elva." }] }] }

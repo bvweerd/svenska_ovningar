@@ -10,6 +10,7 @@ grammar:
   - id: adjektiv-obestamd
     title: Bijvoeglijke naamwoorden – onbepaald
     summary: "en-woord: **fin**, ett-woord: **fint**, meervoud: **fina**. *En fin bil, ett fint hus, fina bilar.* Ook na *är*: *Huset är stort.*"
+    hint: "Bij een en-woord **geen uitgang**, bij een ett-woord **-t**, in het meervoud **-a**. Dat geldt ook na *är*. Let op: eindigt het woord op een klinker, dan **-tt** (*blå → blått*); *-d* + *-t* wordt **-tt**; *liten* is onregelmatig (zie de kaart)."
     body: |
       Het bijvoeglijk naamwoord past zich aan het zelfstandig naamwoord aan:
 
@@ -33,6 +34,7 @@ grammar:
   - id: adjektiv-bestamd
     title: Bijvoeglijke naamwoorden – bepaald
     summary: "**den/det/de + adjectief op -a + bepaald zelfstandig naamwoord**: *den nya bilen, det stora huset, de små barnen*. Na *min, sin, Olles*: *min nya bil*."
+    hint: "Na *den, det, de* en na *min, sin, Olles* krijgt het bijvoeglijk naamwoord **-a**, bij elk woord. *Liten* is onregelmatig, en in het meervoud anders dan in het enkelvoud: kijk op de kaart."
     body: |
       Staat er een bijvoeglijk naamwoord vóór een bepaald zelfstandig naamwoord, dan krijg je **drie** dingen:
 
@@ -60,6 +62,7 @@ grammar:
   - id: komparation
     title: Vergelijken – större, störst
     summary: "Regelmatig: **-are, -ast** (*varm, varmare, varmast*). Onregelmatig: *bra – bättre – bäst*, *stor – större – störst*, *gammal – äldre – äldst*. Woorden op *-isk* en *-ande*: **mer, mest**."
+    hint: "Vergrotende trap **-are**, overtreffende trap **-ast** (na *den/det/de*: **-aste**). Een paar gewone woorden zijn onregelmatig, vaak met een andere klinker."
     body: |
       | Basis | Vergrotende trap | Overtreffende trap |
       |---|---|---|
@@ -383,6 +386,7 @@ sections:
           - { id: ua54, type: transform, prompt: "Kakorna är goda. Vem bakade kakorna?", answers: ["Vem bakade de goda kakorna?"], feedback: [{ contains: ["den goda kakorna", "det goda kakorna"], tip: "Meervoud: *de* goda kakorna." }] }
 
       - id: zinsbouw-adjectief
+        help: "Het werkwoord staat op **plaats 2**. Het bijvoeglijk naamwoord staat **vóór** het zelfstandig naamwoord, na *en/ett* of *den/det/de*."
         title: Zinsbouw – mooi, groot en nieuw
         instruction: Maak de zin af. Het bijvoeglijk naamwoord staat vóór het zelfstandig naamwoord.
         topic: adjektiv-obestamd
@@ -434,6 +438,7 @@ sections:
           - { id: h6x9, type: gap, text: "Hunden är snäll, du behöver inte vara ___.", gaps: [{ answers: ["rädd"], options: ["rädd", "stolt", "nöjd", "rik"] }] }
 
       - id: langere-zinnen
+        help: "Hoofdzin: het werkwoord staat op **plaats 2**. Bijzin (na *att, om, när, eftersom* …): **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt daarna eerst het werkwoord van de hoofdzin."
         title: "Langere zinnen bouwen"
         instruction: Zet de woorden in de goede volgorde.
         topic: adjektiv-bestamd
@@ -450,6 +455,7 @@ sections:
           - { id: x2qp, type: order, start: "Den lilla flickan", tokens: ["hade", "en", "lång", "vit", "klänning", "och", "ljus", "i håret"], answers: ["Den lilla flickan hade ljus i håret och en lång vit klänning.", "Den lilla flickan hade en lång vit klänning och ljus i håret."] }
 
       - id: nog-langere-zinnen
+        help: "Hoofdzin: het werkwoord staat op **plaats 2**. Bijzin (na *att, om, när, eftersom* …): **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt daarna eerst het werkwoord van de hoofdzin."
         title: "Nog meer lange zinnen"
         instruction: Zet de woorden in de goede volgorde.
         topic: adjektiv-bestamd
@@ -752,7 +758,7 @@ sections:
           - { id: yhns, type: gap, topic: placera, text: "___ dig här och vänta lite!", gaps: [{ answers: ["Sätt"], options: ["Sätt", "Sitt", "Ställ"], shuffle: false, feedback: [{ match: "Sitt", tip: "Gaan zitten is een beweging: Sätt dig!" }] }] }
           - { id: 9kb6, type: gap, topic: placera, text: "Bram har lagt boken på bordet. Nu ___ den där.", gaps: [{ answers: ["ligger"], options: ["ligger", "lägger", "står"], shuffle: false, feedback: [{ match: "lägger", tip: "Waar iets nu is (het resultaat): ligger." }] }] }
           - { id: 5mws, type: gap, topic: kroppen, text: "Nils har gått länge och har ont i ___. (zijn voeten)", gaps: [{ answers: ["fötterna"], feedback: [{ match: ["fotarna", "foterna", "fötter"], tip: "fot – fötter, en na ont i de bepaalde vorm: fötterna." }, { match: "hans fötter", tip: "Na ont i: de bepaalde vorm, zonder hans: fötterna." }] }] }
-          - { id: kget, type: gap, topic: vader, text: "På julafton ___ (snöa) det hela dagen.", gaps: [{ answers: ["snöade"], feedback: [{ match: ["snödde", "snöde"], tip: "snöa is een gewoon -ar-werkwoord: snöade." }] }] }
+          - { id: kget, type: gap, help: "Preteritum: presens op **-ar** → **-ade**; anders achter de stam (de infinitief zonder -a) **-de**, of **-te** na *k, p, s, t, x*; korte werkwoorden krijgen **-dde**.", topic: vader, text: "På julafton ___ (snöa) det hela dagen.", gaps: [{ answers: ["snöade"], feedback: [{ match: ["snödde", "snöde"], tip: "snöa is een gewoon -ar-werkwoord: snöade." }] }] }
           - { id: b2cc, type: mc, topic: mat-fraser, prompt: "Je hebt bij vrienden gegeten en staat op van tafel. Wat zeg je?", options: ["Tack för maten!", "Smaklig måltid!", "Varsågod!"], answer: 0, tip: "Na het eten bedank je: Tack för maten!" }
           - { id: wtn8, type: gap, topic: tempus, text: "Vi hade redan ___ (köpa) alla julklappar i november.", gaps: [{ answers: ["köpt"], feedback: [{ match: ["köpat", "köpte"], tip: "Na hade komt het supinum: köpa – köpte – köpt." }] }] }
           - { id: 3uwb, type: gap, topic: positionsverb, text: "Katten ___ under granen och sover.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "sitter"], shuffle: false, feedback: [{ match: "står", tip: "Wie slaapt, ligt: ligger." }] }] }
@@ -772,7 +778,7 @@ sections:
           - { id: 9cbq, type: translate, topic: komparation, prompt: "Dit is de mooiste dag van het jaar.", answers: ["{Det här|Detta} är den {vackraste|finaste|bästa} dagen på året."], feedback: [{ contains: "i året", tip: "Van het jaar: på året." }] }
           - { id: 7qtq, type: translate, topic: placera, prompt: "Ik heb de sleutels op tafel gelegd.", answers: ["Jag har lagt nycklarna på bordet."], feedback: [{ contains: "har legat", tip: "legat hoort bij ligga (liggen). Iets neerleggen is lägga: har lagt." }, { contains: ["har lagd", "har läggt"], tip: "De supinum van lägga is lagt." }] }
           - { id: sud7, type: translate, topic: kroppen, prompt: "Ik heb pijn in mijn buik.", answers: ["Jag har {ont i magen|magont}.", "Det gör ont i magen."], feedback: [{ contains: ["ont i min mage", "ont i mage"], tip: "Na ont i: de bepaalde vorm, zonder min: ont i magen." }] }
-          - { id: jqxm, type: gap, topic: subjunktioner, text: "Wilma läser ___ Nils bakar pepparkakor. (terwijl)", gaps: [{ answers: ["medan"], feedback: [{ match: ["när", "eftersom"], tip: "Terwijl = medan." }] }] }
+          - { id: jqxm, type: gap, help: "Een voegwoord voor twee dingen **tegelijk**: zoek het op de kaart over bijzinnen.", topic: subjunktioner, text: "Wilma läser ___ Nils bakar pepparkakor. (terwijl)", gaps: [{ answers: ["medan"], feedback: [{ match: ["när", "eftersom"], tip: "Terwijl = medan." }] }] }
           - { id: 4rjt, type: gap, topic: subjunktioner, text: "Vi öppnar julklapparna ___ vi har ätit. (als, wanneer)", gaps: [{ answers: ["när"], options: ["när", "eftersom", "fastän"], shuffle: false }] }
           - { id: 5sd3, type: gap, topic: reflexiv, text: "Det är kallt ute. Barnen klär på ___ och går ut i snön.", gaps: [{ answers: ["sig"], options: ["sig", "dem", "mig"], shuffle: false, feedback: [{ match: "dem", tip: "De kinderen kleden zichzelf aan: sig." }] }] }
           - { id: pjqa, type: gap, topic: reflexiv, text: "Varsågoda, sätt ___ vid bordet!", gaps: [{ answers: ["er"], options: ["oss", "er", "sig"], shuffle: false, feedback: [{ match: "sig", tip: "Je spreekt meer mensen aan (ni): sätt er." }] }] }

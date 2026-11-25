@@ -142,6 +142,8 @@ Geen grammatica uit een later hoofdstuk (ook getest).
   in de stof); B ±60–70 per hoofdstuk; elk woord met vormen en een voorbeeldzin, „Woorden in een zin”;
   `vocab-report` met Kelly-lijst (`scripts/data/kelly-sv.tsv`, CC BY 4.0).
 - **Antwoordzinnen A2**: 50 lange zinsbouw- en omvormvragen in H10–H12.
+- **Hints A** (H0–H12): de regel of denkstap in plaats van beginletters; `hint` op de grammaticakaart, `help` op
+  oefening of vraag; `npm test` controleert dat een hint het antwoord niet bevat.
 - **Techniek**: code in lagen met register van vraagtypen (`ARCHITECTURE.md`), store, rooktest in de browser,
   UI-tests (dekking ±85%), spellingtest (hunspell); voortgang samenvoegen en synchroniseren via de Worker en
   Cloudflare D1 (`worker/README.md` in de B-repo).
@@ -158,4 +160,6 @@ Alles met taalreview.
 3. **Uitbreiden waar het vaak misgaat** of veel gebruikt wordt, met taalreview, op de lijn en in de vaste volgorde.
 4. **Computerstem (B-site)**: Chrome meldt vaak geen Zweedse stem; de oordelen op „Luisteren instellen”
    (`/b/luisteren/oordeel/…`, `/b/luisteren/status/…`) laten zien of de browserstemmen goed genoeg zijn.
-5. **Spreken** blijft buiten de site; de handleiding kan een docent of taalpartner aanraden.
+5. **Hints B** (H13–H30): de gedeelde code geeft geen beginletters meer bij invullen en zinsbouw met vast begin;
+   daar staan nu geen hints. Schrijf `hint:` op de B-kaarten en `help` waar de kaart niet past, zoals op de A-site.
+6. **Spreken** blijft buiten de site; de handleiding kan een docent of taalpartner aanraden.

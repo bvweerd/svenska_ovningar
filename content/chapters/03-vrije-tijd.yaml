@@ -10,6 +10,7 @@ grammar:
   - id: frekvens
     title: Hoe vaak? alltid, ofta, ibland, sällan, aldrig
     summary: "Een woord als *ofta* of *aldrig* staat in een hoofdzin **direct na het werkwoord**, op dezelfde plek als *inte*. Bij inversie: **na het onderwerp**. Een kort voornaamwoord als lijdend voorwerp gaat ervóór: *Jag ser **honom** inte.*"
+    hint: "*ofta, alltid, aldrig, sällan* staan op de plek van *inte*: **direct na het werkwoord**. Begint de zin met iets anders dan het onderwerp, dan **na het onderwerp**."
     body: |
       | Zweeds | Betekenis |
       |---|---|
@@ -47,6 +48,7 @@ grammar:
   - id: tycka-om
     title: Iets leuk vinden – tycka om, gilla, älska
     summary: "*tycka om / gilla / älska* + zelfstandig naamwoord, of + **att + infinitief**: *Jag tycker om att läsa.* Ontkennen: *Jag tycker **inte** om fisk.*"
+    hint: "*Iets leuk vinden* is in het Zweeds een werkwoord + *om*. *Om* staat er al; zet het werkwoord in presens."
     body: |
       | Zweeds | Betekenis |
       |---|---|
@@ -67,6 +69,7 @@ grammar:
   - id: objekt
     title: Voornaamwoorden als lijdend voorwerp
     summary: "Als lijdend voorwerp: *mig, dig, honom, henne, den/det, oss, er, dem*. **Honom** = hem, **henne** = haar."
+    hint: "Het werkwoord staat op **plaats 2**. Begin je met een tijd, dan komen **na het werkwoord** eerst het onderwerp en dan het lijdend voorwerp."
     body: |
       | Onderwerp | Lijdend voorwerp | Nederlands |
       |---|---|---|
@@ -484,7 +487,7 @@ sections:
           - { id: d9d6, type: mc, topic: tycka-om, prompt: "Welke zin is goed?", options: ["Jag tycker inte om kaffe.", "Jag inte tycker om kaffe.", "Jag tycker om inte kaffe."], answer: 0, tip: "inte staat tussen tycker en om." }
           - { id: 77vs, type: clock, topic: klockan, time: "10:20" }
           - { id: dcc3, type: translate, topic: vragen, prompt: "Waarom woon je in Zweden?", answers: ["Varför bor du i Sverige?"] }
-          - { id: 3deu, type: gap, topic: tidsuttryck, text: "På lördag ___ (åka) vi till Stockholm.", gaps: [{ answers: ["åker"] }] }
+          - { id: 3deu, type: gap, help: "Presens: **-r** achter de infinitief (*tala → talar*), of de **-a** wordt **-er** (*skriva → skriver*); korte werkwoorden krijgen **-r** (*tro → tror*). *Vara, ha* en *göra* zijn onregelmatig.", topic: tidsuttryck, text: "På lördag ___ (åka) vi till Stockholm.", gaps: [{ answers: ["åker"] }] }
           - { id: xv9b, type: mc, topic: dagar, prompt: "Welke zin is goed geschreven?", options: ["Vi ses på fredag.", "Vi ses på Fredag."], answer: 0, shuffle: false, tip: "De dagen van de week krijgen in het Zweeds geen hoofdletter." }
           - { id: vvpb, type: gap, topic: dagar, text: "Idag är det onsdag. Imorgon är det ___.", gaps: [{ answers: ["torsdag"], feedback: [{ match: "tisdag", tip: "tisdag is de dag vóór onsdag. Welke dag komt erna?" }, { match: "donderdag", tip: "Dat is Nederlands. Donderdag is in het Zweeds torsdag." }] }] }
           - { id: hbu6, type: gap, topic: dagar, text: "Fleur jobbar på ___, från klockan ett till fem.", gaps: [{ answers: ["eftermiddagen"], options: ["morgonen", "eftermiddagen", "natten"], feedback: [{ match: "morgonen", tip: "Van één tot vijf uur is het 's middags: på eftermiddagen." }] }] }

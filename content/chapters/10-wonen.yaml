@@ -10,6 +10,7 @@ grammar:
   - id: subjunktioner
     title: Bijzinnen – eftersom, när, om, innan …
     summary: "Een bijzin begint met een voegwoord zoals **att, om, när, eftersom, innan, medan, fastän, tills**. **För att + infinitief** = om te; **eftersom + bijzin** = omdat (ná de hoofdzin kan ook *för att* + bijzin = omdat)."
+    hint: "Een bijzin begint met een voegwoord (*att, om, när, eftersom* …). In de bijzin: **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt in de hoofdzin eerst het **werkwoord**."
     body: |
       | Voegwoord | Betekenis | Voorbeeld |
       |---|---|---|
@@ -33,6 +34,7 @@ grammar:
   - id: bisats-ordfoljd
     title: Woordvolgorde in de bijzin
     summary: "In een bijzin staan **inte, aldrig, ofta** … **vóór** het werkwoord: *… eftersom han **inte har** tid.* Staat de bijzin vooraan, dan komt in de hoofdzin het **werkwoord direct erna**."
+    hint: "In een bijzin staan *inte, aldrig, ofta* … **vóór** het werkwoord, direct na het onderwerp. Staat de bijzin vooraan, dan komt in de hoofdzin het **werkwoord direct erna**."
     body: |
       ### Inte vóór het werkwoord
       In een hoofdzin staat *inte* ná het werkwoord. In een bijzin staat het ervóór:
@@ -80,6 +82,7 @@ grammar:
   - id: prep-plats
     title: Voorzetsels van plaats
     summary: "*i* (in), *på* (op), *under*, *över*, *bredvid* (naast), *framför* (voor), *bakom* (achter), *mellan* (tussen), *vid* (bij), *hos* (bij iemand)."
+    hint: "Veel Zweedse voorzetsels lijken op het Nederlands of Engels. Let op: **bij iemand (thuis)** en **bij of aan iets** zijn twee verschillende woorden. Iets wat aan de muur hangt, krijgt hetzelfde voorzetsel als iets wat op tafel ligt."
     body: |
       | Zweeds | Nederlands | Voorbeeld |
       |---|---|---|
@@ -350,6 +353,7 @@ sections:
           - { id: ec74, type: gap, text: "Jag skriver koden till porten på en lapp ___ jag inte glömmer den.", gaps: [{ answers: ["så att"], options: ["så att", "tills", "fastän", "medan"] }] }
 
       - id: langere-zinnen
+        help: "Hoofdzin: het werkwoord staat op **plaats 2**. Bijzin (na *att, om, när, eftersom* …): **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt daarna eerst het werkwoord van de hoofdzin."
         title: "Langere zinnen bouwen"
         instruction: Zet de woorden in de goede volgorde.
         topic: bisats-ordfoljd
@@ -648,7 +652,7 @@ sections:
           - { id: tmm9, type: gap, topic: tidsprep, text: "Vi har bott här ___ fem år.", gaps: [{ answers: ["i"], options: ["om", "i", "på", "för"], shuffle: false }] }
           - { id: qaua, type: order, topic: subjunktioner, start: "Medan Bram lagar mat", tokens: ["Fleur", "dukar", "bordet"], answers: ["Medan Bram lagar mat dukar Fleur bordet."] }
           - { id: ug9b, type: mc, topic: perfekt-preteritum, prompt: "Welke zin is goed?", options: ["Vi flyttade hit för två år sedan.", "Vi har flyttat hit för två år sedan.", "Vi flyttar hit för två år sedan."], answer: 0, tip: "för två år sedan is een bepaald moment: preteritum." }
-          - { id: n2ug, type: gap, topic: telefon, text: "Förlåt, du har ringt ___ nummer. (verkeerd)", gaps: [{ answers: ["fel"], feedback: [{ match: ["felt", "fela", "verkeerd"], tip: "Een verkeerd nummer = fel nummer. fel krijgt geen uitgang." }] }] }
+          - { id: n2ug, type: gap, help: "*Verkeerd* is hier hetzelfde woord als *fout*.", topic: telefon, text: "Förlåt, du har ringt ___ nummer. (verkeerd)", gaps: [{ answers: ["fel"], feedback: [{ match: ["felt", "fela", "verkeerd"], tip: "Een verkeerd nummer = fel nummer. fel krijgt geen uitgang." }] }] }
           - { id: fdh9, type: translate, topic: telefon, prompt: "Ik bel later terug, want ik ben nu bezig.", answers: ["Jag ringer tillbaka senare[,] {för|för att|eftersom} jag är upptagen[ just] nu."] }
           - { id: r33g, type: mc, topic: telefon, prompt: "Iemand belt voor Ingrid, maar ze is er niet. Wat zeg je?", options: ["Hon är inte här just nu. Vill du lämna ett meddelande?", "Du har ringt fel nummer.", "Jag skulle vilja boka en tid."], answer: 0, tip: "Ze is er nu niet: Hon är inte här just nu." }
           - { id: 8xqg, type: gap, topic: presens, text: "Vi ___ (städa) lägenheten varje lördag.", gaps: [{ answers: ["städar"], feedback: [{ match: "städer", tip: "städa eindigt op -a: städar." }] }] }

@@ -35,6 +35,7 @@ grammar:
   - id: placera
     title: Leggen, zetten – lägga, ställa, sätta
     summary: "Iets **neerleggen** = *lägga* → het **ligger**. Iets **neerzetten** = *ställa* → het **står**. **Gaan zitten** = *sätta sig* → je **sitter**. **Ophangen** = *hänga* → het **hänger**."
+    hint: "Gebiedende wijs bij werkwoorden met presens op **-er**: de infinitief zonder **-a** (een dubbele medeklinker blijft staan)."
     body: |
       Bij elk positiewerkwoord hoort een werkwoord voor de beweging ernaartoe:
 
@@ -53,6 +54,7 @@ grammar:
   - id: kroppen
     title: Het lichaam – ont i …
     summary: "Pijn: **Jag har ont i** huvudet / magen / ryggen. Of: **Det gör ont i** knät. Let op het meervoud: *ögon, öron, händer, fötter, tänder*."
+    hint: "Bij lichaamsdelen gebruikt het Zweeds de **bepaalde vorm** in plaats van *zijn/haar*. Het meervoud is vaak onregelmatig (*en hand → händer*)."
     body: |
       | Zweeds | Nederlands | Meervoud |
       |---|---|---|
@@ -338,6 +340,7 @@ sections:
           - { id: h66d, type: translate, prompt: "Hoe voel je je vandaag? Heb je nog pijn in je rug?", answers: ["{Hur mår du|Hur känner du dig} {idag|i dag}? Har du [fortfarande ]ont i ryggen?", "{Hur mår du|Hur känner du dig} {idag|i dag}? Har du ont i ryggen fortfarande?"], feedback: [{ contains: "ont i din rygg", tip: "Na ont i: bepaalde vorm (ryggen), zonder din." }] }
 
       - id: langere-zinnen
+        help: "Hoofdzin: het werkwoord staat op **plaats 2**. Bijzin (na *att, om, när, eftersom* …): **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt daarna eerst het werkwoord van de hoofdzin."
         title: Langere zinnen bouwen
         instruction: Zet de woorden in de goede volgorde.
         topic: positionsverb
@@ -423,6 +426,7 @@ sections:
           - { id: krz2, type: transform, topic: reflexiv, prompt: "Jag lägger mig tidigt ikväll. Jag är så trött. (eftersom)", answers: ["Eftersom jag är så trött[,] lägger jag mig tidigt {ikväll|i kväll}.", "Jag lägger mig tidigt {ikväll|i kväll}[,] eftersom jag är så trött."] }
 
       - id: nog-langere-zinnen
+        help: "Hoofdzin: het werkwoord staat op **plaats 2**. Bijzin (na *att, om, när, eftersom* …): **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt daarna eerst het werkwoord van de hoofdzin."
         title: "Nog meer lange zinnen"
         instruction: Zet de woorden in de goede volgorde.
         topic: positionsverb
@@ -746,7 +750,7 @@ sections:
           - { id: q9y8, type: gap, topic: imperativ, text: "___ (dricka) mycket vatten!", gaps: [{ answers: ["Drick"] }] }
           - { id: und4, type: gap, topic: supinum, text: "Jag har ___ (ligga) i sängen hela dagen.", gaps: [{ answers: ["legat"] }] }
           - { id: g6hz, type: translate, topic: tycka-tro-tanka, prompt: "Ik denk dat het griep is.", answers: ["Jag tror [att ]det är {influensa|en influensa|influensan}."], feedback: [{ contains: "tycker att", tip: "Een vermoeden: tror." }] }
-          - { id: ht6f, type: gap, topic: plural, text: "Wilma har ont i båda ___ (öra, bepaald meervoud).", gaps: [{ answers: ["öronen"] }] }
+          - { id: ht6f, type: gap, help: "Eerst het meervoud (onregelmatig, het staat op de kaart over het lichaam), dan de bepaalde vorm met **-en**.", topic: plural, text: "Wilma har ont i båda ___ (öra, bepaald meervoud).", gaps: [{ answers: ["öronen"] }] }
           - { id: zwaw, type: mc, topic: det-finns, prompt: "Welke zin is goed?", options: ["Finns det ett apotek här i närheten?", "Är det ett apotek här i närheten?", "Har det ett apotek här i närheten?"], answer: 0, tip: "Is er …? = Finns det …?" }
           - { id: ku6j, type: gap, topic: prep-plats, text: "Lampan hänger ___ soffan. (boven)", gaps: [{ answers: ["över", "ovanför"], feedback: [{ match: "på", tip: "på is op (met contact). Boven = över." }] }] }
           - { id: yycz, type: translate, topic: prep-plats, prompt: "De fiets staat achter het huis.", answers: ["Cykeln står bakom huset."], feedback: [{ contains: "efter huset", tip: "Achter (een plaats) = bakom. efter betekent na." }, { contains: "ligger bakom", tip: "Een fiets staat rechtop: står." }] }

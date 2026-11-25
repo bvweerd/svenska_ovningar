@@ -10,6 +10,7 @@ grammar:
   - id: tidsprep
     title: Tijdsuitdrukkingen – om, för … sedan, i, på, under
     summary: "**om** een week = over een week, **för** een week **sedan** = een week geleden, **i** tre år = drie jaar lang, **inte på** länge = lang niet, **under** = tijdens."
+    hint: "**om** = over (straks), **för … sedan** = geleden, **i** = (een tijd) lang. Staat de tijd vooraan, dan komt het werkwoord op **plaats 2** en het onderwerp erna."
     body: |
       | Zweeds | Betekenis | Voorbeeld |
       |---|---|---|
@@ -33,6 +34,7 @@ grammar:
   - id: transport
     title: Op weg – åka, gå, köra, ta
     summary: "**åka** = gaan met een voertuig, **gå** = lopen (of: vertrekken, van bus of trein), **köra** = zelf rijden, **ta** bussen = de bus nemen."
+    hint: "**åka** = gaan met een voertuig, **gå** = lopen, **köra** = zelf rijden. Eindigt de stam op **-r**, dan komt er in presens niets bij (*höra → hör*)."
     body: |
       | Zweeds | Betekenis | Voorbeeld |
       |---|---|---|
@@ -70,6 +72,7 @@ grammar:
   - id: ordningstal
     title: Rangtelwoorden, datums en lijnnummers
     summary: "*första, andra, tredje, fjärde, femte* … Een datum zeg je met **den** + rangtelwoord: *den tredje maj*. Een buslijn is een zelfstandig naamwoord op -an: *Ta fyran!*"
+    hint: "Rangtelwoord: 1 en 2 zijn onregelmatig; 3–6, 11 en 12 krijgen **-de/-te** (soms met een andere stam); 7–10 en vanaf 13 **-nde**. Bij een samengesteld getal verandert alleen **het laatste deel**. Een buslijn: het getal + **-an**, een -a of -o aan het eind valt weg (*ettan, tvåan*)."
     body: |
       | | | | |
       |---|---|---|---|
@@ -208,7 +211,7 @@ sections:
           - { id: hqmq, type: gap, text: "Olle ___ bil, men Ingrid har inget körkort.", gaps: [{ answers: ["kör"], options: ["åker", "går", "kör", "tar"], shuffle: false }] }
           - { id: f5nu, type: gap, text: "Tåget ___ klockan 10.15.", gaps: [{ answers: ["går"], options: ["åker", "går", "kör", "tar"], shuffle: false, feedback: [{ match: "åker", tip: "Van een bus of trein die vertrekt zeg je: går." }] }] }
           - { id: w6wu, type: gap, text: "Fleur ___ tåget till Uppsala.", gaps: [{ answers: ["tar"], options: ["åker", "går", "kör", "tar"], shuffle: false }] }
-          - { id: n9xh, type: gap, text: "Vi ___ till London i morgon.", hint: "(vliegen)", gaps: [{ answers: ["flyger"], feedback: [{ match: "flygar", tip: "flyga – flyger." }] }] }
+          - { id: n9xh, type: gap, help: "Presens: de **-a** van de infinitief wordt **-er**.", text: "Vi ___ till London i morgon.", hint: "(vliegen)", gaps: [{ answers: ["flyger"], feedback: [{ match: "flygar", tip: "flyga – flyger." }] }] }
           - { id: w575, type: gap, text: "Sista bussen ___ klockan elva.", gaps: [{ answers: ["går"], options: ["åker", "går", "kör", "tar"], shuffle: false, feedback: [{ match: "åker", tip: "Van een bus of trein die vertrekt zeg je: går." }] }] }
           - { id: bh55, type: gap, text: "Ingrid har inget körkort, så hon ___ aldrig bil.", gaps: [{ answers: ["kör"], options: ["åker", "går", "kör", "tar"], shuffle: false }] }
 

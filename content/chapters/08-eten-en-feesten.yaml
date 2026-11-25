@@ -31,6 +31,7 @@ grammar:
   - id: berattande
     title: Vertellen over vroeger
     summary: "In een verhaal over toen gebruik je de **preteritum**. Woorden als **då** (toen), **sedan** (daarna) en **när** (toen, als) helpen je verhaal op gang."
+    hint: "In een verhaal over toen staat elk werkwoord in de **preteritum**: -ade, -de/-te, -dde of een sterke vorm met een andere klinker."
     body: |
       Vertel je wat er gebeurd is, dan staat het hele verhaal in de **preteritum**:
 
@@ -52,6 +53,7 @@ grammar:
   - id: det-finns
     title: Det finns – er is, er zijn
     summary: "**Det finns** = er is/er zijn. Vraag: **Finns det …?** Ontkenning met **ingen** (en-woord), **inget** (ett-woord), **inga** (meervoud)."
+    hint: "Voor *er is / er zijn* gebruik je niet *är*, maar een vaste uitdrukking met *det* (zie de kaart). In een vraag, of als de zin met iets anders begint, staat het werkwoord vóór *det*."
     body: |
       Met **det finns** zeg je dat iets bestaat of aanwezig is:
 
@@ -71,6 +73,7 @@ grammar:
   - id: mat-fraser
     title: Uit eten en fika
     summary: "*Jag skulle vilja ha …* (Ik zou graag … willen), *Kan vi få notan?*, *Smaklig måltid!*, *Skål!*, *Tack för maten!*"
+    hint: "Bij het eten zeg je letterlijk: *smakelijke maaltijd!*"
     body: |
       | Zweeds | Nederlands |
       |---|---|
@@ -253,6 +256,7 @@ sections:
           - { id: uxtt, type: gap, text: "Olle ___ (vakna) sent. Han ___ (ta) en snabb dusch och ___ (springa) till bussen.", gaps: [{ answers: ["vaknade"] }, { answers: ["tog"], feedback: [{ match: ["tade", "tagde"], tip: "ta is sterk: tog." }] }, { answers: ["sprang"], feedback: [{ match: ["springade", "springde"], tip: "springa is sterk: sprang." }] }] }
 
       - id: verhaal-volgorde
+        help: "Begint de zin met *först, sedan, efter …* of met een tijd, dan komt het werkwoord **direct daarna**, vóór het onderwerp."
         title: Het verhaal op volgorde
         instruction: Begin de zin met het gegeven woord.
         topic: berattande
@@ -520,7 +524,7 @@ sections:
         topic: berattande
         items:
           - { id: 5r2s, type: mc, prompt: "Je vertelt over een feest. Welke zin past als eerste zin?", options: ["I lördags var jag på en fest hos min vän.", "Sedan åt vi lasagne och sallad.", "Till slut dansade vi till klockan två."], answer: 0, tip: "De eerste zin zegt waar en wanneer. Sedan (daarna) en till slut (ten slotte) komen later in het verhaal." }
-          - { id: jfxn, type: order, topic: berattande, prompt: "Vertel wat jullie daarna aten.", start: "Sedan", tokens: ["åt", "vi", "lasagne", "och", "sallad"], answers: ["Sedan åt vi lasagne och sallad.", "Sedan åt vi sallad och lasagne."] }
+          - { id: jfxn, type: order, help: "Begint de zin met *först, sedan, efter …* of met een tijd, dan komt het werkwoord **direct daarna**, vóór het onderwerp.", topic: berattande, prompt: "Vertel wat jullie daarna aten.", start: "Sedan", tokens: ["åt", "vi", "lasagne", "och", "sallad"], answers: ["Sedan åt vi lasagne och sallad.", "Sedan åt vi sallad och lasagne."] }
           - { id: qc95, type: gap, topic: det-finns, prompt: "Kies de goede vorm. (Het feest was afgelopen zaterdag.)", text: "Till efterrätt ___ det en stor chokladtårta.", gaps: [{ answers: ["fanns"], options: ["fanns", "finns"], shuffle: false, tip: "Het feest is voorbij: verleden tijd, det fanns." }] }
           - { id: gd6g, type: gap, topic: tycka-tro-tanka, prompt: "Je geeft je mening over de taart die je hebt geproefd.", text: "Jag ___ att tårtan var jättegod.", gaps: [{ answers: ["tyckte"], options: ["tyckte", "trodde", "tänkte"], tip: "Een mening over iets wat je zelf hebt geproefd: tycka (tyckte)." }] }
           - id: beek
@@ -605,7 +609,7 @@ sections:
           - { id: wd7s, type: translate, topic: modala, prompt: "Mag ik de rekening?", answers: ["Kan jag få notan[, tack]?", "Kan jag få räkningen[, tack]?", "Får jag be om {notan|räkningen}?"] }
           - { id: e96s, type: order, topic: frekvens, start: "På fredagar", tokens: ["äter", "vi", "ofta", "tacos"], answers: ["På fredagar äter vi ofta tacos."] }
           - { id: xmpv, type: gap, topic: possessiv, text: "Tack för maten! ___ köttbullar är de bästa! (jouw)", gaps: [{ answers: ["Dina"], options: ["Din", "Ditt", "Dina"] }] }
-          - { id: gd98, type: gap, topic: vader, text: "Igår ___ (snöa) det hela dagen.", gaps: [{ answers: ["snöade"], feedback: [{ match: ["snödde", "snöde"], tip: "snöa is een gewoon -ar-werkwoord: snöade." }] }] }
+          - { id: gd98, type: gap, help: "Preteritum: presens op **-ar** → **-ade**; anders achter de stam (de infinitief zonder -a) **-de**, of **-te** na *k, p, s, t, x*; korte werkwoorden krijgen **-dde**.", topic: vader, text: "Igår ___ (snöa) det hela dagen.", gaps: [{ answers: ["snöade"], feedback: [{ match: ["snödde", "snöde"], tip: "snöa is een gewoon -ar-werkwoord: snöade." }] }] }
           - { id: ja2q, type: translate, topic: vader, prompt: "Het is bewolkt, maar het regent niet.", answers: ["Det är {molnigt|mulet}[,] men det regnar inte."], feedback: [{ contains: "det är molnig", tip: "Na det är krijgt het weerwoord een -t: molnigt." }, { contains: "men regnar det", tip: "Na het voegwoord men blijft de gewone volgorde: men det regnar inte." }] }
           - { id: cwbm, type: mc, topic: allemansratten, prompt: "Jullie willen in het bos kamperen. Wat zegt het allemansrecht?", options: ["Ni får tälta en natt, men inte för nära ett hus.", "Ni får tälta i någons trädgård.", "Ni får inte tälta i skogen."], answer: 0, tip: "Eén nacht kamperen mag, als je niet te dicht bij een huis staat." }
           - { id: xhvn, type: translate, topic: allemansratten, prompt: "Je mag bessen plukken, maar je mag geen afval achterlaten.", answers: ["{Du|Man} får plocka bär[,] men {du|man} får inte lämna [kvar ][något ]skräp[ i naturen].", "{Du|Man} får plocka bär[,] men inte lämna [kvar ][något ]skräp[ i naturen]."], feedback: [{ contains: "får lämna inte", tip: "inte staat direct na het modale werkwoord: får inte lämna." }] }
