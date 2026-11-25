@@ -35,6 +35,7 @@ grammar:
   - id: placera
     title: Leggen, zetten – lägga, ställa, sätta
     summary: "Iets **neerleggen** = *lägga* → het **ligger**. Iets **neerzetten** = *ställa* → het **står**. **Gaan zitten** = *sätta sig* → je **sitter**. **Ophangen** = *hänga* → het **hänger**."
+    hint: "Gebiedende wijs bij werkwoorden met presens op **-er**: de infinitief zonder **-a** (een dubbele medeklinker blijft staan)."
     body: |
       Bij elk positiewerkwoord hoort een werkwoord voor de beweging ernaartoe:
 
@@ -53,6 +54,7 @@ grammar:
   - id: kroppen
     title: Het lichaam – ont i …
     summary: "Pijn: **Jag har ont i** huvudet / magen / ryggen. Of: **Det gör ont i** knät. Let op het meervoud: *ögon, öron, händer, fötter, tänder*."
+    hint: "Bij lichaamsdelen gebruikt het Zweeds de **bepaalde vorm** in plaats van *zijn/haar*. Het meervoud is vaak onregelmatig (*en hand → händer*)."
     body: |
       | Zweeds | Nederlands | Meervoud |
       |---|---|---|
@@ -324,7 +326,7 @@ sections:
         instruction: Vertaal naar het Zweeds.
         topic: kroppen
         items:
-          - { id: nht9, type: translate, topic: reflexiv, prompt: "Ik voel me niet goed, dus ik blijf vandaag thuis.", answers: ["Jag {mår inte bra|mår dåligt|känner mig inte bra}[,] så jag {stannar|ska stanna} hemma {idag|i dag}."], feedback: [{ contains: ["stannar hem", "stanna hem"], tip: "Thuis zijn of blijven (geen beweging): hemma." }, { contains: ["känner jag inte", "jag känner jag"], tip: "känna sig: bij jag hoort mig (jag känner mig)." }] }
+          - { id: nht9, type: translate, topic: reflexiv, prompt: "Ik voel me niet goed, dus ik blijf vandaag thuis.", answers: ["Jag {mår inte bra|mår dåligt|känner mig inte bra}[,] så jag {stannar|ska stanna} hemma {idag|i dag}.", "Jag {mår inte bra|mår dåligt|känner mig inte bra}[,] så {stannar jag|ska jag stanna} hemma {idag|i dag}."], feedback: [{ contains: ["stannar hem", "stanna hem"], tip: "Thuis zijn of blijven (geen beweging): hemma." }, { contains: ["känner jag inte", "jag känner jag"], tip: "känna sig: bij jag hoort mig (jag känner mig)." }] }
           - { id: rh6y, type: translate, topic: positionsverb, prompt: "Wilma zit op de bank te lezen, want ze is verkouden.", answers: ["Wilma sitter {i|på} soffan och läser[,] {för|eftersom} hon är förkyld.", "Wilma sitter och läser {i|på} soffan[,] {för|eftersom} hon är förkyld."], feedback: [{ contains: ["och läsa", "att läsa"], tip: "Zweeds: sitter … och läser, beide werkwoorden in de presens." }] }
           - { id: e4zp, type: translate, topic: placera, prompt: "Nils, zet je fiets niet voor de deur, maar achter het huis.", answers: ["[Nils, ]ställ inte {cykeln|din cykel} {framför|utanför} dörren[,] utan [ställ den ]bakom huset[, Nils]."], feedback: [{ contains: ["sätt inte", "lägg inte"], tip: "Een fiets zet je rechtop neer: ställ." }, { contains: "står inte", tip: "Hier gaat het om de beweging (neerzetten): ställ." }] }
           - { id: ctx7, type: translate, prompt: "De dokter vraagt hoe lang ik al pijn in mijn knie heb.", answers: ["{Läkaren|Doktorn} frågar hur länge jag har haft ont i {knät|knäet}."], feedback: [{ contains: "hur länge har jag", tip: "In de bijzin staat het onderwerp vóór het werkwoord: hur länge jag har haft." }, { contains: "jag har ont i", tip: "Hoe lang al (en nog steeds): in het Zweeds de perfekt, jag har haft ont." }, { contains: ["ont i knä", "ont i mitt knä"], tip: "Na ont i: bepaalde vorm (knät)." }] }
@@ -338,6 +340,7 @@ sections:
           - { id: h66d, type: translate, prompt: "Hoe voel je je vandaag? Heb je nog pijn in je rug?", answers: ["{Hur mår du|Hur känner du dig} {idag|i dag}? Har du [fortfarande ]ont i ryggen?", "{Hur mår du|Hur känner du dig} {idag|i dag}? Har du ont i ryggen fortfarande?"], feedback: [{ contains: "ont i din rygg", tip: "Na ont i: bepaalde vorm (ryggen), zonder din." }] }
 
       - id: langere-zinnen
+        help: "Hoofdzin: het werkwoord staat op **plaats 2**. Bijzin (na *att, om, när, eftersom* …): **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt daarna eerst het werkwoord van de hoofdzin."
         title: Langere zinnen bouwen
         instruction: Zet de woorden in de goede volgorde.
         topic: positionsverb
@@ -367,6 +370,77 @@ sections:
           - { id: n73n, type: transform, prompt: "Jag tvättar mig innan jag lägger mig. (vi)", answers: ["Vi tvättar oss innan vi [går och ]lägger oss."], feedback: [{ contains: "innan jag", tip: "Ook in de bijzin gaat het nu over *vi*: innan vi lägger oss." }, { contains: ["tvättar sig", "lägger sig", "tvättar mig", "lägger mig"], tip: "Bij *vi* hoort *oss*: vi tvättar oss, vi lägger oss." }] }
           - { id: wcsx, type: transform, prompt: "Jag sätter mig vid bordet i köket. (ni)", answers: ["Ni sätter er vid bordet i köket."], feedback: [{ contains: ["sätter sig", "sätter mig"], tip: "Bij *ni* hoort *er*: ni sätter er." }] }
           - { id: 7td6, type: transform, prompt: "Jag känner mig mycket bättre idag. (Olle)", answers: ["Olle känner sig mycket bättre {idag|i dag}.", "{Idag|I dag} känner {sig Olle|Olle sig} mycket bättre."], feedback: [{ contains: ["känner honom", "känner mig"], tip: "Bij *han/hon* (Olle) hoort *sig*: Olle känner sig." }] }
+
+      - id: woorden-lichaam
+        title: "Woorden in een zin: het lichaam"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: sxe3, type: gap, text: "Jag har ont i ___ när jag lyfter armen.", gaps: [{ answers: ["axeln"], options: ["axeln", "tån", "läppen", "huden"] }] }
+          - { id: jrvc, type: gap, text: "Jag har ont i ___, så jag kan inte titta åt sidan.", gaps: [{ answers: ["nacken"], options: ["nacken", "tån", "läppen", "håret"] }] }
+          - { id: xnkc, type: gap, text: "Wilma tvättar ___ varje morgon i duschen.", gaps: [{ answers: ["håret"], options: ["håret", "blodet", "gipset", "plåstret"] }] }
+          - { id: fbma, type: gap, text: "Skon är för liten, och det gör ont i ___.", gaps: [{ answers: ["tårna"], options: ["tårna", "axlarna", "läpparna", "tungorna"], feedback: [{ match: "axlarna", tip: "Een schoen zit om je voet: dan doen je tenen pijn (tårna)." }] }] }
+          - { id: d4gh, type: gap, text: "På bilden ser man bara hans ___, inte hela kroppen.", gaps: [{ answers: ["ansikte"], options: ["ansikte", "blod", "gips", "värk"] }] }
+          - { id: jyp6, type: gap, text: "Det kom ___ ur näsan, så hon satte sig ner.", gaps: [{ answers: ["blod"], options: ["blod", "hår", "gips", "motion"] }] }
+          - { id: uyvv, type: gap, text: "Efter en dag på stranden var ___ på armarna alldeles röd.", gaps: [{ answers: ["huden"], options: ["huden", "tungan", "kryckan", "nacken"] }] }
+          - { id: x7mm, type: gap, text: "Jag tror att jag har feber. Var är ___?", gaps: [{ answers: ["termometern"], options: ["termometern", "kryckan", "ambulansen", "motionen"], feedback: [{ match: "kryckan", tip: "Koorts meet je met een thermometer: termometern." }] }] }
+          - { id: fyxc, type: gap, text: "Läkaren vill titta på ___, så jag öppnar munnen.", gaps: [{ answers: ["tungan"], options: ["tungan", "nacken", "axeln", "tån"], feedback: [{ match: "nacken", tip: "Als je je mond opendoet, ziet de dokter je tong: tungan." }] }] }
+          - { id: g3dn, type: gap, text: "Läkaren lägger handen på ___ och lyssnar på hjärtat.", gaps: [{ answers: ["bröstet"], options: ["bröstet", "håret", "tån", "läppen"] }] }
+
+      - id: woorden-ziek-gezond
+        title: "Woorden in een zin: ziek en gezond"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: h8hx, type: gap, text: "Han ramlade av cykeln, och nu har han ett ___ på knät.", gaps: [{ answers: ["sår"], options: ["sår", "hår", "ansikte", "bröst"] }] }
+          - { id: pg8v, type: gap, text: "Jag sätter ett ___ på såret.", gaps: [{ answers: ["plåster"], options: ["plåster", "ansikte", "bröst", "hår"] }] }
+          - { id: 3s5x, type: gap, text: "Hon bröt benet och måste gå med ___ i sex veckor.", gaps: [{ answers: ["kryckor"], options: ["kryckor", "ambulanser", "termometrar", "patienter"], feedback: [{ match: "ambulanser", tip: "Met een gebroken been loop je met krukken: kryckor." }] }] }
+          - { id: 74af, type: gap, text: "Ring 112! Vi behöver en ___ direkt.", gaps: [{ answers: ["ambulans"], options: ["ambulans", "termometer", "krycka", "hud"], feedback: [{ match: "termometer", tip: "Bij een noodgeval (112) komt er een ambulance: ambulans." }] }] }
+          - { id: f6bk, type: gap, text: "Många på jobbet är sjuka, för det går ___ just nu.", gaps: [{ answers: ["influensa"], options: ["influensa", "motion", "hälsa", "hud"] }] }
+          - { id: fmeg, type: gap, text: "Jag cyklar varje dag och får mycket ___.", gaps: [{ answers: ["motion"], options: ["motion", "influensa", "hud", "gips"], feedback: [{ match: "influensa", tip: "Fietsen is beweging: motion. Influensa is griep." }] }] }
+          - { id: rg9w, type: gap, text: "Läkaren träffar tjugo ___ varje dag.", gaps: [{ answers: ["patienter"], options: ["patienter", "kryckor", "termometrar", "ambulanser"] }] }
+          - { id: t6pt, type: gap, text: "Gatan var blöt efter regnet, så jag ___.", gaps: [{ answers: ["halkade"], options: ["halkade", "svalde", "nös", "läkte"], feedback: [{ match: "nös", tip: "Att nysa = niezen. Op een natte straat glijd je uit: halka (halkade)." }] }] }
+          - { id: j5ey, type: gap, text: "Tabletten är stor, så det är svårt att ___ den.", gaps: [{ answers: ["svälja"], options: ["svälja", "nysa", "läka", "halka"], feedback: [{ match: "nysa", tip: "Een tablet moet je doorslikken: svälja." }] }] }
+          - { id: d8b8, type: gap, text: "Hon är förkyld och ___ hela dagen.", gaps: [{ answers: ["nyser"], options: ["nyser", "sväljer", "läker", "avbokar"], feedback: [{ match: "sväljer", tip: "Als je verkouden bent, nies je: nysa (hon nyser)." }] }] }
+          - { id: fp2b, type: gap, text: "Vi är sjuka och måste ___ resan.", gaps: [{ answers: ["avboka"], options: ["avboka", "svälja", "läka", "halka"], feedback: [{ match: "läka", tip: "Läka = genezen. Een reis (of afspraak) afzeggen is avboka." }] }] }
+          - { id: 89um, type: gap, text: "Var ___! Det är inget farligt.", gaps: [{ answers: ["lugn"], options: ["lugn", "stressad", "skadad", "allvarlig"], feedback: [{ match: "stressad", tip: "Er is niets ergs aan de hand: dan blijf je rustig (lugn)." }] }] }
+          - { id: v5pp, type: gap, text: "Jag har så mycket att göra på jobbet att jag är ___ hela tiden.", gaps: [{ answers: ["stressad"], options: ["stressad", "lugn", "pigg", "utomhus"], feedback: [{ match: "lugn", tip: "Veel werk maakt je eerder gestrest (stressad) dan rustig." }] }] }
+          - { id: kjhc, type: gap, text: "På sommaren tränar jag ___, inte på gymmet.", gaps: [{ answers: ["utomhus"], options: ["utomhus", "lugn", "pigg", "farligt"], feedback: [{ match: "lugn", tip: "Je traint in de open lucht, niet in de sportschool: utomhus." }] }] }
+
+      - id: een-zin-maken
+        title: "Maak er één zin van"
+        instruction: Maak één zin van de twee zinnen, zoals tussen haakjes staat. Na een bijzin vooraan komt meteen het werkwoord.
+        topic: positionsverb
+        items:
+          - { id: gekk, type: transform, topic: kroppen, prompt: "Olle har ont i ryggen. Han kan inte lyfta soffan. (begin met Eftersom)", answers: ["Eftersom Olle har ont i ryggen[,] kan han inte lyfta soffan."], feedback: [{ contains: "ryggen han kan", tip: "Na een bijzin vooraan komt meteen het werkwoord: … kan han inte." }] }
+          - { id: ydxd, type: transform, prompt: "Jag kom in i köket. Katten satt på bordet. (begin met När)", answers: ["När jag kom in i köket[,] satt katten på bordet."], feedback: [{ contains: "köket katten satt", tip: "Na een bijzin vooraan komt meteen het werkwoord: … satt katten." }] }
+          - { id: avra, type: transform, prompt: "Läkaren säger det. Du ska ligga i sängen i tre dagar. (att)", answers: ["Läkaren säger att du ska ligga i sängen i tre dagar."] }
+          - { id: nzgn, type: transform, topic: placera, prompt: "Var har jag ställt min väska? (begin met Jag vet inte)", answers: ["Jag vet inte var jag har ställt min väska."], feedback: [{ contains: "var har jag", tip: "In een indirecte vraag komt eerst het onderwerp: var jag har ställt." }] }
+          - { id: xjjb, type: transform, topic: reflexiv, prompt: "Wilma känner sig sjuk. Hon stannar hemma från skolan idag. (så)", answers: ["Wilma känner sig sjuk[,] så hon stannar hemma från skolan {idag|i dag}.", "Wilma känner sig sjuk[,] så stannar hon hemma från skolan {idag|i dag}."] }
+          - { id: 4mt3, type: transform, topic: reflexiv, prompt: "Du måste vila dig i några dagar. Du har hög feber. (eftersom)", answers: ["Eftersom du har hög feber[,] måste du vila dig i några dagar.", "Du måste vila dig i några dagar[,] eftersom du har hög feber."] }
+          - { id: 6j9y, type: transform, topic: placera, prompt: "Lägg tabletterna i lådan. Barnen hittar dem inte. (så att)", answers: ["Lägg tabletterna i lådan[,] så att barnen inte hittar dem."], feedback: [{ contains: "barnen hittar inte", tip: "In een bijzin staat inte vóór het werkwoord. Så att barnen inte hittar dem." }] }
+          - { id: u5cp, type: transform, topic: reflexiv, prompt: "Efter maten satte sig morfar i fåtöljen. Han läste tidningen. (och)", answers: ["Efter maten satte sig morfar i fåtöljen och läste tidningen.", "Efter maten satte sig morfar i fåtöljen[,] och han läste tidningen."] }
+          - { id: ek9d, type: transform, topic: kroppen, prompt: "Ingrid halkade på isen. Hon bröt armen. (begin met När)", answers: ["När Ingrid halkade på isen[,] bröt hon armen."], feedback: [{ contains: "isen hon bröt", tip: "Na een bijzin vooraan komt meteen het werkwoord: … bröt hon." }] }
+          - { id: krz2, type: transform, topic: reflexiv, prompt: "Jag lägger mig tidigt ikväll. Jag är så trött. (eftersom)", answers: ["Eftersom jag är så trött[,] lägger jag mig tidigt {ikväll|i kväll}.", "Jag lägger mig tidigt {ikväll|i kväll}[,] eftersom jag är så trött."] }
+
+      - id: nog-langere-zinnen
+        help: "Hoofdzin: het werkwoord staat op **plaats 2**. Bijzin (na *att, om, när, eftersom* …): **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt daarna eerst het werkwoord van de hoofdzin."
+        title: "Nog meer lange zinnen"
+        instruction: Zet de woorden in de goede volgorde.
+        topic: positionsverb
+        items:
+          - { id: 2urj, type: order, topic: kroppen, start: "När jag vaknade i morse", tokens: ["hade", "jag", "ont", "i halsen", "och", "kunde", "inte", "svälja"], answers: ["När jag vaknade i morse hade jag ont i halsen och kunde inte svälja."], feedback: [{ contains: "morse jag hade", tip: "Na een bijzin vooraan komt meteen het werkwoord: … hade jag." }] }
+          - { id: k3ns, type: order, topic: reflexiv, start: "Sjuksköterskan ber", tokens: ["patienten", "att", "sätta sig", "på stolen", "och", "vänta"], answers: ["Sjuksköterskan ber patienten att sätta sig på stolen och vänta."] }
+          - { id: da7x, type: order, topic: kroppen, start: "Eftersom Bram bröt benet", tokens: ["måste", "han", "gå", "med", "kryckor", "i sex veckor"], answers: ["Eftersom Bram bröt benet måste han gå med kryckor i sex veckor."] }
+          - { id: cp8h, type: order, start: "Mobilen ligger", tokens: ["på", "bordet", "bredvid", "soffan", "där", "du", "satt", "igår"], answers: ["Mobilen ligger på bordet bredvid soffan där du satt igår."] }
+          - { id: dwnz, type: order, topic: reflexiv, start: "Om du har feber", tokens: ["ska", "du", "stanna", "hemma", "och", "vila dig", "i några dagar"], answers: ["Om du har feber ska du stanna hemma och vila dig i några dagar.", "Om du har feber ska du stanna hemma i några dagar och vila dig."] }
+          - { id: uymy, type: order, topic: kroppen, start: "Läkaren undrar om", tokens: ["jag", "har", "haft", "ont", "i magen", "länge"], answers: ["Läkaren undrar om jag länge har haft ont i magen.", "Läkaren undrar om jag har haft ont i magen länge."] }
+          - { id: h6uv, type: order, topic: placera, start: "Lägg nycklarna", tokens: ["i", "lådan", "så att", "du", "inte", "glömmer", "var", "de", "ligger"], answers: ["Lägg nycklarna i lådan så att du inte glömmer var de ligger."], feedback: [{ contains: "du glömmer inte", tip: "In een bijzin staat inte vóór het werkwoord. Så att du inte glömmer …" }] }
+          - { id: 3rwj, type: order, topic: reflexiv, start: "Nils skyndar sig", tokens: ["hem", "eftersom", "han", "inte", "vill", "komma", "för sent", "till middagen"], answers: ["Nils skyndar sig hem eftersom han inte vill komma för sent till middagen."], feedback: [{ contains: "han vill inte", tip: "In een bijzin staat inte vóór het werkwoord. Eftersom han inte vill …" }] }
+          - { id: gyc4, type: order, start: "Hela familjen", tokens: ["satt", "vid", "bordet", "när", "Olle", "kom", "hem", "från sjukhuset"], answers: ["Hela familjen satt vid bordet när Olle kom hem från sjukhuset."] }
+          - { id: 4vut, type: order, topic: reflexiv, start: "Jag känner mig", tokens: ["pigg", "idag", "eftersom", "jag", "sov", "tio timmar", "i natt"], answers: ["Jag känner mig pigg idag eftersom jag sov tio timmar i natt."] }
 
       - id: wat-zeg-je
         title: Wat zeg je?
@@ -406,7 +480,7 @@ sections:
 
           I fredags kände sig Olle lite bättre. Han satte sig vid bordet i köket och åt frukost med familjen. Sedan ville han gå ut och arbeta i trädgården, men Ingrid sa nej. ”Lägg dig i soffan igen”, sa hon. ”Du ska vila i två veckor!”
 
-          Nu ligger Olle i soffan och läser, men han tycker att det är tråkigt! Ingrid måste göra allt arbete i trädgården. Varje morgon ställer hon en kopp kaffe på bordet bredvid soffan och lägger tidningen där. Nils och Wilma hjälper henne och diskar efter middagen.
+          Nu ligger Olle i soffan och läser, men han tycker att det är tråkigt! Han hoppas att ryggen blir bra snart. Ingrid måste göra allt arbete i trädgården. Varje morgon ställer hon en kopp kaffe på bordet bredvid soffan och lägger tidningen där. Nils och Wilma hjälper henne och diskar efter middagen.
         items:
           - { id: 2zvb, type: truefalse, statement: "Olle har ont i huvudet.", answer: false, tip: "Waar heeft hij pijn?", correction: { answers: ["{Olle|Han} har ont i ryggen."] } }
           - { id: gb85, type: truefalse, statement: "Olle fick en tid på onsdagen.", answer: true }
@@ -676,7 +750,7 @@ sections:
           - { id: q9y8, type: gap, topic: imperativ, text: "___ (dricka) mycket vatten!", gaps: [{ answers: ["Drick"] }] }
           - { id: und4, type: gap, topic: supinum, text: "Jag har ___ (ligga) i sängen hela dagen.", gaps: [{ answers: ["legat"] }] }
           - { id: g6hz, type: translate, topic: tycka-tro-tanka, prompt: "Ik denk dat het griep is.", answers: ["Jag tror [att ]det är {influensa|en influensa|influensan}."], feedback: [{ contains: "tycker att", tip: "Een vermoeden: tror." }] }
-          - { id: ht6f, type: gap, topic: plural, text: "Wilma har ont i båda ___ (öra, bepaald meervoud).", gaps: [{ answers: ["öronen"] }] }
+          - { id: ht6f, type: gap, help: "Eerst het meervoud (onregelmatig, het staat op de kaart over het lichaam), dan de bepaalde vorm met **-en**.", topic: plural, text: "Wilma har ont i båda ___ (öra, bepaald meervoud).", gaps: [{ answers: ["öronen"] }] }
           - { id: zwaw, type: mc, topic: det-finns, prompt: "Welke zin is goed?", options: ["Finns det ett apotek här i närheten?", "Är det ett apotek här i närheten?", "Har det ett apotek här i närheten?"], answer: 0, tip: "Is er …? = Finns det …?" }
           - { id: ku6j, type: gap, topic: prep-plats, text: "Lampan hänger ___ soffan. (boven)", gaps: [{ answers: ["över", "ovanför"], feedback: [{ match: "på", tip: "på is op (met contact). Boven = över." }] }] }
           - { id: yycz, type: translate, topic: prep-plats, prompt: "De fiets staat achter het huis.", answers: ["Cykeln står bakom huset."], feedback: [{ contains: "efter huset", tip: "Achter (een plaats) = bakom. efter betekent na." }, { contains: "ligger bakom", tip: "Een fiets staat rechtop: står." }] }
@@ -747,3 +821,42 @@ vocab:
   - { sv: "svag", nl: "zwak", ex: "Jag känner mig **svag** efter febern.", exNl: "Ik voel me zwak na de koorts." }
   - { sv: "gravid", nl: "zwanger", ex: "Min syster är **gravid**.", exNl: "Mijn zus is zwanger." }
   - { sv: "allergisk", nl: "allergisch", ex: "Jag är **allergisk** mot katter.", exNl: "Ik ben allergisch voor katten." }
+  - { sv: "en axel", nl: "een schouder", def: "axeln", pl: "axlar", plDef: "axlarna", ex: "Han bär barnet på **axlarna**.", exNl: "Hij draagt het kind op zijn schouders." }
+  - { sv: "en nacke", nl: "een nek", def: "nacken", pl: "nackar", plDef: "nackarna", ex: "Jag sitter vid datorn hela dagen och får ont i **nacken**.", exNl: "Ik zit de hele dag achter de computer en krijg pijn in mijn nek." }
+  - { sv: "ett bröst", nl: "een borst", def: "bröstet", pl: "bröst", plDef: "brösten", ex: "Han har ont i **bröstet** och ringer 112.", exNl: "Hij heeft pijn op de borst en belt 112." }
+  - { sv: "en tå", nl: "een teen", def: "tån", pl: "tår", plDef: "tårna", ex: "Jag fryser om **tårna**.", exNl: "Ik heb koude tenen." }
+  - { sv: "ett hår", nl: "haar", def: "håret", mass: true, ex: "Hon har långt **hår**.", exNl: "Zij heeft lang haar." }
+  - { sv: "ett ansikte", nl: "een gezicht", def: "ansiktet", pl: "ansikten", plDef: "ansiktena", ex: "Tvätta **ansiktet** med kallt vatten.", exNl: "Was je gezicht met koud water." }
+  - { sv: "en läpp", nl: "een lip", def: "läppen", pl: "läppar", plDef: "läpparna", ex: "Han har ett sår på **läppen**.", exNl: "Hij heeft een wondje op zijn lip." }
+  - { sv: "en tunga", nl: "een tong", def: "tungan", pl: "tungor", plDef: "tungorna", ex: "Katten dricker vatten med **tungan**.", exNl: "De kat drinkt water met zijn tong." }
+  - { sv: "ett blod", nl: "bloed", def: "blodet", mass: true, ex: "Sjuksköterskan tar lite **blod** från armen.", exNl: "De verpleegkundige neemt wat bloed af uit je arm." }
+  - { sv: "en hud", nl: "de huid", def: "huden", mass: true, ex: "Solen är farlig för **huden**.", exNl: "De zon is gevaarlijk voor de huid." }
+  - { sv: "ett sår", nl: "een wond(je)", def: "såret", pl: "sår", plDef: "såren", ex: "Tvätta **såret** och sätt på ett plåster.", exNl: "Was het wondje en doe er een pleister op." }
+  - { sv: "ett plåster", nl: "een pleister", def: "plåstret", pl: "plåster", plDef: "plåstren", ex: "Har du ett **plåster**? Jag blöder.", exNl: "Heb je een pleister? Ik bloed." }
+  - { sv: "ett gips", nl: "gips", def: "gipset", mass: true, ex: "Han har haft **gips** på benet i sex veckor.", exNl: "Hij heeft zes weken gips om zijn been gehad." }
+  - { sv: "en krycka", nl: "een kruk (om mee te lopen)", def: "kryckan", pl: "kryckor", plDef: "kryckorna", ex: "Var är mina **kryckor**? Jag kan inte gå utan dem.", exNl: "Waar zijn mijn krukken? Ik kan niet lopen zonder." }
+  - { sv: "en ambulans", nl: "een ambulance", def: "ambulansen", pl: "ambulanser", plDef: "ambulanserna", ex: "**Ambulansen** kom efter tio minuter.", exNl: "De ambulance kwam na tien minuten." }
+  - { sv: "en termometer", nl: "een thermometer", def: "termometern", pl: "termometrar", plDef: "termometrarna", ex: "**Termometern** visar trettionio grader.", exNl: "De thermometer geeft negenendertig graden aan." }
+  - { sv: "en patient", nl: "een patiënt", def: "patienten", pl: "patienter", plDef: "patienterna", ex: "Läkaren har många **patienter** idag.", exNl: "De arts heeft vandaag veel patiënten." }
+  - { sv: "en influensa", nl: "griep", def: "influensan", mass: true, ex: "Hela familjen har **influensa**.", exNl: "Het hele gezin heeft griep." }
+  - { sv: "en värk", nl: "(aanhoudende) pijn", def: "värken", mass: true, ex: "**Värken** i ryggen går inte över.", exNl: "De pijn in mijn rug gaat niet over." }
+  - { sv: "en motion", nl: "beweging (sport)", def: "motionen", mass: true, ex: "Läkaren säger att jag behöver mer **motion**.", exNl: "De dokter zegt dat ik meer beweging nodig heb." }
+  - { sv: "en hälsa", nl: "de gezondheid", def: "hälsan", mass: true, ex: "Motion är bra för **hälsan**.", exNl: "Beweging is goed voor je gezondheid." }
+  - { sv: "att sätta", nl: "zetten, doen (op een plek)", ex: "Pappa **sätter** barnet på stolen.", exNl: "Papa zet het kind op de stoel." }
+  - { sv: "att hoppas", nl: "hopen", ex: "Jag **hoppas** att du blir frisk snart.", exNl: "Ik hoop dat je snel beter wordt." }
+  - { sv: "att lyfta", nl: "tillen, optillen", ex: "Jag kan inte **lyfta** armen, det gör ont.", exNl: "Ik kan mijn arm niet optillen, het doet pijn." }
+  - { sv: "att hoppa", nl: "springen (omhoog), huppelen", ex: "Barnen **hoppar** i sängen.", exNl: "De kinderen springen op het bed." }
+  - { sv: "att röra", nl: "aanraken; bewegen", ex: "**Rör** inte såret!", exNl: "Raak het wondje niet aan!" }
+  - { sv: "att ramla", nl: "vallen", ex: "Morfar **ramlade** i trappan och bröt armen.", exNl: "Opa viel van de trap en brak zijn arm." }
+  - { sv: "att halka", nl: "uitglijden", ex: "Jag **halkade** på isen och skadade knät.", exNl: "Ik gleed uit op het ijs en bezeerde mijn knie." }
+  - { sv: "att svälja", nl: "slikken", ex: "Det gör ont när jag **sväljer**.", exNl: "Het doet pijn als ik slik." }
+  - { sv: "att nysa", nl: "niezen", ex: "Jag **nyser** hela tiden, jag tror att jag är allergisk.", exNl: "Ik nies de hele tijd, ik denk dat ik allergisch ben." }
+  - { sv: "att läka", nl: "genezen (van een wond)", ex: "Såret **läker** snabbt.", exNl: "Het wondje geneest snel." }
+  - { sv: "att avboka", nl: "afzeggen, annuleren", ex: "Jag måste **avboka** min tid hos tandläkaren.", exNl: "Ik moet mijn afspraak bij de tandarts afzeggen." }
+  - { sv: "pigg", nl: "uitgerust, fris en wakker", ex: "Jag sov bra och är **pigg** idag.", exNl: "Ik heb goed geslapen en ben vandaag fris en uitgerust." }
+  - { sv: "farlig", nl: "gevaarlijk", ex: "Den här sjukdomen är inte **farlig**.", exNl: "Deze ziekte is niet gevaarlijk." }
+  - { sv: "allvarlig", nl: "ernstig", ex: "Är det **allvarligt**, doktorn?", exNl: "Is het ernstig, dokter?" }
+  - { sv: "skadad", nl: "gewond; beschadigd", ex: "Han blev **skadad** i en olycka.", exNl: "Hij raakte gewond bij een ongeluk." }
+  - { sv: "stressad", nl: "gestrest", ex: "Jag är **stressad** och sover dåligt.", exNl: "Ik ben gestrest en slaap slecht." }
+  - { sv: "lugn", nl: "rustig, kalm", ex: "Det är **lugnt** och tyst på sjukhuset på natten.", exNl: "Het is 's nachts rustig en stil in het ziekenhuis." }
+  - { sv: "utomhus", nl: "buitenshuis, in de open lucht", ex: "Vi äter **{utomhus|ute}** när det är varmt.", exNl: "We eten buiten als het warm is." }

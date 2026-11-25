@@ -31,6 +31,7 @@ grammar:
   - id: berattande
     title: Vertellen over vroeger
     summary: "In een verhaal over toen gebruik je de **preteritum**. Woorden als **då** (toen), **sedan** (daarna) en **när** (toen, als) helpen je verhaal op gang."
+    hint: "In een verhaal over toen staat elk werkwoord in de **preteritum**: -ade, -de/-te, -dde of een sterke vorm met een andere klinker."
     body: |
       Vertel je wat er gebeurd is, dan staat het hele verhaal in de **preteritum**:
 
@@ -52,6 +53,7 @@ grammar:
   - id: det-finns
     title: Det finns – er is, er zijn
     summary: "**Det finns** = er is/er zijn. Vraag: **Finns det …?** Ontkenning met **ingen** (en-woord), **inget** (ett-woord), **inga** (meervoud)."
+    hint: "Voor *er is / er zijn* gebruik je niet *är*, maar een vaste uitdrukking met *det* (zie de kaart). In een vraag, of als de zin met iets anders begint, staat het werkwoord vóór *det*."
     body: |
       Met **det finns** zeg je dat iets bestaat of aanwezig is:
 
@@ -71,6 +73,7 @@ grammar:
   - id: mat-fraser
     title: Uit eten en fika
     summary: "*Jag skulle vilja ha …* (Ik zou graag … willen), *Kan vi få notan?*, *Smaklig måltid!*, *Skål!*, *Tack för maten!*"
+    hint: "Bij het eten zeg je letterlijk: *smakelijke maaltijd!*"
     body: |
       | Zweeds | Nederlands |
       |---|---|
@@ -253,6 +256,7 @@ sections:
           - { id: uxtt, type: gap, text: "Olle ___ (vakna) sent. Han ___ (ta) en snabb dusch och ___ (springa) till bussen.", gaps: [{ answers: ["vaknade"] }, { answers: ["tog"], feedback: [{ match: ["tade", "tagde"], tip: "ta is sterk: tog." }] }, { answers: ["sprang"], feedback: [{ match: ["springade", "springde"], tip: "springa is sterk: sprang." }] }] }
 
       - id: verhaal-volgorde
+        help: "Begint de zin met *först, sedan, efter …* of met een tijd, dan komt het werkwoord **direct daarna**, vóór het onderwerp."
         title: Het verhaal op volgorde
         instruction: Begin de zin met het gegeven woord.
         topic: berattande
@@ -280,6 +284,43 @@ sections:
           - { id: qvvw, type: transform, prompt: "Wilma kommer hem sent.", answers: ["{Igår|I går} kom Wilma hem sent."], feedback: [{ contains: "igår Wilma kom", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår kom Wilma." }] }
           - { id: kwmt, type: transform, prompt: "Barnen äter tre kanelbullar.", answers: ["{Igår|I går} åt barnen tre kanelbullar."], feedback: [{ contains: "igår barnen åt", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår åt barnen." }] }
           - { id: ae6e, type: transform, prompt: "Olle ger Ingrid blommor.", answers: ["{Igår|I går} gav Olle Ingrid blommor."], feedback: [{ contains: "igår Olle gav", tip: "Na *Igår* komt eerst het werkwoord, dan het onderwerp: Igår gav Olle." }] }
+
+      - id: woorden-keuken
+        title: "Woorden in een zin: in de keuken"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: tcax, type: gap, text: "Teet är inte sött. Vill du ha lite ___ i det?", gaps: [{ answers: ["socker"], options: ["socker", "salt", "peppar", "sås"], feedback: [{ match: "salt", tip: "Thee wordt zoet van suiker (socker), niet van zout (salt)." }] }] }
+          - { id: jd29, type: gap, text: "Potatisen smakar ingenting. Har du ___ och peppar?", gaps: [{ answers: ["salt"], options: ["salt", "socker", "godis", "saft"] }] }
+          - { id: ndnx, type: gap, text: "På smörgåsen har jag ___ och ost.", gaps: [{ answers: ["smör"], options: ["smör", "salt", "saft", "sås"] }] }
+          - { id: u3pm, type: gap, text: "Kycklingen är klar efter fyrtio minuter i ___.", gaps: [{ answers: ["ugnen"], options: ["ugnen", "skeden", "drycken", "inbjudan"] }] }
+          - { id: 65aq, type: gap, text: "Kan jag få en ___? Jag vill smaka på soppan.", gaps: [{ answers: ["sked"], options: ["sked", "kniv", "ugn", "lök"] }] }
+          - { id: jsdj, type: gap, text: "Till soppan behöver jag två ___, tre potatisar och lite salt.", gaps: [{ answers: ["lökar"], options: ["lökar", "skedar", "drycker", "ugnar"] }] }
+          - { id: nsdf, type: gap, text: "Kan du ___ vatten i glasen?", gaps: [{ answers: ["hälla"], options: ["hälla", "blanda", "skära", "smaka"] }] }
+          - { id: 9cpp, type: gap, text: "Bram åt hela tårtan själv. Nu är Fleur ___ på honom.", gaps: [{ answers: ["sur"], options: ["sur", "nyttig", "mätt", "färsk"] }] }
+          - { id: gk7d, type: gap, text: "Till fisken äter vi ___ eller potatis.", gaps: [{ answers: ["ris"], options: ["ris", "salt", "godis", "socker"] }] }
+          - { id: txnv, type: gap, text: "Wilma älskar Italien och äter ___ med tomatsås varje vecka.", gaps: [{ answers: ["pasta"], options: ["pasta", "saft", "peppar", "sked"] }] }
+          - { id: 5n4y, type: gap, text: "Det är inte svårt: ___ mjölk och ägg och stek sedan i smör.", gaps: [{ answers: ["blanda"], options: ["blanda", "baka", "skär", "smaka"] }] }
+
+      - id: woorden-fika-feest
+        title: "Woorden in een zin: fika en feest"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: 9vf3, type: gap, text: "Vill du ha kaffe eller ___ med mjölk?", gaps: [{ answers: ["te"], options: ["te", "salt", "ris", "smör"] }] }
+          - { id: xrjs, type: gap, text: "Efter festen fanns det bara två öl ___ i kylskåpet.", gaps: [{ answers: ["kvar"], options: ["kvar", "själv", "ungefär", "egentligen"] }] }
+          - { id: buge, type: gap, text: "Anna fyller år på lördag och vi har fått en ___ till festen.", gaps: [{ answers: ["inbjudan"], options: ["inbjudan", "smak", "dryck", "sked"] }] }
+          - { id: 5tu3, type: gap, text: "Tåget till Uppsala tar ___ en timme, kanske lite mer.", gaps: [{ answers: ["ungefär"], options: ["ungefär", "kvar", "själv", "egentligen"] }] }
+          - { id: nvyr, type: gap, text: "Ingen hjälpte Olle: han lagade hela middagen ___.", gaps: [{ answers: ["själv"], options: ["själv", "kvar", "ungefär", "egentligen"] }] }
+          - { id: gzpg, type: gap, text: "Jag sa att jag var mätt, men ___ vill jag ha lite mer tårta.", gaps: [{ answers: ["egentligen"], options: ["egentligen", "kvar", "själv", "ungefär"] }] }
+          - { id: 6qbk, type: gap, text: "Det är varmt idag. Vill du ha ett glas kall ___?", gaps: [{ answers: ["saft"], options: ["saft", "peppar", "salt", "sås"] }] }
+          - { id: ke33, type: gap, text: "Det är fredag! Barnen tittar på film och äter ___.", gaps: [{ answers: ["godis"], options: ["godis", "peppar", "salt", "sås"] }] }
+          - { id: ntat, type: gap, text: "Olle köpte mjölk, bröd och ost i ___ vid stationen.", gaps: [{ answers: ["affären"], options: ["affären", "ugnen", "skeden", "smaken"] }] }
+          - { id: cg8v, type: gap, text: "Vilken ___ har glassen? – Den smakar choklad.", gaps: [{ answers: ["smak"], options: ["smak", "dryck", "inbjudan", "hatt"] }] }
+          - { id: qz9e, type: gap, text: "Fleur köpte en ___ till kräftskivan, men den var för stor.", gaps: [{ answers: ["hatt"], options: ["hatt", "smak", "dryck", "inbjudan"] }] }
+          - { id: 7jvz, type: gap, text: "På fotbollsmatchen äter Bram alltid en ___ med bröd.", gaps: [{ answers: ["korv"], options: ["korv", "sked", "ugn", "smak"] }] }
 
       - id: wat-zeg-je
         title: Wat zeg je?
@@ -315,13 +356,14 @@ sections:
         topic: berattande
         textTitle: Kräftskiva hos familjen Ek
         text: |
-          I augusti hade Ingrid och Olle kräftskiva i trädgården. Alla gästerna hade roliga hattar och det fanns lyktor i träden. De åt kräftor, ost och knäckebröd och de sjöng många visor.
+          I augusti hade Ingrid och Olle kräftskiva i trädgården. Alla deras vänner fick en inbjudan redan i juli. Alla gästerna hade roliga hattar och det fanns lyktor i träden. De åt kräftor, ost och knäckebröd och de sjöng många visor.
 
-          Fleur hade aldrig ätit kräftor förut. Hon tyckte att det var svårt att skala dem, men hon tyckte att de var goda. Bram tror att han åt tjugo kräftor! Efter kräftorna fanns det kaffe och tårta. Ingrid bakade tårtan själv. Bram var redan mätt, men han åt lite tårta ändå. Sedan dansade alla i trädgården. Festen slutade klockan ett på natten.
+          Fleur hade aldrig ätit kräftor förut. Hon tyckte att det var svårt att skala dem, men hon tyckte att de var goda. Bram tror att han åt tjugo kräftor! Till slut fanns det inga kräftor kvar. Efter kräftorna åt de tårta och drack kaffe. Ingrid bakade tårtan själv. Bram var redan mätt, men han åt lite tårta ändå. Sedan dansade alla i trädgården. Festen slutade klockan ett på natten.
 
           Dagen efter var Bram trött. Han åt bara en smörgås till frukost. ”Jag tänker aldrig äta kräftor igen!” sa han. Fleur skrattar bara. Hon tror att han vill gå på kräftskiva igen redan nästa år.
         items:
           - { id: pztz, type: truefalse, statement: "Kräftskivan var i augusti.", answer: true }
+          - { id: g3w5, type: truefalse, statement: "Gästerna fick inbjudan i augusti.", answer: false, tip: "Wanneer kregen de vrienden de uitnodiging?", correction: { answers: ["[Alla ]{gästerna|vännerna|deras vänner|de} fick {inbjudan|en inbjudan} [redan ]i juli.", "{Gästerna|Vännerna|De} fick {inbjudan|en inbjudan} [redan ]i juli."] } }
           - { id: ysqa, type: truefalse, statement: "Gästerna hade roliga hattar.", answer: true }
           - { id: qdtm, type: truefalse, statement: "Fleur hade ätit kräftor många gånger.", answer: false, tip: "Had ze ze al eens gegeten?", correction: { answers: ["{Fleur|Hon} hade aldrig ätit kräftor[ förut]."] } }
           - { id: nfdc, type: truefalse, statement: "Fleur tyckte att kräftorna var äckliga.", answer: false, tip: "Wat vond ze ervan?", correction: { answers: ["{Fleur|Hon} tyckte att {kräftorna|de} var goda."] } }
@@ -482,7 +524,7 @@ sections:
         topic: berattande
         items:
           - { id: 5r2s, type: mc, prompt: "Je vertelt over een feest. Welke zin past als eerste zin?", options: ["I lördags var jag på en fest hos min vän.", "Sedan åt vi lasagne och sallad.", "Till slut dansade vi till klockan två."], answer: 0, tip: "De eerste zin zegt waar en wanneer. Sedan (daarna) en till slut (ten slotte) komen later in het verhaal." }
-          - { id: jfxn, type: order, topic: berattande, prompt: "Vertel wat jullie daarna aten.", start: "Sedan", tokens: ["åt", "vi", "lasagne", "och", "sallad"], answers: ["Sedan åt vi lasagne och sallad.", "Sedan åt vi sallad och lasagne."] }
+          - { id: jfxn, type: order, help: "Begint de zin met *först, sedan, efter …* of met een tijd, dan komt het werkwoord **direct daarna**, vóór het onderwerp.", topic: berattande, prompt: "Vertel wat jullie daarna aten.", start: "Sedan", tokens: ["åt", "vi", "lasagne", "och", "sallad"], answers: ["Sedan åt vi lasagne och sallad.", "Sedan åt vi sallad och lasagne."] }
           - { id: qc95, type: gap, topic: det-finns, prompt: "Kies de goede vorm. (Het feest was afgelopen zaterdag.)", text: "Till efterrätt ___ det en stor chokladtårta.", gaps: [{ answers: ["fanns"], options: ["fanns", "finns"], shuffle: false, tip: "Het feest is voorbij: verleden tijd, det fanns." }] }
           - { id: gd6g, type: gap, topic: tycka-tro-tanka, prompt: "Je geeft je mening over de taart die je hebt geproefd.", text: "Jag ___ att tårtan var jättegod.", gaps: [{ answers: ["tyckte"], options: ["tyckte", "trodde", "tänkte"], tip: "Een mening over iets wat je zelf hebt geproefd: tycka (tyckte)." }] }
           - id: beek
@@ -567,7 +609,7 @@ sections:
           - { id: wd7s, type: translate, topic: modala, prompt: "Mag ik de rekening?", answers: ["Kan jag få notan[, tack]?", "Kan jag få räkningen[, tack]?", "Får jag be om {notan|räkningen}?"] }
           - { id: e96s, type: order, topic: frekvens, start: "På fredagar", tokens: ["äter", "vi", "ofta", "tacos"], answers: ["På fredagar äter vi ofta tacos."] }
           - { id: xmpv, type: gap, topic: possessiv, text: "Tack för maten! ___ köttbullar är de bästa! (jouw)", gaps: [{ answers: ["Dina"], options: ["Din", "Ditt", "Dina"] }] }
-          - { id: gd98, type: gap, topic: vader, text: "Igår ___ (snöa) det hela dagen.", gaps: [{ answers: ["snöade"], feedback: [{ match: ["snödde", "snöde"], tip: "snöa is een gewoon -ar-werkwoord: snöade." }] }] }
+          - { id: gd98, type: gap, help: "Preteritum: presens op **-ar** → **-ade**; anders achter de stam (de infinitief zonder -a) **-de**, of **-te** na *k, p, s, t, x*; korte werkwoorden krijgen **-dde**.", topic: vader, text: "Igår ___ (snöa) det hela dagen.", gaps: [{ answers: ["snöade"], feedback: [{ match: ["snödde", "snöde"], tip: "snöa is een gewoon -ar-werkwoord: snöade." }] }] }
           - { id: ja2q, type: translate, topic: vader, prompt: "Het is bewolkt, maar het regent niet.", answers: ["Det är {molnigt|mulet}[,] men det regnar inte."], feedback: [{ contains: "det är molnig", tip: "Na det är krijgt het weerwoord een -t: molnigt." }, { contains: "men regnar det", tip: "Na het voegwoord men blijft de gewone volgorde: men det regnar inte." }] }
           - { id: cwbm, type: mc, topic: allemansratten, prompt: "Jullie willen in het bos kamperen. Wat zegt het allemansrecht?", options: ["Ni får tälta en natt, men inte för nära ett hus.", "Ni får tälta i någons trädgård.", "Ni får inte tälta i skogen."], answer: 0, tip: "Eén nacht kamperen mag, als je niet te dicht bij een huis staat." }
           - { id: xhvn, type: translate, topic: allemansratten, prompt: "Je mag bessen plukken, maar je mag geen afval achterlaten.", answers: ["{Du|Man} får plocka bär[,] men {du|man} får inte lämna [kvar ][något ]skräp[ i naturen].", "{Du|Man} får plocka bär[,] men inte lämna [kvar ][något ]skräp[ i naturen]."], feedback: [{ contains: "får lämna inte", tip: "inte staat direct na het modale werkwoord: får inte lämna." }] }
@@ -637,3 +679,40 @@ vocab:
   - { sv: "vegetarisk", nl: "vegetarisch", ex: "Har ni **vegetarisk** mat?", exNl: "Hebben jullie vegetarisch eten?" }
   - { sv: "lagom", nl: "precies goed, niet te veel en niet te weinig", ex: "Kaffet är **lagom** varmt.", exNl: "De koffie is precies warm genoeg." }
   - { sv: "till slut", nl: "uiteindelijk, tot slot", ex: "**Till slut** åt vi tårta.", exNl: "Tot slot aten we taart." }
+  - { sv: "ett te", nl: "thee", def: "teet", mass: true, ex: "Jag tycker inte om kaffe, jag dricker **te** i stället.", exNl: "Ik hou niet van koffie, ik drink liever thee." }
+  - { sv: "ett kaffe", nl: "koffie", def: "kaffet", mass: true, ex: "**Kaffet** är för starkt för mig.", exNl: "De koffie is te sterk voor mij." }
+  - { sv: "ett socker", nl: "suiker", def: "sockret", mass: true, ex: "Vill du ha **socker** i kaffet?", exNl: "Wil je suiker in je koffie?" }
+  - { sv: "ett smör", nl: "boter", def: "smöret", mass: true, ex: "Jag äter bröd med **smör** och ost.", exNl: "Ik eet brood met boter en kaas." }
+  - { sv: "ett salt", nl: "zout", def: "saltet", mass: true, ex: "Soppan behöver mer **salt**.", exNl: "De soep heeft meer zout nodig." }
+  - { sv: "en peppar", nl: "peper", def: "pepparn", mass: true, ex: "Jag vill ha salt och **peppar** på potatisen.", exNl: "Ik wil zout en peper op mijn aardappelen." }
+  - { sv: "en sås", nl: "een saus", def: "såsen", pl: "såser", plDef: "såserna", ex: "Vill du ha **sås** till köttet?", exNl: "Wil je saus bij het vlees?" }
+  - { sv: "ett ris", nl: "rijst", def: "riset", mass: true, ex: "Vi äter kyckling med **ris** ikväll.", exNl: "We eten vanavond kip met rijst." }
+  - { sv: "en pasta", nl: "pasta", def: "pastan", mass: true, ex: "Barnen vill äta **pasta** varje dag.", exNl: "De kinderen willen elke dag pasta eten." }
+  - { sv: "en tomat", nl: "een tomaat", def: "tomaten", pl: "tomater", plDef: "tomaterna", ex: "Jag skär **tomater** till salladen.", exNl: "Ik snijd tomaten voor de salade." }
+  - { sv: "en lök", nl: "een ui", def: "löken", pl: "lökar", plDef: "lökarna", ex: "Först steker jag **löken** i smör.", exNl: "Eerst bak ik de ui in boter." }
+  - { sv: "en korv", nl: "een worst", def: "korven", pl: "korvar", plDef: "korvarna", ex: "Vi åt **korv** med bröd på fotbollsmatchen.", exNl: "We aten een broodje worst bij de voetbalwedstrijd." }
+  - { sv: "en sill", nl: "een haring", def: "sillen", pl: "sillar", plDef: "sillarna", ex: "Vi köpte **sill** i affären.", exNl: "We kochten haring in de winkel." }
+  - { sv: "ett knäckebröd", nl: "knäckebröd (knapperig roggebrood)", def: "knäckebrödet", mass: true, ex: "Till frukost äter jag **knäckebröd** med ost.", exNl: "Als ontbijt eet ik knäckebröd met kaas." }
+  - { sv: "en kaka", nl: "een koekje, een cake", def: "kakan", pl: "kakor", plDef: "kakorna", ex: "Vi bakade **kakor** till fikat.", exNl: "We bakten koekjes voor bij de koffie." }
+  - { sv: "en glass", nl: "een ijsje, ijs (om te eten)", def: "glassen", pl: "glassar", plDef: "glassarna", ex: "Barnen fick **glass** till efterrätt.", exNl: "De kinderen kregen ijs als toetje." }
+  - { sv: "en choklad", nl: "chocolade", def: "chokladen", mass: true, ex: "Vill du ha en bit **choklad**?", exNl: "Wil je een stukje chocolade?" }
+  - { sv: "ett godis", nl: "snoep", def: "godiset", mass: true, ex: "På lördagar får barnen äta **godis**.", exNl: "Op zaterdag mogen de kinderen snoep eten." }
+  - { sv: "en saft", nl: "ranja, limonadesiroop", def: "saften", mass: true, ex: "Barnen dricker **saft** till maten.", exNl: "De kinderen drinken ranja bij het eten." }
+  - { sv: "en öl", nl: "een biertje, bier", def: "ölen", pl: "öl", plDef: "ölen", ex: "Två **öl**, tack!", exNl: "Twee biertjes, alstublieft!" }
+  - { sv: "en dryck", nl: "een drank, een drankje", def: "drycken", pl: "drycker", plDef: "dryckerna", ex: "Vad vill du ha för **dryck** till maten?", exNl: "Welk drankje wil je bij het eten?" }
+  - { sv: "en smak", nl: "een smaak", def: "smaken", pl: "smaker", plDef: "smakerna", ex: "Vilken **smak** vill du ha på glassen? – Choklad!", exNl: "Welke smaak wil je voor je ijsje? – Chocolade!" }
+  - { sv: "en bit", nl: "een stuk", def: "biten", pl: "bitar", plDef: "bitarna", ex: "Kan jag få en **bit** tårta till?", exNl: "Mag ik nog een stuk taart?" }
+  - { sv: "en sked", nl: "een lepel", def: "skeden", pl: "skedar", plDef: "skedarna", ex: "Man äter soppa med **sked**.", exNl: "Je eet soep met een lepel." }
+  - { sv: "en ugn", nl: "een oven", def: "ugnen", pl: "ugnar", plDef: "ugnarna", ex: "Kakorna ska vara i **ugnen** i tio minuter.", exNl: "De koekjes moeten tien minuten in de oven." }
+  - { sv: "en hatt", nl: "een hoed", def: "hatten", pl: "hattar", plDef: "hattarna", ex: "På kräftskivan har alla gäster en rolig **hatt**.", exNl: "Op het kreeftenfeest hebben alle gasten een grappige hoed op." }
+  - { sv: "en lykta", nl: "een lantaarn", def: "lyktan", pl: "lyktor", plDef: "lyktorna", ex: "Det fanns **lyktor** i trädgården.", exNl: "Er waren lantaarns in de tuin." }
+  - { sv: "en inbjudan", nl: "een uitnodiging", def: "inbjudan", pl: "inbjudningar", plDef: "inbjudningarna", ex: "Vi fick en **inbjudan** till Annas bröllop.", exNl: "We kregen een uitnodiging voor de bruiloft van Anna." }
+  - { sv: "en affär", nl: "een winkel", def: "affären", pl: "affärer", plDef: "affärerna", ex: "Jag går till **affären** och köper mjölk.", exNl: "Ik ga naar de winkel en koop melk." }
+  - { sv: "att blanda", nl: "mengen", ex: "**Blanda** socker och smör och baka sedan kakorna.", exNl: "Meng suiker en boter en bak dan de koekjes." }
+  - { sv: "att hälla", nl: "gieten, schenken", ex: "Hon **häller** mjölk i kaffet.", exNl: "Ze schenkt melk in haar koffie." }
+  - { sv: "nyttig", nl: "gezond (om te eten)", ex: "Det är **nyttigt** att äta fisk.", exNl: "Het is gezond om vis te eten." }
+  - { sv: "sur", nl: "zuur; chagrijnig", ex: "Mjölken är **sur**, vi måste köpa ny.", exNl: "De melk is zuur, we moeten nieuwe kopen." }
+  - { sv: "kvar", nl: "over, nog (aanwezig)", ex: "Det finns tre kakor **kvar**.", exNl: "Er zijn nog drie koekjes over." }
+  - { sv: "själv", nl: "zelf", ex: "Har du lagat maten **själv**?", exNl: "Heb je het eten zelf gemaakt?" }
+  - { sv: "ungefär", nl: "ongeveer", ex: "Det kom **ungefär** trettio gäster till festen.", exNl: "Er kwamen ongeveer dertig gasten op het feest." }
+  - { sv: "egentligen", nl: "eigenlijk", ex: "Jag är **egentligen** inte hungrig, men tårtan ser god ut.", exNl: "Ik heb eigenlijk geen honger, maar de taart ziet er lekker uit." }

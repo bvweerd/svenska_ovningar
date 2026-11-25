@@ -15,6 +15,7 @@ grammar:
   - id: presens
     title: Werkwoorden in de tegenwoordige tijd (presens)
     summary: "Het werkwoord heeft in presens voor **alle personen dezelfde vorm**: *jag/du/hon/vi/de* **talar**."
+    hint: "Presens: **-r** achter de infinitief (*tala → talar*), of de **-a** wordt **-er** (*skriva → skriver*); korte werkwoorden krijgen **-r** (*tro → tror*). *Vara, ha* en *göra* zijn onregelmatig."
     body: |
       Het Zweedse werkwoord verandert niet per persoon. *Jag talar, du talar, hon talar, vi talar, de talar.* Je hoeft per werkwoord dus maar één vorm te leren.
 
@@ -32,6 +33,7 @@ grammar:
   - id: v2
     title: Woordvolgorde – het werkwoord op plaats 2
     summary: "In een gewone zin staat het werkwoord **altijd op plaats 2**. Begin je met iets anders dan het onderwerp, dan komt het onderwerp **direct na** het werkwoord."
+    hint: "Het werkwoord staat **altijd op plaats 2**. Begin je met iets anders dan het onderwerp, dan komt het onderwerp **direct na** het werkwoord."
     body: |
       Net als in het Nederlands staat in een Zweedse hoofdzin de persoonsvorm op de **tweede plaats**.
 
@@ -72,6 +74,7 @@ grammar:
   - id: inte
     title: Ontkennen met inte
     summary: "*Inte* (niet) staat in een hoofdzin **direct na het werkwoord**; bij inversie **na het onderwerp**."
+    hint: "*Inte* staat **direct na het werkwoord**. Begint de zin met iets anders dan het onderwerp, dan staat *inte* **na het onderwerp**."
     body: |
       - Jag talar **inte** finska.
       - Hon bor **inte** i Stockholm.
@@ -112,6 +115,7 @@ grammar:
   - id: substantiv
     title: En of ett – en de bepaalde vorm
     summary: "Er zijn **en-woorden** en **ett-woorden**. Het bepaalde lidwoord komt **achter** het woord: *en bil → bilen*, *ett hus → huset*."
+    hint: "Het bepaalde lidwoord komt **achter** het woord: en-woord **-en**, ett-woord **-et**. Eindigt het woord op een klinker, dan alleen **-n** of **-t**."
     body: |
       Elk zelfstandig naamwoord is een **en-woord** of een **ett-woord**. Ongeveer drie op de vier woorden zijn en-woorden. Leer het lidwoord altijd mee.
 
@@ -127,6 +131,7 @@ grammar:
   - id: klockan
     title: Hoe laat is het?
     summary: "*Klockan är …*: **över** = over, **i** = voor, **halv** + het **volgende** uur (zoals in het Nederlands)."
+    hint: "*över* = over, *i* = voor, **halv** + het **volgende** uur (zoals in het Nederlands)."
     body: |
       Je vraagt: *Vad är klockan?* of *Hur mycket är klockan?* Je antwoordt met *Klockan är …*
 
@@ -147,6 +152,7 @@ grammar:
   - id: raknord
     title: Getallen
     summary: "0–12 leer je uit je hoofd; 13–19 eindigen op **-ton**, tientallen op **-tio** (behalve *tjugo*)."
+    hint: "0–12 leer je uit je hoofd; 13–19 eindigen op **-ton**, tientallen op **-tio** (behalve 20). Het eerste deel verandert soms een beetje (zie de kaart). Een groot getal schrijf je **aan elkaar**: tientallen + eenheden, honderden met *hundra*."
     body: |
       | 0–4 | 5–9 | 10–14 | 15–19 |
       |---|---|---|---|

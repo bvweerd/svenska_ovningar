@@ -10,6 +10,7 @@ grammar:
   - id: adjektiv-obestamd
     title: Bijvoeglijke naamwoorden – onbepaald
     summary: "en-woord: **fin**, ett-woord: **fint**, meervoud: **fina**. *En fin bil, ett fint hus, fina bilar.* Ook na *är*: *Huset är stort.*"
+    hint: "Bij een en-woord **geen uitgang**, bij een ett-woord **-t**, in het meervoud **-a**. Dat geldt ook na *är*. Let op: eindigt het woord op een klinker, dan **-tt** (*blå → blått*); *-d* + *-t* wordt **-tt**; *liten* is onregelmatig (zie de kaart)."
     body: |
       Het bijvoeglijk naamwoord past zich aan het zelfstandig naamwoord aan:
 
@@ -33,6 +34,7 @@ grammar:
   - id: adjektiv-bestamd
     title: Bijvoeglijke naamwoorden – bepaald
     summary: "**den/det/de + adjectief op -a + bepaald zelfstandig naamwoord**: *den nya bilen, det stora huset, de små barnen*. Na *min, sin, Olles*: *min nya bil*."
+    hint: "Na *den, det, de* en na *min, sin, Olles* krijgt het bijvoeglijk naamwoord **-a**, bij elk woord. *Liten* is onregelmatig, en in het meervoud anders dan in het enkelvoud: kijk op de kaart."
     body: |
       Staat er een bijvoeglijk naamwoord vóór een bepaald zelfstandig naamwoord, dan krijg je **drie** dingen:
 
@@ -60,6 +62,7 @@ grammar:
   - id: komparation
     title: Vergelijken – större, störst
     summary: "Regelmatig: **-are, -ast** (*varm, varmare, varmast*). Onregelmatig: *bra – bättre – bäst*, *stor – större – störst*, *gammal – äldre – äldst*. Woorden op *-isk* en *-ande*: **mer, mest**."
+    hint: "Vergrotende trap **-are**, overtreffende trap **-ast** (na *den/det/de*: **-aste**). Een paar gewone woorden zijn onregelmatig, vaak met een andere klinker."
     body: |
       | Basis | Vergrotende trap | Overtreffende trap |
       |---|---|---|
@@ -383,6 +386,7 @@ sections:
           - { id: ua54, type: transform, prompt: "Kakorna är goda. Vem bakade kakorna?", answers: ["Vem bakade de goda kakorna?"], feedback: [{ contains: ["den goda kakorna", "det goda kakorna"], tip: "Meervoud: *de* goda kakorna." }] }
 
       - id: zinsbouw-adjectief
+        help: "Het werkwoord staat op **plaats 2**. Het bijvoeglijk naamwoord staat **vóór** het zelfstandig naamwoord, na *en/ett* of *den/det/de*."
         title: Zinsbouw – mooi, groot en nieuw
         instruction: Maak de zin af. Het bijvoeglijk naamwoord staat vóór het zelfstandig naamwoord.
         topic: adjektiv-obestamd
@@ -392,6 +396,80 @@ sections:
           - { id: hd2e, type: order, start: "Vi", tokens: ["bor", "i", "det", "gula", "huset"], answers: ["Vi bor i det gula huset."], topic: adjektiv-bestamd, feedback: [{ match: "Vi bor i gula det huset.", tip: "Eerst det, dan het bijvoeglijk naamwoord: det gula huset." }] }
           - { id: pwpa, type: order, start: "De", tokens: ["små", "barnen", "sjunger", "i", "kyrkan"], answers: ["De små barnen sjunger i kyrkan."], topic: adjektiv-bestamd }
           - { id: p8hf, type: order, start: "Det", tokens: ["var", "den", "kallaste", "dagen", "i år"], answers: ["Det var den kallaste dagen i år."], topic: komparation }
+
+      - id: woorden-kleren-kleuren
+        title: "Woorden in een zin: kleren en kleuren"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: t46r, type: gap, text: "Gräset och träden är ___ på sommaren.", gaps: [{ answers: ["gröna"], options: ["gröna", "svarta", "rosa", "vita"] }] }
+          - { id: yw5z, type: gap, text: "En banan är ___.", gaps: [{ answers: ["gul"], options: ["gul", "blå", "svart", "rosa"] }] }
+          - { id: 9swt, type: gap, text: "Morfar är sjuttio år och har ___ hår.", gaps: [{ answers: ["grått"], options: ["grått", "grönt", "blått", "rosa"] }] }
+          - { id: 6n68, type: gap, text: "Kaffe utan mjölk är ___.", gaps: [{ answers: ["svart"], options: ["svart", "gul", "rosa", "grön"] }] }
+          - { id: sh3b, type: gap, text: "Byxorna är för små. Har ni en större ___?", gaps: [{ answers: ["storlek"], options: ["storlek", "färg", "ljusstake", "kula"] }] }
+          - { id: z82m, type: gap, text: "Mormor gav mig en ___ som hon hade stickat själv.", gaps: [{ answers: ["tröja"], options: ["tröja", "kula", "färg", "storlek"] }] }
+          - { id: vpar, type: gap, text: "Till bröllopet köpte hon en ny ___.", gaps: [{ answers: ["klänning"], options: ["klänning", "kula", "ljusstake", "färg"] }] }
+          - { id: 6mn7, type: gap, text: "Olle har på sig en blå ___ och svarta byxor.", gaps: [{ answers: ["skjorta"], options: ["skjorta", "strumpa", "sko", "storlek"] }] }
+          - { id: 22x2, type: gap, text: "Mina fötter är kalla. Har du ett par varma ___?", gaps: [{ answers: ["strumpor"], options: ["strumpor", "kulor", "ljusstakar", "färger"] }] }
+          - { id: pqxk, type: gap, text: "Jag går mycket, så jag behöver bra ___.", gaps: [{ answers: ["skor"], options: ["skor", "kulor", "färger", "storlekar"] }] }
+          - { id: k2dp, type: gap, text: "Det är kallt ute, så jag ska ___ min tjocka jacka.", gaps: [{ answers: ["ha på mig"], options: ["ha på mig", "jämföra", "passa", "tända"] }] }
+          - { id: xsg6, type: gap, text: "Jag provade byxorna, men de ___ inte.", gaps: [{ answers: ["passade"], options: ["passade", "jämförde", "tände", "önskade"] }] }
+          - { id: 9j3n, type: gap, text: "Innan vi köper en ny tv ___ vi priserna i tre affärer.", gaps: [{ answers: ["jämför"], options: ["jämför", "passar", "tänder", "pyntar"] }] }
+
+      - id: woorden-hur-ar-det
+        title: "Woorden in een zin: hoe is het?"
+        instruction: Kies het woord dat past.
+        topic: woordenschat
+        shuffle: true
+        items:
+          - { id: ujhs, type: gap, text: "Jag fryser i den här ___ jackan.", gaps: [{ answers: ["tunna"], options: ["tunna", "tjocka", "tomma", "rika"] }] }
+          - { id: u5qm, type: gap, text: "Mormors gamla bok är väldigt ___, den har femhundra sidor.", gaps: [{ answers: ["tjock"], options: ["tjock", "tunn", "tom", "rik"] }] }
+          - { id: y9sz, type: gap, text: "Kylskåpet är ___. Vi måste handla!", gaps: [{ answers: ["tomt"], options: ["tomt", "fullt", "högt", "rikt"] }] }
+          - { id: at3e, type: gap, text: "Bussen var så ___ att vi fick stå hela vägen.", gaps: [{ answers: ["full"], options: ["full", "tom", "smal", "låg"] }] }
+          - { id: qdyw, type: gap, text: "Mount Everest är det ___ berget i världen.", gaps: [{ answers: ["högsta"], options: ["högsta", "lägsta", "bredaste", "tunnaste"] }] }
+          - { id: njst, type: gap, text: "Det finns bara plats för en person i den ___ trappan.", gaps: [{ answers: ["smala"], options: ["smala", "breda", "tidiga", "rika"] }] }
+          - { id: v8ce, type: gap, text: "Läraren blev ___ när ingen hade gjort läxorna.", gaps: [{ answers: ["arg"], options: ["arg", "stolt", "nöjd", "rik"] }] }
+          - { id: e7h8, type: gap, text: "Nils har lärt sig simma, och pappa är så ___ över honom.", gaps: [{ answers: ["stolt"], options: ["stolt", "arg", "elak", "rädd"] }] }
+          - { id: j4kt, type: gap, text: "Maten var god, och alla gästerna var ___.", gaps: [{ answers: ["nöjda"], options: ["nöjda", "rädda", "elaka", "fattiga"] }] }
+          - { id: jgn6, type: gap, text: "De bor i ett stort hus och har tre bilar. De är ___.", gaps: [{ answers: ["rika"], options: ["rika", "fattiga", "elaka", "smala"] }] }
+          - { id: wfxy, type: gap, text: "Det är ___ att det snöar i Skåne i maj.", gaps: [{ answers: ["konstigt"], options: ["konstigt", "tidigt", "tomt", "fullt"] }] }
+          - { id: mphu, type: gap, text: "Den ___ bussen går klockan fem.", gaps: [{ answers: ["tidiga"], options: ["tidiga", "låga", "breda", "smala"] }] }
+          - { id: h6x9, type: gap, text: "Hunden är snäll, du behöver inte vara ___.", gaps: [{ answers: ["rädd"], options: ["rädd", "stolt", "nöjd", "rik"] }] }
+
+      - id: langere-zinnen
+        help: "Hoofdzin: het werkwoord staat op **plaats 2**. Bijzin (na *att, om, när, eftersom* …): **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt daarna eerst het werkwoord van de hoofdzin."
+        title: "Langere zinnen bouwen"
+        instruction: Zet de woorden in de goede volgorde.
+        topic: adjektiv-bestamd
+        items:
+          - { id: hnnq, type: order, start: "På julafton", tokens: ["satt", "hela", "familjen", "runt", "den stora granen", "i vardagsrummet"], answers: ["På julafton satt hela familjen i vardagsrummet runt den stora granen.", "På julafton satt hela familjen runt den stora granen i vardagsrummet."] }
+          - { id: a9w9, type: order, topic: komparation, start: "Wilma tycker att", tokens: ["den röda klänningen", "är", "finare", "än", "den blå"], answers: ["Wilma tycker att den röda klänningen är finare än den blå."] }
+          - { id: dwt6, type: order, topic: adjektiv-obestamd, start: "Vi bor i", tokens: ["ett", "litet", "gult", "hus", "som", "ligger", "nära", "sjön"], answers: ["Vi bor i ett litet gult hus som ligger nära sjön."] }
+          - { id: gdxp, type: order, topic: komparation, start: "Mitt nya rum", tokens: ["är", "större", "och", "ljusare", "än", "det gamla"], answers: ["Mitt nya rum är större och ljusare än det gamla.", "Mitt nya rum är ljusare och större än det gamla."] }
+          - { id: y86y, type: order, topic: komparation, start: "Eftersom det var kallt", tokens: ["tog", "Nils", "på sig", "sin", "tjockaste", "tröja"], answers: ["Eftersom det var kallt tog Nils på sig sin tjockaste tröja.", "Eftersom det var kallt tog Nils sin tjockaste tröja på sig."] }
+          - { id: 8nnb, type: order, topic: adjektiv-obestamd, start: "Lilla Nils", tokens: ["fick", "en", "ny", "cykel", "och", "två", "små", "böcker"], answers: ["Lilla Nils fick en ny cykel och två små böcker.", "Lilla Nils fick två små böcker och en ny cykel."] }
+          - { id: qa36, type: order, topic: komparation, start: "Mormor bakar", tokens: ["de", "godaste", "lussekatterna", "i", "hela", "stan"], answers: ["Mormor bakar de godaste lussekatterna i hela stan."] }
+          - { id: hdhm, type: order, topic: komparation, start: "I december", tokens: ["är", "dagarna", "kortare", "och", "nätterna", "längre", "än", "på sommaren"], answers: ["I december är dagarna kortare och nätterna längre än på sommaren.", "I december är nätterna längre och dagarna kortare än på sommaren."] }
+          - { id: uy55, type: order, topic: komparation, start: "Olle köpte", tokens: ["den", "billigaste", "granen", "eftersom", "de", "andra", "var", "för", "dyra"], answers: ["Olle köpte den billigaste granen eftersom de andra var för dyra."] }
+          - { id: x2qp, type: order, start: "Den lilla flickan", tokens: ["hade", "en", "lång", "vit", "klänning", "och", "ljus", "i håret"], answers: ["Den lilla flickan hade ljus i håret och en lång vit klänning.", "Den lilla flickan hade en lång vit klänning och ljus i håret."] }
+
+      - id: nog-langere-zinnen
+        help: "Hoofdzin: het werkwoord staat op **plaats 2**. Bijzin (na *att, om, när, eftersom* …): **onderwerp – (inte) – werkwoord**. Begint de zin met een bijzin, dan komt daarna eerst het werkwoord van de hoofdzin."
+        title: "Nog meer lange zinnen"
+        instruction: Zet de woorden in de goede volgorde.
+        topic: adjektiv-bestamd
+        items:
+          - { id: 5dyy, type: order, topic: komparation, start: "Fleur tycker att", tokens: ["julen", "i Sverige", "är", "mysigare", "än", "i Nederländerna"], answers: ["Fleur tycker att julen är mysigare i Sverige än i Nederländerna.", "Fleur tycker att julen är mysigare i Nederländerna än i Sverige.", "Fleur tycker att julen i Nederländerna är mysigare än i Sverige.", "Fleur tycker att julen i Sverige är mysigare än i Nederländerna."] }
+          - { id: yx66, type: order, start: "Kan du", tokens: ["ge", "mig", "den", "röda", "kulan", "som", "ligger", "på", "bordet"], answers: ["Kan du ge mig den röda kulan som ligger på bordet?"] }
+          - { id: qcx3, type: order, start: "Ingrid har", tokens: ["köpt", "nya", "vita", "ljus", "till", "den", "gamla", "ljusstaken"], answers: ["Ingrid har köpt nya vita ljus till den gamla ljusstaken."] }
+          - { id: hfwe, type: order, topic: komparation, start: "Stockholm är", tokens: ["större", "än", "Göteborg", "men", "inte", "lika", "stort", "som", "London"], answers: ["Stockholm är inte lika stort som London men större än Göteborg.", "Stockholm är större än Göteborg men inte lika stort som London."] }
+          - { id: twbj, type: order, topic: adjektiv-obestamd, start: "Bram letade", tokens: ["länge", "efter", "en", "fin", "julklapp", "till", "Fleur"], answers: ["Bram letade länge efter en fin julklapp till Fleur."] }
+          - { id: 9shs, type: order, topic: komparation, start: "Barnen sjöng", tokens: ["de", "vackraste", "julsångerna", "som", "de", "kunde"], answers: ["Barnen sjöng de vackraste julsångerna som de kunde."] }
+          - { id: 9krv, type: order, topic: adjektiv-obestamd, start: "Efter julbordet", tokens: ["var", "alla", "så", "mätta", "att", "de", "inte", "kunde", "äta", "någon", "efterrätt"], answers: ["Efter julbordet var alla så mätta att de inte kunde äta någon efterrätt."], feedback: [{ contains: "de kunde inte", tip: "In een bijzin staat inte vóór het werkwoord. Att de inte kunde …" }] }
+          - { id: k552, type: order, start: "Nästa år", tokens: ["vill", "vi", "fira", "jul", "hos", "mormor", "i", "hennes", "stora", "hus"], answers: ["Nästa år vill vi fira jul hos mormor i hennes stora hus."] }
+          - { id: y3sy, type: order, topic: komparation, start: "Det är minus tio grader idag, så det är", tokens: ["mycket", "varmare", "inne", "än", "ute"], answers: ["Det är minus tio grader {idag|i dag}, så det är mycket varmare inne än ute."] }
+          - { id: vx2s, type: order, topic: komparation, start: "Den gamla kyrkan", tokens: ["är", "det", "vackraste", "huset", "i", "vår", "lilla", "stad"], answers: ["Den gamla kyrkan är det vackraste huset i vår lilla stad."] }
 
       - id: wat-zeg-je
         title: Wat zeg je?
@@ -430,7 +508,7 @@ sections:
 
           På julafton kom Fleur och Bram till familjen Ek. Klockan tre tittade alla på Kalle Anka på tv, som många svenskar gör varje år. Sedan åt de julbord med skinka, sill och köttbullar. På kvällen kom tomten med julklappar. Nils fick den största julklappen – en ny cykel!
 
-          På juldagen sov alla länge. Sedan ville Nils prova sin nya cykel, fastän det låg mycket snö ute. Fleur och Bram åt lunch med familjen och åkte sedan hem till sin nya lägenhet. Fleur tyckte att julen i Sverige var mysigare än julen i Nederländerna. Alla ljusen i de mörka fönstren var så vackra!
+          På juldagen sov alla länge. Sedan ville Nils prova sin nya cykel, fastän det låg mycket snö ute. Wilma hade på sig sin nya tjocka tröja. Fleur och Bram åt lunch med familjen och åkte sedan hem till sin nya lägenhet. Fleur tyckte att julen i Sverige var mysigare än julen i Nederländerna. Alla ljusen i de mörka fönstren var så vackra!
         items:
           - { id: czre, type: truefalse, statement: "Luciatåget var den tjugofjärde december.", answer: false, tip: "Wanneer is Lucia?", correction: { answers: ["Luciatåget var den trettonde december."] } }
           - { id: 635e, type: truefalse, statement: "Wilma var Lucia.", answer: true }
@@ -680,7 +758,7 @@ sections:
           - { id: yhns, type: gap, topic: placera, text: "___ dig här och vänta lite!", gaps: [{ answers: ["Sätt"], options: ["Sätt", "Sitt", "Ställ"], shuffle: false, feedback: [{ match: "Sitt", tip: "Gaan zitten is een beweging: Sätt dig!" }] }] }
           - { id: 9kb6, type: gap, topic: placera, text: "Bram har lagt boken på bordet. Nu ___ den där.", gaps: [{ answers: ["ligger"], options: ["ligger", "lägger", "står"], shuffle: false, feedback: [{ match: "lägger", tip: "Waar iets nu is (het resultaat): ligger." }] }] }
           - { id: 5mws, type: gap, topic: kroppen, text: "Nils har gått länge och har ont i ___. (zijn voeten)", gaps: [{ answers: ["fötterna"], feedback: [{ match: ["fotarna", "foterna", "fötter"], tip: "fot – fötter, en na ont i de bepaalde vorm: fötterna." }, { match: "hans fötter", tip: "Na ont i: de bepaalde vorm, zonder hans: fötterna." }] }] }
-          - { id: kget, type: gap, topic: vader, text: "På julafton ___ (snöa) det hela dagen.", gaps: [{ answers: ["snöade"], feedback: [{ match: ["snödde", "snöde"], tip: "snöa is een gewoon -ar-werkwoord: snöade." }] }] }
+          - { id: kget, type: gap, help: "Preteritum: presens op **-ar** → **-ade**; anders achter de stam (de infinitief zonder -a) **-de**, of **-te** na *k, p, s, t, x*; korte werkwoorden krijgen **-dde**.", topic: vader, text: "På julafton ___ (snöa) det hela dagen.", gaps: [{ answers: ["snöade"], feedback: [{ match: ["snödde", "snöde"], tip: "snöa is een gewoon -ar-werkwoord: snöade." }] }] }
           - { id: b2cc, type: mc, topic: mat-fraser, prompt: "Je hebt bij vrienden gegeten en staat op van tafel. Wat zeg je?", options: ["Tack för maten!", "Smaklig måltid!", "Varsågod!"], answer: 0, tip: "Na het eten bedank je: Tack för maten!" }
           - { id: wtn8, type: gap, topic: tempus, text: "Vi hade redan ___ (köpa) alla julklappar i november.", gaps: [{ answers: ["köpt"], feedback: [{ match: ["köpat", "köpte"], tip: "Na hade komt het supinum: köpa – köpte – köpt." }] }] }
           - { id: 3uwb, type: gap, topic: positionsverb, text: "Katten ___ under granen och sover.", gaps: [{ answers: ["ligger"], options: ["ligger", "står", "sitter"], shuffle: false, feedback: [{ match: "står", tip: "Wie slaapt, ligt: ligger." }] }] }
@@ -700,7 +778,7 @@ sections:
           - { id: 9cbq, type: translate, topic: komparation, prompt: "Dit is de mooiste dag van het jaar.", answers: ["{Det här|Detta} är den {vackraste|finaste|bästa} dagen på året."], feedback: [{ contains: "i året", tip: "Van het jaar: på året." }] }
           - { id: 7qtq, type: translate, topic: placera, prompt: "Ik heb de sleutels op tafel gelegd.", answers: ["Jag har lagt nycklarna på bordet."], feedback: [{ contains: "har legat", tip: "legat hoort bij ligga (liggen). Iets neerleggen is lägga: har lagt." }, { contains: ["har lagd", "har läggt"], tip: "De supinum van lägga is lagt." }] }
           - { id: sud7, type: translate, topic: kroppen, prompt: "Ik heb pijn in mijn buik.", answers: ["Jag har {ont i magen|magont}.", "Det gör ont i magen."], feedback: [{ contains: ["ont i min mage", "ont i mage"], tip: "Na ont i: de bepaalde vorm, zonder min: ont i magen." }] }
-          - { id: jqxm, type: gap, topic: subjunktioner, text: "Wilma läser ___ Nils bakar pepparkakor. (terwijl)", gaps: [{ answers: ["medan"], feedback: [{ match: ["när", "eftersom"], tip: "Terwijl = medan." }] }] }
+          - { id: jqxm, type: gap, help: "Een voegwoord voor twee dingen **tegelijk**: zoek het op de kaart over bijzinnen.", topic: subjunktioner, text: "Wilma läser ___ Nils bakar pepparkakor. (terwijl)", gaps: [{ answers: ["medan"], feedback: [{ match: ["när", "eftersom"], tip: "Terwijl = medan." }] }] }
           - { id: 4rjt, type: gap, topic: subjunktioner, text: "Vi öppnar julklapparna ___ vi har ätit. (als, wanneer)", gaps: [{ answers: ["när"], options: ["när", "eftersom", "fastän"], shuffle: false }] }
           - { id: 5sd3, type: gap, topic: reflexiv, text: "Det är kallt ute. Barnen klär på ___ och går ut i snön.", gaps: [{ answers: ["sig"], options: ["sig", "dem", "mig"], shuffle: false, feedback: [{ match: "dem", tip: "De kinderen kleden zichzelf aan: sig." }] }] }
           - { id: pjqa, type: gap, topic: reflexiv, text: "Varsågoda, sätt ___ vid bordet!", gaps: [{ answers: ["er"], options: ["oss", "er", "sig"], shuffle: false, feedback: [{ match: "sig", tip: "Je spreekt meer mensen aan (ni): sätt er." }] }] }
@@ -712,7 +790,7 @@ vocab:
   - { sv: "en jul", nl: "de kerst", def: "julen", mass: true, pl: "jular", ex: "Vad gör ni i **jul**?", exNl: "Wat doen jullie met kerst?" }
   - { sv: "ett ljus", nl: "een kaars, een licht", def: "ljuset", pl: "ljus", plDef: "ljusen", ex: "Vi tänder **ljus** i fönstret.", exNl: "We steken kaarsen aan bij het raam." }
   - { sv: "en julklapp", nl: "een kerstcadeau", def: "julklappen", pl: "julklappar", plDef: "julklapparna", ex: "Barnen öppnar sina **julklappar**.", exNl: "De kinderen maken hun kerstcadeaus open." }
-  - { sv: "en gran", nl: "een spar, een kerstboom", def: "granen", pl: "granar", plDef: "granarna", alt: ["en julgran"], ex: "Vi köper en **{gran|julgran}** på torget.", exNl: "We kopen een kerstboom op de markt." }
+  - { sv: "en gran", nl: "een spar(renboom)", def: "granen", pl: "granar", plDef: "granarna", ex: "Det växer höga **granar** i skogen.", exNl: "Er groeien hoge sparren in het bos." }
   - { sv: "en stjärna", nl: "een ster", def: "stjärnan", pl: "stjärnor", plDef: "stjärnorna", ex: "Det sitter en **stjärna** i toppen på granen.", exNl: "Er zit een ster in de top van de kerstboom." }
   - { sv: "en tomte", nl: "een kabouter, een kerstman", def: "tomten", pl: "tomtar", plDef: "tomtarna", ex: "**Tomten** kommer på julafton.", exNl: "De kerstman komt op kerstavond." }
   - { sv: "en vante", nl: "een want", def: "vanten", pl: "vantar", plDef: "vantarna", ex: "Fleur fick varma **vantar** i julklapp.", exNl: "Fleur kreeg warme wanten als kerstcadeau." }
@@ -720,7 +798,7 @@ vocab:
   - { sv: "en skinka", nl: "een ham", def: "skinkan", pl: "skinkor", plDef: "skinkorna", ex: "**Skinkan** står på julbordet.", exNl: "De ham staat op het kerstbuffet." }
   - { sv: "ett nyår", nl: "het nieuwjaar", def: "nyåret", mass: true, pl: "nyår", ex: "Vi firar **nyår** hos mina föräldrar.", exNl: "We vieren oud en nieuw bij mijn ouders." }
   - { sv: "att önska", nl: "wensen", ex: "Vad **önskar** du dig i julklapp?", exNl: "Wat wens jij je als kerstcadeau?" }
-  - { sv: "att sticka", nl: "breien", ex: "Mormor **stickar** en tröja till mig.", exNl: "Oma breit een trui voor mij." }
+  - { sv: "att sticka", nl: "breien", ex: "Jag **stickar** vantar till hela familjen.", exNl: "Ik brei wanten voor de hele familie." }
   - { sv: "att pynta", nl: "versieren", ex: "Vi **pyntar** huset till jul.", exNl: "We versieren het huis voor kerst." }
   - { sv: "att tända", nl: "aansteken", ex: "Vi **tänder** ett ljus varje söndag i advent.", exNl: "In de advent steken we elke zondag een kaars aan." }
   - { sv: "vacker", nl: "mooi", ex: "Granen är så **vacker**!", exNl: "De kerstboom is zo mooi!" }
@@ -765,3 +843,47 @@ vocab:
   - { sv: "lång", nl: "lang", ex: "I december är nätterna **längre** än dagarna.", exNl: "In december zijn de nachten langer dan de dagen." }
   - { sv: "tung", nl: "zwaar", ex: "Paketet är ganska **tungt**.", exNl: "Het pakje is vrij zwaar." }
   - { sv: "lätt", nl: "makkelijk, licht (van gewicht)", ex: "Det är **lätt** att baka pepparkakor.", exNl: "Het is makkelijk om gemberkoekjes te bakken." }
+  - { sv: "en julgran", nl: "een kerstboom", alt: ["en gran"], def: "julgranen", pl: "julgranar", plDef: "julgranarna", ex: "**{Julgranen|Granen}** står i vardagsrummet.", exNl: "De kerstboom staat in de woonkamer." }
+  - { sv: "en kula", nl: "een (kerst)bal, een bolletje", def: "kulan", pl: "kulor", plDef: "kulorna", ex: "Vi hänger röda **kulor** i granen.", exNl: "We hangen rode ballen in de boom." }
+  - { sv: "en ljusstake", nl: "een kandelaar", def: "ljusstaken", pl: "ljusstakar", plDef: "ljusstakarna", ex: "I fönstret står en **ljusstake** med sju ljus.", exNl: "In het raam staat een kandelaar met zeven kaarsen." }
+  - { sv: "en halsduk", nl: "een sjaal", def: "halsduken", pl: "halsdukar", plDef: "halsdukarna", ex: "Hon stickade en lång **halsduk** till sin bror.", exNl: "Ze breide een lange sjaal voor haar broer." }
+  - { sv: "ett presentkort", nl: "een cadeaubon", def: "presentkortet", pl: "presentkort", plDef: "presentkorten", ex: "Jag vet inte vad hon vill ha, så jag köper ett **presentkort**.", exNl: "Ik weet niet wat ze wil hebben, dus ik koop een cadeaubon." }
+  - { sv: "en storlek", nl: "een maat (van kleding)", def: "storleken", pl: "storlekar", plDef: "storlekarna", ex: "Vilken **storlek** har du i skor?", exNl: "Welke schoenmaat heb je?" }
+  - { sv: "en färg", nl: "een kleur", def: "färgen", pl: "färger", plDef: "färgerna", ex: "Vilken **färg** vill du ha, röd eller blå?", exNl: "Welke kleur wil je, rood of blauw?" }
+  - { sv: "en tröja", nl: "een trui", def: "tröjan", pl: "tröjor", plDef: "tröjorna", ex: "Den här **tröjan** är för stor för mig.", exNl: "Deze trui is te groot voor mij." }
+  - { sv: "byxor", nl: "een broek (in het Zweeds altijd meervoud)", ex: "Jag behöver nya **byxor**.", exNl: "Ik heb een nieuwe broek nodig." }
+  - { sv: "en klänning", nl: "een jurk", def: "klänningen", pl: "klänningar", plDef: "klänningarna", ex: "Hon har på sig en röd **klänning**.", exNl: "Ze draagt een rode jurk." }
+  - { sv: "en skjorta", nl: "een overhemd", def: "skjortan", pl: "skjortor", plDef: "skjortorna", ex: "Pappa har en vit **skjorta** på julafton.", exNl: "Papa draagt op kerstavond een wit overhemd." }
+  - { sv: "en sko", nl: "een schoen", def: "skon", pl: "skor", plDef: "skorna", ex: "Jag har köpt nya **skor** till festen.", exNl: "Ik heb nieuwe schoenen gekocht voor het feest." }
+  - { sv: "en strumpa", nl: "een sok", def: "strumpan", pl: "strumpor", plDef: "strumporna", ex: "Ta på dig **strumpor**, golvet är kallt!", exNl: "Doe sokken aan, de vloer is koud!" }
+  - { sv: "att ha på sig", nl: "dragen, aanhebben (kleren)", ex: "Vad ska du **ha på dig** på festen?", exNl: "Wat draag je op het feest?" }
+  - { sv: "att passa", nl: "passen (van kleding); goed uitkomen", ex: "Skorna **passar** inte, de är för små.", exNl: "De schoenen passen niet, ze zijn te klein." }
+  - { sv: "att jämföra", nl: "vergelijken", ex: "Det är svårt att **jämföra** Sverige och Nederländerna.", exNl: "Het is moeilijk om Zweden en Nederland te vergelijken." }
+  - { sv: "hög", nl: "hoog", ex: "Berget är väldigt **högt**.", exNl: "De berg is erg hoog." }
+  - { sv: "låg", nl: "laag", ex: "Bordet är för **lågt** för mig.", exNl: "De tafel is te laag voor mij." }
+  - { sv: "bred", nl: "breed", ex: "En **bred** soffa passar bra i vardagsrummet.", exNl: "Een brede bank past goed in de woonkamer." }
+  - { sv: "smal", nl: "smal; slank", ex: "Gatan i den gamla staden är väldigt **smal**.", exNl: "De straat in de oude stad is erg smal." }
+  - { sv: "tjock", nl: "dik", ex: "Ta på dig en **tjock** tröja, det är kallt!", exNl: "Trek een dikke trui aan, het is koud!" }
+  - { sv: "tunn", nl: "dun", ex: "Isen är för **tunn**, gå inte ut på sjön!", exNl: "Het ijs is te dun, ga niet het meer op!" }
+  - { sv: "svart", nl: "zwart", ex: "Han har en **svart** jacka.", exNl: "Hij heeft een zwarte jas." }
+  - { sv: "blå", nl: "blauw", ex: "Hon har **blå** ögon.", exNl: "Zij heeft blauwe ogen." }
+  - { sv: "grön", nl: "groen", ex: "Vi har en **grön** dörr.", exNl: "We hebben een groene deur." }
+  - { sv: "gul", nl: "geel", ex: "Till påsk har vi **gula** blommor på bordet.", exNl: "Met Pasen hebben we gele bloemen op tafel." }
+  - { sv: "brun", nl: "bruin", ex: "Vi köpte en **brun** soffa.", exNl: "We kochten een bruine bank." }
+  - { sv: "grå", nl: "grijs", ex: "Himlen är **grå** idag.", exNl: "De lucht is grijs vandaag." }
+  - { sv: "rosa", nl: "roze", ex: "Wilma vill ha en **rosa** cykel.", exNl: "Wilma wil een roze fiets." }
+  - { sv: "arg", nl: "boos", ex: "Mamma blev **arg** när vi kom hem sent.", exNl: "Mama werd boos toen we laat thuiskwamen." }
+  - { sv: "rädd", nl: "bang (rädd för = bang voor)", ex: "Jag är **rädd** för ormar.", exNl: "Ik ben bang voor slangen." }
+  - { sv: "stolt", nl: "trots", ex: "Hon är **stolt** över sitt nya jobb.", exNl: "Ze is trots op haar nieuwe baan." }
+  - { sv: "nöjd", nl: "tevreden", ex: "Är du **nöjd** med din nya cykel?", exNl: "Ben je tevreden met je nieuwe fiets?" }
+  - { sv: "elak", nl: "gemeen", ex: "Var inte **elak** mot din lillebror!", exNl: "Doe niet gemeen tegen je broertje!" }
+  - { sv: "fattig", nl: "arm", ex: "För länge sedan var många familjer **fattiga**.", exNl: "Lang geleden waren veel gezinnen arm." }
+  - { sv: "rik", nl: "rijk", ex: "Hon blev **rik** på sitt företag.", exNl: "Ze werd rijk met haar bedrijf." }
+  - { sv: "konstig", nl: "raar, vreemd", ex: "Glöggen smakar **konstigt**.", exNl: "De glühwein smaakt raar." }
+  - { sv: "underbar", nl: "geweldig, prachtig", ex: "Maten var **underbar**.", exNl: "Het eten was geweldig." }
+  - { sv: "perfekt", nl: "perfect", ex: "Tröjan passar **perfekt**.", exNl: "De trui past perfect." }
+  - { sv: "vanlig", nl: "gewoon, normaal, vaak voorkomend", ex: "Det är **vanligt** att äta skinka på julafton.", exNl: "Het is gebruikelijk om op kerstavond ham te eten." }
+  - { sv: "hel", nl: "heel (compleet)", ex: "Vi var hemma **hela** julen.", exNl: "We waren de hele kerst thuis." }
+  - { sv: "tom", nl: "leeg", ex: "Flaskan är redan **tom**!", exNl: "De fles is al leeg!" }
+  - { sv: "full", nl: "vol", ex: "Kyrkan var **full** på julafton.", exNl: "De kerk was vol op kerstavond." }
+  - { sv: "tidig", nl: "vroeg (bijv. nw., zoals in: een vroege trein)", ex: "Vi tar ett **tidigt** tåg till mormor.", exNl: "We nemen een vroege trein naar oma." }

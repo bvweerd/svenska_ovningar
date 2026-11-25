@@ -102,6 +102,7 @@ grammar:
   - id: spreektaal
     title: Spreektaal
     summary: "Een aantal veelgebruikte woorden spreek je anders uit dan je ze schrijft: *jag* → *ja*, *och* → *å*, *de* → *dom*."
+    hint: "In spreektaal valt vaak een stukje van het woord weg (een medeklinker aan het eind of een lettergreep), of klinkt een woord anders. Denk aan het woord zoals je het geschreven kent."
     body: |
       Sommige korte woorden worden in gewone spreektaal anders uitgesproken dan ze geschreven worden. In gewone schrijftaal schrijf je ze zoals in de linkerkolom. Alleen *sen* wordt ook in nette teksten vaak geschreven; *mej, dej, nåt* en *dom* zie je alleen in informele berichtjes.
 

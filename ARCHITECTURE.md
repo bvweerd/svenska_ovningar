@@ -1,8 +1,8 @@
 # Architectuur
 
 Doelarchitectuur voor de gedeelde code van beide sites (`svenska_ovningar` en `svenska_ovningar_b`).
-Dit bestand staat alleen hier, net als `PLAN.md`. De stappen om er te komen staan onderaan; een afgeronde
-stap wordt één regel onder „Gedaan” in `PLAN.md`.
+Dit bestand staat alleen hier, net als `PLAN.md`. Elke stap is los te publiceren: zelfde gedrag, id's en
+opslag; `npm test`, `npm run build` en `npm run check-sync` groen in beide repo's.
 
 ## Uitgangspunten
 
@@ -17,19 +17,10 @@ stap wordt één regel onder „Gedaan” in `PLAN.md`.
 
 ## Stand (november 2026)
 
-Stap 1–5 zijn gebouwd (zie „Stappen”). Wat het oploste:
-
-| Knelpunt (vóór) | Nu |
-|---|---|
-| `main.js` van 1000 regels: router, 15 pagina's, thema, Å Ä Ö-balk | `main.js` ±60 regels compositie; routetabel in `ui/routes.js`; één bestand per pagina |
-| Een vraagtype zat in 5–6 bestanden | register in `core/items/` + renderers in `ui/items/`; een test eist dat ze bij elkaar passen |
-| `progress.js` (673 regels): opslag, SRS, rondes, kan-doen, merge … | pure regels in `core/progress/`, `app/store.js` met `subscribe`, dunne laag `app/progress.js` |
-| Verversen na sync met een regex-lijst | `refresh: true` per route; de store meldt een reden (`sync`, `import`, `reset`) |
-| Opruimen bij weggaan was ad hoc | de router geeft een `AbortSignal` mee |
-| `localStorage` op vijf plekken | alleen `platform/storage.js` |
-| Geen browsercontrole | `npm run smoke`: elke pagina op Pixel 7, licht en donker, faalt bij JS-fouten en horizontaal scrollen |
-
-Bundel: 1,08 MB JS (326 kB gzip); stap 6 is nog niet nodig.
+Gebouwd: lagen met bewakingstest, register van vraagtypen, routetabel met één bestand per pagina, opslag alleen
+in `platform/storage.js`, pure voortgangsregels met een store (`subscribe`), rooktest `npm run smoke`.
+Bundel ±1,1 MB JS (±330 kB gzip). Nog open, alleen als het nodig is: inhoud bij het bouwen en per hoofdstuk
+laden (zie „Inhoud”).
 
 ## Lagen
 
@@ -221,16 +212,3 @@ publicatie en URL's. **Beslissing van de eigenaar**; niet nodig voor de rest van
 meer: elke regel van de architectuurtest moet leeg blijven. `npm run smoke` (ook in de workflow) opent
 elke pagina in een browser. Types met `// @ts-check` + JSDoc zijn nog niet ingevoerd (eventueel later,
 met `tsc --noEmit`, zonder bouwstap).
-
-## Stappen
-
-Elke stap is los te publiceren: zelfde gedrag, zelfde id's en opslag, `npm test`, `npm run build` en
-`npm run check-sync` groen in beide repo's, en de schermen nagelopen op telefoonformaat (licht en donker).
-
-1. ✓ **Vastleggen**: `tests/architecture.test.js`; workflow draait `check-sync`.
-2. ✓ **Register vraagtypen** en code in lagen; antwoordhashes van alle vragen gecontroleerd gelijk.
-3. ✓ **Router en pagina's uit `main.js`**: routetabel, `signal`, één bestand per pagina.
-4. ✓ **Opslag en store**: `platform/storage.js`, pure `core/progress/*`, `app/store.js` met `subscribe`.
-5. ✓ **Rooktest** `npm run smoke` (vond 5 te brede pagina's, opgelost). Diensten krijgen voortgang en
-   voorkeuren mee; een volledige `ctx` voor pagina's is bewust uitgesteld (zie „ui/”).
-6. **Inhoud bij het bouwen** en per hoofdstuk laden — alleen als de drempel hierboven bereikt is.
