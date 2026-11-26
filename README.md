@@ -111,6 +111,7 @@ Wat er geteld wordt:
 | `werkwoord/<tijd>/<werkwoord>/goed\|fout\|bekeken` | werkwoordtrainer |
 | `toets/<hoofdstuk>/klaar/<score>` en `spel/<naam>/klaar` | toetsen en snelle rondes |
 | `kandoen/<hoofdstuk>/<nummer>/behaald` | een kan-doen-uitspraak is voor het eerst afgevinkt |
+| `nieuw/<jjjj-mm>` en `nieuw/al-bezig` | één keer per browser: een nieuwe browser (per maand), of een browser die de site al gebruikte toen deze telling begon; samen het aantal verschillende browsers (geen id, telt dus niet per persoon) |
 
 Moeilijke vragen vind je in het dashboard door te zoeken op `/fout` of `/bekeken` en dat te
 vergelijken met hetzelfde pad op `/goed`.

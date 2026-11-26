@@ -144,6 +144,7 @@ Geen grammatica uit een later hoofdstuk (ook getest).
 - **Antwoordzinnen A2**: 50 lange zinsbouw- en omvormvragen in H10–H12.
 - **Hints A** (H0–H12): de regel of denkstap in plaats van beginletters; `hint` op de grammaticakaart, `help` op
   oefening of vraag; `npm test` controleert dat een hint het antwoord niet bevat.
+- **Browsers tellen**: één anoniem event per browser (`nieuw/<jjjj-mm>`, `nieuw/al-bezig`), in `npm run stats`.
 - **Techniek**: code in lagen met register van vraagtypen (`ARCHITECTURE.md`), store, rooktest in de browser,
   UI-tests (dekking ±85%), spellingtest (hunspell); voortgang samenvoegen en synchroniseren via de Worker en
   Cloudflare D1 (`worker/README.md` in de B-repo).
